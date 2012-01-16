@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sinatra::Response</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sinatra/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sinatra/base.rb">lib/sinatra/base.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Rack::Response</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-body%3D">#body=</a></li>
+					
+					<li><a href="#method-i-each">#each</a></li>
+					
+					<li><a href="#method-i-finish">#finish</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../README_de_rdoc.html">README.de.rdoc</a></li>
+				
+					<li class="file"><a href="../README_es_rdoc.html">README.es.rdoc</a></li>
+				
+					<li class="file"><a href="../README_fr_rdoc.html">README.fr.rdoc</a></li>
+				
+					<li class="file"><a href="../README_hu_rdoc.html">README.hu.rdoc</a></li>
+				
+					<li class="file"><a href="../README_jp_rdoc.html">README.jp.rdoc</a></li>
+				
+					<li class="file"><a href="../README_pt-br_rdoc.html">README.pt-br.rdoc</a></li>
+				
+					<li class="file"><a href="../README_pt-pt_rdoc.html">README.pt-pt.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../README_ru_rdoc.html">README.ru.rdoc</a></li>
+				
+					<li class="file"><a href="../README_zh_rdoc.html">README.zh.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sinatra.html">Sinatra</a></li>
+				
+					<li><a href="../Sinatra/Application.html">Sinatra::Application</a></li>
+				
+					<li><a href="../Sinatra/Helpers.html">Sinatra::Helpers</a></li>
+				
+					<li><a href="../Sinatra/Helpers/Stream.html">Sinatra::Helpers::Stream</a></li>
+				
+					<li><a href="../Sinatra/Helpers/Stream/Application.html">Sinatra::Helpers::Stream::Application</a></li>
+				
+					<li><a href="../Sinatra/Helpers/Stream/Base.html">Sinatra::Helpers::Stream::Base</a></li>
+				
+					<li><a href="../Sinatra/Helpers/Stream/Templates.html">Sinatra::Helpers::Stream::Templates</a></li>
+				
+					<li><a href="../Sinatra/Helpers/Stream/Templates/ContentTyped.html">Sinatra::Helpers::Stream::Templates::ContentTyped</a></li>
+				
+					<li><a href="../Sinatra/Request.html">Sinatra::Request</a></li>
+				
+					<li><a href="../Sinatra/Response.html">Sinatra::Response</a></li>
+				
+					<li><a href="../Sinatra/ShowExceptions.html">Sinatra::ShowExceptions</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sinatra::Response</h1>
+
+		<div id="description">
+			<p>
+The response object. See Rack::Response and Rack::ResponseHelpers for more
+info: <a
+href="http://rack.rubyforge.org/doc/classes/Rack/Response.html">rack.rubyforge.org/doc/classes/Rack/Response.html</a>
+<a
+href="http://rack.rubyforge.org/doc/classes/Rack/Response/Helpers.html">rack.rubyforge.org/doc/classes/Rack/Response/Helpers.html</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="body--method" class="method-detail ">
+				<a name="method-i-body%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">body=</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="body--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 66</span>
+66:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">body=</span>(<span class="ruby-identifier">value</span>)
+67:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">body</span> <span class="ruby-keyword kw">while</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span>
+68:       <span class="ruby-ivar">@body</span> = <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">?</span> [<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_str</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>
+69:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-i-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>
+72:       <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">super</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">enum_for</span>(<span class="ruby-value">:each</span>)
+73:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="finish-method" class="method-detail ">
+				<a name="method-i-finish"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">finish</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="finish-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 75</span>
+75:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">finish</span>
+76:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">status</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">/</span> <span class="ruby-value">100</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+77:         <span class="ruby-identifier">headers</span>.<span class="ruby-identifier">delete</span> <span class="ruby-value str">&quot;Content-Length&quot;</span>
+78:         <span class="ruby-identifier">headers</span>.<span class="ruby-identifier">delete</span> <span class="ruby-value str">&quot;Content-Type&quot;</span>
+79:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Array</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">body</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> [<span class="ruby-value">204</span>, <span class="ruby-value">304</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">status</span>.<span class="ruby-identifier">to_i</span>)
+80:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;Content-Length&quot;</span>] = <span class="ruby-identifier">body</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span>, <span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Rack</span><span class="ruby-operator">::</span><span class="ruby-constant">Utils</span>.<span class="ruby-identifier">bytesize</span>(<span class="ruby-identifier">p</span>) }.<span class="ruby-identifier">to_s</span>
+81:       <span class="ruby-keyword kw">end</span>
+82: 
+83:       <span class="ruby-comment cmt"># Rack::Response#finish sometimes returns self as response body. We don't want that.</span>
+84:       <span class="ruby-identifier">status</span>, <span class="ruby-identifier">headers</span>, <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">super</span>
+85:       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">body</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">self</span>
+86:       [<span class="ruby-identifier">status</span>, <span class="ruby-identifier">headers</span>, <span class="ruby-identifier">result</span>]
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

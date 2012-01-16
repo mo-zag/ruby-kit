@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Chunk</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/chunky_png/chunk_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/chunk.rb">lib/chunky_png/chunk.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-read">::read</a></li>
+					
+					<li><a href="#method-c-verify_crc%21">::verify_crc!</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Chunk</h1>
+
+		<div id="description">
+			<p>
+A PNG datastream consists of multiple chunks. This module, and the classes
+contained within, help with handling these chunks. It supports both reading
+and writing chunks.
+</p>
+<p>
+All chunk types are instances of the {ChunkyPNG::Chunk::Base} class. For
+some chunk types a specialized class is available, e.g. the IHDR chunk is
+represented by the {ChunkyPNG::Chunk::Header} class. These specialized
+classes help accessing the content of the chunk. All other chunks are
+represented by the {ChunkyPNG::Chunk::Generic} class.
+</p>
+<p>
+@see <a href="Datastream.html">ChunkyPNG::Datastream</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CHUNK_TYPES">CHUNK_TYPES</a></dt>
+				
+				<dd class="description"><p>
+Maps chunk types to classes, based on the four byte chunk type indicator at
+the beginning of a chunk.
+</p>
+<p>
+If a chunk type is not specified in this hash, the <a
+href="Chunk/Generic.html">Generic</a> chunk type will be used.
+</p>
+<p>
+@see ChunkyPNG::Chunk.read
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="read-method" class="method-detail ">
+				<a name="method-c-read"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read</span><span
+						class="method-args">(io)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Reads a chunk from an IO stream.
+</p>
+<p>
+@param [IO, #] io The IO stream to read from. @return
+[ChunkyPNG::Chung::Base] The loaded chunk instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="read-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/chunk.rb, line 20</span>
+20:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">io</span>)
+21: 
+22:       <span class="ruby-identifier">length</span>, <span class="ruby-identifier">type</span> = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">8</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'Na4'</span>)
+23:       <span class="ruby-identifier">content</span>      = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">length</span>)
+24:       <span class="ruby-identifier">crc</span>          = <span class="ruby-identifier">io</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span>).<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'N'</span>).<span class="ruby-identifier">first</span>
+25: 
+26:       <span class="ruby-identifier">verify_crc!</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">crc</span>)
+27: 
+28:       <span class="ruby-constant">CHUNK_TYPES</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">type</span>, <span class="ruby-constant">Generic</span>).<span class="ruby-identifier">read</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">content</span>)
+29:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="verify-crc--method" class="method-detail ">
+				<a name="method-c-verify_crc%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">verify_crc!</span><span
+						class="method-args">(type, content, found_crc)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Verifies the CRC of a chunk. @param [String] type The chunk&#8217;s type.
+@param [String] content The chunk&#8217;s content. @param [Integer] content
+The chunk&#8217;s content. @raise [RuntimeError] An exception is raised if
+the found CRC value
+</p>
+<pre>
+   is not equal to the expected CRC value.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="verify-crc--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/chunk.rb, line 37</span>
+37:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">verify_crc!</span>(<span class="ruby-identifier">type</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">found_crc</span>)
+38:       <span class="ruby-identifier">expected_crc</span> = <span class="ruby-constant">Zlib</span>.<span class="ruby-identifier">crc32</span>(<span class="ruby-identifier">content</span>, <span class="ruby-constant">Zlib</span>.<span class="ruby-identifier">crc32</span>(<span class="ruby-identifier">type</span>))
+39:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">CRCMismatch</span>, <span class="ruby-value str">&quot;Chuck CRC mismatch!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">found_crc</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">expected_crc</span>
+40:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

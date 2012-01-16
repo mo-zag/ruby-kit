@@ -1,0 +1,26 @@
+Wed, 09 Nov 2011 21:32:46 +0000
+lib/chunky_png/canvas/adam7_interlacing.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/data_url_exporting.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/data_url_importing.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/drawing.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/masking.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/operations.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/png_decoding.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/png_encoding.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/resampling.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/stream_exporting.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas/stream_importing.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/canvas.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/chunk.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/color.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/compatibility.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/datastream.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/dimension.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/image.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/palette.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/point.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/rmagick.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png/vector.rb	Wed, 09 Nov 2011 21:31:34 +0000
+lib/chunky_png.rb	Wed, 09 Nov 2011 21:31:34 +0000
+README.rdoc	Wed, 09 Nov 2011 21:31:34 +0000
+BENCHMARKS.rdoc	Wed, 09 Nov 2011 21:31:34 +0000

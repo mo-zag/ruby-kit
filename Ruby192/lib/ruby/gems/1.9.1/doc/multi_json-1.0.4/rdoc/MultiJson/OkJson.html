@@ -1,0 +1,1777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Module: MultiJson::OkJson</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/multi_json/vendor/ok_json_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/multi_json/vendor/ok_json.rb">lib/multi_json/vendor/ok_json.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="OkJson/Error.html">MultiJson::OkJson::Error</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-abbrev">#abbrev</a></li>
+					
+					<li><a href="#method-i-arrenc">#arrenc</a></li>
+					
+					<li><a href="#method-i-arrparse">#arrparse</a></li>
+					
+					<li><a href="#method-i-decode">#decode</a></li>
+					
+					<li><a href="#method-i-eat">#eat</a></li>
+					
+					<li><a href="#method-i-encode">#encode</a></li>
+					
+					<li><a href="#method-i-falsetok">#falsetok</a></li>
+					
+					<li><a href="#method-i-hexdec4">#hexdec4</a></li>
+					
+					<li><a href="#method-i-hexenc4">#hexenc4</a></li>
+					
+					<li><a href="#method-i-keyenc">#keyenc</a></li>
+					
+					<li><a href="#method-i-lex">#lex</a></li>
+					
+					<li><a href="#method-i-nibble">#nibble</a></li>
+					
+					<li><a href="#method-i-nulltok">#nulltok</a></li>
+					
+					<li><a href="#method-i-numenc">#numenc</a></li>
+					
+					<li><a href="#method-i-numtok">#numtok</a></li>
+					
+					<li><a href="#method-i-objenc">#objenc</a></li>
+					
+					<li><a href="#method-i-objparse">#objparse</a></li>
+					
+					<li><a href="#method-i-pairparse">#pairparse</a></li>
+					
+					<li><a href="#method-i-strenc">#strenc</a></li>
+					
+					<li><a href="#method-i-strtok">#strtok</a></li>
+					
+					<li><a href="#method-i-subst">#subst</a></li>
+					
+					<li><a href="#method-i-surrogate%3F">#surrogate?</a></li>
+					
+					<li><a href="#method-i-textparse">#textparse</a></li>
+					
+					<li><a href="#method-i-tok">#tok</a></li>
+					
+					<li><a href="#method-i-truetok">#truetok</a></li>
+					
+					<li><a href="#method-i-uchardec">#uchardec</a></li>
+					
+					<li><a href="#method-i-ucharenc">#ucharenc</a></li>
+					
+					<li><a href="#method-i-unquote">#unquote</a></li>
+					
+					<li><a href="#method-i-unsubst">#unsubst</a></li>
+					
+					<li><a href="#method-i-valenc">#valenc</a></li>
+					
+					<li><a href="#method-i-valparse">#valparse</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../MultiJson.html">MultiJson</a></li>
+				
+					<li><a href="../MultiJson/DecodeError.html">MultiJson::DecodeError</a></li>
+				
+					<li><a href="../MultiJson/Engines.html">MultiJson::Engines</a></li>
+				
+					<li><a href="../MultiJson/Engines/JsonCommon.html">MultiJson::Engines::JsonCommon</a></li>
+				
+					<li><a href="../MultiJson/Engines/JsonGem.html">MultiJson::Engines::JsonGem</a></li>
+				
+					<li><a href="../MultiJson/Engines/JsonPure.html">MultiJson::Engines::JsonPure</a></li>
+				
+					<li><a href="../MultiJson/Engines/OkJson.html">MultiJson::Engines::OkJson</a></li>
+				
+					<li><a href="../MultiJson/Engines/Yajl.html">MultiJson::Engines::Yajl</a></li>
+				
+					<li><a href="../MultiJson/OkJson.html">MultiJson::OkJson</a></li>
+				
+					<li><a href="../MultiJson/OkJson/Error.html">MultiJson::OkJson::Error</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">MultiJson::OkJson</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Utagx">Utagx</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Utag2">Utag2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Utag3">Utag3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Utag4">Utag4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Utag5">Utag5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Umaskx">Umaskx</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Umask2">Umask2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Umask3">Umask3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Umask4">Umask4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Uchar1max">Uchar1max</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Uchar2max">Uchar2max</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Uchar3max">Uchar3max</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Ucharerr">Ucharerr</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Usurrself">Usurrself</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Usurr1">Usurr1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Usurr2">Usurr2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Usurr3">Usurr3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Umax">Umax</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Spc">Spc</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Unesc">Unesc</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Hex">Hex</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="abbrev-method" class="method-detail ">
+				<a name="method-i-abbrev"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">abbrev</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="abbrev-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 249</span>
+249:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">abbrev</span>(<span class="ruby-identifier">s</span>)
+250:       <span class="ruby-identifier">t</span> = <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">10</span>]
+251:       <span class="ruby-identifier">p</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value str">'`'</span>]
+252:       <span class="ruby-identifier">t</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">0</span>,<span class="ruby-identifier">p</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p</span>
+253:       <span class="ruby-identifier">t</span> = <span class="ruby-identifier">t</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'...'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">length</span>
+254:       <span class="ruby-value str">'`'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'`'</span>
+255:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="arrenc-method" class="method-detail ">
+				<a name="method-i-arrenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">arrenc</span><span
+						class="method-args">(a)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="arrenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 431</span>
+431:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arrenc</span>(<span class="ruby-identifier">a</span>)
+432:       <span class="ruby-value str">'['</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">valenc</span>(<span class="ruby-identifier">x</span>)}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">']'</span>
+433:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="arrparse-method" class="method-detail ">
+				<a name="method-i-arrparse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">arrparse</span><span
+						class="method-args">(ts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses an &#8220;array&#8221; in the sense of RFC 4627. Returns the parsed
+value and any trailing tokens.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="arrparse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 133</span>
+133:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arrparse</span>(<span class="ruby-identifier">ts</span>)
+134:       <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">eat</span>(<span class="ruby-value str">'['</span>, <span class="ruby-identifier">ts</span>)
+135:       <span class="ruby-identifier">arr</span> = []
+136: 
+137:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">']'</span>
+138:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+139:       <span class="ruby-keyword kw">end</span>
+140: 
+141:       <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">valparse</span>(<span class="ruby-identifier">ts</span>)
+142:       <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>
+143: 
+144:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">']'</span>
+145:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+146:       <span class="ruby-keyword kw">end</span>
+147: 
+148:       <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+149:         <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">eat</span>(<span class="ruby-value str">','</span>, <span class="ruby-identifier">ts</span>)
+150: 
+151:         <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">valparse</span>(<span class="ruby-identifier">ts</span>)
+152:         <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>
+153: 
+154:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">']'</span>
+155:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+156:         <span class="ruby-keyword kw">end</span>
+157:       <span class="ruby-keyword kw">end</span>
+158:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="decode-method" class="method-detail ">
+				<a name="method-i-decode"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">decode</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Decodes a json document in string s and returns the corresponding ruby
+value. String s must be valid UTF-8. If you have a string in some other
+encoding, convert it first.
+</p>
+<p>
+String values in the resulting structure will be UTF-8.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="decode-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decode</span>(<span class="ruby-identifier">s</span>)
+42:       <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">lex</span>(<span class="ruby-identifier">s</span>)
+43:       <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">textparse</span>(<span class="ruby-identifier">ts</span>)
+44:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+45:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-value str">'trailing garbage'</span>
+46:       <span class="ruby-keyword kw">end</span>
+47:       <span class="ruby-identifier">v</span>
+48:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eat-method" class="method-detail ">
+				<a name="method-i-eat"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eat</span><span
+						class="method-args">(typ, ts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="eat-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 161</span>
+161:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eat</span>(<span class="ruby-identifier">typ</span>, <span class="ruby-identifier">ts</span>)
+162:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">typ</span>
+163:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;expected #{typ} (got #{ts[0].inspect})&quot;</span>
+164:       <span class="ruby-keyword kw">end</span>
+165:       <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+166:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-method" class="method-detail ">
+				<a name="method-i-encode"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes x into a json text. It may contain only Array, Hash, String,
+Numeric, true, false, nil. (Note, this list excludes Symbol.) X itself must
+be an Array or a Hash. No other value can be encoded, and an error will be
+raised if x contains any other value, such as Nan, Infinity, Symbol, and
+Proc, or if a Hash key is not a String. Strings contained in x must be
+valid UTF-8.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 397</span>
+397:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode</span>(<span class="ruby-identifier">x</span>)
+398:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">x</span>
+399:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Hash</span>    <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">objenc</span>(<span class="ruby-identifier">x</span>)
+400:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span>   <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">arrenc</span>(<span class="ruby-identifier">x</span>)
+401:       <span class="ruby-keyword kw">else</span>
+402:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-value str">'root value must be an Array or a Hash'</span>
+403:       <span class="ruby-keyword kw">end</span>
+404:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="falsetok-method" class="method-detail ">
+				<a name="method-i-falsetok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">falsetok</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="falsetok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 223</span>
+223:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">falsetok</span>(<span class="ruby-identifier">s</span>); <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">5</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'false'</span> <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-value">:val</span>, <span class="ruby-value str">'false'</span>, <span class="ruby-keyword kw">false</span>] <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hexdec--method" class="method-detail ">
+				<a name="method-i-hexdec4"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hexdec4</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hexdec--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 347</span>
+347:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hexdec4</span>(<span class="ruby-identifier">s</span>)
+348:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">!=</span> <span class="ruby-value">4</span>
+349:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-value str">'short'</span>
+350:       <span class="ruby-keyword kw">end</span>
+351:       (<span class="ruby-identifier">nibble</span>(<span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>])<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">12</span>) <span class="ruby-operator">|</span> (<span class="ruby-identifier">nibble</span>(<span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>])<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">8</span>) <span class="ruby-operator">|</span> (<span class="ruby-identifier">nibble</span>(<span class="ruby-identifier">s</span>[<span class="ruby-value">2</span>])<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">4</span>) <span class="ruby-operator">|</span> <span class="ruby-identifier">nibble</span>(<span class="ruby-identifier">s</span>[<span class="ruby-value">3</span>])
+352:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hexenc--method" class="method-detail ">
+				<a name="method-i-hexenc4"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hexenc4</span><span
+						class="method-args">(t, u)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hexenc--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 487</span>
+487:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hexenc4</span>(<span class="ruby-identifier">t</span>, <span class="ruby-identifier">u</span>)
+488:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-constant">Hex</span>[(<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">12</span>)&amp;<span class="ruby-value">0xf</span>])
+489:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-constant">Hex</span>[(<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">8</span>)&amp;<span class="ruby-value">0xf</span>])
+490:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-constant">Hex</span>[(<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">4</span>)&amp;<span class="ruby-value">0xf</span>])
+491:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-constant">Hex</span>[<span class="ruby-identifier">u</span>&amp;<span class="ruby-value">0xf</span>])
+492:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="keyenc-method" class="method-detail ">
+				<a name="method-i-keyenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">keyenc</span><span
+						class="method-args">(k)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="keyenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 436</span>
+436:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">keyenc</span>(<span class="ruby-identifier">k</span>)
+437:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">k</span>
+438:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">strenc</span>(<span class="ruby-identifier">k</span>)
+439:       <span class="ruby-keyword kw">else</span>
+440:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;Hash key is not a string: #{k.inspect}&quot;</span>
+441:       <span class="ruby-keyword kw">end</span>
+442:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lex-method" class="method-detail ">
+				<a name="method-i-lex"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lex</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sans s and returns a list of json tokens, excluding white space (as defined
+in RFC 4627).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lex-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 171</span>
+171:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lex</span>(<span class="ruby-identifier">s</span>)
+172:       <span class="ruby-identifier">ts</span> = []
+173:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+174:         <span class="ruby-identifier">typ</span>, <span class="ruby-identifier">lexeme</span>, <span class="ruby-identifier">val</span> = <span class="ruby-identifier">tok</span>(<span class="ruby-identifier">s</span>)
+175:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">typ</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+176:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;invalid character at #{s[0,10].inspect}&quot;</span>
+177:         <span class="ruby-keyword kw">end</span>
+178:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">typ</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:space</span>
+179:           <span class="ruby-identifier">ts</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">typ</span>, <span class="ruby-identifier">lexeme</span>, <span class="ruby-identifier">val</span>]
+180:         <span class="ruby-keyword kw">end</span>
+181:         <span class="ruby-identifier">s</span> = <span class="ruby-identifier">s</span>[<span class="ruby-identifier">lexeme</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+182:       <span class="ruby-keyword kw">end</span>
+183:       <span class="ruby-identifier">ts</span>
+184:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="nibble-method" class="method-detail ">
+				<a name="method-i-nibble"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">nibble</span><span
+						class="method-args">(c)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="nibble-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 377</span>
+377:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nibble</span>(<span class="ruby-identifier">c</span>)
+378:       <span class="ruby-keyword kw">case</span> <span class="ruby-keyword kw">true</span>
+379:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">00</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">99</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">-</span> <span class="ruby-value">00</span>.<span class="ruby-identifier">ord</span>
+380:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">aa</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">zz</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">-</span> <span class="ruby-value">aa</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">+</span> <span class="ruby-value">10</span>
+381:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">AA</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">ZZ</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">-</span> <span class="ruby-value">AA</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">+</span> <span class="ruby-value">10</span>
+382:       <span class="ruby-keyword kw">else</span>
+383:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;invalid hex code #{c}&quot;</span>
+384:       <span class="ruby-keyword kw">end</span>
+385:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="nulltok-method" class="method-detail ">
+				<a name="method-i-nulltok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">nulltok</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="nulltok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 221</span>
+221:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nulltok</span>(<span class="ruby-identifier">s</span>);  <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'null'</span>  <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-value">:val</span>, <span class="ruby-value str">'null'</span>,  <span class="ruby-keyword kw">nil</span>]   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="numenc-method" class="method-detail ">
+				<a name="method-i-numenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">numenc</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="numenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 495</span>
+495:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">numenc</span>(<span class="ruby-identifier">x</span>)
+496:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">nan?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">infinite?</span>
+497:         <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'null'</span>
+498:       <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+499:       <span class="ruby-node">&quot;#{x}&quot;</span>
+500:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="numtok-method" class="method-detail ">
+				<a name="method-i-numtok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">numtok</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="numtok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 226</span>
+226:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">numtok</span>(<span class="ruby-identifier">s</span>)
+227:       <span class="ruby-identifier">m</span> = <span class="ruby-regexp re">/-?([1-9][0-9]+|[0-9])([.][0-9]+)?([eE][+-]?[0-9]+)?/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">s</span>)
+228:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-value">0</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+229:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">m</span>[<span class="ruby-value">2</span>]
+230:           [<span class="ruby-value">:val</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>], <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>])*(<span class="ruby-value">10</span><span class="ruby-operator">**</span><span class="ruby-constant">Integer</span>(<span class="ruby-identifier">m</span>[<span class="ruby-value">3</span>][<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]))]
+231:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">2</span>]
+232:           [<span class="ruby-value">:val</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>], <span class="ruby-constant">Float</span>(<span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>])]
+233:         <span class="ruby-keyword kw">else</span>
+234:           [<span class="ruby-value">:val</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>], <span class="ruby-constant">Integer</span>(<span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>])]
+235:         <span class="ruby-keyword kw">end</span>
+236:       <span class="ruby-keyword kw">end</span>
+237:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="objenc-method" class="method-detail ">
+				<a name="method-i-objenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">objenc</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="objenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 426</span>
+426:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">objenc</span>(<span class="ruby-identifier">x</span>)
+427:       <span class="ruby-value str">'{'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">keyenc</span>(<span class="ruby-identifier">k</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">':'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">valenc</span>(<span class="ruby-identifier">v</span>)}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">'}'</span>
+428:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="objparse-method" class="method-detail ">
+				<a name="method-i-objparse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">objparse</span><span
+						class="method-args">(ts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses an &#8220;object&#8221; in the sense of RFC 4627. Returns the parsed
+value and any trailing tokens.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="objparse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 90</span>
+ 90:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">objparse</span>(<span class="ruby-identifier">ts</span>)
+ 91:       <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">eat</span>(<span class="ruby-value str">'{'</span>, <span class="ruby-identifier">ts</span>)
+ 92:       <span class="ruby-identifier">obj</span> = {}
+ 93: 
+ 94:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'}'</span>
+ 95:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+ 96:       <span class="ruby-keyword kw">end</span>
+ 97: 
+ 98:       <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">pairparse</span>(<span class="ruby-identifier">ts</span>)
+ 99:       <span class="ruby-identifier">obj</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>
+100: 
+101:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'}'</span>
+102:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+103:       <span class="ruby-keyword kw">end</span>
+104: 
+105:       <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+106:         <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">eat</span>(<span class="ruby-value str">','</span>, <span class="ruby-identifier">ts</span>)
+107: 
+108:         <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">pairparse</span>(<span class="ruby-identifier">ts</span>)
+109:         <span class="ruby-identifier">obj</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">v</span>
+110: 
+111:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'}'</span>
+112:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">obj</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+113:         <span class="ruby-keyword kw">end</span>
+114:       <span class="ruby-keyword kw">end</span>
+115:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pairparse-method" class="method-detail ">
+				<a name="method-i-pairparse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pairparse</span><span
+						class="method-args">(ts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a &#8220;member&#8221; in the sense of RFC 4627. Returns the parsed
+values and any trailing tokens.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pairparse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 120</span>
+120:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pairparse</span>(<span class="ruby-identifier">ts</span>)
+121:       (<span class="ruby-identifier">typ</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">k</span>), <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]
+122:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">typ</span> <span class="ruby-operator">!=</span> <span class="ruby-value">:str</span>
+123:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;unexpected #{k.inspect}&quot;</span>
+124:       <span class="ruby-keyword kw">end</span>
+125:       <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">eat</span>(<span class="ruby-value str">':'</span>, <span class="ruby-identifier">ts</span>)
+126:       <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span> = <span class="ruby-identifier">valparse</span>(<span class="ruby-identifier">ts</span>)
+127:       [<span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span>, <span class="ruby-identifier">ts</span>]
+128:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strenc-method" class="method-detail ">
+				<a name="method-i-strenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strenc</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 445</span>
+445:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strenc</span>(<span class="ruby-identifier">s</span>)
+446:       <span class="ruby-identifier">t</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+447:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-value">&quot;&quot;</span>)
+448:       <span class="ruby-identifier">r</span> = <span class="ruby-value">0</span>
+449:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">length</span>
+450:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">s</span>[<span class="ruby-identifier">r</span>]
+451:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">&quot;&quot;</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\&quot;'</span>)
+452:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">\\\</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\\'</span>)
+453:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">\b\</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\b'</span>)
+454:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">\f\</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\f'</span>)
+455:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">\n\</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\n'</span>)
+456:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">\r\</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\r'</span>)
+457:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">\t\</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\t'</span>)
+458:         <span class="ruby-keyword kw">else</span>
+459:           <span class="ruby-identifier">c</span> = <span class="ruby-identifier">s</span>[<span class="ruby-identifier">r</span>]
+460:           <span class="ruby-keyword kw">case</span> <span class="ruby-keyword kw">true</span>
+461:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Spc</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">~~</span>
+462:             <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-identifier">c</span>)
+463:           <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">true</span>
+464:             <span class="ruby-identifier">u</span>, <span class="ruby-identifier">size</span> = <span class="ruby-identifier">uchardec</span>(<span class="ruby-identifier">s</span>, <span class="ruby-identifier">r</span>)
+465:             <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-comment cmt"># we add one more at the bottom of the loop</span>
+466:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0x10000</span>
+467:               <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\u'</span>)
+468:               <span class="ruby-identifier">hexenc4</span>(<span class="ruby-identifier">t</span>, <span class="ruby-identifier">u</span>)
+469:             <span class="ruby-keyword kw">else</span>
+470:               <span class="ruby-identifier">u1</span>, <span class="ruby-identifier">u2</span> = <span class="ruby-identifier">unsubst</span>(<span class="ruby-identifier">u</span>)
+471:               <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\u'</span>)
+472:               <span class="ruby-identifier">hexenc4</span>(<span class="ruby-identifier">t</span>, <span class="ruby-identifier">u1</span>)
+473:               <span class="ruby-identifier">t</span>.<span class="ruby-identifier">print</span>(<span class="ruby-value str">'\u'</span>)
+474:               <span class="ruby-identifier">hexenc4</span>(<span class="ruby-identifier">t</span>, <span class="ruby-identifier">u2</span>)
+475:             <span class="ruby-keyword kw">end</span>
+476:           <span class="ruby-keyword kw">else</span>
+477:             <span class="ruby-comment cmt"># invalid byte; skip it</span>
+478:           <span class="ruby-keyword kw">end</span>
+479:         <span class="ruby-keyword kw">end</span>
+480:         <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+481:       <span class="ruby-keyword kw">end</span>
+482:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">putc</span>(<span class="ruby-value">&quot;&quot;</span>)
+483:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">string</span>
+484:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strtok-method" class="method-detail ">
+				<a name="method-i-strtok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strtok</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strtok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 240</span>
+240:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strtok</span>(<span class="ruby-identifier">s</span>)
+241:       <span class="ruby-identifier">m</span> = <span class="ruby-regexp re">/&quot;([^&quot;\\]|\\[&quot;\/\\bfnrt]|\\u[0-9a-fA-F]{4})*&quot;/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">s</span>)
+242:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">m</span>
+243:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;invalid string literal at #{abbrev(s)}&quot;</span>
+244:       <span class="ruby-keyword kw">end</span>
+245:       [<span class="ruby-value">:str</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">unquote</span>(<span class="ruby-identifier">m</span>[<span class="ruby-value">0</span>])]
+246:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="subst-method" class="method-detail ">
+				<a name="method-i-subst"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">subst</span><span
+						class="method-args">(u1, u2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="subst-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 355</span>
+355:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">subst</span>(<span class="ruby-identifier">u1</span>, <span class="ruby-identifier">u2</span>)
+356:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Usurr1</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">u1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Usurr2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Usurr2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">u2</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Usurr3</span>
+357:         <span class="ruby-keyword kw">return</span> ((<span class="ruby-identifier">u1</span><span class="ruby-operator">-</span><span class="ruby-constant">Usurr1</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">10</span>) <span class="ruby-operator">|</span> (<span class="ruby-identifier">u2</span><span class="ruby-operator">-</span><span class="ruby-constant">Usurr2</span>) <span class="ruby-operator">+</span> <span class="ruby-constant">Usurrself</span>
+358:       <span class="ruby-keyword kw">end</span>
+359:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Ucharerr</span>
+360:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="surrogate--method" class="method-detail ">
+				<a name="method-i-surrogate%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">surrogate?</span><span
+						class="method-args">(u)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="surrogate--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 372</span>
+372:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">surrogate?</span>(<span class="ruby-identifier">u</span>)
+373:       <span class="ruby-constant">Usurr1</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Usurr3</span>
+374:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="textparse-method" class="method-detail ">
+				<a name="method-i-textparse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">textparse</span><span
+						class="method-args">(ts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a &#8220;json text&#8221; in the sense of RFC 4627. Returns the
+parsed value and any trailing tokens. Note: this is almost the same as
+valparse, except that it does not accept atomic values.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="textparse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 55</span>
+55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">textparse</span>(<span class="ruby-identifier">ts</span>)
+56:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+57:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-value str">'empty'</span>
+58:       <span class="ruby-keyword kw">end</span>
+59: 
+60:       <span class="ruby-identifier">typ</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">val</span> = <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>]
+61:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">typ</span>
+62:       <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'{'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">objparse</span>(<span class="ruby-identifier">ts</span>)
+63:       <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'['</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">arrparse</span>(<span class="ruby-identifier">ts</span>)
+64:       <span class="ruby-keyword kw">else</span>
+65:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;unexpected #{val.inspect}&quot;</span>
+66:       <span class="ruby-keyword kw">end</span>
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tok-method" class="method-detail ">
+				<a name="method-i-tok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tok</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Scans the first token in s and returns a 3-element list, or nil if no such
+token exists.
+</p>
+<p>
+The first list element is one of &#8217;{&#8217;, &#8217;}&#8217;,
+&#8217;:&#8217;, &#8217;,&#8217;, &#8217;[&#8217;, &#8217;]&#8217;, :val,
+:str, and :space.
+</p>
+<p>
+The second element is the lexeme.
+</p>
+<p>
+The third element is the value of the token for :val and :str, otherwise it
+is the lexeme.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="tok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 200</span>
+200:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tok</span>(<span class="ruby-identifier">s</span>)
+201:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>]
+202:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">{{</span>  <span class="ruby-keyword kw">then</span> [<span class="ruby-value str">'{'</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+203:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">}}</span>  <span class="ruby-keyword kw">then</span> [<span class="ruby-value str">'}'</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+204:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">::</span>  <span class="ruby-keyword kw">then</span> [<span class="ruby-value str">':'</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+205:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">,,</span>  <span class="ruby-keyword kw">then</span> [<span class="ruby-value str">','</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+206:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">[[</span>  <span class="ruby-keyword kw">then</span> [<span class="ruby-value str">'['</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+207:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">]]</span>  <span class="ruby-keyword kw">then</span> [<span class="ruby-value str">']'</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+208:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">nn</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">nulltok</span>(<span class="ruby-identifier">s</span>)
+209:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">tt</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">truetok</span>(<span class="ruby-identifier">s</span>)
+210:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">ff</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">falsetok</span>(<span class="ruby-identifier">s</span>)
+211:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">&quot;&quot;</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">strtok</span>(<span class="ruby-identifier">s</span>)
+212:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Spc</span> <span class="ruby-keyword kw">then</span> [<span class="ruby-value">:space</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+213:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">\t\</span> <span class="ruby-keyword kw">then</span> [<span class="ruby-value">:space</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+214:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">\n\</span> <span class="ruby-keyword kw">then</span> [<span class="ruby-value">:space</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+215:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">\r\</span> <span class="ruby-keyword kw">then</span> [<span class="ruby-value">:space</span>, <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>], <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">1</span>]]
+216:       <span class="ruby-keyword kw">else</span>          <span class="ruby-identifier">numtok</span>(<span class="ruby-identifier">s</span>)
+217:       <span class="ruby-keyword kw">end</span>
+218:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="truetok-method" class="method-detail ">
+				<a name="method-i-truetok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">truetok</span><span
+						class="method-args">(s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="truetok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 222</span>
+222:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">truetok</span>(<span class="ruby-identifier">s</span>);  <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'true'</span>  <span class="ruby-operator">&amp;&amp;</span> [<span class="ruby-value">:val</span>, <span class="ruby-value str">'true'</span>,  <span class="ruby-keyword kw">true</span>]  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="uchardec-method" class="method-detail ">
+				<a name="method-i-uchardec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">uchardec</span><span
+						class="method-args">(s, i)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Decodes unicode character u from UTF-8 bytes in string s at position i.
+Returns u and the number of bytes read.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="uchardec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 506</span>
+506:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uchardec</span>(<span class="ruby-identifier">s</span>, <span class="ruby-identifier">i</span>)
+507:       <span class="ruby-identifier">n</span> = <span class="ruby-identifier">s</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>
+508:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
+509: 
+510:       <span class="ruby-identifier">c0</span> = <span class="ruby-identifier">s</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">ord</span>
+511: 
+512:       <span class="ruby-comment cmt"># 1-byte, 7-bit sequence?</span>
+513:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c0</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utagx</span>
+514:         <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">c0</span>, <span class="ruby-value">1</span>]
+515:       <span class="ruby-keyword kw">end</span>
+516: 
+517:       <span class="ruby-comment cmt"># unexpected continuation byte?</span>
+518:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c0</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utag2</span>
+519: 
+520:       <span class="ruby-comment cmt"># need continuation byte</span>
+521:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+522:       <span class="ruby-identifier">c1</span> = <span class="ruby-identifier">s</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>].<span class="ruby-identifier">ord</span>
+523:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c1</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utagx</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Utag2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c1</span>
+524: 
+525:       <span class="ruby-comment cmt"># 2-byte, 11-bit sequence?</span>
+526:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c0</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utag3</span>
+527:         <span class="ruby-identifier">u</span> = (<span class="ruby-identifier">c0</span>&amp;<span class="ruby-constant">Umask2</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">6</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">c1</span>&amp;<span class="ruby-constant">Umaskx</span>)
+528:         <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Uchar1max</span>
+529:         <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">u</span>, <span class="ruby-value">2</span>]
+530:       <span class="ruby-keyword kw">end</span>
+531: 
+532:       <span class="ruby-comment cmt"># need second continuation byte</span>
+533:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+534:       <span class="ruby-identifier">c2</span> = <span class="ruby-identifier">s</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>].<span class="ruby-identifier">ord</span>
+535:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utagx</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Utag2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c2</span>
+536: 
+537:       <span class="ruby-comment cmt"># 3-byte, 16-bit sequence?</span>
+538:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c0</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utag4</span>
+539:         <span class="ruby-identifier">u</span> = (<span class="ruby-identifier">c0</span>&amp;<span class="ruby-constant">Umask3</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">12</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">c1</span>&amp;<span class="ruby-constant">Umaskx</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">6</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">c2</span>&amp;<span class="ruby-constant">Umaskx</span>)
+540:         <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Uchar2max</span>
+541:         <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">u</span>, <span class="ruby-value">3</span>]
+542:       <span class="ruby-keyword kw">end</span>
+543: 
+544:       <span class="ruby-comment cmt"># need third continuation byte</span>
+545:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span>
+546:       <span class="ruby-identifier">c3</span> = <span class="ruby-identifier">s</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">3</span>].<span class="ruby-identifier">ord</span>
+547:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c3</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utagx</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Utag2</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">c3</span>
+548: 
+549:       <span class="ruby-comment cmt"># 4-byte, 21-bit sequence?</span>
+550:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c0</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Utag5</span>
+551:         <span class="ruby-identifier">u</span> = (<span class="ruby-identifier">c0</span>&amp;<span class="ruby-constant">Umask4</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">18</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">c1</span>&amp;<span class="ruby-constant">Umaskx</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">12</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">c2</span>&amp;<span class="ruby-constant">Umaskx</span>)<span class="ruby-operator">&lt;&lt;</span><span class="ruby-value">6</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">c3</span>&amp;<span class="ruby-constant">Umaskx</span>)
+552:         <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Uchar3max</span>
+553:         <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">u</span>, <span class="ruby-value">4</span>]
+554:       <span class="ruby-keyword kw">end</span>
+555: 
+556:       <span class="ruby-keyword kw">return</span> [<span class="ruby-constant">Ucharerr</span>, <span class="ruby-value">1</span>]
+557:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ucharenc-method" class="method-detail ">
+				<a name="method-i-ucharenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ucharenc</span><span
+						class="method-args">(a, i, u)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes unicode character u as UTF-8 bytes in string a at position i.
+Returns the number of bytes written.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ucharenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 323</span>
+323:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ucharenc</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">u</span>)
+324:       <span class="ruby-keyword kw">case</span> <span class="ruby-keyword kw">true</span>
+325:       <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Uchar1max</span>
+326:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span>] = (<span class="ruby-identifier">u</span> &amp; <span class="ruby-value">0xff</span>).<span class="ruby-identifier">chr</span>
+327:         <span class="ruby-value">1</span>
+328:       <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Uchar2max</span>
+329:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">0</span>] = (<span class="ruby-constant">Utag2</span> <span class="ruby-operator">|</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">6</span>)&amp;<span class="ruby-value">0xff</span>)).<span class="ruby-identifier">chr</span>
+330:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] = (<span class="ruby-constant">Utagx</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">u</span>&amp;<span class="ruby-constant">Umaskx</span>)).<span class="ruby-identifier">chr</span>
+331:         <span class="ruby-value">2</span>
+332:       <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">Uchar3max</span>
+333:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">0</span>] = (<span class="ruby-constant">Utag3</span> <span class="ruby-operator">|</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">12</span>)&amp;<span class="ruby-value">0xff</span>)).<span class="ruby-identifier">chr</span>
+334:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] = (<span class="ruby-constant">Utagx</span> <span class="ruby-operator">|</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">6</span>)&amp;<span class="ruby-constant">Umaskx</span>)).<span class="ruby-identifier">chr</span>
+335:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>] = (<span class="ruby-constant">Utagx</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">u</span>&amp;<span class="ruby-constant">Umaskx</span>)).<span class="ruby-identifier">chr</span>
+336:         <span class="ruby-value">3</span>
+337:       <span class="ruby-keyword kw">else</span>
+338:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">0</span>] = (<span class="ruby-constant">Utag4</span> <span class="ruby-operator">|</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">18</span>)&amp;<span class="ruby-value">0xff</span>)).<span class="ruby-identifier">chr</span>
+339:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] = (<span class="ruby-constant">Utagx</span> <span class="ruby-operator">|</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">12</span>)&amp;<span class="ruby-constant">Umaskx</span>)).<span class="ruby-identifier">chr</span>
+340:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>] = (<span class="ruby-constant">Utagx</span> <span class="ruby-operator">|</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">6</span>)&amp;<span class="ruby-constant">Umaskx</span>)).<span class="ruby-identifier">chr</span>
+341:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">3</span>] = (<span class="ruby-constant">Utagx</span> <span class="ruby-operator">|</span> (<span class="ruby-identifier">u</span>&amp;<span class="ruby-constant">Umaskx</span>)).<span class="ruby-identifier">chr</span>
+342:         <span class="ruby-value">4</span>
+343:       <span class="ruby-keyword kw">end</span>
+344:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unquote-method" class="method-detail ">
+				<a name="method-i-unquote"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unquote</span><span
+						class="method-args">(q)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a quoted json string literal q into a UTF-8-encoded string. The
+rules are different than for Ruby, so we cannot use eval. Unquote will
+raise an error if q contains control characters.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="unquote-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 261</span>
+261:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unquote</span>(<span class="ruby-identifier">q</span>)
+262:       <span class="ruby-identifier">q</span> = <span class="ruby-identifier">q</span>[<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>]
+263:       <span class="ruby-identifier">a</span> = <span class="ruby-identifier">q</span>.<span class="ruby-identifier">dup</span> <span class="ruby-comment cmt"># allocate a big enough string</span>
+264:       <span class="ruby-identifier">r</span>, <span class="ruby-identifier">w</span> = <span class="ruby-value">0</span>, <span class="ruby-value">0</span>
+265:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">length</span>
+266:         <span class="ruby-identifier">c</span> = <span class="ruby-identifier">q</span>[<span class="ruby-identifier">r</span>]
+267:         <span class="ruby-keyword kw">case</span> <span class="ruby-keyword kw">true</span>
+268:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">==</span> <span class="ruby-value">\\\</span>
+269:           <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+270:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">length</span>
+271:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;string literal ends with a \&quot;\\\&quot;: \&quot;#{q}\&quot;&quot;</span>
+272:           <span class="ruby-keyword kw">end</span>
+273: 
+274:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">q</span>[<span class="ruby-identifier">r</span>]
+275:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">&quot;&quot;</span>,<span class="ruby-value">\\\</span>,<span class="ruby-value">//</span>,<span class="ruby-value">''</span>
+276:             <span class="ruby-identifier">a</span>[<span class="ruby-identifier">w</span>] = <span class="ruby-identifier">q</span>[<span class="ruby-identifier">r</span>]
+277:             <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+278:             <span class="ruby-identifier">w</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+279:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">bb</span>,<span class="ruby-value">ff</span>,<span class="ruby-value">nn</span>,<span class="ruby-value">rr</span>,<span class="ruby-value">tt</span>
+280:             <span class="ruby-identifier">a</span>[<span class="ruby-identifier">w</span>] = <span class="ruby-constant">Unesc</span>[<span class="ruby-identifier">q</span>[<span class="ruby-identifier">r</span>]]
+281:             <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+282:             <span class="ruby-identifier">w</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+283:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">uu</span>
+284:             <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+285:             <span class="ruby-identifier">uchar</span> = <span class="ruby-keyword kw">begin</span>
+286:               <span class="ruby-identifier">hexdec4</span>(<span class="ruby-identifier">q</span>[<span class="ruby-identifier">r</span>,<span class="ruby-value">4</span>])
+287:             <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RuntimeError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+288:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;invalid escape sequence \\u#{q[r,4]}: #{e}&quot;</span>
+289:             <span class="ruby-keyword kw">end</span>
+290:             <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">4</span>
+291:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">surrogate?</span> <span class="ruby-identifier">uchar</span>
+292:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">r</span><span class="ruby-operator">+</span><span class="ruby-value">6</span>
+293:                 <span class="ruby-identifier">uchar1</span> = <span class="ruby-identifier">hexdec4</span>(<span class="ruby-identifier">q</span>[<span class="ruby-identifier">r</span><span class="ruby-operator">+</span><span class="ruby-value">2</span>,<span class="ruby-value">4</span>])
+294:                 <span class="ruby-identifier">uchar</span> = <span class="ruby-identifier">subst</span>(<span class="ruby-identifier">uchar</span>, <span class="ruby-identifier">uchar1</span>)
+295:                 <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">uchar</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">Ucharerr</span>
+296:                   <span class="ruby-comment cmt"># A valid pair; consume.</span>
+297:                   <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">6</span>
+298:                 <span class="ruby-keyword kw">end</span>
+299:               <span class="ruby-keyword kw">end</span>
+300:             <span class="ruby-keyword kw">end</span>
+301:             <span class="ruby-identifier">w</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">ucharenc</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">uchar</span>)
+302:           <span class="ruby-keyword kw">else</span>
+303:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;invalid escape char #{q[r]} in \&quot;#{q}\&quot;&quot;</span>
+304:           <span class="ruby-keyword kw">end</span>
+305:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">==</span> <span class="ruby-value">&quot;&quot;</span>, <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Spc</span>
+306:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;invalid character in string literal \&quot;#{q}\&quot;&quot;</span>
+307:         <span class="ruby-keyword kw">else</span>
+308:           <span class="ruby-comment cmt"># Copy anything else byte-for-byte.</span>
+309:           <span class="ruby-comment cmt"># Valid UTF-8 will remain valid UTF-8.</span>
+310:           <span class="ruby-comment cmt"># Invalid UTF-8 will remain invalid UTF-8.</span>
+311:           <span class="ruby-identifier">a</span>[<span class="ruby-identifier">w</span>] = <span class="ruby-identifier">c</span>
+312:           <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+313:           <span class="ruby-identifier">w</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+314:         <span class="ruby-keyword kw">end</span>
+315:       <span class="ruby-keyword kw">end</span>
+316:       <span class="ruby-identifier">a</span>[<span class="ruby-value">0</span>,<span class="ruby-identifier">w</span>]
+317:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unsubst-method" class="method-detail ">
+				<a name="method-i-unsubst"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unsubst</span><span
+						class="method-args">(u)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="unsubst-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 363</span>
+363:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unsubst</span>(<span class="ruby-identifier">u</span>)
+364:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">Usurrself</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">u</span> <span class="ruby-operator">&gt;</span> <span class="ruby-constant">Umax</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">surrogate?</span>(<span class="ruby-identifier">u</span>)
+365:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Ucharerr</span>, <span class="ruby-constant">Ucharerr</span>
+366:       <span class="ruby-keyword kw">end</span>
+367:       <span class="ruby-identifier">u</span> <span class="ruby-operator">-=</span> <span class="ruby-constant">Usurrself</span>
+368:       [<span class="ruby-constant">Usurr1</span> <span class="ruby-operator">+</span> ((<span class="ruby-identifier">u</span><span class="ruby-operator">&gt;&gt;</span><span class="ruby-value">10</span>)&amp;<span class="ruby-value">0x3ff</span>), <span class="ruby-constant">Usurr2</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">u</span>&amp;<span class="ruby-value">0x3ff</span>)]
+369:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="valenc-method" class="method-detail ">
+				<a name="method-i-valenc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">valenc</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="valenc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 407</span>
+407:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">valenc</span>(<span class="ruby-identifier">x</span>)
+408:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">x</span>
+409:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Hash</span>    <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">objenc</span>(<span class="ruby-identifier">x</span>)
+410:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span>   <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">arrenc</span>(<span class="ruby-identifier">x</span>)
+411:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">strenc</span>(<span class="ruby-identifier">x</span>)
+412:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Numeric</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">numenc</span>(<span class="ruby-identifier">x</span>)
+413:       <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">true</span>    <span class="ruby-keyword kw">then</span> <span class="ruby-value str">&quot;true&quot;</span>
+414:       <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">false</span>   <span class="ruby-keyword kw">then</span> <span class="ruby-value str">&quot;false&quot;</span>
+415:       <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>     <span class="ruby-keyword kw">then</span> <span class="ruby-value str">&quot;null&quot;</span>
+416:       <span class="ruby-keyword kw">else</span>
+417:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_json</span>)
+418:           <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_json</span>
+419:         <span class="ruby-keyword kw">else</span>
+420:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;cannot encode #{x.class}: #{x.inspect}&quot;</span>
+421:         <span class="ruby-keyword kw">end</span>
+422:       <span class="ruby-keyword kw">end</span>
+423:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="valparse-method" class="method-detail ">
+				<a name="method-i-valparse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">valparse</span><span
+						class="method-args">(ts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a &#8220;value&#8221; in the sense of RFC 4627. Returns the parsed
+value and any trailing tokens.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="valparse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/multi_json/vendor/ok_json.rb, line 72</span>
+72:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">valparse</span>(<span class="ruby-identifier">ts</span>)
+73:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ts</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+74:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-value str">'empty'</span>
+75:       <span class="ruby-keyword kw">end</span>
+76: 
+77:       <span class="ruby-identifier">typ</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">val</span> = <span class="ruby-identifier">ts</span>[<span class="ruby-value">0</span>]
+78:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">typ</span>
+79:       <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'{'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">objparse</span>(<span class="ruby-identifier">ts</span>)
+80:       <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'['</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">arrparse</span>(<span class="ruby-identifier">ts</span>)
+81:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:val</span>,<span class="ruby-value">:str</span> <span class="ruby-keyword kw">then</span> [<span class="ruby-identifier">val</span>, <span class="ruby-identifier">ts</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]]
+82:       <span class="ruby-keyword kw">else</span>
+83:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;unexpected #{val.inspect}&quot;</span>
+84:       <span class="ruby-keyword kw">end</span>
+85:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

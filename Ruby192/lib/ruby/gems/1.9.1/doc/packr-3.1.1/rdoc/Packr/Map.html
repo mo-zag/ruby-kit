@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Packr::Map</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/packr/map_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/packr/map.rb">lib/packr/map.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-clear">#clear</a></li>
+					
+					<li><a href="#method-i-copy">#copy</a></li>
+					
+					<li><a href="#method-i-each">#each</a></li>
+					
+					<li><a href="#method-i-get">#get</a></li>
+					
+					<li><a href="#method-i-get_keys">#get_keys</a></li>
+					
+					<li><a href="#method-i-get_values">#get_values</a></li>
+					
+					<li><a href="#method-i-has%3F">#has?</a></li>
+					
+					<li><a href="#method-i-merge">#merge</a></li>
+					
+					<li><a href="#method-i-put">#put</a></li>
+					
+					<li><a href="#method-i-remove">#remove</a></li>
+					
+					<li><a href="#method-i-size">#size</a></li>
+					
+					<li><a href="#method-i-union">#union</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Packr.html">Packr</a></li>
+				
+					<li><a href="../Packr/Base62.html">Packr::Base62</a></li>
+				
+					<li><a href="../Packr/Collection.html">Packr::Collection</a></li>
+				
+					<li><a href="../Packr/Encoder.html">Packr::Encoder</a></li>
+				
+					<li><a href="../Packr/Map.html">Packr::Map</a></li>
+				
+					<li><a href="../Packr/Minifier.html">Packr::Minifier</a></li>
+				
+					<li><a href="../Packr/Parser.html">Packr::Parser</a></li>
+				
+					<li><a href="../Packr/Privates.html">Packr::Privates</a></li>
+				
+					<li><a href="../Packr/RegexpGroup.html">Packr::RegexpGroup</a></li>
+				
+					<li><a href="../Packr/RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+				
+					<li><a href="../Packr/Shrinker.html">Packr::Shrinker</a></li>
+				
+					<li><a href="../Packr/Words.html">Packr::Words</a></li>
+				
+					<li><a href="../Packr/Words/Item.html">Packr::Words::Item</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Packr::Map</h1>
+
+		<div id="description">
+			<p>
+This is effectively a wrapper for Hash instances - we&#8217;re including it
+to maintain similarity with the JavaScript version for easier maintainance.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(values = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/packr/map.rb, line 6</span>
+6:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">values</span> = <span class="ruby-keyword kw">nil</span>)
+7:       <span class="ruby-ivar">@values</span> = {}
+8:       <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">values</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">nil?</span>
+9:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="clear-method" class="method-detail ">
+				<a name="method-i-clear"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">clear</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="clear-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 11</span>
+11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clear</span>
+12:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">clear</span>
+13:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="copy-method" class="method-detail ">
+				<a name="method-i-copy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">copy</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="copy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy</span>
+16:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@values</span>)
+17:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-i-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 19</span>
+19:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>
+20:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">key</span>) }
+21:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-method" class="method-detail ">
+				<a name="method-i-get"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 23</span>
+23:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">key</span>)
+24:       <span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>]
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-keys-method" class="method-detail ">
+				<a name="method-i-get_keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_keys</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-keys-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 27</span>
+27:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_keys</span>
+28:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">keys</span>
+29:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-values-method" class="method-detail ">
+				<a name="method-i-get_values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_values</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-values-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_values</span>
+32:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">values</span>
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has--method" class="method-detail ">
+				<a name="method-i-has%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has?</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="has--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has?</span>(<span class="ruby-identifier">key</span>)
+36:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="merge-method" class="method-detail ">
+				<a name="method-i-merge"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">merge</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="merge-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 39</span>
+39:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">merge</span>(*<span class="ruby-identifier">args</span>)
+40:       <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">values</span><span class="ruby-operator">|</span>
+41:         <span class="ruby-identifier">values</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">get_values</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Map</span>)
+42:         <span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>) }
+43:       <span class="ruby-keyword kw">end</span>
+44:       <span class="ruby-keyword kw">self</span>
+45:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="put-method" class="method-detail ">
+				<a name="method-i-put"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">put</span><span
+						class="method-args">(key, value = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="put-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">nil</span>)
+52:       <span class="ruby-identifier">value</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">key</span>
+53:       <span class="ruby-comment cmt"># Create the new entry (or overwrite the old entry).</span>
+54:       <span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">value</span>
+55:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remove-method" class="method-detail ">
+				<a name="method-i-remove"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="remove-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 47</span>
+47:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">key</span>)
+48:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+49:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="size-method" class="method-detail ">
+				<a name="method-i-size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="size-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 57</span>
+57:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>
+58:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">length</span>
+59:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="union-method" class="method-detail ">
+				<a name="method-i-union"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">union</span><span
+						class="method-args">(*values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="union-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/map.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>(*<span class="ruby-identifier">values</span>)
+62:       <span class="ruby-identifier">copy</span>.<span class="ruby-identifier">merge</span>(*<span class="ruby-identifier">values</span>)
+63:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

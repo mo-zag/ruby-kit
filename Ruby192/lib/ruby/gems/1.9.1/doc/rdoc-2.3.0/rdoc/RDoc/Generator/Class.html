@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RDoc::Generator::Class</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rdoc/generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rdoc/generator.rb">lib/rdoc/generator.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Context.html">RDoc::Generator::Context</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3C%3D%3E">#<=></a></li>
+					
+					<li><a href="#method-i-build_attribute_list">#build_attribute_list</a></li>
+					
+					<li><a href="#method-i-class_attribute_values">#class_attribute_values</a></li>
+					
+					<li><a href="#method-i-http_url">#http_url</a></li>
+					
+					<li><a href="#method-i-index_name">#index_name</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-name">#name</a></li>
+					
+					<li><a href="#method-i-parent_name">#parent_name</a></li>
+					
+					<li><a href="#method-i-pretty_print">#pretty_print</a></li>
+					
+					<li><a href="#method-i-value_hash">#value_hash</a></li>
+					
+					<li><a href="#method-i-write_on">#write_on</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../../RI_txt.html">RI.txt</a></li>
+				
+					<li class="file"><a href="../../test/test_ja_txt.html">test.ja.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RDoc.html">RDoc</a></li>
+				
+					<li><a href="../../RDoc/Alias.html">RDoc::Alias</a></li>
+				
+					<li><a href="../../RDoc/AnonClass.html">RDoc::AnonClass</a></li>
+				
+					<li><a href="../../RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+				
+					<li><a href="../../RDoc/Attr.html">RDoc::Attr</a></li>
+				
+					<li><a href="../../RDoc/Cache.html">RDoc::Cache</a></li>
+				
+					<li><a href="../../RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+				
+					<li><a href="../../RDoc/CodeObject.html">RDoc::CodeObject</a></li>
+				
+					<li><a href="../../RDoc/Constant.html">RDoc::Constant</a></li>
+				
+					<li><a href="../../RDoc/Context.html">RDoc::Context</a></li>
+				
+					<li><a href="../../RDoc/Context/Section.html">RDoc::Context::Section</a></li>
+				
+					<li><a href="../../RDoc/DOT.html">RDoc::DOT</a></li>
+				
+					<li><a href="../../RDoc/DOT/Digraph.html">RDoc::DOT::Digraph</a></li>
+				
+					<li><a href="../../RDoc/DOT/Edge.html">RDoc::DOT::Edge</a></li>
+				
+					<li><a href="../../RDoc/DOT/Element.html">RDoc::DOT::Element</a></li>
+				
+					<li><a href="../../RDoc/DOT/Node.html">RDoc::DOT::Node</a></li>
+				
+					<li><a href="../../RDoc/DOT/Port.html">RDoc::DOT::Port</a></li>
+				
+					<li><a href="../../RDoc/DOT/SimpleElement.html">RDoc::DOT::SimpleElement</a></li>
+				
+					<li><a href="../../RDoc/DOT/Subgraph.html">RDoc::DOT::Subgraph</a></li>
+				
+					<li><a href="../../RDoc/Diagram.html">RDoc::Diagram</a></li>
+				
+					<li><a href="../../RDoc/Error.html">RDoc::Error</a></li>
+				
+					<li><a href="../../RDoc/Generator.html">RDoc::Generator</a></li>
+				
+					<li><a href="../../RDoc/Generator/AllReferences.html">RDoc::Generator::AllReferences</a></li>
+				
+					<li><a href="../../RDoc/Generator/Class.html">RDoc::Generator::Class</a></li>
+				
+					<li><a href="../../RDoc/Generator/Context.html">RDoc::Generator::Context</a></li>
+				
+					<li><a href="../../RDoc/Generator/Darkfish.html">RDoc::Generator::Darkfish</a></li>
+				
+					<li><a href="../../RDoc/Generator/File.html">RDoc::Generator::File</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML.html">RDoc::Generator::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/Common.html">RDoc::Generator::HTML::Common</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/HTML.html">RDoc::Generator::HTML::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTMLInOne.html">RDoc::Generator::HTMLInOne</a></li>
+				
+					<li><a href="../../RDoc/Generator/MarkUp.html">RDoc::Generator::MarkUp</a></li>
+				
+					<li><a href="../../RDoc/Generator/Method.html">RDoc::Generator::Method</a></li>
+				
+					<li><a href="../../RDoc/Generator/RI.html">RDoc::Generator::RI</a></li>
+				
+					<li><a href="../../RDoc/Generator/XML.html">RDoc::Generator::XML</a></li>
+				
+					<li><a href="../../RDoc/GhostMethod.html">RDoc::GhostMethod</a></li>
+				
+					<li><a href="../../RDoc/Include.html">RDoc::Include</a></li>
+				
+					<li><a href="../../RDoc/Markup.html">RDoc::Markup</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrChanger.html">RDoc::Markup::AttrChanger</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrSpan.html">RDoc::Markup::AttrSpan</a></li>
+				
+					<li><a href="../../RDoc/Markup/Attribute.html">RDoc::Markup::Attribute</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttributeManager.html">RDoc::Markup::AttributeManager</a></li>
+				
+					<li><a href="../../RDoc/Markup/BlankLine.html">RDoc::Markup::BlankLine</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow.html">RDoc::Markup::Flow</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow/LIST.html">RDoc::Markup::Flow::LIST</a></li>
+				
+					<li><a href="../../RDoc/Markup/Formatter.html">RDoc::Markup::Formatter</a></li>
+				
+					<li><a href="../../RDoc/Markup/Fragment.html">RDoc::Markup::Fragment</a></li>
+				
+					<li><a href="../../RDoc/Markup/Heading.html">RDoc::Markup::Heading</a></li>
+				
+					<li><a href="../../RDoc/Markup/Line.html">RDoc::Markup::Line</a></li>
+				
+					<li><a href="../../RDoc/Markup/LineCollection.html">RDoc::Markup::LineCollection</a></li>
+				
+					<li><a href="../../RDoc/Markup/Lines.html">RDoc::Markup::Lines</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListBase.html">RDoc::Markup::ListBase</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListEnd.html">RDoc::Markup::ListEnd</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListItem.html">RDoc::Markup::ListItem</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListStart.html">RDoc::Markup::ListStart</a></li>
+				
+					<li><a href="../../RDoc/Markup/Paragraph.html">RDoc::Markup::Paragraph</a></li>
+				
+					<li><a href="../../RDoc/Markup/PreProcess.html">RDoc::Markup::PreProcess</a></li>
+				
+					<li><a href="../../RDoc/Markup/Rule.html">RDoc::Markup::Rule</a></li>
+				
+					<li><a href="../../RDoc/Markup/Special.html">RDoc::Markup::Special</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToFlow.html">RDoc::Markup::ToFlow</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtml.html">RDoc::Markup::ToHtml</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtmlCrossref.html">RDoc::Markup::ToHtmlCrossref</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToLaTeX.html">RDoc::Markup::ToLaTeX</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTest.html">RDoc::Markup::ToTest</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTexInfo.html">RDoc::Markup::ToTexInfo</a></li>
+				
+					<li><a href="../../RDoc/Markup/Verbatim.html">RDoc::Markup::Verbatim</a></li>
+				
+					<li><a href="../../RDoc/MetaMethod.html">RDoc::MetaMethod</a></li>
+				
+					<li><a href="../../RDoc/NormalClass.html">RDoc::NormalClass</a></li>
+				
+					<li><a href="../../RDoc/NormalModule.html">RDoc::NormalModule</a></li>
+				
+					<li><a href="../../RDoc/Options.html">RDoc::Options</a></li>
+				
+					<li><a href="../../RDoc/Parser.html">RDoc::Parser</a></li>
+				
+					<li><a href="../../RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95.html">RDoc::Parser::F95</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Fortran95Definition.html">RDoc::Parser::F95::Fortran95Definition</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Token.html">RDoc::Parser::F95::Token</a></li>
+				
+					<li><a href="../../RDoc/Parser/PerlPOD.html">RDoc::Parser::PerlPOD</a></li>
+				
+					<li><a href="../../RDoc/Parser/Ruby.html">RDoc::Parser::Ruby</a></li>
+				
+					<li><a href="../../RDoc/Parser/Simple.html">RDoc::Parser::Simple</a></li>
+				
+					<li><a href="../../RDoc/RDoc.html">RDoc::RDoc</a></li>
+				
+					<li><a href="../../RDoc/RI.html">RDoc::RI</a></li>
+				
+					<li><a href="../../RDoc/RI/AliasName.html">RDoc::RI::AliasName</a></li>
+				
+					<li><a href="../../RDoc/RI/AnsiFormatter.html">RDoc::RI::AnsiFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Attribute.html">RDoc::RI::Attribute</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter.html">RDoc::RI::AttributeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter/AttributeString.html">RDoc::RI::AttributeFormatter::AttributeString</a></li>
+				
+					<li><a href="../../RDoc/RI/Cache.html">RDoc::RI::Cache</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassDescription.html">RDoc::RI::ClassDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassEntry.html">RDoc::RI::ClassEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Constant.html">RDoc::RI::Constant</a></li>
+				
+					<li><a href="../../RDoc/RI/DefaultDisplay.html">RDoc::RI::DefaultDisplay</a></li>
+				
+					<li><a href="../../RDoc/RI/Description.html">RDoc::RI::Description</a></li>
+				
+					<li><a href="../../RDoc/RI/Display.html">RDoc::RI::Display</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver.html">RDoc::RI::Driver</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/Error.html">RDoc::RI::Driver::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/NotFoundError.html">RDoc::RI::Driver::NotFoundError</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/OpenStructHash.html">RDoc::RI::Driver::OpenStructHash</a></li>
+				
+					<li><a href="../../RDoc/RI/Error.html">RDoc::RI::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Formatter.html">RDoc::RI::Formatter</a></li>
+				
+					<li><a href="../../RDoc/RI/HtmlFormatter.html">RDoc::RI::HtmlFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/IncludedModule.html">RDoc::RI::IncludedModule</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodDescription.html">RDoc::RI::MethodDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodEntry.html">RDoc::RI::MethodEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodSummary.html">RDoc::RI::MethodSummary</a></li>
+				
+					<li><a href="../../RDoc/RI/ModuleDescription.html">RDoc::RI::ModuleDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/NameDescriptor.html">RDoc::RI::NameDescriptor</a></li>
+				
+					<li><a href="../../RDoc/RI/NamedThing.html">RDoc::RI::NamedThing</a></li>
+				
+					<li><a href="../../RDoc/RI/OverstrikeFormatter.html">RDoc::RI::OverstrikeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Reader.html">RDoc::RI::Reader</a></li>
+				
+					<li><a href="../../RDoc/RI/SimpleFormatter.html">RDoc::RI::SimpleFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/TopLevelEntry.html">RDoc::RI::TopLevelEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Writer.html">RDoc::RI::Writer</a></li>
+				
+					<li><a href="../../RDoc/Require.html">RDoc::Require</a></li>
+				
+					<li><a href="../../RDoc/RubyLex.html">RDoc::RubyLex</a></li>
+				
+					<li><a href="../../RDoc/RubyLex/BufferedReader.html">RDoc::RubyLex::BufferedReader</a></li>
+				
+					<li><a href="../../RDoc/RubyToken.html">RDoc::RubyToken</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkError.html">RDoc::RubyToken::TkError</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkId.html">RDoc::RubyToken::TkId</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkKW.html">RDoc::RubyToken::TkKW</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkNode.html">RDoc::RubyToken::TkNode</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOPASGN.html">RDoc::RubyToken::TkOPASGN</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOp.html">RDoc::RubyToken::TkOp</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkUnknownChar.html">RDoc::RubyToken::TkUnknownChar</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkVal.html">RDoc::RubyToken::TkVal</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/Token.html">RDoc::RubyToken::Token</a></li>
+				
+					<li><a href="../../RDoc/SingleClass.html">RDoc::SingleClass</a></li>
+				
+					<li><a href="../../RDoc/Stats.html">RDoc::Stats</a></li>
+				
+					<li><a href="../../RDoc/Stats/Normal.html">RDoc::Stats::Normal</a></li>
+				
+					<li><a href="../../RDoc/Stats/Quiet.html">RDoc::Stats::Quiet</a></li>
+				
+					<li><a href="../../RDoc/Stats/Verbose.html">RDoc::Stats::Verbose</a></li>
+				
+					<li><a href="../../RDoc/TokenStream.html">RDoc::TokenStream</a></li>
+				
+					<li><a href="../../RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RDoc::Generator::Class</h1>
+
+		<div id="description">
+			<p>
+Wrap a <a href="../ClassModule.html">ClassModule</a> context
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="methods-attribute-method" class="method-detail">
+				<a name="methods"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">methods</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="path-attribute-method" class="method-detail">
+				<a name="path"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">path</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="values-attribute-method" class="method-detail">
+				<a name="values"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">values</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(template_cache, context, html_file, prefix, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 501</span>
+501:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">template_cache</span>, <span class="ruby-identifier">context</span>, <span class="ruby-identifier">html_file</span>, <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">options</span>)
+502:       <span class="ruby-keyword kw">super</span> <span class="ruby-identifier">context</span>, <span class="ruby-identifier">options</span>
+503: 
+504:       <span class="ruby-ivar">@template_cache</span> = <span class="ruby-identifier">template_cache</span>
+505:       <span class="ruby-ivar">@html_file</span> = <span class="ruby-identifier">html_file</span>
+506:       <span class="ruby-ivar">@html_class</span> = <span class="ruby-keyword kw">self</span>
+507:       <span class="ruby-ivar">@is_module</span> = <span class="ruby-identifier">context</span>.<span class="ruby-identifier">module?</span>
+508:       <span class="ruby-ivar">@values</span>    = {}
+509: 
+510:       <span class="ruby-identifier">context</span>.<span class="ruby-identifier">viewer</span> = <span class="ruby-keyword kw">self</span>
+511: 
+512:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">all_one_file</span>
+513:         <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">context</span>.<span class="ruby-identifier">full_name</span>
+514:       <span class="ruby-keyword kw">else</span>
+515:         <span class="ruby-ivar">@path</span> = <span class="ruby-identifier">http_url</span>(<span class="ruby-identifier">context</span>.<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">prefix</span>)
+516:       <span class="ruby-keyword kw">end</span>
+517: 
+518:       <span class="ruby-identifier">collect_methods</span>
+519: 
+520:       <span class="ruby-constant">AllReferences</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">name</span>, <span class="ruby-keyword kw">self</span>)
+521:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3C%3D%3E"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&lt;=&gt;</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 683</span>
+683:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">other</span>)
+684:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">name</span>
+685:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-attribute-list-method" class="method-detail ">
+				<a name="method-i-build_attribute_list"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_attribute_list</span><span
+						class="method-args">(section)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-attribute-list-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 610</span>
+610:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_attribute_list</span>(<span class="ruby-identifier">section</span>)
+611:       <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">att</span><span class="ruby-operator">|</span>
+612:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">att</span>.<span class="ruby-identifier">section</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">section</span>
+613: 
+614:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">att</span>.<span class="ruby-identifier">visibility</span> <span class="ruby-operator">==</span> <span class="ruby-value">:public</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">att</span>.<span class="ruby-identifier">visibility</span> <span class="ruby-operator">==</span> <span class="ruby-value">:protected</span> <span class="ruby-keyword kw">or</span>
+615:            <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">show_all</span> <span class="ruby-keyword kw">then</span>
+616: 
+617:           <span class="ruby-identifier">entry</span> = {
+618:             <span class="ruby-value">:name</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">att</span>.<span class="ruby-identifier">name</span>),
+619:             <span class="ruby-value">:rw</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">att</span>.<span class="ruby-identifier">rw</span>,
+620:             <span class="ruby-value">:a_desc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">markup</span>(<span class="ruby-identifier">att</span>.<span class="ruby-identifier">comment</span>, <span class="ruby-keyword kw">true</span>)
+621:           }
+622: 
+623:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">att</span>.<span class="ruby-identifier">visibility</span> <span class="ruby-operator">==</span> <span class="ruby-value">:public</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">att</span>.<span class="ruby-identifier">visibility</span> <span class="ruby-operator">==</span> <span class="ruby-value">:protected</span> <span class="ruby-keyword kw">then</span>
+624:             <span class="ruby-identifier">entry</span>[<span class="ruby-value">:rw</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;-&quot;</span>
+625:           <span class="ruby-keyword kw">end</span>
+626: 
+627:           <span class="ruby-identifier">entry</span>
+628:         <span class="ruby-keyword kw">end</span>
+629:       <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">compact</span>
+630:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="class-attribute-values-method" class="method-detail ">
+				<a name="method-i-class_attribute_values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">class_attribute_values</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="class-attribute-values-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 632</span>
+632:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_attribute_values</span>
+633:       <span class="ruby-identifier">h_name</span> = <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">name</span>)
+634: 
+635:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:href</span>]      = <span class="ruby-ivar">@path</span>
+636:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:classmod</span>]  = <span class="ruby-ivar">@is_module</span> <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;Module&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;Class&quot;</span>
+637:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:title</span>]     = <span class="ruby-node">&quot;#{@values['classmod']}: #{h_name} [#{@options.title}]&quot;</span>
+638: 
+639:       <span class="ruby-identifier">c</span> = <span class="ruby-ivar">@context</span>
+640:       <span class="ruby-identifier">c</span> = <span class="ruby-identifier">c</span>.<span class="ruby-identifier">parent</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">c</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">diagram</span>
+641: 
+642:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">diagram</span> <span class="ruby-keyword kw">then</span>
+643:         <span class="ruby-ivar">@values</span>[<span class="ruby-value">:diagram</span>] = <span class="ruby-identifier">diagram_reference</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">diagram</span>)
+644:       <span class="ruby-keyword kw">end</span>
+645: 
+646:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:full_name</span>] = <span class="ruby-identifier">h_name</span>
+647: 
+648:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">module?</span> <span class="ruby-keyword kw">and</span> <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">superclass</span> <span class="ruby-keyword kw">then</span>
+649:         <span class="ruby-identifier">parent_class</span> = <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">superclass</span>
+650:         <span class="ruby-ivar">@values</span>[<span class="ruby-value">:parent</span>] = <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">parent_class</span>)
+651: 
+652:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent_name</span>
+653:           <span class="ruby-identifier">lookup</span> = <span class="ruby-identifier">parent_name</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;::&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">parent_class</span>
+654:         <span class="ruby-keyword kw">else</span>
+655:           <span class="ruby-identifier">lookup</span> = <span class="ruby-identifier">parent_class</span>
+656:         <span class="ruby-keyword kw">end</span>
+657: 
+658:         <span class="ruby-identifier">parent_url</span> = <span class="ruby-constant">AllReferences</span>[<span class="ruby-identifier">lookup</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">AllReferences</span>[<span class="ruby-identifier">parent_class</span>]
+659: 
+660:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent_url</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">parent_url</span>.<span class="ruby-identifier">document_self</span>
+661:           <span class="ruby-ivar">@values</span>[<span class="ruby-value">:par_url</span>] = <span class="ruby-identifier">aref_to</span>(<span class="ruby-identifier">parent_url</span>.<span class="ruby-identifier">path</span>)
+662:         <span class="ruby-keyword kw">end</span>
+663:       <span class="ruby-keyword kw">end</span>
+664: 
+665:       <span class="ruby-identifier">files</span> = []
+666:       <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">in_files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+667:         <span class="ruby-identifier">res</span> = {}
+668:         <span class="ruby-identifier">full_path</span> = <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">f</span>.<span class="ruby-identifier">file_absolute_name</span>)
+669: 
+670:         <span class="ruby-identifier">res</span>[<span class="ruby-value">:full_path</span>]     = <span class="ruby-identifier">full_path</span>
+671:         <span class="ruby-identifier">res</span>[<span class="ruby-value">:full_path_url</span>] = <span class="ruby-identifier">aref_to</span>(<span class="ruby-identifier">f</span>.<span class="ruby-identifier">viewer</span>.<span class="ruby-identifier">path</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">document_self</span>
+672: 
+673:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">webcvs</span>
+674:           <span class="ruby-identifier">res</span>[<span class="ruby-value">:cvsurl</span>] = <span class="ruby-identifier">cvs_url</span>( <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">webcvs</span>, <span class="ruby-identifier">full_path</span> )
+675:         <span class="ruby-keyword kw">end</span>
+676: 
+677:         <span class="ruby-identifier">files</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">res</span>
+678:       <span class="ruby-keyword kw">end</span>
+679: 
+680:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:infiles</span>] = <span class="ruby-identifier">files</span>
+681:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="http-url-method" class="method-detail ">
+				<a name="method-i-http_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">http_url</span><span
+						class="method-args">(full_name, prefix)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the relative file name to store this class in, which is also its
+url
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="http-url-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 527</span>
+527:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">http_url</span>(<span class="ruby-identifier">full_name</span>, <span class="ruby-identifier">prefix</span>)
+528:       <span class="ruby-identifier">path</span> = <span class="ruby-identifier">full_name</span>.<span class="ruby-identifier">dup</span>
+529: 
+530:       <span class="ruby-identifier">path</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/&lt;&lt;\s*(\w*)/</span>, <span class="ruby-value str">'from-\1'</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>[<span class="ruby-value str">'&lt;&lt;'</span>]
+531: 
+532:       <span class="ruby-identifier">path</span> = [<span class="ruby-identifier">prefix</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>)
+533: 
+534:       <span class="ruby-operator">::</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(*<span class="ruby-identifier">path</span>.<span class="ruby-identifier">compact</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;.html&quot;</span>
+535:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="index-name-method" class="method-detail ">
+				<a name="method-i-index_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">index_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="index-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 545</span>
+545:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_name</span>
+546:       <span class="ruby-identifier">name</span>
+547:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 687</span>
+687:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+688:       <span class="ruby-node">&quot;#&lt;#{self.class} name: #{name} path: #{@path}&gt;&quot;</span>
+689:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="name-method" class="method-detail ">
+				<a name="method-i-name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 537</span>
+537:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+538:       <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">full_name</span>
+539:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parent-name-method" class="method-detail ">
+				<a name="method-i-parent_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parent_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parent-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 541</span>
+541:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parent_name</span>
+542:       <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">full_name</span>
+543:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pretty-print-method" class="method-detail ">
+				<a name="method-i-pretty_print"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pretty_print</span><span
+						class="method-args">(q)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pretty-print-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 691</span>
+691:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pretty_print</span>(<span class="ruby-identifier">q</span>)
+692:       <span class="ruby-identifier">q</span>.<span class="ruby-identifier">group</span> <span class="ruby-value">1</span>, <span class="ruby-node">&quot;#&lt;#{self.class} &quot;</span>, <span class="ruby-value str">'&gt;'</span> <span class="ruby-keyword kw">do</span>
+693:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">'name: '</span>
+694:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">pp</span> <span class="ruby-identifier">name</span>
+695:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">','</span>
+696:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span>
+697: 
+698:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">'path: '</span>
+699:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">pp</span> <span class="ruby-ivar">@path</span>
+700:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">','</span>
+701:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span>
+702: 
+703:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">'values: '</span>
+704:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">pp</span> <span class="ruby-ivar">@values</span>
+705:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">','</span>
+706:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">breakable</span>
+707: 
+708:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">text</span> <span class="ruby-value str">'methods: '</span>
+709:         <span class="ruby-identifier">q</span>.<span class="ruby-identifier">pp</span> <span class="ruby-ivar">@methods</span>
+710:       <span class="ruby-keyword kw">end</span>
+711:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="value-hash-method" class="method-detail ">
+				<a name="method-i-value_hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">value_hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="value-hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 566</span>
+566:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value_hash</span>
+567:       <span class="ruby-identifier">class_attribute_values</span>
+568:       <span class="ruby-identifier">add_table_of_sections</span>
+569: 
+570:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:charset</span>] = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">charset</span>
+571:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:style_url</span>] = <span class="ruby-identifier">style_url</span>(<span class="ruby-identifier">path</span>, <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">css</span>)
+572: 
+573:       <span class="ruby-identifier">d</span> = <span class="ruby-identifier">markup</span>(<span class="ruby-ivar">@context</span>.<span class="ruby-identifier">comment</span>)
+574:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:description</span>] = <span class="ruby-identifier">d</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">empty?</span>
+575: 
+576:       <span class="ruby-identifier">ml</span> = <span class="ruby-identifier">build_method_summary_list</span> <span class="ruby-ivar">@path</span>
+577:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:methods</span>] = <span class="ruby-identifier">ml</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ml</span>.<span class="ruby-identifier">empty?</span>
+578: 
+579:       <span class="ruby-identifier">il</span> = <span class="ruby-identifier">build_include_list</span> <span class="ruby-ivar">@context</span>
+580:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:includes</span>] = <span class="ruby-identifier">il</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">il</span>.<span class="ruby-identifier">empty?</span>
+581: 
+582:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:sections</span>] = <span class="ruby-ivar">@context</span>.<span class="ruby-identifier">sections</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">section</span><span class="ruby-operator">|</span>
+583:         <span class="ruby-identifier">secdata</span> = {
+584:           <span class="ruby-value">:sectitle</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">section</span>.<span class="ruby-identifier">title</span>,
+585:           <span class="ruby-value">:secsequence</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">section</span>.<span class="ruby-identifier">sequence</span>,
+586:           <span class="ruby-value">:seccomment</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">markup</span>(<span class="ruby-identifier">section</span>.<span class="ruby-identifier">comment</span>),
+587:         }
+588: 
+589:         <span class="ruby-identifier">al</span> = <span class="ruby-identifier">build_alias_summary_list</span> <span class="ruby-identifier">section</span>
+590:         <span class="ruby-identifier">secdata</span>[<span class="ruby-value">:aliases</span>] = <span class="ruby-identifier">al</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">al</span>.<span class="ruby-identifier">empty?</span>
+591: 
+592:         <span class="ruby-identifier">co</span> = <span class="ruby-identifier">build_constants_summary_list</span> <span class="ruby-identifier">section</span>
+593:         <span class="ruby-identifier">secdata</span>[<span class="ruby-value">:constants</span>] = <span class="ruby-identifier">co</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">co</span>.<span class="ruby-identifier">empty?</span>
+594: 
+595:         <span class="ruby-identifier">al</span> = <span class="ruby-identifier">build_attribute_list</span> <span class="ruby-identifier">section</span>
+596:         <span class="ruby-identifier">secdata</span>[<span class="ruby-value">:attributes</span>] = <span class="ruby-identifier">al</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">al</span>.<span class="ruby-identifier">empty?</span>
+597: 
+598:         <span class="ruby-identifier">cl</span> = <span class="ruby-identifier">build_class_list</span> <span class="ruby-value">0</span>, <span class="ruby-ivar">@context</span>, <span class="ruby-identifier">section</span>
+599:         <span class="ruby-identifier">secdata</span>[<span class="ruby-value">:classlist</span>] = <span class="ruby-identifier">cl</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">cl</span>.<span class="ruby-identifier">empty?</span>
+600: 
+601:         <span class="ruby-identifier">mdl</span> = <span class="ruby-identifier">build_method_detail_list</span> <span class="ruby-identifier">section</span>
+602:         <span class="ruby-identifier">secdata</span>[<span class="ruby-value">:method_list</span>] = <span class="ruby-identifier">mdl</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">mdl</span>.<span class="ruby-identifier">empty?</span>
+603: 
+604:         <span class="ruby-identifier">secdata</span>
+605:       <span class="ruby-keyword kw">end</span>
+606: 
+607:       <span class="ruby-ivar">@values</span>
+608:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-on-method" class="method-detail ">
+				<a name="method-i-write_on"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_on</span><span
+						class="method-args">(f, file_list, class_list, method_list, overrides = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-on-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator.rb, line 549</span>
+549:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_on</span>(<span class="ruby-identifier">f</span>, <span class="ruby-identifier">file_list</span>, <span class="ruby-identifier">class_list</span>, <span class="ruby-identifier">method_list</span>, <span class="ruby-identifier">overrides</span> = {})
+550:       <span class="ruby-identifier">value_hash</span>
+551: 
+552:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:file_list</span>] = <span class="ruby-identifier">file_list</span>
+553:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:class_list</span>] = <span class="ruby-identifier">class_list</span>
+554:       <span class="ruby-ivar">@values</span>[<span class="ruby-value">:method_list</span>] = <span class="ruby-identifier">method_list</span>
+555: 
+556:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">update</span> <span class="ruby-identifier">overrides</span>
+557: 
+558:       <span class="ruby-identifier">template_page</span> = <span class="ruby-ivar">@template_cache</span>.<span class="ruby-identifier">cache</span>(<span class="ruby-ivar">@template</span>) <span class="ruby-keyword kw">do</span>
+559:         <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TemplatePage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">BODY</span>,
+560:                                <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">CLASS_PAGE</span>,
+561:                                <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">METHOD_LIST</span>)
+562:       <span class="ruby-keyword kw">end</span>
+563:       <span class="ruby-identifier">template_page</span>.<span class="ruby-identifier">write_html_on</span>(<span class="ruby-identifier">f</span>, <span class="ruby-ivar">@values</span>)
+564:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

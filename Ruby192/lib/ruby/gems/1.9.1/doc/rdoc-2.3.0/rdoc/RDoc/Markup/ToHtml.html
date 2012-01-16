@@ -1,0 +1,1851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RDoc::Markup::ToHtml</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rdoc/markup/to_html_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rdoc/markup/to_html.rb">lib/rdoc/markup/to_html.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Formatter.html">RDoc::Markup::Formatter</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-gen_relative_url">::gen_relative_url</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-accept_blank_line">#accept_blank_line</a></li>
+					
+					<li><a href="#method-i-accept_heading">#accept_heading</a></li>
+					
+					<li><a href="#method-i-accept_list_end">#accept_list_end</a></li>
+					
+					<li><a href="#method-i-accept_list_item">#accept_list_item</a></li>
+					
+					<li><a href="#method-i-accept_list_start">#accept_list_start</a></li>
+					
+					<li><a href="#method-i-accept_paragraph">#accept_paragraph</a></li>
+					
+					<li><a href="#method-i-accept_rule">#accept_rule</a></li>
+					
+					<li><a href="#method-i-accept_verbatim">#accept_verbatim</a></li>
+					
+					<li><a href="#method-i-add_tag">#add_tag</a></li>
+					
+					<li><a href="#method-i-annotate">#annotate</a></li>
+					
+					<li><a href="#method-i-convert_flow">#convert_flow</a></li>
+					
+					<li><a href="#method-i-convert_heading">#convert_heading</a></li>
+					
+					<li><a href="#method-i-convert_special">#convert_special</a></li>
+					
+					<li><a href="#method-i-convert_string">#convert_string</a></li>
+					
+					<li><a href="#method-i-convert_string_fancy">#convert_string_fancy</a></li>
+					
+					<li><a href="#method-i-convert_string_simple">#convert_string_simple</a></li>
+					
+					<li><a href="#method-i-end_accepting">#end_accepting</a></li>
+					
+					<li><a href="#method-i-gen_url">#gen_url</a></li>
+					
+					<li><a href="#method-i-handle_special_HYPERLINK">#handle_special_HYPERLINK</a></li>
+					
+					<li><a href="#method-i-handle_special_TIDYLINK">#handle_special_TIDYLINK</a></li>
+					
+					<li><a href="#method-i-html_list_name">#html_list_name</a></li>
+					
+					<li><a href="#method-i-in_tt%3F">#in_tt?</a></li>
+					
+					<li><a href="#method-i-init_tags">#init_tags</a></li>
+					
+					<li><a href="#method-i-list_end_for">#list_end_for</a></li>
+					
+					<li><a href="#method-i-list_item_start">#list_item_start</a></li>
+					
+					<li><a href="#method-i-off_tags">#off_tags</a></li>
+					
+					<li><a href="#method-i-on_tags">#on_tags</a></li>
+					
+					<li><a href="#method-i-start_accepting">#start_accepting</a></li>
+					
+					<li><a href="#method-i-tt%3F">#tt?</a></li>
+					
+					<li><a href="#method-i-wrap">#wrap</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../../RI_txt.html">RI.txt</a></li>
+				
+					<li class="file"><a href="../../test/test_ja_txt.html">test.ja.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RDoc.html">RDoc</a></li>
+				
+					<li><a href="../../RDoc/Alias.html">RDoc::Alias</a></li>
+				
+					<li><a href="../../RDoc/AnonClass.html">RDoc::AnonClass</a></li>
+				
+					<li><a href="../../RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+				
+					<li><a href="../../RDoc/Attr.html">RDoc::Attr</a></li>
+				
+					<li><a href="../../RDoc/Cache.html">RDoc::Cache</a></li>
+				
+					<li><a href="../../RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+				
+					<li><a href="../../RDoc/CodeObject.html">RDoc::CodeObject</a></li>
+				
+					<li><a href="../../RDoc/Constant.html">RDoc::Constant</a></li>
+				
+					<li><a href="../../RDoc/Context.html">RDoc::Context</a></li>
+				
+					<li><a href="../../RDoc/Context/Section.html">RDoc::Context::Section</a></li>
+				
+					<li><a href="../../RDoc/DOT.html">RDoc::DOT</a></li>
+				
+					<li><a href="../../RDoc/DOT/Digraph.html">RDoc::DOT::Digraph</a></li>
+				
+					<li><a href="../../RDoc/DOT/Edge.html">RDoc::DOT::Edge</a></li>
+				
+					<li><a href="../../RDoc/DOT/Element.html">RDoc::DOT::Element</a></li>
+				
+					<li><a href="../../RDoc/DOT/Node.html">RDoc::DOT::Node</a></li>
+				
+					<li><a href="../../RDoc/DOT/Port.html">RDoc::DOT::Port</a></li>
+				
+					<li><a href="../../RDoc/DOT/SimpleElement.html">RDoc::DOT::SimpleElement</a></li>
+				
+					<li><a href="../../RDoc/DOT/Subgraph.html">RDoc::DOT::Subgraph</a></li>
+				
+					<li><a href="../../RDoc/Diagram.html">RDoc::Diagram</a></li>
+				
+					<li><a href="../../RDoc/Error.html">RDoc::Error</a></li>
+				
+					<li><a href="../../RDoc/Generator.html">RDoc::Generator</a></li>
+				
+					<li><a href="../../RDoc/Generator/AllReferences.html">RDoc::Generator::AllReferences</a></li>
+				
+					<li><a href="../../RDoc/Generator/Class.html">RDoc::Generator::Class</a></li>
+				
+					<li><a href="../../RDoc/Generator/Context.html">RDoc::Generator::Context</a></li>
+				
+					<li><a href="../../RDoc/Generator/Darkfish.html">RDoc::Generator::Darkfish</a></li>
+				
+					<li><a href="../../RDoc/Generator/File.html">RDoc::Generator::File</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML.html">RDoc::Generator::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/Common.html">RDoc::Generator::HTML::Common</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/HTML.html">RDoc::Generator::HTML::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTMLInOne.html">RDoc::Generator::HTMLInOne</a></li>
+				
+					<li><a href="../../RDoc/Generator/MarkUp.html">RDoc::Generator::MarkUp</a></li>
+				
+					<li><a href="../../RDoc/Generator/Method.html">RDoc::Generator::Method</a></li>
+				
+					<li><a href="../../RDoc/Generator/RI.html">RDoc::Generator::RI</a></li>
+				
+					<li><a href="../../RDoc/Generator/XML.html">RDoc::Generator::XML</a></li>
+				
+					<li><a href="../../RDoc/GhostMethod.html">RDoc::GhostMethod</a></li>
+				
+					<li><a href="../../RDoc/Include.html">RDoc::Include</a></li>
+				
+					<li><a href="../../RDoc/Markup.html">RDoc::Markup</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrChanger.html">RDoc::Markup::AttrChanger</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrSpan.html">RDoc::Markup::AttrSpan</a></li>
+				
+					<li><a href="../../RDoc/Markup/Attribute.html">RDoc::Markup::Attribute</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttributeManager.html">RDoc::Markup::AttributeManager</a></li>
+				
+					<li><a href="../../RDoc/Markup/BlankLine.html">RDoc::Markup::BlankLine</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow.html">RDoc::Markup::Flow</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow/LIST.html">RDoc::Markup::Flow::LIST</a></li>
+				
+					<li><a href="../../RDoc/Markup/Formatter.html">RDoc::Markup::Formatter</a></li>
+				
+					<li><a href="../../RDoc/Markup/Fragment.html">RDoc::Markup::Fragment</a></li>
+				
+					<li><a href="../../RDoc/Markup/Heading.html">RDoc::Markup::Heading</a></li>
+				
+					<li><a href="../../RDoc/Markup/Line.html">RDoc::Markup::Line</a></li>
+				
+					<li><a href="../../RDoc/Markup/LineCollection.html">RDoc::Markup::LineCollection</a></li>
+				
+					<li><a href="../../RDoc/Markup/Lines.html">RDoc::Markup::Lines</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListBase.html">RDoc::Markup::ListBase</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListEnd.html">RDoc::Markup::ListEnd</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListItem.html">RDoc::Markup::ListItem</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListStart.html">RDoc::Markup::ListStart</a></li>
+				
+					<li><a href="../../RDoc/Markup/Paragraph.html">RDoc::Markup::Paragraph</a></li>
+				
+					<li><a href="../../RDoc/Markup/PreProcess.html">RDoc::Markup::PreProcess</a></li>
+				
+					<li><a href="../../RDoc/Markup/Rule.html">RDoc::Markup::Rule</a></li>
+				
+					<li><a href="../../RDoc/Markup/Special.html">RDoc::Markup::Special</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToFlow.html">RDoc::Markup::ToFlow</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtml.html">RDoc::Markup::ToHtml</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtmlCrossref.html">RDoc::Markup::ToHtmlCrossref</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToLaTeX.html">RDoc::Markup::ToLaTeX</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTest.html">RDoc::Markup::ToTest</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTexInfo.html">RDoc::Markup::ToTexInfo</a></li>
+				
+					<li><a href="../../RDoc/Markup/Verbatim.html">RDoc::Markup::Verbatim</a></li>
+				
+					<li><a href="../../RDoc/MetaMethod.html">RDoc::MetaMethod</a></li>
+				
+					<li><a href="../../RDoc/NormalClass.html">RDoc::NormalClass</a></li>
+				
+					<li><a href="../../RDoc/NormalModule.html">RDoc::NormalModule</a></li>
+				
+					<li><a href="../../RDoc/Options.html">RDoc::Options</a></li>
+				
+					<li><a href="../../RDoc/Parser.html">RDoc::Parser</a></li>
+				
+					<li><a href="../../RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95.html">RDoc::Parser::F95</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Fortran95Definition.html">RDoc::Parser::F95::Fortran95Definition</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Token.html">RDoc::Parser::F95::Token</a></li>
+				
+					<li><a href="../../RDoc/Parser/PerlPOD.html">RDoc::Parser::PerlPOD</a></li>
+				
+					<li><a href="../../RDoc/Parser/Ruby.html">RDoc::Parser::Ruby</a></li>
+				
+					<li><a href="../../RDoc/Parser/Simple.html">RDoc::Parser::Simple</a></li>
+				
+					<li><a href="../../RDoc/RDoc.html">RDoc::RDoc</a></li>
+				
+					<li><a href="../../RDoc/RI.html">RDoc::RI</a></li>
+				
+					<li><a href="../../RDoc/RI/AliasName.html">RDoc::RI::AliasName</a></li>
+				
+					<li><a href="../../RDoc/RI/AnsiFormatter.html">RDoc::RI::AnsiFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Attribute.html">RDoc::RI::Attribute</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter.html">RDoc::RI::AttributeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter/AttributeString.html">RDoc::RI::AttributeFormatter::AttributeString</a></li>
+				
+					<li><a href="../../RDoc/RI/Cache.html">RDoc::RI::Cache</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassDescription.html">RDoc::RI::ClassDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassEntry.html">RDoc::RI::ClassEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Constant.html">RDoc::RI::Constant</a></li>
+				
+					<li><a href="../../RDoc/RI/DefaultDisplay.html">RDoc::RI::DefaultDisplay</a></li>
+				
+					<li><a href="../../RDoc/RI/Description.html">RDoc::RI::Description</a></li>
+				
+					<li><a href="../../RDoc/RI/Display.html">RDoc::RI::Display</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver.html">RDoc::RI::Driver</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/Error.html">RDoc::RI::Driver::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/NotFoundError.html">RDoc::RI::Driver::NotFoundError</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/OpenStructHash.html">RDoc::RI::Driver::OpenStructHash</a></li>
+				
+					<li><a href="../../RDoc/RI/Error.html">RDoc::RI::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Formatter.html">RDoc::RI::Formatter</a></li>
+				
+					<li><a href="../../RDoc/RI/HtmlFormatter.html">RDoc::RI::HtmlFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/IncludedModule.html">RDoc::RI::IncludedModule</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodDescription.html">RDoc::RI::MethodDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodEntry.html">RDoc::RI::MethodEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodSummary.html">RDoc::RI::MethodSummary</a></li>
+				
+					<li><a href="../../RDoc/RI/ModuleDescription.html">RDoc::RI::ModuleDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/NameDescriptor.html">RDoc::RI::NameDescriptor</a></li>
+				
+					<li><a href="../../RDoc/RI/NamedThing.html">RDoc::RI::NamedThing</a></li>
+				
+					<li><a href="../../RDoc/RI/OverstrikeFormatter.html">RDoc::RI::OverstrikeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Reader.html">RDoc::RI::Reader</a></li>
+				
+					<li><a href="../../RDoc/RI/SimpleFormatter.html">RDoc::RI::SimpleFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/TopLevelEntry.html">RDoc::RI::TopLevelEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Writer.html">RDoc::RI::Writer</a></li>
+				
+					<li><a href="../../RDoc/Require.html">RDoc::Require</a></li>
+				
+					<li><a href="../../RDoc/RubyLex.html">RDoc::RubyLex</a></li>
+				
+					<li><a href="../../RDoc/RubyLex/BufferedReader.html">RDoc::RubyLex::BufferedReader</a></li>
+				
+					<li><a href="../../RDoc/RubyToken.html">RDoc::RubyToken</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkError.html">RDoc::RubyToken::TkError</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkId.html">RDoc::RubyToken::TkId</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkKW.html">RDoc::RubyToken::TkKW</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkNode.html">RDoc::RubyToken::TkNode</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOPASGN.html">RDoc::RubyToken::TkOPASGN</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOp.html">RDoc::RubyToken::TkOp</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkUnknownChar.html">RDoc::RubyToken::TkUnknownChar</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkVal.html">RDoc::RubyToken::TkVal</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/Token.html">RDoc::RubyToken::Token</a></li>
+				
+					<li><a href="../../RDoc/SingleClass.html">RDoc::SingleClass</a></li>
+				
+					<li><a href="../../RDoc/Stats.html">RDoc::Stats</a></li>
+				
+					<li><a href="../../RDoc/Stats/Normal.html">RDoc::Stats::Normal</a></li>
+				
+					<li><a href="../../RDoc/Stats/Quiet.html">RDoc::Stats::Quiet</a></li>
+				
+					<li><a href="../../RDoc/Stats/Verbose.html">RDoc::Stats::Verbose</a></li>
+				
+					<li><a href="../../RDoc/TokenStream.html">RDoc::TokenStream</a></li>
+				
+					<li><a href="../../RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RDoc::Markup::ToHtml</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="LIST_TYPE_TO_HTML">LIST_TYPE_TO_HTML</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="InlineTag">InlineTag</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="gen-relative-url-method" class="method-detail ">
+				<a name="method-c-gen_relative_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_relative_url</span><span
+						class="method-args">(path, target)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a target url to one that is relative to a given path
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gen-relative-url-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 40</span>
+40:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">gen_relative_url</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">target</span>)
+41:     <span class="ruby-identifier">from</span>        = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span> <span class="ruby-identifier">path</span>
+42:     <span class="ruby-identifier">to</span>, <span class="ruby-identifier">to_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">split</span> <span class="ruby-identifier">target</span>
+43: 
+44:     <span class="ruby-identifier">from</span> = <span class="ruby-identifier">from</span>.<span class="ruby-identifier">split</span> <span class="ruby-value str">&quot;/&quot;</span>
+45:     <span class="ruby-identifier">to</span>   = <span class="ruby-identifier">to</span>.<span class="ruby-identifier">split</span> <span class="ruby-value str">&quot;/&quot;</span>
+46: 
+47:     <span class="ruby-identifier">from</span>.<span class="ruby-identifier">delete</span> <span class="ruby-value str">'.'</span>
+48:     <span class="ruby-identifier">to</span>.<span class="ruby-identifier">delete</span> <span class="ruby-value str">'.'</span>
+49: 
+50:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">from</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">to</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">from</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">to</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">do</span>
+51:       <span class="ruby-identifier">from</span>.<span class="ruby-identifier">shift</span>
+52:       <span class="ruby-identifier">to</span>.<span class="ruby-identifier">shift</span>
+53:     <span class="ruby-keyword kw">end</span>
+54: 
+55:     <span class="ruby-identifier">from</span>.<span class="ruby-identifier">fill</span> <span class="ruby-value str">&quot;..&quot;</span>
+56:     <span class="ruby-identifier">from</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">to</span>
+57:     <span class="ruby-identifier">from</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">to_file</span>
+58:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(*<span class="ruby-identifier">from</span>)
+59:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 20</span>
+20:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+21:     <span class="ruby-keyword kw">super</span>
+22: 
+23:     <span class="ruby-comment cmt"># @in_tt - tt nested levels count</span>
+24:     <span class="ruby-comment cmt"># @tt_bit - cache</span>
+25:     <span class="ruby-ivar">@in_tt</span> = <span class="ruby-value">0</span>
+26:     <span class="ruby-ivar">@tt_bit</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>.<span class="ruby-identifier">bitmap_for</span> <span class="ruby-value">:TT</span>
+27: 
+28:     <span class="ruby-comment cmt"># external hyperlinks</span>
+29:     <span class="ruby-ivar">@markup</span>.<span class="ruby-identifier">add_special</span>(<span class="ruby-regexp re">/((link:|https?:|mailto:|ftp:|www\.)\S+\w)/</span>, <span class="ruby-value">:HYPERLINK</span>)
+30: 
+31:     <span class="ruby-comment cmt"># and links of the form  &lt;text&gt;[&lt;url&gt;]</span>
+32:     <span class="ruby-ivar">@markup</span>.<span class="ruby-identifier">add_special</span>(<span class="ruby-regexp re">/(((\{.*?\})|\b\S+?)\[\S+?\.\S+?\])/</span>, <span class="ruby-value">:TIDYLINK</span>)
+33: 
+34:     <span class="ruby-identifier">init_tags</span>
+35:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="accept-blank-line-method" class="method-detail ">
+				<a name="method-i-accept_blank_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_blank_line</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-blank-line-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 214</span>
+214:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_blank_line</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+215:     <span class="ruby-comment cmt"># @res &lt;&lt; annotate(&quot;&lt;p /&gt;&quot;) &lt;&lt; &quot;\n&quot;</span>
+216:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-heading-method" class="method-detail ">
+				<a name="method-i-accept_heading"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_heading</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-heading-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 218</span>
+218:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_heading</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+219:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">convert_heading</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">head_level</span>, <span class="ruby-identifier">am</span>.<span class="ruby-identifier">flow</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">txt</span>))
+220:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-list-end-method" class="method-detail ">
+				<a name="method-i-accept_list_end"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_list_end</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-list-end-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 195</span>
+195:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_list_end</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+196:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag</span> = <span class="ruby-ivar">@in_list_entry</span>.<span class="ruby-identifier">pop</span>
+197:       <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">tag</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+198:     <span class="ruby-keyword kw">end</span>
+199:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">html_list_name</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span>, <span class="ruby-keyword kw">false</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+200:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-list-item-method" class="method-detail ">
+				<a name="method-i-accept_list_item"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_list_item</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-list-item-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 202</span>
+202:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_list_item</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+203:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag</span> = <span class="ruby-ivar">@in_list_entry</span>.<span class="ruby-identifier">last</span>
+204:       <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">tag</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+205:     <span class="ruby-keyword kw">end</span>
+206: 
+207:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">list_item_start</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+208: 
+209:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">convert_flow</span>(<span class="ruby-identifier">am</span>.<span class="ruby-identifier">flow</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">txt</span>))) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+210: 
+211:     <span class="ruby-ivar">@in_list_entry</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">list_end_for</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span>)
+212:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-list-start-method" class="method-detail ">
+				<a name="method-i-accept_list_start"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_list_start</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-list-start-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 190</span>
+190:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_list_start</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+191:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">html_list_name</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span>, <span class="ruby-keyword kw">true</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+192:     <span class="ruby-ivar">@in_list_entry</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">false</span>
+193:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-paragraph-method" class="method-detail ">
+				<a name="method-i-accept_paragraph"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_paragraph</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-paragraph-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 172</span>
+172:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_paragraph</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+173:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;p&gt;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+174:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">convert_flow</span>(<span class="ruby-identifier">am</span>.<span class="ruby-identifier">flow</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">txt</span>)))
+175:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;/p&gt;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+176:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-rule-method" class="method-detail ">
+				<a name="method-i-accept_rule"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_rule</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-rule-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 184</span>
+184:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_rule</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+185:     <span class="ruby-identifier">size</span> = <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">param</span>
+186:     <span class="ruby-identifier">size</span> = <span class="ruby-value">10</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">10</span>
+187:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;&lt;hr size=\&quot;#{size}\&quot;&gt;&lt;/hr&gt;&quot;</span>
+188:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="accept-verbatim-method" class="method-detail ">
+				<a name="method-i-accept_verbatim"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept_verbatim</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-verbatim-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 178</span>
+178:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept_verbatim</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+179:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;pre&gt;&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+180:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">txt</span>)
+181:     <span class="ruby-ivar">@res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;/pre&gt;&quot;</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+182:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-tag-method" class="method-detail ">
+				<a name="method-i-add_tag"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_tag</span><span
+						class="method-args">(name, start, stop)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add a new set of HTML tags for an attribute. We allow separate start and
+end tags for flexibility.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-tag-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 147</span>
+147:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_tag</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">start</span>, <span class="ruby-identifier">stop</span>)
+148:     <span class="ruby-ivar">@attr_tags</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">InlineTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>.<span class="ruby-identifier">bitmap_for</span>(<span class="ruby-identifier">name</span>), <span class="ruby-identifier">start</span>, <span class="ruby-identifier">stop</span>)
+149:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="annotate-method" class="method-detail ">
+				<a name="method-i-annotate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">annotate</span><span
+						class="method-args">(tag)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Given an HTML tag, decorate it with class information and the like if
+required. This is a no-op in the base class, but is overridden in HTML
+output classes that implement style sheets.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="annotate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 156</span>
+156:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">tag</span>)
+157:     <span class="ruby-identifier">tag</span>
+158:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="end-accepting-method" class="method-detail ">
+				<a name="method-i-end_accepting"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">end_accepting</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="end-accepting-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 168</span>
+168:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">end_accepting</span>
+169:     <span class="ruby-ivar">@res</span>
+170:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-url-method" class="method-detail ">
+				<a name="method-i-gen_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_url</span><span
+						class="method-args">(url, text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generate a hyperlink for url, labeled with text. Handle the special cases
+for img: and link: described under <a
+href="ToHtml.html#method-i-handle_special_HYPERLINK">handle_special_HYPERLINK</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gen-url-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 65</span>
+65:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_url</span>(<span class="ruby-identifier">url</span>, <span class="ruby-identifier">text</span>)
+66:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/([A-Za-z]+):(.*)/</span> <span class="ruby-keyword kw">then</span>
+67:       <span class="ruby-identifier">type</span> = <span class="ruby-node">$1</span>
+68:       <span class="ruby-identifier">path</span> = <span class="ruby-node">$2</span>
+69:     <span class="ruby-keyword kw">else</span>
+70:       <span class="ruby-identifier">type</span> = <span class="ruby-value str">&quot;http&quot;</span>
+71:       <span class="ruby-identifier">path</span> = <span class="ruby-identifier">url</span>
+72:       <span class="ruby-identifier">url</span>  = <span class="ruby-node">&quot;http://#{url}&quot;</span>
+73:     <span class="ruby-keyword kw">end</span>
+74: 
+75:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;link&quot;</span> <span class="ruby-keyword kw">then</span>
+76:       <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'#'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-comment cmt"># is this meaningful?</span>
+77:               <span class="ruby-identifier">path</span>
+78:             <span class="ruby-keyword kw">else</span>
+79:               <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">gen_relative_url</span> <span class="ruby-ivar">@from_path</span>, <span class="ruby-identifier">path</span>
+80:             <span class="ruby-keyword kw">end</span>
+81:     <span class="ruby-keyword kw">end</span>
+82: 
+83:     <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;http&quot;</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;link&quot;</span>) <span class="ruby-keyword kw">and</span>
+84:        <span class="ruby-identifier">url</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\.(gif|png|jpg|jpeg|bmp)$/</span> <span class="ruby-keyword kw">then</span>
+85:       <span class="ruby-node">&quot;&lt;img src=\&quot;#{url}\&quot; /&gt;&quot;</span>
+86:     <span class="ruby-keyword kw">else</span>
+87:       <span class="ruby-node">&quot;&lt;a href=\&quot;#{url}\&quot;&gt;#{text.sub(%r{^#{type}:/*}, '')}&lt;/a&gt;&quot;</span>
+88:     <span class="ruby-keyword kw">end</span>
+89:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-special--method" class="method-detail ">
+				<a name="method-i-handle_special_HYPERLINK"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_special_HYPERLINK</span><span
+						class="method-args">(special)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+And we&#8217;re invoked with a potential external hyperlink mailto: just
+gets inserted. http: links are checked to see if they reference an image.
+If so, that image gets inserted using an <img> tag. Otherwise a
+conventional <a href> is used.  We also support a special type of
+hyperlink, link:, which is a reference to a local file whose path is
+relative to the &#8212;op directory.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="handle-special--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 99</span>
+ 99:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_special_HYPERLINK</span>(<span class="ruby-identifier">special</span>)
+100:     <span class="ruby-identifier">url</span> = <span class="ruby-identifier">special</span>.<span class="ruby-identifier">text</span>
+101:     <span class="ruby-identifier">gen_url</span> <span class="ruby-identifier">url</span>, <span class="ruby-identifier">url</span>
+102:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-special--method" class="method-detail ">
+				<a name="method-i-handle_special_TIDYLINK"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_special_TIDYLINK</span><span
+						class="method-args">(special)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Here&#8217;s a hypedlink where the label is different to the URL
+</p>
+<pre>
+ &lt;label&gt;[url] or {long label}[url]</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="handle-special--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 108</span>
+108:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_special_TIDYLINK</span>(<span class="ruby-identifier">special</span>)
+109:     <span class="ruby-identifier">text</span> = <span class="ruby-identifier">special</span>.<span class="ruby-identifier">text</span>
+110: 
+111:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">text</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\{(.*?)\}\[(.*?)\]/</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(\S+)\[(.*?)\]/</span>
+112: 
+113:     <span class="ruby-identifier">label</span> = <span class="ruby-node">$1</span>
+114:     <span class="ruby-identifier">url</span>   = <span class="ruby-node">$2</span>
+115:     <span class="ruby-identifier">gen_url</span> <span class="ruby-identifier">url</span>, <span class="ruby-identifier">label</span>
+116:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="in-tt--method" class="method-detail ">
+				<a name="method-i-in_tt%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">in_tt?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+are we currently inside <tt> tags?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="in-tt--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 121</span>
+121:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">in_tt?</span>
+122:     <span class="ruby-ivar">@in_tt</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+123:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="init-tags-method" class="method-detail ">
+				<a name="method-i-init_tags"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">init_tags</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set up the standard mapping of attributes to HTML tags
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="init-tags-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 135</span>
+135:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">init_tags</span>
+136:     <span class="ruby-ivar">@attr_tags</span> = [
+137:       <span class="ruby-constant">InlineTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>.<span class="ruby-identifier">bitmap_for</span>(<span class="ruby-value">:BOLD</span>), <span class="ruby-value str">&quot;&lt;b&gt;&quot;</span>, <span class="ruby-value str">&quot;&lt;/b&gt;&quot;</span>),
+138:       <span class="ruby-constant">InlineTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>.<span class="ruby-identifier">bitmap_for</span>(<span class="ruby-value">:TT</span>),   <span class="ruby-value str">&quot;&lt;tt&gt;&quot;</span>, <span class="ruby-value str">&quot;&lt;/tt&gt;&quot;</span>),
+139:       <span class="ruby-constant">InlineTag</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>.<span class="ruby-identifier">bitmap_for</span>(<span class="ruby-value">:EM</span>),   <span class="ruby-value str">&quot;&lt;em&gt;&quot;</span>, <span class="ruby-value str">&quot;&lt;/em&gt;&quot;</span>),
+140:     ]
+141:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="start-accepting-method" class="method-detail ">
+				<a name="method-i-start_accepting"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">start_accepting</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Here&#8217;s the client side of the visitor pattern
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="start-accepting-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 163</span>
+163:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start_accepting</span>
+164:     <span class="ruby-ivar">@res</span> = <span class="ruby-value str">&quot;&quot;</span>
+165:     <span class="ruby-ivar">@in_list_entry</span> = []
+166:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tt--method" class="method-detail ">
+				<a name="method-i-tt%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tt?</span><span
+						class="method-args">(tag)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+is <tt>tag</tt> a <tt> tag?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="tt--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 128</span>
+128:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tt?</span>(<span class="ruby-identifier">tag</span>)
+129:     <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">bit</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@tt_bit</span>
+130:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wrap-method" class="method-detail ">
+				<a name="method-i-wrap"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wrap</span><span
+						class="method-args">(txt, line_len = 76)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is a higher speed (if messier) version of wrap
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="wrap-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 225</span>
+225:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wrap</span>(<span class="ruby-identifier">txt</span>, <span class="ruby-identifier">line_len</span> = <span class="ruby-value">76</span>)
+226:     <span class="ruby-identifier">res</span> = <span class="ruby-value str">&quot;&quot;</span>
+227:     <span class="ruby-identifier">sp</span> = <span class="ruby-value">0</span>
+228:     <span class="ruby-identifier">ep</span> = <span class="ruby-identifier">txt</span>.<span class="ruby-identifier">length</span>
+229:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">ep</span>
+230:       <span class="ruby-comment cmt"># scan back for a space</span>
+231:       <span class="ruby-identifier">p</span> = <span class="ruby-identifier">sp</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line_len</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+232:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">ep</span>
+233:         <span class="ruby-identifier">p</span> = <span class="ruby-identifier">ep</span>
+234:       <span class="ruby-keyword kw">else</span>
+235:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">sp</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">txt</span>[<span class="ruby-identifier">p</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">\s\</span>
+236:           <span class="ruby-identifier">p</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+237:         <span class="ruby-keyword kw">end</span>
+238:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">sp</span>
+239:           <span class="ruby-identifier">p</span> = <span class="ruby-identifier">sp</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line_len</span>
+240:           <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">ep</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">txt</span>[<span class="ruby-identifier">p</span>] <span class="ruby-operator">!=</span> <span class="ruby-value">\s\</span>
+241:             <span class="ruby-identifier">p</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+242:           <span class="ruby-keyword kw">end</span>
+243:         <span class="ruby-keyword kw">end</span>
+244:       <span class="ruby-keyword kw">end</span>
+245:       <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">txt</span>[<span class="ruby-identifier">sp</span><span class="ruby-operator">...</span><span class="ruby-identifier">p</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+246:       <span class="ruby-identifier">sp</span> = <span class="ruby-identifier">p</span>
+247:       <span class="ruby-identifier">sp</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">sp</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">ep</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">txt</span>[<span class="ruby-identifier">sp</span>] <span class="ruby-operator">==</span> <span class="ruby-value">\s\</span>
+248:     <span class="ruby-keyword kw">end</span>
+249:     <span class="ruby-identifier">res</span>
+250:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="convert-flow-method" class="method-detail ">
+				<a name="method-i-convert_flow"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_flow</span><span
+						class="method-args">(flow)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-flow-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 278</span>
+278:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_flow</span>(<span class="ruby-identifier">flow</span>)
+279:     <span class="ruby-identifier">res</span> = <span class="ruby-value str">&quot;&quot;</span>
+280: 
+281:     <span class="ruby-identifier">flow</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+282:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">item</span>
+283:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>
+284:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">convert_string</span>(<span class="ruby-identifier">item</span>)
+285:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">AttrChanger</span>
+286:         <span class="ruby-identifier">off_tags</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">item</span>)
+287:         <span class="ruby-identifier">on_tags</span>(<span class="ruby-identifier">res</span>,  <span class="ruby-identifier">item</span>)
+288:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Special</span>
+289:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">convert_special</span>(<span class="ruby-identifier">item</span>)
+290:       <span class="ruby-keyword kw">else</span>
+291:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown flow element: #{item.inspect}&quot;</span>
+292:       <span class="ruby-keyword kw">end</span>
+293:     <span class="ruby-keyword kw">end</span>
+294: 
+295:     <span class="ruby-identifier">res</span>
+296:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-heading-method" class="method-detail ">
+				<a name="method-i-convert_heading"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_heading</span><span
+						class="method-args">(level, flow)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-heading-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 352</span>
+352:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_heading</span>(<span class="ruby-identifier">level</span>, <span class="ruby-identifier">flow</span>)
+353:     <span class="ruby-identifier">res</span> =
+354:       <span class="ruby-identifier">annotate</span>(<span class="ruby-node">&quot;&lt;h#{level}&gt;&quot;</span>) <span class="ruby-operator">+</span>
+355:       <span class="ruby-identifier">convert_flow</span>(<span class="ruby-identifier">flow</span>) <span class="ruby-operator">+</span>
+356:       <span class="ruby-identifier">annotate</span>(<span class="ruby-node">&quot;&lt;/h#{level}&gt;\n&quot;</span>)
+357:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-special-method" class="method-detail ">
+				<a name="method-i-convert_special"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_special</span><span
+						class="method-args">(special)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-special-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 339</span>
+339:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_special</span>(<span class="ruby-identifier">special</span>)
+340:     <span class="ruby-identifier">handled</span> = <span class="ruby-keyword kw">false</span>
+341:     <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>.<span class="ruby-identifier">each_name_of</span>(<span class="ruby-identifier">special</span>.<span class="ruby-identifier">type</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+342:       <span class="ruby-identifier">method_name</span> = <span class="ruby-node">&quot;handle_special_#{name}&quot;</span>
+343:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">method_name</span>
+344:         <span class="ruby-identifier">special</span>.<span class="ruby-identifier">text</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">special</span>)
+345:         <span class="ruby-identifier">handled</span> = <span class="ruby-keyword kw">true</span>
+346:       <span class="ruby-keyword kw">end</span>
+347:     <span class="ruby-keyword kw">end</span>
+348:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unhandled special: #{special}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">handled</span>
+349:     <span class="ruby-identifier">special</span>.<span class="ruby-identifier">text</span>
+350:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-string-method" class="method-detail ">
+				<a name="method-i-convert_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_string</span><span
+						class="method-args">(item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 298</span>
+298:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_string</span>(<span class="ruby-identifier">item</span>)
+299:     <span class="ruby-identifier">in_tt?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">convert_string_simple</span>(<span class="ruby-identifier">item</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">convert_string_fancy</span>(<span class="ruby-identifier">item</span>)
+300:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-string-fancy-method" class="method-detail ">
+				<a name="method-i-convert_string_fancy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_string_fancy</span><span
+						class="method-args">(item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+some of these patterns are taken from SmartyPants&#8230;
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="convert-string-fancy-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 309</span>
+309:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_string_fancy</span>(<span class="ruby-identifier">item</span>)
+310:     <span class="ruby-comment cmt"># convert ampersand before doing anything else</span>
+311:     <span class="ruby-identifier">item</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/&amp;/</span>, <span class="ruby-value str">'&amp;amp;'</span>).
+312: 
+313:     <span class="ruby-comment cmt"># convert -- to em-dash, (-- to en-dash)</span>
+314:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/---?/</span>, <span class="ruby-value str">'&amp;#8212;'</span>). <span class="ruby-comment cmt">#gsub(/--/, '&amp;#8211;').</span>
+315: 
+316:     <span class="ruby-comment cmt"># convert ... to elipsis (and make sure .... becomes .&lt;elipsis&gt;)</span>
+317:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\.\.\.\./</span>, <span class="ruby-value str">'.&amp;#8230;'</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\.\.\./</span>, <span class="ruby-value str">'&amp;#8230;'</span>).
+318: 
+319:     <span class="ruby-comment cmt"># convert single closing quote</span>
+320:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">%{([^ \t\r\n\[\{\(])\'}</span>, <span class="ruby-value str">'\1&amp;#8217;'</span>). <span class="ruby-comment cmt"># }</span>
+321:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">%{\'(?=\W|s\b)}</span>, <span class="ruby-value str">'&amp;#8217;'</span>).
+322: 
+323:     <span class="ruby-comment cmt"># convert single opening quote</span>
+324:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/'/</span>, <span class="ruby-value str">'&amp;#8216;'</span>).
+325: 
+326:     <span class="ruby-comment cmt"># convert double closing quote</span>
+327:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">%{([^ \t\r\n\[\{\(])\&quot;(?=\W)}</span>, <span class="ruby-value str">'\1&amp;#8221;'</span>). <span class="ruby-comment cmt"># }</span>
+328: 
+329:     <span class="ruby-comment cmt"># convert double opening quote</span>
+330:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/&quot;/</span>, <span class="ruby-value str">'&amp;#8220;'</span>).
+331: 
+332:     <span class="ruby-comment cmt"># convert copyright</span>
+333:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\(c\)/</span>, <span class="ruby-value str">'&amp;#169;'</span>).
+334: 
+335:     <span class="ruby-comment cmt"># convert registered trademark</span>
+336:       <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\(r\)/</span>, <span class="ruby-value str">'&amp;#174;'</span>)
+337:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-string-simple-method" class="method-detail ">
+				<a name="method-i-convert_string_simple"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_string_simple</span><span
+						class="method-args">(item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-string-simple-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 302</span>
+302:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_string_simple</span>(<span class="ruby-identifier">item</span>)
+303:     <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span> <span class="ruby-identifier">item</span>
+304:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="html-list-name-method" class="method-detail ">
+				<a name="method-i-html_list_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">html_list_name</span><span
+						class="method-args">(list_type, is_open_tag)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="html-list-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 359</span>
+359:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">html_list_name</span>(<span class="ruby-identifier">list_type</span>, <span class="ruby-identifier">is_open_tag</span>)
+360:     <span class="ruby-identifier">tags</span> = <span class="ruby-constant">LIST_TYPE_TO_HTML</span>[<span class="ruby-identifier">list_type</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;Invalid list type: #{list_type.inspect}&quot;</span>)
+361:     <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">tags</span>[ <span class="ruby-identifier">is_open_tag</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>])
+362:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="list-end-for-method" class="method-detail ">
+				<a name="method-i-list_end_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">list_end_for</span><span
+						class="method-args">(fragment_type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="list-end-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 392</span>
+392:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">list_end_for</span>(<span class="ruby-identifier">fragment_type</span>)
+393:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fragment_type</span>
+394:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:BULLET</span>, <span class="ruby-value">:NUMBER</span>, <span class="ruby-value">:UPPERALPHA</span>, <span class="ruby-value">:LOWERALPHA</span> <span class="ruby-keyword kw">then</span>
+395:       <span class="ruby-value str">&quot;&lt;/li&gt;&quot;</span>
+396:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:LABELED</span> <span class="ruby-keyword kw">then</span>
+397:       <span class="ruby-value str">&quot;&lt;/dd&gt;&quot;</span>
+398:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:NOTE</span> <span class="ruby-keyword kw">then</span>
+399:       <span class="ruby-value str">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span>
+400:     <span class="ruby-keyword kw">else</span>
+401:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Invalid list type&quot;</span>
+402:     <span class="ruby-keyword kw">end</span>
+403:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="list-item-start-method" class="method-detail ">
+				<a name="method-i-list_item_start"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">list_item_start</span><span
+						class="method-args">(am, fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="list-item-start-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 364</span>
+364:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">list_item_start</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+365:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span>
+366:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:BULLET</span>, <span class="ruby-value">:NUMBER</span> <span class="ruby-keyword kw">then</span>
+367:       <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;li&gt;&quot;</span>)
+368: 
+369:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:UPPERALPHA</span> <span class="ruby-keyword kw">then</span>
+370:       <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;li type=\&quot;A\&quot;&gt;&quot;</span>)
+371: 
+372:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:LOWERALPHA</span> <span class="ruby-keyword kw">then</span>
+373:       <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;li type=\&quot;a\&quot;&gt;&quot;</span>)
+374: 
+375:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:LABELED</span> <span class="ruby-keyword kw">then</span>
+376:       <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;dt&gt;&quot;</span>) <span class="ruby-operator">+</span>
+377:         <span class="ruby-identifier">convert_flow</span>(<span class="ruby-identifier">am</span>.<span class="ruby-identifier">flow</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">param</span>)) <span class="ruby-operator">+</span>
+378:         <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;/dt&gt;&quot;</span>) <span class="ruby-operator">+</span>
+379:         <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;dd&gt;&quot;</span>)
+380: 
+381:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">:NOTE</span> <span class="ruby-keyword kw">then</span>
+382:       <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;tr&gt;&quot;</span>) <span class="ruby-operator">+</span>
+383:         <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;td valign=\&quot;top\&quot;&gt;&quot;</span>) <span class="ruby-operator">+</span>
+384:         <span class="ruby-identifier">convert_flow</span>(<span class="ruby-identifier">am</span>.<span class="ruby-identifier">flow</span>(<span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">param</span>)) <span class="ruby-operator">+</span>
+385:         <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;/td&gt;&quot;</span>) <span class="ruby-operator">+</span>
+386:         <span class="ruby-identifier">annotate</span>(<span class="ruby-value str">&quot;&lt;td&gt;&quot;</span>)
+387:     <span class="ruby-keyword kw">else</span>
+388:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Invalid list type&quot;</span>
+389:     <span class="ruby-keyword kw">end</span>
+390:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="off-tags-method" class="method-detail ">
+				<a name="method-i-off_tags"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">off_tags</span><span
+						class="method-args">(res, item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="off-tags-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 266</span>
+266:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">off_tags</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">item</span>)
+267:     <span class="ruby-identifier">attr_mask</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">turn_off</span>
+268:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr_mask</span>.<span class="ruby-identifier">zero?</span>
+269: 
+270:     <span class="ruby-ivar">@attr_tags</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+271:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr_mask</span> &amp; <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">bit</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+272:         <span class="ruby-ivar">@in_tt</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tt?</span>(<span class="ruby-identifier">tag</span>)
+273:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">tag</span>.<span class="ruby-identifier">off</span>)
+274:       <span class="ruby-keyword kw">end</span>
+275:     <span class="ruby-keyword kw">end</span>
+276:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="on-tags-method" class="method-detail ">
+				<a name="method-i-on_tags"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">on_tags</span><span
+						class="method-args">(res, item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="on-tags-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/to_html.rb, line 254</span>
+254:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_tags</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">item</span>)
+255:     <span class="ruby-identifier">attr_mask</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">turn_on</span>
+256:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr_mask</span>.<span class="ruby-identifier">zero?</span>
+257: 
+258:     <span class="ruby-ivar">@attr_tags</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+259:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr_mask</span> &amp; <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">bit</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+260:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">annotate</span>(<span class="ruby-identifier">tag</span>.<span class="ruby-identifier">on</span>)
+261:         <span class="ruby-ivar">@in_tt</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tt?</span>(<span class="ruby-identifier">tag</span>)
+262:       <span class="ruby-keyword kw">end</span>
+263:     <span class="ruby-keyword kw">end</span>
+264:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

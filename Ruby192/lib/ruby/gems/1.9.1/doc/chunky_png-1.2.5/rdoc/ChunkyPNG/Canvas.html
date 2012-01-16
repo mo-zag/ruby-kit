@@ -1,0 +1,1731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: ChunkyPNG::Canvas</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/chunky_png/canvas/adam7_interlacing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/adam7_interlacing.rb">lib/chunky_png/canvas/adam7_interlacing.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/data_url_exporting_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/data_url_exporting.rb">lib/chunky_png/canvas/data_url_exporting.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/data_url_importing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/data_url_importing.rb">lib/chunky_png/canvas/data_url_importing.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/drawing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/drawing.rb">lib/chunky_png/canvas/drawing.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/masking_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/masking.rb">lib/chunky_png/canvas/masking.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/operations_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/operations.rb">lib/chunky_png/canvas/operations.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/png_decoding_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/png_decoding.rb">lib/chunky_png/canvas/png_decoding.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/png_encoding_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/png_encoding.rb">lib/chunky_png/canvas/png_encoding.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/resampling_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/resampling.rb">lib/chunky_png/canvas/resampling.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/stream_exporting_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/stream_exporting.rb">lib/chunky_png/canvas/stream_exporting.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas/stream_importing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/stream_importing.rb">lib/chunky_png/canvas/stream_importing.rb</a></li>
+					
+						<li><a href="../lib/chunky_png/canvas_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas.rb">lib/chunky_png/canvas.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-from_canvas">::from_canvas</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3D%3D">#==</a></li>
+					
+					<li><a href="#method-i-%5B%5D">#[]</a></li>
+					
+					<li><a href="#method-i-%5B%5D%3D">#[]=</a></li>
+					
+					<li><a href="#method-i-area">#area</a></li>
+					
+					<li><a href="#method-i-assert_height%21">#assert_height!</a></li>
+					
+					<li><a href="#method-i-assert_size%21">#assert_size!</a></li>
+					
+					<li><a href="#method-i-assert_width%21">#assert_width!</a></li>
+					
+					<li><a href="#method-i-assert_x%21">#assert_x!</a></li>
+					
+					<li><a href="#method-i-assert_xy%21">#assert_xy!</a></li>
+					
+					<li><a href="#method-i-assert_y%21">#assert_y!</a></li>
+					
+					<li><a href="#method-i-column">#column</a></li>
+					
+					<li><a href="#method-i-dimension">#dimension</a></li>
+					
+					<li><a href="#method-i-eql%3F">#eql?</a></li>
+					
+					<li><a href="#method-i-get_pixel">#get_pixel</a></li>
+					
+					<li><a href="#method-i-include%3F">#include?</a></li>
+					
+					<li><a href="#method-i-include_point%3F">#include_point?</a></li>
+					
+					<li><a href="#method-i-include_x%3F">#include_x?</a></li>
+					
+					<li><a href="#method-i-include_xy%3F">#include_xy?</a></li>
+					
+					<li><a href="#method-i-include_y%3F">#include_y?</a></li>
+					
+					<li><a href="#method-i-initialize_copy">#initialize_copy</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-palette">#palette</a></li>
+					
+					<li><a href="#method-i-replace_canvas%21">#replace_canvas!</a></li>
+					
+					<li><a href="#method-i-replace_column%21">#replace_column!</a></li>
+					
+					<li><a href="#method-i-replace_row%21">#replace_row!</a></li>
+					
+					<li><a href="#method-i-row">#row</a></li>
+					
+					<li><a href="#method-i-set_pixel">#set_pixel</a></li>
+					
+					<li><a href="#method-i-set_pixel_if_within_bounds">#set_pixel_if_within_bounds</a></li>
+					
+					<li><a href="#method-i-to_image">#to_image</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">PNGEncoding</span></li>
+				
+				
+				
+					<li><span class="include">StreamExporting</span></li>
+				
+				
+				
+					<li><span class="include">DataUrlExporting</span></li>
+				
+				
+				
+					<li><span class="include">Operations</span></li>
+				
+				
+				
+					<li><span class="include">Drawing</span></li>
+				
+				
+				
+					<li><span class="include">Resampling</span></li>
+				
+				
+				
+					<li><span class="include">Masking</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">ChunkyPNG::Canvas</h1>
+
+		<div id="description">
+			<p>
+The <a href="Canvas.html">ChunkyPNG::Canvas</a> class represents a raster
+image as a matrix of pixels.
+</p>
+<p>
+This class supports loading a <a href="Canvas.html">Canvas</a> from a PNG
+datastream, and creating a {<a
+href="Datastream.html">ChunkyPNG::Datastream</a> PNG datastream} based on
+this matrix. <a href="../ChunkyPNG.html">ChunkyPNG</a> only supports 8-bit
+color depth, otherwise all of the PNG format&#8217;s variations are
+supported for both reading and writing.
+</p>
+<p>
+This class offers per-pixel access to the matrix by using x,y coordinates.
+It uses a palette (see {ChunkyPNG::Palette}) to keep track of the different
+colors used in this matrix.
+</p>
+<p>
+The pixels in the canvas are stored as 4-byte fixnum, representing 32-bit
+RGBA colors (8 bit per channel). The module {ChunkyPNG::Color} is provided
+to work more easily with these number as color values.
+</p>
+<p>
+The module {ChunkyPNG::Canvas::Operations} is imported for operations on
+the whole canvas, like cropping and alpha compositing. Simple drawing
+functions are imported from the {ChunkyPNG::Canvas::Drawing} module.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="width-attribute-method" class="method-detail">
+				<a name="width"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">width</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@return [Integer] The number of columns in this canvas
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="height-attribute-method" class="method-detail">
+				<a name="height"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">height</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@return [Integer] The number of rows in this canvas
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="pixels-attribute-method" class="method-detail">
+				<a name="pixels"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">pixels</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@return [Array<ChunkyPNG::Color>] The list of pixels in this canvas.
+</p>
+<pre>
+    This array always should have +width * height+ elements.</pre>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="from-canvas-method" class="method-detail ">
+				<a name="method-c-from_canvas"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_canvas</span><span
+						class="method-args">(canvas)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new canvas instance by duplicating another instance. @param
+[ChunkyPNG::Canvas] canvas The canvas to duplicate @return
+[ChunkyPNG::Canvas] The newly constructed canvas instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-canvas-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 103</span>
+103:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from_canvas</span>(<span class="ruby-identifier">canvas</span>)
+104:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">height</span>, <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">dup</span>)
+105:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(width, height, initial = ChunkyPNG::Color::TRANSPARENT)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a new <a href="Canvas.html">Canvas</a> instance.
+</p>
+<p>
+@overload initialize(width, height, background_color)
+</p>
+<pre>
+  @param [Integer] width The width in pixels of this canvas
+  @param [Integer] height The height in pixels of this canvas
+  @param [Integer, ...] background_color The initial background color of this canvas.
+     This can be a color value or any value that {ChunkyPNG::Color.parse} can handle.
+</pre>
+<p>
+@overload initialize(width, height, initial)
+</p>
+<pre>
+  @param [Integer] width The width in pixels of this canvas
+  @param [Integer] height The height in pixels of this canvas
+  @param [Array&lt;Integer&gt;] initial The initial pizel values. Must be an array with 
+    &lt;tt&gt;width * height&lt;/tt&gt; elements.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 79</span>
+79:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">initial</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>)
+80: 
+81:       <span class="ruby-ivar">@width</span>, <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>
+82: 
+83:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">initial</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+84:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;The initial array should have #{width}x#{height} = #{width*height} elements!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">initial</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>
+85:         <span class="ruby-ivar">@pixels</span> = <span class="ruby-identifier">initial</span>
+86:       <span class="ruby-keyword kw">else</span>
+87:         <span class="ruby-ivar">@pixels</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">initial</span>))
+88:       <span class="ruby-keyword kw">end</span>
+89:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail method-alias">
+				<a name="method-i-%3D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">==</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Canvas.html#method-i-eql%3F">eql?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%5B%5D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]</span><span
+						class="method-args">(x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a single pixel&#8217;s color value from this canvas. @param
+[Integer] x The x-coordinate of the pixel (column) @param [Integer] y The
+y-coordinate of the pixel (row) @return [Integer] The current color value
+at the provided coordinates. @raise [ChunkyPNG::OutOfBounds] when the
+coordinates are outside of the image&#8217;s dimensions. @see <a
+href="Canvas.html#method-i-get_pixel">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 168</span>
+168:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+169:       <span class="ruby-identifier">assert_xy!</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+170:       <span class="ruby-ivar">@pixels</span>[<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>]
+171:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%5B%5D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]=</span><span
+						class="method-args">(x, y, color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces a single pixel in this canvas. @param [Integer] x The x-coordinate
+of the pixel (column) @param [Integer] y The y-coordinate of the pixel
+(row) @param [Integer] color The new color for the provided coordinates.
+@return [Integer] The new color value for this pixel, i.e. <tt>color</tt>. 
+@raise [ChunkyPNG::OutOfBounds] when the coordinates are outside of the
+image&#8217;s dimensions. @see <a
+href="Canvas.html#method-i-set_pixel">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 131</span>
+131:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]=</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">color</span>)
+132:       <span class="ruby-identifier">assert_xy!</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+133:       <span class="ruby-ivar">@pixels</span>[<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>] = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">color</span>)
+134:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="area-method" class="method-detail ">
+				<a name="method-i-area"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">area</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the area of this canvas in number of pixels. @return [Integer] The
+number of pixels in this canvas
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="area-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 120</span>
+120:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">area</span>
+121:       <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">length</span>
+122:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="column-method" class="method-detail ">
+				<a name="method-i-column"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">column</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an extracted column as vector of pixels. @param [Integer] x The
+0-based column index. @return [Array<Integer>] The vector of pixels in the
+requested column.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="column-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 192</span>
+192:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">column</span>(<span class="ruby-identifier">x</span>)
+193:       <span class="ruby-identifier">assert_x!</span>(<span class="ruby-identifier">x</span>)
+194:       (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">height</span>).<span class="ruby-identifier">inject</span>([]) { <span class="ruby-operator">|</span><span class="ruby-identifier">pixels</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">pixels</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>) }
+195:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dimension-method" class="method-detail ">
+				<a name="method-i-dimension"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dimension</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the dimension (width x height) for this canvas. @return
+[ChunkyPNG::Dimension] A dimension instance with the width and height set
+for this canvas.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dimension-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 114</span>
+114:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dimension</span>
+115:       <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Dimension</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+116:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eql--method" class="method-detail ">
+				<a name="method-i-eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eql?</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Equality check to compare this canvas with other matrices. @param other The
+object to compare this Matrix to. @return [true, false] True if the size
+and pixel values of the other canvas
+</p>
+<pre>
+   are exactly the same as this canvas's size and pixel values.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="eql--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 261</span>
+261:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>)
+262:       <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">pixels</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pixels</span> <span class="ruby-operator">&amp;&amp;</span>
+263:             <span class="ruby-identifier">other</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">height</span>
+264:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Canvas.html#method-i-%3D%3D">==</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="get-pixel-method" class="method-detail ">
+				<a name="method-i-get_pixel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_pixel</span><span
+						class="method-args">(x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a single pixel from this canvas, without checking bounds. The
+return value for this method is undefined if the coordinates are out of
+bounds. @param (see #[]) @return [Integer] The current pixel at the
+provided coordinates.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-pixel-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 177</span>
+177:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+178:       <span class="ruby-ivar">@pixels</span>[<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>]
+179:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="include--method" class="method-detail method-alias">
+				<a name="method-i-include%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">include?</span><span
+						class="method-args">(*point_like)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Canvas.html#method-i-include_point%3F">include_point?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="include-point--method" class="method-detail ">
+				<a name="method-i-include_point%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">include_point?</span><span
+						class="method-args">(*point_like)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks whether the given coordinates are in the range of the canvas @param
+[<a href="Point.html">ChunkyPNG::Point</a>, Array, Hash, String] point_like
+The point to check. @return [true, false] True if the x and y coordinates
+of the point are  
+</p>
+<pre>
+   within the limits of this canvas.
+</pre>
+<p>
+@see <a href="../ChunkyPNG.html">ChunkyPNG</a>.<a
+href="Point.html">Point</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="include-point--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 222</span>
+222:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_point?</span>(*<span class="ruby-identifier">point_like</span>)
+223:       <span class="ruby-identifier">dimension</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Point</span>(*<span class="ruby-identifier">point_like</span>))
+224:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Canvas.html#method-i-include%3F">include?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="include-x--method" class="method-detail ">
+				<a name="method-i-include_x%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">include_x?</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks whether the given x-coordinate is in the range of the canvas @param
+[Integer] x The y-coordinate of the pixel (column) @return [true, false]
+True if the x-coordinate is in the range of this canvas.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="include-x--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 246</span>
+246:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_x?</span>(<span class="ruby-identifier">x</span>)
+247:       <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">width</span>
+248:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="include-xy--method" class="method-detail ">
+				<a name="method-i-include_xy%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">include_xy?</span><span
+						class="method-args">(x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks whether the given x- and y-coordinate are in the range of the canvas
+@param [Integer] x The x-coordinate of the pixel (column) @param [Integer]
+y The y-coordinate of the pixel (row) @return [true, false] True if the x-
+and y-coordinate is in the range of this canvas.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="include-xy--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 232</span>
+232:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_xy?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+233:       <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">width</span>
+234:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="include-y--method" class="method-detail ">
+				<a name="method-i-include_y%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">include_y?</span><span
+						class="method-args">(y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks whether the given y-coordinate is in the range of the canvas @param
+[Integer] y The y-coordinate of the pixel (row) @return [true, false] True
+if the y-coordinate is in the range of this canvas.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="include-y--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 239</span>
+239:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">include_y?</span>(<span class="ruby-identifier">y</span>)
+240:       <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">height</span>
+241:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="initialize-copy-method" class="method-detail ">
+				<a name="method-i-initialize_copy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">initialize_copy</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a new <a href="Canvas.html">Canvas</a> instances when being
+cloned. @param [ChunkyPNG::Canvas] other The canvas to duplicate @return
+[void] @private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="initialize-copy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 95</span>
+95:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_copy</span>(<span class="ruby-identifier">other</span>)
+96:       <span class="ruby-ivar">@width</span>, <span class="ruby-ivar">@height</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">height</span>
+97:       <span class="ruby-ivar">@pixels</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">dup</span>
+98:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alternative implementation of the inspect method. @return [String] A nicely
+formatted string representation of this canvas. @private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 281</span>
+281:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+282:       <span class="ruby-identifier">inspected</span> = <span class="ruby-node">&quot;&lt;#{self.class.name} #{width}x#{height} [&quot;</span>
+283:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">height</span>
+284:         <span class="ruby-identifier">inspected</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n\t[&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">row</span>(<span class="ruby-identifier">y</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">p</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">' '</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">']'</span>
+285:       <span class="ruby-keyword kw">end</span>
+286:       <span class="ruby-identifier">inspected</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n]&gt;&quot;</span>
+287:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="palette-method" class="method-detail ">
+				<a name="method-i-palette"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">palette</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the palette used for this canvas. @return [ChunkyPNG::Palette] A
+palette which contains all the colors that are
+</p>
+<pre>
+   being used for this image.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="palette-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 253</span>
+253:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">palette</span>
+254:       <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Palette</span>.<span class="ruby-identifier">from_canvas</span>(<span class="ruby-keyword kw">self</span>)
+255:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="replace-column--method" class="method-detail ">
+				<a name="method-i-replace_column%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">replace_column!</span><span
+						class="method-args">(x, vector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces a column of pixels on this canvas. @param [Integer] x The 0-based
+column index. @param [Array<Integer>] vector The vector of pixels to
+replace the column with. @return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="replace-column--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 210</span>
+210:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">replace_column!</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">vector</span>)
+211:       <span class="ruby-identifier">assert_x!</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">assert_height!</span>(<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">length</span>)
+212:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">height</span> <span class="ruby-keyword kw">do</span>
+213:         <span class="ruby-identifier">set_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">vector</span>[<span class="ruby-identifier">y</span>])
+214:       <span class="ruby-keyword kw">end</span>
+215:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="replace-row--method" class="method-detail ">
+				<a name="method-i-replace_row%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">replace_row!</span><span
+						class="method-args">(y, vector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces a row of pixels on this canvas. @param [Integer] y The 0-based row
+index. @param [Array<Integer>] vector The vector of pixels to replace the
+row with. @return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="replace-row--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 201</span>
+201:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">replace_row!</span>(<span class="ruby-identifier">y</span>, <span class="ruby-identifier">vector</span>)
+202:       <span class="ruby-identifier">assert_y!</span>(<span class="ruby-identifier">y</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">assert_width!</span>(<span class="ruby-identifier">vector</span>.<span class="ruby-identifier">length</span>)
+203:       <span class="ruby-identifier">pixels</span>[<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span>, <span class="ruby-identifier">width</span>] = <span class="ruby-identifier">vector</span>
+204:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="row-method" class="method-detail ">
+				<a name="method-i-row"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">row</span><span
+						class="method-args">(y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an extracted row as vector of pixels @param [Integer] y The 0-based
+row index @return [Array<Integer>] The vector of pixels in the requested
+row
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="row-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 184</span>
+184:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">row</span>(<span class="ruby-identifier">y</span>)
+185:       <span class="ruby-identifier">assert_y!</span>(<span class="ruby-identifier">y</span>)
+186:       <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">slice</span>(<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span>, <span class="ruby-identifier">width</span>)
+187:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-pixel-method" class="method-detail ">
+				<a name="method-i-set_pixel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_pixel</span><span
+						class="method-args">(x, y, color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces a single pixel in this canvas, without bounds checking.
+</p>
+<p>
+This method return value and effects are undefined for coordinates  out of
+bounds of the canvas.
+</p>
+<p>
+@param [Integer] x The x-coordinate of the pixel (column) @param [Integer]
+y The y-coordinate of the pixel (row) @param [Integer] pixel The new color
+for the provided coordinates. @return [Integer] The new color value for
+this pixel, i.e. <tt>color</tt>. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-pixel-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 145</span>
+145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">color</span>)
+146:       <span class="ruby-ivar">@pixels</span>[<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>] = <span class="ruby-identifier">color</span>
+147:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-pixel-if-within-bounds-method" class="method-detail ">
+				<a name="method-i-set_pixel_if_within_bounds"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_pixel_if_within_bounds</span><span
+						class="method-args">(x, y, color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces a single pixel in this canvas, with bounds checking. It will do
+noting if the provided coordinates are out of bounds.
+</p>
+<p>
+@param [Integer] x The x-coordinate of the pixel (column) @param [Integer]
+y The y-coordinate of the pixel (row) @param [Integer] pixel The new color
+value for the provided coordinates. @return [Integer] The new color value
+for this pixel, i.e. <tt>color</tt>, or 
+</p>
+<pre>
+   &lt;tt&gt;nil&lt;/tt&gt; if the coordinates are out of bounds.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="set-pixel-if-within-bounds-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 157</span>
+157:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_pixel_if_within_bounds</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">color</span>)
+158:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">include_xy?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+159:       <span class="ruby-ivar">@pixels</span>[<span class="ruby-identifier">y</span> * <span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>] = <span class="ruby-identifier">color</span>
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-image-method" class="method-detail ">
+				<a name="method-i-to_image"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_image</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates an <a href="Image.html">ChunkyPNG::Image</a> object from this
+canvas. @return [ChunkyPNG::Image] This canvas wrapped in an <a
+href="Image.html">Image</a> instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-image-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 274</span>
+274:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_image</span>
+275:       <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Image</span>.<span class="ruby-identifier">from_canvas</span>(<span class="ruby-keyword kw">self</span>)
+276:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="assert-height--method" class="method-detail ">
+				<a name="method-i-assert_height%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_height!</span><span
+						class="method-args">(vector_length)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws an exception if the vector_length does not match this canvas&#8217;
+height.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-height--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 317</span>
+317:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_height!</span>(<span class="ruby-identifier">vector_length</span>)
+318:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-node">&quot;The length of the vector (#{vector_length}) does not match the canvas height (#{height})!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">vector_length</span>
+319:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+320:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-size--method" class="method-detail ">
+				<a name="method-i-assert_size%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_size!</span><span
+						class="method-args">(matrix_width, matrix_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws an exception if the matrix width and height does not match this
+canvas&#8217; dimensions.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-size--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 329</span>
+329:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_size!</span>(<span class="ruby-identifier">matrix_width</span>, <span class="ruby-identifier">matrix_height</span>)
+330:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-value str">&quot;The width of the matrix does not match the canvas width!&quot;</span>   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">width</span>  <span class="ruby-operator">!=</span> <span class="ruby-identifier">matrix_width</span>
+331:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-value str">&quot;The height of the matrix does not match the canvas height!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">matrix_height</span>
+332:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+333:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-width--method" class="method-detail ">
+				<a name="method-i-assert_width%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_width!</span><span
+						class="method-args">(vector_length)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws an exception if the vector_length does not match this canvas&#8217;
+width.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-width--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 323</span>
+323:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_width!</span>(<span class="ruby-identifier">vector_length</span>)
+324:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-node">&quot;The length of the vector (#{vector_length}) does not match the canvas width (#{width})!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">vector_length</span>
+325:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+326:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-x--method" class="method-detail ">
+				<a name="method-i-assert_x%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_x!</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws an exception if the x-coordinate is out of bounds.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-x--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 299</span>
+299:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_x!</span>(<span class="ruby-identifier">x</span>)
+300:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">OutOfBounds</span>, <span class="ruby-node">&quot;Column index #{x} out of bounds!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">include_x?</span>(<span class="ruby-identifier">x</span>)
+301:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+302:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-xy--method" class="method-detail ">
+				<a name="method-i-assert_xy%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_xy!</span><span
+						class="method-args">(x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws an exception if the x- or y-coordinate is out of bounds.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-xy--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 311</span>
+311:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_xy!</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+312:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">OutOfBounds</span>, <span class="ruby-node">&quot;Coordinates (#{x},#{y}) out of bounds!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">include_xy?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+313:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+314:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-y--method" class="method-detail ">
+				<a name="method-i-assert_y%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_y!</span><span
+						class="method-args">(y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws an exception if the y-coordinate is out of bounds.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-y--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 305</span>
+305:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_y!</span>(<span class="ruby-identifier">y</span>)
+306:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">OutOfBounds</span>, <span class="ruby-node">&quot;Row index #{y} out of bounds!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">include_y?</span>(<span class="ruby-identifier">y</span>)
+307:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+308:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="replace-canvas--method" class="method-detail ">
+				<a name="method-i-replace_canvas%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">replace_canvas!</span><span
+						class="method-args">(new_width, new_height, new_pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces the image, given a new width, new height, and a new pixel array.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="replace-canvas--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas.rb, line 292</span>
+292:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">replace_canvas!</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>, <span class="ruby-identifier">new_pixels</span>)
+293:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;The provided pixel array should have #{new_width * new_height} items&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">new_pixels</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">new_width</span> * <span class="ruby-identifier">new_height</span>
+294:       <span class="ruby-ivar">@width</span>, <span class="ruby-ivar">@height</span>, <span class="ruby-ivar">@pixels</span> = <span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>, <span class="ruby-identifier">new_pixels</span>
+295:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+296:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

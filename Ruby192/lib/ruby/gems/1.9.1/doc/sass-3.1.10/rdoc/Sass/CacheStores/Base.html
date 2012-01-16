@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::CacheStores::Base</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sass/cache_stores/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/cache_stores/base.rb">lib/sass/cache_stores/base.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-_retrieve">#_retrieve</a></li>
+					
+					<li><a href="#method-i-_store">#_store</a></li>
+					
+					<li><a href="#method-i-key">#key</a></li>
+					
+					<li><a href="#method-i-retrieve">#retrieve</a></li>
+					
+					<li><a href="#method-i-store">#store</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../../Less.html">Less</a></li>
+				
+					<li><a href="../../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+					<li><a href="../../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::CacheStores::Base</h1>
+
+		<div id="description">
+			<p>
+An abstract base class for backends for the <a
+href="../../Sass.html">Sass</a> cache. Any key-value store can act as such
+a backend; it just needs to implement the {#_store} and {#_retrieve}
+methods.
+</p>
+<p>
+To use a cache store with <a href="../../Sass.html">Sass</a>, use the
+{file:SASS_REFERENCE.md#cache_store-option `:cache_store` option}.
+</p>
+<p>
+@abstract
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="-retrieve-method" class="method-detail ">
+				<a name="method-i-_retrieve"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">_retrieve</span><span
+						class="method-args">(key, version, sha)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieved cached contents. Must be implemented by all subclasses.
+</p>
+<p>
+Note: if the key exists but the sha or version have changed, then the key
+may be deleted by the cache store, if it wants to do so.
+</p>
+<p>
+@param key [String] The key to retrieve @param version [String] The current
+sass version.
+</p>
+<pre>
+               Cached contents must not be retrieved across different versions of sass.
+</pre>
+<p>
+@param sha [String] The sha of the sass source.
+</p>
+<pre>
+               Cached contents must not be retrieved if the sha has changed.
+</pre>
+<p>
+@return [String] The contents that were previously stored. @return
+[NilClass] when the cache key is not found or the version or sha have
+changed.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="-retrieve-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/cache_stores/base.rb, line 41</span>
+41:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">_retrieve</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">version</span>, <span class="ruby-identifier">sha</span>)
+42:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;#{self.class} must implement #_retrieve.&quot;</span>
+43:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-store-method" class="method-detail ">
+				<a name="method-i-_store"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">_store</span><span
+						class="method-args">(key, version, sha, contents)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Store cached contents for later retrieval Must be implemented by all
+CacheStore subclasses
+</p>
+<p>
+Note: cache contents contain binary data.
+</p>
+<p>
+@param key [String] The key to store the contents under @param version
+[String] The current sass version.
+</p>
+<pre>
+               Cached contents must not be retrieved across different versions of sass.
+</pre>
+<p>
+@param sha [String] The sha of the sass source.
+</p>
+<pre>
+               Cached contents must not be retrieved if the sha has changed.
+</pre>
+<p>
+@param contents [String] The contents to store.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="-store-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/cache_stores/base.rb, line 24</span>
+24:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">_store</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">version</span>, <span class="ruby-identifier">sha</span>, <span class="ruby-identifier">contents</span>)
+25:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;#{self.class} must implement #_store.&quot;</span>
+26:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="key-method" class="method-detail ">
+				<a name="method-i-key"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">key</span><span
+						class="method-args">(sass_dirname, sass_basename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the key for the sass file.
+</p>
+<p>
+The `(sass_dirname, sass_basename)` pair should uniquely identify the <a
+href="../../Sass.html">Sass</a> document, but otherwise there are no
+restrictions on their content.
+</p>
+<p>
+@param sass_dirname [String]
+</p>
+<pre>
+  The fully-expanded location of the Sass file.
+  This corresponds to the directory name on a filesystem.
+</pre>
+<p>
+@param sass_basename [String] The name of the <a
+href="../../Sass.html">Sass</a> file that is being referenced.
+</p>
+<pre>
+  This corresponds to the basename on a filesystem.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="key-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/cache_stores/base.rb, line 79</span>
+79:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">key</span>(<span class="ruby-identifier">sass_dirname</span>, <span class="ruby-identifier">sass_basename</span>)
+80:         <span class="ruby-identifier">dir</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA1</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-identifier">sass_dirname</span>)
+81:         <span class="ruby-identifier">filename</span> = <span class="ruby-node">&quot;#{sass_basename}c&quot;</span>
+82:         <span class="ruby-node">&quot;#{dir}/#{filename}&quot;</span>
+83:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="retrieve-method" class="method-detail ">
+				<a name="method-i-retrieve"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">retrieve</span><span
+						class="method-args">(key, sha)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieve a {Sass::Tree::RootNode}.
+</p>
+<p>
+@param key [String] The key the root element was stored under. @param sha
+[String] The checksum of the root element&#8217;s content. @return [Object]
+The cached object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="retrieve-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/cache_stores/base.rb, line 61</span>
+61:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">retrieve</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">sha</span>)
+62:         <span class="ruby-identifier">contents</span> = <span class="ruby-identifier">_retrieve</span>(<span class="ruby-identifier">key</span>, <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>, <span class="ruby-identifier">sha</span>)
+63:         <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">load</span>(<span class="ruby-identifier">contents</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">contents</span>
+64:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">EOFError</span>, <span class="ruby-constant">TypeError</span>, <span class="ruby-constant">ArgumentError</span>, <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+65:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">sass_warn</span> <span class="ruby-node">&quot;Warning. Error encountered while reading cache #{path_to(key)}: #{e}&quot;</span>
+66:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="store-method" class="method-detail ">
+				<a name="method-i-store"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">store</span><span
+						class="method-args">(key, sha, root)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Store a {Sass::Tree::RootNode}.
+</p>
+<p>
+@param key [String] The key to store it under. @param sha [String] The
+checksum for the contents that are being stored. @param obj [Object] The
+object to cache.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="store-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/cache_stores/base.rb, line 50</span>
+50:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">store</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">sha</span>, <span class="ruby-identifier">root</span>)
+51:         <span class="ruby-identifier">_store</span>(<span class="ruby-identifier">key</span>, <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>, <span class="ruby-identifier">sha</span>, <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-identifier">root</span>))
+52:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+53:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">sass_warn</span> <span class="ruby-node">&quot;Warning. Error encountered while saving cache #{path_to(key)}: #{e}&quot;</span>
+54:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

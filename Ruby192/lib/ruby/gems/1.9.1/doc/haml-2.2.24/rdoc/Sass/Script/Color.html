@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::Script::Color</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sass/script/color_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/script/color.rb">lib/sass/script/color.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Literal.html">Sass::Script::Literal</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-div">#div</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-minus">#minus</a></li>
+					
+					<li><a href="#method-i-mod">#mod</a></li>
+					
+					<li><a href="#method-i-piecewise">#piecewise</a></li>
+					
+					<li><a href="#method-i-plus">#plus</a></li>
+					
+					<li><a href="#method-i-rgb">#rgb</a></li>
+					
+					<li><a href="#method-i-times">#times</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+					<li><a href="#method-i-value">#value</a></li>
+					
+					<li><a href="#method-i-with">#with</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="../../Haml/Util.html">Haml::Util</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CONTRIBUTING.html">CONTRIBUTING</a></li>
+				
+					<li class="file"><a href="../../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../../REMEMBER.html">REMEMBER</a></li>
+				
+					<li class="file"><a href="../../REVISION.html">REVISION</a></li>
+				
+					<li class="file"><a href="../../VERSION.html">VERSION</a></li>
+				
+					<li class="file"><a href="../../VERSION_NAME.html">VERSION_NAME</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Haml.html">Haml</a></li>
+				
+					<li><a href="../../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../../Haml/Exec/CSS2Sass.html">Haml::Exec::CSS2Sass</a></li>
+				
+					<li><a href="../../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/HamlSass.html">Haml::Exec::HamlSass</a></li>
+				
+					<li><a href="../../Haml/Exec/Sass.html">Haml::Exec::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../../Haml/HTML/Node.html">Haml::HTML::Node</a></li>
+				
+					<li><a href="../../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../../Haml/Precompiler.html">Haml::Precompiler</a></li>
+				
+					<li><a href="../../Haml/Precompiler/Line.html">Haml::Precompiler::Line</a></li>
+				
+					<li><a href="../../Haml/Railtie.html">Haml::Railtie</a></li>
+				
+					<li><a href="../../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../../Haml/Util/StaticConditionalContext.html">Haml::Util::StaticConditionalContext</a></li>
+				
+					<li><a href="../../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Files.html">Sass::Files</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../../Hpricot/BaseEle.html">Hpricot::BaseEle</a></li>
+				
+					<li><a href="../../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../../Merb.html">Merb</a></li>
+				
+					<li><a href="../../Merb/Rack.html">Merb::Rack</a></li>
+				
+					<li><a href="../../Merb/Rack/Application.html">Merb::Rack::Application</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../MerbHandler.html">MerbHandler</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::Script::Color</h1>
+
+		<div id="description">
+			<p>
+A SassScript object representing a <a href="../CSS.html">CSS</a> color.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="HTML4_COLORS">HTML4_COLORS</a></dt>
+				
+				<dd class="description"><p>
+A hash from color names to `[red, green, blue]` value arrays. @private
+</p></dd>
+				
+			
+				<dt><a name="HTML4_COLORS_REVERSE">HTML4_COLORS_REVERSE</a></dt>
+				
+				<dd class="description"><p>
+A hash from `[red, green, blue]` value arrays to color names. @private
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(rgb)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new color from RGB components. <b>Note</b>: when modifying the
+components of an existing color, use {#with} rather than creating a new
+color object. This preserves forwards-compatiblity for alpha channels and
+such.
+</p>
+<p>
+@param rgb [Array<Fixnum>] A three-element array of the red, green, and
+blue values (respectively)
+</p>
+<pre>
+  of the color
+</pre>
+<p>
+@raise [Sass::SyntaxError] if any color value isn&#8217;t between 0 and 255
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 40</span>
+40:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">rgb</span>)
+41:       <span class="ruby-identifier">rgb</span> = <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span>}
+42:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color values must be between 0 and 255&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">c</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">255</span>}
+43:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">freeze</span>)
+44:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="div-method" class="method-detail ">
+				<a name="method-i-div"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">div</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `/` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Divides each of the RGB color channels by the number.
+</p>
+<p>
+{Color} : Divides each of this color&#8217;s RGB color channels by the
+other color&#8217;s.
+</p>
+<p>
+{Literal} : See {<a href="Literal.html#method-i-div">Literal#div</a>}.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Color]
+The resulting color @raise [Sass::SyntaxError] if `other` is a number with
+units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="div-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 166</span>
+166:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">div</span>(<span class="ruby-identifier">other</span>)
+167:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+168:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:/</span>)
+169:       <span class="ruby-keyword kw">else</span>
+170:         <span class="ruby-keyword kw">super</span>
+171:       <span class="ruby-keyword kw">end</span>
+172:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail method-alias">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Color.html#method-i-to_s">to_s</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="minus-method" class="method-detail ">
+				<a name="method-i-minus"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minus</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `-` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Subtracts the number from each of the RGB color channels.
+</p>
+<p>
+{Color} : Subtracts each of the other color&#8217;s RGB color channels from
+this color&#8217;s.
+</p>
+<p>
+{Literal} : See {<a href="Literal.html#method-i-minus">Literal#minus</a>}.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Color]
+The resulting color @raise [Sass::SyntaxError] if `other` is a number with
+units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="minus-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minus</span>(<span class="ruby-identifier">other</span>)
+124:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+125:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:-</span>)
+126:       <span class="ruby-keyword kw">else</span>
+127:         <span class="ruby-keyword kw">super</span>
+128:       <span class="ruby-keyword kw">end</span>
+129:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mod-method" class="method-detail ">
+				<a name="method-i-mod"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mod</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `%` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Takes each of the RGB color channels module the number.
+</p>
+<p>
+{Color} : Takes each of this color&#8217;s RGB color channels modulo the
+other color&#8217;s.
+</p>
+<p>
+@param other [<a href="Number.html">Number</a>, Color] The right-hand side
+of the operator @return [Color] The resulting color @raise
+[Sass::SyntaxError] if `other` is a number with units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="mod-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 186</span>
+186:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mod</span>(<span class="ruby-identifier">other</span>)
+187:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+188:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:%</span>)
+189:       <span class="ruby-keyword kw">else</span>
+190:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-value">:mod</span>)
+191:       <span class="ruby-keyword kw">end</span>
+192:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="plus-method" class="method-detail ">
+				<a name="method-i-plus"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">plus</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `+` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Adds the number to each of the RGB color channels.
+</p>
+<p>
+{Color} : Adds each of the RGB color channels together.
+</p>
+<p>
+{Literal} : See {<a href="Literal.html#method-i-plus">Literal#plus</a>}.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Color]
+The resulting color @raise [Sass::SyntaxError] if `other` is a number with
+units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="plus-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 100</span>
+100:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">plus</span>(<span class="ruby-identifier">other</span>)
+101:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+102:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:+</span>)
+103:       <span class="ruby-keyword kw">else</span>
+104:         <span class="ruby-keyword kw">super</span>
+105:       <span class="ruby-keyword kw">end</span>
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgb-method" class="method-detail ">
+				<a name="method-i-rgb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgb</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the red, green, and blue components of the color.
+</p>
+<p>
+@return [Array<Fixnum>] A frozen three-element array of the red, green, and
+blue
+</p>
+<pre>
+  values (respectively) of the color</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="rgb-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgb</span>
+62:       <span class="ruby-ivar">@value</span>
+63:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="times-method" class="method-detail ">
+				<a name="method-i-times"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">times</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `*` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Multiplies the number by each of the RGB color channels.
+</p>
+<p>
+{Color} : Multiplies each of the RGB color channels together.
+</p>
+<p>
+@param other [<a href="Number.html">Number</a>, Color] The right-hand side
+of the operator @return [Color] The resulting color @raise
+[Sass::SyntaxError] if `other` is a number with units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="times-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 143</span>
+143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">times</span>(<span class="ruby-identifier">other</span>)
+144:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+145:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:*</span>)
+146:       <span class="ruby-keyword kw">else</span>
+147:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-value">:times</span>)
+148:       <span class="ruby-keyword kw">end</span>
+149:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a string representation of the color. This is usually the
+color&#8217;s hex value, but if the color has a name that&#8217;s used
+instead.
+</p>
+<p>
+@return [String] The string representation
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 199</span>
+199:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+200:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">HTML4_COLORS_REVERSE</span>[<span class="ruby-identifier">rgb</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-constant">HTML4_COLORS_REVERSE</span>[<span class="ruby-identifier">rgb</span>]
+201:       <span class="ruby-identifier">red</span>, <span class="ruby-identifier">green</span>, <span class="ruby-identifier">blue</span> = <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">num</span><span class="ruby-operator">|</span> <span class="ruby-identifier">num</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>).<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-value str">'0'</span>) }
+202:       <span class="ruby-node">&quot;##{red}#{green}#{blue}&quot;</span>
+203:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Color.html#method-i-inspect">inspect</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="value-method" class="method-detail ">
+				<a name="method-i-value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">value</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@deprecated This will be removed in version 3.2. @see <a
+href="Color.html#method-i-rgb">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="value-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 48</span>
+48:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value</span>
+49:       <span class="ruby-identifier">warn</span> <span class="ruby-value str">DEPRECATION WARNING:The Sass::Script::Color #value attribute is deprecated and will beremoved in version 3.2. Use the #rgb attribute instead.</span>
+50:       <span class="ruby-identifier">rgb</span>
+51:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="with-method" class="method-detail ">
+				<a name="method-i-with"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">with</span><span
+						class="method-args">(attrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a copy of this color with one or more channels changed.
+</p>
+<p>
+For example:
+</p>
+<pre>
+    Color.new([10, 20, 30]).with(:blue =&gt; 40)
+      #=&gt; rgb(10, 40, 30)
+    Color.new([126, 126, 126]).with(:red =&gt; 0, :green =&gt; 255)
+      #=&gt; rgb(0, 255, 126)
+</pre>
+<p>
+@param attrs [{Symbol => Fixnum}]
+</p>
+<pre>
+  A map of channel names (`:red`, `:green`, or `:blue`) to values
+</pre>
+<p>
+@return [Color] The new <a href="Color.html">Color</a> object
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="with-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 77</span>
+77:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">with</span>(<span class="ruby-identifier">attrs</span>)
+78:       <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>([
+79:           <span class="ruby-identifier">attrs</span>[<span class="ruby-value">:red</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rgb</span>[<span class="ruby-value">0</span>],
+80:           <span class="ruby-identifier">attrs</span>[<span class="ruby-value">:green</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rgb</span>[<span class="ruby-value">1</span>],
+81:           <span class="ruby-identifier">attrs</span>[<span class="ruby-value">:blue</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">rgb</span>[<span class="ruby-value">2</span>],
+82:         ])
+83:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="piecewise-method" class="method-detail ">
+				<a name="method-i-piecewise"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">piecewise</span><span
+						class="method-args">(other, operation)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="piecewise-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 208</span>
+208:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-identifier">operation</span>)
+209:       <span class="ruby-identifier">other_num</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Number</span>
+210:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other_num</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">unitless?</span>
+211:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Cannot add a number with units (#{other}) to a color (#{self}).&quot;</span>) 
+212:       <span class="ruby-keyword kw">end</span>
+213: 
+214:       <span class="ruby-identifier">result</span> = []
+215:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">3</span>)
+216:         <span class="ruby-identifier">res</span> = <span class="ruby-identifier">rgb</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operation</span>, <span class="ruby-identifier">other_num</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">rgb</span>[<span class="ruby-identifier">i</span>])
+217:         <span class="ruby-identifier">result</span>[<span class="ruby-identifier">i</span>] = [ [<span class="ruby-identifier">res</span>, <span class="ruby-value">255</span>].<span class="ruby-identifier">min</span>, <span class="ruby-value">0</span> ].<span class="ruby-identifier">max</span>
+218:       <span class="ruby-keyword kw">end</span>
+219:       <span class="ruby-identifier">with</span>(<span class="ruby-value">:red</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>], <span class="ruby-value">:green</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">1</span>], <span class="ruby-value">:blue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">2</span>])
+220:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Packr::RegexpGroup</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/packr/regexp_group_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/packr/regexp_group.rb">lib/packr/regexp_group.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Collection.html">Packr::Collection</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-count">::count</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-exec">#exec</a></li>
+					
+					<li><a href="#method-i-insert_at">#insert_at</a></li>
+					
+					<li><a href="#method-i-test">#test</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Packr.html">Packr</a></li>
+				
+					<li><a href="../Packr/Base62.html">Packr::Base62</a></li>
+				
+					<li><a href="../Packr/Collection.html">Packr::Collection</a></li>
+				
+					<li><a href="../Packr/Encoder.html">Packr::Encoder</a></li>
+				
+					<li><a href="../Packr/Map.html">Packr::Map</a></li>
+				
+					<li><a href="../Packr/Minifier.html">Packr::Minifier</a></li>
+				
+					<li><a href="../Packr/Parser.html">Packr::Parser</a></li>
+				
+					<li><a href="../Packr/Privates.html">Packr::Privates</a></li>
+				
+					<li><a href="../Packr/RegexpGroup.html">Packr::RegexpGroup</a></li>
+				
+					<li><a href="../Packr/RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+				
+					<li><a href="../Packr/Shrinker.html">Packr::Shrinker</a></li>
+				
+					<li><a href="../Packr/Words.html">Packr::Words</a></li>
+				
+					<li><a href="../Packr/Words/Item.html">Packr::Words::Item</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Packr::RegexpGroup</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="IGNORE">IGNORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BACK_REF">BACK_REF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ESCAPE_CHARS">ESCAPE_CHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ESCAPE_BRACKETS">ESCAPE_BRACKETS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BRACKETS">BRACKETS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOOKUP">LOOKUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOOKUP_SIMPLE">LOOKUP_SIMPLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="count-method" class="method-detail ">
+				<a name="method-c-count"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">count</span><span
+						class="method-args">(expression)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="count-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/regexp_group.rb, line 114</span>
+114:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">count</span>(<span class="ruby-identifier">expression</span>)
+115:       <span class="ruby-comment cmt"># Count the number of sub-expressions in a Regexp/RegexpGroup::Item.</span>
+116:       <span class="ruby-identifier">expression</span> = <span class="ruby-identifier">expression</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">ESCAPE_CHARS</span>, <span class="ruby-value str">&quot;&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">ESCAPE_BRACKETS</span>, <span class="ruby-value str">&quot;&quot;</span>)
+117:       <span class="ruby-identifier">expression</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-constant">BRACKETS</span>).<span class="ruby-identifier">length</span>
+118:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(values = nil, ignore_case = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/regexp_group.rb, line 12</span>
+12:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">values</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">ignore_case</span> = <span class="ruby-keyword kw">false</span>)
+13:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">values</span>)
+14:       <span class="ruby-ivar">@ignore_case</span> = <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">ignore_case</span>
+15:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="exec-method" class="method-detail ">
+				<a name="method-i-exec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exec</span><span
+						class="method-args">(string, override = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exec-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/regexp_group.rb, line 17</span>
+17:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exec</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">override</span> = <span class="ruby-keyword kw">nil</span>)
+18:       <span class="ruby-identifier">string</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-comment cmt"># type-safe</span>
+19:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">string</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">empty?</span>
+20:       <span class="ruby-identifier">override</span> = <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">override</span> <span class="ruby-operator">==</span> <span class="ruby-constant">IGNORE</span>
+21:       <span class="ruby-identifier">string</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-ivar">@ignore_case</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Regexp</span><span class="ruby-operator">::</span><span class="ruby-constant">IGNORECASE</span>)) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span>
+22:         <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">result</span> = <span class="ruby-value">1</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">match</span>
+23:         <span class="ruby-identifier">arguments</span> = [<span class="ruby-identifier">match</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">$~</span>.<span class="ruby-identifier">captures</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">$~</span>.<span class="ruby-identifier">begin</span>(<span class="ruby-value">0</span>), <span class="ruby-identifier">string</span>]
+24:         <span class="ruby-comment cmt"># Loop through the items.</span>
+25:         <span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+26:           <span class="ruby-identifier">nxt</span> = <span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+27:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arguments</span>[<span class="ruby-identifier">offset</span>] <span class="ruby-comment cmt"># do we have a result?</span>
+28:             <span class="ruby-identifier">replacement</span> = <span class="ruby-identifier">override</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">replacement</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">override</span>
+29:             <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">replacement</span>
+30:             <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Proc</span>
+31:               <span class="ruby-identifier">result</span> = <span class="ruby-identifier">replacement</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-identifier">arguments</span>[<span class="ruby-identifier">offset</span><span class="ruby-operator">...</span><span class="ruby-identifier">nxt</span>])
+32:             <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Numeric</span>
+33:               <span class="ruby-identifier">result</span> = <span class="ruby-identifier">arguments</span>[<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">replacement</span>]
+34:             <span class="ruby-keyword kw">else</span>
+35:               <span class="ruby-identifier">result</span> = <span class="ruby-identifier">replacement</span>
+36:             <span class="ruby-keyword kw">end</span>
+37:           <span class="ruby-keyword kw">end</span>
+38:           <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">nxt</span>
+39:         <span class="ruby-keyword kw">end</span>
+40:         <span class="ruby-identifier">result</span>
+41:       <span class="ruby-keyword kw">end</span>
+42:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="insert-at-method" class="method-detail ">
+				<a name="method-i-insert_at"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">insert_at</span><span
+						class="method-args">(index, expression, replacement)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="insert-at-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/regexp_group.rb, line 44</span>
+44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert_at</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">expression</span>, <span class="ruby-identifier">replacement</span>)
+45:       <span class="ruby-identifier">expression</span> = <span class="ruby-identifier">expression</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Regexp</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">expression</span>.<span class="ruby-identifier">source</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">expression</span>.<span class="ruby-identifier">to_s</span>
+46:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">expression</span>, <span class="ruby-identifier">replacement</span>)
+47:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="test-method" class="method-detail ">
+				<a name="method-i-test"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="test-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/regexp_group.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test</span>(<span class="ruby-identifier">string</span>)
+50:       <span class="ruby-identifier">exec</span>(<span class="ruby-identifier">string</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">string</span>
+51:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/regexp_group.rb, line 53</span>
+53:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+54:       <span class="ruby-identifier">offset</span> = <span class="ruby-value">1</span>
+55:       <span class="ruby-value str">&quot;(&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+56:         <span class="ruby-comment cmt"># Fix back references.</span>
+57:         <span class="ruby-identifier">expression</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">BACK_REF</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-value str">&quot;\\&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>) }
+58:         <span class="ruby-identifier">offset</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+59:         <span class="ruby-identifier">expression</span>
+60:       }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;)|(&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;)&quot;</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

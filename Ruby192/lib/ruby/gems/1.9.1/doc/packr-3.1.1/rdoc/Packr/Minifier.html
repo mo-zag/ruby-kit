@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Packr::Minifier</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/packr/minifier_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/packr/minifier.rb">lib/packr/minifier.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-conditional_comments">::conditional_comments</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-minify">#minify</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Packr.html">Packr</a></li>
+				
+					<li><a href="../Packr/Base62.html">Packr::Base62</a></li>
+				
+					<li><a href="../Packr/Collection.html">Packr::Collection</a></li>
+				
+					<li><a href="../Packr/Encoder.html">Packr::Encoder</a></li>
+				
+					<li><a href="../Packr/Map.html">Packr::Map</a></li>
+				
+					<li><a href="../Packr/Minifier.html">Packr::Minifier</a></li>
+				
+					<li><a href="../Packr/Parser.html">Packr::Parser</a></li>
+				
+					<li><a href="../Packr/Privates.html">Packr::Privates</a></li>
+				
+					<li><a href="../Packr/RegexpGroup.html">Packr::RegexpGroup</a></li>
+				
+					<li><a href="../Packr/RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+				
+					<li><a href="../Packr/Shrinker.html">Packr::Shrinker</a></li>
+				
+					<li><a href="../Packr/Words.html">Packr::Words</a></li>
+				
+					<li><a href="../Packr/Words/Item.html">Packr::Words::Item</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Packr::Minifier</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CONTINUE">CONTINUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CLEAN">CLEAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="COMMENTS">COMMENTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CONCAT">CONCAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WHITESPACE">WHITESPACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="conditional-comments-method" class="method-detail ">
+				<a name="method-c-conditional_comments"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">conditional_comments</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="conditional-comments-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/packr/minifier.rb, line 4</span>
+4:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">conditional_comments</span>
+5:       <span class="ruby-identifier">@@conditional_comments</span>
+6:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/minifier.rb, line 8</span>
+ 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+ 9:       <span class="ruby-ivar">@concat</span> = <span class="ruby-constant">CONCAT</span>.<span class="ruby-identifier">union</span>(<span class="ruby-constant">DATA</span>)
+10:       
+11:       <span class="ruby-keyword kw">def</span> <span class="ruby-ivar">@concat</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">script</span>)
+12:         <span class="ruby-identifier">parsed</span> = <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">script</span>)
+13:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">parsed</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">script</span>
+14:           <span class="ruby-identifier">script</span> = <span class="ruby-identifier">parsed</span>
+15:           <span class="ruby-identifier">parsed</span> = <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">script</span>)
+16:         <span class="ruby-keyword kw">end</span>
+17:         <span class="ruby-identifier">parsed</span>
+18:       <span class="ruby-keyword kw">end</span>
+19:       
+20:       <span class="ruby-ivar">@comments</span> = <span class="ruby-constant">DATA</span>.<span class="ruby-identifier">union</span>(<span class="ruby-constant">COMMENTS</span>)
+21:       <span class="ruby-ivar">@clean</span> = <span class="ruby-constant">DATA</span>.<span class="ruby-identifier">union</span>(<span class="ruby-constant">CLEAN</span>)
+22:       <span class="ruby-ivar">@whitespace</span> = <span class="ruby-constant">DATA</span>.<span class="ruby-identifier">union</span>(<span class="ruby-constant">WHITESPACE</span>)
+23:       
+24:       <span class="ruby-identifier">@@conditional_comments</span> = <span class="ruby-ivar">@comments</span>.<span class="ruby-identifier">copy</span>
+25:       <span class="ruby-identifier">@@conditional_comments</span>.<span class="ruby-identifier">put_at</span>(<span class="ruby-value">1</span>, <span class="ruby-value str">&quot; \\3&quot;</span>)
+26:       <span class="ruby-ivar">@whitespace</span>.<span class="ruby-identifier">remove_at</span>(<span class="ruby-value">2</span>) <span class="ruby-comment cmt"># conditional comments</span>
+27:       <span class="ruby-ivar">@comments</span>.<span class="ruby-identifier">remove_at</span>(<span class="ruby-value">2</span>)
+28:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="minify-method" class="method-detail ">
+				<a name="method-i-minify"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minify</span><span
+						class="method-args">(script)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="minify-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/minifier.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minify</span>(<span class="ruby-identifier">script</span>)
+31:       <span class="ruby-comment cmt"># packing with no additional options</span>
+32:       <span class="ruby-identifier">script</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;\n&quot;</span>
+33:       <span class="ruby-identifier">script</span> = <span class="ruby-identifier">script</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">CONTINUE</span>, <span class="ruby-value str">&quot;&quot;</span>)
+34:       <span class="ruby-identifier">script</span> = <span class="ruby-ivar">@comments</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">script</span>)
+35:       <span class="ruby-identifier">script</span> = <span class="ruby-ivar">@clean</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">script</span>)
+36:       <span class="ruby-identifier">script</span> = <span class="ruby-ivar">@whitespace</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">script</span>)
+37:       <span class="ruby-identifier">script</span> = <span class="ruby-ivar">@concat</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">script</span>)
+38:       <span class="ruby-identifier">script</span>
+39:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

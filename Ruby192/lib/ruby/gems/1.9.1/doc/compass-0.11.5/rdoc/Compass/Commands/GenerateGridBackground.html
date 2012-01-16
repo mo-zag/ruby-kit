@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Compass::Commands::GenerateGridBackground</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/compass/commands/generate_grid_background_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/compass/commands/generate_grid_background.rb">lib/compass/commands/generate_grid_background.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="ProjectBase.html">Compass::Commands::ProjectBase</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-description">::description</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-option_parser">::option_parser</a></li>
+					
+					<li><a href="#method-c-parse%21">::parse!</a></li>
+					
+					<li><a href="#method-c-usage">::usage</a></li>
+					
+					<li><a href="#method-i-perform">#perform</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Actions</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Compass.html">Compass</a></li>
+				
+					<li><a href="../../Compass/Actions.html">Compass::Actions</a></li>
+				
+					<li><a href="../../Compass/AppIntegration.html">Compass::AppIntegration</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/Helpers.html">Compass::AppIntegration::Helpers</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/Rails.html">Compass::AppIntegration::Rails</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/Rails/ConfigurationDefaults.html">Compass::AppIntegration::Rails::ConfigurationDefaults</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/Rails/Installer.html">Compass::AppIntegration::Rails::Installer</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/StandAlone.html">Compass::AppIntegration::StandAlone</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/StandAlone/ConfigurationDefaults.html">Compass::AppIntegration::StandAlone::ConfigurationDefaults</a></li>
+				
+					<li><a href="../../Compass/AppIntegration/StandAlone/Installer.html">Compass::AppIntegration::StandAlone::Installer</a></li>
+				
+					<li><a href="../../Compass/BrowserSupport.html">Compass::BrowserSupport</a></li>
+				
+					<li><a href="../../Compass/Commands.html">Compass::Commands</a></li>
+				
+					<li><a href="../../Compass/Commands/Base.html">Compass::Commands::Base</a></li>
+				
+					<li><a href="../../Compass/Commands/CleanProject.html">Compass::Commands::CleanProject</a></li>
+				
+					<li><a href="../../Compass/Commands/CleanProjectOptionsParser.html">Compass::Commands::CleanProjectOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/CompileProjectOptionsParser.html">Compass::Commands::CompileProjectOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/ConfigurationOptionsParser.html">Compass::Commands::ConfigurationOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/CreateProject.html">Compass::Commands::CreateProject</a></li>
+				
+					<li><a href="../../Compass/Commands/CreateProjectOptionsParser.html">Compass::Commands::CreateProjectOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/Default.html">Compass::Commands::Default</a></li>
+				
+					<li><a href="../../Compass/Commands/DefaultOptionsParser.html">Compass::Commands::DefaultOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/ExtensionOptionsParser.html">Compass::Commands::ExtensionOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/GenerateGridBackground.html">Compass::Commands::GenerateGridBackground</a></li>
+				
+					<li><a href="../../Compass/Commands/GridBackgroundOptionsParser.html">Compass::Commands::GridBackgroundOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/Help.html">Compass::Commands::Help</a></li>
+				
+					<li><a href="../../Compass/Commands/HelpOptionsParser.html">Compass::Commands::HelpOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/Imports.html">Compass::Commands::Imports</a></li>
+				
+					<li><a href="../../Compass/Commands/InstallerCommand.html">Compass::Commands::InstallerCommand</a></li>
+				
+					<li><a href="../../Compass/Commands/Interactive.html">Compass::Commands::Interactive</a></li>
+				
+					<li><a href="../../Compass/Commands/InteractiveOptionsParser.html">Compass::Commands::InteractiveOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/ListFrameworks.html">Compass::Commands::ListFrameworks</a></li>
+				
+					<li><a href="../../Compass/Commands/MemoryDebugger.html">Compass::Commands::MemoryDebugger</a></li>
+				
+					<li><a href="../../Compass/Commands/PrintVersion.html">Compass::Commands::PrintVersion</a></li>
+				
+					<li><a href="../../Compass/Commands/ProjectBase.html">Compass::Commands::ProjectBase</a></li>
+				
+					<li><a href="../../Compass/Commands/ProjectStats.html">Compass::Commands::ProjectStats</a></li>
+				
+					<li><a href="../../Compass/Commands/Registry.html">Compass::Commands::Registry</a></li>
+				
+					<li><a href="../../Compass/Commands/Sprite.html">Compass::Commands::Sprite</a></li>
+				
+					<li><a href="../../Compass/Commands/SpriteOptionsParser.html">Compass::Commands::SpriteOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/StampPattern.html">Compass::Commands::StampPattern</a></li>
+				
+					<li><a href="../../Compass/Commands/StampPatternOptionsParser.html">Compass::Commands::StampPatternOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/StatsOptionsParser.html">Compass::Commands::StatsOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/UnpackExtension.html">Compass::Commands::UnpackExtension</a></li>
+				
+					<li><a href="../../Compass/Commands/UpdateProject.html">Compass::Commands::UpdateProject</a></li>
+				
+					<li><a href="../../Compass/Commands/ValidateProject.html">Compass::Commands::ValidateProject</a></li>
+				
+					<li><a href="../../Compass/Commands/ValidationOptionsParser.html">Compass::Commands::ValidationOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/VersionOptionsParser.html">Compass::Commands::VersionOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/WatchProject.html">Compass::Commands::WatchProject</a></li>
+				
+					<li><a href="../../Compass/Commands/WatchProjectOptionsParser.html">Compass::Commands::WatchProjectOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Commands/WriteConfiguration.html">Compass::Commands::WriteConfiguration</a></li>
+				
+					<li><a href="../../Compass/Compiler.html">Compass::Compiler</a></li>
+				
+					<li><a href="../../Compass/Configuration.html">Compass::Configuration</a></li>
+				
+					<li><a href="../../Compass/Configuration/Adapters.html">Compass::Configuration::Adapters</a></li>
+				
+					<li><a href="../../Compass/Configuration/Comments.html">Compass::Configuration::Comments</a></li>
+				
+					<li><a href="../../Compass/Configuration/Data.html">Compass::Configuration::Data</a></li>
+				
+					<li><a href="../../Compass/Configuration/Defaults.html">Compass::Configuration::Defaults</a></li>
+				
+					<li><a href="../../Compass/Configuration/FileData.html">Compass::Configuration::FileData</a></li>
+				
+					<li><a href="../../Compass/Configuration/Helpers.html">Compass::Configuration::Helpers</a></li>
+				
+					<li><a href="../../Compass/Configuration/Inheritance.html">Compass::Configuration::Inheritance</a></li>
+				
+					<li><a href="../../Compass/Configuration/Inheritance/ClassMethods.html">Compass::Configuration::Inheritance::ClassMethods</a></li>
+				
+					<li><a href="../../Compass/Configuration/Inheritance/InstanceMethods.html">Compass::Configuration::Inheritance::InstanceMethods</a></li>
+				
+					<li><a href="../../Compass/Configuration/Paths.html">Compass::Configuration::Paths</a></li>
+				
+					<li><a href="../../Compass/Configuration/Serialization.html">Compass::Configuration::Serialization</a></li>
+				
+					<li><a href="../../Compass/Error.html">Compass::Error</a></li>
+				
+					<li><a href="../../Compass/Exec.html">Compass::Exec</a></li>
+				
+					<li><a href="../../Compass/Exec/CommandOptionParser.html">Compass::Exec::CommandOptionParser</a></li>
+				
+					<li><a href="../../Compass/Exec/GlobalOptionsParser.html">Compass::Exec::GlobalOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Exec/Helpers.html">Compass::Exec::Helpers</a></li>
+				
+					<li><a href="../../Compass/Exec/ProjectOptionsParser.html">Compass::Exec::ProjectOptionsParser</a></li>
+				
+					<li><a href="../../Compass/Exec/SubCommandUI.html">Compass::Exec::SubCommandUI</a></li>
+				
+					<li><a href="../../Compass/Exec/SwitchUI.html">Compass::Exec::SwitchUI</a></li>
+				
+					<li><a href="../../Compass/FilesystemConflict.html">Compass::FilesystemConflict</a></li>
+				
+					<li><a href="../../Compass/Frameworks.html">Compass::Frameworks</a></li>
+				
+					<li><a href="../../Compass/Frameworks/Framework.html">Compass::Frameworks::Framework</a></li>
+				
+					<li><a href="../../Compass/Installers.html">Compass::Installers</a></li>
+				
+					<li><a href="../../Compass/Installers/BareInstaller.html">Compass::Installers::BareInstaller</a></li>
+				
+					<li><a href="../../Compass/Installers/Base.html">Compass::Installers::Base</a></li>
+				
+					<li><a href="../../Compass/Installers/Manifest.html">Compass::Installers::Manifest</a></li>
+				
+					<li><a href="../../Compass/Installers/Manifest/Entry.html">Compass::Installers::Manifest::Entry</a></li>
+				
+					<li><a href="../../Compass/Installers/ManifestInstaller.html">Compass::Installers::ManifestInstaller</a></li>
+				
+					<li><a href="../../Compass/Installers/TemplateContext.html">Compass::Installers::TemplateContext</a></li>
+				
+					<li><a href="../../Compass/Logger.html">Compass::Logger</a></li>
+				
+					<li><a href="../../Compass/MissingDependency.html">Compass::MissingDependency</a></li>
+				
+					<li><a href="../../Compass/NullLogger.html">Compass::NullLogger</a></li>
+				
+					<li><a href="../../Compass/PNG.html">Compass::PNG</a></li>
+				
+					<li><a href="../../Compass/Railtie.html">Compass::Railtie</a></li>
+				
+					<li><a href="../../Compass/SassExtensions.html">Compass::SassExtensions</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions.html">Compass::SassExtensions::Functions</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Colors.html">Compass::SassExtensions::Functions::Colors</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Constants.html">Compass::SassExtensions::Functions::Constants</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/CrossBrowserSupport.html">Compass::SassExtensions::Functions::CrossBrowserSupport</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/CrossBrowserSupport/CSS2FallbackValue.html">Compass::SassExtensions::Functions::CrossBrowserSupport::CSS2FallbackValue</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Display.html">Compass::SassExtensions::Functions::Display</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Enumerate.html">Compass::SassExtensions::Functions::Enumerate</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/FontFiles.html">Compass::SassExtensions::Functions::FontFiles</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport.html">Compass::SassExtensions::Functions::GradientSupport</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/Assertions.html">Compass::SassExtensions::Functions::GradientSupport::Assertions</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/ColorStop.html">Compass::SassExtensions::Functions::GradientSupport::ColorStop</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/Functions.html">Compass::SassExtensions::Functions::GradientSupport::Functions</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/Gradient.html">Compass::SassExtensions::Functions::GradientSupport::Gradient</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/Gradient/ClassMethods.html">Compass::SassExtensions::Functions::GradientSupport::Gradient::ClassMethods</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/LinearGradient.html">Compass::SassExtensions::Functions::GradientSupport::LinearGradient</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/GradientSupport/RadialGradient.html">Compass::SassExtensions::Functions::GradientSupport::RadialGradient</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/ImageSize.html">Compass::SassExtensions::Functions::ImageSize</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/ImageSize/ImageProperties.html">Compass::SassExtensions::Functions::ImageSize::ImageProperties</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/ImageSize/JPEG.html">Compass::SassExtensions::Functions::ImageSize::JPEG</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/InlineImage.html">Compass::SassExtensions::Functions::InlineImage</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Lists.html">Compass::SassExtensions::Functions::Lists</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Selectors.html">Compass::SassExtensions::Functions::Selectors</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Sprites.html">Compass::SassExtensions::Functions::Sprites</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Sprites/VariableReader.html">Compass::SassExtensions::Functions::Sprites::VariableReader</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Trig.html">Compass::SassExtensions::Functions::Trig</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Functions/Urls.html">Compass::SassExtensions::Functions::Urls</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites.html">Compass::SassExtensions::Sprites</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites/ChunkyPngEngine.html">Compass::SassExtensions::Sprites::ChunkyPngEngine</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites/Engine.html">Compass::SassExtensions::Sprites::Engine</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites/Image.html">Compass::SassExtensions::Sprites::Image</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites/ImageMethods.html">Compass::SassExtensions::Sprites::ImageMethods</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites/SpriteMap.html">Compass::SassExtensions::Sprites::SpriteMap</a></li>
+				
+					<li><a href="../../Compass/SassExtensions/Sprites/SpriteMethods.html">Compass::SassExtensions::Sprites::SpriteMethods</a></li>
+				
+					<li><a href="../../Compass/SpriteImporter.html">Compass::SpriteImporter</a></li>
+				
+					<li><a href="../../Compass/Stats.html">Compass::Stats</a></li>
+				
+					<li><a href="../../Compass/Stats/CssFile.html">Compass::Stats::CssFile</a></li>
+				
+					<li><a href="../../Compass/Stats/SassFile.html">Compass::Stats::SassFile</a></li>
+				
+					<li><a href="../../Compass/Stats/StatsVisitor.html">Compass::Stats::StatsVisitor</a></li>
+				
+					<li><a href="../../Compass/TestCase.html">Compass::TestCase</a></li>
+				
+					<li><a href="../../Compass/Util.html">Compass::Util</a></li>
+				
+					<li><a href="../../Compass/Version.html">Compass::Version</a></li>
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/CrossBrowserFunctionCall.html">Sass::Script::CrossBrowserFunctionCall</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/HasSimpleCrossBrowserFunctionSupport.html">Sass::Script::HasSimpleCrossBrowserFunctionSupport</a></li>
+				
+					<li><a href="../../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Rails.html">Rails</a></li>
+				
+					<li><a href="../../Rails/Railtie.html">Rails::Railtie</a></li>
+				
+					<li><a href="../../Rails/Railtie/Configuration.html">Rails::Railtie::Configuration</a></li>
+				
+					<li><a href="../../GridBuilder.html">GridBuilder</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+					<li><a href="../../QuickCache.html">QuickCache</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Compass::Commands::GenerateGridBackground</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="description-method" class="method-detail ">
+				<a name="method-c-description"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">description</span><span
+						class="method-args">(command)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="description-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/compass/commands/generate_grid_background.rb, line 54</span>
+54:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description</span>(<span class="ruby-identifier">command</span>)
+55:           <span class="ruby-value str">&quot;Generates a grid background image.&quot;</span>
+56:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(working_path, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/compass/commands/generate_grid_background.rb, line 69</span>
+69:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">working_path</span>, <span class="ruby-identifier">options</span>)
+70:         <span class="ruby-keyword kw">super</span>
+71:         <span class="ruby-identifier">assert_project_directory_exists!</span>
+72:         <span class="ruby-constant">Compass</span>.<span class="ruby-identifier">add_configuration</span>(<span class="ruby-identifier">options</span>, <span class="ruby-value str">'command_line'</span>)
+73:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="option-parser-method" class="method-detail ">
+				<a name="method-c-option_parser"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">option_parser</span><span
+						class="method-args">(arguments)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="option-parser-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/compass/commands/generate_grid_background.rb, line 44</span>
+44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">option_parser</span>(<span class="ruby-identifier">arguments</span>)
+45:           <span class="ruby-identifier">parser</span> = <span class="ruby-constant">Compass</span><span class="ruby-operator">::</span><span class="ruby-constant">Exec</span><span class="ruby-operator">::</span><span class="ruby-constant">CommandOptionParser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arguments</span>)
+46:           <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-constant">Compass</span><span class="ruby-operator">::</span><span class="ruby-constant">Exec</span><span class="ruby-operator">::</span><span class="ruby-constant">GlobalOptionsParser</span>)
+47:           <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-constant">GridBackgroundOptionsParser</span>)
+48:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse--method" class="method-detail ">
+				<a name="method-c-parse%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse!</span><span
+						class="method-args">(arguments)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/compass/commands/generate_grid_background.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse!</span>(<span class="ruby-identifier">arguments</span>)
+59:           <span class="ruby-identifier">parser</span> = <span class="ruby-identifier">option_parser</span>(<span class="ruby-identifier">arguments</span>)
+60:           <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">parse!</span>
+61:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+62:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">OptionParser</span><span class="ruby-operator">::</span><span class="ruby-constant">ParseError</span>, <span class="ruby-value str">&quot;Please specify the grid dimensions.&quot;</span>
+63:           <span class="ruby-keyword kw">end</span>
+64:           <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:grid_dimensions</span>] = <span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">shift</span>
+65:           <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:grid_filename</span>] = <span class="ruby-identifier">arguments</span>.<span class="ruby-identifier">shift</span>
+66:           <span class="ruby-identifier">parser</span>.<span class="ruby-identifier">options</span>
+67:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="usage-method" class="method-detail ">
+				<a name="method-c-usage"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">usage</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="usage-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/compass/commands/generate_grid_background.rb, line 50</span>
+50:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usage</span>
+51:           <span class="ruby-identifier">option_parser</span>([]).<span class="ruby-identifier">to_s</span>
+52:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="perform-method" class="method-detail ">
+				<a name="method-i-perform"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">perform</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="perform-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/compass/commands/generate_grid_background.rb, line 75</span>
+75:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">perform</span>
+76:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:grid_dimensions</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^(\d+)\+(\d+)(?:x(\d+))?$/</span>
+77:           <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;ERROR: '#{options[:grid_dimensions]}' is not valid.&quot;</span>
+78:           <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Dimensions should be specified like: 30+10x20&quot;</span>
+79:           <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;where 30 is the column width, 10 is the gutter width, and 20 is the (optional) height.&quot;</span>
+80:           <span class="ruby-keyword kw">return</span>
+81:         <span class="ruby-keyword kw">end</span>
+82:         <span class="ruby-identifier">logger</span>.<span class="ruby-identifier">yellow</span> <span class="ruby-keyword kw">do</span>
+83:           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Unless you need to check layouts in legacy browsers, it's preferable&quot;</span>
+84:           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;to use the pure CSS3-based grid background mixin:&quot;</span>
+85:           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>
+86:           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;http://compass-style.org/reference/compass/layout/grid_background/&quot;</span>
+87:         <span class="ruby-keyword kw">end</span>
+88:         <span class="ruby-identifier">column_width</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>
+89:         <span class="ruby-identifier">gutter_width</span> = <span class="ruby-node">$2</span>.<span class="ruby-identifier">to_i</span>
+90:         <span class="ruby-identifier">height</span> = <span class="ruby-node">$3</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-node">$3</span>
+91:         <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:grid_filename</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">projectize</span>(<span class="ruby-node">&quot;#{project_images_subdirectory}/grid.png&quot;</span>)
+92:         <span class="ruby-constant">GridBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:column_width</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">column_width</span>, <span class="ruby-value">:gutter_width</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">gutter_width</span>, <span class="ruby-value">:height</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">height</span>, <span class="ruby-value">:filename</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filename</span>, <span class="ruby-value">:working_path</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">working_path</span>)).<span class="ruby-identifier">generate!</span>
+93:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

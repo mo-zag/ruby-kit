@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Hpricot::Elem</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/haml/html_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/haml/html.rb">lib/haml/html.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-dynamic_attribute%3F">#dynamic_attribute?</a></li>
+					
+					<li><a href="#method-i-dynamic_attributes">#dynamic_attributes</a></li>
+					
+					<li><a href="#method-i-haml_attributes">#haml_attributes</a></li>
+					
+					<li><a href="#method-i-haml_tag_loud">#haml_tag_loud</a></li>
+					
+					<li><a href="#method-i-haml_tag_silent">#haml_tag_silent</a></li>
+					
+					<li><a href="#method-i-static_attribute%3F">#static_attribute?</a></li>
+					
+					<li><a href="#method-i-static_classname%3F">#static_classname?</a></li>
+					
+					<li><a href="#method-i-static_id%3F">#static_id?</a></li>
+					
+					<li><a href="#method-i-to_haml">#to_haml</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CONTRIBUTING.html">CONTRIBUTING</a></li>
+				
+					<li class="file"><a href="../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../REMEMBER.html">REMEMBER</a></li>
+				
+					<li class="file"><a href="../REVISION.html">REVISION</a></li>
+				
+					<li class="file"><a href="../VERSION.html">VERSION</a></li>
+				
+					<li class="file"><a href="../VERSION_NAME.html">VERSION_NAME</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Haml.html">Haml</a></li>
+				
+					<li><a href="../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../Haml/Exec/CSS2Sass.html">Haml::Exec::CSS2Sass</a></li>
+				
+					<li><a href="../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../Haml/Exec/HamlSass.html">Haml::Exec::HamlSass</a></li>
+				
+					<li><a href="../Haml/Exec/Sass.html">Haml::Exec::Sass</a></li>
+				
+					<li><a href="../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../Haml/HTML/Node.html">Haml::HTML::Node</a></li>
+				
+					<li><a href="../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../Haml/Precompiler.html">Haml::Precompiler</a></li>
+				
+					<li><a href="../Haml/Precompiler/Line.html">Haml::Precompiler::Line</a></li>
+				
+					<li><a href="../Haml/Railtie.html">Haml::Railtie</a></li>
+				
+					<li><a href="../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../Haml/Util/StaticConditionalContext.html">Haml::Util::StaticConditionalContext</a></li>
+				
+					<li><a href="../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../Sass.html">Sass</a></li>
+				
+					<li><a href="../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../Sass/Files.html">Sass::Files</a></li>
+				
+					<li><a href="../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../Hpricot/BaseEle.html">Hpricot::BaseEle</a></li>
+				
+					<li><a href="../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../Merb.html">Merb</a></li>
+				
+					<li><a href="../Merb/Rack.html">Merb::Rack</a></li>
+				
+					<li><a href="../Merb/Rack/Application.html">Merb::Rack::Application</a></li>
+				
+					<li><a href="../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../MerbHandler.html">MerbHandler</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Hpricot::Elem</h1>
+
+		<div id="description">
+			<p>
+@see <a href="../Hpricot.html">Hpricot</a> @private
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="to-haml-method" class="method-detail ">
+				<a name="method-i-to_haml"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_haml</span><span
+						class="method-args">(tabs, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../Haml/HTML/Node.html#method-i-to_haml">Haml::HTML::Node#to_haml</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-haml-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 181</span>
+181:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_haml</span>(<span class="ruby-identifier">tabs</span>, <span class="ruby-identifier">options</span>)
+182:         <span class="ruby-identifier">output</span> = <span class="ruby-node">&quot;#{tabulate(tabs)}&quot;</span>
+183:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:rhtml</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">name</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">5</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'haml:'</span>
+184:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;haml_tag_#{name[5..-1]}&quot;</span>, <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">unescapeHTML</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">inner_text</span>))
+185:         <span class="ruby-keyword kw">end</span>
+186: 
+187:         <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;%#{name}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'div'</span> <span class="ruby-operator">&amp;&amp;</span>
+188:           (<span class="ruby-identifier">static_id?</span>(<span class="ruby-identifier">options</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">static_classname?</span>(<span class="ruby-identifier">options</span>))
+189: 
+190:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr_hash</span>
+191:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">static_id?</span>(<span class="ruby-identifier">options</span>)
+192:             <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;##{attr_hash['id']}&quot;</span>
+193:             <span class="ruby-identifier">remove_attribute</span>(<span class="ruby-value str">'id'</span>)
+194:           <span class="ruby-keyword kw">end</span>
+195:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">static_classname?</span>(<span class="ruby-identifier">options</span>)
+196:             <span class="ruby-identifier">attr_hash</span>[<span class="ruby-value str">'class'</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">' '</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;.#{c}&quot;</span> }
+197:             <span class="ruby-identifier">remove_attribute</span>(<span class="ruby-value str">'class'</span>)
+198:           <span class="ruby-keyword kw">end</span>
+199:           <span class="ruby-identifier">output</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">haml_attributes</span>(<span class="ruby-identifier">options</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr_hash</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+200:         <span class="ruby-keyword kw">end</span>
+201: 
+202:         (<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">children</span> <span class="ruby-operator">||</span> []).<span class="ruby-identifier">inject</span>(<span class="ruby-identifier">output</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">output</span>, <span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+203:           <span class="ruby-identifier">output</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">to_haml</span>(<span class="ruby-identifier">tabs</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">options</span>)
+204:         <span class="ruby-keyword kw">end</span>
+205:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="dynamic-attribute--method" class="method-detail ">
+				<a name="method-i-dynamic_attribute%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dynamic_attribute?</span><span
+						class="method-args">(name, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dynamic-attribute--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 236</span>
+236:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dynamic_attribute?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>)
+237:         <span class="ruby-identifier">options</span>[<span class="ruby-value">:rhtml</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">dynamic_attributes</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">name</span>)
+238:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dynamic-attributes-method" class="method-detail ">
+				<a name="method-i-dynamic_attributes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dynamic_attributes</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dynamic-attributes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 209</span>
+209:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dynamic_attributes</span>
+210:         <span class="ruby-ivar">@dynamic_attributes</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">begin</span>
+211:           <span class="ruby-constant">Haml</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">map_hash</span>(<span class="ruby-identifier">attr_hash</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+212:             <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>
+213:             <span class="ruby-identifier">full_match</span> = <span class="ruby-keyword kw">nil</span>
+214:             <span class="ruby-identifier">ruby_value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">%{&lt;haml:loud&gt;\s*(.+?)\s*&lt;/haml:loud&gt;}</span>) <span class="ruby-keyword kw">do</span>
+215:               <span class="ruby-identifier">full_match</span> = <span class="ruby-node">$`</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">$'</span>.<span class="ruby-identifier">empty?</span>
+216:               <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">unescapeHTML</span>(<span class="ruby-identifier">full_match</span> <span class="ruby-operator">?</span> <span class="ruby-node">$1</span><span class="ruby-operator">:</span> <span class="ruby-node">&quot;\#{#{$1}}&quot;</span>)
+217:             <span class="ruby-keyword kw">end</span>
+218:             <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ruby_value</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>
+219:             [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">full_match</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">ruby_value</span> <span class="ruby-operator">:</span> <span class="ruby-node">%(&quot;#{ruby_value}&quot;)</span>]
+220:           <span class="ruby-keyword kw">end</span>
+221:         <span class="ruby-keyword kw">end</span>
+222:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="haml-attributes-method" class="method-detail ">
+				<a name="method-i-haml_attributes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">haml_attributes</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a string representation of an attributes hash that&#8217;s prettier
+than that produced by Hash#inspect
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="haml-attributes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 250</span>
+250:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">haml_attributes</span>(<span class="ruby-identifier">options</span>)
+251:         <span class="ruby-identifier">attrs</span> = <span class="ruby-identifier">attr_hash</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+252:           <span class="ruby-identifier">value</span> = <span class="ruby-identifier">dynamic_attribute?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">dynamic_attributes</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">inspect</span>
+253:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">index</span>(<span class="ruby-regexp re">/\W/</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;:#{name}&quot;</span>
+254:           <span class="ruby-node">&quot;#{name} =&gt; #{value}&quot;</span>
+255:         <span class="ruby-keyword kw">end</span>
+256:         <span class="ruby-node">&quot;{ #{attrs.join(', ')} }&quot;</span>
+257:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="haml-tag-loud-method" class="method-detail ">
+				<a name="method-i-haml_tag_loud"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">haml_tag_loud</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="haml-tag-loud-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 224</span>
+224:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">haml_tag_loud</span>(<span class="ruby-identifier">text</span>)
+225:         <span class="ruby-node">&quot;= #{text.gsub(/\n\s*/, ' ').strip}\n&quot;</span>
+226:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="haml-tag-silent-method" class="method-detail ">
+				<a name="method-i-haml_tag_silent"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">haml_tag_silent</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="haml-tag-silent-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 228</span>
+228:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">haml_tag_silent</span>(<span class="ruby-identifier">text</span>)
+229:         <span class="ruby-identifier">text</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;- #{line.strip}\n&quot;</span> }.<span class="ruby-identifier">join</span>
+230:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="static-attribute--method" class="method-detail ">
+				<a name="method-i-static_attribute%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">static_attribute?</span><span
+						class="method-args">(name, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="static-attribute--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 232</span>
+232:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">static_attribute?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>)
+233:         <span class="ruby-identifier">attr_hash</span>[<span class="ruby-identifier">name</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">dynamic_attribute?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>)
+234:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="static-classname--method" class="method-detail ">
+				<a name="method-i-static_classname%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">static_classname?</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="static-classname--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 244</span>
+244:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">static_classname?</span>(<span class="ruby-identifier">options</span>)
+245:         <span class="ruby-identifier">static_attribute?</span>(<span class="ruby-value str">'class'</span>, <span class="ruby-identifier">options</span>)
+246:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="static-id--method" class="method-detail ">
+				<a name="method-i-static_id%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">static_id?</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="static-id--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/html.rb, line 240</span>
+240:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">static_id?</span>(<span class="ruby-identifier">options</span>)
+241:         <span class="ruby-identifier">static_attribute?</span>(<span class="ruby-value str">'id'</span>, <span class="ruby-identifier">options</span>)
+242:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

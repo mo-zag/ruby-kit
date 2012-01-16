@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: ChunkyPNG::Image</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/chunky_png/image_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/image.rb">lib/chunky_png/image.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Canvas.html">ChunkyPNG::Canvas</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-from_datastream">::from_datastream</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-initialize_copy">#initialize_copy</a></li>
+					
+					<li><a href="#method-i-metadata_chunks">#metadata_chunks</a></li>
+					
+					<li><a href="#method-i-to_datastream">#to_datastream</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">ChunkyPNG::Image</h1>
+
+		<div id="description">
+			<p>
+<a href="Image.html">ChunkyPNG::Image</a> is an extension of the
+{ChunkyPNG::Canvas} class, that also includes support for metadata.
+</p>
+<p>
+@see <a href="Canvas.html">ChunkyPNG::Canvas</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="METADATA_COMPRESSION_TRESHOLD">METADATA_COMPRESSION_TRESHOLD</a></dt>
+				
+				<dd class="description"><p>
+The minimum size of bytes the value of a metadata field should be before
+compression is enabled for the chunk.
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="metadata-attribute-method" class="method-detail">
+				<a name="metadata"></a>
+				
+				<a name="metadata="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">metadata</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@return [Hash] The hash of metadata fields for this PNG image.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="from-datastream-method" class="method-detail ">
+				<a name="method-c-from_datastream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_datastream</span><span
+						class="method-args">(ds)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Reads a <a href="Image.html">ChunkyPNG::Image</a> instance from a data
+stream.
+</p>
+<p>
+Besides decoding the canvas, this will also read the metadata fields from
+the datastream.
+</p>
+<p>
+@param [ChunkyPNG::Datastream] The datastream to read from.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-datastream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/image.rb, line 73</span>
+73:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">from_datastream</span>(<span class="ruby-identifier">ds</span>)
+74:       <span class="ruby-identifier">image</span> = <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">ds</span>)
+75:       <span class="ruby-identifier">image</span>.<span class="ruby-identifier">metadata</span> = <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">metadata</span>
+76:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">image</span>
+77:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(width, height, bg_color = ChunkyPNG::Color::TRANSPARENT, metadata = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a new <a href="Image.html">ChunkyPNG::Image</a> instance.
+@param [Integer] width The width of the new image. @param [Integer] height
+The height of the new image. @param [Integer] bg_color The background color
+of the new image. @param [Hash] metadata A hash of metadata fields and
+values for this image. @see ChunkyPNG::Canvas#initialize
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/image.rb, line 22</span>
+22:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">bg_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>, <span class="ruby-identifier">metadata</span> = {})
+23:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">bg_color</span>)
+24:       <span class="ruby-ivar">@metadata</span> = <span class="ruby-identifier">metadata</span>
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="initialize-copy-method" class="method-detail ">
+				<a name="method-i-initialize_copy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">initialize_copy</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a copy of another <a href="Image.html">ChunkyPNG::Image</a>
+instance.
+</p>
+<p>
+@param [ChunkyPNG::Image] other The other image to copy.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="initialize-copy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/image.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_copy</span>(<span class="ruby-identifier">other</span>)
+31:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">other</span>)
+32:       <span class="ruby-ivar">@metadata</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">metadata</span>
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="metadata-chunks-method" class="method-detail ">
+				<a name="method-i-metadata_chunks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">metadata_chunks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the metadata for this image as PNG chunks.
+</p>
+<p>
+Chunks will either be of the {ChunkyPNG::Chunk::Text} type for small values
+(in bytes), or of the {ChunkyPNG::Chunk::CompressedText} type for values
+that are larger in size.
+</p>
+<p>
+@return [Array<ChunkyPNG::Chunk>] An array of metadata chunks. @see
+ChunkyPNG::Image::METADATA_COMPRESSION_TRESHOLD
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="metadata-chunks-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/image.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">metadata_chunks</span>
+44:       <span class="ruby-identifier">metadata</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+45:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-constant">METADATA_COMPRESSION_TRESHOLD</span>
+46:           <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Chunk</span><span class="ruby-operator">::</span><span class="ruby-constant">CompressedText</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+47:         <span class="ruby-keyword kw">else</span>
+48:           <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Chunk</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+49:         <span class="ruby-keyword kw">end</span>
+50:       <span class="ruby-keyword kw">end</span>
+51:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-datastream-method" class="method-detail ">
+				<a name="method-i-to_datastream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_datastream</span><span
+						class="method-args">(constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes the image to a PNG datastream for saving to disk or writing to an
+IO stream.
+</p>
+<p>
+Besides encoding the canvas, it will also encode the metadata fields to
+text chunks.
+</p>
+<p>
+@param [Hash] constraints The constraints to use when encoding the canvas.
+@return [ChunkyPNG::Datastream] The datastream that contains this image.
+@see <a
+href="Canvas/PNGEncoding.html#method-i-to_datastream">ChunkyPNG::Canvas::PNGEncoding#to_datastream</a>
+@see <a href="Image.html#method-i-metadata_chunks">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-datastream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/image.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_datastream</span>(<span class="ruby-identifier">constraints</span> = {})
+62:       <span class="ruby-identifier">ds</span> = <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">constraints</span>)
+63:       <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">other_chunks</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">metadata_chunks</span>
+64:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ds</span>
+65:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1564 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::Engine</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sass/engine_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/engine.rb">lib/sass/engine.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Engine/Line.html">Sass::Engine::Line</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-append_children">#append_children</a></li>
+					
+					<li><a href="#method-i-build_tree">#build_tree</a></li>
+					
+					<li><a href="#method-i-check_for_no_children">#check_for_no_children</a></li>
+					
+					<li><a href="#method-i-parse_comment">#parse_comment</a></li>
+					
+					<li><a href="#method-i-parse_directive">#parse_directive</a></li>
+					
+					<li><a href="#method-i-parse_else">#parse_else</a></li>
+					
+					<li><a href="#method-i-parse_for">#parse_for</a></li>
+					
+					<li><a href="#method-i-parse_line">#parse_line</a></li>
+					
+					<li><a href="#method-i-parse_mixin_definition">#parse_mixin_definition</a></li>
+					
+					<li><a href="#method-i-parse_mixin_include">#parse_mixin_include</a></li>
+					
+					<li><a href="#method-i-parse_property">#parse_property</a></li>
+					
+					<li><a href="#method-i-parse_script">#parse_script</a></li>
+					
+					<li><a href="#method-i-parse_variable">#parse_variable</a></li>
+					
+					<li><a href="#method-i-render">#render</a></li>
+					
+					<li><a href="#method-i-tabulate">#tabulate</a></li>
+					
+					<li><a href="#method-i-to_css">#to_css</a></li>
+					
+					<li><a href="#method-i-to_tree">#to_tree</a></li>
+					
+					<li><a href="#method-i-tree">#tree</a></li>
+					
+					<li><a href="#method-i-try_comment">#try_comment</a></li>
+					
+					<li><a href="#method-i-validate_and_append_child">#validate_and_append_child</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="../Haml/Util.html">Haml::Util</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CONTRIBUTING.html">CONTRIBUTING</a></li>
+				
+					<li class="file"><a href="../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../REMEMBER.html">REMEMBER</a></li>
+				
+					<li class="file"><a href="../REVISION.html">REVISION</a></li>
+				
+					<li class="file"><a href="../VERSION.html">VERSION</a></li>
+				
+					<li class="file"><a href="../VERSION_NAME.html">VERSION_NAME</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Haml.html">Haml</a></li>
+				
+					<li><a href="../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../Haml/Exec/CSS2Sass.html">Haml::Exec::CSS2Sass</a></li>
+				
+					<li><a href="../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../Haml/Exec/HamlSass.html">Haml::Exec::HamlSass</a></li>
+				
+					<li><a href="../Haml/Exec/Sass.html">Haml::Exec::Sass</a></li>
+				
+					<li><a href="../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../Haml/HTML/Node.html">Haml::HTML::Node</a></li>
+				
+					<li><a href="../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../Haml/Precompiler.html">Haml::Precompiler</a></li>
+				
+					<li><a href="../Haml/Precompiler/Line.html">Haml::Precompiler::Line</a></li>
+				
+					<li><a href="../Haml/Railtie.html">Haml::Railtie</a></li>
+				
+					<li><a href="../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../Haml/Util/StaticConditionalContext.html">Haml::Util::StaticConditionalContext</a></li>
+				
+					<li><a href="../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../Sass.html">Sass</a></li>
+				
+					<li><a href="../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../Sass/Files.html">Sass::Files</a></li>
+				
+					<li><a href="../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../Hpricot/BaseEle.html">Hpricot::BaseEle</a></li>
+				
+					<li><a href="../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../Merb.html">Merb</a></li>
+				
+					<li><a href="../Merb/Rack.html">Merb::Rack</a></li>
+				
+					<li><a href="../Merb/Rack/Application.html">Merb::Rack::Application</a></li>
+				
+					<li><a href="../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../MerbHandler.html">MerbHandler</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::Engine</h1>
+
+		<div id="description">
+			<p>
+This class handles the parsing and compilation of the <a
+href="../Sass.html">Sass</a> template. Example usage:
+</p>
+<pre>
+    template = File.load('stylesheets/sassy.sass')
+    sass_engine = Sass::Engine.new(template)
+    output = sass_engine.render
+    puts output</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="PROPERTY_CHAR">PROPERTY_CHAR</a></dt>
+				
+				<dd class="description"><p>
+The character that begins a <a href="CSS.html">CSS</a> property. @private
+</p></dd>
+				
+			
+				<dt><a name="SCRIPT_CHAR">SCRIPT_CHAR</a></dt>
+				
+				<dd class="description"><p>
+The character that designates that a property should be assigned to a
+SassScript expression. @private
+</p></dd>
+				
+			
+				<dt><a name="COMMENT_CHAR">COMMENT_CHAR</a></dt>
+				
+				<dd class="description"><p>
+The character that designates the beginning of a comment, either <a
+href="../Sass.html">Sass</a> or <a href="CSS.html">CSS</a>. @private
+</p></dd>
+				
+			
+				<dt><a name="SASS_COMMENT_CHAR">SASS_COMMENT_CHAR</a></dt>
+				
+				<dd class="description"><p>
+The character that follows the general <a
+href="Engine.html#COMMENT_CHAR">COMMENT_CHAR</a> and designates a <a
+href="../Sass.html">Sass</a> comment, which is not output as a <a
+href="CSS.html">CSS</a> comment. @private
+</p></dd>
+				
+			
+				<dt><a name="CSS_COMMENT_CHAR">CSS_COMMENT_CHAR</a></dt>
+				
+				<dd class="description"><p>
+The character that follows the general <a
+href="Engine.html#COMMENT_CHAR">COMMENT_CHAR</a> and designates a <a
+href="CSS.html">CSS</a> comment, which is embedded in the <a
+href="CSS.html">CSS</a> document. @private
+</p></dd>
+				
+			
+				<dt><a name="DIRECTIVE_CHAR">DIRECTIVE_CHAR</a></dt>
+				
+				<dd class="description"><p>
+The character used to denote a compiler directive. @private
+</p></dd>
+				
+			
+				<dt><a name="ESCAPE_CHAR">ESCAPE_CHAR</a></dt>
+				
+				<dd class="description"><p>
+Designates a non-parsed rule. @private
+</p></dd>
+				
+			
+				<dt><a name="MIXIN_DEFINITION_CHAR">MIXIN_DEFINITION_CHAR</a></dt>
+				
+				<dd class="description"><p>
+Designates block as mixin definition rather than <a href="CSS.html">CSS</a>
+rules to output @private
+</p></dd>
+				
+			
+				<dt><a name="MIXIN_INCLUDE_CHAR">MIXIN_INCLUDE_CHAR</a></dt>
+				
+				<dd class="description"><p>
+Includes named mixin declared using <a
+href="Engine.html#MIXIN_DEFINITION_CHAR">MIXIN_DEFINITION_CHAR</a> @private
+</p></dd>
+				
+			
+				<dt><a name="PROPERTY_NEW_MATCHER">PROPERTY_NEW_MATCHER</a></dt>
+				
+				<dd class="description"><p>
+The regex that matches properties of the form `name: prop`. @private
+</p></dd>
+				
+			
+				<dt><a name="PROPERTY_NEW">PROPERTY_NEW</a></dt>
+				
+				<dd class="description"><p>
+The regex that matches and extracts data from properties of the form `name:
+prop`. @private
+</p></dd>
+				
+			
+				<dt><a name="PROPERTY_OLD">PROPERTY_OLD</a></dt>
+				
+				<dd class="description"><p>
+The regex that matches and extracts data from properties of the form `:name
+prop`. @private
+</p></dd>
+				
+			
+				<dt><a name="DEFAULT_OPTIONS">DEFAULT_OPTIONS</a></dt>
+				
+				<dd class="description"><p>
+The default options for <a href="Engine.html">Sass::Engine</a>.
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(template, options={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@param template [String] The <a href="../Sass.html">Sass</a> template.
+@param options [{Symbol => Object}] An options hash;
+</p>
+<pre>
+  see {file:SASS_REFERENCE.md#sass_options the Sass options documentation}</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 143</span>
+143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">template</span>, <span class="ruby-identifier">options</span>={})
+144:       <span class="ruby-ivar">@options</span> = <span class="ruby-constant">DEFAULT_OPTIONS</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">options</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>})
+145:       <span class="ruby-ivar">@template</span> = <span class="ruby-identifier">template</span>
+146: 
+147:       <span class="ruby-comment cmt"># Support both, because the docs said one and the other actually worked</span>
+148:       <span class="ruby-comment cmt"># for quite a long time.</span>
+149:       <span class="ruby-ivar">@options</span>[<span class="ruby-value">:line_comments</span>] <span class="ruby-operator">||=</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:line_numbers</span>]
+150: 
+151:       <span class="ruby-comment cmt"># Backwards compatibility</span>
+152:       <span class="ruby-ivar">@options</span>[<span class="ruby-value">:property_syntax</span>] <span class="ruby-operator">||=</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:attribute_syntax</span>]
+153:       <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:property_syntax</span>]
+154:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:alternate</span>; <span class="ruby-ivar">@options</span>[<span class="ruby-value">:property_syntax</span>] = <span class="ruby-value">:new</span>
+155:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:normal</span>; <span class="ruby-ivar">@options</span>[<span class="ruby-value">:property_syntax</span>] = <span class="ruby-value">:old</span>
+156:       <span class="ruby-keyword kw">end</span>
+157:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="render-method" class="method-detail ">
+				<a name="method-i-render"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Render the template to <a href="CSS.html">CSS</a>.
+</p>
+<p>
+@return [String] The <a href="CSS.html">CSS</a> @raise [Sass::SyntaxError]
+if there&#8217;s an error in the document
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="render-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 163</span>
+163:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render</span>
+164:       <span class="ruby-identifier">to_tree</span>.<span class="ruby-identifier">render</span>
+165:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Engine.html#method-i-to_css">to_css</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="to-css-method" class="method-detail method-alias">
+				<a name="method-i-to_css"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_css</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Engine.html#method-i-render">render</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="to-tree-method" class="method-detail ">
+				<a name="method-i-to_tree"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_tree</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses the document into its parse tree.
+</p>
+<p>
+@return [Sass::Tree::Node] The root of the parse tree. @raise
+[Sass::SyntaxError] if there&#8217;s an error in the document
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-tree-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 173</span>
+173:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_tree</span>
+174:       <span class="ruby-identifier">root</span> = <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>.<span class="ruby-identifier">new</span>
+175:       <span class="ruby-identifier">append_children</span>(<span class="ruby-identifier">root</span>, <span class="ruby-identifier">tree</span>(<span class="ruby-identifier">tabulate</span>(<span class="ruby-ivar">@template</span>)).<span class="ruby-identifier">first</span>, <span class="ruby-keyword kw">true</span>)
+176:       <span class="ruby-identifier">root</span>.<span class="ruby-identifier">options</span> = <span class="ruby-ivar">@options</span>
+177:       <span class="ruby-identifier">root</span>
+178:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">SyntaxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>; <span class="ruby-identifier">e</span>.<span class="ruby-identifier">add_metadata</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:filename</span>], <span class="ruby-ivar">@line</span>)
+179:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="append-children-method" class="method-detail ">
+				<a name="method-i-append_children"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">append_children</span><span
+						class="method-args">(parent, children, root)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="append-children-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 289</span>
+289:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">append_children</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">children</span>, <span class="ruby-identifier">root</span>)
+290:       <span class="ruby-identifier">continued_rule</span> = <span class="ruby-keyword kw">nil</span>
+291:       <span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+292:         <span class="ruby-identifier">child</span> = <span class="ruby-identifier">build_tree</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+293: 
+294:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">continued?</span>
+295:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Rules can't end in commas.&quot;</span>, <span class="ruby-identifier">child</span>.<span class="ruby-identifier">line</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+296:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">continued_rule</span>
+297:             <span class="ruby-identifier">continued_rule</span>.<span class="ruby-identifier">add_rules</span> <span class="ruby-identifier">child</span>
+298:           <span class="ruby-keyword kw">else</span>
+299:             <span class="ruby-identifier">continued_rule</span> = <span class="ruby-identifier">child</span>
+300:           <span class="ruby-keyword kw">end</span>
+301:           <span class="ruby-keyword kw">next</span>
+302:         <span class="ruby-keyword kw">end</span>
+303: 
+304:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">continued_rule</span>
+305:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Rules can't end in commas.&quot;</span>, <span class="ruby-identifier">continued_rule</span>.<span class="ruby-identifier">line</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">child</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>)
+306:           <span class="ruby-identifier">continued_rule</span>.<span class="ruby-identifier">add_rules</span> <span class="ruby-identifier">child</span>
+307:           <span class="ruby-identifier">continued_rule</span>.<span class="ruby-identifier">children</span> = <span class="ruby-identifier">child</span>.<span class="ruby-identifier">children</span>
+308:           <span class="ruby-identifier">continued_rule</span>, <span class="ruby-identifier">child</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">continued_rule</span>
+309:         <span class="ruby-keyword kw">end</span>
+310: 
+311:         <span class="ruby-identifier">check_for_no_children</span>(<span class="ruby-identifier">child</span>)
+312:         <span class="ruby-identifier">validate_and_append_child</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">child</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+313:       <span class="ruby-keyword kw">end</span>
+314: 
+315:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Rules can't end in commas.&quot;</span>, <span class="ruby-identifier">continued_rule</span>.<span class="ruby-identifier">line</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">continued_rule</span>
+316: 
+317:       <span class="ruby-identifier">parent</span>
+318:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-tree-method" class="method-detail ">
+				<a name="method-i-build_tree"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_tree</span><span
+						class="method-args">(parent, line, root = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-tree-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 268</span>
+268:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_tree</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span> = <span class="ruby-keyword kw">false</span>)
+269:       <span class="ruby-ivar">@line</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">index</span>
+270:       <span class="ruby-identifier">node_or_nodes</span> = <span class="ruby-identifier">parse_line</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+271: 
+272:       <span class="ruby-constant">Array</span>(<span class="ruby-identifier">node_or_nodes</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">node</span><span class="ruby-operator">|</span>
+273:         <span class="ruby-comment cmt"># Node is a symbol if it's non-outputting, like a variable assignment</span>
+274:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>
+275: 
+276:         <span class="ruby-identifier">node</span>.<span class="ruby-identifier">line</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">index</span>
+277:         <span class="ruby-identifier">node</span>.<span class="ruby-identifier">filename</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">filename</span>
+278: 
+279:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">CommentNode</span>)
+280:           <span class="ruby-identifier">node</span>.<span class="ruby-identifier">lines</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>
+281:         <span class="ruby-keyword kw">else</span>
+282:           <span class="ruby-identifier">append_children</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>, <span class="ruby-keyword kw">false</span>)
+283:         <span class="ruby-keyword kw">end</span>
+284:       <span class="ruby-keyword kw">end</span>
+285: 
+286:       <span class="ruby-identifier">node_or_nodes</span>
+287:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="check-for-no-children-method" class="method-detail ">
+				<a name="method-i-check_for_no_children"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_for_no_children</span><span
+						class="method-args">(node)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="check-for-no-children-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 338</span>
+338:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_for_no_children</span>(<span class="ruby-identifier">node</span>)
+339:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+340:       <span class="ruby-identifier">warning</span> = (<span class="ruby-identifier">node</span>.<span class="ruby-identifier">rules</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">WARNING on line #{node.line}#{&quot; of #{node.filename}&quot; if node.filename}:Selector #{node.rules.first.inspect} doesn't have any properties and will not be rendered.</span> <span class="ruby-operator">:</span> <span class="ruby-value str">WARNING on line #{node.line}#{&quot; of #{node.filename}&quot; if node.filename}:Selector  #{node.rules.join(&quot;\n  &quot;)}doesn't have any properties and will not be rendered.</span>
+341: 
+342:       <span class="ruby-identifier">warn</span>(<span class="ruby-identifier">warning</span>.<span class="ruby-identifier">strip</span>)
+343:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-comment-method" class="method-detail ">
+				<a name="method-i-parse_comment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_comment</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-comment-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 415</span>
+415:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_comment</span>(<span class="ruby-identifier">line</span>)
+416:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">CSS_COMMENT_CHAR</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">line</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">SASS_COMMENT_CHAR</span>
+417:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">CommentNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">line</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">SASS_COMMENT_CHAR</span>)
+418:       <span class="ruby-keyword kw">else</span>
+419:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>)
+420:       <span class="ruby-keyword kw">end</span>
+421:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-directive-method" class="method-detail ">
+				<a name="method-i-parse_directive"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_directive</span><span
+						class="method-args">(parent, line, root)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-directive-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 423</span>
+423:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_directive</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+424:       <span class="ruby-identifier">directive</span>, <span class="ruby-identifier">whitespace</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/(\s+)/</span>, <span class="ruby-value">2</span>)
+425:       <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">directive</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">whitespace</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">whitespace</span>
+426: 
+427:       <span class="ruby-comment cmt"># If value begins with url( or &quot;,</span>
+428:       <span class="ruby-comment cmt"># it's a CSS @import rule and we don't want to touch it.</span>
+429:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">directive</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;import&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^(url\(|&quot;)/</span>
+430:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Illegal nesting: Nothing may be nested beneath import directives.&quot;</span>, <span class="ruby-ivar">@line</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+431:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/,\s*/</span>).<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">ImportNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">f</span>)}
+432:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">directive</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;for&quot;</span>
+433:         <span class="ruby-identifier">parse_for</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">value</span>)
+434:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">directive</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;else&quot;</span>
+435:         <span class="ruby-identifier">parse_else</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">value</span>)
+436:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">directive</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;while&quot;</span>
+437:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Invalid while directive '@while': expected expression.&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>
+438:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">WhileNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>))
+439:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">directive</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;if&quot;</span>
+440:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Invalid if directive '@if': expected expression.&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>
+441:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">IfNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>))
+442:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">directive</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;debug&quot;</span>
+443:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Invalid debug directive '@debug': expected expression.&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>
+444:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Illegal nesting: Nothing may be nested beneath debug directives.&quot;</span>, <span class="ruby-ivar">@line</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+445:         <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">value</span>).<span class="ruby-identifier">to_i</span>
+446:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">DebugNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">offset</span>))
+447:       <span class="ruby-keyword kw">else</span>
+448:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">DirectiveNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>)
+449:       <span class="ruby-keyword kw">end</span>
+450:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-else-method" class="method-detail ">
+				<a name="method-i-parse_else"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_else</span><span
+						class="method-args">(parent, line, text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-else-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 472</span>
+472:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_else</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">text</span>)
+473:       <span class="ruby-identifier">previous</span> = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">last</span>
+474:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;@else must come after @if.&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">previous</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">IfNode</span>)
+475: 
+476:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">text</span>
+477:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^if\s+(.+)/</span>
+478:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid else directive '@else #{text}': expected 'if &lt;expr&gt;'.&quot;</span>, <span class="ruby-ivar">@line</span>)
+479:         <span class="ruby-keyword kw">end</span>
+480:         <span class="ruby-identifier">expr</span> = <span class="ruby-identifier">parse_script</span>(<span class="ruby-node">$1</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-node">$1</span>))
+481:       <span class="ruby-keyword kw">end</span>
+482: 
+483:       <span class="ruby-identifier">node</span> = <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">IfNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">expr</span>)
+484:       <span class="ruby-identifier">append_children</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>, <span class="ruby-keyword kw">false</span>)
+485:       <span class="ruby-identifier">previous</span>.<span class="ruby-identifier">add_else</span> <span class="ruby-identifier">node</span>
+486:       <span class="ruby-keyword kw">nil</span>
+487:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-for-method" class="method-detail ">
+				<a name="method-i-parse_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_for</span><span
+						class="method-args">(line, root, text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 452</span>
+452:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_for</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>, <span class="ruby-identifier">text</span>)
+453:       <span class="ruby-identifier">var</span>, <span class="ruby-identifier">from_expr</span>, <span class="ruby-identifier">to_name</span>, <span class="ruby-identifier">to_expr</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^([^\s]+)\s+from\s+(.+)\s+(to|through)\s+(.+)$/</span>).<span class="ruby-identifier">first</span>
+454: 
+455:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">var</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-comment cmt"># scan failed, try to figure out why for error message</span>
+456:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^[^\s]+/</span>
+457:           <span class="ruby-identifier">expected</span> = <span class="ruby-value str">&quot;variable name&quot;</span>
+458:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^[^\s]+\s+from\s+.+/</span>
+459:           <span class="ruby-identifier">expected</span> = <span class="ruby-value str">&quot;'from &lt;expr&gt;'&quot;</span>
+460:         <span class="ruby-keyword kw">else</span>
+461:           <span class="ruby-identifier">expected</span> = <span class="ruby-value str">&quot;'to &lt;expr&gt;' or 'through &lt;expr&gt;'&quot;</span>
+462:         <span class="ruby-keyword kw">end</span>
+463:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid for directive '@for #{text}': expected #{expected}.&quot;</span>, <span class="ruby-ivar">@line</span>)
+464:       <span class="ruby-keyword kw">end</span>
+465:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid variable \&quot;#{var}\&quot;.&quot;</span>, <span class="ruby-ivar">@line</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">var</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">VALIDATE</span>
+466: 
+467:       <span class="ruby-identifier">parsed_from</span> = <span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">from_expr</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">from_expr</span>))
+468:       <span class="ruby-identifier">parsed_to</span> = <span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">to_expr</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">to_expr</span>))
+469:       <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">ForNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">var</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>], <span class="ruby-identifier">parsed_from</span>, <span class="ruby-identifier">parsed_to</span>, <span class="ruby-identifier">to_name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'to'</span>)
+470:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-line-method" class="method-detail ">
+				<a name="method-i-parse_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_line</span><span
+						class="method-args">(parent, line, root)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-line-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 354</span>
+354:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_line</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+355:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>[<span class="ruby-value">0</span>]
+356:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">PROPERTY_CHAR</span>
+357:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">PROPERTY_CHAR</span> <span class="ruby-operator">||</span>
+358:             (<span class="ruby-ivar">@options</span>[<span class="ruby-value">:property_syntax</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:new</span> <span class="ruby-operator">&amp;&amp;</span>
+359:              <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">PROPERTY_OLD</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-node">$3</span>.<span class="ruby-identifier">empty?</span>)
+360:           <span class="ruby-comment cmt"># Support CSS3-style pseudo-elements,</span>
+361:           <span class="ruby-comment cmt"># which begin with ::,</span>
+362:           <span class="ruby-comment cmt"># as well as pseudo-classes</span>
+363:           <span class="ruby-comment cmt"># if we're using the new property syntax</span>
+364:           <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>)
+365:         <span class="ruby-keyword kw">else</span>
+366:           <span class="ruby-identifier">parse_property</span>(<span class="ruby-identifier">line</span>, <span class="ruby-constant">PROPERTY_OLD</span>)
+367:         <span class="ruby-keyword kw">end</span>
+368:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">VARIABLE_CHAR</span>
+369:         <span class="ruby-identifier">parse_variable</span>(<span class="ruby-identifier">line</span>)
+370:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">COMMENT_CHAR</span>
+371:         <span class="ruby-identifier">parse_comment</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>)
+372:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">DIRECTIVE_CHAR</span>
+373:         <span class="ruby-identifier">parse_directive</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+374:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ESCAPE_CHAR</span>
+375:         <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>])
+376:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">MIXIN_DEFINITION_CHAR</span>
+377:         <span class="ruby-identifier">parse_mixin_definition</span>(<span class="ruby-identifier">line</span>)
+378:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">MIXIN_INCLUDE_CHAR</span>
+379:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value">\s\</span>
+380:           <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>)
+381:         <span class="ruby-keyword kw">else</span>
+382:           <span class="ruby-identifier">parse_mixin_include</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+383:         <span class="ruby-keyword kw">end</span>
+384:       <span class="ruby-keyword kw">else</span>
+385:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">PROPERTY_NEW_MATCHER</span>
+386:           <span class="ruby-identifier">parse_property</span>(<span class="ruby-identifier">line</span>, <span class="ruby-constant">PROPERTY_NEW</span>)
+387:         <span class="ruby-keyword kw">else</span>
+388:           <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">RuleNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>)
+389:         <span class="ruby-keyword kw">end</span>
+390:       <span class="ruby-keyword kw">end</span>
+391:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-mixin-definition-method" class="method-detail ">
+				<a name="method-i-parse_mixin_definition"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_mixin_definition</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-mixin-definition-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 489</span>
+489:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_mixin_definition</span>(<span class="ruby-identifier">line</span>)
+490:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">arg_string</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^=\s*([^(]+)(.*)$/</span>).<span class="ruby-identifier">first</span>
+491:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid mixin \&quot;#{line.text[1..-1]}\&quot;.&quot;</span>, <span class="ruby-ivar">@line</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span>
+492: 
+493:       <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">arg_string</span>.<span class="ruby-identifier">size</span>
+494:       <span class="ruby-identifier">args</span> = <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg_string</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-ivar">@line</span>, <span class="ruby-identifier">offset</span>).<span class="ruby-identifier">parse_mixin_definition_arglist</span>
+495:       <span class="ruby-identifier">default_arg_found</span> = <span class="ruby-keyword kw">false</span>
+496:       <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">MixinDefNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>)
+497:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-mixin-include-method" class="method-detail ">
+				<a name="method-i-parse_mixin_include"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_mixin_include</span><span
+						class="method-args">(line, root)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-mixin-include-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 499</span>
+499:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_mixin_include</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+500:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">arg_string</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^\+\s*([^(]+)(.*)$/</span>).<span class="ruby-identifier">first</span>
+501:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid mixin include \&quot;#{line.text}\&quot;.&quot;</span>, <span class="ruby-ivar">@line</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span>
+502: 
+503:       <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">arg_string</span>.<span class="ruby-identifier">size</span>
+504:       <span class="ruby-identifier">args</span> = <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg_string</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-ivar">@line</span>, <span class="ruby-identifier">offset</span>).<span class="ruby-identifier">parse_mixin_include_arglist</span>
+505:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Illegal nesting: Nothing may be nested beneath mixin directives.&quot;</span>, <span class="ruby-ivar">@line</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+506:       <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">MixinNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>)
+507:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-property-method" class="method-detail ">
+				<a name="method-i-parse_property"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_property</span><span
+						class="method-args">(line, property_regx)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-property-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 393</span>
+393:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_property</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">property_regx</span>)
+394:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">eq</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">property_regx</span>)[<span class="ruby-value">0</span>]
+395: 
+396:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+397:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid property: \&quot;#{line.text}\&quot;.&quot;</span>, <span class="ruby-ivar">@line</span>)
+398:       <span class="ruby-keyword kw">end</span>
+399:       <span class="ruby-identifier">expr</span> = <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">eq</span>.<span class="ruby-identifier">strip</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">SCRIPT_CHAR</span>)
+400:         <span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">value</span>))
+401:       <span class="ruby-keyword kw">else</span>
+402:         <span class="ruby-identifier">value</span>
+403:       <span class="ruby-keyword kw">end</span>
+404:       <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">PropNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">expr</span>, <span class="ruby-identifier">property_regx</span> <span class="ruby-operator">==</span> <span class="ruby-constant">PROPERTY_OLD</span> <span class="ruby-operator">?</span> <span class="ruby-value">:old</span> <span class="ruby-operator">:</span> <span class="ruby-value">:new</span>)
+405:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-script-method" class="method-detail ">
+				<a name="method-i-parse_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_script</span><span
+						class="method-args">(script, options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-script-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 509</span>
+509:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">script</span>, <span class="ruby-identifier">options</span> = {})
+510:       <span class="ruby-identifier">line</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:line</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@line</span>
+511:       <span class="ruby-identifier">offset</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:offset</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+512:       <span class="ruby-constant">Script</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">script</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:filename</span>])
+513:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-variable-method" class="method-detail ">
+				<a name="method-i-parse_variable"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_variable</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-variable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 407</span>
+407:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_variable</span>(<span class="ruby-identifier">line</span>)
+408:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">op</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">MATCH</span>)[<span class="ruby-value">0</span>]
+409:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Illegal nesting: Nothing may be nested beneath variable declarations.&quot;</span>, <span class="ruby-ivar">@line</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>
+410:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Invalid variable: \&quot;#{line.text}\&quot;.&quot;</span>, <span class="ruby-ivar">@line</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>
+411: 
+412:       <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">VariableNode</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">parse_script</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value">:offset</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">offset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">value</span>)), <span class="ruby-identifier">op</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'||='</span>)
+413:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tabulate-method" class="method-detail ">
+				<a name="method-i-tabulate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tabulate</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tabulate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 183</span>
+183:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tabulate</span>(<span class="ruby-identifier">string</span>)
+184:       <span class="ruby-identifier">tab_str</span> = <span class="ruby-keyword kw">nil</span>
+185:       <span class="ruby-identifier">comment_tab_str</span> = <span class="ruby-keyword kw">nil</span>
+186:       <span class="ruby-identifier">first</span> = <span class="ruby-keyword kw">true</span>
+187:       <span class="ruby-identifier">lines</span> = []
+188:       <span class="ruby-identifier">string</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\r|\n|\r\n|\r\n/</span>, <span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^.*?$/</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+189:         <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> (<span class="ruby-ivar">@options</span>[<span class="ruby-value">:line</span>] <span class="ruby-operator">||</span> <span class="ruby-value">1</span>)
+190:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">empty?</span>
+191:           <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">comment?</span>
+192:           <span class="ruby-keyword kw">next</span>
+193:         <span class="ruby-keyword kw">end</span>
+194: 
+195:         <span class="ruby-identifier">line_tab_str</span> = <span class="ruby-identifier">line</span>[<span class="ruby-regexp re">/^\s*/</span>]
+196:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line_tab_str</span>.<span class="ruby-identifier">empty?</span>
+197:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tab_str</span>.<span class="ruby-identifier">nil?</span>
+198:             <span class="ruby-identifier">comment_tab_str</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">line_tab_str</span>
+199:             <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">try_comment</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">comment_tab_str</span>, <span class="ruby-identifier">index</span>)
+200:             <span class="ruby-identifier">comment_tab_str</span> = <span class="ruby-keyword kw">nil</span>
+201:           <span class="ruby-keyword kw">end</span>
+202: 
+203:           <span class="ruby-identifier">tab_str</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">line_tab_str</span>
+204: 
+205:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Indenting at the beginning of the document is illegal.&quot;</span>, <span class="ruby-identifier">index</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">first</span>
+206:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tab_str</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">\s\</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">tab_str</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">\t\</span>)
+207:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Indentation can't use both tabs and spaces.&quot;</span>, <span class="ruby-identifier">index</span>)
+208:           <span class="ruby-keyword kw">end</span>
+209:         <span class="ruby-keyword kw">end</span>
+210:         <span class="ruby-identifier">first</span> <span class="ruby-operator">&amp;&amp;=</span> <span class="ruby-operator">!</span><span class="ruby-identifier">tab_str</span>.<span class="ruby-identifier">nil?</span>
+211:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tab_str</span>.<span class="ruby-identifier">nil?</span>
+212:           <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Line</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">index</span>, <span class="ruby-value">0</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:filename</span>], [])
+213:           <span class="ruby-keyword kw">next</span>
+214:         <span class="ruby-keyword kw">end</span>
+215: 
+216:         <span class="ruby-identifier">comment_tab_str</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">line_tab_str</span>
+217:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">try_comment</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span>, <span class="ruby-identifier">tab_str</span> * (<span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">tabs</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>), <span class="ruby-identifier">comment_tab_str</span>, <span class="ruby-identifier">index</span>)
+218:           <span class="ruby-keyword kw">next</span>
+219:         <span class="ruby-keyword kw">else</span>
+220:           <span class="ruby-identifier">comment_tab_str</span> = <span class="ruby-keyword kw">nil</span>
+221:         <span class="ruby-keyword kw">end</span>
+222: 
+223:         <span class="ruby-identifier">line_tabs</span> = <span class="ruby-identifier">line_tab_str</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">tab_str</span>).<span class="ruby-identifier">size</span>
+224:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">Inconsistent indentation: #{Haml::Shared.human_indentation line_tab_str, true} used for indentation,but the rest of the document was indented using #{Haml::Shared.human_indentation tab_str}.</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\n&quot;</span>, <span class="ruby-value str">' '</span>), <span class="ruby-identifier">index</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tab_str</span> * <span class="ruby-identifier">line_tabs</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">line_tab_str</span>
+225:         <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Line</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">line</span>.<span class="ruby-identifier">strip</span>, <span class="ruby-identifier">line_tabs</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">tab_str</span>.<span class="ruby-identifier">size</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:filename</span>], [])
+226:       <span class="ruby-keyword kw">end</span>
+227:       <span class="ruby-identifier">lines</span>
+228:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tree-method" class="method-detail ">
+				<a name="method-i-tree"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tree</span><span
+						class="method-args">(arr, i = 0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tree-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 248</span>
+248:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tree</span>(<span class="ruby-identifier">arr</span>, <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>)
+249:       <span class="ruby-keyword kw">return</span> [], <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arr</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">nil?</span>
+250: 
+251:       <span class="ruby-identifier">base</span> = <span class="ruby-identifier">arr</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">tabs</span>
+252:       <span class="ruby-identifier">nodes</span> = []
+253:       <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">line</span> = <span class="ruby-identifier">arr</span>[<span class="ruby-identifier">i</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">tabs</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">base</span>
+254:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">tabs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">base</span>
+255:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">tabs</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">base</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+256:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;The line was indented #{line.tabs - base} levels deeper than the previous line.&quot;</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">index</span>)
+257:           <span class="ruby-keyword kw">end</span>
+258: 
+259:           <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">children</span>, <span class="ruby-identifier">i</span> = <span class="ruby-identifier">tree</span>(<span class="ruby-identifier">arr</span>, <span class="ruby-identifier">i</span>)
+260:         <span class="ruby-keyword kw">else</span>
+261:           <span class="ruby-identifier">nodes</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+262:           <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+263:         <span class="ruby-keyword kw">end</span>
+264:       <span class="ruby-keyword kw">end</span>
+265:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">nodes</span>, <span class="ruby-identifier">i</span>
+266:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="try-comment-method" class="method-detail ">
+				<a name="method-i-try_comment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_comment</span><span
+						class="method-args">(line, last, tab_str, comment_tab_str, index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="try-comment-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 233</span>
+233:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_comment</span>(<span class="ruby-identifier">line</span>, <span class="ruby-identifier">last</span>, <span class="ruby-identifier">tab_str</span>, <span class="ruby-identifier">comment_tab_str</span>, <span class="ruby-identifier">index</span>)
+234:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">last</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">last</span>.<span class="ruby-identifier">comment?</span>
+235:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^#{tab_str}/</span>
+236:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^(?:#{comment_tab_str})(.*)$/</span>
+237:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">Inconsistent indentation:previous line was indented by #{Haml::Shared.human_indentation comment_tab_str},but this line was indented by #{Haml::Shared.human_indentation line[/^\s*/]}.</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\n&quot;</span>, <span class="ruby-value str">&quot; &quot;</span>), <span class="ruby-identifier">index</span>)
+238:       <span class="ruby-keyword kw">end</span>
+239: 
+240:       <span class="ruby-identifier">last</span>.<span class="ruby-identifier">text</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">$1</span>
+241:       <span class="ruby-keyword kw">true</span>
+242:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="validate-and-append-child-method" class="method-detail ">
+				<a name="method-i-validate_and_append_child"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">validate_and_append_child</span><span
+						class="method-args">(parent, child, line, root)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="validate-and-append-child-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/engine.rb, line 320</span>
+320:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">validate_and_append_child</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">child</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)
+321:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">root</span>
+322:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">child</span>
+323:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">MixinDefNode</span>
+324:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Mixins may only be defined at the root of a document.&quot;</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">index</span>)
+325:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">ImportNode</span>
+326:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Import directives may only be used at the root of a document.&quot;</span>, <span class="ruby-identifier">line</span>.<span class="ruby-identifier">index</span>)
+327:         <span class="ruby-keyword kw">end</span>
+328:       <span class="ruby-keyword kw">end</span>
+329: 
+330:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">child</span>
+331:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span>
+332:         <span class="ruby-identifier">child</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">validate_and_append_child</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">c</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">root</span>)}
+333:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>
+334:         <span class="ruby-identifier">parent</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">child</span>
+335:       <span class="ruby-keyword kw">end</span>
+336:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

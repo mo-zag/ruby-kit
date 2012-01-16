@@ -1,0 +1,1383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Compass::SassExtensions::Functions::GradientSupport::Functions</title>
+
+	<link rel="stylesheet" href="../../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../../index.html">Home</a>
+          <a href="../../../../index.html#classes">Classes</a>
+          <a href="../../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../../lib/compass/sass_extensions/functions/gradient_support_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/compass/sass_extensions/functions/gradient_support.rb">lib/compass/sass_extensions/functions/gradient_support.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-_center_position">#_center_position</a></li>
+					
+					<li><a href="#method-i-color_stop%3F">#color_stop?</a></li>
+					
+					<li><a href="#method-i-color_stops">#color_stops</a></li>
+					
+					<li><a href="#method-i-color_stops_in_percentages">#color_stops_in_percentages</a></li>
+					
+					<li><a href="#method-i-color_stops_svg">#color_stops_svg</a></li>
+					
+					<li><a href="#method-i-grad_color_stops">#grad_color_stops</a></li>
+					
+					<li><a href="#method-i-grad_end_position">#grad_end_position</a></li>
+					
+					<li><a href="#method-i-grad_point">#grad_point</a></li>
+					
+					<li><a href="#method-i-grad_position">#grad_position</a></li>
+					
+					<li><a href="#method-i-linear_end_position">#linear_end_position</a></li>
+					
+					<li><a href="#method-i-linear_gradient">#linear_gradient</a></li>
+					
+					<li><a href="#method-i-linear_svg">#linear_svg</a></li>
+					
+					<li><a href="#method-i-linear_svg_gradient">#linear_svg_gradient</a></li>
+					
+					<li><a href="#method-i-list_of_color_stops%3F">#list_of_color_stops?</a></li>
+					
+					<li><a href="#method-i-normalize_stops">#normalize_stops</a></li>
+					
+					<li><a href="#method-i-parse_color_stop">#parse_color_stop</a></li>
+					
+					<li><a href="#method-i-radial_gradient">#radial_gradient</a></li>
+					
+					<li><a href="#method-i-radial_svg">#radial_svg</a></li>
+					
+					<li><a href="#method-i-radial_svg_gradient">#radial_svg_gradient</a></li>
+					
+					<li><a href="#method-i-svg">#svg</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../../Compass.html">Compass</a></li>
+				
+					<li><a href="../../../../Compass/Actions.html">Compass::Actions</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration.html">Compass::AppIntegration</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/Helpers.html">Compass::AppIntegration::Helpers</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/Rails.html">Compass::AppIntegration::Rails</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/Rails/ConfigurationDefaults.html">Compass::AppIntegration::Rails::ConfigurationDefaults</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/Rails/Installer.html">Compass::AppIntegration::Rails::Installer</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/StandAlone.html">Compass::AppIntegration::StandAlone</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/StandAlone/ConfigurationDefaults.html">Compass::AppIntegration::StandAlone::ConfigurationDefaults</a></li>
+				
+					<li><a href="../../../../Compass/AppIntegration/StandAlone/Installer.html">Compass::AppIntegration::StandAlone::Installer</a></li>
+				
+					<li><a href="../../../../Compass/BrowserSupport.html">Compass::BrowserSupport</a></li>
+				
+					<li><a href="../../../../Compass/Commands.html">Compass::Commands</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Base.html">Compass::Commands::Base</a></li>
+				
+					<li><a href="../../../../Compass/Commands/CleanProject.html">Compass::Commands::CleanProject</a></li>
+				
+					<li><a href="../../../../Compass/Commands/CleanProjectOptionsParser.html">Compass::Commands::CleanProjectOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/CompileProjectOptionsParser.html">Compass::Commands::CompileProjectOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ConfigurationOptionsParser.html">Compass::Commands::ConfigurationOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/CreateProject.html">Compass::Commands::CreateProject</a></li>
+				
+					<li><a href="../../../../Compass/Commands/CreateProjectOptionsParser.html">Compass::Commands::CreateProjectOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Default.html">Compass::Commands::Default</a></li>
+				
+					<li><a href="../../../../Compass/Commands/DefaultOptionsParser.html">Compass::Commands::DefaultOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ExtensionOptionsParser.html">Compass::Commands::ExtensionOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/GenerateGridBackground.html">Compass::Commands::GenerateGridBackground</a></li>
+				
+					<li><a href="../../../../Compass/Commands/GridBackgroundOptionsParser.html">Compass::Commands::GridBackgroundOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Help.html">Compass::Commands::Help</a></li>
+				
+					<li><a href="../../../../Compass/Commands/HelpOptionsParser.html">Compass::Commands::HelpOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Imports.html">Compass::Commands::Imports</a></li>
+				
+					<li><a href="../../../../Compass/Commands/InstallerCommand.html">Compass::Commands::InstallerCommand</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Interactive.html">Compass::Commands::Interactive</a></li>
+				
+					<li><a href="../../../../Compass/Commands/InteractiveOptionsParser.html">Compass::Commands::InteractiveOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ListFrameworks.html">Compass::Commands::ListFrameworks</a></li>
+				
+					<li><a href="../../../../Compass/Commands/MemoryDebugger.html">Compass::Commands::MemoryDebugger</a></li>
+				
+					<li><a href="../../../../Compass/Commands/PrintVersion.html">Compass::Commands::PrintVersion</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ProjectBase.html">Compass::Commands::ProjectBase</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ProjectStats.html">Compass::Commands::ProjectStats</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Registry.html">Compass::Commands::Registry</a></li>
+				
+					<li><a href="../../../../Compass/Commands/Sprite.html">Compass::Commands::Sprite</a></li>
+				
+					<li><a href="../../../../Compass/Commands/SpriteOptionsParser.html">Compass::Commands::SpriteOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/StampPattern.html">Compass::Commands::StampPattern</a></li>
+				
+					<li><a href="../../../../Compass/Commands/StampPatternOptionsParser.html">Compass::Commands::StampPatternOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/StatsOptionsParser.html">Compass::Commands::StatsOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/UnpackExtension.html">Compass::Commands::UnpackExtension</a></li>
+				
+					<li><a href="../../../../Compass/Commands/UpdateProject.html">Compass::Commands::UpdateProject</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ValidateProject.html">Compass::Commands::ValidateProject</a></li>
+				
+					<li><a href="../../../../Compass/Commands/ValidationOptionsParser.html">Compass::Commands::ValidationOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/VersionOptionsParser.html">Compass::Commands::VersionOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/WatchProject.html">Compass::Commands::WatchProject</a></li>
+				
+					<li><a href="../../../../Compass/Commands/WatchProjectOptionsParser.html">Compass::Commands::WatchProjectOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Commands/WriteConfiguration.html">Compass::Commands::WriteConfiguration</a></li>
+				
+					<li><a href="../../../../Compass/Compiler.html">Compass::Compiler</a></li>
+				
+					<li><a href="../../../../Compass/Configuration.html">Compass::Configuration</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Adapters.html">Compass::Configuration::Adapters</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Comments.html">Compass::Configuration::Comments</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Data.html">Compass::Configuration::Data</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Defaults.html">Compass::Configuration::Defaults</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/FileData.html">Compass::Configuration::FileData</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Helpers.html">Compass::Configuration::Helpers</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Inheritance.html">Compass::Configuration::Inheritance</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Inheritance/ClassMethods.html">Compass::Configuration::Inheritance::ClassMethods</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Inheritance/InstanceMethods.html">Compass::Configuration::Inheritance::InstanceMethods</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Paths.html">Compass::Configuration::Paths</a></li>
+				
+					<li><a href="../../../../Compass/Configuration/Serialization.html">Compass::Configuration::Serialization</a></li>
+				
+					<li><a href="../../../../Compass/Error.html">Compass::Error</a></li>
+				
+					<li><a href="../../../../Compass/Exec.html">Compass::Exec</a></li>
+				
+					<li><a href="../../../../Compass/Exec/CommandOptionParser.html">Compass::Exec::CommandOptionParser</a></li>
+				
+					<li><a href="../../../../Compass/Exec/GlobalOptionsParser.html">Compass::Exec::GlobalOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Exec/Helpers.html">Compass::Exec::Helpers</a></li>
+				
+					<li><a href="../../../../Compass/Exec/ProjectOptionsParser.html">Compass::Exec::ProjectOptionsParser</a></li>
+				
+					<li><a href="../../../../Compass/Exec/SubCommandUI.html">Compass::Exec::SubCommandUI</a></li>
+				
+					<li><a href="../../../../Compass/Exec/SwitchUI.html">Compass::Exec::SwitchUI</a></li>
+				
+					<li><a href="../../../../Compass/FilesystemConflict.html">Compass::FilesystemConflict</a></li>
+				
+					<li><a href="../../../../Compass/Frameworks.html">Compass::Frameworks</a></li>
+				
+					<li><a href="../../../../Compass/Frameworks/Framework.html">Compass::Frameworks::Framework</a></li>
+				
+					<li><a href="../../../../Compass/Installers.html">Compass::Installers</a></li>
+				
+					<li><a href="../../../../Compass/Installers/BareInstaller.html">Compass::Installers::BareInstaller</a></li>
+				
+					<li><a href="../../../../Compass/Installers/Base.html">Compass::Installers::Base</a></li>
+				
+					<li><a href="../../../../Compass/Installers/Manifest.html">Compass::Installers::Manifest</a></li>
+				
+					<li><a href="../../../../Compass/Installers/Manifest/Entry.html">Compass::Installers::Manifest::Entry</a></li>
+				
+					<li><a href="../../../../Compass/Installers/ManifestInstaller.html">Compass::Installers::ManifestInstaller</a></li>
+				
+					<li><a href="../../../../Compass/Installers/TemplateContext.html">Compass::Installers::TemplateContext</a></li>
+				
+					<li><a href="../../../../Compass/Logger.html">Compass::Logger</a></li>
+				
+					<li><a href="../../../../Compass/MissingDependency.html">Compass::MissingDependency</a></li>
+				
+					<li><a href="../../../../Compass/NullLogger.html">Compass::NullLogger</a></li>
+				
+					<li><a href="../../../../Compass/PNG.html">Compass::PNG</a></li>
+				
+					<li><a href="../../../../Compass/Railtie.html">Compass::Railtie</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions.html">Compass::SassExtensions</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions.html">Compass::SassExtensions::Functions</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Colors.html">Compass::SassExtensions::Functions::Colors</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Constants.html">Compass::SassExtensions::Functions::Constants</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/CrossBrowserSupport.html">Compass::SassExtensions::Functions::CrossBrowserSupport</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/CrossBrowserSupport/CSS2FallbackValue.html">Compass::SassExtensions::Functions::CrossBrowserSupport::CSS2FallbackValue</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Display.html">Compass::SassExtensions::Functions::Display</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Enumerate.html">Compass::SassExtensions::Functions::Enumerate</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/FontFiles.html">Compass::SassExtensions::Functions::FontFiles</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport.html">Compass::SassExtensions::Functions::GradientSupport</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/Assertions.html">Compass::SassExtensions::Functions::GradientSupport::Assertions</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/ColorStop.html">Compass::SassExtensions::Functions::GradientSupport::ColorStop</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/Functions.html">Compass::SassExtensions::Functions::GradientSupport::Functions</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/Gradient.html">Compass::SassExtensions::Functions::GradientSupport::Gradient</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/Gradient/ClassMethods.html">Compass::SassExtensions::Functions::GradientSupport::Gradient::ClassMethods</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/LinearGradient.html">Compass::SassExtensions::Functions::GradientSupport::LinearGradient</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/GradientSupport/RadialGradient.html">Compass::SassExtensions::Functions::GradientSupport::RadialGradient</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/ImageSize.html">Compass::SassExtensions::Functions::ImageSize</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/ImageSize/ImageProperties.html">Compass::SassExtensions::Functions::ImageSize::ImageProperties</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/ImageSize/JPEG.html">Compass::SassExtensions::Functions::ImageSize::JPEG</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/InlineImage.html">Compass::SassExtensions::Functions::InlineImage</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Lists.html">Compass::SassExtensions::Functions::Lists</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Selectors.html">Compass::SassExtensions::Functions::Selectors</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Sprites.html">Compass::SassExtensions::Functions::Sprites</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Sprites/VariableReader.html">Compass::SassExtensions::Functions::Sprites::VariableReader</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Trig.html">Compass::SassExtensions::Functions::Trig</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Functions/Urls.html">Compass::SassExtensions::Functions::Urls</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites.html">Compass::SassExtensions::Sprites</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites/ChunkyPngEngine.html">Compass::SassExtensions::Sprites::ChunkyPngEngine</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites/Engine.html">Compass::SassExtensions::Sprites::Engine</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites/Image.html">Compass::SassExtensions::Sprites::Image</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites/ImageMethods.html">Compass::SassExtensions::Sprites::ImageMethods</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites/SpriteMap.html">Compass::SassExtensions::Sprites::SpriteMap</a></li>
+				
+					<li><a href="../../../../Compass/SassExtensions/Sprites/SpriteMethods.html">Compass::SassExtensions::Sprites::SpriteMethods</a></li>
+				
+					<li><a href="../../../../Compass/SpriteImporter.html">Compass::SpriteImporter</a></li>
+				
+					<li><a href="../../../../Compass/Stats.html">Compass::Stats</a></li>
+				
+					<li><a href="../../../../Compass/Stats/CssFile.html">Compass::Stats::CssFile</a></li>
+				
+					<li><a href="../../../../Compass/Stats/SassFile.html">Compass::Stats::SassFile</a></li>
+				
+					<li><a href="../../../../Compass/Stats/StatsVisitor.html">Compass::Stats::StatsVisitor</a></li>
+				
+					<li><a href="../../../../Compass/TestCase.html">Compass::TestCase</a></li>
+				
+					<li><a href="../../../../Compass/Util.html">Compass::Util</a></li>
+				
+					<li><a href="../../../../Compass/Version.html">Compass::Version</a></li>
+				
+					<li><a href="../../../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../../../Sass/Script/CrossBrowserFunctionCall.html">Sass::Script::CrossBrowserFunctionCall</a></li>
+				
+					<li><a href="../../../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../../../Sass/Script/HasSimpleCrossBrowserFunctionSupport.html">Sass::Script::HasSimpleCrossBrowserFunctionSupport</a></li>
+				
+					<li><a href="../../../../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../../../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../../../Rails.html">Rails</a></li>
+				
+					<li><a href="../../../../Rails/Railtie.html">Rails::Railtie</a></li>
+				
+					<li><a href="../../../../Rails/Railtie/Configuration.html">Rails::Railtie::Configuration</a></li>
+				
+					<li><a href="../../../../GridBuilder.html">GridBuilder</a></li>
+				
+					<li><a href="../../../../Object.html">Object</a></li>
+				
+					<li><a href="../../../../QuickCache.html">QuickCache</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Compass::SassExtensions::Functions::GradientSupport::Functions</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="color-stops-method" class="method-detail ">
+				<a name="method-i-color_stops"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">color_stops</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="color-stops-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 228</span>
+228:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">color_stops</span>(*<span class="ruby-identifier">args</span>)
+229:       <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">arg</span><span class="ruby-operator">|</span>
+230:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">arg</span>
+231:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ColorStop</span>
+232:           <span class="ruby-identifier">arg</span>
+233:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>
+234:           <span class="ruby-constant">ColorStop</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg</span>)
+235:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>
+236:           <span class="ruby-constant">ColorStop</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">value</span>)
+237:         <span class="ruby-keyword kw">else</span>
+238:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>, <span class="ruby-node">&quot;Not a valid color stop: #{arg.class.name}: #{arg}&quot;</span>
+239:         <span class="ruby-keyword kw">end</span>
+240:       <span class="ruby-keyword kw">end</span>, <span class="ruby-value">:comma</span>)
+241:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="color-stops-in-percentages-method" class="method-detail ">
+				<a name="method-i-color_stops_in_percentages"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">color_stops_in_percentages</span><span
+						class="method-args">(color_list)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="color-stops-in-percentages-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 296</span>
+296:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">color_stops_in_percentages</span>(<span class="ruby-identifier">color_list</span>)
+297:       <span class="ruby-identifier">assert_type</span> <span class="ruby-identifier">color_list</span>, <span class="ruby-value">:List</span>
+298:       <span class="ruby-identifier">color_list</span> = <span class="ruby-identifier">normalize_stops</span>(<span class="ruby-identifier">color_list</span>)
+299:       <span class="ruby-identifier">max</span> = <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>
+300:       <span class="ruby-identifier">last_value</span> = <span class="ruby-keyword kw">nil</span>
+301:       <span class="ruby-identifier">color_stops</span> = <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pos</span><span class="ruby-operator">|</span>
+302:         <span class="ruby-comment cmt"># have to convert absolute units to percentages for use in color stop functions.</span>
+303:         <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span>
+304:         <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">div</span>(<span class="ruby-identifier">max</span>).<span class="ruby-identifier">times</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>,[<span class="ruby-value str">&quot;%&quot;</span>])) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">max</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">max</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">!=</span> [<span class="ruby-value str">&quot;%&quot;</span>]
+305:         <span class="ruby-comment cmt"># Make sure the color stops are specified in the right order.</span>
+306:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">last_value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">last_value</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">denominator_units</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">last_value</span>.<span class="ruby-identifier">denominator_units</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">value</span> * <span class="ruby-value">1000</span>).<span class="ruby-identifier">round</span> <span class="ruby-operator">&lt;</span> (<span class="ruby-identifier">last_value</span>.<span class="ruby-identifier">value</span> * <span class="ruby-value">1000</span>).<span class="ruby-identifier">round</span>
+307:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Color stops must be specified in increasing order. #{stop.value} came after #{last_value.value}.&quot;</span>)
+308:         <span class="ruby-keyword kw">end</span>
+309:         <span class="ruby-identifier">last_value</span> = <span class="ruby-identifier">stop</span>
+310:         [<span class="ruby-identifier">stop</span>, <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">color</span>]
+311:       <span class="ruby-keyword kw">end</span>
+312:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grad-color-stops-method" class="method-detail ">
+				<a name="method-i-grad_color_stops"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grad_color_stops</span><span
+						class="method-args">(color_list)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns color-stop() calls for use in webkit.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grad-color-stops-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 289</span>
+289:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grad_color_stops</span>(<span class="ruby-identifier">color_list</span>)
+290:       <span class="ruby-identifier">stops</span> = <span class="ruby-identifier">color_stops_in_percentages</span>(<span class="ruby-identifier">color_list</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stop</span>, <span class="ruby-identifier">color</span><span class="ruby-operator">|</span>
+291:         <span class="ruby-node">&quot;color-stop(#{stop.inspect}, #{color.inspect})&quot;</span>
+292:       <span class="ruby-keyword kw">end</span>
+293:       <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">stops</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;, &quot;</span>))
+294:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grad-end-position-method" class="method-detail ">
+				<a name="method-i-grad_end_position"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grad_end_position</span><span
+						class="method-args">(color_list, radial = Sass::Script::Bool.new(false))</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns the end position of the gradient from the color stop
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grad-end-position-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 334</span>
+334:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grad_end_position</span>(<span class="ruby-identifier">color_list</span>, <span class="ruby-identifier">radial</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Bool</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">false</span>))
+335:       <span class="ruby-identifier">assert_type</span> <span class="ruby-identifier">color_list</span>, <span class="ruby-value">:List</span>
+336:       <span class="ruby-identifier">default</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>)
+337:       <span class="ruby-identifier">grad_position</span>(<span class="ruby-identifier">color_list</span>, <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span>), <span class="ruby-identifier">default</span>, <span class="ruby-identifier">radial</span>)
+338:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grad-point-method" class="method-detail ">
+				<a name="method-i-grad_point"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grad_point</span><span
+						class="method-args">(position)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+given a position list, return a corresponding position in percents
+otherwise, returns the original argument
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grad-point-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 191</span>
+191:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grad_point</span>(<span class="ruby-identifier">position</span>)
+192:       <span class="ruby-identifier">original_value</span> = <span class="ruby-identifier">position</span>
+193:       <span class="ruby-identifier">position</span> = <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">position</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>)
+194:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>.<span class="ruby-identifier">new</span>([<span class="ruby-identifier">position</span>], <span class="ruby-value">:space</span>)
+195:       <span class="ruby-keyword kw">else</span>
+196:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">dup</span>, <span class="ruby-identifier">position</span>.<span class="ruby-identifier">separator</span>)
+197:       <span class="ruby-keyword kw">end</span>
+198:       <span class="ruby-comment cmt"># Handle unknown arguments by passing them along untouched.</span>
+199:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">all?</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">is_position</span>(<span class="ruby-identifier">p</span>).<span class="ruby-identifier">to_bool</span> }
+200:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">original_value</span>
+201:       <span class="ruby-keyword kw">end</span>
+202:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/top|bottom/</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/left|right/</span>)
+203:         <span class="ruby-comment cmt"># browsers are pretty forgiving of reversed positions so we are too.</span>
+204:         <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">reverse!</span>
+205:       <span class="ruby-keyword kw">end</span>
+206:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+207:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/top|bottom/</span>
+208:           <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">unshift</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;center&quot;</span>)
+209:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/left|right/</span>
+210:           <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">push</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;center&quot;</span>)
+211:         <span class="ruby-keyword kw">end</span>
+212:       <span class="ruby-keyword kw">end</span>
+213:       <span class="ruby-identifier">position</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span>
+214:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">value</span>
+215:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/top|left/</span>
+216:           <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, [<span class="ruby-value str">&quot;%&quot;</span>])
+217:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/bottom|right/</span>
+218:           <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>, [<span class="ruby-value str">&quot;%&quot;</span>])
+219:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/center/</span>
+220:           <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">50</span>, [<span class="ruby-value str">&quot;%&quot;</span>])
+221:         <span class="ruby-keyword kw">else</span>
+222:           <span class="ruby-identifier">p</span>
+223:         <span class="ruby-keyword kw">end</span>
+224:       <span class="ruby-keyword kw">end</span>
+225:       <span class="ruby-identifier">position</span>
+226:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grad-position-method" class="method-detail ">
+				<a name="method-i-grad_position"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grad_position</span><span
+						class="method-args">(color_list, index, default, radial = Sass::Script::Bool.new(false))</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="grad-position-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 340</span>
+340:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grad_position</span>(<span class="ruby-identifier">color_list</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">default</span>, <span class="ruby-identifier">radial</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Bool</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">false</span>))
+341:       <span class="ruby-identifier">assert_type</span> <span class="ruby-identifier">color_list</span>, <span class="ruby-value">:List</span>
+342:       <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>[<span class="ruby-identifier">index</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">stop</span>
+343:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stop</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">radial</span>.<span class="ruby-identifier">to_bool</span>
+344:         <span class="ruby-identifier">orig_stop</span> = <span class="ruby-identifier">stop</span>
+345:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">unitless?</span>
+346:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">1</span>
+347:             <span class="ruby-comment cmt"># A unitless number is assumed to be a percentage when it's between 0 and 1</span>
+348:             <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">times</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>, [<span class="ruby-value str">&quot;%&quot;</span>]))
+349:           <span class="ruby-keyword kw">else</span>
+350:             <span class="ruby-comment cmt"># Otherwise, a unitless number is assumed to be in pixels</span>
+351:             <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">times</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, [<span class="ruby-value str">&quot;px&quot;</span>]))
+352:           <span class="ruby-keyword kw">end</span>
+353:         <span class="ruby-keyword kw">end</span>
+354:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">==</span> [<span class="ruby-value str">&quot;%&quot;</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">==</span> [<span class="ruby-value str">&quot;px&quot;</span>]
+355:           <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">times</span>(<span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>).<span class="ruby-identifier">div</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>, [<span class="ruby-value str">&quot;%&quot;</span>]))
+356:         <span class="ruby-keyword kw">end</span>
+357:         <span class="ruby-constant">Compass</span><span class="ruby-operator">::</span><span class="ruby-constant">Logger</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">record</span>(<span class="ruby-value">:warning</span>, <span class="ruby-node">&quot;Webkit only supports pixels for the start and end stops for radial gradients. Got: #{orig_stop}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">!=</span> [<span class="ruby-value str">&quot;px&quot;</span>]
+358:         <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">div</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span>, <span class="ruby-identifier">stop</span>.<span class="ruby-identifier">denominator_units</span>))
+359:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">stop</span>
+360:         <span class="ruby-identifier">stop</span>
+361:       <span class="ruby-keyword kw">else</span>
+362:         <span class="ruby-identifier">default</span>
+363:       <span class="ruby-keyword kw">end</span>
+364:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="linear-end-position-method" class="method-detail ">
+				<a name="method-i-linear_end_position"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">linear_end_position</span><span
+						class="method-args">(position_or_angle, color_list)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+only used for webkit
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="linear-end-position-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 315</span>
+315:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">linear_end_position</span>(<span class="ruby-identifier">position_or_angle</span>, <span class="ruby-identifier">color_list</span>)
+316:       <span class="ruby-identifier">start_point</span> = <span class="ruby-identifier">grad_point</span>(<span class="ruby-identifier">position_or_angle</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;top&quot;</span>))
+317:       <span class="ruby-identifier">end_point</span> = <span class="ruby-identifier">grad_point</span>(<span class="ruby-identifier">opposite_position</span>(<span class="ruby-identifier">position_or_angle</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;top&quot;</span>)))
+318:       <span class="ruby-identifier">end_target</span> = <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>
+319: 
+320:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">numerator_units</span> <span class="ruby-operator">==</span> [<span class="ruby-value str">&quot;px&quot;</span>]
+321:         <span class="ruby-identifier">new_end</span> = <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">value</span>
+322:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">start_point</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">end_point</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">start_point</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+323:           <span class="ruby-comment cmt"># this means top-to-bottom</span>
+324:           <span class="ruby-identifier">end_point</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">1</span>] = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">end_target</span>.<span class="ruby-identifier">value</span>)
+325:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">start_point</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">end_point</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">start_point</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+326:           <span class="ruby-comment cmt"># this implies left-to-right</span>
+327:           <span class="ruby-identifier">end_point</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">0</span>] = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">end_target</span>.<span class="ruby-identifier">value</span>)
+328:         <span class="ruby-keyword kw">end</span>
+329:       <span class="ruby-keyword kw">end</span>
+330:       <span class="ruby-identifier">end_point</span>
+331:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="linear-gradient-method" class="method-detail ">
+				<a name="method-i-linear_gradient"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">linear_gradient</span><span
+						class="method-args">(position_or_angle, *color_stops)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="linear-gradient-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 271</span>
+271:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">linear_gradient</span>(<span class="ruby-identifier">position_or_angle</span>, *<span class="ruby-identifier">color_stops</span>)
+272:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_stop?</span>(<span class="ruby-identifier">position_or_angle</span>)
+273:         <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">position_or_angle</span>)
+274:         <span class="ruby-identifier">position_or_angle</span> = <span class="ruby-keyword kw">nil</span>
+275:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">list_of_color_stops?</span>(<span class="ruby-identifier">position_or_angle</span>)
+276:         <span class="ruby-identifier">color_stops</span> = <span class="ruby-identifier">position_or_angle</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">color_stops</span>
+277:         <span class="ruby-identifier">position_or_angle</span> = <span class="ruby-keyword kw">nil</span>
+278:       <span class="ruby-keyword kw">end</span>
+279:       <span class="ruby-identifier">position_or_angle</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">position_or_angle</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">position_or_angle</span>.<span class="ruby-identifier">to_bool</span>
+280: 
+281:       <span class="ruby-comment cmt"># Support legacy use of the color-stops() function</span>
+282:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">stops</span> = <span class="ruby-identifier">list_of_color_stops?</span>(<span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">first</span>))
+283:         <span class="ruby-identifier">color_stops</span> = <span class="ruby-identifier">stops</span>
+284:       <span class="ruby-keyword kw">end</span>
+285:       <span class="ruby-constant">LinearGradient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">position_or_angle</span>, <span class="ruby-identifier">send</span>(<span class="ruby-value">:color_stops</span>, *<span class="ruby-identifier">color_stops</span>))
+286:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="linear-svg-gradient-method" class="method-detail ">
+				<a name="method-i-linear_svg_gradient"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">linear_svg_gradient</span><span
+						class="method-args">(color_stops, start)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="linear-svg-gradient-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 366</span>
+366:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">linear_svg_gradient</span>(<span class="ruby-identifier">color_stops</span>, <span class="ruby-identifier">start</span>)
+367:       <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span> = *<span class="ruby-identifier">grad_point</span>(<span class="ruby-identifier">start</span>).<span class="ruby-identifier">value</span>
+368:       <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span> = *<span class="ruby-identifier">grad_point</span>(<span class="ruby-identifier">opposite_position</span>(<span class="ruby-identifier">start</span>)).<span class="ruby-identifier">value</span>
+369:       <span class="ruby-identifier">stops</span> = <span class="ruby-identifier">color_stops_in_percentages</span>(<span class="ruby-identifier">color_stops</span>)
+370: 
+371:       <span class="ruby-identifier">svg</span> = <span class="ruby-identifier">linear_svg</span>(<span class="ruby-identifier">stops</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+372:       <span class="ruby-identifier">inline_image_string</span>(<span class="ruby-identifier">svg</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>, <span class="ruby-value str">' '</span>), <span class="ruby-value str">'image/svg+xml'</span>)
+373:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="radial-gradient-method" class="method-detail ">
+				<a name="method-i-radial_gradient"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">radial_gradient</span><span
+						class="method-args">(position_or_angle, shape_and_size, *color_stops)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="radial-gradient-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 243</span>
+243:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">radial_gradient</span>(<span class="ruby-identifier">position_or_angle</span>, <span class="ruby-identifier">shape_and_size</span>, *<span class="ruby-identifier">color_stops</span>)
+244:       <span class="ruby-comment cmt"># Have to deal with variable length/meaning arguments.</span>
+245:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_stop?</span>(<span class="ruby-identifier">shape_and_size</span>)
+246:         <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">shape_and_size</span>)
+247:         <span class="ruby-identifier">shape_and_size</span> = <span class="ruby-keyword kw">nil</span>
+248:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">list_of_color_stops?</span>(<span class="ruby-identifier">shape_and_size</span>)
+249:         <span class="ruby-comment cmt"># Support legacy use of the color-stops() function</span>
+250:         <span class="ruby-identifier">color_stops</span> = <span class="ruby-identifier">shape_and_size</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">color_stops</span>
+251:         <span class="ruby-identifier">shape_and_size</span> = <span class="ruby-keyword kw">nil</span>
+252:       <span class="ruby-keyword kw">end</span>
+253:       <span class="ruby-identifier">shape_and_size</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">shape_and_size</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">shape_and_size</span>.<span class="ruby-identifier">to_bool</span> <span class="ruby-comment cmt"># nil out explictly passed falses</span>
+254:       <span class="ruby-comment cmt"># ditto for position_or_angle</span>
+255:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_stop?</span>(<span class="ruby-identifier">position_or_angle</span>)
+256:         <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">position_or_angle</span>)
+257:         <span class="ruby-identifier">position_or_angle</span> = <span class="ruby-keyword kw">nil</span>
+258:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">list_of_color_stops?</span>(<span class="ruby-identifier">position_or_angle</span>)
+259:         <span class="ruby-identifier">color_stops</span> = <span class="ruby-identifier">position_or_angle</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">color_stops</span>
+260:         <span class="ruby-identifier">position_or_angle</span> = <span class="ruby-keyword kw">nil</span>
+261:       <span class="ruby-keyword kw">end</span>
+262:       <span class="ruby-identifier">position_or_angle</span> = <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">position_or_angle</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">position_or_angle</span>.<span class="ruby-identifier">to_bool</span>
+263: 
+264:       <span class="ruby-comment cmt"># Support legacy use of the color-stops() function</span>
+265:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">list_of_color_stops?</span>(<span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">first</span>)
+266:         <span class="ruby-identifier">color_stops</span> = <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span>
+267:       <span class="ruby-keyword kw">end</span>
+268:       <span class="ruby-constant">RadialGradient</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">position_or_angle</span>, <span class="ruby-identifier">shape_and_size</span>, <span class="ruby-identifier">send</span>(<span class="ruby-value">:color_stops</span>, *<span class="ruby-identifier">color_stops</span>))
+269:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="radial-svg-gradient-method" class="method-detail ">
+				<a name="method-i-radial_svg_gradient"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">radial_svg_gradient</span><span
+						class="method-args">(color_stops, center)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="radial-svg-gradient-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 375</span>
+375:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">radial_svg_gradient</span>(<span class="ruby-identifier">color_stops</span>, <span class="ruby-identifier">center</span>)
+376:       <span class="ruby-identifier">cx</span>, <span class="ruby-identifier">cy</span> = *<span class="ruby-identifier">grad_point</span>(<span class="ruby-identifier">center</span>).<span class="ruby-identifier">value</span>
+377:       <span class="ruby-identifier">r</span> = <span class="ruby-identifier">grad_end_position</span>(<span class="ruby-identifier">color_stops</span>,  <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Bool</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">true</span>))
+378:       <span class="ruby-identifier">stops</span> = <span class="ruby-identifier">color_stops_in_percentages</span>(<span class="ruby-identifier">color_stops</span>)
+379: 
+380:       <span class="ruby-identifier">svg</span> = <span class="ruby-identifier">radial_svg</span>(<span class="ruby-identifier">stops</span>, <span class="ruby-identifier">cx</span>, <span class="ruby-identifier">cy</span>, <span class="ruby-identifier">r</span>)
+381:       <span class="ruby-identifier">inline_image_string</span>(<span class="ruby-identifier">svg</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s+/</span>, <span class="ruby-value str">' '</span>), <span class="ruby-value str">'image/svg+xml'</span>)
+382:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="-center-position-method" class="method-detail ">
+				<a name="method-i-_center_position"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">_center_position</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-center-position-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 491</span>
+491:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">_center_position</span>
+492:       <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>.<span class="ruby-identifier">new</span>([
+493:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;center&quot;</span>),
+494:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;center&quot;</span>)
+495:       ],<span class="ruby-value">:space</span>)
+496:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="color-stop--method" class="method-detail ">
+				<a name="method-i-color_stop%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">color_stop?</span><span
+						class="method-args">(arg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="color-stop--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 386</span>
+386:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">color_stop?</span>(<span class="ruby-identifier">arg</span>)
+387:       <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">ColorStop</span>) <span class="ruby-operator">||</span>
+388:       (<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">ColorStop</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">value</span>)) <span class="ruby-operator">||</span>
+389:       <span class="ruby-constant">ColorStop</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg</span>)
+390:     <span class="ruby-keyword kw">rescue</span>
+391:       <span class="ruby-keyword kw">nil</span>
+392:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="color-stops-svg-method" class="method-detail ">
+				<a name="method-i-color_stops_svg"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">color_stops_svg</span><span
+						class="method-args">(color_stops)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="Functions.html#method-i-color_stops">color_stops</a> = array of:
+[stop, color]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="color-stops-svg-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 478</span>
+478:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">color_stops_svg</span>(<span class="ruby-identifier">color_stops</span>)
+479:       <span class="ruby-identifier">color_stops</span>.<span class="ruby-identifier">each</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">stop</span>, <span class="ruby-identifier">color</span><span class="ruby-operator">|</span>
+480:           <span class="ruby-node">%{&lt;stop offset=&quot;#{stop.to_s}&quot; stop-color=&quot;#{color.inspect}&quot;/&gt;}</span>
+481:       }.<span class="ruby-identifier">join</span>
+482:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="linear-svg-method" class="method-detail ">
+				<a name="method-i-linear_svg"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">linear_svg</span><span
+						class="method-args">(color_stops, x1, y1, x2, y2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="linear-svg-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 463</span>
+463:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">linear_svg</span>(<span class="ruby-identifier">color_stops</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+464:       <span class="ruby-identifier">transform</span> = <span class="ruby-value str">''</span>
+465:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">angle?</span>(<span class="ruby-identifier">position_or_angle</span>)
+466:         <span class="ruby-identifier">transform</span> = <span class="ruby-node">%{ gradientTransform = &quot;rotate(#{position_or_angle.value})&quot;}</span>
+467:       <span class="ruby-keyword kw">end</span>
+468:       <span class="ruby-identifier">gradient</span> = <span class="ruby-node">%{&lt;linearGradient id=&quot;grad&quot; gradientUnits=&quot;userSpaceOnUse&quot; x1=&quot;#{x1}&quot; y1=&quot;#{y1}&quot; x2=&quot;#{x2}&quot; y2=&quot;#{y2}&quot;#{transform}&gt;#{color_stops_svg(color_stops)}&lt;/linearGradient&gt;}</span>
+469:       <span class="ruby-identifier">svg</span>(<span class="ruby-identifier">gradient</span>)
+470:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="list-of-color-stops--method" class="method-detail ">
+				<a name="method-i-list_of_color_stops%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">list_of_color_stops?</span><span
+						class="method-args">(arg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="list-of-color-stops--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 455</span>
+455:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">list_of_color_stops?</span>(<span class="ruby-identifier">arg</span>)
+456:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:value</span>)
+457:         <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">all?</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">color_stop?</span>(<span class="ruby-identifier">a</span>)} <span class="ruby-operator">?</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+458:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+459:         <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">all?</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">color_stop?</span>(<span class="ruby-identifier">a</span>)} <span class="ruby-operator">?</span> <span class="ruby-identifier">arg</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+460:       <span class="ruby-keyword kw">end</span>
+461:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalize-stops-method" class="method-detail ">
+				<a name="method-i-normalize_stops"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize_stops</span><span
+						class="method-args">(color_list)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-stops-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 394</span>
+394:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize_stops</span>(<span class="ruby-identifier">color_list</span>)
+395:       <span class="ruby-identifier">positions</span> = <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">obj</span><span class="ruby-operator">|</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">dup</span>}
+396:       <span class="ruby-comment cmt"># fill in the start and end positions, if unspecified</span>
+397:       <span class="ruby-identifier">positions</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">stop</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">positions</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">stop</span>
+398:       <span class="ruby-identifier">positions</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>, [<span class="ruby-value str">&quot;%&quot;</span>]) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">positions</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>
+399:       <span class="ruby-comment cmt"># fill in empty values</span>
+400:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">positions</span>.<span class="ruby-identifier">size</span>
+401:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">positions</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">nil?</span>
+402:           <span class="ruby-identifier">num</span> = <span class="ruby-value">2.0</span>
+403:           <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">j</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>)<span class="ruby-operator">...</span><span class="ruby-identifier">positions</span>.<span class="ruby-identifier">size</span>
+404:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">positions</span>[<span class="ruby-identifier">j</span>].<span class="ruby-identifier">stop</span>
+405:               <span class="ruby-identifier">positions</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">stop</span> = <span class="ruby-identifier">positions</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>].<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">plus</span>((<span class="ruby-identifier">positions</span>[<span class="ruby-identifier">j</span>].<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">minus</span>(<span class="ruby-identifier">positions</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>].<span class="ruby-identifier">stop</span>)).<span class="ruby-identifier">div</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">num</span>)))
+406:               <span class="ruby-keyword kw">break</span>
+407:             <span class="ruby-keyword kw">else</span>
+408:               <span class="ruby-identifier">num</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+409:             <span class="ruby-keyword kw">end</span>
+410:           <span class="ruby-keyword kw">end</span>
+411:         <span class="ruby-keyword kw">end</span>
+412:       <span class="ruby-keyword kw">end</span>
+413:       <span class="ruby-comment cmt"># normalize unitless numbers</span>
+414:       <span class="ruby-identifier">positions</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pos</span><span class="ruby-operator">|</span>
+415:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">unitless?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">1</span>
+416:           <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span> = <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">times</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">100</span>, [<span class="ruby-value str">&quot;%&quot;</span>]))
+417:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">unitless?</span>
+418:           <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span> = <span class="ruby-identifier">pos</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">times</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, [<span class="ruby-value str">&quot;px&quot;</span>]))
+419:         <span class="ruby-keyword kw">end</span>
+420:       <span class="ruby-keyword kw">end</span>
+421:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">positions</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">eq</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, [<span class="ruby-value str">&quot;px&quot;</span>])).<span class="ruby-identifier">to_bool</span> <span class="ruby-operator">||</span>
+422:          <span class="ruby-identifier">positions</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">stop</span>.<span class="ruby-identifier">eq</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, [<span class="ruby-value str">&quot;%&quot;</span>])).<span class="ruby-identifier">to_bool</span>)
+423:          <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color stops must be specified in increasing order&quot;</span>)
+424:        <span class="ruby-keyword kw">end</span>
+425:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>)
+426:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">List</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">positions</span>, <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">separator</span>)
+427:       <span class="ruby-keyword kw">else</span>
+428:         <span class="ruby-identifier">color_list</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">positions</span>)
+429:       <span class="ruby-keyword kw">end</span>
+430:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-color-stop-method" class="method-detail ">
+				<a name="method-i-parse_color_stop"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_color_stop</span><span
+						class="method-args">(arg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-color-stop-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 432</span>
+432:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_color_stop</span>(<span class="ruby-identifier">arg</span>)
+433:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">ColorStop</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">arg</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+434:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">arg</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>)
+435:       <span class="ruby-identifier">color</span> = <span class="ruby-identifier">stop</span> = <span class="ruby-keyword kw">nil</span>
+436:       <span class="ruby-identifier">expr</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Parser</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">arg</span>.<span class="ruby-identifier">value</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>)
+437:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">expr</span>
+438:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>
+439:         <span class="ruby-identifier">color</span> = <span class="ruby-identifier">expr</span>
+440:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Funcall</span>
+441:         <span class="ruby-identifier">color</span> = <span class="ruby-identifier">expr</span>
+442:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Operation</span>
+443:         <span class="ruby-keyword kw">unless</span> [<span class="ruby-value">:concat</span>, <span class="ruby-value">:space</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">expr</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value str">&quot;@operator&quot;</span>))
+444:           <span class="ruby-comment cmt"># This should never happen.</span>
+445:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>, <span class="ruby-node">&quot;Couldn't parse a color stop from: #{arg.value}&quot;</span>
+446:         <span class="ruby-keyword kw">end</span>
+447:         <span class="ruby-identifier">color</span> = <span class="ruby-identifier">expr</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value str">&quot;@operand1&quot;</span>)
+448:         <span class="ruby-identifier">stop</span> = <span class="ruby-identifier">expr</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value str">&quot;@operand2&quot;</span>)
+449:       <span class="ruby-keyword kw">else</span>
+450:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>, <span class="ruby-node">&quot;Couldn't parse a color stop from: #{arg.value}&quot;</span>
+451:       <span class="ruby-keyword kw">end</span>
+452:       <span class="ruby-constant">ColorStop</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">stop</span>)
+453:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="radial-svg-method" class="method-detail ">
+				<a name="method-i-radial_svg"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">radial_svg</span><span
+						class="method-args">(color_stops, cx, cy, r)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="radial-svg-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 472</span>
+472:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">radial_svg</span>(<span class="ruby-identifier">color_stops</span>, <span class="ruby-identifier">cx</span>, <span class="ruby-identifier">cy</span>, <span class="ruby-identifier">r</span>)
+473:       <span class="ruby-identifier">gradient</span> = <span class="ruby-node">%{&lt;radialGradient id=&quot;grad&quot; gradientUnits=&quot;userSpaceOnUse&quot; cx=&quot;#{cx}&quot; cy=&quot;#{cy}&quot; r=&quot;#{r}&quot;&gt;#{color_stops_svg(color_stops)}&lt;/radialGradient&gt;}</span>
+474:       <span class="ruby-identifier">svg</span>(<span class="ruby-identifier">gradient</span>)
+475:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="svg-method" class="method-detail ">
+				<a name="method-i-svg"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">svg</span><span
+						class="method-args">(gradient)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="svg-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/compass/sass_extensions/functions/gradient_support.rb, line 484</span>
+484:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">svg</span>(<span class="ruby-identifier">gradient</span>)
+485:       <span class="ruby-identifier">svg</span> = <span class="ruby-value str">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;&lt;svg version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;defs&gt;#{gradient}&lt;/defs&gt;&lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#grad)&quot; /&gt;&lt;/svg&gt;</span>
+486:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

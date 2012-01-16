@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: FSSM::State::Directory</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/fssm/state/directory_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/fssm/state/directory.rb">lib/fssm/state/directory.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_glob">#add_glob</a></li>
+					
+					<li><a href="#method-i-cache_entries">#cache_entries</a></li>
+					
+					<li><a href="#method-i-created">#created</a></li>
+					
+					<li><a href="#method-i-deleted">#deleted</a></li>
+					
+					<li><a href="#method-i-modified">#modified</a></li>
+					
+					<li><a href="#method-i-recache">#recache</a></li>
+					
+					<li><a href="#method-i-refresh">#refresh</a></li>
+					
+					<li><a href="#method-i-snapshot">#snapshot</a></li>
+					
+					<li><a href="#method-i-tag_entries">#tag_entries</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../FSSM.html">FSSM</a></li>
+				
+					<li><a href="../../FSSM/Backends.html">FSSM::Backends</a></li>
+				
+					<li><a href="../../FSSM/Backends/FSEvents.html">FSSM::Backends::FSEvents</a></li>
+				
+					<li><a href="../../FSSM/Backends/Inotify.html">FSSM::Backends::Inotify</a></li>
+				
+					<li><a href="../../FSSM/Backends/Polling.html">FSSM::Backends::Polling</a></li>
+				
+					<li><a href="../../FSSM/Backends/RBFSEvent.html">FSSM::Backends::RBFSEvent</a></li>
+				
+					<li><a href="../../FSSM/Monitor.html">FSSM::Monitor</a></li>
+				
+					<li><a href="../../FSSM/Path.html">FSSM::Path</a></li>
+				
+					<li><a href="../../FSSM/Pathname.html">FSSM::Pathname</a></li>
+				
+					<li><a href="../../FSSM/State.html">FSSM::State</a></li>
+				
+					<li><a href="../../FSSM/State/Directory.html">FSSM::State::Directory</a></li>
+				
+					<li><a href="../../FSSM/State/File.html">FSSM::State::File</a></li>
+				
+					<li><a href="../../FSSM/Support.html">FSSM::Support</a></li>
+				
+					<li><a href="../../FSSM/Tree.html">FSSM::Tree</a></li>
+				
+					<li><a href="../../FSSM/Tree/Cache.html">FSSM::Tree::Cache</a></li>
+				
+					<li><a href="../../FSSM/Tree/CacheDebug.html">FSSM::Tree::CacheDebug</a></li>
+				
+					<li><a href="../../FSSM/Tree/Node.html">FSSM::Tree::Node</a></li>
+				
+					<li><a href="../../FSSM/Tree/NodeBase.html">FSSM::Tree::NodeBase</a></li>
+				
+					<li><a href="../../FSSM/Tree/NodeEnumerable.html">FSSM::Tree::NodeEnumerable</a></li>
+				
+					<li><a href="../../FSSM/Tree/NodeInsertion.html">FSSM::Tree::NodeInsertion</a></li>
+				
+					<li><a href="../../Rucola.html">Rucola</a></li>
+				
+					<li><a href="../../Rucola/FSEvents.html">Rucola::FSEvents</a></li>
+				
+					<li><a href="../../Rucola/FSEvents/FSEvent.html">Rucola::FSEvents::FSEvent</a></li>
+				
+					<li><a href="../../Rucola/FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">FSSM::State::Directory</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="path-attribute-method" class="method-detail">
+				<a name="path"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">path</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(path, options={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 5</span>
+5:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">options</span>={})
+6:       <span class="ruby-ivar">@path</span>    = <span class="ruby-identifier">path</span>
+7:       <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+8:       <span class="ruby-ivar">@cache</span>   = <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Tree</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">new</span>
+9:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="refresh-method" class="method-detail ">
+				<a name="method-i-refresh"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">refresh</span><span
+						class="method-args">(base=nil, skip_callbacks=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="refresh-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 11</span>
+11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">refresh</span>(<span class="ruby-identifier">base</span>=<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">skip_callbacks</span>=<span class="ruby-keyword kw">false</span>)
+12:       <span class="ruby-identifier">base_path</span> = <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">for</span>(<span class="ruby-identifier">base</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@path</span>.<span class="ruby-identifier">to_pathname</span>).<span class="ruby-identifier">expand_path</span>
+13:       <span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span> = <span class="ruby-identifier">recache</span>(<span class="ruby-identifier">base_path</span>)
+14: 
+15:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">skip_callbacks</span>
+16:         <span class="ruby-identifier">deleted</span>(<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>)
+17:         <span class="ruby-identifier">created</span>(<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>)
+18:         <span class="ruby-identifier">modified</span>(<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>)
+19:       <span class="ruby-keyword kw">end</span>
+20:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="add-glob-method" class="method-detail ">
+				<a name="method-i-add_glob"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_glob</span><span
+						class="method-args">(base, glob)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="add-glob-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 57</span>
+57:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_glob</span>(<span class="ruby-identifier">base</span>, <span class="ruby-identifier">glob</span>)
+58:       <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">base</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">glob</span>).<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fn</span><span class="ruby-operator">|</span>
+59:         <span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">set</span>(<span class="ruby-identifier">fn</span>)
+60:       <span class="ruby-keyword kw">end</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cache-entries-method" class="method-detail ">
+				<a name="method-i-cache_entries"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cache_entries</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="cache-entries-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 63</span>
+63:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cache_entries</span>
+64:       <span class="ruby-identifier">entries</span> = <span class="ruby-identifier">tag_entries</span>(<span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">files</span>, <span class="ruby-value">:file</span>)
+65:       <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">merge!</span> <span class="ruby-identifier">tag_entries</span>(<span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">directories</span>, <span class="ruby-value">:directory</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:directories</span>]
+66:       <span class="ruby-identifier">entries</span>
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="created-method" class="method-detail ">
+				<a name="method-i-created"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">created</span><span
+						class="method-args">(previous, current)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="created-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 24</span>
+24:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">created</span>(<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>)
+25:       (<span class="ruby-identifier">current</span>.<span class="ruby-identifier">keys</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">previous</span>.<span class="ruby-identifier">keys</span>).<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+26:         <span class="ruby-ivar">@path</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">current</span>[<span class="ruby-identifier">file</span>][<span class="ruby-value">1</span>])
+27:       <span class="ruby-keyword kw">end</span>
+28:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="deleted-method" class="method-detail ">
+				<a name="method-i-deleted"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">deleted</span><span
+						class="method-args">(previous, current)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="deleted-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deleted</span>(<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>)
+31:       (<span class="ruby-identifier">previous</span>.<span class="ruby-identifier">keys</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">current</span>.<span class="ruby-identifier">keys</span>).<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+32:         <span class="ruby-ivar">@path</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">previous</span>[<span class="ruby-identifier">file</span>][<span class="ruby-value">1</span>])
+33:       <span class="ruby-keyword kw">end</span>
+34:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="modified-method" class="method-detail ">
+				<a name="method-i-modified"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">modified</span><span
+						class="method-args">(previous, current)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="modified-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 36</span>
+36:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modified</span>(<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>)
+37:       (<span class="ruby-identifier">current</span>.<span class="ruby-identifier">keys</span> &amp; <span class="ruby-identifier">previous</span>.<span class="ruby-identifier">keys</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+38:         <span class="ruby-identifier">current_data</span> = <span class="ruby-identifier">current</span>[<span class="ruby-identifier">file</span>]
+39:         <span class="ruby-ivar">@path</span>.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">current_data</span>[<span class="ruby-value">1</span>]) <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">current_data</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-identifier">previous</span>[<span class="ruby-identifier">file</span>][<span class="ruby-value">0</span>]) <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+40:       <span class="ruby-keyword kw">end</span>
+41:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="recache-method" class="method-detail ">
+				<a name="method-i-recache"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">recache</span><span
+						class="method-args">(base)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="recache-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">recache</span>(<span class="ruby-identifier">base</span>)
+44:       <span class="ruby-identifier">base</span>     = <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">for</span>(<span class="ruby-identifier">base</span>)
+45:       <span class="ruby-identifier">previous</span> = <span class="ruby-identifier">cache_entries</span>
+46:       <span class="ruby-identifier">snapshot</span>(<span class="ruby-identifier">base</span>)
+47:       <span class="ruby-identifier">current</span> = <span class="ruby-identifier">cache_entries</span>
+48:       [<span class="ruby-identifier">previous</span>, <span class="ruby-identifier">current</span>]
+49:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="snapshot-method" class="method-detail ">
+				<a name="method-i-snapshot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">snapshot</span><span
+						class="method-args">(base)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="snapshot-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">snapshot</span>(<span class="ruby-identifier">base</span>)
+52:       <span class="ruby-identifier">base</span> = <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Pathname</span>.<span class="ruby-identifier">for</span>(<span class="ruby-identifier">base</span>)
+53:       <span class="ruby-ivar">@cache</span>.<span class="ruby-identifier">unset</span>(<span class="ruby-identifier">base</span>)
+54:       <span class="ruby-ivar">@path</span>.<span class="ruby-identifier">glob</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">glob</span><span class="ruby-operator">|</span> <span class="ruby-identifier">add_glob</span>(<span class="ruby-identifier">base</span>, <span class="ruby-identifier">glob</span>) }
+55:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tag-entries-method" class="method-detail ">
+				<a name="method-i-tag_entries"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tag_entries</span><span
+						class="method-args">(entries, tag)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tag-entries-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/state/directory.rb, line 69</span>
+69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tag_entries</span>(<span class="ruby-identifier">entries</span>, <span class="ruby-identifier">tag</span>)
+70:       <span class="ruby-identifier">tagged_entries</span> = {}
+71:       <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">each_pair</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">fname</span>, <span class="ruby-identifier">mtime</span><span class="ruby-operator">|</span> <span class="ruby-identifier">tagged_entries</span>[<span class="ruby-identifier">fname</span>] = [<span class="ruby-identifier">mtime</span>, <span class="ruby-identifier">tag</span>] }
+72:       <span class="ruby-identifier">tagged_entries</span>
+73:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

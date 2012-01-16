@@ -1,0 +1,1667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Haml::Compiler</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/haml/compiler_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/haml/compiler.rb">lib/haml/compiler.rb</a></li>
+					
+						<li><a href="../lib/haml/template/plugin_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/haml/template/plugin.rb">lib/haml/template/plugin.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-build_attributes">::build_attributes</a></li>
+					
+					<li><a href="#method-c-filter_and_join">::filter_and_join</a></li>
+					
+					<li><a href="#method-i-compile">#compile</a></li>
+					
+					<li><a href="#method-i-compile_comment">#compile_comment</a></li>
+					
+					<li><a href="#method-i-compile_doctype">#compile_doctype</a></li>
+					
+					<li><a href="#method-i-compile_filter">#compile_filter</a></li>
+					
+					<li><a href="#method-i-compile_haml_comment">#compile_haml_comment</a></li>
+					
+					<li><a href="#method-i-compile_plain">#compile_plain</a></li>
+					
+					<li><a href="#method-i-compile_root">#compile_root</a></li>
+					
+					<li><a href="#method-i-compile_script">#compile_script</a></li>
+					
+					<li><a href="#method-i-compile_silent_script">#compile_silent_script</a></li>
+					
+					<li><a href="#method-i-compile_silent_script">#compile_silent_script</a></li>
+					
+					<li><a href="#method-i-compile_silent_script_with_haml_block_deprecation">#compile_silent_script_with_haml_block_deprecation</a></li>
+					
+					<li><a href="#method-i-compile_silent_script_without_haml_block_deprecation">#compile_silent_script_without_haml_block_deprecation</a></li>
+					
+					<li><a href="#method-i-compile_tag">#compile_tag</a></li>
+					
+					<li><a href="#method-i-concat_merged_text">#concat_merged_text</a></li>
+					
+					<li><a href="#method-i-flush_merged_text">#flush_merged_text</a></li>
+					
+					<li><a href="#method-i-locals_code">#locals_code</a></li>
+					
+					<li><a href="#method-i-precompiled_method_return_value">#precompiled_method_return_value</a></li>
+					
+					<li><a href="#method-i-precompiled_with_ambles">#precompiled_with_ambles</a></li>
+					
+					<li><a href="#method-i-prerender_tag">#prerender_tag</a></li>
+					
+					<li><a href="#method-i-push_generated_script">#push_generated_script</a></li>
+					
+					<li><a href="#method-i-push_merged_text">#push_merged_text</a></li>
+					
+					<li><a href="#method-i-push_script">#push_script</a></li>
+					
+					<li><a href="#method-i-push_silent">#push_silent</a></li>
+					
+					<li><a href="#method-i-push_text">#push_text</a></li>
+					
+					<li><a href="#method-i-resolve_newlines">#resolve_newlines</a></li>
+					
+					<li><a href="#method-i-rstrip_buffer%21">#rstrip_buffer!</a></li>
+					
+					<li><a href="#method-i-text_for_doctype">#text_for_doctype</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="Util.html">Haml::Util</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Haml.html">Haml</a></li>
+				
+					<li><a href="../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../Haml/Compiler.html">Haml::Compiler</a></li>
+				
+					<li><a href="../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../Haml/Filters/Css.html">Haml::Filters::Css</a></li>
+				
+					<li><a href="../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../Haml/HTML/ERB.html">Haml::HTML::ERB</a></li>
+				
+					<li><a href="../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../Haml/Parser.html">Haml::Parser</a></li>
+				
+					<li><a href="../Haml/Parser/Line.html">Haml::Parser::Line</a></li>
+				
+					<li><a href="../Haml/Parser/ParseNode.html">Haml::Parser::ParseNode</a></li>
+				
+					<li><a href="../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../ActionView/Helpers/CacheHelper.html">ActionView::Helpers::CacheHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Haml::Compiler</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="build-attributes-method" class="method-detail ">
+				<a name="method-c-build_attributes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_attributes</span><span
+						class="method-args">(is_html, attr_wrapper, escape_attrs, attributes = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is a class method so it can be accessed from <a
+href="Buffer.html">Buffer</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="build-attributes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 348</span>
+348:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build_attributes</span>(<span class="ruby-identifier">is_html</span>, <span class="ruby-identifier">attr_wrapper</span>, <span class="ruby-identifier">escape_attrs</span>, <span class="ruby-identifier">attributes</span> = {})
+349:       <span class="ruby-identifier">quote_escape</span> = <span class="ruby-identifier">attr_wrapper</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'&quot;'</span> <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;&amp;quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;&amp;apos;&quot;</span>
+350:       <span class="ruby-identifier">other_quote_char</span> = <span class="ruby-identifier">attr_wrapper</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'&quot;'</span> <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;'&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'&quot;'</span>
+351: 
+352:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'data'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+353:         <span class="ruby-identifier">attributes</span> = <span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">dup</span>
+354:         <span class="ruby-identifier">attributes</span> =
+355:           <span class="ruby-constant">Haml</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">map_keys</span>(<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">'data'</span>)) {<span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;data-#{name}&quot;</span>}.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">attributes</span>)
+356:       <span class="ruby-keyword kw">end</span>
+357: 
+358:       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">attr</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+359:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+360: 
+361:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">filter_and_join</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value str">' '</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'class'</span>
+362:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">filter_and_join</span>(<span class="ruby-identifier">value</span>, <span class="ruby-value str">'_'</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attr</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'id'</span>
+363: 
+364:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+365:           <span class="ruby-keyword kw">next</span> <span class="ruby-node">&quot; #{attr}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">is_html</span>
+366:           <span class="ruby-keyword kw">next</span> <span class="ruby-node">&quot; #{attr}=#{attr_wrapper}#{attr}#{attr_wrapper}&quot;</span>
+367:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+368:           <span class="ruby-keyword kw">next</span>
+369:         <span class="ruby-keyword kw">end</span>
+370: 
+371:         <span class="ruby-identifier">escaped</span> =
+372:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">escape_attrs</span> <span class="ruby-operator">==</span> <span class="ruby-value">:once</span>
+373:             <span class="ruby-constant">Haml</span><span class="ruby-operator">::</span><span class="ruby-constant">Helpers</span>.<span class="ruby-identifier">escape_once</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>)
+374:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">escape_attrs</span>
+375:             <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>)
+376:           <span class="ruby-keyword kw">else</span>
+377:             <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+378:           <span class="ruby-keyword kw">end</span>
+379:         <span class="ruby-identifier">value</span> = <span class="ruby-constant">Haml</span><span class="ruby-operator">::</span><span class="ruby-constant">Helpers</span>.<span class="ruby-identifier">preserve</span>(<span class="ruby-identifier">escaped</span>)
+380:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">escape_attrs</span>
+381:           <span class="ruby-comment cmt"># We want to decide whether or not to escape quotes</span>
+382:           <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'&amp;quot;'</span>, <span class="ruby-value str">'&quot;'</span>)
+383:           <span class="ruby-identifier">this_attr_wrapper</span> = <span class="ruby-identifier">attr_wrapper</span>
+384:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">attr_wrapper</span>
+385:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">other_quote_char</span>
+386:               <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">attr_wrapper</span>, <span class="ruby-identifier">quote_escape</span>)
+387:             <span class="ruby-keyword kw">else</span>
+388:               <span class="ruby-identifier">this_attr_wrapper</span> = <span class="ruby-identifier">other_quote_char</span>
+389:             <span class="ruby-keyword kw">end</span>
+390:           <span class="ruby-keyword kw">end</span>
+391:         <span class="ruby-keyword kw">else</span>
+392:           <span class="ruby-identifier">this_attr_wrapper</span> = <span class="ruby-identifier">attr_wrapper</span>
+393:         <span class="ruby-keyword kw">end</span>
+394:         <span class="ruby-node">&quot; #{attr}=#{this_attr_wrapper}#{value}#{this_attr_wrapper}&quot;</span>
+395:       <span class="ruby-keyword kw">end</span>
+396:       <span class="ruby-identifier">result</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">join</span>
+397:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="filter-and-join-method" class="method-detail ">
+				<a name="method-c-filter_and_join"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">filter_and_join</span><span
+						class="method-args">(value, separator)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="filter-and-join-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 399</span>
+399:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">filter_and_join</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">separator</span>)
+400:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+401:       <span class="ruby-identifier">value</span> = [<span class="ruby-identifier">value</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+402:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>}.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">separator</span>)
+403:       <span class="ruby-keyword kw">return</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>
+404:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="compile-silent-script-method" class="method-detail method-alias">
+				<a name="method-i-compile_silent_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_silent_script</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Compiler.html#method-i-compile_silent_script_with_haml_block_deprecation">compile_silent_script_with_haml_block_deprecation</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="compile-silent-script-with-haml-block-deprecation-method" class="method-detail ">
+				<a name="method-i-compile_silent_script_with_haml_block_deprecation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_silent_script_with_haml_block_deprecation</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-silent-script-with-haml-block-deprecation-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/template/plugin.rb, line 59</span>
+59:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_silent_script_with_haml_block_deprecation</span>(&amp;<span class="ruby-identifier">block</span>)
+60:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:keyword</span>] <span class="ruby-operator">&amp;&amp;</span>
+61:             <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:text</span>] <span class="ruby-operator">=~</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span><span class="ruby-operator">::</span><span class="ruby-constant">Handlers</span><span class="ruby-operator">::</span><span class="ruby-constant">Erubis</span><span class="ruby-operator">::</span><span class="ruby-constant">BLOCK_EXPR</span>
+62:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">compile_silent_script_without_haml_block_deprecation</span>(&amp;<span class="ruby-identifier">block</span>)
+63:         <span class="ruby-keyword kw">end</span>
+64: 
+65:         <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:text</span>] = <span class="ruby-node">&quot;_hamlout.append_if_string= #{@node.value[:text]}&quot;</span>
+66:         <span class="ruby-identifier">compile_silent_script_without_haml_block_deprecation</span>(&amp;<span class="ruby-identifier">block</span>)
+67:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Compiler.html#method-i-compile_silent_script">compile_silent_script</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="compile-method" class="method-detail ">
+				<a name="method-i-compile"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile</span><span
+						class="method-args">(node)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 444</span>
+444:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile</span>(<span class="ruby-identifier">node</span>)
+445:       <span class="ruby-identifier">parent</span>, <span class="ruby-ivar">@node</span> = <span class="ruby-ivar">@node</span>, <span class="ruby-identifier">node</span>
+446:       <span class="ruby-identifier">block</span> = <span class="ruby-identifier">proc</span> {<span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">compile</span> <span class="ruby-identifier">c</span>}}
+447:       <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;compile_#{node.type}&quot;</span>, &amp;(<span class="ruby-identifier">block</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">empty?</span>))
+448:     <span class="ruby-keyword kw">ensure</span>
+449:       <span class="ruby-ivar">@node</span> = <span class="ruby-identifier">parent</span>
+450:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-comment-method" class="method-detail ">
+				<a name="method-i-compile_comment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_comment</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-comment-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 185</span>
+185:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_comment</span>
+186:       <span class="ruby-identifier">open</span> = <span class="ruby-node">&quot;&lt;!--#{@node.value[:conditional]}&quot;</span>
+187: 
+188:       <span class="ruby-comment cmt"># Render it statically if possible</span>
+189:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+190:         <span class="ruby-identifier">push_text</span>(<span class="ruby-node">&quot;#{open} #{@node.value[:text]} #{@node.value[:conditional] ? &quot;&lt;![endif]--&gt;&quot; : &quot;--&gt;&quot;}&quot;</span>)
+191:         <span class="ruby-keyword kw">return</span>
+192:       <span class="ruby-keyword kw">end</span>
+193: 
+194:       <span class="ruby-identifier">push_text</span>(<span class="ruby-identifier">open</span>, <span class="ruby-value">1</span>)
+195:       <span class="ruby-ivar">@output_tabs</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+196:       <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+197:       <span class="ruby-ivar">@output_tabs</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+198:       <span class="ruby-identifier">push_text</span>(<span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:conditional</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;&lt;![endif]--&gt;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;--&gt;&quot;</span>, <span class="ruby-value">1</span>)
+199:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-doctype-method" class="method-detail ">
+				<a name="method-i-compile_doctype"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_doctype</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-doctype-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 201</span>
+201:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_doctype</span>
+202:       <span class="ruby-identifier">doctype</span> = <span class="ruby-identifier">text_for_doctype</span>
+203:       <span class="ruby-identifier">push_text</span> <span class="ruby-identifier">doctype</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">doctype</span>
+204:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-filter-method" class="method-detail ">
+				<a name="method-i-compile_filter"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_filter</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-filter-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 206</span>
+206:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_filter</span>
+207:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">filter</span> = <span class="ruby-constant">Filters</span>.<span class="ruby-identifier">defined</span>[<span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:name</span>]]
+208:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Filter \&quot;#{@node.value[:name]}\&quot; is not defined.&quot;</span>, <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">line</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+209:       <span class="ruby-keyword kw">end</span>
+210:       <span class="ruby-identifier">filter</span>.<span class="ruby-identifier">internal_compile</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:text</span>])
+211:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-haml-comment-method" class="method-detail ">
+				<a name="method-i-compile_haml_comment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_haml_comment</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-haml-comment-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_haml_comment</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-plain-method" class="method-detail ">
+				<a name="method-i-compile_plain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_plain</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-plain-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_plain</span>
+53:       <span class="ruby-identifier">push_text</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:text</span>]
+54:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-root-method" class="method-detail ">
+				<a name="method-i-compile_root"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_root</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-root-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 44</span>
+44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_root</span>
+45:       <span class="ruby-ivar">@dont_indent_next_line</span> = <span class="ruby-ivar">@dont_tab_up_next_text</span> = <span class="ruby-keyword kw">false</span>
+46:       <span class="ruby-ivar">@output_line</span> = <span class="ruby-value">1</span>
+47:       <span class="ruby-ivar">@indentation</span> = <span class="ruby-keyword kw">nil</span>
+48:       <span class="ruby-keyword kw">yield</span>
+49:       <span class="ruby-identifier">flush_merged_text</span>
+50:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-script-method" class="method-detail ">
+				<a name="method-i-compile_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_script</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-script-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_script</span>(&amp;<span class="ruby-identifier">block</span>)
+57:       <span class="ruby-identifier">push_script</span>(<span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:text</span>],
+58:         <span class="ruby-value">:preserve_script</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:preserve</span>],
+59:         <span class="ruby-value">:escape_html</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:escape_html</span>], &amp;<span class="ruby-identifier">block</span>)
+60:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compile-silent-script-method" class="method-detail ">
+				<a name="method-i-compile_silent_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_silent_script</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-silent-script-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 62</span>
+62:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_silent_script</span>
+63:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:suppress_eval</span>]
+64:       <span class="ruby-identifier">push_silent</span>(<span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:text</span>])
+65:       <span class="ruby-identifier">keyword</span> = <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:keyword</span>]
+66:       <span class="ruby-identifier">ruby_block</span> = <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">keyword</span>
+67: 
+68:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+69:         <span class="ruby-comment cmt"># Store these values because for conditional statements,</span>
+70:         <span class="ruby-comment cmt"># we want to restore them for each branch</span>
+71:         <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_indent_next_line</span>] = <span class="ruby-ivar">@dont_indent_next_line</span>
+72:         <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_tab_up_next_text</span>] = <span class="ruby-ivar">@dont_tab_up_next_text</span>
+73:         <span class="ruby-keyword kw">yield</span>
+74:         <span class="ruby-identifier">push_silent</span>(<span class="ruby-value str">&quot;end&quot;</span>, <span class="ruby-value">:can_suppress</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_push_end</span>]
+75:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">keyword</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;end&quot;</span>
+76:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">children</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">equal?</span>(<span class="ruby-ivar">@node</span>)
+77:           <span class="ruby-comment cmt"># Since this &quot;end&quot; is ending the block,</span>
+78:           <span class="ruby-comment cmt"># we don't need to generate an additional one</span>
+79:           <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_push_end</span>] = <span class="ruby-keyword kw">true</span>
+80:         <span class="ruby-keyword kw">end</span>
+81:         <span class="ruby-comment cmt"># Don't restore dont_* for end because it isn't a conditional branch.</span>
+82:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-constant">Parser</span><span class="ruby-operator">::</span><span class="ruby-constant">MID_BLOCK_KEYWORDS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">keyword</span>)
+83:         <span class="ruby-comment cmt"># Restore dont_* for this conditional branch</span>
+84:         <span class="ruby-ivar">@dont_indent_next_line</span> = <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_indent_next_line</span>]
+85:         <span class="ruby-ivar">@dont_tab_up_next_text</span> = <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">parent</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_tab_up_next_text</span>]
+86:       <span class="ruby-keyword kw">end</span>
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Compiler.html#method-i-compile_silent_script_without_haml_block_deprecation">compile_silent_script_without_haml_block_deprecation</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="compile-silent-script-without-haml-block-deprecation-method" class="method-detail method-alias">
+				<a name="method-i-compile_silent_script_without_haml_block_deprecation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_silent_script_without_haml_block_deprecation</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Compiler.html#method-i-compile_silent_script">compile_silent_script</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="compile-tag-method" class="method-detail ">
+				<a name="method-i-compile_tag"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile_tag</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="compile-tag-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 91</span>
+ 91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile_tag</span>
+ 92:       <span class="ruby-identifier">t</span> = <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>
+ 93: 
+ 94:       <span class="ruby-comment cmt"># Get rid of whitespace outside of the tag if we need to</span>
+ 95:       <span class="ruby-identifier">rstrip_buffer!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>]
+ 96: 
+ 97:       <span class="ruby-identifier">dont_indent_next_line</span> =
+ 98:         (<span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span>) <span class="ruby-operator">||</span>
+ 99:         (<span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">block_given?</span>)
+100: 
+101:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:suppress_eval</span>]
+102:         <span class="ruby-identifier">object_ref</span> = <span class="ruby-value str">&quot;nil&quot;</span>
+103:         <span class="ruby-identifier">parse</span> = <span class="ruby-keyword kw">false</span>
+104:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:parse</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:value</span>]
+105:         <span class="ruby-identifier">attributes_hashes</span> = {}
+106:         <span class="ruby-identifier">preserve_script</span> = <span class="ruby-keyword kw">false</span>
+107:       <span class="ruby-keyword kw">else</span>
+108:         <span class="ruby-identifier">object_ref</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:object_ref</span>]
+109:         <span class="ruby-identifier">parse</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:parse</span>]
+110:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:value</span>]
+111:         <span class="ruby-identifier">attributes_hashes</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes_hashes</span>]
+112:         <span class="ruby-identifier">preserve_script</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:preserve_script</span>]
+113:       <span class="ruby-keyword kw">end</span>
+114: 
+115:       <span class="ruby-comment cmt"># Check if we can render the tag directly to text and not process it in the buffer</span>
+116:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">object_ref</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;nil&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">attributes_hashes</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">preserve_script</span>
+117:         <span class="ruby-identifier">tag_closed</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parse</span>
+118: 
+119:         <span class="ruby-identifier">open_tag</span> = <span class="ruby-identifier">prerender_tag</span>(<span class="ruby-identifier">t</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>], <span class="ruby-identifier">t</span>[<span class="ruby-value">:attributes</span>])
+120:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag_closed</span>
+121:           <span class="ruby-identifier">open_tag</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{value}&lt;/#{t[:name]}&gt;&quot;</span>
+122:           <span class="ruby-identifier">open_tag</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>]
+123:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">parse</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>] <span class="ruby-operator">||</span>
+124:             (<span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>]))
+125:           <span class="ruby-identifier">open_tag</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&quot;</span>
+126:         <span class="ruby-keyword kw">end</span>
+127: 
+128:         <span class="ruby-identifier">push_merged_text</span>(<span class="ruby-identifier">open_tag</span>,
+129:           <span class="ruby-identifier">tag_closed</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>] <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>,
+130:           <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>])
+131: 
+132:         <span class="ruby-ivar">@dont_indent_next_line</span> = <span class="ruby-identifier">dont_indent_next_line</span>
+133:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag_closed</span>
+134:       <span class="ruby-keyword kw">else</span>
+135:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attributes_hashes</span>.<span class="ruby-identifier">empty?</span>
+136:           <span class="ruby-identifier">attributes_hashes</span> = <span class="ruby-value str">''</span>
+137:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">attributes_hashes</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+138:           <span class="ruby-identifier">attributes_hashes</span> = <span class="ruby-node">&quot;, #{attributes_hashes.first}&quot;</span>
+139:         <span class="ruby-keyword kw">else</span>
+140:           <span class="ruby-identifier">attributes_hashes</span> = <span class="ruby-node">&quot;, (#{attributes_hashes.join(&quot;).merge(&quot;)})&quot;</span>
+141:         <span class="ruby-keyword kw">end</span>
+142: 
+143:         <span class="ruby-identifier">push_merged_text</span> <span class="ruby-node">&quot;&lt;#{t[:name]}&quot;</span>, <span class="ruby-value">0</span>, <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>]
+144:         <span class="ruby-identifier">push_generated_script</span>(
+145:           <span class="ruby-node">&quot;_hamlout.attributes(#{inspect_obj(t[:attributes])}, #{object_ref}#{attributes_hashes})&quot;</span>)
+146:         <span class="ruby-identifier">concat_merged_text</span>(
+147:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">xhtml?</span>
+148:             <span class="ruby-value str">&quot; /&gt;&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;\n&quot;</span>)
+149:           <span class="ruby-keyword kw">else</span>
+150:             <span class="ruby-value str">&quot;&gt;&quot;</span> <span class="ruby-operator">+</span> ((<span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">html?</span>
+151:                       <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>]
+152:                     <span class="ruby-keyword kw">else</span>
+153:                       <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:preserve_tag</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>]
+154:                     <span class="ruby-keyword kw">end</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;\n&quot;</span>)
+155:           <span class="ruby-keyword kw">end</span>)
+156: 
+157:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parse</span>
+158:           <span class="ruby-identifier">concat_merged_text</span>(<span class="ruby-node">&quot;#{value}&lt;/#{t[:name]}&gt;#{t[:nuke_outer_whitespace] ? &quot;&quot; : &quot;\n&quot;}&quot;</span>)
+159:         <span class="ruby-keyword kw">else</span>
+160:           <span class="ruby-ivar">@to_merge</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value">:text</span>, <span class="ruby-value str">''</span>, <span class="ruby-value">1</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>]
+161:         <span class="ruby-keyword kw">end</span>
+162: 
+163:         <span class="ruby-ivar">@dont_indent_next_line</span> = <span class="ruby-identifier">dont_indent_next_line</span>
+164:       <span class="ruby-keyword kw">end</span>
+165: 
+166:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:self_closing</span>]
+167: 
+168:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+169:         <span class="ruby-ivar">@output_tabs</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>]
+170:         <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+171:         <span class="ruby-ivar">@output_tabs</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>]
+172:         <span class="ruby-identifier">rstrip_buffer!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>]
+173:         <span class="ruby-identifier">push_merged_text</span>(<span class="ruby-node">&quot;&lt;/#{t[:name]}&gt;&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;\n&quot;</span>),
+174:           <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>] <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>, <span class="ruby-operator">!</span><span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_inner_whitespace</span>])
+175:         <span class="ruby-ivar">@dont_indent_next_line</span> = <span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>]
+176:         <span class="ruby-keyword kw">return</span>
+177:       <span class="ruby-keyword kw">end</span>
+178: 
+179:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parse</span>
+180:         <span class="ruby-identifier">push_script</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">t</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-value">:in_tag</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>))
+181:         <span class="ruby-identifier">concat_merged_text</span>(<span class="ruby-node">&quot;&lt;/#{t[:name]}&gt;&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">t</span>[<span class="ruby-value">:nuke_outer_whitespace</span>] <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;\n&quot;</span>))
+182:       <span class="ruby-keyword kw">end</span>
+183:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="concat-merged-text-method" class="method-detail ">
+				<a name="method-i-concat_merged_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">concat_merged_text</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Concatenate `text` to `@buffer` without tabulation.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="concat-merged-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 267</span>
+267:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">concat_merged_text</span>(<span class="ruby-identifier">text</span>)
+268:       <span class="ruby-ivar">@to_merge</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value">:text</span>, <span class="ruby-identifier">text</span>, <span class="ruby-value">0</span>]
+269:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flush-merged-text-method" class="method-detail ">
+				<a name="method-i-flush_merged_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flush_merged_text</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="flush-merged-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 275</span>
+275:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flush_merged_text</span>
+276:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@to_merge</span>.<span class="ruby-identifier">empty?</span>
+277: 
+278:       <span class="ruby-identifier">str</span> = <span class="ruby-value str">&quot;&quot;</span>
+279:       <span class="ruby-identifier">mtabs</span> = <span class="ruby-value">0</span>
+280:       <span class="ruby-ivar">@to_merge</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">type</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">tabs</span><span class="ruby-operator">|</span>
+281:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">type</span>
+282:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:text</span>
+283:           <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">inspect_obj</span>(<span class="ruby-identifier">val</span>)[<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>]
+284:           <span class="ruby-identifier">mtabs</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">tabs</span>
+285:         <span class="ruby-keyword kw">when</span> <span class="ruby-value">:script</span>
+286:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mtabs</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value">:ugly</span>]
+287:             <span class="ruby-identifier">val</span> = <span class="ruby-node">&quot;_hamlout.adjust_tabs(#{mtabs}); &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>
+288:           <span class="ruby-keyword kw">end</span>
+289:           <span class="ruby-identifier">str</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\#{#{val}}&quot;</span>
+290:           <span class="ruby-identifier">mtabs</span> = <span class="ruby-value">0</span>
+291:         <span class="ruby-keyword kw">else</span>
+292:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;[HAML BUG] Undefined entry in Haml::Compiler@to_merge.&quot;</span>)
+293:         <span class="ruby-keyword kw">end</span>
+294:       <span class="ruby-keyword kw">end</span>
+295: 
+296:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">empty?</span>
+297:         <span class="ruby-ivar">@precompiled</span> <span class="ruby-operator">&lt;&lt;</span>
+298:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:ugly</span>]
+299:             <span class="ruby-node">&quot;_hamlout.buffer &lt;&lt; \&quot;#{str}\&quot;;&quot;</span>
+300:           <span class="ruby-keyword kw">else</span>
+301:             <span class="ruby-node">&quot;_hamlout.push_text(\&quot;#{str}\&quot;, #{mtabs}, #{@dont_tab_up_next_text.inspect});&quot;</span>
+302:           <span class="ruby-keyword kw">end</span>
+303:       <span class="ruby-keyword kw">end</span>
+304:       <span class="ruby-ivar">@to_merge</span> = []
+305:       <span class="ruby-ivar">@dont_tab_up_next_text</span> = <span class="ruby-keyword kw">false</span>
+306:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="locals-code-method" class="method-detail ">
+				<a name="method-i-locals_code"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locals_code</span><span
+						class="method-args">(names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="locals-code-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 33</span>
+33:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locals_code</span>(<span class="ruby-identifier">names</span>)
+34:       <span class="ruby-identifier">names</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">keys</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">names</span>
+35: 
+36:       <span class="ruby-identifier">names</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+37:         <span class="ruby-comment cmt"># Can't use || because someone might explicitly pass in false with a symbol</span>
+38:         <span class="ruby-identifier">sym_local</span> = <span class="ruby-node">&quot;_haml_locals[#{inspect_obj(name.to_sym)}]&quot;</span>
+39:         <span class="ruby-identifier">str_local</span> = <span class="ruby-node">&quot;_haml_locals[#{inspect_obj(name.to_s)}]&quot;</span>
+40:         <span class="ruby-node">&quot;#{name} = #{sym_local}.nil? ? #{str_local} : #{sym_local}&quot;</span>
+41:       <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">';'</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">';'</span>
+42:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="precompiled-method-return-value-method" class="method-detail ">
+				<a name="method-i-precompiled_method_return_value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">precompiled_method_return_value</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the string used as the return value of the precompiled method. This
+method exists so it can be monkeypatched to return modified values.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="precompiled-method-return-value-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">precompiled_method_return_value</span>
+30:       <span class="ruby-value str">&quot;_erbout&quot;</span>
+31:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="precompiled-with-ambles-method" class="method-detail ">
+				<a name="method-i-precompiled_with_ambles"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">precompiled_with_ambles</span><span
+						class="method-args">(local_names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the precompiled string with the preamble and postamble
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="precompiled-with-ambles-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 10</span>
+10:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">precompiled_with_ambles</span>(<span class="ruby-identifier">local_names</span>)
+11:       <span class="ruby-identifier">preamble</span> = <span class="ruby-value str">beginextend Haml::Helpers_hamlout = @haml_buffer = Haml::Buffer.new(@haml_buffer, #{options_for_buffer.inspect})_erbout = _hamlout.buffer__in_erb_template = true</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\n&quot;</span>, <span class="ruby-value str">&quot;;&quot;</span>)
+12:       <span class="ruby-identifier">postamble</span> = <span class="ruby-value str">#{precompiled_method_return_value}ensure@haml_buffer = @haml_buffer.upperend</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\n&quot;</span>, <span class="ruby-value str">&quot;;&quot;</span>)
+13:       <span class="ruby-identifier">preamble</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">locals_code</span>(<span class="ruby-identifier">local_names</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">precompiled</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">postamble</span>
+14:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="prerender-tag-method" class="method-detail ">
+				<a name="method-i-prerender_tag"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">prerender_tag</span><span
+						class="method-args">(name, self_close, attributes)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="prerender-tag-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 406</span>
+406:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prerender_tag</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">self_close</span>, <span class="ruby-identifier">attributes</span>)
+407:       <span class="ruby-identifier">attributes_string</span> = <span class="ruby-constant">Compiler</span>.<span class="ruby-identifier">build_attributes</span>(
+408:         <span class="ruby-identifier">html?</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:attr_wrapper</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:escape_attrs</span>], <span class="ruby-identifier">attributes</span>)
+409:       <span class="ruby-node">&quot;&lt;#{name}#{attributes_string}#{self_close &amp;&amp; xhtml? ? ' /' : ''}&gt;&quot;</span>
+410:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="push-generated-script-method" class="method-detail ">
+				<a name="method-i-push_generated_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">push_generated_script</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="push-generated-script-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 342</span>
+342:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">push_generated_script</span>(<span class="ruby-identifier">text</span>)
+343:       <span class="ruby-ivar">@to_merge</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value">:script</span>, <span class="ruby-identifier">resolve_newlines</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">text</span>]
+344:       <span class="ruby-ivar">@output_line</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">count</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+345:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="push-merged-text-method" class="method-detail ">
+				<a name="method-i-push_merged_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">push_merged_text</span><span
+						class="method-args">(text, tab_change = 0, indent = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds `text` to `@buffer` with appropriate tabulation without parsing it.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="push-merged-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 260</span>
+260:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">push_merged_text</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">tab_change</span> = <span class="ruby-value">0</span>, <span class="ruby-identifier">indent</span> = <span class="ruby-keyword kw">true</span>)
+261:       <span class="ruby-identifier">text</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">indent</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@dont_indent_next_line</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:ugly</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">text</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{'  ' * @output_tabs}#{text}&quot;</span>
+262:       <span class="ruby-ivar">@to_merge</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-value">:text</span>, <span class="ruby-identifier">text</span>, <span class="ruby-identifier">tab_change</span>]
+263:       <span class="ruby-ivar">@dont_indent_next_line</span> = <span class="ruby-keyword kw">false</span>
+264:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="push-script-method" class="method-detail ">
+				<a name="method-i-push_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">push_script</span><span
+						class="method-args">(text, opts = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Causes `text` to be evaluated in the context of the scope object and the
+result to be added to `@buffer`.
+</p>
+<p>
+If `opts[:preserve_script]` is true, Haml::Helpers#find_and_flatten is run
+on the result before it is added to `@buffer`
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="push-script-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 313</span>
+313:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">push_script</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">opts</span> = {})
+314:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:suppress_eval</span>]
+315: 
+316:       <span class="ruby-identifier">args</span> = <span class="ruby-node">]preserve_script in_tag preserve_tag escape_html nuke_inner_whitespace]</span>
+317:       <span class="ruby-identifier">args</span>.<span class="ruby-identifier">map!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">opts</span>[<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_sym</span>]}
+318:       <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">block_given?</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:ugly</span>]
+319: 
+320:       <span class="ruby-identifier">no_format</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:ugly</span>] <span class="ruby-operator">&amp;&amp;</span>
+321:         <span class="ruby-operator">!</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:preserve_script</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:preserve_tag</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:escape_html</span>])
+322:       <span class="ruby-identifier">output_expr</span> = <span class="ruby-node">&quot;(#{text}\n)&quot;</span>
+323:       <span class="ruby-identifier">static_method</span> = <span class="ruby-node">&quot;_hamlout.#{static_method_name(:format_script, *args)}&quot;</span>
+324: 
+325:       <span class="ruby-comment cmt"># Prerender tabulation unless we're in a tag</span>
+326:       <span class="ruby-identifier">push_merged_text</span> <span class="ruby-value str">''</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:in_tag</span>]
+327: 
+328:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+329:         <span class="ruby-identifier">push_generated_script</span>(<span class="ruby-identifier">no_format</span> <span class="ruby-operator">?</span> <span class="ruby-node">&quot;#{text}\n&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-node">&quot;#{static_method}(#{output_expr});&quot;</span>)
+330:         <span class="ruby-identifier">concat_merged_text</span>(<span class="ruby-value str">&quot;\n&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:in_tag</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:nuke_inner_whitespace</span>]
+331:         <span class="ruby-keyword kw">return</span>
+332:       <span class="ruby-keyword kw">end</span>
+333: 
+334:       <span class="ruby-identifier">flush_merged_text</span>
+335:       <span class="ruby-identifier">push_silent</span> <span class="ruby-node">&quot;haml_temp = #{text}&quot;</span>
+336:       <span class="ruby-keyword kw">yield</span>
+337:       <span class="ruby-identifier">push_silent</span>(<span class="ruby-value str">'end'</span>, <span class="ruby-value">:can_suppress</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:dont_push_end</span>]
+338:       <span class="ruby-ivar">@precompiled</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;_hamlout.buffer &lt;&lt; #{no_format ? &quot;haml_temp.to_s;&quot; : &quot;#{static_method}(haml_temp);&quot;}&quot;</span>
+339:       <span class="ruby-identifier">concat_merged_text</span>(<span class="ruby-value str">&quot;\n&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:in_tag</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:nuke_inner_whitespace</span>] <span class="ruby-operator">||</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:ugly</span>]
+340:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="push-silent-method" class="method-detail ">
+				<a name="method-i-push_silent"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">push_silent</span><span
+						class="method-args">(text, can_suppress = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Evaluates `text` in the context of the scope object, but does not output
+the result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="push-silent-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 251</span>
+251:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">push_silent</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">can_suppress</span> = <span class="ruby-keyword kw">false</span>)
+252:       <span class="ruby-identifier">flush_merged_text</span>
+253:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">can_suppress</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:suppress_eval</span>]
+254:       <span class="ruby-ivar">@precompiled</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{resolve_newlines}#{text}\n&quot;</span>
+255:       <span class="ruby-ivar">@output_line</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">count</span>(<span class="ruby-value str">&quot;\n&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+256:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="push-text-method" class="method-detail ">
+				<a name="method-i-push_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">push_text</span><span
+						class="method-args">(text, tab_change = 0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="push-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 271</span>
+271:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">push_text</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">tab_change</span> = <span class="ruby-value">0</span>)
+272:       <span class="ruby-identifier">push_merged_text</span>(<span class="ruby-node">&quot;#{text}\n&quot;</span>, <span class="ruby-identifier">tab_change</span>)
+273:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="resolve-newlines-method" class="method-detail ">
+				<a name="method-i-resolve_newlines"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resolve_newlines</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="resolve-newlines-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 412</span>
+412:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resolve_newlines</span>
+413:       <span class="ruby-identifier">diff</span> = <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">line</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@output_line</span>
+414:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">diff</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+415:       <span class="ruby-ivar">@output_line</span> = <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">line</span>
+416:       <span class="ruby-value str">&quot;\n&quot;</span> * [<span class="ruby-identifier">diff</span>, <span class="ruby-value">0</span>].<span class="ruby-identifier">max</span>
+417:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rstrip-buffer--method" class="method-detail ">
+				<a name="method-i-rstrip_buffer%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rstrip_buffer!</span><span
+						class="method-args">(index = -1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Get rid of and whitespace at the end of the buffer or the merged text
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rstrip-buffer--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 421</span>
+421:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rstrip_buffer!</span>(<span class="ruby-identifier">index</span> = <span class="ruby-value">1</span>)
+422:       <span class="ruby-identifier">last</span> = <span class="ruby-ivar">@to_merge</span>[<span class="ruby-identifier">index</span>]
+423:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">last</span>.<span class="ruby-identifier">nil?</span>
+424:         <span class="ruby-identifier">push_silent</span>(<span class="ruby-value str">&quot;_hamlout.rstrip!&quot;</span>, <span class="ruby-keyword kw">false</span>)
+425:         <span class="ruby-ivar">@dont_tab_up_next_text</span> = <span class="ruby-keyword kw">true</span>
+426:         <span class="ruby-keyword kw">return</span>
+427:       <span class="ruby-keyword kw">end</span>
+428: 
+429:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">last</span>.<span class="ruby-identifier">first</span>
+430:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:text</span>
+431:         <span class="ruby-identifier">last</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">rstrip!</span>
+432:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">last</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">empty?</span>
+433:           <span class="ruby-ivar">@to_merge</span>.<span class="ruby-identifier">slice!</span> <span class="ruby-identifier">index</span>
+434:           <span class="ruby-identifier">rstrip_buffer!</span> <span class="ruby-identifier">index</span>
+435:         <span class="ruby-keyword kw">end</span>
+436:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:script</span>
+437:         <span class="ruby-identifier">last</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/\(haml_temp, (.*?)\);$/</span>, <span class="ruby-value str">'(haml_temp.rstrip, \1);'</span>)
+438:         <span class="ruby-identifier">rstrip_buffer!</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+439:       <span class="ruby-keyword kw">else</span>
+440:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;[HAML BUG] Undefined entry in Haml::Compiler@to_merge.&quot;</span>)
+441:       <span class="ruby-keyword kw">end</span>
+442:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-for-doctype-method" class="method-detail ">
+				<a name="method-i-text_for_doctype"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text_for_doctype</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="text-for-doctype-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/compiler.rb, line 213</span>
+213:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_for_doctype</span>
+214:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;xml&quot;</span>
+215:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">html?</span>
+216:         <span class="ruby-identifier">wrapper</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:attr_wrapper</span>]
+217:         <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;&lt;?xml version=#{wrapper}1.0#{wrapper} encoding=#{wrapper}#{@node.value[:encoding] || &quot;utf-8&quot;}#{wrapper} ?&gt;&quot;</span>
+218:       <span class="ruby-keyword kw">end</span>
+219: 
+220:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">html5?</span>
+221:         <span class="ruby-value str">'&lt;!DOCTYPE html&gt;'</span>
+222:       <span class="ruby-keyword kw">else</span>
+223:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xhtml?</span>
+224:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:version</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;1.1&quot;</span>
+225:             <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;&gt;'</span>
+226:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:version</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;5&quot;</span>
+227:             <span class="ruby-value str">'&lt;!DOCTYPE html&gt;'</span>
+228:           <span class="ruby-keyword kw">else</span>
+229:             <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:type</span>]
+230:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;strict&quot;</span>;   <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;'</span>
+231:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;frameset&quot;</span>; <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Frameset//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd&quot;&gt;'</span>
+232:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;mobile&quot;</span>;   <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//WAPFORUM//DTD XHTML Mobile 1.2//EN&quot; &quot;http://www.openmobilealliance.org/tech/DTD/xhtml-mobile12.dtd&quot;&gt;'</span>
+233:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;rdfa&quot;</span>;     <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML+RDFa 1.0//EN&quot; &quot;http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd&quot;&gt;'</span>
+234:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;basic&quot;</span>;    <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML Basic 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd&quot;&gt;'</span>
+235:             <span class="ruby-keyword kw">else</span>             <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;'</span>
+236:             <span class="ruby-keyword kw">end</span>
+237:           <span class="ruby-keyword kw">end</span>
+238: 
+239:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">html4?</span>
+240:           <span class="ruby-keyword kw">case</span> <span class="ruby-ivar">@node</span>.<span class="ruby-identifier">value</span>[<span class="ruby-value">:type</span>]
+241:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;strict&quot;</span>;   <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot; &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;'</span>
+242:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;frameset&quot;</span>; <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Frameset//EN&quot; &quot;http://www.w3.org/TR/html4/frameset.dtd&quot;&gt;'</span>
+243:           <span class="ruby-keyword kw">else</span>             <span class="ruby-value str">'&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;'</span>
+244:           <span class="ruby-keyword kw">end</span>
+245:         <span class="ruby-keyword kw">end</span>
+246:       <span class="ruby-keyword kw">end</span>
+247:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

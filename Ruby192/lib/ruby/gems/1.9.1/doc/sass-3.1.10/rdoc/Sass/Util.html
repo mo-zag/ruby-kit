@@ -1,0 +1,2071 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Sass::Util</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sass/util/subset_map_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/util/subset_map.rb">lib/sass/util/subset_map.rb</a></li>
+					
+						<li><a href="../lib/sass/util_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/util.rb">lib/sass/util.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-_enc">#_enc</a></li>
+					
+					<li><a href="#method-i-abstract">#abstract</a></li>
+					
+					<li><a href="#method-i-ap_geq%3F">#ap_geq?</a></li>
+					
+					<li><a href="#method-i-ap_geq_3%3F">#ap_geq_3?</a></li>
+					
+					<li><a href="#method-i-av_template_class">#av_template_class</a></li>
+					
+					<li><a href="#method-i-caller_info">#caller_info</a></li>
+					
+					<li><a href="#method-i-check_encoding">#check_encoding</a></li>
+					
+					<li><a href="#method-i-check_sass_encoding">#check_sass_encoding</a></li>
+					
+					<li><a href="#method-i-intersperse">#intersperse</a></li>
+					
+					<li><a href="#method-i-ironruby%3F">#ironruby?</a></li>
+					
+					<li><a href="#method-i-lcs">#lcs</a></li>
+					
+					<li><a href="#method-i-map_hash">#map_hash</a></li>
+					
+					<li><a href="#method-i-map_keys">#map_keys</a></li>
+					
+					<li><a href="#method-i-map_vals">#map_vals</a></li>
+					
+					<li><a href="#method-i-merge_adjacent_strings">#merge_adjacent_strings</a></li>
+					
+					<li><a href="#method-i-paths">#paths</a></li>
+					
+					<li><a href="#method-i-powerset">#powerset</a></li>
+					
+					<li><a href="#method-i-rails_env">#rails_env</a></li>
+					
+					<li><a href="#method-i-rails_root">#rails_root</a></li>
+					
+					<li><a href="#method-i-restrict">#restrict</a></li>
+					
+					<li><a href="#method-i-ruby1_8%3F">#ruby1_8?</a></li>
+					
+					<li><a href="#method-i-ruby1_8_6%3F">#ruby1_8_6?</a></li>
+					
+					<li><a href="#method-i-sass_warn">#sass_warn</a></li>
+					
+					<li><a href="#method-i-scope">#scope</a></li>
+					
+					<li><a href="#method-i-silence_sass_warnings">#silence_sass_warnings</a></li>
+					
+					<li><a href="#method-i-silence_warnings">#silence_warnings</a></li>
+					
+					<li><a href="#method-i-strip_string_array">#strip_string_array</a></li>
+					
+					<li><a href="#method-i-substitute">#substitute</a></li>
+					
+					<li><a href="#method-i-to_hash">#to_hash</a></li>
+					
+					<li><a href="#method-i-version_geq">#version_geq</a></li>
+					
+					<li><a href="#method-i-version_gt">#version_gt</a></li>
+					
+					<li><a href="#method-i-windows%3F">#windows?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sass.html">Sass</a></li>
+				
+					<li><a href="../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../Less.html">Less</a></li>
+				
+					<li><a href="../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Sass::Util</h1>
+
+		<div id="description">
+			<p>
+A module containing various useful functions.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="RUBY_VERSION">RUBY_VERSION</a></dt>
+				
+				<dd class="description"><p>
+An array of ints representing the Ruby version number. @api public
+</p></dd>
+				
+			
+				<dt><a name="RUBY_ENGINE">RUBY_ENGINE</a></dt>
+				
+				<dd class="description"><p>
+The Ruby engine we&#8217;re running under. Defaults to `&#8220;ruby&#8221;`
+if the top-level constant is undefined. @api public
+</p></dd>
+				
+			
+				<dt><a name="ENCODINGS_TO_CHECK">ENCODINGS_TO_CHECK</a></dt>
+				
+				<dd class="description"><p>
+We could automatically add in any non-ASCII-compatible encodings here, but
+there&#8217;s not really a good way to do that without manually checking
+that each encoding encodes all ASCII characters properly, which takes long
+enough to affect the startup time of the CLI.
+</p></dd>
+				
+			
+				<dt><a name="CHARSET_REGEXPS">CHARSET_REGEXPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="-enc-method" class="method-detail ">
+				<a name="method-i-_enc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">_enc</span><span
+						class="method-args">(string, encoding)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="-enc-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 493</span>
+493:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">_enc</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">encoding</span>)
+494:         <span class="ruby-identifier">string</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">&quot;BINARY&quot;</span>)
+495:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="abstract-method" class="method-detail ">
+				<a name="method-i-abstract"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">abstract</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Throws a NotImplementedError for an abstract method.
+</p>
+<p>
+@param obj [Object] `self` @raise [NotImplementedError]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="abstract-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 277</span>
+277:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">abstract</span>(<span class="ruby-identifier">obj</span>)
+278:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{obj.class} must implement ##{caller_info[2]}&quot;</span>)
+279:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ap-geq--method" class="method-detail ">
+				<a name="method-i-ap_geq%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ap_geq?</span><span
+						class="method-args">(version)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns whether this environment is using ActionPack of a version greater
+than or equal to that specified.
+</p>
+<p>
+@param version [String] The string version number to check against.
+</p>
+<pre>
+  Should be greater than or equal to Rails 3,
+  because otherwise ActionPack::VERSION isn't autoloaded
+</pre>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ap-geq--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 351</span>
+351:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ap_geq?</span>(<span class="ruby-identifier">version</span>)
+352:       <span class="ruby-comment cmt"># The ActionPack module is always loaded automatically in Rails &gt;= 3</span>
+353:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">ActionPack</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">ActionPack</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>) <span class="ruby-operator">&amp;&amp;</span>
+354:         <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">ActionPack</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span><span class="ruby-operator">::</span><span class="ruby-constant">STRING</span>)
+355: 
+356:       <span class="ruby-identifier">version_geq</span>(<span class="ruby-constant">ActionPack</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span><span class="ruby-operator">::</span><span class="ruby-constant">STRING</span>, <span class="ruby-identifier">version</span>)
+357:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ap-geq--method" class="method-detail ">
+				<a name="method-i-ap_geq_3%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ap_geq_3?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns whether this environment is using ActionPack version 3.0.0 or
+greater.
+</p>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ap-geq--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 340</span>
+340:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ap_geq_3?</span>
+341:       <span class="ruby-identifier">ap_geq?</span>(<span class="ruby-value str">&quot;3.0.0.beta1&quot;</span>)
+342:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="av-template-class-method" class="method-detail ">
+				<a name="method-i-av_template_class"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">av_template_class</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an ActionView::Template* class. In pre-3.0 versions of Rails, most
+of these classes were of the form `ActionView::TemplateFoo`, while
+afterwards they were of the form `ActionView;:Template::Foo`.
+</p>
+<p>
+@param name [#] The name of the class to get.
+</p>
+<pre>
+  For example, `:Error` will return `ActionView::TemplateError`
+  or `ActionView::Template::Error`.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="av-template-class-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 367</span>
+367:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">av_template_class</span>(<span class="ruby-identifier">name</span>)
+368:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">ActionView</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-node">&quot;Template#{name}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">ActionView</span>.<span class="ruby-identifier">const_defined?</span>(<span class="ruby-node">&quot;Template#{name}&quot;</span>)
+369:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">ActionView</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>)
+370:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="caller-info-method" class="method-detail ">
+				<a name="method-i-caller_info"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">caller_info</span><span
+						class="method-args">(entry = caller[1])</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns information about the caller of the previous method.
+</p>
+<p>
+@param entry [String] An entry in the `#` list, or a similarly formatted
+string @return [[String, Fixnum, (String, nil)]] An array containing the
+filename, line, and method name of the caller.
+</p>
+<pre>
+  The method name may be nil</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="caller-info-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 227</span>
+227:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">caller_info</span>(<span class="ruby-identifier">entry</span> = <span class="ruby-identifier">caller</span>[<span class="ruby-value">1</span>])
+228:       <span class="ruby-identifier">info</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^(.*?):(-?.*?)(?::.*`(.+)')?$/</span>).<span class="ruby-identifier">first</span>
+229:       <span class="ruby-identifier">info</span>[<span class="ruby-value">1</span>] = <span class="ruby-identifier">info</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_i</span>
+230:       <span class="ruby-comment cmt"># This is added by Rubinius to designate a block, but we don't care about it.</span>
+231:       <span class="ruby-identifier">info</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp re">/ \{\}\Z/</span>, <span class="ruby-value str">''</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">info</span>[<span class="ruby-value">2</span>]
+232:       <span class="ruby-identifier">info</span>
+233:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="check-encoding-method" class="method-detail ">
+				<a name="method-i-check_encoding"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_encoding</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks that the encoding of a string is valid in Ruby 1.9 and cleans up
+potential encoding gotchas like the UTF-8 BOM. If it&#8217;s not, yields an
+error string describing the invalid character and the line on which it
+occurrs.
+</p>
+<p>
+@param str [String] The string of which to check the encoding @yield [msg]
+A block in which an encoding error can be raised.
+</p>
+<pre>
+  Only yields if there is an encoding error
+</pre>
+<p>
+@yieldparam msg [String] The error message to be raised @return [String]
+`str`, potentially with encoding gotchas like BOMs removed
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="check-encoding-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 420</span>
+420:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_encoding</span>(<span class="ruby-identifier">str</span>)
+421:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ruby1_8?</span>
+422:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\A\xEF\xBB\xBF/</span>, <span class="ruby-value str">''</span>) <span class="ruby-comment cmt"># Get rid of the UTF-8 BOM</span>
+423:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">valid_encoding?</span>
+424:         <span class="ruby-comment cmt"># Get rid of the Unicode BOM if possible</span>
+425:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^UTF-(8|16|32)(BE|LE)?$/</span>
+426:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;\\A\uFEFF&quot;</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>.<span class="ruby-identifier">name</span>)), <span class="ruby-value str">''</span>)
+427:         <span class="ruby-keyword kw">else</span>
+428:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">str</span>
+429:         <span class="ruby-keyword kw">end</span>
+430:       <span class="ruby-keyword kw">end</span>
+431: 
+432:       <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>
+433:       <span class="ruby-identifier">newlines</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;\r\n|\r|\n&quot;</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">&quot;binary&quot;</span>))
+434:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">&quot;binary&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-identifier">newlines</span>).<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+435:         <span class="ruby-keyword kw">begin</span>
+436:           <span class="ruby-identifier">line</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">encoding</span>)
+437:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UndefinedConversionError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+438:           <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">&lt;&lt;</span><span class="ruby-constant">MSG</span>.<span class="ruby-identifier">rstrip</span>, <span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+439: <span class="ruby-constant">Invalid</span> <span class="ruby-comment cmt">#{encoding.name} character #{e.error_char.dump}</span>
+440: <span class="ruby-constant">MSG</span>
+441:         <span class="ruby-keyword kw">end</span>
+442:       <span class="ruby-keyword kw">end</span>
+443:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">str</span>
+444:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="check-sass-encoding-method" class="method-detail ">
+				<a name="method-i-check_sass_encoding"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_sass_encoding</span><span
+						class="method-args">(str, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Like {#check_encoding}, but also checks for a `@charset` declaration at the
+beginning of the file and uses that encoding if it exists.
+</p>
+<p>
+The <a href="../Sass.html">Sass</a> encoding rules are simple. If a
+`@charset` declaration exists, we assume that that&#8217;s the original
+encoding of the document. Otherwise, we use whatever encoding Ruby has.
+Then we convert that to UTF-8 to process internally. The UTF-8 end result
+is what&#8217;s returned by this method.
+</p>
+<p>
+@param str [String] The string of which to check the encoding @yield [msg]
+A block in which an encoding error can be raised.
+</p>
+<pre>
+  Only yields if there is an encoding error
+</pre>
+<p>
+@yieldparam msg [String] The error message to be raised @return [(String,
+Encoding)] The original string encoded as UTF-8,
+</p>
+<pre>
+  and the source encoding of the string (or `nil` under Ruby 1.8)
+</pre>
+<p>
+@raise [Encoding::UndefinedConversionError] if the source encoding
+</p>
+<pre>
+  cannot be converted to UTF-8
+</pre>
+<p>
+@raise [ArgumentError] if the document uses an unknown encoding with
+`@charset`
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="check-sass-encoding-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 465</span>
+465:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_sass_encoding</span>(<span class="ruby-identifier">str</span>, &amp;<span class="ruby-identifier">block</span>)
+466:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">check_encoding</span>(<span class="ruby-identifier">str</span>, &amp;<span class="ruby-identifier">block</span>), <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ruby1_8?</span>
+467:       <span class="ruby-comment cmt"># We allow any printable ASCII characters but double quotes in the charset decl</span>
+468:       <span class="ruby-identifier">bin</span> = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">&quot;BINARY&quot;</span>)
+469:       <span class="ruby-identifier">encoding</span> = <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">ENCODINGS_TO_CHECK</span>.<span class="ruby-identifier">find</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">enc</span><span class="ruby-operator">|</span>
+470:         <span class="ruby-identifier">bin</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">CHARSET_REGEXPS</span>[<span class="ruby-identifier">enc</span>]
+471:       <span class="ruby-keyword kw">end</span>
+472:       <span class="ruby-identifier">charset</span>, <span class="ruby-identifier">bom</span> = <span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>
+473:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">charset</span>
+474:         <span class="ruby-identifier">charset</span> = <span class="ruby-identifier">charset</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">encoding</span>).<span class="ruby-identifier">encode</span>(<span class="ruby-value str">&quot;UTF-8&quot;</span>)
+475:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">endianness</span> = <span class="ruby-identifier">encoding</span>[<span class="ruby-regexp re">/[BL]E$/</span>]
+476:           <span class="ruby-keyword kw">begin</span>
+477:             <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">charset</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">endianness</span>)
+478:             <span class="ruby-identifier">charset</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">endianness</span>
+479:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span> <span class="ruby-comment cmt"># Encoding charset + endianness doesn't exist</span>
+480:           <span class="ruby-keyword kw">end</span>
+481:         <span class="ruby-keyword kw">end</span>
+482:         <span class="ruby-identifier">str</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">charset</span>)
+483:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">bom</span>
+484:         <span class="ruby-identifier">str</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-identifier">encoding</span>)
+485:       <span class="ruby-keyword kw">end</span>
+486: 
+487:       <span class="ruby-identifier">str</span> = <span class="ruby-identifier">check_encoding</span>(<span class="ruby-identifier">str</span>, &amp;<span class="ruby-identifier">block</span>)
+488:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-value str">&quot;UTF-8&quot;</span>), <span class="ruby-identifier">str</span>.<span class="ruby-identifier">encoding</span>
+489:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="intersperse-method" class="method-detail ">
+				<a name="method-i-intersperse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">intersperse</span><span
+						class="method-args">(enum, val)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Intersperses a value in an enumerable, as would be done with `Array#join`
+but without concatenating the array together afterwards.
+</p>
+<p>
+@param enum [Enumerable] @param val @return [Array]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="intersperse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersperse</span>(<span class="ruby-identifier">enum</span>, <span class="ruby-identifier">val</span>)
+155:       <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">inject</span>([]) {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>}[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>]
+156:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ironruby--method" class="method-detail ">
+				<a name="method-i-ironruby%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ironruby?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Whether or not this is running on IronRuby.
+</p>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ironruby--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 384</span>
+384:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ironruby?</span>
+385:       <span class="ruby-constant">RUBY_ENGINE</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;ironruby&quot;</span>
+386:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lcs-method" class="method-detail ">
+				<a name="method-i-lcs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lcs</span><span
+						class="method-args">(x, y, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Computes a single longest common subsequence for `x` and `y`. If there are
+more than one longest common subsequences, the one returned is that which
+starts first in `x`.
+</p>
+<p>
+@param x [Array] @param y [Array] @yield [a, b] An optional block to use in
+place of a check for equality
+</p>
+<pre>
+  between elements of `x` and `y`.
+</pre>
+<p>
+@yieldreturn [<a href="../Object.html">Object</a>, nil] If the two values
+register as equal,
+</p>
+<pre>
+  this will return the value to use in the LCS array.
+</pre>
+<p>
+@return [Array] The LCS
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lcs-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 215</span>
+215:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lcs</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, &amp;<span class="ruby-identifier">block</span>)
+216:       <span class="ruby-identifier">x</span> = [<span class="ruby-keyword kw">nil</span>, *<span class="ruby-identifier">x</span>]
+217:       <span class="ruby-identifier">y</span> = [<span class="ruby-keyword kw">nil</span>, *<span class="ruby-identifier">y</span>]
+218:       <span class="ruby-identifier">block</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">proc</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">a</span>}
+219:       <span class="ruby-identifier">lcs_backtrace</span>(<span class="ruby-identifier">lcs_table</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, &amp;<span class="ruby-identifier">block</span>), <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">x</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, <span class="ruby-identifier">y</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, &amp;<span class="ruby-identifier">block</span>)
+220:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="map-hash-method" class="method-detail ">
+				<a name="method-i-map_hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">map_hash</span><span
+						class="method-args">(hash, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Maps the key-value pairs of a hash according to a block.
+</p>
+<p>
+@example
+</p>
+<pre>
+  map_hash({:foo =&gt; &quot;bar&quot;, :baz =&gt; &quot;bang&quot;}) {|k, v| [k.to_s, v.to_sym]}
+    #=&gt; {&quot;foo&quot; =&gt; :bar, &quot;baz&quot; =&gt; :bang}
+</pre>
+<p>
+@param hash [Hash] The hash to map @yield [key, value] A block in which the
+key-value pairs are transformed @yieldparam [key] The hash key @yieldparam
+[value] The hash value @yieldreturn [(<a href="../Object.html">Object</a>,
+<a href="../Object.html">Object</a>)] The new value for the `[key, value]`
+pair @return [Hash] The mapped hash @see <a
+href="Util.html#method-i-map_keys">#</a> @see <a
+href="Util.html#method-i-map_vals">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="map-hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/util.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_hash</span>(<span class="ruby-identifier">hash</span>, &amp;<span class="ruby-identifier">block</span>)
+90:       <span class="ruby-identifier">to_hash</span>(<span class="ruby-identifier">hash</span>.<span class="ruby-identifier">map</span>(&amp;<span class="ruby-identifier">block</span>))
+91:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="map-keys-method" class="method-detail ">
+				<a name="method-i-map_keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">map_keys</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Maps the keys in a hash according to a block.
+</p>
+<p>
+@example
+</p>
+<pre>
+  map_keys({:foo =&gt; &quot;bar&quot;, :baz =&gt; &quot;bang&quot;}) {|k| k.to_s}
+    #=&gt; {&quot;foo&quot; =&gt; &quot;bar&quot;, &quot;baz&quot; =&gt; &quot;bang&quot;}
+</pre>
+<p>
+@param hash [Hash] The hash to map @yield [key] A block in which the keys
+are transformed @yieldparam key [Object] The key that should be mapped
+@yieldreturn [Object] The new value for the key @return [Hash] The mapped
+hash @see <a href="Util.html#method-i-map_vals">#</a> @see <a
+href="Util.html#method-i-map_hash">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="map-keys-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/util.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_keys</span>(<span class="ruby-identifier">hash</span>)
+57:       <span class="ruby-identifier">to_hash</span>(<span class="ruby-identifier">hash</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [<span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">k</span>), <span class="ruby-identifier">v</span>]})
+58:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="map-vals-method" class="method-detail ">
+				<a name="method-i-map_vals"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">map_vals</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Maps the values in a hash according to a block.
+</p>
+<p>
+@example
+</p>
+<pre>
+  map_values({:foo =&gt; &quot;bar&quot;, :baz =&gt; &quot;bang&quot;}) {|v| v.to_sym}
+    #=&gt; {:foo =&gt; :bar, :baz =&gt; :bang}
+</pre>
+<p>
+@param hash [Hash] The hash to map @yield [value] A block in which the
+values are transformed @yieldparam value [Object] The value that should be
+mapped @yieldreturn [Object] The new value for the value @return [Hash] The
+mapped hash @see <a href="Util.html#method-i-map_keys">#</a> @see <a
+href="Util.html#method-i-map_hash">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="map-vals-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/util.rb, line 72</span>
+72:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_vals</span>(<span class="ruby-identifier">hash</span>)
+73:       <span class="ruby-identifier">to_hash</span>(<span class="ruby-identifier">hash</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">k</span>, <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">v</span>)]})
+74:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="merge-adjacent-strings-method" class="method-detail ">
+				<a name="method-i-merge_adjacent_strings"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">merge_adjacent_strings</span><span
+						class="method-args">(arr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Concatenates all strings that are adjacent in an array, while leaving other
+elements as they are.
+</p>
+<p>
+@example
+</p>
+<pre>
+  merge_adjacent_strings([1, &quot;foo&quot;, &quot;bar&quot;, 2, &quot;baz&quot;])
+    #=&gt; [1, &quot;foobar&quot;, 2, &quot;baz&quot;]
+</pre>
+<p>
+@param arr [Array] @return [Array] The enumerable with strings merged
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="merge-adjacent-strings-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 131</span>
+131:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">merge_adjacent_strings</span>(<span class="ruby-identifier">arr</span>)
+132:       <span class="ruby-comment cmt"># Optimize for the common case of one element</span>
+133:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+134:       <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+135:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+136:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+137:             <span class="ruby-identifier">a</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>
+138:           <span class="ruby-keyword kw">else</span>
+139:             <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">dup</span>
+140:           <span class="ruby-keyword kw">end</span>
+141:         <span class="ruby-keyword kw">else</span>
+142:           <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>
+143:         <span class="ruby-keyword kw">end</span>
+144:         <span class="ruby-identifier">a</span>
+145:       <span class="ruby-keyword kw">end</span>
+146:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="paths-method" class="method-detail ">
+				<a name="method-i-paths"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">paths</span><span
+						class="method-args">(arrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return an array of all possible paths through the given arrays.
+</p>
+<p>
+@param arrs [Array<Array>] @return [Array<Arrays>]
+</p>
+<p>
+@example
+</p>
+<pre>
+  paths([[1, 2], [3, 4], [5]]) #=&gt;
+    # [[1, 3, 5],
+    #  [2, 3, 5],
+    #  [1, 4, 5],
+    #  [2, 4, 5]]</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="paths-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 198</span>
+198:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paths</span>(<span class="ruby-identifier">arrs</span>)
+199:       <span class="ruby-identifier">arrs</span>.<span class="ruby-identifier">inject</span>([[]]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">paths</span>, <span class="ruby-identifier">arr</span><span class="ruby-operator">|</span>
+200:         <span class="ruby-identifier">flatten</span>(<span class="ruby-identifier">arr</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">e</span>]}}, <span class="ruby-value">1</span>)
+201:       <span class="ruby-keyword kw">end</span>
+202:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="powerset-method" class="method-detail ">
+				<a name="method-i-powerset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">powerset</span><span
+						class="method-args">(arr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Computes the powerset of the given array. This is the set of all subsets of
+the array.
+</p>
+<p>
+@example
+</p>
+<pre>
+  powerset([1, 2, 3]) #=&gt;
+    Set[Set[], Set[1], Set[2], Set[3], Set[1, 2], Set[2, 3], Set[1, 3], Set[1, 2, 3]]
+</pre>
+<p>
+@param arr [Enumerable] @return [Set<Set>] The subsets of `arr`
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="powerset-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 101</span>
+101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">powerset</span>(<span class="ruby-identifier">arr</span>)
+102:       <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">inject</span>([<span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>].<span class="ruby-identifier">to_set</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">powerset</span>, <span class="ruby-identifier">el</span><span class="ruby-operator">|</span>
+103:         <span class="ruby-identifier">new_powerset</span> = <span class="ruby-constant">Set</span>.<span class="ruby-identifier">new</span>
+104:         <span class="ruby-identifier">powerset</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">subset</span><span class="ruby-operator">|</span>
+105:           <span class="ruby-identifier">new_powerset</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">subset</span>
+106:           <span class="ruby-identifier">new_powerset</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">subset</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">el</span>]
+107:         <span class="ruby-keyword kw">end</span>
+108:         <span class="ruby-identifier">new_powerset</span>
+109:       <span class="ruby-keyword kw">end</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rails-env-method" class="method-detail ">
+				<a name="method-i-rails_env"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rails_env</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the environment of the Rails application, if this is running in a
+Rails context. Returns `nil` if no such environment is defined.
+</p>
+<p>
+@return [String, nil]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rails-env-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 330</span>
+330:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rails_env</span>
+331:       <span class="ruby-keyword kw">return</span> <span class="ruby-operator">::</span><span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Rails</span>.<span class="ruby-identifier">env</span>)
+332:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">RAILS_ENV</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">RAILS_ENV</span>)
+333:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+334:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rails-root-method" class="method-detail ">
+				<a name="method-i-rails_root"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rails_root</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the root of the Rails application, if this is running in a Rails
+context. Returns `nil` if no such root is defined.
+</p>
+<p>
+@return [String, nil]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rails-root-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 316</span>
+316:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rails_root</span>
+317:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>)
+318:         <span class="ruby-keyword kw">return</span> <span class="ruby-operator">::</span><span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">::</span><span class="ruby-constant">Rails</span>.<span class="ruby-identifier">root</span>
+319:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;ERROR: Rails.root is nil!&quot;</span>
+320:       <span class="ruby-keyword kw">end</span>
+321:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">RAILS_ROOT</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">RAILS_ROOT</span>)
+322:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+323:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="restrict-method" class="method-detail ">
+				<a name="method-i-restrict"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">restrict</span><span
+						class="method-args">(value, range)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Restricts a number to falling within a given range. Returns the number if
+it falls within the range, or the closest value in the range if it
+doesn&#8217;t.
+</p>
+<p>
+@param value [Numeric] @param range [Range<Numeric>] @return [Numeric]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="restrict-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 119</span>
+119:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restrict</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">range</span>)
+120:       [[<span class="ruby-identifier">value</span>, <span class="ruby-identifier">range</span>.<span class="ruby-identifier">first</span>].<span class="ruby-identifier">max</span>, <span class="ruby-identifier">range</span>.<span class="ruby-identifier">last</span>].<span class="ruby-identifier">min</span>
+121:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ruby--method" class="method-detail ">
+				<a name="method-i-ruby1_8%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ruby1_8?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Whether or not this is running under Ruby 1.8 or lower.
+</p>
+<p>
+Note that IronRuby counts as Ruby 1.8, because it doesn&#8217;t support the
+Ruby 1.9 encoding API.
+</p>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ruby--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 396</span>
+396:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ruby1_8?</span>
+397:       <span class="ruby-comment cmt"># IronRuby says its version is 1.9, but doesn't support any of the encoding APIs.</span>
+398:       <span class="ruby-comment cmt"># We have to fall back to 1.8 behavior.</span>
+399:       <span class="ruby-identifier">ironruby?</span> <span class="ruby-operator">||</span> (<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">RUBY_VERSION</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">RUBY_VERSION</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-value">9</span>)
+400:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ruby--method" class="method-detail ">
+				<a name="method-i-ruby1_8_6%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ruby1_8_6?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Whether or not this is running under Ruby 1.8.6 or lower. Note that lower
+versions are not officially supported.
+</p>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ruby--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 406</span>
+406:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ruby1_8_6?</span>
+407:       <span class="ruby-identifier">ruby1_8?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span><span class="ruby-operator">::</span><span class="ruby-constant">RUBY_VERSION</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-value">7</span>
+408:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sass-warn-method" class="method-detail ">
+				<a name="method-i-sass_warn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sass_warn</span><span
+						class="method-args">(msg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The same as `Kernel#warn`, but is silenced by {#silence_sass_warnings}.
+</p>
+<p>
+@param msg [String]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sass-warn-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 305</span>
+305:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sass_warn</span>(<span class="ruby-identifier">msg</span>)
+306:       <span class="ruby-constant">Sass</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">warn</span>(<span class="ruby-identifier">msg</span>)
+307:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scope-method" class="method-detail ">
+				<a name="method-i-scope"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scope</span><span
+						class="method-args">(file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the path of a file relative to the <a href="../Sass.html">Sass</a>
+root directory.
+</p>
+<p>
+@param file [String] The filename relative to the <a
+href="../Sass.html">Sass</a> root @return [String] The filename relative to
+the the working directory
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="scope-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/util.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scope</span>(<span class="ruby-identifier">file</span>)
+30:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">ROOT_DIR</span>, <span class="ruby-identifier">file</span>)
+31:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="silence-sass-warnings-method" class="method-detail ">
+				<a name="method-i-silence_sass_warnings"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">silence_sass_warnings</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Silences all <a href="../Sass.html">Sass</a> warnings within a block.
+</p>
+<p>
+@yield A block in which no <a href="../Sass.html">Sass</a> warnings will be
+printed
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="silence-sass-warnings-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 295</span>
+295:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">silence_sass_warnings</span>
+296:       <span class="ruby-identifier">old_level</span>, <span class="ruby-constant">Sass</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">log_level</span> = <span class="ruby-constant">Sass</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">log_level</span>, <span class="ruby-value">:error</span>
+297:       <span class="ruby-keyword kw">yield</span>
+298:     <span class="ruby-keyword kw">ensure</span>
+299:       <span class="ruby-constant">Sass</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">log_level</span> = <span class="ruby-identifier">old_level</span>
+300:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="silence-warnings-method" class="method-detail ">
+				<a name="method-i-silence_warnings"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">silence_warnings</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Silence all output to STDERR within a block.
+</p>
+<p>
+@yield A block in which no output will be printed to STDERR
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="silence-warnings-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 284</span>
+284:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">silence_warnings</span>
+285:       <span class="ruby-identifier">the_real_stderr</span>, <span class="ruby-identifier">$stderr</span> = <span class="ruby-identifier">$stderr</span>, <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>
+286:       <span class="ruby-keyword kw">yield</span>
+287:     <span class="ruby-keyword kw">ensure</span>
+288:       <span class="ruby-identifier">$stderr</span> = <span class="ruby-identifier">the_real_stderr</span>
+289:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strip-string-array-method" class="method-detail ">
+				<a name="method-i-strip_string_array"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strip_string_array</span><span
+						class="method-args">(arr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Destructively strips whitespace from the beginning and end of the first and
+last elements, respectively, in the array (if those elements are strings).
+</p>
+<p>
+@param arr [Array] @return [Array] `arr`
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="strip-string-array-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 181</span>
+181:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strip_string_array</span>(<span class="ruby-identifier">arr</span>)
+182:       <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">lstrip!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+183:       <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">rstrip!</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+184:       <span class="ruby-identifier">arr</span>
+185:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="substitute-method" class="method-detail ">
+				<a name="method-i-substitute"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">substitute</span><span
+						class="method-args">(ary, from, to)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Substitutes a sub-array of one array with another sub-array.
+</p>
+<p>
+@param ary [Array] The array in which to make the substitution @param from
+[Array] The sequence of elements to replace with `to` @param to [Array] The
+sequence of elements to replace `from` with
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="substitute-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 163</span>
+163:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">substitute</span>(<span class="ruby-identifier">ary</span>, <span class="ruby-identifier">from</span>, <span class="ruby-identifier">to</span>)
+164:       <span class="ruby-identifier">res</span> = <span class="ruby-identifier">ary</span>.<span class="ruby-identifier">dup</span>
+165:       <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+166:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">size</span>
+167:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">res</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">...</span><span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-identifier">from</span>.<span class="ruby-identifier">size</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">from</span>
+168:           <span class="ruby-identifier">res</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">...</span><span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-identifier">from</span>.<span class="ruby-identifier">size</span>] = <span class="ruby-identifier">to</span>
+169:         <span class="ruby-keyword kw">end</span>
+170:         <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+171:       <span class="ruby-keyword kw">end</span>
+172:       <span class="ruby-identifier">res</span>
+173:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-hash-method" class="method-detail ">
+				<a name="method-i-to_hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_hash</span><span
+						class="method-args">(arr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts an array of `[key, value]` pairs to a hash.
+</p>
+<p>
+@example
+</p>
+<pre>
+  to_hash([[:foo, &quot;bar&quot;], [:baz, &quot;bang&quot;]])
+    #=&gt; {:foo =&gt; &quot;bar&quot;, :baz =&gt; &quot;bang&quot;}
+</pre>
+<p>
+@param arr [Array<(<a href="../Object.html">Object</a>, <a
+href="../Object.html">Object</a>)>] An array of pairs @return [Hash] A hash
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/util.rb, line 40</span>
+40:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_hash</span>(<span class="ruby-identifier">arr</span>)
+41:       <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">arr</span>.<span class="ruby-identifier">compact</span>]
+42:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="version-geq-method" class="method-detail ">
+				<a name="method-i-version_geq"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">version_geq</span><span
+						class="method-args">(v1, v2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns whether one version string represents the same or a more recent
+version than another.
+</p>
+<p>
+@param v1 [String] A version string. @param v2 [String] Another version
+string. @return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="version-geq-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 269</span>
+269:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version_geq</span>(<span class="ruby-identifier">v1</span>, <span class="ruby-identifier">v2</span>)
+270:       <span class="ruby-identifier">version_gt</span>(<span class="ruby-identifier">v1</span>, <span class="ruby-identifier">v2</span>) <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">version_gt</span>(<span class="ruby-identifier">v2</span>, <span class="ruby-identifier">v1</span>)
+271:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="version-gt-method" class="method-detail ">
+				<a name="method-i-version_gt"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">version_gt</span><span
+						class="method-args">(v1, v2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns whether one version string represents a more recent version than
+another.
+</p>
+<p>
+@param v1 [String] A version string. @param v2 [String] Another version
+string. @return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="version-gt-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 240</span>
+240:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version_gt</span>(<span class="ruby-identifier">v1</span>, <span class="ruby-identifier">v2</span>)
+241:       <span class="ruby-comment cmt"># Construct an array to make sure the shorter version is padded with nil</span>
+242:       <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>([<span class="ruby-identifier">v1</span>.<span class="ruby-identifier">length</span>, <span class="ruby-identifier">v2</span>.<span class="ruby-identifier">length</span>].<span class="ruby-identifier">max</span>).<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">v1</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;.&quot;</span>), <span class="ruby-identifier">v2</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;.&quot;</span>)) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span><span class="ruby-operator">|</span>
+243:         <span class="ruby-identifier">p1</span> <span class="ruby-operator">||=</span> <span class="ruby-value str">&quot;0&quot;</span>
+244:         <span class="ruby-identifier">p2</span> <span class="ruby-operator">||=</span> <span class="ruby-value str">&quot;0&quot;</span>
+245:         <span class="ruby-identifier">release1</span> = <span class="ruby-identifier">p1</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[0-9]+$/</span>
+246:         <span class="ruby-identifier">release2</span> = <span class="ruby-identifier">p2</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[0-9]+$/</span>
+247:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">release1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">release2</span>
+248:           <span class="ruby-comment cmt"># Integer comparison if both are full releases</span>
+249:           <span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span> = <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">p2</span>.<span class="ruby-identifier">to_i</span>
+250:           <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">p2</span>
+251:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">p1</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">p2</span>
+252:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">release1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">release2</span>
+253:           <span class="ruby-comment cmt"># String comparison if both are prereleases</span>
+254:           <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">p1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">p2</span>
+255:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">p1</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">p2</span>
+256:         <span class="ruby-keyword kw">else</span>
+257:           <span class="ruby-comment cmt"># If only one is a release, that one is newer</span>
+258:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">release1</span>
+259:         <span class="ruby-keyword kw">end</span>
+260:       <span class="ruby-keyword kw">end</span>
+261:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-i-windows%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Whether or not this is running on Windows.
+</p>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/util.rb, line 377</span>
+377:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows?</span>
+378:       <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'host_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/mswin|windows|mingw/</span>
+379:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

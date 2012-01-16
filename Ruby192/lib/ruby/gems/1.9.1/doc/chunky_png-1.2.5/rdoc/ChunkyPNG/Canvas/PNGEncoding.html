@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Canvas::PNGEncoding</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/chunky_png/canvas/png_encoding_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/png_encoding.rb">lib/chunky_png/canvas/png_encoding.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-determine_png_encoding">#determine_png_encoding</a></li>
+					
+					<li><a href="#method-i-encode_png_image_pass_to_stream">#encode_png_image_pass_to_stream</a></li>
+					
+					<li><a href="#method-i-encode_png_image_with_interlacing">#encode_png_image_with_interlacing</a></li>
+					
+					<li><a href="#method-i-encode_png_image_without_interlacing">#encode_png_image_without_interlacing</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_grayscale_1bit">#encode_png_pixels_to_scanline_grayscale_1bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_grayscale_2bit">#encode_png_pixels_to_scanline_grayscale_2bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_grayscale_4bit">#encode_png_pixels_to_scanline_grayscale_4bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_grayscale_8bit">#encode_png_pixels_to_scanline_grayscale_8bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_grayscale_alpha_8bit">#encode_png_pixels_to_scanline_grayscale_alpha_8bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_indexed_1bit">#encode_png_pixels_to_scanline_indexed_1bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_indexed_2bit">#encode_png_pixels_to_scanline_indexed_2bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_indexed_4bit">#encode_png_pixels_to_scanline_indexed_4bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_indexed_8bit">#encode_png_pixels_to_scanline_indexed_8bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_method">#encode_png_pixels_to_scanline_method</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_truecolor_8bit">#encode_png_pixels_to_scanline_truecolor_8bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixels_to_scanline_truecolor_alpha_8bit">#encode_png_pixels_to_scanline_truecolor_alpha_8bit</a></li>
+					
+					<li><a href="#method-i-encode_png_pixelstream">#encode_png_pixelstream</a></li>
+					
+					<li><a href="#method-i-encode_png_str_scanline_average">#encode_png_str_scanline_average</a></li>
+					
+					<li><a href="#method-i-encode_png_str_scanline_none">#encode_png_str_scanline_none</a></li>
+					
+					<li><a href="#method-i-encode_png_str_scanline_paeth">#encode_png_str_scanline_paeth</a></li>
+					
+					<li><a href="#method-i-encode_png_str_scanline_sub">#encode_png_str_scanline_sub</a></li>
+					
+					<li><a href="#method-i-encode_png_str_scanline_up">#encode_png_str_scanline_up</a></li>
+					
+					<li><a href="#method-i-save">#save</a></li>
+					
+					<li><a href="#method-i-to_blob">#to_blob</a></li>
+					
+					<li><a href="#method-i-to_datastream">#to_datastream</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+					<li><a href="#method-i-to_string">#to_string</a></li>
+					
+					<li><a href="#method-i-write">#write</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Canvas::PNGEncoding</h1>
+
+		<div id="description">
+			<p>
+Methods for encoding a <a href="../Canvas.html">Canvas</a> instance into a
+PNG datastream.
+</p>
+<p>
+Overview of the encoding process:
+</p>
+<ul>
+<li><p>
+The image is split up in scanlines (i.e. rows of pixels);
+</p>
+</li>
+<li><p>
+All pixels are encoded as a pixelstream, based on the color mode.
+</p>
+</li>
+<li><p>
+All the pixel bytes in the pixelstream are adjusted using a filtering 
+method if one is specified.
+</p>
+</li>
+<li><p>
+Compress the resulting string using deflate compression.
+</p>
+</li>
+<li><p>
+Split compressed data over one or more PNG chunks.
+</p>
+</li>
+<li><p>
+These chunks should be embedded in a datastream with at least a IHDR and 
+IEND chunk and possibly a PLTE chunk.
+</p>
+</li>
+</ul>
+<p>
+For interlaced images, the initial image is first split into 7 subimages.
+These images get encoded exactly as above, and the result gets combined
+before the compression step.
+</p>
+<p>
+@see <a href="PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a> @see <a
+href="http://www.w3.org/TR/PNG/">www.w3.org/TR/PNG/</a> The W3C PNG format
+specification
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="encoding-palette-attribute-method" class="method-detail">
+				<a name="encoding_palette"></a>
+				
+				<a name="encoding_palette="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">encoding_palette</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The palette used for encoding the image.This is only in used for images
+that get encoded using indexed colors. @return [ChunkyPNG::Palette]
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="save-method" class="method-detail ">
+				<a name="method-i-save"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">save</span><span
+						class="method-args">(filename, constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Writes the canvas to a file, encoded as a PNG image. @param [String]
+filename The file to save the PNG image to. @param constraints (see <a
+href="PNGEncoding.html#method-i-to_datastream">ChunkyPNG::Canvas::PNGEncoding#to_datastream</a>)
+@return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="save-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 42</span>
+42:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">constraints</span> = {})
+43:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-value str">'wb'</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">constraints</span>) }
+44:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-blob-method" class="method-detail ">
+				<a name="method-i-to_blob"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_blob</span><span
+						class="method-args">(constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encoded the canvas to a PNG formatted string. @param constraints (see <a
+href="PNGEncoding.html#method-i-to_datastream">ChunkyPNG::Canvas::PNGEncoding#to_datastream</a>)
+@return [String] The PNG encoded canvas as string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-blob-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 49</span>
+49:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_blob</span>(<span class="ruby-identifier">constraints</span> = {})
+50:         <span class="ruby-identifier">to_datastream</span>(<span class="ruby-identifier">constraints</span>).<span class="ruby-identifier">to_blob</span>
+51:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="PNGEncoding.html#method-i-to_string">to_string</a>, <a href="PNGEncoding.html#method-i-to_s">to_s</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="to-datastream-method" class="method-detail ">
+				<a name="method-i-to_datastream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_datastream</span><span
+						class="method-args">(constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts this <a href="../Canvas.html">Canvas</a> to a datastream, so that
+it can be saved as a PNG image. @param [Hash, Symbol] constraints The
+constraints to use when encoding the canvas.
+</p>
+<pre>
+   This can either be a hash with different constraints, or a symbol which acts as a 
+   preset for some constraints. If no constraints are given, ChunkyPNG will decide  
+   for itself how to best create the PNG datastream. 
+   Supported presets are &lt;tt&gt;:fast_rgba&lt;/tt&gt; for quickly saving images with transparency,
+   &lt;tt&gt;:fast_rgb&lt;/tt&gt; for quickly saving opaque images, and &lt;tt&gt;:best_compression&lt;/tt&gt; to
+   obtain the smallest possible filesize.
+</pre>
+<p>
+@option constraints [Fixnum] :color_mode The color mode to use. Use one of
+the 
+</p>
+<pre>
+   ChunkyPNG::COLOR_* constants.
+</pre>
+<p>
+@option constraints [true, false] :interlace Whether to use interlacing.
+@option constraints [Fixnum] :compression The compression level for Zlib.
+This can be a
+</p>
+<pre>
+   value between 0 and 9, or a Zlib constant like Zlib::BEST_COMPRESSION.
+</pre>
+<p>
+@option constraints [Fixnum] :bit_depth The bit depth to use. This option
+is only used
+</p>
+<pre>
+   for indexed images, in which case it overrides the determined minimal bit depth. For
+   all the other color modes, a bit depth of 8 is used.
+</pre>
+<p>
+@return [ChunkyPNG::Datastream] The PNG datastream containing the encoded
+canvas. @see <a
+href="PNGEncoding.html#method-i-determine_png_encoding">ChunkyPNG::Canvas::PNGEncoding#determine_png_encoding</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-datastream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 74</span>
+74:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_datastream</span>(<span class="ruby-identifier">constraints</span> = {})
+75:         <span class="ruby-identifier">encoding</span> = <span class="ruby-identifier">determine_png_encoding</span>(<span class="ruby-identifier">constraints</span>)
+76: 
+77:         <span class="ruby-identifier">ds</span> = <span class="ruby-constant">Datastream</span>.<span class="ruby-identifier">new</span>
+78:         <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">header_chunk</span> = <span class="ruby-constant">Chunk</span><span class="ruby-operator">::</span><span class="ruby-constant">Header</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:width</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">width</span>, <span class="ruby-value">:height</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">height</span>,
+79:             <span class="ruby-value">:color</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:color_mode</span>], <span class="ruby-value">:depth</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:bit_depth</span>], <span class="ruby-value">:interlace</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:interlace</span>])
+80: 
+81:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:color_mode</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_INDEXED</span>
+82:           <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">palette_chunk</span>      = <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">to_plte_chunk</span>
+83:           <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">transparency_chunk</span> = <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">to_trns_chunk</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">opaque?</span>
+84:         <span class="ruby-keyword kw">end</span>
+85:         <span class="ruby-identifier">data</span>           = <span class="ruby-identifier">encode_png_pixelstream</span>(<span class="ruby-identifier">encoding</span>[<span class="ruby-value">:color_mode</span>], <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:bit_depth</span>], <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:interlace</span>], <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:filtering</span>])
+86:         <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">data_chunks</span> = <span class="ruby-constant">Chunk</span><span class="ruby-operator">::</span><span class="ruby-constant">ImageData</span>.<span class="ruby-identifier">split_in_chunks</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:compression</span>])
+87:         <span class="ruby-identifier">ds</span>.<span class="ruby-identifier">end_chunk</span>   = <span class="ruby-constant">Chunk</span><span class="ruby-operator">::</span><span class="ruby-constant">End</span>.<span class="ruby-identifier">new</span>
+88:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ds</span>
+89:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail method-alias">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">(constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="PNGEncoding.html#method-i-to_blob">to_blob</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="to-string-method" class="method-detail method-alias">
+				<a name="method-i-to_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_string</span><span
+						class="method-args">(constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="PNGEncoding.html#method-i-to_blob">to_blob</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="write-method" class="method-detail ">
+				<a name="method-i-write"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write</span><span
+						class="method-args">(io, constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Writes the canvas to an IO stream, encoded as a PNG image. @param [IO] io
+The output stream to write to. @param constraints (see <a
+href="PNGEncoding.html#method-i-to_datastream">ChunkyPNG::Canvas::PNGEncoding#to_datastream</a>)
+@return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="write-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 34</span>
+34:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">constraints</span> = {})
+35:         <span class="ruby-identifier">to_datastream</span>(<span class="ruby-identifier">constraints</span>).<span class="ruby-identifier">write</span>(<span class="ruby-identifier">io</span>)
+36:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="determine-png-encoding-method" class="method-detail ">
+				<a name="method-i-determine_png_encoding"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">determine_png_encoding</span><span
+						class="method-args">(constraints = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Determines the best possible PNG encoding variables for this image, by
+analyzing  the colors used for the image.
+</p>
+<p>
+You can provide constraints for the encoding variables by passing a hash
+with  encoding variables to this method.
+</p>
+<p>
+@param [Hash, Symbol] constraints The constraints for the encoding. This
+can be a
+</p>
+<pre>
+   Hash or a preset symbol.
+</pre>
+<p>
+@return [Hash] A hash with encoding options for {<a
+href="PNGEncoding.html#method-i-to_datastream">ChunkyPNG::Canvas::PNGEncoding#to_datastream</a>}
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="determine-png-encoding-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 102</span>
+102:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">determine_png_encoding</span>(<span class="ruby-identifier">constraints</span> = {})
+103: 
+104:         <span class="ruby-identifier">encoding</span> = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">constraints</span>
+105:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">:fast_rgb</span>;         { <span class="ruby-value">:color_mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR</span>, <span class="ruby-value">:compression</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">BEST_SPEED</span> }
+106:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">:fast_rgba</span>;        { <span class="ruby-value">:color_mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR_ALPHA</span>, <span class="ruby-value">:compression</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">BEST_SPEED</span> }
+107:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">:best_compression</span>; { <span class="ruby-value">:compression</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">BEST_COMPRESSION</span>, <span class="ruby-value">:filtering</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_PAETH</span> }
+108:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">:good_compression</span>; { <span class="ruby-value">:compression</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">BEST_COMPRESSION</span>, <span class="ruby-value">:filtering</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_NONE</span> }
+109:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">:no_compression</span>;   { <span class="ruby-value">:compression</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">NO_COMPRESSION</span> }
+110:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">:black_and_white</span>;  { <span class="ruby-value">:color_mode</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_GRAYSCALE</span>, <span class="ruby-value">:bit_depth</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> } 
+111:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Hash</span>; <span class="ruby-identifier">constraints</span>
+112:           <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Exception</span>, <span class="ruby-node">&quot;Unknown encoding preset: #{constraints.inspect}&quot;</span>
+113:         <span class="ruby-keyword kw">end</span>
+114: 
+115:         <span class="ruby-comment cmt"># Do not create a palette when the encoding is given and does not require a palette.</span>
+116:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:color_mode</span>]
+117:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:color_mode</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_INDEXED</span>
+118:             <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">encoding_palette</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">palette</span>
+119:             <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:bit_depth</span>] <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">determine_bit_depth</span>
+120:           <span class="ruby-keyword kw">else</span>
+121:             <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:bit_depth</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">8</span>
+122:           <span class="ruby-keyword kw">end</span>
+123:         <span class="ruby-keyword kw">else</span>
+124:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">encoding_palette</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">palette</span>
+125:           <span class="ruby-identifier">suggested_color_mode</span>, <span class="ruby-identifier">suggested_bit_depth</span> = <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">best_color_settings</span>
+126:           <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:color_mode</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">suggested_color_mode</span>
+127:           <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:bit_depth</span>]  <span class="ruby-operator">||=</span> <span class="ruby-identifier">suggested_bit_depth</span>
+128:         <span class="ruby-keyword kw">end</span>
+129: 
+130:         <span class="ruby-comment cmt"># Use Zlib's default for compression unless otherwise provided.</span>
+131:         <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:compression</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_COMPRESSION</span>
+132: 
+133:         <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:interlace</span>] = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:interlace</span>]
+134:           <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_NONE</span>; <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_NONE</span>
+135:           <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">true</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_ADAM7</span>;      <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_ADAM7</span>
+136:           <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:interlace</span>]
+137:         <span class="ruby-keyword kw">end</span>
+138: 
+139:         <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:filtering</span>] <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">encoding</span>[<span class="ruby-value">:compression</span>]
+140:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">BEST_COMPRESSION</span>; <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_PAETH</span>
+141:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">NO_COMPRESSION</span><span class="ruby-operator">..</span><span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">BEST_SPEED</span>; <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_NONE</span>
+142:           <span class="ruby-keyword kw">else</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_UP</span>
+143:         <span class="ruby-keyword kw">end</span>
+144:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">encoding</span>
+145:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-image-pass-to-stream-method" class="method-detail ">
+				<a name="method-i-encode_png_image_pass_to_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_image_pass_to_stream</span><span
+						class="method-args">(stream, color_mode, bit_depth, filtering)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes the canvas to a stream, in a given color mode. @param [String]
+stream The stream to write to. @param [Integer] color_mode The color mode
+to use for encoding. @param [Integer] bit_depth The bit depth of the image.
+@param [Integer] filtering The filtering method to use.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-image-pass-to-stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 203</span>
+203:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_image_pass_to_stream</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>, <span class="ruby-identifier">filtering</span>)
+204: 
+205:         <span class="ruby-identifier">start_pos</span>  = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">bytesize</span>
+206:         <span class="ruby-identifier">pixel_size</span> = <span class="ruby-constant">Color</span>.<span class="ruby-identifier">pixel_bytesize</span>(<span class="ruby-identifier">color_mode</span>)
+207:         <span class="ruby-identifier">line_width</span> = <span class="ruby-constant">Color</span>.<span class="ruby-identifier">scanline_bytesize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>, <span class="ruby-identifier">width</span>)
+208:         
+209:         <span class="ruby-comment cmt"># Determine the filter method</span>
+210:         <span class="ruby-identifier">encode_method</span> = <span class="ruby-identifier">encode_png_pixels_to_scanline_method</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>)
+211:         <span class="ruby-identifier">filter_method</span> = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">filtering</span>
+212:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_SUB</span>;     <span class="ruby-value">:encode_png_str_scanline_sub</span>
+213:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_UP</span>;      <span class="ruby-value">:encode_png_str_scanline_up</span>
+214:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_AVERAGE</span>; <span class="ruby-value">:encode_png_str_scanline_average</span>
+215:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_PAETH</span>;   <span class="ruby-value">:encode_png_str_scanline_paeth</span>
+216:           <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">nil</span>
+217:         <span class="ruby-keyword kw">end</span>
+218:         
+219:         <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+220:           <span class="ruby-identifier">stream</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">encode_method</span>, <span class="ruby-identifier">row</span>(<span class="ruby-identifier">y</span>))
+221:         <span class="ruby-keyword kw">end</span>
+222:         
+223:         <span class="ruby-comment cmt"># Now, apply filtering if any</span>
+224:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filter_method</span>
+225:           (<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+226:             <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">start_pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span> * (<span class="ruby-identifier">line_width</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+227:             <span class="ruby-identifier">prev_pos</span> = (<span class="ruby-identifier">y</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">pos</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">line_width</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+228:             <span class="ruby-identifier">send</span>(<span class="ruby-identifier">filter_method</span>, <span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">prev_pos</span>, <span class="ruby-identifier">line_width</span>, <span class="ruby-identifier">pixel_size</span>)
+229:           <span class="ruby-keyword kw">end</span>
+230:         <span class="ruby-keyword kw">end</span>
+231:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-image-with-interlacing-method" class="method-detail ">
+				<a name="method-i-encode_png_image_with_interlacing"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_image_with_interlacing</span><span
+						class="method-args">(color_mode, bit_depth = 8, filtering = ChunkyPNG::FILTER_NONE)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes the canvas according to the PNG format specification with a given
+color  mode and Adam7 interlacing.
+</p>
+<p>
+This method will split the original canvas in 7 smaller canvases and encode
+them one by one, concatenating the resulting strings.
+</p>
+<p>
+@param [Integer] color_mode The color mode to use for encoding. @param
+[Integer] bit_depth The bit depth of the image. @param [Integer] filtering
+The filtering method to use. @return [String] The PNG encoded canvas as
+string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-image-with-interlacing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 188</span>
+188:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_image_with_interlacing</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span> = <span class="ruby-value">8</span>, <span class="ruby-identifier">filtering</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_NONE</span>)
+189:         <span class="ruby-identifier">stream</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Datastream</span>.<span class="ruby-identifier">empty_bytearray</span>
+190:         <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-value">6</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pass</span><span class="ruby-operator">|</span>
+191:           <span class="ruby-identifier">subcanvas</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">adam7_extract_pass</span>(<span class="ruby-identifier">pass</span>, <span class="ruby-keyword kw">self</span>)
+192:           <span class="ruby-identifier">subcanvas</span>.<span class="ruby-identifier">encoding_palette</span> = <span class="ruby-identifier">encoding_palette</span>
+193:           <span class="ruby-identifier">subcanvas</span>.<span class="ruby-identifier">encode_png_image_pass_to_stream</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>, <span class="ruby-identifier">filtering</span>)
+194:         <span class="ruby-keyword kw">end</span>
+195:         <span class="ruby-identifier">stream</span>
+196:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-image-without-interlacing-method" class="method-detail ">
+				<a name="method-i-encode_png_image_without_interlacing"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_image_without_interlacing</span><span
+						class="method-args">(color_mode, bit_depth = 8, filtering = ChunkyPNG::FILTER_NONE)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes the canvas according to the PNG format specification with a given
+color mode. @param [Integer] color_mode The color mode to use for encoding.
+@param [Integer] bit_depth The bit depth of the image. @param [Integer]
+filtering The filtering method to use. @return [String] The PNG encoded
+canvas as string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-image-without-interlacing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 172</span>
+172:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_image_without_interlacing</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span> = <span class="ruby-value">8</span>, <span class="ruby-identifier">filtering</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_NONE</span>)
+173:         <span class="ruby-identifier">stream</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Datastream</span>.<span class="ruby-identifier">empty_bytearray</span>
+174:         <span class="ruby-identifier">encode_png_image_pass_to_stream</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>, <span class="ruby-identifier">filtering</span>)
+175:         <span class="ruby-identifier">stream</span>
+176:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-grayscale-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_grayscale_1bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_grayscale_1bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 1-bit grayscale mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-grayscale-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 300</span>
+300:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_grayscale_1bit</span>(<span class="ruby-identifier">pixels</span>)
+301:         <span class="ruby-identifier">chars</span> = []
+302:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">8</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span>, <span class="ruby-identifier">p3</span>, <span class="ruby-identifier">p4</span>, <span class="ruby-identifier">p5</span>, <span class="ruby-identifier">p6</span>, <span class="ruby-identifier">p7</span>, <span class="ruby-identifier">p8</span><span class="ruby-operator">|</span>
+303:           <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> ((<span class="ruby-identifier">p1</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p1</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">7</span>) <span class="ruby-operator">|</span>
+304:                     (<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p2</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">6</span>) <span class="ruby-operator">|</span>
+305:                     (<span class="ruby-identifier">p3</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p3</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">5</span>) <span class="ruby-operator">|</span>
+306:                     (<span class="ruby-identifier">p4</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p4</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">4</span>) <span class="ruby-operator">|</span>
+307:                     (<span class="ruby-identifier">p5</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p5</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">3</span>) <span class="ruby-operator">|</span>
+308:                     (<span class="ruby-identifier">p6</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p6</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">2</span>) <span class="ruby-operator">|</span>
+309:                     (<span class="ruby-identifier">p7</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p7</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">1</span>) <span class="ruby-operator">|</span>
+310:                     (<span class="ruby-identifier">p8</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p8</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">15</span>))
+311:         <span class="ruby-keyword kw">end</span>
+312:         <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'xC*'</span>)
+313:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-grayscale-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_grayscale_2bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_grayscale_2bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 2-bit grayscale mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-grayscale-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 318</span>
+318:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_grayscale_2bit</span>(<span class="ruby-identifier">pixels</span>)
+319:         <span class="ruby-identifier">chars</span> = []
+320:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">4</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span>, <span class="ruby-identifier">p3</span>, <span class="ruby-identifier">p4</span><span class="ruby-operator">|</span>
+321:           <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> ((<span class="ruby-identifier">p1</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p1</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">14</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">6</span>) <span class="ruby-operator">|</span>
+322:                     (<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p2</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">14</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">4</span>) <span class="ruby-operator">|</span>
+323:                     (<span class="ruby-identifier">p3</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p3</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">14</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">2</span>) <span class="ruby-operator">|</span>
+324:                     (<span class="ruby-identifier">p4</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">p4</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">14</span>))
+325:         <span class="ruby-keyword kw">end</span>
+326:         <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'xC*'</span>)
+327:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-grayscale-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_grayscale_4bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_grayscale_4bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 2-bit grayscale mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-grayscale-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 332</span>
+332:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_grayscale_4bit</span>(<span class="ruby-identifier">pixels</span>)
+333:         <span class="ruby-identifier">chars</span> = []
+334:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span><span class="ruby-operator">|</span>
+335:           <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> ((<span class="ruby-identifier">p1</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> ((<span class="ruby-identifier">p1</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">12</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">4</span>) <span class="ruby-operator">|</span> (<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> ((<span class="ruby-identifier">p2</span> &amp; <span class="ruby-value">0x0000ffff</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">12</span>)))
+336:         <span class="ruby-keyword kw">end</span>
+337:         <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'xC*'</span>)
+338:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-grayscale-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_grayscale_8bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_grayscale_8bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 8-bit grayscale mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-grayscale-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 343</span>
+343:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_grayscale_8bit</span>(<span class="ruby-identifier">pixels</span>)
+344:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span> }.<span class="ruby-identifier">pack</span>(<span class="ruby-node">&quot;xC#{width}&quot;</span>)
+345:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-grayscale-alpha-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_grayscale_alpha_8bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_grayscale_alpha_8bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 8-bit grayscale alpha mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-grayscale-alpha-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 350</span>
+350:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_grayscale_alpha_8bit</span>(<span class="ruby-identifier">pixels</span>)
+351:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-node">&quot;xn#{width}&quot;</span>)
+352:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-indexed-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_indexed_1bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_indexed_1bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 1-bit indexed mode. @param [Array<Integer>]
+pixels A row of pixels of the original image. @return [String] The encoded
+scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-indexed-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 250</span>
+250:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_indexed_1bit</span>(<span class="ruby-identifier">pixels</span>)
+251:         <span class="ruby-identifier">chars</span> = []
+252:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">8</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span>, <span class="ruby-identifier">p3</span>, <span class="ruby-identifier">p4</span>, <span class="ruby-identifier">p5</span>, <span class="ruby-identifier">p6</span>, <span class="ruby-identifier">p7</span>, <span class="ruby-identifier">p8</span><span class="ruby-operator">|</span>
+253:           <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> ((<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p1</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">7</span>) <span class="ruby-operator">|</span>
+254:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p2</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">6</span>) <span class="ruby-operator">|</span>
+255:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p3</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">5</span>) <span class="ruby-operator">|</span>
+256:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p4</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">4</span>) <span class="ruby-operator">|</span>
+257:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p5</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">3</span>) <span class="ruby-operator">|</span>
+258:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p6</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">2</span>) <span class="ruby-operator">|</span>
+259:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p7</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">1</span>) <span class="ruby-operator">|</span>
+260:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p8</span>)))
+261:         <span class="ruby-keyword kw">end</span>
+262:         <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'xC*'</span>)
+263:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-indexed-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_indexed_2bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_indexed_2bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 2-bit indexed mode. @param [Array<Integer>]
+pixels A row of pixels of the original image. @return [String] The encoded
+scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-indexed-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 268</span>
+268:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_indexed_2bit</span>(<span class="ruby-identifier">pixels</span>)
+269:         <span class="ruby-identifier">chars</span> = []
+270:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">4</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span>, <span class="ruby-identifier">p3</span>, <span class="ruby-identifier">p4</span><span class="ruby-operator">|</span>
+271:           <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> ((<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p1</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">6</span>) <span class="ruby-operator">|</span>
+272:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p2</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">4</span>) <span class="ruby-operator">|</span>
+273:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p3</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">2</span>) <span class="ruby-operator">|</span>
+274:                     (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p4</span>)))
+275:         <span class="ruby-keyword kw">end</span>
+276:         <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'xC*'</span>)
+277:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-indexed-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_indexed_4bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_indexed_4bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 4-bit indexed mode. @param [Array<Integer>]
+pixels A row of pixels of the original image. @return [String] The encoded
+scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-indexed-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 282</span>
+282:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_indexed_4bit</span>(<span class="ruby-identifier">pixels</span>)
+283:         <span class="ruby-identifier">chars</span> = []
+284:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span><span class="ruby-operator">|</span>
+285:           <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> ((<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p1</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">4</span>) <span class="ruby-operator">|</span> (<span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p2</span>)))
+286:         <span class="ruby-keyword kw">end</span>
+287:         <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'xC*'</span>)
+288:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-indexed-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_indexed_8bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_indexed_8bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 8-bit indexed mode. @param [Array<Integer>]
+pixels A row of pixels of the original image. @return [String] The encoded
+scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-indexed-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 293</span>
+293:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_indexed_8bit</span>(<span class="ruby-identifier">pixels</span>)
+294:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">p</span>) }.<span class="ruby-identifier">pack</span>(<span class="ruby-node">&quot;xC#{width}&quot;</span>)
+295:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-method-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_method</span><span
+						class="method-args">(color_mode, depth)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the method name to use to decode scanlines into pixels. @param
+[Integer] color_mode The color mode of the image. @param [Integer] depth
+The bit depth of the image. @return [Symbol] The method name to use for
+decoding, to be called on the canvas class. @raise
+[ChunkyPNG::NotSupported] when the color_mode and/or bit depth is not
+supported.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-method-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 360</span>
+360:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_method</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span>)
+361:         <span class="ruby-identifier">encoder_method</span> = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">color_mode</span>
+362:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR</span>;       <span class="ruby-value">:&quot;encode_png_pixels_to_scanline_truecolor_#{depth}bit&quot;</span>
+363:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR_ALPHA</span>; <span class="ruby-value">:&quot;encode_png_pixels_to_scanline_truecolor_alpha_#{depth}bit&quot;</span>
+364:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_INDEXED</span>;         <span class="ruby-value">:&quot;encode_png_pixels_to_scanline_indexed_#{depth}bit&quot;</span>
+365:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_GRAYSCALE</span>;       <span class="ruby-value">:&quot;encode_png_pixels_to_scanline_grayscale_#{depth}bit&quot;</span>
+366:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_GRAYSCALE_ALPHA</span>; <span class="ruby-value">:&quot;encode_png_pixels_to_scanline_grayscale_alpha_#{depth}bit&quot;</span>
+367:           <span class="ruby-keyword kw">else</span> <span class="ruby-keyword kw">nil</span>
+368:         <span class="ruby-keyword kw">end</span>
+369:         
+370:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">NotSupported</span>, <span class="ruby-node">&quot;No encoder found for color mode #{color_mode} and #{depth}-bit depth!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">encoder_method</span>)
+371:         <span class="ruby-identifier">encoder_method</span>
+372:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-truecolor-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_truecolor_8bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_truecolor_8bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 8-bit truecolor mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-truecolor-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 236</span>
+236:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_truecolor_8bit</span>(<span class="ruby-identifier">pixels</span>)
+237:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'x'</span> <span class="ruby-operator">+</span> (<span class="ruby-value str">'NX'</span> * <span class="ruby-identifier">width</span>))
+238:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixels-to-scanline-truecolor-alpha-bit-method" class="method-detail ">
+				<a name="method-i-encode_png_pixels_to_scanline_truecolor_alpha_8bit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixels_to_scanline_truecolor_alpha_8bit</span><span
+						class="method-args">(pixels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a line of pixels using 8-bit truecolor alpha mode. @param
+[Array<Integer>] pixels A row of pixels of the original image. @return
+[String] The encoded scanline as binary string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixels-to-scanline-truecolor-alpha-bit-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 243</span>
+243:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixels_to_scanline_truecolor_alpha_8bit</span>(<span class="ruby-identifier">pixels</span>)
+244:         <span class="ruby-identifier">pixels</span>.<span class="ruby-identifier">pack</span>(<span class="ruby-node">&quot;xN#{width}&quot;</span>)
+245:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-pixelstream-method" class="method-detail ">
+				<a name="method-i-encode_png_pixelstream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_pixelstream</span><span
+						class="method-args">(color_mode = ChunkyPNG::COLOR_TRUECOLOR, bit_depth = 8, interlace = ChunkyPNG::INTERLACING_NONE, filtering = ChunkyPNG::FILTER_NONE)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes the canvas according to the PNG format specification with a given
+color  mode, possibly with interlacing. @param [Integer] color_mode The
+color mode to use for encoding. @param [Integer] bit_depth The bit depth of
+the image. @param [Integer] interlace The interlacing method to use.
+@return [String] The PNG encoded canvas as string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-pixelstream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 153</span>
+153:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_pixelstream</span>(<span class="ruby-identifier">color_mode</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR</span>, <span class="ruby-identifier">bit_depth</span> = <span class="ruby-value">8</span>, <span class="ruby-identifier">interlace</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_NONE</span>, <span class="ruby-identifier">filtering</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_NONE</span>)
+154: 
+155:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_mode</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_INDEXED</span> 
+156:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-value str">&quot;This palette is not suitable for encoding!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">can_encode?</span>
+157:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-value str">&quot;This palette has too many colors!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">encoding_palette</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> (<span class="ruby-value">1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">bit_depth</span>)
+158:         <span class="ruby-keyword kw">end</span>
+159: 
+160:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">interlace</span>
+161:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_NONE</span>;  <span class="ruby-identifier">encode_png_image_without_interlacing</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>, <span class="ruby-identifier">filtering</span>)
+162:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">INTERLACING_ADAM7</span>; <span class="ruby-identifier">encode_png_image_with_interlacing</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">bit_depth</span>, <span class="ruby-identifier">filtering</span>)
+163:           <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">NotSupported</span>, <span class="ruby-node">&quot;Unknown interlacing method: #{interlace}!&quot;</span>
+164:         <span class="ruby-keyword kw">end</span>
+165:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-str-scanline-average-method" class="method-detail ">
+				<a name="method-i-encode_png_str_scanline_average"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_str_scanline_average</span><span
+						class="method-args">(stream, pos, prev_pos, line_width, pixel_size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a scanline of a pixelstream using AVERAGE filtering. This will
+modify the stream. @param (see <a
+href="PNGEncoding.html#method-i-encode_png_str_scanline_none">#</a>)
+@return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-str-scanline-average-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 414</span>
+414:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_str_scanline_average</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">prev_pos</span>, <span class="ruby-identifier">line_width</span>, <span class="ruby-identifier">pixel_size</span>)
+415:         <span class="ruby-identifier">line_width</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+416:           <span class="ruby-identifier">a</span> = (<span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+417:           <span class="ruby-identifier">b</span> = <span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+418:           <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>, (<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">-</span> ((<span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">1</span>)) &amp; <span class="ruby-value">0xff</span>)
+419:         <span class="ruby-keyword kw">end</span>
+420:         <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_AVERAGE</span>)
+421:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-str-scanline-none-method" class="method-detail ">
+				<a name="method-i-encode_png_str_scanline_none"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_str_scanline_none</span><span
+						class="method-args">(stream, pos, prev_pos, line_width, pixel_size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a scanline of a pixelstream without filtering. This is a no-op.
+@param [String] stream The pixelstream to work on. This string will be
+modified. @param [Integer] pos The starting position of the scanline.
+@param [Integer, nil] prev_pos The starting position of the previous
+scanline. <tt>nil</tt> if
+</p>
+<pre>
+    this is the first line.
+</pre>
+<p>
+@param [Integer] line_width The number of bytes in this scanline, without
+counting the filtering
+</p>
+<pre>
+    method byte.
+</pre>
+<p>
+@param [Integer] pixel_size The number of bytes used per pixel. @return
+[void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-str-scanline-none-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 385</span>
+385:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_str_scanline_none</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">prev_pos</span>, <span class="ruby-identifier">line_width</span>, <span class="ruby-identifier">pixel_size</span>)
+386:         <span class="ruby-comment cmt"># noop - this method shouldn't get called at all.</span>
+387:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-str-scanline-paeth-method" class="method-detail ">
+				<a name="method-i-encode_png_str_scanline_paeth"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_str_scanline_paeth</span><span
+						class="method-args">(stream, pos, prev_pos, line_width, pixel_size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a scanline of a pixelstream using PAETH filtering. This will modify
+the stream. @param (see <a
+href="PNGEncoding.html#method-i-encode_png_str_scanline_none">#</a>)
+@return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-str-scanline-paeth-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 426</span>
+426:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_str_scanline_paeth</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">prev_pos</span>, <span class="ruby-identifier">line_width</span>, <span class="ruby-identifier">pixel_size</span>)
+427:         <span class="ruby-identifier">line_width</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+428:           <span class="ruby-identifier">a</span> = (<span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+429:           <span class="ruby-identifier">b</span> = (<span class="ruby-identifier">prev_pos</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+430:           <span class="ruby-identifier">c</span> = (<span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+431:           <span class="ruby-identifier">p</span> = <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">c</span>
+432:           <span class="ruby-identifier">pa</span> = (<span class="ruby-identifier">p</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">a</span>).<span class="ruby-identifier">abs</span>
+433:           <span class="ruby-identifier">pb</span> = (<span class="ruby-identifier">p</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">b</span>).<span class="ruby-identifier">abs</span>
+434:           <span class="ruby-identifier">pc</span> = (<span class="ruby-identifier">p</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">c</span>).<span class="ruby-identifier">abs</span>
+435:           <span class="ruby-identifier">pr</span> = (<span class="ruby-identifier">pa</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">pb</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">pa</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">pc</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">pb</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">pc</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>)
+436:           <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>, (<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">pr</span>) &amp; <span class="ruby-value">0xff</span>)
+437:         <span class="ruby-keyword kw">end</span>
+438:         <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_PAETH</span>)
+439:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-str-scanline-sub-method" class="method-detail ">
+				<a name="method-i-encode_png_str_scanline_sub"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_str_scanline_sub</span><span
+						class="method-args">(stream, pos, prev_pos, line_width, pixel_size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a scanline of a pixelstream using SUB filtering. This will modify
+the stream. @param (see <a
+href="PNGEncoding.html#method-i-encode_png_str_scanline_none">#</a>)
+@return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-str-scanline-sub-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 392</span>
+392:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_str_scanline_sub</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">prev_pos</span>, <span class="ruby-identifier">line_width</span>, <span class="ruby-identifier">pixel_size</span>)
+393:         <span class="ruby-identifier">line_width</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+394:           <span class="ruby-identifier">a</span> = (<span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">pixel_size</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+395:           <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>, (<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">a</span>) &amp; <span class="ruby-value">0xff</span>)
+396:         <span class="ruby-keyword kw">end</span>
+397:         <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_SUB</span>)
+398:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-png-str-scanline-up-method" class="method-detail ">
+				<a name="method-i-encode_png_str_scanline_up"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_png_str_scanline_up</span><span
+						class="method-args">(stream, pos, prev_pos, line_width, pixel_size)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Encodes a scanline of a pixelstream using UP filtering. This will modify
+the stream. @param (see <a
+href="PNGEncoding.html#method-i-encode_png_str_scanline_none">#</a>)
+@return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="encode-png-str-scanline-up-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/png_encoding.rb, line 403</span>
+403:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_png_str_scanline_up</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span>, <span class="ruby-identifier">prev_pos</span>, <span class="ruby-identifier">line_width</span>, <span class="ruby-identifier">pixel_size</span>)
+404:         <span class="ruby-identifier">line_width</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+405:           <span class="ruby-identifier">b</span> = <span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">prev_pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+406:           <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>, (<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">getbyte</span>(<span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>) <span class="ruby-operator">-</span> <span class="ruby-identifier">b</span>) &amp; <span class="ruby-value">0xff</span>)
+407:         <span class="ruby-keyword kw">end</span>
+408:         <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">setbyte</span>(<span class="ruby-identifier">pos</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">FILTER_UP</span>)
+409:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

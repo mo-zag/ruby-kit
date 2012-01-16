@@ -1,0 +1,14 @@
+Sat, 07 Jan 2012 05:03:11 +0000
+lib/oyster/option.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/array.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/file.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/flag.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/float.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/glob.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/integer.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/shortcut.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/string.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/options/subcommand.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster/specification.rb	Sat, 07 Jan 2012 05:03:02 +0000
+lib/oyster.rb	Sat, 07 Jan 2012 05:03:02 +0000
+README.rdoc	Sat, 07 Jan 2012 05:03:02 +0000

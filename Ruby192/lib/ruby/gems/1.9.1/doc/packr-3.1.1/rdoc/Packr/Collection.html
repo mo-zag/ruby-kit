@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Packr::Collection</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/packr/collection_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/packr/collection.rb">lib/packr/collection.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Map.html">Packr::Map</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-create">::create</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add">#add</a></li>
+					
+					<li><a href="#method-i-clear">#clear</a></li>
+					
+					<li><a href="#method-i-copy">#copy</a></li>
+					
+					<li><a href="#method-i-each">#each</a></li>
+					
+					<li><a href="#method-i-get_at">#get_at</a></li>
+					
+					<li><a href="#method-i-get_keys">#get_keys</a></li>
+					
+					<li><a href="#method-i-index_of">#index_of</a></li>
+					
+					<li><a href="#method-i-insert_at">#insert_at</a></li>
+					
+					<li><a href="#method-i-item">#item</a></li>
+					
+					<li><a href="#method-i-map">#map</a></li>
+					
+					<li><a href="#method-i-merge">#merge</a></li>
+					
+					<li><a href="#method-i-put">#put</a></li>
+					
+					<li><a href="#method-i-put_at">#put_at</a></li>
+					
+					<li><a href="#method-i-remove">#remove</a></li>
+					
+					<li><a href="#method-i-remove_at">#remove_at</a></li>
+					
+					<li><a href="#method-i-reverse%21">#reverse!</a></li>
+					
+					<li><a href="#method-i-size">#size</a></li>
+					
+					<li><a href="#method-i-slice">#slice</a></li>
+					
+					<li><a href="#method-i-sort%21">#sort!</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Packr.html">Packr</a></li>
+				
+					<li><a href="../Packr/Base62.html">Packr::Base62</a></li>
+				
+					<li><a href="../Packr/Collection.html">Packr::Collection</a></li>
+				
+					<li><a href="../Packr/Encoder.html">Packr::Encoder</a></li>
+				
+					<li><a href="../Packr/Map.html">Packr::Map</a></li>
+				
+					<li><a href="../Packr/Minifier.html">Packr::Minifier</a></li>
+				
+					<li><a href="../Packr/Parser.html">Packr::Parser</a></li>
+				
+					<li><a href="../Packr/Privates.html">Packr::Privates</a></li>
+				
+					<li><a href="../Packr/RegexpGroup.html">Packr::RegexpGroup</a></li>
+				
+					<li><a href="../Packr/RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+				
+					<li><a href="../Packr/Shrinker.html">Packr::Shrinker</a></li>
+				
+					<li><a href="../Packr/Words.html">Packr::Words</a></li>
+				
+					<li><a href="../Packr/Words/Item.html">Packr::Words::Item</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Packr::Collection</h1>
+
+		<div id="description">
+			<p>
+A <a href="Map.html">Map</a> that is more array-like (accessible by index).
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="values-attribute-method" class="method-detail">
+				<a name="values"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">values</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="keys-attribute-method" class="method-detail">
+				<a name="keys"></a>
+				
+				<a name="keys="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">keys</span><span
+						class="attribute-access-type">[W]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="create-method" class="method-detail ">
+				<a name="method-c-create"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create</span><span
+						class="method-args">(key, item)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="create-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 141</span>
+141:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>)
+142:       <span class="ruby-keyword kw">begin</span>; <span class="ruby-identifier">klass</span> = <span class="ruby-keyword kw">self</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>; <span class="ruby-keyword kw">rescue</span>; <span class="ruby-keyword kw">end</span>
+143:       <span class="ruby-identifier">klass</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">item</span>
+144:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(values = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 8</span>
+ 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">values</span> = <span class="ruby-keyword kw">nil</span>)
+ 9:       <span class="ruby-ivar">@keys</span> = []
+10:       <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">values</span>)
+11:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-method" class="method-detail ">
+				<a name="method-i-add"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add</span><span
+						class="method-args">(key, item = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="add-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 13</span>
+13:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span> = <span class="ruby-keyword kw">nil</span>)
+14:       <span class="ruby-comment cmt"># Duplicates not allowed using add().</span>
+15:       <span class="ruby-comment cmt"># But you can still overwrite entries using put().</span>
+16:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">has?</span>(<span class="ruby-identifier">key</span>)
+17:       <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>)
+18:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="clear-method" class="method-detail ">
+				<a name="method-i-clear"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">clear</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="clear-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 20</span>
+20:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clear</span>
+21:       <span class="ruby-keyword kw">super</span>
+22:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">clear</span>
+23:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="copy-method" class="method-detail ">
+				<a name="method-i-copy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">copy</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="copy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 25</span>
+25:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy</span>
+26:       <span class="ruby-identifier">copy</span> = <span class="ruby-keyword kw">super</span>
+27:       <span class="ruby-identifier">copy</span>.<span class="ruby-identifier">keys</span> = <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">dup</span>
+28:       <span class="ruby-identifier">copy</span>
+29:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-i-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>
+32:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">get</span>(<span class="ruby-identifier">key</span>), <span class="ruby-identifier">key</span>) }
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-at-method" class="method-detail ">
+				<a name="method-i-get_at"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_at</span><span
+						class="method-args">(index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-at-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_at</span>(<span class="ruby-identifier">index</span>)
+36:       <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">length</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-comment cmt"># starting from the end</span>
+37:       <span class="ruby-identifier">key</span> = <span class="ruby-ivar">@keys</span>[<span class="ruby-identifier">index</span>]
+38:       <span class="ruby-identifier">key</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>]
+39:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-keys-method" class="method-detail ">
+				<a name="method-i-get_keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_keys</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-keys-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_keys</span>
+42:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">dup</span>
+43:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="index-of-method" class="method-detail ">
+				<a name="method-i-index_of"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">index_of</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="index-of-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 45</span>
+45:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_of</span>(<span class="ruby-identifier">key</span>)
+46:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+47:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="insert-at-method" class="method-detail ">
+				<a name="method-i-insert_at"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">insert_at</span><span
+						class="method-args">(index, key, item = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="insert-at-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">insert_at</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span> = <span class="ruby-keyword kw">nil</span>)
+50:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@keys</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">nil?</span>
+51:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+52:       <span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-keyword kw">nil</span> <span class="ruby-comment cmt"># placeholder</span>
+53:       <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>)
+54:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="item-method" class="method-detail ">
+				<a name="method-i-item"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">item</span><span
+						class="method-args">(key_or_index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="item-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">item</span>(<span class="ruby-identifier">key_or_index</span>)
+57:       <span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">key_or_index</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">?</span> <span class="ruby-value">:get_at</span> <span class="ruby-operator">:</span> <span class="ruby-value">:get</span>, <span class="ruby-identifier">key_or_index</span>)
+58:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="map-method" class="method-detail ">
+				<a name="method-i-map"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">map</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="map-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map</span>
+61:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">get</span>(<span class="ruby-identifier">key</span>), <span class="ruby-identifier">key</span>) }
+62:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="merge-method" class="method-detail ">
+				<a name="method-i-merge"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">merge</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="merge-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">merge</span>(*<span class="ruby-identifier">args</span>)
+65:       <span class="ruby-identifier">args</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">values</span><span class="ruby-operator">|</span>
+66:         <span class="ruby-identifier">values</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Collection</span>) <span class="ruby-operator">?</span>
+67:             <span class="ruby-identifier">values</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">item</span>, <span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>) } <span class="ruby-operator">:</span>
+68:             <span class="ruby-keyword kw">super</span>(<span class="ruby-identifier">values</span>)
+69:       <span class="ruby-keyword kw">end</span>
+70:       <span class="ruby-keyword kw">self</span>
+71:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="put-method" class="method-detail ">
+				<a name="method-i-put"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">put</span><span
+						class="method-args">(key, item = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+TODO update this method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="put-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 74</span>
+74:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span> = <span class="ruby-keyword kw">nil</span>)
+75:       <span class="ruby-identifier">item</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">key</span>
+76:       <span class="ruby-ivar">@keys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">has?</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+77:       <span class="ruby-keyword kw">begin</span>; <span class="ruby-identifier">klass</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span><span class="ruby-operator">::</span><span class="ruby-constant">Item</span>; <span class="ruby-keyword kw">rescue</span>; <span class="ruby-keyword kw">end</span>
+78:       <span class="ruby-identifier">item</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">create</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">klass</span> <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">item</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-identifier">klass</span>)
+79:       <span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>] = <span class="ruby-identifier">item</span>
+80:       <span class="ruby-keyword kw">self</span>
+81:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="put-at-method" class="method-detail ">
+				<a name="method-i-put_at"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">put_at</span><span
+						class="method-args">(index, item = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="put-at-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 83</span>
+83:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">put_at</span>(<span class="ruby-identifier">index</span>, <span class="ruby-identifier">item</span> = <span class="ruby-keyword kw">nil</span>)
+84:       <span class="ruby-identifier">key</span> = <span class="ruby-ivar">@keys</span>[<span class="ruby-identifier">index</span>]
+85:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">nil?</span>
+86:       <span class="ruby-identifier">put</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">item</span>)
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remove-method" class="method-detail ">
+				<a name="method-i-remove"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="remove-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 89</span>
+89:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">key</span>)
+90:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">has?</span>(<span class="ruby-identifier">key</span>)
+91:         <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+92:         <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)
+93:       <span class="ruby-keyword kw">end</span>
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remove-at-method" class="method-detail ">
+				<a name="method-i-remove_at"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove_at</span><span
+						class="method-args">(index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="remove-at-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 96</span>
+96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_at</span>(<span class="ruby-identifier">index</span>)
+97:       <span class="ruby-identifier">key</span> = <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">index</span>)
+98:       <span class="ruby-ivar">@values</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)
+99:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reverse--method" class="method-detail ">
+				<a name="method-i-reverse%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reverse!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="reverse--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 101</span>
+101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reverse!</span>
+102:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">reverse!</span>
+103:       <span class="ruby-keyword kw">self</span>
+104:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="size-method" class="method-detail ">
+				<a name="method-i-size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="size-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 106</span>
+106:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size</span>
+107:       <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">length</span>
+108:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="slice-method" class="method-detail ">
+				<a name="method-i-slice"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">slice</span><span
+						class="method-args">(start, fin)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="slice-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 110</span>
+110:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slice</span>(<span class="ruby-identifier">start</span>, <span class="ruby-identifier">fin</span>)
+111:       <span class="ruby-identifier">sliced</span> = <span class="ruby-identifier">copy</span>
+112:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">start</span>
+113:         <span class="ruby-identifier">keys</span>, <span class="ruby-identifier">removed</span> = <span class="ruby-ivar">@keys</span>, <span class="ruby-ivar">@keys</span>
+114:         <span class="ruby-identifier">sliced</span>.<span class="ruby-identifier">keys</span> = <span class="ruby-ivar">@keys</span>[<span class="ruby-identifier">start</span><span class="ruby-operator">...</span><span class="ruby-identifier">fin</span>]
+115:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">sliced</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">nonzero?</span>
+116:           <span class="ruby-identifier">removed</span> = <span class="ruby-identifier">removed</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">start</span>]
+117:           <span class="ruby-identifier">removed</span> = <span class="ruby-identifier">removed</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">keys</span>[<span class="ruby-identifier">fin</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fin</span>
+118:         <span class="ruby-keyword kw">end</span>
+119:         <span class="ruby-identifier">removed</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">remov</span><span class="ruby-operator">|</span>
+120:           <span class="ruby-identifier">sliced</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">remov</span>)
+121:         <span class="ruby-keyword kw">end</span>
+122:       <span class="ruby-keyword kw">end</span>
+123:       <span class="ruby-identifier">sliced</span>
+124:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sort--method" class="method-detail ">
+				<a name="method-i-sort%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sort!</span><span
+						class="method-args">(&compare)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="sort--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 126</span>
+126:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sort!</span>(&amp;<span class="ruby-identifier">compare</span>)
+127:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+128:         <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">sort!</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key1</span>, <span class="ruby-identifier">key2</span><span class="ruby-operator">|</span>
+129:           <span class="ruby-identifier">compare</span>.<span class="ruby-identifier">call</span>(<span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key1</span>], <span class="ruby-ivar">@values</span>[<span class="ruby-identifier">key2</span>], <span class="ruby-identifier">key1</span>, <span class="ruby-identifier">key2</span>)
+130:         <span class="ruby-keyword kw">end</span>
+131:       <span class="ruby-keyword kw">else</span>
+132:         <span class="ruby-ivar">@keys</span>.<span class="ruby-identifier">sort!</span>
+133:       <span class="ruby-keyword kw">end</span>
+134:       <span class="ruby-keyword kw">self</span>
+135:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/collection.rb, line 137</span>
+137:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+138:       <span class="ruby-node">&quot;(#{@keys.join(',')})&quot;</span>
+139:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

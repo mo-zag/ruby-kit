@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Sass::Plugin::Configuration</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sass/plugin/configuration_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/plugin/configuration.rb">lib/sass/plugin/configuration.rb</a></li>
+					
+						<li><a href="../../lib/sass/plugin/merb_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/plugin/merb.rb">lib/sass/plugin/merb.rb</a></li>
+					
+						<li><a href="../../lib/sass/plugin/rails_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/plugin/rails.rb">lib/sass/plugin/rails.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-add_template_location">#add_template_location</a></li>
+					
+					<li><a href="#method-i-default_options">#default_options</a></li>
+					
+					<li><a href="#method-i-default_options">#default_options</a></li>
+					
+					<li><a href="#method-i-default_options">#default_options</a></li>
+					
+					<li><a href="#method-i-normalize_template_location%21">#normalize_template_location!</a></li>
+					
+					<li><a href="#method-i-options">#options</a></li>
+					
+					<li><a href="#method-i-options%3D">#options=</a></li>
+					
+					<li><a href="#method-i-remove_template_location">#remove_template_location</a></li>
+					
+					<li><a href="#method-i-reset%21">#reset!</a></li>
+					
+					<li><a href="#method-i-template_location_array">#template_location_array</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../../Less.html">Less</a></li>
+				
+					<li><a href="../../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+					<li><a href="../../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Sass::Plugin::Configuration</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-template-location-method" class="method-detail ">
+				<a name="method-i-add_template_location"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_template_location</span><span
+						class="method-args">(template_location, css_location = options[:css_location])</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds a new template-location/css-location mapping. This means that
+Sass/SCSS files in `template_location` will be compiled to <a
+href="../CSS.html">CSS</a> files in `css_location`.
+</p>
+<p>
+This is preferred over manually manipulating the
+{file:SASS_REFERENCE.md#template_location-option `:template_location`
+option} since the option can be in multiple formats.
+</p>
+<p>
+Note that this method will change `options[:template_location]` to be in
+the Array format. This means that even if `options[:template_location]` had
+previously been a Hash or a String, it will now be an Array.
+</p>
+<p>
+@param template_location [String] The location where Sass/SCSS files will
+be. @param css_location [String] The location where compiled <a
+href="../CSS.html">CSS</a> files will go.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-template-location-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 64</span>
+64:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_template_location</span>(<span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>])
+65:         <span class="ruby-identifier">normalize_template_location!</span>
+66:         <span class="ruby-identifier">template_location_array</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span>]
+67:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="default-options-method" class="method-detail ">
+				<a name="method-i-default_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">default_options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Different default options in a m envirionment.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="default-options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/merb.rb, line 6</span>
+ 6:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default_options</span>
+ 7:       <span class="ruby-ivar">@default_options</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">begin</span>
+ 8:         <span class="ruby-identifier">version</span> = <span class="ruby-constant">Merb</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'.'</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_i</span> }
+ 9:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">version</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">version</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-value">5</span>
+10:           <span class="ruby-identifier">root</span> = <span class="ruby-constant">MERB_ROOT</span>
+11:           <span class="ruby-identifier">env</span>  = <span class="ruby-constant">MERB_ENV</span>
+12:         <span class="ruby-keyword kw">else</span>
+13:           <span class="ruby-identifier">root</span> = <span class="ruby-constant">Merb</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">to_s</span>
+14:           <span class="ruby-identifier">env</span>  = <span class="ruby-constant">Merb</span>.<span class="ruby-identifier">environment</span>
+15:         <span class="ruby-keyword kw">end</span>
+16: 
+17:         {
+18:           <span class="ruby-value">:always_update</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>,
+19:           <span class="ruby-value">:template_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/public/stylesheets/sass'</span>,
+20:           <span class="ruby-value">:css_location</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/public/stylesheets'</span>,
+21:           <span class="ruby-value">:cache_location</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">root</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/tmp/sass-cache'</span>,
+22:           <span class="ruby-value">:always_check</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">env</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;production&quot;</span>,
+23:           <span class="ruby-value">:quiet</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">env</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;production&quot;</span>,
+24:           <span class="ruby-value">:full_exception</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">env</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;production&quot;</span>
+25:         }.<span class="ruby-identifier">freeze</span>
+26:       <span class="ruby-keyword kw">end</span>
+27:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="default-options-method" class="method-detail ">
+				<a name="method-i-default_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">default_options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the default options for a {Sass::Plugin::Compiler}.
+</p>
+<p>
+@return [{Symbol => Object}]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="default-options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 12</span>
+12:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default_options</span>
+13:         <span class="ruby-ivar">@default_options</span> <span class="ruby-operator">||=</span> {
+14:           <span class="ruby-value">:css_location</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'./public/stylesheets'</span>,
+15:           <span class="ruby-value">:always_update</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>,
+16:           <span class="ruby-value">:always_check</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+17:           <span class="ruby-value">:full_exception</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>,
+18:           <span class="ruby-value">:cache_location</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;.sass-cache&quot;</span>
+19:         }.<span class="ruby-identifier">freeze</span>
+20:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="default-options-method" class="method-detail ">
+				<a name="method-i-default_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">default_options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Different default options in a rails envirionment.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="default-options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/rails.rb, line 6</span>
+ 6:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default_options</span>
+ 7:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@default_options</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@default_options</span>
+ 8:       <span class="ruby-identifier">opts</span> = {
+ 9:         <span class="ruby-value">:quiet</span>             =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">rails_env</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;production&quot;</span>,
+10:         <span class="ruby-value">:full_exception</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">rails_env</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;production&quot;</span>,
+11:         <span class="ruby-value">:cache_location</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">rails_root</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/tmp/sass-cache'</span>
+12:       }
+13: 
+14:       <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">merge!</span>(
+15:         <span class="ruby-value">:always_update</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>,
+16:         <span class="ruby-value">:template_location</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">rails_root</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/public/stylesheets/sass'</span>,
+17:         <span class="ruby-value">:css_location</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">rails_root</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'/public/stylesheets'</span>,
+18:         <span class="ruby-value">:always_check</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">rails_env</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;development&quot;</span>)
+19: 
+20:       <span class="ruby-ivar">@default_options</span> = <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">freeze</span>
+21:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="options-method" class="method-detail ">
+				<a name="method-i-options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+An options hash. See {file:SASS_REFERENCE.md#sass_options the <a
+href="../../Sass.html">Sass</a> options documentation}.
+</p>
+<p>
+@return [{Symbol => Object}]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 32</span>
+32:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options</span>
+33:         <span class="ruby-ivar">@options</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">default_options</span>.<span class="ruby-identifier">dup</span>
+34:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:cache_store</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">CacheStores</span><span class="ruby-operator">::</span><span class="ruby-constant">Filesystem</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:cache_location</span>])
+35:         <span class="ruby-ivar">@options</span>
+36:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="options--method" class="method-detail ">
+				<a name="method-i-options%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options=</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sets the options hash. See {file:SASS_REFERENCE.md#sass_options the <a
+href="../../Sass.html">Sass</a> options documentation}. See {<a
+href="Configuration.html#method-i-reset%21">Sass::Plugin::Configuration#reset!</a>}
+@deprecated Instead, modify the options hash in-place. @param value
+[{Symbol => Object}] The options hash
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="options--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 43</span>
+43:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options=</span>(<span class="ruby-identifier">value</span>)
+44:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">sass_warn</span>(<span class="ruby-value str">&quot;Setting Sass::Plugin.options is deprecated &quot;</span> <span class="ruby-operator">+</span>
+45:                              <span class="ruby-value str">&quot;and will be removed in a future release.&quot;</span>)
+46:         <span class="ruby-identifier">options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">value</span>)
+47:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remove-template-location-method" class="method-detail ">
+				<a name="method-i-remove_template_location"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove_template_location</span><span
+						class="method-args">(template_location, css_location = options[:css_location])</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Removes a template-location/css-location mapping. This means that Sass/SCSS
+files in `template_location` will no longer be compiled to <a
+href="../CSS.html">CSS</a> files in `css_location`.
+</p>
+<p>
+This is preferred over manually manipulating the
+{file:SASS_REFERENCE.md#template_location-option `:template_location`
+option} since the option can be in multiple formats.
+</p>
+<p>
+Note that this method will change `options[:template_location]` to be in
+the Array format. This means that even if `options[:template_location]` had
+previously been a Hash or a String, it will now be an Array.
+</p>
+<p>
+@param template_location [String]
+</p>
+<pre>
+  The location where Sass/SCSS files were,
+  which is now going to be ignored.
+</pre>
+<p>
+@param css_location [String]
+</p>
+<pre>
+  The location where compiled CSS files went, but will no longer go.
+</pre>
+<p>
+@return [Boolean]
+</p>
+<pre>
+  Non-`nil` if the given mapping already existed and was removed,
+  or `nil` if nothing was changed.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="remove-template-location-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 90</span>
+90:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_template_location</span>(<span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>])
+91:         <span class="ruby-identifier">normalize_template_location!</span>
+92:         <span class="ruby-identifier">template_location_array</span>.<span class="ruby-identifier">delete</span>([<span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span>])
+93:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reset--method" class="method-detail ">
+				<a name="method-i-reset%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reset!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Resets the options and {<a
+href="../Callbacks/InstanceMethods.html#method-i-clear_callbacks%21">Sass::Callbacks::InstanceMethods#clear_callbacks!</a>
+clears all callbacks}.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="reset--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 23</span>
+23:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset!</span>
+24:         <span class="ruby-ivar">@options</span> = <span class="ruby-keyword kw">nil</span>
+25:         <span class="ruby-identifier">clear_callbacks!</span>
+26:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="template-location-array-method" class="method-detail ">
+				<a name="method-i-template_location_array"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">template_location_array</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the template locations configured for <a
+href="../../Sass.html">Sass</a> as an array of `[template_location,
+css_location]` pairs. See the
+{file:SASS_REFERENCE.md#template_location-option `:template_location`
+option} for details.
+</p>
+<p>
+@return [Array<(String, String)>]
+</p>
+<pre>
+  An array of `[template_location, css_location]` pairs.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="template-location-array-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 102</span>
+102:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">template_location_array</span>
+103:         <span class="ruby-identifier">old_template_location</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>]
+104:         <span class="ruby-identifier">normalize_template_location!</span>
+105:         <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>]
+106:       <span class="ruby-keyword kw">ensure</span>
+107:         <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>] = <span class="ruby-identifier">old_template_location</span>
+108:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="normalize-template-location--method" class="method-detail ">
+				<a name="method-i-normalize_template_location%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize_template_location!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-template-location--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin/configuration.rb, line 112</span>
+112:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize_template_location!</span>
+113:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+114:         <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>] =
+115:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>]
+116:           <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>
+117:             <span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>] <span class="ruby-operator">?</span>
+118:               [[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>], <span class="ruby-value str">'sass'</span>), <span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>]]] <span class="ruby-operator">:</span> []
+119:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>; [[<span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>]]]
+120:           <span class="ruby-keyword kw">else</span>; <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>].<span class="ruby-identifier">to_a</span>
+121:           <span class="ruby-keyword kw">end</span>
+122:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

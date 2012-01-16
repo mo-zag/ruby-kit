@@ -1,0 +1,2210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Color</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/chunky_png/color_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/color.rb">lib/chunky_png/color.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-a">#a</a></li>
+					
+					<li><a href="#method-i-alpha_decomposable%3F">#alpha_decomposable?</a></li>
+					
+					<li><a href="#method-i-b">#b</a></li>
+					
+					<li><a href="#method-i-blend">#blend</a></li>
+					
+					<li><a href="#method-i-compose">#compose</a></li>
+					
+					<li><a href="#method-i-compose_precise">#compose_precise</a></li>
+					
+					<li><a href="#method-i-compose_quick">#compose_quick</a></li>
+					
+					<li><a href="#method-i-decompose_alpha">#decompose_alpha</a></li>
+					
+					<li><a href="#method-i-decompose_alpha_component">#decompose_alpha_component</a></li>
+					
+					<li><a href="#method-i-decompose_alpha_components">#decompose_alpha_components</a></li>
+					
+					<li><a href="#method-i-decompose_color">#decompose_color</a></li>
+					
+					<li><a href="#method-i-fade">#fade</a></li>
+					
+					<li><a href="#method-i-from_hex">#from_hex</a></li>
+					
+					<li><a href="#method-i-from_rgb_stream">#from_rgb_stream</a></li>
+					
+					<li><a href="#method-i-from_rgba_stream">#from_rgba_stream</a></li>
+					
+					<li><a href="#method-i-fully_transparent%3F">#fully_transparent?</a></li>
+					
+					<li><a href="#method-i-g">#g</a></li>
+					
+					<li><a href="#method-i-grayscale">#grayscale</a></li>
+					
+					<li><a href="#method-i-grayscale%3F">#grayscale?</a></li>
+					
+					<li><a href="#method-i-grayscale_alpha">#grayscale_alpha</a></li>
+					
+					<li><a href="#method-i-grayscale_teint">#grayscale_teint</a></li>
+					
+					<li><a href="#method-i-html_color">#html_color</a></li>
+					
+					<li><a href="#method-i-int8_mult">#int8_mult</a></li>
+					
+					<li><a href="#method-i-interpolate_quick">#interpolate_quick</a></li>
+					
+					<li><a href="#method-i-opaque%21">#opaque!</a></li>
+					
+					<li><a href="#method-i-opaque%3F">#opaque?</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-pass_bytesize">#pass_bytesize</a></li>
+					
+					<li><a href="#method-i-pixel_bitsize">#pixel_bitsize</a></li>
+					
+					<li><a href="#method-i-pixel_bytesize">#pixel_bytesize</a></li>
+					
+					<li><a href="#method-i-r">#r</a></li>
+					
+					<li><a href="#method-i-rgb">#rgb</a></li>
+					
+					<li><a href="#method-i-rgba">#rgba</a></li>
+					
+					<li><a href="#method-i-samples_per_pixel">#samples_per_pixel</a></li>
+					
+					<li><a href="#method-i-scanline_bytesize">#scanline_bytesize</a></li>
+					
+					<li><a href="#method-i-to_grayscale">#to_grayscale</a></li>
+					
+					<li><a href="#method-i-to_grayscale_alpha_bytes">#to_grayscale_alpha_bytes</a></li>
+					
+					<li><a href="#method-i-to_grayscale_bytes">#to_grayscale_bytes</a></li>
+					
+					<li><a href="#method-i-to_hex">#to_hex</a></li>
+					
+					<li><a href="#method-i-to_truecolor_alpha_bytes">#to_truecolor_alpha_bytes</a></li>
+					
+					<li><a href="#method-i-to_truecolor_bytes">#to_truecolor_bytes</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Color</h1>
+
+		<div id="description">
+			<p>
+The <a href="Color.html">Color</a> module defines methods for handling
+colors. Within the <a href="../ChunkyPNG.html">ChunkyPNG</a> library, the
+concepts of pixels and colors are both used, and they are both represented
+by a Integer.
+</p>
+<p>
+Pixels/colors are represented in RGBA components. Each of the four
+components is stored with a depth of 8 bits (maximum value = 255 =
+{ChunkyPNG::Color::MAX}). Together, these components are stored in a 4-byte
+Integer.
+</p>
+<p>
+A color will always be represented using these 4 components in memory. When
+the image is encoded, a more suitable representation can be used (e.g. rgb,
+grayscale, palette-based), for which several conversion methods are
+provided in this module.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="MAX">MAX</a></dt>
+				
+				<dd class="description"><p>
+@return [Integer] The maximum value of each color component.
+</p></dd>
+				
+			
+				<dt><a name="HEX_COLOR_REGEXP">HEX_COLOR_REGEXP</a></dt>
+				
+				<dd class="description"><p>
+@private @return [Regexp] The regexp to parse hex color values.
+</p></dd>
+				
+			
+				<dt><a name="HTML_COLOR_REGEXP">HTML_COLOR_REGEXP</a></dt>
+				
+				<dd class="description"><p>
+@private @return [Regexp] The regexp to parse named color values.
+</p></dd>
+				
+			
+				<dt><a name="PREDEFINED_COLORS">PREDEFINED_COLORS</a></dt>
+				
+				<dd class="description"><p>
+@return [Hash<Symbol, Integer>] All the predefined color names in HTML.
+</p></dd>
+				
+			
+				<dt><a name="BLACK">BLACK</a></dt>
+				
+				<dd class="description"><p>
+@return [Integer] Black pixel/color
+</p></dd>
+				
+			
+				<dt><a name="WHITE">WHITE</a></dt>
+				
+				<dd class="description"><p>
+@return [Integer] White pixel/color
+</p></dd>
+				
+			
+				<dt><a name="TRANSPARENT">TRANSPARENT</a></dt>
+				
+				<dd class="description"><p>
+@return [Integer] Fully transparent pixel/color
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="a-method" class="method-detail ">
+				<a name="method-i-a"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">a</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the alpha channel value for the color value.
+</p>
+<p>
+@param [Integer] value The color value. @return [Integer] A value between 0
+and <a href="Color.html#MAX">MAX</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="a-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 197</span>
+197:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">a</span>(<span class="ruby-identifier">value</span>)
+198:       <span class="ruby-identifier">value</span> &amp; <span class="ruby-value">0x000000ff</span>
+199:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="alpha-decomposable--method" class="method-detail ">
+				<a name="method-i-alpha_decomposable%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alpha_decomposable?</span><span
+						class="method-args">(color, mask, bg, tolerance = 1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks whether an alpha channel value can successfully be composed given
+the resulting color, the mask color and a background color, all of which
+should be opaque. 
+</p>
+<p>
+@param [Integer] color The color that was the result of compositing. @param
+[Integer] mask The opaque variant of the color that was being composed
+@param [Integer] bg The background color on which the color was composed.
+@param [Integer] tolerance The decomposition tolerance level, a value
+between 0 and 255. @return [Boolean] True if the alpha component can be
+decomposed successfully. @see <a
+href="Color.html#method-i-decompose_alpha">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="alpha-decomposable--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 394</span>
+394:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alpha_decomposable?</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>, <span class="ruby-identifier">tolerance</span> = <span class="ruby-value">1</span>)
+395:       <span class="ruby-identifier">components</span> = <span class="ruby-identifier">decompose_alpha_components</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+396:       <span class="ruby-identifier">sum</span> = <span class="ruby-identifier">components</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span> } 
+397:       <span class="ruby-identifier">max</span> = <span class="ruby-identifier">components</span>.<span class="ruby-identifier">max</span> * <span class="ruby-value">3</span>
+398:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">components</span>.<span class="ruby-identifier">max</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">255</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">components</span>.<span class="ruby-identifier">min</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">tolerance</span> * <span class="ruby-value">3</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">max</span>
+399:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="b-method" class="method-detail ">
+				<a name="method-i-b"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">b</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the blue-component from the color value.
+</p>
+<p>
+@param [Integer] value The color value. @return [Integer] A value between 0
+and <a href="Color.html#MAX">MAX</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="b-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 189</span>
+189:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">b</span>(<span class="ruby-identifier">value</span>)
+190:       (<span class="ruby-identifier">value</span> &amp; <span class="ruby-value">0x0000ff00</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>
+191:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="blend-method" class="method-detail ">
+				<a name="method-i-blend"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">blend</span><span
+						class="method-args">(fg, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Blends the foreground and background color by taking the average of  the
+components.
+</p>
+<p>
+@param [Integer] fg The foreground color. @param [Integer] bg The
+foreground color. @return [Integer] The blended color.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="blend-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 304</span>
+304:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blend</span>(<span class="ruby-identifier">fg</span>, <span class="ruby-identifier">bg</span>)
+305:       (<span class="ruby-identifier">fg</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bg</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">1</span>
+306:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compose-method" class="method-detail method-alias">
+				<a name="method-i-compose"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compose</span><span
+						class="method-args">(fg, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Color.html#method-i-compose_quick">compose_quick</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="compose-precise-method" class="method-detail ">
+				<a name="method-i-compose_precise"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compose_precise</span><span
+						class="method-args">(fg, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Composes two colors with an alpha channel using floating point math.
+</p>
+<p>
+This method uses more precise floating point math, but this precision is
+lost when the result is converted back to an integer. Because it is slower
+than the version based on integer math, that version is preferred.
+</p>
+<p>
+@param [Integer] fg The foreground color. @param [Integer] bg The
+foreground color. @return [Integer] The composited color. @see <a
+href="Color.html#method-i-compose_quick">ChunkyPNG::Color#compose_quick</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compose-precise-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 281</span>
+281:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compose_precise</span>(<span class="ruby-identifier">fg</span>, <span class="ruby-identifier">bg</span>)
+282:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">fg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opaque?</span>(<span class="ruby-identifier">fg</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">fully_transparent?</span>(<span class="ruby-identifier">bg</span>)
+283:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fully_transparent?</span>(<span class="ruby-identifier">fg</span>)
+284:       
+285:       <span class="ruby-identifier">fg_a</span>  = <span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-constant">MAX</span>
+286:       <span class="ruby-identifier">bg_a</span>  = <span class="ruby-identifier">a</span>(<span class="ruby-identifier">bg</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-constant">MAX</span>
+287:       <span class="ruby-identifier">a_com</span> = (<span class="ruby-value">1.0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">fg_a</span>) * <span class="ruby-identifier">bg_a</span>
+288: 
+289:       <span class="ruby-identifier">new_r</span> = (<span class="ruby-identifier">fg_a</span> * <span class="ruby-identifier">r</span>(<span class="ruby-identifier">fg</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">a_com</span> * <span class="ruby-identifier">r</span>(<span class="ruby-identifier">bg</span>)).<span class="ruby-identifier">round</span>
+290:       <span class="ruby-identifier">new_g</span> = (<span class="ruby-identifier">fg_a</span> * <span class="ruby-identifier">g</span>(<span class="ruby-identifier">fg</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">a_com</span> * <span class="ruby-identifier">g</span>(<span class="ruby-identifier">bg</span>)).<span class="ruby-identifier">round</span>
+291:       <span class="ruby-identifier">new_b</span> = (<span class="ruby-identifier">fg_a</span> * <span class="ruby-identifier">b</span>(<span class="ruby-identifier">fg</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">a_com</span> * <span class="ruby-identifier">b</span>(<span class="ruby-identifier">bg</span>)).<span class="ruby-identifier">round</span>
+292:       <span class="ruby-identifier">new_a</span> = ((<span class="ruby-identifier">fg_a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">a_com</span>) * <span class="ruby-constant">MAX</span>).<span class="ruby-identifier">round</span>
+293:       <span class="ruby-identifier">rgba</span>(<span class="ruby-identifier">new_r</span>, <span class="ruby-identifier">new_g</span>, <span class="ruby-identifier">new_b</span>, <span class="ruby-identifier">new_a</span>)
+294:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compose-quick-method" class="method-detail ">
+				<a name="method-i-compose_quick"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compose_quick</span><span
+						class="method-args">(fg, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Composes two colors with an alpha channel using integer math.
+</p>
+<p>
+This version is faster than the version based on floating point math, so
+this compositing function is used by default.
+</p>
+<p>
+@param [Integer] fg The foreground color. @param [Integer] bg The
+foreground color. @return [Integer] The composited color. @see <a
+href="Color.html#method-i-compose_precise">ChunkyPNG::Color#compose_precise</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compose-quick-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 259</span>
+259:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compose_quick</span>(<span class="ruby-identifier">fg</span>, <span class="ruby-identifier">bg</span>)
+260:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">fg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opaque?</span>(<span class="ruby-identifier">fg</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">fully_transparent?</span>(<span class="ruby-identifier">bg</span>)
+261:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fully_transparent?</span>(<span class="ruby-identifier">fg</span>)
+262:       
+263:       <span class="ruby-identifier">a_com</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-value">0xff</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>), <span class="ruby-identifier">a</span>(<span class="ruby-identifier">bg</span>))
+264:       <span class="ruby-identifier">new_r</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>), <span class="ruby-identifier">r</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a_com</span>, <span class="ruby-identifier">r</span>(<span class="ruby-identifier">bg</span>))
+265:       <span class="ruby-identifier">new_g</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>), <span class="ruby-identifier">g</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a_com</span>, <span class="ruby-identifier">g</span>(<span class="ruby-identifier">bg</span>))
+266:       <span class="ruby-identifier">new_b</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>), <span class="ruby-identifier">b</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a_com</span>, <span class="ruby-identifier">b</span>(<span class="ruby-identifier">bg</span>))
+267:       <span class="ruby-identifier">new_a</span> = <span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">a_com</span>
+268:       <span class="ruby-identifier">rgba</span>(<span class="ruby-identifier">new_r</span>, <span class="ruby-identifier">new_g</span>, <span class="ruby-identifier">new_b</span>, <span class="ruby-identifier">new_a</span>)
+269:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Color.html#method-i-compose">compose</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="decompose-alpha-method" class="method-detail ">
+				<a name="method-i-decompose_alpha"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">decompose_alpha</span><span
+						class="method-args">(color, mask, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Decomposes the alpha channel value given the resulting color, the mask
+color  and a background color, all of which should be opaque.
+</p>
+<p>
+Make sure to call {<a
+href="Color.html#method-i-alpha_decomposable%3F">#</a>} first to see if the
+alpha channel value can successfully decomposed with a given tolerance,
+otherwise the return  value of this method is undefined.
+</p>
+<p>
+@param [Integer] color The color that was the result of compositing. @param
+[Integer] mask The opaque variant of the color that was being composed
+@param [Integer] bg The background color on which the color was composed.
+@return [Integer] The best fitting alpha channel, a value between 0 and
+255. @see <a href="Color.html#method-i-alpha_decomposable%3F">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="decompose-alpha-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 413</span>
+413:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decompose_alpha</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+414:       <span class="ruby-identifier">components</span> = <span class="ruby-identifier">decompose_alpha_components</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+415:       (<span class="ruby-identifier">components</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span> } <span class="ruby-operator">/</span> <span class="ruby-value">3.0</span>).<span class="ruby-identifier">round</span>
+416:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="decompose-alpha-component-method" class="method-detail ">
+				<a name="method-i-decompose_alpha_component"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">decompose_alpha_component</span><span
+						class="method-args">(channel, color, mask, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Decomposes an alpha channel for either the r, g or b color channel. @param
+[:r, :g, :b] channel The channel to decompose the alpha channel from.
+@param [Integer] color The color that was the result of compositing. @param
+[Integer] mask The opaque variant of the color that was being composed
+@param [Integer] bg The background color on which the color was composed.
+@return [Integer] The decomposed alpha value for the channel.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="decompose-alpha-component-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 424</span>
+424:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decompose_alpha_component</span>(<span class="ruby-identifier">channel</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+425:       <span class="ruby-identifier">cc</span>, <span class="ruby-identifier">mc</span>, <span class="ruby-identifier">bc</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">channel</span>, <span class="ruby-identifier">color</span>), <span class="ruby-identifier">send</span>(<span class="ruby-identifier">channel</span>, <span class="ruby-identifier">mask</span>), <span class="ruby-identifier">send</span>(<span class="ruby-identifier">channel</span>, <span class="ruby-identifier">bg</span>)
+426:       
+427:       <span class="ruby-keyword kw">return</span> <span class="ruby-value">0x00</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">bc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">cc</span>
+428:       <span class="ruby-keyword kw">return</span> <span class="ruby-value">0xff</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">bc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">mc</span>
+429:       <span class="ruby-keyword kw">return</span> <span class="ruby-value">0xff</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cc</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">mc</span>
+430:       
+431:       (((<span class="ruby-identifier">bc</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cc</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">bc</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">mc</span>).<span class="ruby-identifier">to_f</span>) * <span class="ruby-constant">MAX</span>).<span class="ruby-identifier">round</span>
+432:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="decompose-alpha-components-method" class="method-detail ">
+				<a name="method-i-decompose_alpha_components"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">decompose_alpha_components</span><span
+						class="method-args">(color, mask, bg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Decomposes the alpha channels for the r, g and b color channel. @param
+[Integer] color The color that was the result of compositing. @param
+[Integer] mask The opaque variant of the color that was being composed
+@param [Integer] bg The background color on which the color was composed.  
+@return [Array<Integer>] The decomposed alpha values for the r, g and b
+channels.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="decompose-alpha-components-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 439</span>
+439:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decompose_alpha_components</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+440:       [
+441:         <span class="ruby-identifier">decompose_alpha_component</span>(<span class="ruby-value">:r</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>),
+442:         <span class="ruby-identifier">decompose_alpha_component</span>(<span class="ruby-value">:g</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>),
+443:         <span class="ruby-identifier">decompose_alpha_component</span>(<span class="ruby-value">:b</span>, <span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+444:       ]
+445:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="decompose-color-method" class="method-detail ">
+				<a name="method-i-decompose_color"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">decompose_color</span><span
+						class="method-args">(color, mask, bg, tolerance = 1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Decomposes a color, given a color, a mask color and a background color. The
+returned color will be a variant of the mask color, with the alpha channel
+set to the best fitting value. This basically is the reverse  operation if
+alpha composition.
+</p>
+<p>
+If the color cannot be decomposed, this method will return the fully
+transparent variant of the mask color.
+</p>
+<p>
+@param [Integer] color The color that was the result of compositing. @param
+[Integer] mask The opaque variant of the color that was being composed
+@param [Integer] bg The background color on which the color was composed.
+@param [Integer] tolerance The decomposition tolerance level, a value
+between 0 and 255. @return [Integer] The decomposed color,a variant of the
+masked color with the 
+</p>
+<pre>
+   alpha channel set to an appropriate value.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="decompose-color-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 376</span>
+376:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decompose_color</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>, <span class="ruby-identifier">tolerance</span> = <span class="ruby-value">1</span>)
+377:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">alpha_decomposable?</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>, <span class="ruby-identifier">tolerance</span>)
+378:         <span class="ruby-identifier">mask</span> &amp; <span class="ruby-value">0xffffff00</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">decompose_alpha</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">mask</span>, <span class="ruby-identifier">bg</span>)
+379:       <span class="ruby-keyword kw">else</span>
+380:         <span class="ruby-identifier">mask</span> &amp; <span class="ruby-value">0xffffff00</span>
+381:       <span class="ruby-keyword kw">end</span>
+382:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fade-method" class="method-detail ">
+				<a name="method-i-fade"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fade</span><span
+						class="method-args">(color, factor)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Lowers the intensity of a color, by lowering its alpha by a given factor.
+@param [Integer] color The color to adjust. @param [Integer] factor Fade
+factor as an integer between 0 and 255. @return [Integer] The faded color.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="fade-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 357</span>
+357:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fade</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">factor</span>)
+358:       <span class="ruby-identifier">new_alpha</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">factor</span>)
+359:       (<span class="ruby-identifier">color</span> &amp; <span class="ruby-value">0xffffff00</span>) <span class="ruby-operator">|</span> <span class="ruby-identifier">new_alpha</span>
+360:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-hex-method" class="method-detail ">
+				<a name="method-i-from_hex"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_hex</span><span
+						class="method-args">(hex_value, opacity = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a color by converting it from a string in hex notation. 
+</p>
+<p>
+It supports colors with (#) or without (#) alpha channel. <a
+href="Color.html">Color</a> strings may include the prefix &#8220;0x&#8221;
+or &#8220;#&#8221;.
+</p>
+<p>
+@param [String] str The color in hex notation. @return [Integer] The
+</p>
+<pre>
+  converted color value.
+</pre>
+<p>
+@param [Integer] opacity The opacity value for the color. Overrides any
+</p>
+<pre>
+   opacity value given in the hex value if given.
+</pre>
+<p>
+@return [Integer] The color value. @raise [ArgumentError] if the value
+given is not a hex color notation.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-hex-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 155</span>
+155:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_hex</span>(<span class="ruby-identifier">hex_value</span>, <span class="ruby-identifier">opacity</span> = <span class="ruby-keyword kw">nil</span>)
+156:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">HEX_COLOR_REGEXP</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">hex_value</span>
+157:         <span class="ruby-identifier">base_color</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">hex</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span>
+158:         <span class="ruby-identifier">opacity</span>  <span class="ruby-operator">||=</span> <span class="ruby-node">$2</span> <span class="ruby-operator">?</span> <span class="ruby-node">$2</span>.<span class="ruby-identifier">hex</span> <span class="ruby-operator">:</span> <span class="ruby-value">0xff</span>
+159:         <span class="ruby-identifier">base_color</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">opacity</span>
+160:       <span class="ruby-keyword kw">else</span> 
+161:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Not a valid hex color notation: #{hex_value.inspect}!&quot;</span>
+162:       <span class="ruby-keyword kw">end</span>
+163:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-rgb-stream-method" class="method-detail ">
+				<a name="method-i-from_rgb_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_rgb_stream</span><span
+						class="method-args">(stream, pos = 0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a color by unpacking an rgb triple from a string.
+</p>
+<p>
+@param [String] stream The string to load the color from. It should be 
+</p>
+<pre>
+    at least 3 + pos bytes long.
+</pre>
+<p>
+@param [Integer] pos The position in the string to load the triple from.
+@return [Integer] The newly constructed color value.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-rgb-stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_rgb_stream</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span> = <span class="ruby-value">0</span>)
+131:       <span class="ruby-identifier">rgb</span>(*<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-node">&quot;@#{pos}C3&quot;</span>))
+132:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-rgba-stream-method" class="method-detail ">
+				<a name="method-i-from_rgba_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_rgba_stream</span><span
+						class="method-args">(stream, pos = 0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a color by unpacking an rgba triple from a string
+</p>
+<p>
+@param [String] stream The string to load the color from. It should be 
+</p>
+<pre>
+     at least 4 + pos bytes long.
+</pre>
+<p>
+@param [Integer] pos The position in the string to load the triple from.
+@return [Integer] The newly constructed color value.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-rgba-stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_rgba_stream</span>(<span class="ruby-identifier">stream</span>, <span class="ruby-identifier">pos</span> = <span class="ruby-value">0</span>)
+141:       <span class="ruby-identifier">rgba</span>(*<span class="ruby-identifier">stream</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-node">&quot;@#{pos}C4&quot;</span>))
+142:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fully-transparent--method" class="method-detail ">
+				<a name="method-i-fully_transparent%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fully_transparent?</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this color is fully transparent.
+</p>
+<p>
+@param [Integer] value The color to test. @return [true, false] True if the
+alpha channel equals 0.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="fully-transparent--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 228</span>
+228:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fully_transparent?</span>(<span class="ruby-identifier">value</span>)
+229:       <span class="ruby-identifier">a</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0x00000000</span>
+230:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="g-method" class="method-detail ">
+				<a name="method-i-g"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">g</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the green-component from the color value.
+</p>
+<p>
+@param [Integer] value The color value. @return [Integer] A value between 0
+and <a href="Color.html#MAX">MAX</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="g-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 181</span>
+181:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">g</span>(<span class="ruby-identifier">value</span>)
+182:       (<span class="ruby-identifier">value</span> &amp; <span class="ruby-value">0x00ff0000</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>
+183:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grayscale-method" class="method-detail ">
+				<a name="method-i-grayscale"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grayscale</span><span
+						class="method-args">(teint)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new color using a grayscale teint. @param [Integer] teint The
+grayscale teint (0-255), will be used as r, g, and b value. @return
+[Integer] The newly constructed color value.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grayscale-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 108</span>
+108:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grayscale</span>(<span class="ruby-identifier">teint</span>)
+109:       <span class="ruby-identifier">teint</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">24</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">teint</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">teint</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xff</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grayscale--method" class="method-detail ">
+				<a name="method-i-grayscale%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grayscale?</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this color is fully transparent.
+</p>
+<p>
+@param [Integer] value The color to test. @return [true, false] True if the
+r, g and b component are equal.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grayscale--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 220</span>
+220:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grayscale?</span>(<span class="ruby-identifier">value</span>)
+221:       <span class="ruby-identifier">r</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">b</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">b</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">==</span> <span class="ruby-identifier">g</span>(<span class="ruby-identifier">value</span>)
+222:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grayscale-alpha-method" class="method-detail ">
+				<a name="method-i-grayscale_alpha"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grayscale_alpha</span><span
+						class="method-args">(teint, a)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new color using a grayscale teint and alpha value. @param
+[Integer] teint The grayscale teint (0-255), will be used as r, g, and b
+value. @param [Integer] a The opacity (0-255) @return [Integer] The newly
+constructed color value.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grayscale-alpha-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 116</span>
+116:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grayscale_alpha</span>(<span class="ruby-identifier">teint</span>, <span class="ruby-identifier">a</span>)
+117:       <span class="ruby-identifier">teint</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">24</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">teint</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">teint</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>
+118:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="grayscale-teint-method" class="method-detail ">
+				<a name="method-i-grayscale_teint"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">grayscale_teint</span><span
+						class="method-args">(color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the grayscale teint of an RGB color.
+</p>
+<p>
+@param [Integer] color The color to convert.     @return [Integer] The
+grayscale teint of the input color, 0-255.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="grayscale-teint-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 336</span>
+336:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grayscale_teint</span>(<span class="ruby-identifier">color</span>)
+337:       (<span class="ruby-identifier">r</span>(<span class="ruby-identifier">color</span>) * <span class="ruby-value">0.3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">g</span>(<span class="ruby-identifier">color</span>) * <span class="ruby-value">0.59</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">b</span>(<span class="ruby-identifier">color</span>) * <span class="ruby-value">0.11</span>).<span class="ruby-identifier">round</span>
+338:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="html-color-method" class="method-detail ">
+				<a name="method-i-html_color"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">html_color</span><span
+						class="method-args">(color_name, opacity = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Gets a color value based on a HTML color name.
+</p>
+<p>
+The color name is flexible. E.g. <tt>'yellowgreen'</tt>, <tt>'Yellow
+green'</tt>,  <tt>'YellowGreen'</tt>, <tt>'YELLOW_GREEN'</tt> and
+<tt>:yellow_green</tt> will all return the same color value.
+</p>
+<p>
+You can include a opacity level in the color name (e.g. <tt>'red @
+0.5'</tt>) or give an explicit opacity value as second argument. If no
+opacity value is given, the color will be fully opaque.
+</p>
+<p>
+@param [Symbol, String] color_name The color name. It may include an
+opacity specifier
+</p>
+<pre>
+  like &lt;tt&gt;@ 0.8&lt;/tt&gt; to set the color's opacity.
+</pre>
+<p>
+@param [Integer] opacity The opacity value for the color between 0 and 255.
+Overrides 
+</p>
+<pre>
+  any opacity value given in the color name.
+</pre>
+<p>
+@return [Integer] The color value. @raise [ChunkyPNG::Exception] If the
+color name was not recognized.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="html-color-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 672</span>
+672:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">html_color</span>(<span class="ruby-identifier">color_name</span>, <span class="ruby-identifier">opacity</span> = <span class="ruby-keyword kw">nil</span>)
+673:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">color_name</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">HTML_COLOR_REGEXP</span>
+674:         <span class="ruby-identifier">opacity</span> <span class="ruby-operator">||=</span> <span class="ruby-node">$2</span> <span class="ruby-operator">?</span> (<span class="ruby-node">$2</span>.<span class="ruby-identifier">to_f</span> * <span class="ruby-value">255.0</span>).<span class="ruby-identifier">round</span> <span class="ruby-operator">:</span> <span class="ruby-value">0xff</span>
+675:         <span class="ruby-identifier">base_color_name</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[^a-z]+/</span>, <span class="ruby-value str">''</span>).<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+676:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">PREDEFINED_COLORS</span>[<span class="ruby-identifier">base_color_name</span>] <span class="ruby-operator">|</span> <span class="ruby-identifier">opacity</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">PREDEFINED_COLORS</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">base_color_name</span>)
+677:       <span class="ruby-keyword kw">end</span>
+678:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Unknown color name #{color_name}!&quot;</span>
+679:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="int-mult-method" class="method-detail ">
+				<a name="method-i-int8_mult"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">int8_mult</span><span
+						class="method-args">(a, b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Multiplies two fractions using integer math, where the fractions are stored
+using an integer between 0 and 255. This method is used as a helper method
+for compositing colors using integer math.
+</p>
+<p>
+This is a quicker implementation of ((a * b) / 255.0).round.
+</p>
+<p>
+@param [Integer] a The first fraction. @param [Integer] b The second
+fraction. @return [Integer] The result of the multiplication.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="int-mult-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 245</span>
+245:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)
+246:       <span class="ruby-identifier">t</span> = <span class="ruby-identifier">a</span> * <span class="ruby-identifier">b</span> <span class="ruby-operator">+</span> <span class="ruby-value">0x80</span>
+247:       ((<span class="ruby-identifier">t</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">t</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>
+248:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="interpolate-quick-method" class="method-detail ">
+				<a name="method-i-interpolate_quick"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">interpolate_quick</span><span
+						class="method-args">(fg, bg, alpha)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Interpolates the foreground and background colors by the given alpha value.
+This also blends the alpha channels themselves.
+</p>
+<p>
+A blending factor of 255 will give entirely the foreground, while a
+blending factor of 0 will give the background.
+</p>
+<p>
+@param [Integer] fg The foreground color. @param [Integer] bg The
+background color. @param [Integer] alpha The blending factor (fixed 8bit)
+@param [Integer] The interpolated color.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="interpolate-quick-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 318</span>
+318:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">interpolate_quick</span>(<span class="ruby-identifier">fg</span>, <span class="ruby-identifier">bg</span>, <span class="ruby-identifier">alpha</span>)
+319:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">fg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">alpha</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">255</span>
+320:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">alpha</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+321:       
+322:       <span class="ruby-identifier">alpha_com</span> = <span class="ruby-value">255</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">alpha</span>
+323: 
+324:       <span class="ruby-identifier">new_r</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha</span>, <span class="ruby-identifier">r</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha_com</span>, <span class="ruby-identifier">r</span>(<span class="ruby-identifier">bg</span>))
+325:       <span class="ruby-identifier">new_g</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha</span>, <span class="ruby-identifier">g</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha_com</span>, <span class="ruby-identifier">g</span>(<span class="ruby-identifier">bg</span>))
+326:       <span class="ruby-identifier">new_b</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha</span>, <span class="ruby-identifier">b</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha_com</span>, <span class="ruby-identifier">b</span>(<span class="ruby-identifier">bg</span>))
+327:       <span class="ruby-identifier">new_a</span> = <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha</span>, <span class="ruby-identifier">a</span>(<span class="ruby-identifier">fg</span>)) <span class="ruby-operator">+</span> <span class="ruby-identifier">int8_mult</span>(<span class="ruby-identifier">alpha_com</span>, <span class="ruby-identifier">a</span>(<span class="ruby-identifier">bg</span>))
+328:       
+329:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rgba</span>(<span class="ruby-identifier">new_r</span>, <span class="ruby-identifier">new_g</span>, <span class="ruby-identifier">new_b</span>, <span class="ruby-identifier">new_a</span>)
+330:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="opaque--method" class="method-detail ">
+				<a name="method-i-opaque%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">opaque!</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the opaque value of this color by removing the alpha channel.
+@param [Integer] value The color to transform. @return [Integer] The opaque
+color
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="opaque--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 212</span>
+212:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">opaque!</span>(<span class="ruby-identifier">value</span>)
+213:       <span class="ruby-identifier">value</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x000000ff</span>
+214:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="opaque--method" class="method-detail ">
+				<a name="method-i-opaque%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">opaque?</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this color is fully opaque.
+</p>
+<p>
+@param [Integer] value The color to test. @return [true, false] True if the
+alpha channel equals <a href="Color.html#MAX">MAX</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="opaque--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 205</span>
+205:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">opaque?</span>(<span class="ruby-identifier">value</span>)
+206:       <span class="ruby-identifier">a</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0x000000ff</span>
+207:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(source)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a color value given a numeric or string argument.
+</p>
+<p>
+It supports color numbers, colors in hex notation and named HTML colors.
+</p>
+<p>
+@param [Integer, String] The color value. @return [Integer] The color
+value, with the opacity applied if one was given.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 76</span>
+76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">source</span>)
+77:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">source</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Integer</span>)
+78:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">to_s</span>
+79:         <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/^\d+$/</span>; <span class="ruby-identifier">source</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">to_i</span>
+80:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">HEX_COLOR_REGEXP</span>;  <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">from_hex</span>(<span class="ruby-identifier">source</span>.<span class="ruby-identifier">to_s</span>)
+81:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML_COLOR_REGEXP</span>; <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">html_color</span>(<span class="ruby-identifier">source</span>.<span class="ruby-identifier">to_s</span>)
+82:         <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Don't know how to create a color from #{source.inspect}!&quot;</span>
+83:       <span class="ruby-keyword kw">end</span>
+84:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pass-bytesize-method" class="method-detail ">
+				<a name="method-i-pass_bytesize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pass_bytesize</span><span
+						class="method-args">(color_mode, depth, width, height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the number of bytes used for an image pass @param [Integer]
+color_mode The color mode in which the pixels are stored. @param [Integer]
+depth The color depth of the pixels. @param [Integer] width The width of
+the image pass. @param [Integer] width The height of the image pass.
+@return [Integer] The number of bytes used per scanline in a datastream.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pass-bytesize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 739</span>
+739:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pass_bytesize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+740:       <span class="ruby-keyword kw">return</span> <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">width</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">height</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+741:       (<span class="ruby-identifier">scanline_bytesize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">width</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) * <span class="ruby-identifier">height</span>
+742:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pixel-bitsize-method" class="method-detail ">
+				<a name="method-i-pixel_bitsize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pixel_bitsize</span><span
+						class="method-args">(color_mode, depth = 8)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the size in bits of a pixel when it is stored using a given color
+mode. @param [Integer] color_mode The color mode in which the pixels are
+stored. @param [Integer] depth The color depth of the pixels. @return
+[Integer] The number of bytes used per pixel in a datastream.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pixel-bitsize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 720</span>
+720:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pixel_bitsize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span> = <span class="ruby-value">8</span>)
+721:       <span class="ruby-identifier">samples_per_pixel</span>(<span class="ruby-identifier">color_mode</span>) * <span class="ruby-identifier">depth</span>
+722:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pixel-bytesize-method" class="method-detail ">
+				<a name="method-i-pixel_bytesize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pixel_bytesize</span><span
+						class="method-args">(color_mode, depth = 8)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the size in bytes of a pixel when it is stored using a given color
+mode. @param [Integer] color_mode The color mode in which the pixels are
+stored. @return [Integer] The number of bytes used per pixel in a
+datastream.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pixel-bytesize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 711</span>
+711:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pixel_bytesize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span> = <span class="ruby-value">8</span>)
+712:       <span class="ruby-keyword kw">return</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">depth</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">8</span>
+713:       (<span class="ruby-identifier">pixel_bitsize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span>) <span class="ruby-operator">+</span> <span class="ruby-value">7</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">3</span>
+714:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="r-method" class="method-detail ">
+				<a name="method-i-r"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">r</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the red-component from the color value.
+</p>
+<p>
+@param [Integer] value The color value. @return [Integer] A value between 0
+and <a href="Color.html#MAX">MAX</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="r-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 173</span>
+173:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">r</span>(<span class="ruby-identifier">value</span>)
+174:       (<span class="ruby-identifier">value</span> &amp; <span class="ruby-value">0xff000000</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">24</span>
+175:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgb-method" class="method-detail ">
+				<a name="method-i-rgb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgb</span><span
+						class="method-args">(r, g, b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new color using an r, g, b triple. @param [Integer] r The
+r-component (0-255) @param [Integer] g The g-component (0-255) @param
+[Integer] b The b-component (0-255) @return [Integer] The newly constructed
+color value.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rgb-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 101</span>
+101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgb</span>(<span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>)
+102:       <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">24</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">g</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">|</span> <span class="ruby-value">0xff</span>
+103:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgba-method" class="method-detail ">
+				<a name="method-i-rgba"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgba</span><span
+						class="method-args">(r, g, b, a)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new color using an r, g, b triple and an alpha value. @param
+[Integer] r The r-component (0-255) @param [Integer] g The g-component
+(0-255) @param [Integer] b The b-component (0-255) @param [Integer] a The
+opacity (0-255) @return [Integer] The newly constructed color value.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rgba-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 92</span>
+92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgba</span>(<span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>, <span class="ruby-identifier">a</span>)
+93:       <span class="ruby-identifier">r</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">24</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">g</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">b</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="samples-per-pixel-method" class="method-detail ">
+				<a name="method-i-samples_per_pixel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">samples_per_pixel</span><span
+						class="method-args">(color_mode)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the number of sample values per pixel. @param [Integer] color_mode
+The color mode being used. @return [Integer] The number of sample values
+per pixel.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="samples-per-pixel-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 697</span>
+697:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">samples_per_pixel</span>(<span class="ruby-identifier">color_mode</span>)
+698:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">color_mode</span>
+699:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_INDEXED</span>;         <span class="ruby-value">1</span>
+700:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR</span>;       <span class="ruby-value">3</span>
+701:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_TRUECOLOR_ALPHA</span>; <span class="ruby-value">4</span>
+702:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_GRAYSCALE</span>;       <span class="ruby-value">1</span>
+703:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">COLOR_GRAYSCALE_ALPHA</span>; <span class="ruby-value">2</span>
+704:         <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">NotSupported</span>, <span class="ruby-node">&quot;Don't know the numer of samples for this colormode: #{color_mode}!&quot;</span>
+705:       <span class="ruby-keyword kw">end</span>
+706:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scanline-bytesize-method" class="method-detail ">
+				<a name="method-i-scanline_bytesize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scanline_bytesize</span><span
+						class="method-args">(color_mode, depth, width)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the number of bytes used per scanline. @param [Integer] color_mode
+The color mode in which the pixels are stored. @param [Integer] depth The
+color depth of the pixels. @param [Integer] width The number of pixels per
+scanline. @return [Integer] The number of bytes used per scanline in a
+datastream.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="scanline-bytesize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 729</span>
+729:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scanline_bytesize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span>, <span class="ruby-identifier">width</span>)
+730:       ((<span class="ruby-identifier">pixel_bitsize</span>(<span class="ruby-identifier">color_mode</span>, <span class="ruby-identifier">depth</span>) * <span class="ruby-identifier">width</span>) <span class="ruby-operator">+</span> <span class="ruby-value">7</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">3</span>
+731:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-grayscale-method" class="method-detail ">
+				<a name="method-i-to_grayscale"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_grayscale</span><span
+						class="method-args">(color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a color to a fiting grayscale value. It will conserve the alpha
+channel.
+</p>
+<p>
+This method will return a full color value, with the R, G, and B value set
+to the grayscale teint calcuated from the input color&#8217;s R, G and B
+values.
+</p>
+<p>
+@param [Integer] color The color to convert. @return [Integer] The input
+color, converted to the best fitting grayscale. @see <a
+href="Color.html#method-i-grayscale_teint">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-grayscale-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 349</span>
+349:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_grayscale</span>(<span class="ruby-identifier">color</span>)
+350:       <span class="ruby-identifier">grayscale_alpha</span>(<span class="ruby-identifier">grayscale_teint</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">a</span>(<span class="ruby-identifier">color</span>))
+351:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-grayscale-alpha-bytes-method" class="method-detail ">
+				<a name="method-i-to_grayscale_alpha_bytes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_grayscale_alpha_bytes</span><span
+						class="method-args">(color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array with the grayscale teint and alpha channel values for this
+color.
+</p>
+<p>
+This method expects the color to be grayscale, i.e. r,g and b value  to be
+equal and uses only the B channel. If you need to convert a  color to
+grayscale first, see {<a href="Color.html#method-i-to_grayscale">#</a>}.
+</p>
+<p>
+@param [Integer] color The grayscale color to convert. @return
+[Array<Integer>] An array with 2 Integer elements. @see #
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-grayscale-alpha-bytes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 497</span>
+497:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_grayscale_alpha_bytes</span>(<span class="ruby-identifier">color</span>)
+498:       [<span class="ruby-identifier">b</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">a</span>(<span class="ruby-identifier">color</span>)] <span class="ruby-comment cmt"># assumption r == g == b</span>
+499:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-grayscale-bytes-method" class="method-detail ">
+				<a name="method-i-to_grayscale_bytes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_grayscale_bytes</span><span
+						class="method-args">(color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array with the grayscale teint value for this color.
+</p>
+<p>
+This method expects the r,g and b value to be equal, and the alpha  channel
+will be discarded.
+</p>
+<p>
+@param [Integer] color The grayscale color to convert. @return
+[Array<Integer>] An array with 1 Integer element.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-grayscale-bytes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 483</span>
+483:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_grayscale_bytes</span>(<span class="ruby-identifier">color</span>)
+484:       [<span class="ruby-identifier">b</span>(<span class="ruby-identifier">color</span>)] <span class="ruby-comment cmt"># assumption r == g == b</span>
+485:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-hex-method" class="method-detail ">
+				<a name="method-i-to_hex"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_hex</span><span
+						class="method-args">(color, include_alpha = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a string representing this color using hex notation (i.e. #).
+</p>
+<p>
+@param [Integer] value The color to convert. @return [String] The color in
+hex notation, starting with a pound sign.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-hex-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 455</span>
+455:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_hex</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">include_alpha</span> = <span class="ruby-keyword kw">true</span>)
+456:       <span class="ruby-identifier">include_alpha</span> <span class="ruby-operator">?</span> (<span class="ruby-value str">'#%08x'</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">color</span>) <span class="ruby-operator">:</span> (<span class="ruby-value str">'#%06x'</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">color</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>])
+457:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-truecolor-alpha-bytes-method" class="method-detail ">
+				<a name="method-i-to_truecolor_alpha_bytes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_truecolor_alpha_bytes</span><span
+						class="method-args">(color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array with the separate RGBA values for this color.
+</p>
+<p>
+@param [Integer] color The color to convert. @return [Array<Integer>] An
+array with 4 Integer elements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-truecolor-alpha-bytes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 463</span>
+463:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_truecolor_alpha_bytes</span>(<span class="ruby-identifier">color</span>)
+464:       [<span class="ruby-identifier">r</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">g</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">b</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">a</span>(<span class="ruby-identifier">color</span>)]
+465:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-truecolor-bytes-method" class="method-detail ">
+				<a name="method-i-to_truecolor_bytes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_truecolor_bytes</span><span
+						class="method-args">(color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array with the separate RGB values for this color. The alpha
+channel will be discarded.
+</p>
+<p>
+@param [Integer] color The color to convert. @return [Array<Integer>] An
+array with 3 Integer elements.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-truecolor-bytes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/color.rb, line 472</span>
+472:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_truecolor_bytes</span>(<span class="ruby-identifier">color</span>)
+473:       [<span class="ruby-identifier">r</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">g</span>(<span class="ruby-identifier">color</span>), <span class="ruby-identifier">b</span>(<span class="ruby-identifier">color</span>)]
+474:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

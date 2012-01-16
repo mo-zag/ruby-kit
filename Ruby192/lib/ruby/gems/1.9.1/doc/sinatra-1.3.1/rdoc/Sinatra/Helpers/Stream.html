@@ -1,0 +1,1584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sinatra::Helpers::Stream</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sinatra/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sinatra/base.rb">lib/sinatra/base.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Stream/Delegator.html">Sinatra::Helpers::Stream::Delegator</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Stream/Templates.html">Sinatra::Helpers::Stream::Templates</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Stream/Application.html">Sinatra::Helpers::Stream::Application</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Stream/Base.html">Sinatra::Helpers::Stream::Base</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-defer">::defer</a></li>
+					
+					<li><a href="#method-c-helpers">::helpers</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-register">::register</a></li>
+					
+					<li><a href="#method-c-schedule">::schedule</a></li>
+					
+					<li><a href="#method-c-use">::use</a></li>
+					
+					<li><a href="#method-i-%3C%3C">#<<</a></li>
+					
+					<li><a href="#method-i-back">#back</a></li>
+					
+					<li><a href="#method-i-cache_control">#cache_control</a></li>
+					
+					<li><a href="#method-i-callback">#callback</a></li>
+					
+					<li><a href="#method-i-client_error%3F">#client_error?</a></li>
+					
+					<li><a href="#method-i-close">#close</a></li>
+					
+					<li><a href="#method-i-each">#each</a></li>
+					
+					<li><a href="#method-i-etag">#etag</a></li>
+					
+					<li><a href="#method-i-etag_matches%3F">#etag_matches?</a></li>
+					
+					<li><a href="#method-i-expires">#expires</a></li>
+					
+					<li><a href="#method-i-informational%3F">#informational?</a></li>
+					
+					<li><a href="#method-i-last_modified">#last_modified</a></li>
+					
+					<li><a href="#method-i-not_found%3F">#not_found?</a></li>
+					
+					<li><a href="#method-i-redirect%3F">#redirect?</a></li>
+					
+					<li><a href="#method-i-server_error%3F">#server_error?</a></li>
+					
+					<li><a href="#method-i-stream">#stream</a></li>
+					
+					<li><a href="#method-i-success%3F">#success?</a></li>
+					
+					<li><a href="#method-i-time_for">#time_for</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="../../README_de_rdoc.html">README.de.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_es_rdoc.html">README.es.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_fr_rdoc.html">README.fr.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_hu_rdoc.html">README.hu.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_jp_rdoc.html">README.jp.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_pt-br_rdoc.html">README.pt-br.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_pt-pt_rdoc.html">README.pt-pt.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_ru_rdoc.html">README.ru.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_zh_rdoc.html">README.zh.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Sinatra.html">Sinatra</a></li>
+				
+					<li><a href="../../Sinatra/Application.html">Sinatra::Application</a></li>
+				
+					<li><a href="../../Sinatra/Helpers.html">Sinatra::Helpers</a></li>
+				
+					<li><a href="../../Sinatra/Helpers/Stream.html">Sinatra::Helpers::Stream</a></li>
+				
+					<li><a href="../../Sinatra/Helpers/Stream/Application.html">Sinatra::Helpers::Stream::Application</a></li>
+				
+					<li><a href="../../Sinatra/Helpers/Stream/Base.html">Sinatra::Helpers::Stream::Base</a></li>
+				
+					<li><a href="../../Sinatra/Helpers/Stream/Templates.html">Sinatra::Helpers::Stream::Templates</a></li>
+				
+					<li><a href="../../Sinatra/Helpers/Stream/Templates/ContentTyped.html">Sinatra::Helpers::Stream::Templates::ContentTyped</a></li>
+				
+					<li><a href="../../Sinatra/Request.html">Sinatra::Request</a></li>
+				
+					<li><a href="../../Sinatra/Response.html">Sinatra::Response</a></li>
+				
+					<li><a href="../../Sinatra/ShowExceptions.html">Sinatra::ShowExceptions</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sinatra::Helpers::Stream</h1>
+
+		<div id="description">
+			<p>
+Class of the response body in case you use <a
+href="Stream.html#method-i-stream">#</a>.
+</p>
+<p>
+Three things really matter: The front and back block (back being the blog
+generating content, front the one sending it to the client) and the
+scheduler, integrating with whatever concurrency feature the Rack handler
+is using.
+</p>
+<p>
+Scheduler has to respond to defer and schedule.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="defer-method" class="method-detail ">
+				<a name="method-c-defer"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">defer</span><span
+						class="method-args">(*)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="defer-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 247</span>
+247:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">defer</span>(*)    <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">end</span>
+248: 
+249:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">scheduler</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">keep_open</span> = <span class="ruby-keyword kw">false</span>, &amp;<span class="ruby-identifier">back</span>)
+250:         <span class="ruby-ivar">@back</span>, <span class="ruby-ivar">@scheduler</span>, <span class="ruby-ivar">@keep_open</span> = <span class="ruby-identifier">back</span>.<span class="ruby-identifier">to_proc</span>, <span class="ruby-identifier">scheduler</span>, <span class="ruby-identifier">keep_open</span>
+251:         <span class="ruby-ivar">@callbacks</span>, <span class="ruby-ivar">@closed</span> = [], <span class="ruby-keyword kw">false</span>
+252:       <span class="ruby-keyword kw">end</span>
+253: 
+254:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+255:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@closed</span>
+256:         <span class="ruby-ivar">@closed</span> = <span class="ruby-keyword kw">true</span>
+257:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-ivar">@callbacks</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">call</span> }}
+258:       <span class="ruby-keyword kw">end</span>
+259: 
+260:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">front</span>)
+261:         <span class="ruby-ivar">@front</span> = <span class="ruby-identifier">front</span>
+262:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">defer</span> <span class="ruby-keyword kw">do</span>
+263:           <span class="ruby-keyword kw">begin</span>
+264:             <span class="ruby-ivar">@back</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>)
+265:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+266:             <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> }
+267:           <span class="ruby-keyword kw">end</span>
+268:           <span class="ruby-identifier">close</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@keep_open</span>
+269:         <span class="ruby-keyword kw">end</span>
+270:       <span class="ruby-keyword kw">end</span>
+271: 
+272:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">data</span>)
+273:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-ivar">@front</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">to_s</span>) }
+274:         <span class="ruby-keyword kw">self</span>
+275:       <span class="ruby-keyword kw">end</span>
+276: 
+277:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">callback</span>(&amp;<span class="ruby-identifier">block</span>)
+278:         <span class="ruby-ivar">@callbacks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+279:       <span class="ruby-keyword kw">end</span>
+280: 
+281:       <span class="ruby-keyword kw">alias</span> <span class="ruby-identifier">errback</span> <span class="ruby-identifier">callback</span>
+282:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(scheduler = self.class, keep_open = false, &back)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 249</span>
+249:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">scheduler</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">keep_open</span> = <span class="ruby-keyword kw">false</span>, &amp;<span class="ruby-identifier">back</span>)
+250:         <span class="ruby-ivar">@back</span>, <span class="ruby-ivar">@scheduler</span>, <span class="ruby-ivar">@keep_open</span> = <span class="ruby-identifier">back</span>.<span class="ruby-identifier">to_proc</span>, <span class="ruby-identifier">scheduler</span>, <span class="ruby-identifier">keep_open</span>
+251:         <span class="ruby-ivar">@callbacks</span>, <span class="ruby-ivar">@closed</span> = [], <span class="ruby-keyword kw">false</span>
+252:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="schedule-method" class="method-detail ">
+				<a name="method-c-schedule"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">schedule</span><span
+						class="method-args">(*)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="schedule-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 246</span>
+246:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">schedule</span>(*) <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">end</span>
+247:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">defer</span>(*)    <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">end</span>
+248: 
+249:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">scheduler</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">keep_open</span> = <span class="ruby-keyword kw">false</span>, &amp;<span class="ruby-identifier">back</span>)
+250:         <span class="ruby-ivar">@back</span>, <span class="ruby-ivar">@scheduler</span>, <span class="ruby-ivar">@keep_open</span> = <span class="ruby-identifier">back</span>.<span class="ruby-identifier">to_proc</span>, <span class="ruby-identifier">scheduler</span>, <span class="ruby-identifier">keep_open</span>
+251:         <span class="ruby-ivar">@callbacks</span>, <span class="ruby-ivar">@closed</span> = [], <span class="ruby-keyword kw">false</span>
+252:       <span class="ruby-keyword kw">end</span>
+253: 
+254:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+255:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@closed</span>
+256:         <span class="ruby-ivar">@closed</span> = <span class="ruby-keyword kw">true</span>
+257:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-ivar">@callbacks</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">call</span> }}
+258:       <span class="ruby-keyword kw">end</span>
+259: 
+260:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">front</span>)
+261:         <span class="ruby-ivar">@front</span> = <span class="ruby-identifier">front</span>
+262:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">defer</span> <span class="ruby-keyword kw">do</span>
+263:           <span class="ruby-keyword kw">begin</span>
+264:             <span class="ruby-ivar">@back</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>)
+265:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+266:             <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> }
+267:           <span class="ruby-keyword kw">end</span>
+268:           <span class="ruby-identifier">close</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@keep_open</span>
+269:         <span class="ruby-keyword kw">end</span>
+270:       <span class="ruby-keyword kw">end</span>
+271: 
+272:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">data</span>)
+273:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-ivar">@front</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">to_s</span>) }
+274:         <span class="ruby-keyword kw">self</span>
+275:       <span class="ruby-keyword kw">end</span>
+276: 
+277:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">callback</span>(&amp;<span class="ruby-identifier">block</span>)
+278:         <span class="ruby-ivar">@callbacks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+279:       <span class="ruby-keyword kw">end</span>
+280: 
+281:       <span class="ruby-keyword kw">alias</span> <span class="ruby-identifier">errback</span> <span class="ruby-identifier">callback</span>
+282:     <span class="ruby-keyword kw">end</span>
+283: 
+284:     <span class="ruby-comment cmt"># Allows to start sending data to the client even though later parts of</span>
+285:     <span class="ruby-comment cmt"># the response body have not yet been generated.</span>
+286:     <span class="ruby-comment cmt">#</span>
+287:     <span class="ruby-comment cmt"># The close parameter specifies whether Stream#close should be called</span>
+288:     <span class="ruby-comment cmt"># after the block has been executed. This is only relevant for evented</span>
+289:     <span class="ruby-comment cmt"># servers like Thin or Rainbows.</span>
+290:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stream</span>(<span class="ruby-identifier">keep_open</span> = <span class="ruby-keyword kw">false</span>, &amp;<span class="ruby-identifier">block</span>)
+291:       <span class="ruby-identifier">scheduler</span> = <span class="ruby-identifier">env</span>[<span class="ruby-value str">'async.callback'</span>] <span class="ruby-operator">?</span> <span class="ruby-constant">EventMachine</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Stream</span>
+292:       <span class="ruby-identifier">body</span> <span class="ruby-constant">Stream</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">scheduler</span>, <span class="ruby-identifier">keep_open</span>, &amp;<span class="ruby-identifier">block</span>)
+293:     <span class="ruby-keyword kw">end</span>
+294: 
+295:     <span class="ruby-comment cmt"># Specify response freshness policy for HTTP caches (Cache-Control header).</span>
+296:     <span class="ruby-comment cmt"># Any number of non-value directives (:public, :private, :no_cache,</span>
+297:     <span class="ruby-comment cmt"># :no_store, :must_revalidate, :proxy_revalidate) may be passed along with</span>
+298:     <span class="ruby-comment cmt"># a Hash of value directives (:max_age, :min_stale, :s_max_age).</span>
+299:     <span class="ruby-comment cmt">#</span>
+300:     <span class="ruby-comment cmt">#   cache_control :public, :must_revalidate, :max_age =&gt; 60</span>
+301:     <span class="ruby-comment cmt">#   =&gt; Cache-Control: public, must-revalidate, max-age=60</span>
+302:     <span class="ruby-comment cmt">#</span>
+303:     <span class="ruby-comment cmt"># See RFC 2616 / 14.9 for more on standard cache control directives:</span>
+304:     <span class="ruby-comment cmt"># http://tools.ietf.org/html/rfc2616#section-14.9.1</span>
+305:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cache_control</span>(*<span class="ruby-identifier">values</span>)
+306:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+307:         <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">pop</span>
+308:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span> }
+309:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">k</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span> }
+310:       <span class="ruby-keyword kw">else</span>
+311:         <span class="ruby-identifier">hash</span> = {}
+312:       <span class="ruby-keyword kw">end</span>
+313: 
+314:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-value str">'_'</span>,<span class="ruby-value str">'-'</span>) }
+315:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+316:         <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-value str">'_'</span>, <span class="ruby-value str">'-'</span>)
+317:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;max-age&quot;</span>
+318:         <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">'='</span>)
+319:       <span class="ruby-keyword kw">end</span>
+320: 
+321:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'Cache-Control'</span>] = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">', '</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">any?</span>
+322:     <span class="ruby-keyword kw">end</span>
+323: 
+324:     <span class="ruby-comment cmt"># Set the Expires header and Cache-Control/max-age directive. Amount</span>
+325:     <span class="ruby-comment cmt"># can be an integer number of seconds in the future or a Time object</span>
+326:     <span class="ruby-comment cmt"># indicating when the response should be considered &quot;stale&quot;. The remaining</span>
+327:     <span class="ruby-comment cmt"># &quot;values&quot; arguments are passed to the #cache_control helper:</span>
+328:     <span class="ruby-comment cmt">#</span>
+329:     <span class="ruby-comment cmt">#   expires 500, :public, :must_revalidate</span>
+330:     <span class="ruby-comment cmt">#   =&gt; Cache-Control: public, must-revalidate, max-age=60</span>
+331:     <span class="ruby-comment cmt">#   =&gt; Expires: Mon, 08 Jun 2009 08:50:17 GMT</span>
+332:     <span class="ruby-comment cmt">#</span>
+333:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expires</span>(<span class="ruby-identifier">amount</span>, *<span class="ruby-identifier">values</span>)
+334:       <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> {} <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+335: 
+336:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">amount</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>
+337:         <span class="ruby-identifier">time</span>    = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">amount</span>.<span class="ruby-identifier">to_i</span>
+338:         <span class="ruby-identifier">max_age</span> = <span class="ruby-identifier">amount</span>
+339:       <span class="ruby-keyword kw">else</span>
+340:         <span class="ruby-identifier">time</span>    = <span class="ruby-identifier">time_for</span> <span class="ruby-identifier">amount</span>
+341:         <span class="ruby-identifier">max_age</span> = <span class="ruby-identifier">time</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+342:       <span class="ruby-keyword kw">end</span>
+343: 
+344:       <span class="ruby-identifier">values</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value">:max_age</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max_age</span>)
+345:       <span class="ruby-identifier">cache_control</span>(*<span class="ruby-identifier">values</span>)
+346: 
+347:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'Expires'</span>] = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">httpdate</span>
+348:     <span class="ruby-keyword kw">end</span>
+349: 
+350:     <span class="ruby-comment cmt"># Set the last modified time of the resource (HTTP 'Last-Modified' header)</span>
+351:     <span class="ruby-comment cmt"># and halt if conditional GET matches. The +time+ argument is a Time,</span>
+352:     <span class="ruby-comment cmt"># DateTime, or other object that responds to +to_time+.</span>
+353:     <span class="ruby-comment cmt">#</span>
+354:     <span class="ruby-comment cmt"># When the current request includes an 'If-Modified-Since' header that is</span>
+355:     <span class="ruby-comment cmt"># equal or later than the time specified, execution is immediately halted</span>
+356:     <span class="ruby-comment cmt"># with a '304 Not Modified' response.</span>
+357:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_modified</span>(<span class="ruby-identifier">time</span>)
+358:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">time</span>
+359:       <span class="ruby-identifier">time</span> = <span class="ruby-identifier">time_for</span> <span class="ruby-identifier">time</span>
+360:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'Last-Modified'</span>] = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">httpdate</span>
+361:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_NONE_MATCH'</span>]
+362: 
+363:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MODIFIED_SINCE'</span>]
+364:         <span class="ruby-comment cmt"># compare based on seconds since epoch</span>
+365:         <span class="ruby-identifier">since</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">httpdate</span>(<span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MODIFIED_SINCE'</span>]).<span class="ruby-identifier">to_i</span>
+366:         <span class="ruby-identifier">halt</span> <span class="ruby-value">304</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">since</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_i</span>
+367:       <span class="ruby-keyword kw">end</span>
+368: 
+369:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">success?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">412</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_UNMODIFIED_SINCE'</span>]
+370:         <span class="ruby-comment cmt"># compare based on seconds since epoch</span>
+371:         <span class="ruby-identifier">since</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">httpdate</span>(<span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_UNMODIFIED_SINCE'</span>]).<span class="ruby-identifier">to_i</span>
+372:         <span class="ruby-identifier">halt</span> <span class="ruby-value">412</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">since</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_i</span>
+373:       <span class="ruby-keyword kw">end</span>
+374:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span>
+375:     <span class="ruby-keyword kw">end</span>
+376: 
+377:     <span class="ruby-comment cmt"># Set the response entity tag (HTTP 'ETag' header) and halt if conditional</span>
+378:     <span class="ruby-comment cmt"># GET matches. The +value+ argument is an identifier that uniquely</span>
+379:     <span class="ruby-comment cmt"># identifies the current version of the resource. The +kind+ argument</span>
+380:     <span class="ruby-comment cmt"># indicates whether the etag should be used as a :strong (default) or :weak</span>
+381:     <span class="ruby-comment cmt"># cache validator.</span>
+382:     <span class="ruby-comment cmt">#</span>
+383:     <span class="ruby-comment cmt"># When the current request includes an 'If-None-Match' header with a</span>
+384:     <span class="ruby-comment cmt"># matching etag, execution is immediately halted. If the request method is</span>
+385:     <span class="ruby-comment cmt"># GET or HEAD, a '304 Not Modified' response is sent.</span>
+386:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">etag</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span> = {})
+387:       <span class="ruby-comment cmt"># Before touching this code, please double check RFC 2616 14.24 and 14.26.</span>
+388:       <span class="ruby-identifier">options</span>      = {<span class="ruby-value">:kind</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>} <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">options</span>
+389:       <span class="ruby-identifier">kind</span>         = <span class="ruby-identifier">options</span>[<span class="ruby-value">:kind</span>] <span class="ruby-operator">||</span> <span class="ruby-value">:strong</span>
+390:       <span class="ruby-identifier">new_resource</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:new_resource</span>) { <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span> }
+391: 
+392:       <span class="ruby-keyword kw">unless</span> [<span class="ruby-value">:strong</span>, <span class="ruby-value">:weak</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">kind</span>)
+393:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;:strong or :weak expected&quot;</span>
+394:       <span class="ruby-keyword kw">end</span>
+395: 
+396:       <span class="ruby-identifier">value</span> = <span class="ruby-value str">'&quot;%s&quot;'</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">value</span>
+397:       <span class="ruby-identifier">value</span> = <span class="ruby-value str">'W/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:weak</span>
+398:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'ETag'</span>] = <span class="ruby-identifier">value</span>
+399: 
+400:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">success?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">304</span>
+401:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">etag_matches?</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_NONE_MATCH'</span>], <span class="ruby-identifier">new_resource</span>
+402:           <span class="ruby-identifier">halt</span>(<span class="ruby-identifier">request</span>.<span class="ruby-identifier">safe?</span> <span class="ruby-operator">?</span> <span class="ruby-value">304</span> <span class="ruby-operator">:</span> <span class="ruby-value">412</span>)
+403:         <span class="ruby-keyword kw">end</span>
+404: 
+405:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MATCH'</span>]
+406:           <span class="ruby-identifier">halt</span> <span class="ruby-value">412</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">etag_matches?</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MATCH'</span>], <span class="ruby-identifier">new_resource</span>
+407:         <span class="ruby-keyword kw">end</span>
+408:       <span class="ruby-keyword kw">end</span>
+409:     <span class="ruby-keyword kw">end</span>
+410: 
+411:     <span class="ruby-comment cmt"># Sugar for redirect (example:  redirect back)</span>
+412:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">back</span>
+413:       <span class="ruby-identifier">request</span>.<span class="ruby-identifier">referer</span>
+414:     <span class="ruby-keyword kw">end</span>
+415: 
+416:     <span class="ruby-comment cmt"># whether or not the status is set to 1xx</span>
+417:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">informational?</span>
+418:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">100</span>, <span class="ruby-value">199</span>
+419:     <span class="ruby-keyword kw">end</span>
+420: 
+421:     <span class="ruby-comment cmt"># whether or not the status is set to 2xx</span>
+422:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">success?</span>
+423:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">200</span>, <span class="ruby-value">299</span>
+424:     <span class="ruby-keyword kw">end</span>
+425: 
+426:     <span class="ruby-comment cmt"># whether or not the status is set to 3xx</span>
+427:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">redirect?</span>
+428:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">300</span>, <span class="ruby-value">399</span>
+429:     <span class="ruby-keyword kw">end</span>
+430: 
+431:     <span class="ruby-comment cmt"># whether or not the status is set to 4xx</span>
+432:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">client_error?</span>
+433:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">400</span>, <span class="ruby-value">499</span>
+434:     <span class="ruby-keyword kw">end</span>
+435: 
+436:     <span class="ruby-comment cmt"># whether or not the status is set to 5xx</span>
+437:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">server_error?</span>
+438:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">500</span>, <span class="ruby-value">599</span>
+439:     <span class="ruby-keyword kw">end</span>
+440: 
+441:     <span class="ruby-comment cmt"># whether or not the status is set to 404</span>
+442:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">not_found?</span>
+443:       <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">404</span>
+444:     <span class="ruby-keyword kw">end</span>
+445: 
+446:     <span class="ruby-comment cmt"># Generates a Time object from the given value.</span>
+447:     <span class="ruby-comment cmt"># Used by #expires and #last_modified.</span>
+448:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time_for</span>(<span class="ruby-identifier">value</span>)
+449:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_time</span>
+450:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_time</span>
+451:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Time</span>
+452:         <span class="ruby-identifier">value</span>
+453:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:new_offset</span>
+454:         <span class="ruby-comment cmt"># DateTime#to_time does the same on 1.9</span>
+455:         <span class="ruby-identifier">d</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">new_offset</span> <span class="ruby-value">0</span>
+456:         <span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">year</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">mon</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">mday</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">sec</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">sec_fraction</span>
+457:         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">getlocal</span>
+458:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:mday</span>
+459:         <span class="ruby-comment cmt"># Date#to_time does the same on 1.9</span>
+460:         <span class="ruby-constant">Time</span>.<span class="ruby-identifier">local</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">year</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">mon</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">mday</span>)
+461:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>
+462:         <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-identifier">value</span>
+463:       <span class="ruby-keyword kw">else</span>
+464:         <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+465:       <span class="ruby-keyword kw">end</span>
+466:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">boom</span>
+467:       <span class="ruby-identifier">raise</span> <span class="ruby-identifier">boom</span>
+468:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span>
+469:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;unable to convert #{value.inspect} to a Time object&quot;</span>
+470:     <span class="ruby-keyword kw">end</span>
+471: 
+472:     <span class="ruby-identifier">private</span>
+473: 
+474:     <span class="ruby-comment cmt"># Helper method checking if a ETag value list includes the current ETag.</span>
+475:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">etag_matches?</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">new_resource</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>)
+476:       <span class="ruby-keyword kw">return</span> <span class="ruby-operator">!</span><span class="ruby-identifier">new_resource</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">list</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'*'</span>
+477:       <span class="ruby-identifier">list</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s*,\s*/</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">response</span>[<span class="ruby-value str">'ETag'</span>]
+478:     <span class="ruby-keyword kw">end</span>
+479:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="helpers-method" class="method-detail ">
+				<a name="method-c-helpers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">helpers</span><span
+						class="method-args">(*extensions, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Include the helper modules provided in Sinatra&#8217;s request context.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="helpers-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1621</span>
+1621:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">helpers</span>(*<span class="ruby-identifier">extensions</span>, &amp;<span class="ruby-identifier">block</span>)
+1622:     <span class="ruby-constant">Delegator</span>.<span class="ruby-identifier">target</span>.<span class="ruby-identifier">helpers</span>(*<span class="ruby-identifier">extensions</span>, &amp;<span class="ruby-identifier">block</span>)
+1623:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(base=Base, options={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create a new <a href="../../Sinatra.html">Sinatra</a> application. The
+block is evaluated in the new app&#8217;s class scope.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1609</span>
+1609:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">base</span>=<span class="ruby-constant">Base</span>, <span class="ruby-identifier">options</span>={}, &amp;<span class="ruby-identifier">block</span>)
+1610:     <span class="ruby-identifier">base</span> = <span class="ruby-constant">Class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">base</span>)
+1611:     <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+1612:     <span class="ruby-identifier">base</span>
+1613:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="register-method" class="method-detail ">
+				<a name="method-c-register"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">register</span><span
+						class="method-args">(*extensions, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extend the top-level DSL with the modules provided.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="register-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1616</span>
+1616:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">register</span>(*<span class="ruby-identifier">extensions</span>, &amp;<span class="ruby-identifier">block</span>)
+1617:     <span class="ruby-constant">Delegator</span>.<span class="ruby-identifier">target</span>.<span class="ruby-identifier">register</span>(*<span class="ruby-identifier">extensions</span>, &amp;<span class="ruby-identifier">block</span>)
+1618:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="use-method" class="method-detail ">
+				<a name="method-c-use"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">use</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Use the middleware for classic applications.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="use-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 1626</span>
+1626:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">use</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+1627:     <span class="ruby-constant">Delegator</span>.<span class="ruby-identifier">target</span>.<span class="ruby-identifier">use</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+1628:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3C%3C"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">&lt;&lt;</span><span
+						class="method-args">(data)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 272</span>
+272:       <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">data</span>)
+273:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-ivar">@front</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">data</span>.<span class="ruby-identifier">to_s</span>) }
+274:         <span class="ruby-keyword kw">self</span>
+275:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="back-method" class="method-detail ">
+				<a name="method-i-back"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">back</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sugar for redirect (example:  redirect back)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="back-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 412</span>
+412:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">back</span>
+413:       <span class="ruby-identifier">request</span>.<span class="ruby-identifier">referer</span>
+414:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="cache-control-method" class="method-detail ">
+				<a name="method-i-cache_control"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cache_control</span><span
+						class="method-args">(*values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Specify response freshness policy for HTTP caches (Cache-Control header).
+Any number of non-value directives (:public, :private, :no_cache,
+:no_store, :must_revalidate, :proxy_revalidate) may be passed along with a
+Hash of value directives (:max_age, :min_stale, :s_max_age).
+</p>
+<pre>
+  cache_control :public, :must_revalidate, :max_age =&gt; 60
+  =&gt; Cache-Control: public, must-revalidate, max-age=60
+</pre>
+<p>
+See RFC 2616 / 14.9 for more on standard cache control directives: <a
+href="http://tools.ietf.org/html/rfc2616#section-14.9.1">tools.ietf.org/html/rfc2616#section-14.9.1</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cache-control-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 305</span>
+305:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cache_control</span>(*<span class="ruby-identifier">values</span>)
+306:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+307:         <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">pop</span>
+308:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span> }
+309:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">k</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span> }
+310:       <span class="ruby-keyword kw">else</span>
+311:         <span class="ruby-identifier">hash</span> = {}
+312:       <span class="ruby-keyword kw">end</span>
+313: 
+314:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-value str">'_'</span>,<span class="ruby-value str">'-'</span>) }
+315:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+316:         <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">tr</span>(<span class="ruby-value str">'_'</span>, <span class="ruby-value str">'-'</span>)
+317:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;max-age&quot;</span>
+318:         <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">'='</span>)
+319:       <span class="ruby-keyword kw">end</span>
+320: 
+321:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'Cache-Control'</span>] = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">', '</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">any?</span>
+322:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="callback-method" class="method-detail ">
+				<a name="method-i-callback"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">callback</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="callback-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 277</span>
+277:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">callback</span>(&amp;<span class="ruby-identifier">block</span>)
+278:         <span class="ruby-ivar">@callbacks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+279:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="client-error--method" class="method-detail ">
+				<a name="method-i-client_error%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">client_error?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+whether or not the status is set to 4xx
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="client-error--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 432</span>
+432:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">client_error?</span>
+433:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">400</span>, <span class="ruby-value">499</span>
+434:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="method-i-close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 254</span>
+254:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+255:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@closed</span>
+256:         <span class="ruby-ivar">@closed</span> = <span class="ruby-keyword kw">true</span>
+257:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-ivar">@callbacks</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">call</span> }}
+258:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-i-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">(&front)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 260</span>
+260:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">front</span>)
+261:         <span class="ruby-ivar">@front</span> = <span class="ruby-identifier">front</span>
+262:         <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">defer</span> <span class="ruby-keyword kw">do</span>
+263:           <span class="ruby-keyword kw">begin</span>
+264:             <span class="ruby-ivar">@back</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>)
+265:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+266:             <span class="ruby-ivar">@scheduler</span>.<span class="ruby-identifier">schedule</span> { <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> }
+267:           <span class="ruby-keyword kw">end</span>
+268:           <span class="ruby-identifier">close</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@keep_open</span>
+269:         <span class="ruby-keyword kw">end</span>
+270:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="etag-method" class="method-detail ">
+				<a name="method-i-etag"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">etag</span><span
+						class="method-args">(value, options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set the response entity tag (HTTP &#8216;ETag&#8217; header) and halt if
+conditional GET matches. The <tt>value</tt> argument is an identifier that
+uniquely identifies the current version of the resource. The <tt>kind</tt>
+argument indicates whether the etag should be used as a :strong (default)
+or :weak cache validator.
+</p>
+<p>
+When the current request includes an &#8216;If-None-Match&#8217; header
+with a matching etag, execution is immediately halted. If the request
+method is GET or HEAD, a &#8216;304 Not Modified&#8217; response is sent.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="etag-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 386</span>
+386:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">etag</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span> = {})
+387:       <span class="ruby-comment cmt"># Before touching this code, please double check RFC 2616 14.24 and 14.26.</span>
+388:       <span class="ruby-identifier">options</span>      = {<span class="ruby-value">:kind</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>} <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Hash</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">options</span>
+389:       <span class="ruby-identifier">kind</span>         = <span class="ruby-identifier">options</span>[<span class="ruby-value">:kind</span>] <span class="ruby-operator">||</span> <span class="ruby-value">:strong</span>
+390:       <span class="ruby-identifier">new_resource</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-value">:new_resource</span>) { <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span> }
+391: 
+392:       <span class="ruby-keyword kw">unless</span> [<span class="ruby-value">:strong</span>, <span class="ruby-value">:weak</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">kind</span>)
+393:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;:strong or :weak expected&quot;</span>
+394:       <span class="ruby-keyword kw">end</span>
+395: 
+396:       <span class="ruby-identifier">value</span> = <span class="ruby-value str">'&quot;%s&quot;'</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">value</span>
+397:       <span class="ruby-identifier">value</span> = <span class="ruby-value str">'W/'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">kind</span> <span class="ruby-operator">==</span> <span class="ruby-value">:weak</span>
+398:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'ETag'</span>] = <span class="ruby-identifier">value</span>
+399: 
+400:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">success?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">304</span>
+401:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">etag_matches?</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_NONE_MATCH'</span>], <span class="ruby-identifier">new_resource</span>
+402:           <span class="ruby-identifier">halt</span>(<span class="ruby-identifier">request</span>.<span class="ruby-identifier">safe?</span> <span class="ruby-operator">?</span> <span class="ruby-value">304</span> <span class="ruby-operator">:</span> <span class="ruby-value">412</span>)
+403:         <span class="ruby-keyword kw">end</span>
+404: 
+405:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MATCH'</span>]
+406:           <span class="ruby-identifier">halt</span> <span class="ruby-value">412</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">etag_matches?</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MATCH'</span>], <span class="ruby-identifier">new_resource</span>
+407:         <span class="ruby-keyword kw">end</span>
+408:       <span class="ruby-keyword kw">end</span>
+409:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="etag-matches--method" class="method-detail ">
+				<a name="method-i-etag_matches%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">etag_matches?</span><span
+						class="method-args">(list, new_resource = request.post?)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Helper method checking if a ETag value list includes the current ETag.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="etag-matches--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 475</span>
+475:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">etag_matches?</span>(<span class="ruby-identifier">list</span>, <span class="ruby-identifier">new_resource</span> = <span class="ruby-identifier">request</span>.<span class="ruby-identifier">post?</span>)
+476:       <span class="ruby-keyword kw">return</span> <span class="ruby-operator">!</span><span class="ruby-identifier">new_resource</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">list</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'*'</span>
+477:       <span class="ruby-identifier">list</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s*,\s*/</span>).<span class="ruby-identifier">include?</span> <span class="ruby-identifier">response</span>[<span class="ruby-value str">'ETag'</span>]
+478:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expires-method" class="method-detail ">
+				<a name="method-i-expires"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expires</span><span
+						class="method-args">(amount, *values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set the Expires header and Cache-Control/max-age directive. Amount can be
+an integer number of seconds in the future or a Time object indicating when
+the response should be considered &#8220;stale&#8221;. The remaining
+&#8220;values&#8221; arguments are passed to the <a
+href="Stream.html#method-i-cache_control">#</a> helper:
+</p>
+<pre>
+  expires 500, :public, :must_revalidate
+  =&gt; Cache-Control: public, must-revalidate, max-age=60
+  =&gt; Expires: Mon, 08 Jun 2009 08:50:17 GMT</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="expires-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 333</span>
+333:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expires</span>(<span class="ruby-identifier">amount</span>, *<span class="ruby-identifier">values</span>)
+334:       <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> {} <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+335: 
+336:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">amount</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>
+337:         <span class="ruby-identifier">time</span>    = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">amount</span>.<span class="ruby-identifier">to_i</span>
+338:         <span class="ruby-identifier">max_age</span> = <span class="ruby-identifier">amount</span>
+339:       <span class="ruby-keyword kw">else</span>
+340:         <span class="ruby-identifier">time</span>    = <span class="ruby-identifier">time_for</span> <span class="ruby-identifier">amount</span>
+341:         <span class="ruby-identifier">max_age</span> = <span class="ruby-identifier">time</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+342:       <span class="ruby-keyword kw">end</span>
+343: 
+344:       <span class="ruby-identifier">values</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value">:max_age</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">max_age</span>)
+345:       <span class="ruby-identifier">cache_control</span>(*<span class="ruby-identifier">values</span>)
+346: 
+347:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'Expires'</span>] = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">httpdate</span>
+348:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="informational--method" class="method-detail ">
+				<a name="method-i-informational%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">informational?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+whether or not the status is set to 1xx
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="informational--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 417</span>
+417:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">informational?</span>
+418:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">100</span>, <span class="ruby-value">199</span>
+419:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="last-modified-method" class="method-detail ">
+				<a name="method-i-last_modified"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">last_modified</span><span
+						class="method-args">(time)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set the last modified time of the resource (HTTP
+&#8216;Last-Modified&#8217; header) and halt if conditional GET matches.
+The <tt>time</tt> argument is a Time, DateTime, or other object that
+responds to <tt>to_time</tt>.
+</p>
+<p>
+When the current request includes an &#8216;If-Modified-Since&#8217; header
+that is equal or later than the time specified, execution is immediately
+halted with a &#8216;304 Not Modified&#8217; response.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="last-modified-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 357</span>
+357:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">last_modified</span>(<span class="ruby-identifier">time</span>)
+358:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">time</span>
+359:       <span class="ruby-identifier">time</span> = <span class="ruby-identifier">time_for</span> <span class="ruby-identifier">time</span>
+360:       <span class="ruby-identifier">response</span>[<span class="ruby-value str">'Last-Modified'</span>] = <span class="ruby-identifier">time</span>.<span class="ruby-identifier">httpdate</span>
+361:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_NONE_MATCH'</span>]
+362: 
+363:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">200</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MODIFIED_SINCE'</span>]
+364:         <span class="ruby-comment cmt"># compare based on seconds since epoch</span>
+365:         <span class="ruby-identifier">since</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">httpdate</span>(<span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_MODIFIED_SINCE'</span>]).<span class="ruby-identifier">to_i</span>
+366:         <span class="ruby-identifier">halt</span> <span class="ruby-value">304</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">since</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_i</span>
+367:       <span class="ruby-keyword kw">end</span>
+368: 
+369:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">success?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">412</span>) <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_UNMODIFIED_SINCE'</span>]
+370:         <span class="ruby-comment cmt"># compare based on seconds since epoch</span>
+371:         <span class="ruby-identifier">since</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">httpdate</span>(<span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_IF_UNMODIFIED_SINCE'</span>]).<span class="ruby-identifier">to_i</span>
+372:         <span class="ruby-identifier">halt</span> <span class="ruby-value">412</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">since</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">time</span>.<span class="ruby-identifier">to_i</span>
+373:       <span class="ruby-keyword kw">end</span>
+374:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span>
+375:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="not-found--method" class="method-detail ">
+				<a name="method-i-not_found%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">not_found?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+whether or not the status is set to 404
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="not-found--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 442</span>
+442:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">not_found?</span>
+443:       <span class="ruby-identifier">status</span> <span class="ruby-operator">==</span> <span class="ruby-value">404</span>
+444:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="redirect--method" class="method-detail ">
+				<a name="method-i-redirect%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">redirect?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+whether or not the status is set to 3xx
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="redirect--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 427</span>
+427:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">redirect?</span>
+428:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">300</span>, <span class="ruby-value">399</span>
+429:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="server-error--method" class="method-detail ">
+				<a name="method-i-server_error%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">server_error?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+whether or not the status is set to 5xx
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="server-error--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 437</span>
+437:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">server_error?</span>
+438:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">500</span>, <span class="ruby-value">599</span>
+439:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stream-method" class="method-detail ">
+				<a name="method-i-stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stream</span><span
+						class="method-args">(keep_open = false, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Allows to start sending data to the client even though later parts of the
+response body have not yet been generated.
+</p>
+<p>
+The close parameter specifies whether <a
+href="Stream.html#method-i-close">Stream#close</a> should be called after
+the block has been executed. This is only relevant for evented servers like
+Thin or Rainbows.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 290</span>
+290:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stream</span>(<span class="ruby-identifier">keep_open</span> = <span class="ruby-keyword kw">false</span>, &amp;<span class="ruby-identifier">block</span>)
+291:       <span class="ruby-identifier">scheduler</span> = <span class="ruby-identifier">env</span>[<span class="ruby-value str">'async.callback'</span>] <span class="ruby-operator">?</span> <span class="ruby-constant">EventMachine</span> <span class="ruby-operator">:</span> <span class="ruby-constant">Stream</span>
+292:       <span class="ruby-identifier">body</span> <span class="ruby-constant">Stream</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">scheduler</span>, <span class="ruby-identifier">keep_open</span>, &amp;<span class="ruby-identifier">block</span>)
+293:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="success--method" class="method-detail ">
+				<a name="method-i-success%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">success?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+whether or not the status is set to 2xx
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="success--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 422</span>
+422:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">success?</span>
+423:       <span class="ruby-identifier">status</span>.<span class="ruby-identifier">between?</span> <span class="ruby-value">200</span>, <span class="ruby-value">299</span>
+424:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="time-for-method" class="method-detail ">
+				<a name="method-i-time_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">time_for</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generates a Time object from the given value. Used by <a
+href="Stream.html#method-i-expires">#</a> and <a
+href="Stream.html#method-i-last_modified">#</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="time-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sinatra/base.rb, line 448</span>
+448:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time_for</span>(<span class="ruby-identifier">value</span>)
+449:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:to_time</span>
+450:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_time</span>
+451:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Time</span>
+452:         <span class="ruby-identifier">value</span>
+453:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:new_offset</span>
+454:         <span class="ruby-comment cmt"># DateTime#to_time does the same on 1.9</span>
+455:         <span class="ruby-identifier">d</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">new_offset</span> <span class="ruby-value">0</span>
+456:         <span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">year</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">mon</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">mday</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">hour</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">min</span>, <span class="ruby-identifier">d</span>.<span class="ruby-identifier">sec</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">d</span>.<span class="ruby-identifier">sec_fraction</span>
+457:         <span class="ruby-identifier">t</span>.<span class="ruby-identifier">getlocal</span>
+458:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:mday</span>
+459:         <span class="ruby-comment cmt"># Date#to_time does the same on 1.9</span>
+460:         <span class="ruby-constant">Time</span>.<span class="ruby-identifier">local</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">year</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">mon</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">mday</span>)
+461:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>
+462:         <span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span> <span class="ruby-identifier">value</span>
+463:       <span class="ruby-keyword kw">else</span>
+464:         <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+465:       <span class="ruby-keyword kw">end</span>
+466:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">ArgumentError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">boom</span>
+467:       <span class="ruby-identifier">raise</span> <span class="ruby-identifier">boom</span>
+468:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span>
+469:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;unable to convert #{value.inspect} to a Time object&quot;</span>
+470:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

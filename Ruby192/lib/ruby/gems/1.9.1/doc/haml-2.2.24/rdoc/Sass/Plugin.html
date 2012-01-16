@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Sass::Plugin</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sass/plugin/rack_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/plugin/rack.rb">lib/sass/plugin/rack.rb</a></li>
+					
+						<li><a href="../lib/sass/plugin_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/plugin.rb">lib/sass/plugin.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-check_for_updates">#check_for_updates</a></li>
+					
+					<li><a href="#method-i-css_filename">#css_filename</a></li>
+					
+					<li><a href="#method-i-css_locations">#css_locations</a></li>
+					
+					<li><a href="#method-i-dependencies">#dependencies</a></li>
+					
+					<li><a href="#method-i-dependency_updated%3F">#dependency_updated?</a></li>
+					
+					<li><a href="#method-i-engine_options">#engine_options</a></li>
+					
+					<li><a href="#method-i-exact_stylesheet_needs_update%3F">#exact_stylesheet_needs_update?</a></li>
+					
+					<li><a href="#method-i-exception_string">#exception_string</a></li>
+					
+					<li><a href="#method-i-forbid_update%3F">#forbid_update?</a></li>
+					
+					<li><a href="#method-i-load_paths">#load_paths</a></li>
+					
+					<li><a href="#method-i-mkpath">#mkpath</a></li>
+					
+					<li><a href="#method-i-options%3D">#options=</a></li>
+					
+					<li><a href="#method-i-stylesheet_needs_update%3F">#stylesheet_needs_update?</a></li>
+					
+					<li><a href="#method-i-template_filename">#template_filename</a></li>
+					
+					<li><a href="#method-i-template_locations">#template_locations</a></li>
+					
+					<li><a href="#method-i-update_stylesheet">#update_stylesheet</a></li>
+					
+					<li><a href="#method-i-update_stylesheets">#update_stylesheets</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CONTRIBUTING.html">CONTRIBUTING</a></li>
+				
+					<li class="file"><a href="../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../REMEMBER.html">REMEMBER</a></li>
+				
+					<li class="file"><a href="../REVISION.html">REVISION</a></li>
+				
+					<li class="file"><a href="../VERSION.html">VERSION</a></li>
+				
+					<li class="file"><a href="../VERSION_NAME.html">VERSION_NAME</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Haml.html">Haml</a></li>
+				
+					<li><a href="../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../Haml/Exec/CSS2Sass.html">Haml::Exec::CSS2Sass</a></li>
+				
+					<li><a href="../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../Haml/Exec/HamlSass.html">Haml::Exec::HamlSass</a></li>
+				
+					<li><a href="../Haml/Exec/Sass.html">Haml::Exec::Sass</a></li>
+				
+					<li><a href="../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../Haml/HTML/Node.html">Haml::HTML::Node</a></li>
+				
+					<li><a href="../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../Haml/Precompiler.html">Haml::Precompiler</a></li>
+				
+					<li><a href="../Haml/Precompiler/Line.html">Haml::Precompiler::Line</a></li>
+				
+					<li><a href="../Haml/Railtie.html">Haml::Railtie</a></li>
+				
+					<li><a href="../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../Haml/Util/StaticConditionalContext.html">Haml::Util::StaticConditionalContext</a></li>
+				
+					<li><a href="../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../Sass.html">Sass</a></li>
+				
+					<li><a href="../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../Sass/Files.html">Sass::Files</a></li>
+				
+					<li><a href="../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../Hpricot/BaseEle.html">Hpricot::BaseEle</a></li>
+				
+					<li><a href="../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../Merb.html">Merb</a></li>
+				
+					<li><a href="../Merb/Rack.html">Merb::Rack</a></li>
+				
+					<li><a href="../Merb/Rack/Application.html">Merb::Rack::Application</a></li>
+				
+					<li><a href="../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../MerbHandler.html">MerbHandler</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Sass::Plugin</h1>
+
+		<div id="description">
+			<p>
+This module handles the compilation of <a href="../Sass.html">Sass</a>
+files. It provides global options and checks whether <a
+href="CSS.html">CSS</a> files need to be updated.
+</p>
+<p>
+This module is used as the primary interface with <a
+href="../Sass.html">Sass</a> when it&#8217;s used as a plugin for various
+frameworks. All Rack-enabled frameworks are supported out of the box. The
+plugin is {file:SASS_REFERENCE.md#rails_merb_plugin automatically activated
+for Rails and Merb}. Other frameworks must enable it explicitly; see
+{Sass::Plugin::Rack}.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="checked-for-updates-attribute-method" class="method-detail">
+				<a name="checked_for_updates"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">checked_for_updates</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Whether or not <a href="../Sass.html">Sass</a> has *<b>ever</b>* checked if
+the stylesheets need to be updated (in this Ruby instance).
+</p>
+<p>
+@return [Boolean]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="options-attribute-method" class="method-detail">
+				<a name="options"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">options</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+An options hash. See {file:SASS_REFERENCE.md#sass_options the <a
+href="../Sass.html">Sass</a> options documentation}.
+</p>
+<p>
+@return [{Symbol => Object}]
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="check-for-updates-method" class="method-detail ">
+				<a name="method-i-check_for_updates"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_for_updates</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as {#update_stylesheets}, but respects {#checked_for_updates} and the
+{file:SASS_REFERENCE.md#always_update-option `:always_update`} and
+{file:SASS_REFERENCE.md#always_check-option `:always_check`} options.
+</p>
+<p>
+@see <a href="Plugin.html#method-i-update_stylesheets">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="check-for-updates-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_for_updates</span>
+61:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-operator">!</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Plugin</span>.<span class="ruby-identifier">checked_for_updates</span> <span class="ruby-operator">||</span>
+62:           <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Plugin</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:always_update</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Plugin</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:always_check</span>]
+63:       <span class="ruby-identifier">update_stylesheets</span>
+64:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="engine-options-method" class="method-detail ">
+				<a name="method-i-engine_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">engine_options</span><span
+						class="method-args">(additional_options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Non-destructively modifies {#options} so that default values are properly
+set.
+</p>
+<p>
+@param additional_options [{Symbol => Object}] An options hash with which
+to merge {#options} @return [{Symbol => Object}] The modified options hash
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="engine-options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">engine_options</span>(<span class="ruby-identifier">additional_options</span> = {})
+50:       <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">additional_options</span>)
+51:       <span class="ruby-identifier">opts</span>[<span class="ruby-value">:load_paths</span>] = <span class="ruby-identifier">load_paths</span>(<span class="ruby-identifier">opts</span>)
+52:       <span class="ruby-identifier">opts</span>
+53:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="options--method" class="method-detail ">
+				<a name="method-i-options%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options=</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sets the options hash. See {file:SASS_REFERENCE.md#sass_options the <a
+href="../Sass.html">Sass</a> options documentation}.
+</p>
+<p>
+@param value [{Symbol => Object}] The options hash
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="options--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options=</span>(<span class="ruby-identifier">value</span>)
+42:       <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">value</span>)
+43:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="update-stylesheets-method" class="method-detail ">
+				<a name="method-i-update_stylesheets"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">update_stylesheets</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Updates out-of-date stylesheets.
+</p>
+<p>
+Checks each <a href="../Sass.html">Sass</a> file in
+{file:SASS_REFERENCE.md#template_location-option `:template_location`} to
+see if it&#8217;s been modified more recently than the corresponding <a
+href="CSS.html">CSS</a> file in {file:SASS_REFERENCE.md#css_location-option
+`:css_location`}. If it has, it updates the <a href="CSS.html">CSS</a>
+file.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="update-stylesheets-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 72</span>
+72:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update_stylesheets</span>
+73:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:never_update</span>]
+74: 
+75:       <span class="ruby-ivar">@checked_for_updates</span> = <span class="ruby-keyword kw">true</span>
+76:       <span class="ruby-identifier">template_locations</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">css_locations</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span><span class="ruby-operator">|</span>
+77: 
+78:         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">template_location</span>, <span class="ruby-value str">&quot;**&quot;</span>, <span class="ruby-value str">&quot;*.sass&quot;</span>)).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+79:           <span class="ruby-comment cmt"># Get the relative path to the file with no extension</span>
+80:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-identifier">template_location</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/\/*$/</span>, <span class="ruby-value str">'/'</span>), <span class="ruby-value str">&quot;&quot;</span>)[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">5</span>]
+81: 
+82:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">forbid_update?</span>(<span class="ruby-identifier">name</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">options</span>[<span class="ruby-value">:always_update</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">stylesheet_needs_update?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span>))
+83:             <span class="ruby-identifier">update_stylesheet</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span>)
+84:           <span class="ruby-keyword kw">end</span>
+85:         <span class="ruby-keyword kw">end</span>
+86:       <span class="ruby-keyword kw">end</span>
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="css-filename-method" class="method-detail ">
+				<a name="method-i-css_filename"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">css_filename</span><span
+						class="method-args">(name, path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="css-filename-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 183</span>
+183:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">css_filename</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span>)
+184:       <span class="ruby-node">&quot;#{path}/#{name}.css&quot;</span>
+185:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="css-locations-method" class="method-detail ">
+				<a name="method-i-css_locations"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">css_locations</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="css-locations-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 132</span>
+132:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">css_locations</span>
+133:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+134:         <span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>].<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">last</span> }
+135:       <span class="ruby-keyword kw">else</span>
+136:         [<span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>]]
+137:       <span class="ruby-keyword kw">end</span>
+138:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dependencies-method" class="method-detail ">
+				<a name="method-i-dependencies"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dependencies</span><span
+						class="method-args">(filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dependencies-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 217</span>
+217:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dependencies</span>(<span class="ruby-identifier">filename</span>)
+218:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">filename</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/^@import /</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+219:         <span class="ruby-identifier">line</span>[<span class="ruby-value">8</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">','</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">inc</span><span class="ruby-operator">|</span>
+220:           <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Files</span>.<span class="ruby-identifier">find_file_to_import</span>(<span class="ruby-identifier">inc</span>.<span class="ruby-identifier">strip</span>, [<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">filename</span>)] <span class="ruby-operator">+</span> <span class="ruby-identifier">load_paths</span>)
+221:         <span class="ruby-keyword kw">end</span>
+222:       <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/\.sass$/</span>)
+223:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dependency-updated--method" class="method-detail ">
+				<a name="method-i-dependency_updated%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dependency_updated?</span><span
+						class="method-args">(css_mtime)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dependency-updated--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 205</span>
+205:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dependency_updated?</span>(<span class="ruby-identifier">css_mtime</span>)
+206:       <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dep</span><span class="ruby-operator">|</span>
+207:         <span class="ruby-keyword kw">begin</span>
+208:           <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">dep</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">css_mtime</span> <span class="ruby-operator">||</span>
+209:             <span class="ruby-identifier">dependencies</span>(<span class="ruby-identifier">dep</span>).<span class="ruby-identifier">any?</span>(&amp;<span class="ruby-identifier">dependency_updated?</span>(<span class="ruby-identifier">css_mtime</span>))
+210:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>
+211:           <span class="ruby-comment cmt"># If there's an error finding depenencies, default to recompiling.</span>
+212:           <span class="ruby-keyword kw">true</span>
+213:         <span class="ruby-keyword kw">end</span>
+214:       <span class="ruby-keyword kw">end</span>
+215:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exact-stylesheet-needs-update--method" class="method-detail ">
+				<a name="method-i-exact_stylesheet_needs_update%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exact_stylesheet_needs_update?</span><span
+						class="method-args">(css_file, template_file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exact-stylesheet-needs-update--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 197</span>
+197:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exact_stylesheet_needs_update?</span>(<span class="ruby-identifier">css_file</span>, <span class="ruby-identifier">template_file</span>)
+198:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">css_file</span>)
+199: 
+200:       <span class="ruby-identifier">css_mtime</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">css_file</span>)
+201:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">mtime</span>(<span class="ruby-identifier">template_file</span>) <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">css_mtime</span> <span class="ruby-operator">||</span>
+202:         <span class="ruby-identifier">dependencies</span>(<span class="ruby-identifier">template_file</span>).<span class="ruby-identifier">any?</span>(&amp;<span class="ruby-identifier">dependency_updated?</span>(<span class="ruby-identifier">css_mtime</span>))
+203:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exception-string-method" class="method-detail ">
+				<a name="method-i-exception_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exception_string</span><span
+						class="method-args">(e)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exception-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exception_string</span>(<span class="ruby-identifier">e</span>)
+141:       <span class="ruby-identifier">e_string</span> = <span class="ruby-node">&quot;#{e.class}: #{e.message}&quot;</span>
+142: 
+143:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>
+144:         <span class="ruby-identifier">e_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;\non line #{e.sass_line}&quot;</span>
+145: 
+146:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_filename</span>
+147:           <span class="ruby-identifier">e_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; of #{e.sass_filename}&quot;</span>
+148: 
+149:           <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_filename</span>)
+150:             <span class="ruby-identifier">e_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n\n&quot;</span>
+151: 
+152:             <span class="ruby-identifier">min</span> = [<span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_line</span> <span class="ruby-operator">-</span> <span class="ruby-value">5</span>, <span class="ruby-value">0</span>].<span class="ruby-identifier">max</span>
+153:             <span class="ruby-keyword kw">begin</span>
+154:               <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_filename</span>).<span class="ruby-identifier">rstrip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>)[
+155:                 <span class="ruby-identifier">min</span> <span class="ruby-operator">..</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_line</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>
+156:               ].<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+157:                 <span class="ruby-identifier">e_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{min + i + 1}: #{line}\n&quot;</span>
+158:               <span class="ruby-keyword kw">end</span>
+159:             <span class="ruby-keyword kw">rescue</span>
+160:               <span class="ruby-identifier">e_string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;Couldn't read sass file: #{e.sass_filename}&quot;</span>
+161:             <span class="ruby-keyword kw">end</span>
+162:           <span class="ruby-keyword kw">end</span>
+163:         <span class="ruby-keyword kw">end</span>
+164:       <span class="ruby-keyword kw">end</span>
+165:       <span class="ruby-value str">/*#{e_string}Backtrace:\n#{e.backtrace.join(&quot;\n&quot;)}*/body:before {  white-space: pre;  font-family: monospace;  content: &quot;#{e_string.gsub('&quot;', '\&quot;').gsub(&quot;\n&quot;, '\\A ')}&quot;; }</span>
+166:       <span class="ruby-comment cmt"># Fix an emacs syntax-highlighting hiccup: '</span>
+167:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="forbid-update--method" class="method-detail ">
+				<a name="method-i-forbid_update%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">forbid_update?</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="forbid-update--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 187</span>
+187:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">forbid_update?</span>(<span class="ruby-identifier">name</span>)
+188:       <span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/^.*\//</span>, <span class="ruby-value str">''</span>)[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">__</span>
+189:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-paths-method" class="method-detail ">
+				<a name="method-i-load_paths"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_paths</span><span
+						class="method-args">(opts = options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="load-paths-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 119</span>
+119:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_paths</span>(<span class="ruby-identifier">opts</span> = <span class="ruby-identifier">options</span>)
+120:       (<span class="ruby-identifier">opts</span>[<span class="ruby-value">:load_paths</span>] <span class="ruby-operator">||</span> []) <span class="ruby-operator">+</span> <span class="ruby-identifier">template_locations</span>
+121:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mkpath-method" class="method-detail ">
+				<a name="method-i-mkpath"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mkpath</span><span
+						class="method-args">(base, name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create any successive directories required to be able to write a file to:
+File.join(base,name)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="mkpath-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 113</span>
+113:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mkpath</span>(<span class="ruby-identifier">base</span>, <span class="ruby-identifier">name</span>)
+114:       <span class="ruby-identifier">dirs</span> = [<span class="ruby-identifier">base</span>]
+115:       <span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">SEPARATOR</span>)[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span> <span class="ruby-identifier">dirs</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">dirs</span>[<span class="ruby-value">1</span>],<span class="ruby-identifier">dir</span>) }
+116:       <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">dir</span><span class="ruby-operator">|</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">mkdir</span>(<span class="ruby-identifier">dir</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">dir</span>) }
+117:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stylesheet-needs-update--method" class="method-detail ">
+				<a name="method-i-stylesheet_needs_update%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stylesheet_needs_update?</span><span
+						class="method-args">(name, template_path, css_path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="stylesheet-needs-update--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 191</span>
+191:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stylesheet_needs_update?</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">template_path</span>, <span class="ruby-identifier">css_path</span>)
+192:       <span class="ruby-identifier">css_file</span> = <span class="ruby-identifier">css_filename</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">css_path</span>)
+193:       <span class="ruby-identifier">template_file</span> = <span class="ruby-identifier">template_filename</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">template_path</span>)
+194:       <span class="ruby-identifier">exact_stylesheet_needs_update?</span>(<span class="ruby-identifier">css_file</span>, <span class="ruby-identifier">template_file</span>)
+195:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="template-filename-method" class="method-detail ">
+				<a name="method-i-template_filename"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">template_filename</span><span
+						class="method-args">(name, path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="template-filename-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 179</span>
+179:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">template_filename</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">path</span>)
+180:       <span class="ruby-node">&quot;#{path}/#{name}.sass&quot;</span>
+181:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="template-locations-method" class="method-detail ">
+				<a name="method-i-template_locations"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">template_locations</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="template-locations-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">template_locations</span>
+124:       <span class="ruby-identifier">location</span> = (<span class="ruby-identifier">options</span>[<span class="ruby-value">:template_location</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:css_location</span>],<span class="ruby-value str">'sass'</span>))
+125:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+126:         [<span class="ruby-identifier">location</span>]
+127:       <span class="ruby-keyword kw">else</span>
+128:         <span class="ruby-identifier">location</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">first</span> }
+129:       <span class="ruby-keyword kw">end</span>
+130:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="update-stylesheet-method" class="method-detail ">
+				<a name="method-i-update_stylesheet"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">update_stylesheet</span><span
+						class="method-args">(name, template_location, css_location)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="update-stylesheet-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/plugin.rb, line 91</span>
+ 91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">update_stylesheet</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">template_location</span>, <span class="ruby-identifier">css_location</span>)
+ 92:       <span class="ruby-identifier">css</span> = <span class="ruby-identifier">css_filename</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">css_location</span>)
+ 93:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">css</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">css</span>)
+ 94: 
+ 95:       <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">template_filename</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">template_location</span>)
+ 96:       <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">begin</span>
+ 97:                  <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Files</span>.<span class="ruby-identifier">tree_for</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">engine_options</span>(<span class="ruby-value">:css_filename</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">css</span>, <span class="ruby-value">:filename</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">filename</span>)).<span class="ruby-identifier">render</span>
+ 98:                <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+ 99:                  <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:full_exception</span>]
+100:                  <span class="ruby-identifier">exception_string</span>(<span class="ruby-identifier">e</span>)
+101:                <span class="ruby-keyword kw">end</span>
+102: 
+103:       <span class="ruby-comment cmt"># Create any directories that might be necessary</span>
+104:       <span class="ruby-identifier">mkpath</span>(<span class="ruby-identifier">css_location</span>, <span class="ruby-identifier">name</span>)
+105: 
+106:       <span class="ruby-comment cmt"># Finally, write the file</span>
+107:       <span class="ruby-identifier">flag</span> = <span class="ruby-value str">'w'</span>
+108:       <span class="ruby-identifier">flag</span> = <span class="ruby-value str">'wb'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'host_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/mswin|windows/</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:unix_newlines</span>]
+109:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">css</span>, <span class="ruby-identifier">flag</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">print</span>(<span class="ruby-identifier">result</span>)}
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RDoc::Markup::LineCollection</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rdoc/markup/fragments_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rdoc/markup/fragments.rb">lib/rdoc/markup/fragments.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-accept">#accept</a></li>
+					
+					<li><a href="#method-i-add">#add</a></li>
+					
+					<li><a href="#method-i-add_list_breaks">#add_list_breaks</a></li>
+					
+					<li><a href="#method-i-add_list_start_and_ends">#add_list_start_and_ends</a></li>
+					
+					<li><a href="#method-i-change_verbatim_blank_lines">#change_verbatim_blank_lines</a></li>
+					
+					<li><a href="#method-i-each">#each</a></li>
+					
+					<li><a href="#method-i-fragment_for">#fragment_for</a></li>
+					
+					<li><a href="#method-i-normalize">#normalize</a></li>
+					
+					<li><a href="#method-i-tidy_blank_lines">#tidy_blank_lines</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../../RI_txt.html">RI.txt</a></li>
+				
+					<li class="file"><a href="../../test/test_ja_txt.html">test.ja.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RDoc.html">RDoc</a></li>
+				
+					<li><a href="../../RDoc/Alias.html">RDoc::Alias</a></li>
+				
+					<li><a href="../../RDoc/AnonClass.html">RDoc::AnonClass</a></li>
+				
+					<li><a href="../../RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+				
+					<li><a href="../../RDoc/Attr.html">RDoc::Attr</a></li>
+				
+					<li><a href="../../RDoc/Cache.html">RDoc::Cache</a></li>
+				
+					<li><a href="../../RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+				
+					<li><a href="../../RDoc/CodeObject.html">RDoc::CodeObject</a></li>
+				
+					<li><a href="../../RDoc/Constant.html">RDoc::Constant</a></li>
+				
+					<li><a href="../../RDoc/Context.html">RDoc::Context</a></li>
+				
+					<li><a href="../../RDoc/Context/Section.html">RDoc::Context::Section</a></li>
+				
+					<li><a href="../../RDoc/DOT.html">RDoc::DOT</a></li>
+				
+					<li><a href="../../RDoc/DOT/Digraph.html">RDoc::DOT::Digraph</a></li>
+				
+					<li><a href="../../RDoc/DOT/Edge.html">RDoc::DOT::Edge</a></li>
+				
+					<li><a href="../../RDoc/DOT/Element.html">RDoc::DOT::Element</a></li>
+				
+					<li><a href="../../RDoc/DOT/Node.html">RDoc::DOT::Node</a></li>
+				
+					<li><a href="../../RDoc/DOT/Port.html">RDoc::DOT::Port</a></li>
+				
+					<li><a href="../../RDoc/DOT/SimpleElement.html">RDoc::DOT::SimpleElement</a></li>
+				
+					<li><a href="../../RDoc/DOT/Subgraph.html">RDoc::DOT::Subgraph</a></li>
+				
+					<li><a href="../../RDoc/Diagram.html">RDoc::Diagram</a></li>
+				
+					<li><a href="../../RDoc/Error.html">RDoc::Error</a></li>
+				
+					<li><a href="../../RDoc/Generator.html">RDoc::Generator</a></li>
+				
+					<li><a href="../../RDoc/Generator/AllReferences.html">RDoc::Generator::AllReferences</a></li>
+				
+					<li><a href="../../RDoc/Generator/Class.html">RDoc::Generator::Class</a></li>
+				
+					<li><a href="../../RDoc/Generator/Context.html">RDoc::Generator::Context</a></li>
+				
+					<li><a href="../../RDoc/Generator/Darkfish.html">RDoc::Generator::Darkfish</a></li>
+				
+					<li><a href="../../RDoc/Generator/File.html">RDoc::Generator::File</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML.html">RDoc::Generator::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/Common.html">RDoc::Generator::HTML::Common</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/HTML.html">RDoc::Generator::HTML::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTMLInOne.html">RDoc::Generator::HTMLInOne</a></li>
+				
+					<li><a href="../../RDoc/Generator/MarkUp.html">RDoc::Generator::MarkUp</a></li>
+				
+					<li><a href="../../RDoc/Generator/Method.html">RDoc::Generator::Method</a></li>
+				
+					<li><a href="../../RDoc/Generator/RI.html">RDoc::Generator::RI</a></li>
+				
+					<li><a href="../../RDoc/Generator/XML.html">RDoc::Generator::XML</a></li>
+				
+					<li><a href="../../RDoc/GhostMethod.html">RDoc::GhostMethod</a></li>
+				
+					<li><a href="../../RDoc/Include.html">RDoc::Include</a></li>
+				
+					<li><a href="../../RDoc/Markup.html">RDoc::Markup</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrChanger.html">RDoc::Markup::AttrChanger</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrSpan.html">RDoc::Markup::AttrSpan</a></li>
+				
+					<li><a href="../../RDoc/Markup/Attribute.html">RDoc::Markup::Attribute</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttributeManager.html">RDoc::Markup::AttributeManager</a></li>
+				
+					<li><a href="../../RDoc/Markup/BlankLine.html">RDoc::Markup::BlankLine</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow.html">RDoc::Markup::Flow</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow/LIST.html">RDoc::Markup::Flow::LIST</a></li>
+				
+					<li><a href="../../RDoc/Markup/Formatter.html">RDoc::Markup::Formatter</a></li>
+				
+					<li><a href="../../RDoc/Markup/Fragment.html">RDoc::Markup::Fragment</a></li>
+				
+					<li><a href="../../RDoc/Markup/Heading.html">RDoc::Markup::Heading</a></li>
+				
+					<li><a href="../../RDoc/Markup/Line.html">RDoc::Markup::Line</a></li>
+				
+					<li><a href="../../RDoc/Markup/LineCollection.html">RDoc::Markup::LineCollection</a></li>
+				
+					<li><a href="../../RDoc/Markup/Lines.html">RDoc::Markup::Lines</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListBase.html">RDoc::Markup::ListBase</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListEnd.html">RDoc::Markup::ListEnd</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListItem.html">RDoc::Markup::ListItem</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListStart.html">RDoc::Markup::ListStart</a></li>
+				
+					<li><a href="../../RDoc/Markup/Paragraph.html">RDoc::Markup::Paragraph</a></li>
+				
+					<li><a href="../../RDoc/Markup/PreProcess.html">RDoc::Markup::PreProcess</a></li>
+				
+					<li><a href="../../RDoc/Markup/Rule.html">RDoc::Markup::Rule</a></li>
+				
+					<li><a href="../../RDoc/Markup/Special.html">RDoc::Markup::Special</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToFlow.html">RDoc::Markup::ToFlow</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtml.html">RDoc::Markup::ToHtml</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtmlCrossref.html">RDoc::Markup::ToHtmlCrossref</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToLaTeX.html">RDoc::Markup::ToLaTeX</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTest.html">RDoc::Markup::ToTest</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTexInfo.html">RDoc::Markup::ToTexInfo</a></li>
+				
+					<li><a href="../../RDoc/Markup/Verbatim.html">RDoc::Markup::Verbatim</a></li>
+				
+					<li><a href="../../RDoc/MetaMethod.html">RDoc::MetaMethod</a></li>
+				
+					<li><a href="../../RDoc/NormalClass.html">RDoc::NormalClass</a></li>
+				
+					<li><a href="../../RDoc/NormalModule.html">RDoc::NormalModule</a></li>
+				
+					<li><a href="../../RDoc/Options.html">RDoc::Options</a></li>
+				
+					<li><a href="../../RDoc/Parser.html">RDoc::Parser</a></li>
+				
+					<li><a href="../../RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95.html">RDoc::Parser::F95</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Fortran95Definition.html">RDoc::Parser::F95::Fortran95Definition</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Token.html">RDoc::Parser::F95::Token</a></li>
+				
+					<li><a href="../../RDoc/Parser/PerlPOD.html">RDoc::Parser::PerlPOD</a></li>
+				
+					<li><a href="../../RDoc/Parser/Ruby.html">RDoc::Parser::Ruby</a></li>
+				
+					<li><a href="../../RDoc/Parser/Simple.html">RDoc::Parser::Simple</a></li>
+				
+					<li><a href="../../RDoc/RDoc.html">RDoc::RDoc</a></li>
+				
+					<li><a href="../../RDoc/RI.html">RDoc::RI</a></li>
+				
+					<li><a href="../../RDoc/RI/AliasName.html">RDoc::RI::AliasName</a></li>
+				
+					<li><a href="../../RDoc/RI/AnsiFormatter.html">RDoc::RI::AnsiFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Attribute.html">RDoc::RI::Attribute</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter.html">RDoc::RI::AttributeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter/AttributeString.html">RDoc::RI::AttributeFormatter::AttributeString</a></li>
+				
+					<li><a href="../../RDoc/RI/Cache.html">RDoc::RI::Cache</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassDescription.html">RDoc::RI::ClassDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassEntry.html">RDoc::RI::ClassEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Constant.html">RDoc::RI::Constant</a></li>
+				
+					<li><a href="../../RDoc/RI/DefaultDisplay.html">RDoc::RI::DefaultDisplay</a></li>
+				
+					<li><a href="../../RDoc/RI/Description.html">RDoc::RI::Description</a></li>
+				
+					<li><a href="../../RDoc/RI/Display.html">RDoc::RI::Display</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver.html">RDoc::RI::Driver</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/Error.html">RDoc::RI::Driver::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/NotFoundError.html">RDoc::RI::Driver::NotFoundError</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/OpenStructHash.html">RDoc::RI::Driver::OpenStructHash</a></li>
+				
+					<li><a href="../../RDoc/RI/Error.html">RDoc::RI::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Formatter.html">RDoc::RI::Formatter</a></li>
+				
+					<li><a href="../../RDoc/RI/HtmlFormatter.html">RDoc::RI::HtmlFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/IncludedModule.html">RDoc::RI::IncludedModule</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodDescription.html">RDoc::RI::MethodDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodEntry.html">RDoc::RI::MethodEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodSummary.html">RDoc::RI::MethodSummary</a></li>
+				
+					<li><a href="../../RDoc/RI/ModuleDescription.html">RDoc::RI::ModuleDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/NameDescriptor.html">RDoc::RI::NameDescriptor</a></li>
+				
+					<li><a href="../../RDoc/RI/NamedThing.html">RDoc::RI::NamedThing</a></li>
+				
+					<li><a href="../../RDoc/RI/OverstrikeFormatter.html">RDoc::RI::OverstrikeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Reader.html">RDoc::RI::Reader</a></li>
+				
+					<li><a href="../../RDoc/RI/SimpleFormatter.html">RDoc::RI::SimpleFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/TopLevelEntry.html">RDoc::RI::TopLevelEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Writer.html">RDoc::RI::Writer</a></li>
+				
+					<li><a href="../../RDoc/Require.html">RDoc::Require</a></li>
+				
+					<li><a href="../../RDoc/RubyLex.html">RDoc::RubyLex</a></li>
+				
+					<li><a href="../../RDoc/RubyLex/BufferedReader.html">RDoc::RubyLex::BufferedReader</a></li>
+				
+					<li><a href="../../RDoc/RubyToken.html">RDoc::RubyToken</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkError.html">RDoc::RubyToken::TkError</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkId.html">RDoc::RubyToken::TkId</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkKW.html">RDoc::RubyToken::TkKW</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkNode.html">RDoc::RubyToken::TkNode</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOPASGN.html">RDoc::RubyToken::TkOPASGN</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOp.html">RDoc::RubyToken::TkOp</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkUnknownChar.html">RDoc::RubyToken::TkUnknownChar</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkVal.html">RDoc::RubyToken::TkVal</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/Token.html">RDoc::RubyToken::Token</a></li>
+				
+					<li><a href="../../RDoc/SingleClass.html">RDoc::SingleClass</a></li>
+				
+					<li><a href="../../RDoc/Stats.html">RDoc::Stats</a></li>
+				
+					<li><a href="../../RDoc/Stats/Normal.html">RDoc::Stats::Normal</a></li>
+				
+					<li><a href="../../RDoc/Stats/Quiet.html">RDoc::Stats::Quiet</a></li>
+				
+					<li><a href="../../RDoc/Stats/Verbose.html">RDoc::Stats::Verbose</a></li>
+				
+					<li><a href="../../RDoc/TokenStream.html">RDoc::TokenStream</a></li>
+				
+					<li><a href="../../RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RDoc::Markup::LineCollection</h1>
+
+		<div id="description">
+			<p>
+Collect groups of lines together. Each group will end up containing a flow
+of text.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 135</span>
+135:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+136:       <span class="ruby-ivar">@fragments</span> = []
+137:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="accept-method" class="method-detail ">
+				<a name="method-i-accept"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accept</span><span
+						class="method-args">(am, visitor)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accept-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 172</span>
+172:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accept</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">visitor</span>)
+173:       <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">start_accepting</span>
+174: 
+175:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fragment</span><span class="ruby-operator">|</span>
+176:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fragment</span>
+177:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Verbatim</span>
+178:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_verbatim</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+179:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Rule</span>
+180:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_rule</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+181:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ListStart</span>
+182:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_list_start</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+183:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ListEnd</span>
+184:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_list_end</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+185:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ListItem</span>
+186:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_list_item</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+187:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">BlankLine</span>
+188:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_blank_line</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+189:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Heading</span>
+190:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_heading</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+191:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Paragraph</span>
+192:           <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">accept_paragraph</span>(<span class="ruby-identifier">am</span>, <span class="ruby-identifier">fragment</span>)
+193:         <span class="ruby-keyword kw">end</span>
+194:       <span class="ruby-keyword kw">end</span>
+195: 
+196:       <span class="ruby-identifier">visitor</span>.<span class="ruby-identifier">end_accepting</span>
+197:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-method" class="method-detail ">
+				<a name="method-i-add"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add</span><span
+						class="method-args">(fragment)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="add-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 139</span>
+139:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add</span>(<span class="ruby-identifier">fragment</span>)
+140:       <span class="ruby-ivar">@fragments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fragment</span>
+141:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-i-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">(&b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 143</span>
+143:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">b</span>)
+144:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">b</span>)
+145:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fragment-for-method" class="method-detail ">
+				<a name="method-i-fragment_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fragment_for</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Factory for different fragment types
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="fragment-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fragment_for</span>(*<span class="ruby-identifier">args</span>)
+155:       <span class="ruby-constant">Fragment</span>.<span class="ruby-identifier">for</span>(*<span class="ruby-identifier">args</span>)
+156:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalize-method" class="method-detail ">
+				<a name="method-i-normalize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tidy up at the end
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 161</span>
+161:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize</span>
+162:       <span class="ruby-identifier">change_verbatim_blank_lines</span>
+163:       <span class="ruby-identifier">add_list_start_and_ends</span>
+164:       <span class="ruby-identifier">add_list_breaks</span>
+165:       <span class="ruby-identifier">tidy_blank_lines</span>
+166:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 168</span>
+168:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+169:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n----\n&quot;</span>)
+170:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="add-list-breaks-method" class="method-detail ">
+				<a name="method-i-add_list_breaks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_list_breaks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Inserts start/ends between list entries at the same level that have
+different element types
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-list-breaks-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 284</span>
+284:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_list_breaks</span>
+285:       <span class="ruby-identifier">res</span> = <span class="ruby-ivar">@fragments</span>
+286: 
+287:       <span class="ruby-ivar">@fragments</span> = []
+288:       <span class="ruby-identifier">list_stack</span> = []
+289: 
+290:       <span class="ruby-identifier">res</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fragment</span><span class="ruby-operator">|</span>
+291:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fragment</span>
+292:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ListStart</span>
+293:           <span class="ruby-identifier">list_stack</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">fragment</span>
+294:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ListEnd</span>
+295:           <span class="ruby-identifier">start</span> = <span class="ruby-identifier">list_stack</span>.<span class="ruby-identifier">pop</span>
+296:           <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span> = <span class="ruby-identifier">start</span>.<span class="ruby-identifier">type</span>
+297:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">ListItem</span>
+298:           <span class="ruby-identifier">l</span> = <span class="ruby-identifier">list_stack</span>.<span class="ruby-identifier">last</span>
+299:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">l</span>.<span class="ruby-identifier">type</span>
+300:             <span class="ruby-ivar">@fragments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ListEnd</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">l</span>.<span class="ruby-identifier">level</span>, <span class="ruby-identifier">l</span>.<span class="ruby-identifier">type</span>)
+301:             <span class="ruby-identifier">start</span> = <span class="ruby-constant">ListStart</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">l</span>.<span class="ruby-identifier">level</span>, <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">param</span>, <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span>)
+302:             <span class="ruby-ivar">@fragments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">start</span>
+303:             <span class="ruby-identifier">list_stack</span>.<span class="ruby-identifier">pop</span>
+304:             <span class="ruby-identifier">list_stack</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">start</span>
+305:           <span class="ruby-keyword kw">end</span>
+306:         <span class="ruby-keyword kw">else</span>
+307:           ;
+308:         <span class="ruby-keyword kw">end</span>
+309:         <span class="ruby-ivar">@fragments</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fragment</span>
+310:       <span class="ruby-keyword kw">end</span>
+311:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-list-start-and-ends-method" class="method-detail ">
+				<a name="method-i-add_list_start_and_ends"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_list_start_and_ends</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+List nesting is implicit given the level of indentation. Make it explicit,
+just to make life a tad easier for the output processors
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-list-start-and-ends-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 246</span>
+246:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_list_start_and_ends</span>
+247:       <span class="ruby-identifier">level</span> = <span class="ruby-value">0</span>
+248:       <span class="ruby-identifier">res</span> = []
+249:       <span class="ruby-identifier">type_stack</span> = []
+250: 
+251:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">fragment</span><span class="ruby-operator">|</span>
+252:         <span class="ruby-comment cmt"># $stderr.puts &quot;#{level} : #{fragment.class.name} : #{fragment.level}&quot;</span>
+253:         <span class="ruby-identifier">new_level</span> = <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">level</span>
+254:         <span class="ruby-keyword kw">while</span> (<span class="ruby-identifier">level</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">new_level</span>)
+255:           <span class="ruby-identifier">level</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+256:           <span class="ruby-identifier">type</span> = <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">type</span>
+257:           <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ListStart</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">level</span>, <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">param</span>, <span class="ruby-identifier">type</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>
+258:           <span class="ruby-identifier">type_stack</span>.<span class="ruby-identifier">push</span> <span class="ruby-identifier">type</span>
+259:           <span class="ruby-comment cmt"># $stderr.puts &quot;Start: #{level}&quot;</span>
+260:         <span class="ruby-keyword kw">end</span>
+261: 
+262:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">level</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">new_level</span>
+263:           <span class="ruby-identifier">type</span> = <span class="ruby-identifier">type_stack</span>.<span class="ruby-identifier">pop</span>
+264:           <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ListEnd</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">level</span>, <span class="ruby-identifier">type</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>
+265:           <span class="ruby-identifier">level</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+266:           <span class="ruby-comment cmt"># $stderr.puts &quot;End: #{level}, #{type}&quot;</span>
+267:         <span class="ruby-keyword kw">end</span>
+268: 
+269:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">fragment</span>
+270:         <span class="ruby-identifier">level</span> = <span class="ruby-identifier">fragment</span>.<span class="ruby-identifier">level</span>
+271:       <span class="ruby-keyword kw">end</span>
+272:       <span class="ruby-identifier">level</span>.<span class="ruby-identifier">downto</span>(<span class="ruby-value">1</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+273:         <span class="ruby-identifier">type</span> = <span class="ruby-identifier">type_stack</span>.<span class="ruby-identifier">pop</span>
+274:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ListEnd</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">type</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span>
+275:       <span class="ruby-keyword kw">end</span>
+276: 
+277:       <span class="ruby-ivar">@fragments</span> = <span class="ruby-identifier">res</span>
+278:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="change-verbatim-blank-lines-method" class="method-detail ">
+				<a name="method-i-change_verbatim_blank_lines"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">change_verbatim_blank_lines</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+If you have:
+</p>
+<pre>
+   normal paragraph text.
+
+      this is code
+  
+      and more code
+</pre>
+<p>
+You&#8217;ll end up with the fragments <a
+href="Paragraph.html">Paragraph</a>, <a
+href="BlankLine.html">BlankLine</a>, <a href="Verbatim.html">Verbatim</a>,
+<a href="BlankLine.html">BlankLine</a>, <a
+href="Verbatim.html">Verbatim</a>, <a href="BlankLine.html">BlankLine</a>,
+etc.
+</p>
+<p>
+The <a href="BlankLine.html">BlankLine</a> in the middle of the verbatim
+chunk needs to be changed to a real verbatim newline, and the two verbatim
+blocks merged
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="change-verbatim-blank-lines-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 215</span>
+215:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">change_verbatim_blank_lines</span>
+216:       <span class="ruby-identifier">frag_block</span> = <span class="ruby-keyword kw">nil</span>
+217:       <span class="ruby-identifier">blank_count</span> = <span class="ruby-value">0</span>
+218:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">frag</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+219:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">frag_block</span>.<span class="ruby-identifier">nil?</span>
+220:           <span class="ruby-identifier">frag_block</span> = <span class="ruby-identifier">frag</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Verbatim</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">frag</span>
+221:         <span class="ruby-keyword kw">else</span>
+222:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">frag</span>
+223:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Verbatim</span>
+224:             <span class="ruby-identifier">blank_count</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">frag_block</span>.<span class="ruby-identifier">add_text</span>(<span class="ruby-value str">&quot;\n&quot;</span>) }
+225:             <span class="ruby-identifier">blank_count</span> = <span class="ruby-value">0</span>
+226:             <span class="ruby-identifier">frag_block</span>.<span class="ruby-identifier">add_text</span>(<span class="ruby-identifier">frag</span>.<span class="ruby-identifier">txt</span>)
+227:             <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword kw">nil</span>    <span class="ruby-comment cmt"># remove out current fragment</span>
+228:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">BlankLine</span>
+229:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">frag_block</span>
+230:               <span class="ruby-identifier">blank_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+231:               <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword kw">nil</span>
+232:             <span class="ruby-keyword kw">end</span>
+233:           <span class="ruby-keyword kw">else</span>
+234:             <span class="ruby-identifier">frag_block</span> = <span class="ruby-keyword kw">nil</span>
+235:             <span class="ruby-identifier">blank_count</span> = <span class="ruby-value">0</span>
+236:           <span class="ruby-keyword kw">end</span>
+237:         <span class="ruby-keyword kw">end</span>
+238:       <span class="ruby-keyword kw">end</span>
+239:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">compact!</span>
+240:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tidy-blank-lines-method" class="method-detail ">
+				<a name="method-i-tidy_blank_lines"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tidy_blank_lines</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tidy up the blank lines:
+</p>
+<ul>
+<li><p>
+change Blank/ListEnd into ListEnd/Blank
+</p>
+</li>
+<li><p>
+remove blank lines at the front
+</p>
+</li>
+</ul>
+					
+
+					
+					<div class="method-source-code"
+						id="tidy-blank-lines-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/markup/fragments.rb, line 318</span>
+318:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tidy_blank_lines</span>
+319:       (<span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+320:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">BlankLine</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-constant">ListEnd</span> <span class="ruby-operator">===</span> <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] <span class="ruby-keyword kw">then</span>
+321:           <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span>], <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>] = <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>], <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span>]
+322:         <span class="ruby-keyword kw">end</span>
+323:       <span class="ruby-keyword kw">end</span>
+324: 
+325:       <span class="ruby-comment cmt"># remove leading blanks</span>
+326:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+327:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">BlankLine</span>
+328:         <span class="ruby-ivar">@fragments</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword kw">nil</span>
+329:       <span class="ruby-keyword kw">end</span>
+330: 
+331:       <span class="ruby-ivar">@fragments</span>.<span class="ruby-identifier">compact!</span>
+332:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

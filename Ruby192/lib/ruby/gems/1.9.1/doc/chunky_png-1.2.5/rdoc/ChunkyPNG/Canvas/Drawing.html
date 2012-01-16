@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Canvas::Drawing</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/chunky_png/canvas/drawing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/drawing.rb">lib/chunky_png/canvas/drawing.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-bezier_curve">#bezier_curve</a></li>
+					
+					<li><a href="#method-i-binomial_coefficient">#binomial_coefficient</a></li>
+					
+					<li><a href="#method-i-circle">#circle</a></li>
+					
+					<li><a href="#method-i-compose_pixel">#compose_pixel</a></li>
+					
+					<li><a href="#method-i-compose_pixel_unsafe">#compose_pixel_unsafe</a></li>
+					
+					<li><a href="#method-i-line">#line</a></li>
+					
+					<li><a href="#method-i-line_xiaolin_wu">#line_xiaolin_wu</a></li>
+					
+					<li><a href="#method-i-polygon">#polygon</a></li>
+					
+					<li><a href="#method-i-rect">#rect</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Canvas::Drawing</h1>
+
+		<div id="description">
+			<p>
+Module that adds some primitive drawing methods to {ChunkyPNG::Canvas}.
+</p>
+<p>
+All of these methods change the current canvas instance and do not create a
+new one, even though the method names do not end with a bang.
+</p>
+<p>
+@note <a href="Drawing.html">Drawing</a> operations will not fail when
+something is drawn outside of the bounds
+</p>
+<pre>
+      of the canvas; these pixels will simply be ignored.
+</pre>
+<p>
+@see <a href="../Canvas.html">ChunkyPNG::Canvas</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="bezier-curve-method" class="method-detail ">
+				<a name="method-i-bezier_curve"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bezier_curve</span><span
+						class="method-args">(points, stroke_color = ChunkyPNG::Color::BLACK)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws a Bezier curve @param [Array, Point] A collection of control points
+@return [Chunky:PNG::Canvas] Itself, with the curve drawn
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bezier-curve-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 35</span>
+35:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bezier_curve</span>(<span class="ruby-identifier">points</span>, <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">BLACK</span>)
+36:         
+37:         <span class="ruby-identifier">points</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Vector</span>(*<span class="ruby-identifier">points</span>)
+38:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">points</span>.<span class="ruby-identifier">length</span>
+39:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">0</span>, <span class="ruby-value">1</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+40:           <span class="ruby-keyword kw">when</span> <span class="ruby-value">2</span>; <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">line</span>(<span class="ruby-identifier">points</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">x</span>, <span class="ruby-identifier">points</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">y</span>, <span class="ruby-identifier">points</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">x</span>, <span class="ruby-identifier">points</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">y</span>, <span class="ruby-identifier">stroke_color</span>)
+41:         <span class="ruby-keyword kw">end</span>
+42:         
+43:         <span class="ruby-identifier">curve_points</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+44:         
+45:         <span class="ruby-identifier">t</span> = <span class="ruby-value">0</span>
+46:         <span class="ruby-identifier">n</span> = <span class="ruby-identifier">points</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+47:         <span class="ruby-identifier">bicof</span> = <span class="ruby-value">0</span>
+48:         
+49:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">t</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">100</span>
+50:           <span class="ruby-identifier">cur_p</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Point</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>,<span class="ruby-value">0</span>)
+51:           
+52:           <span class="ruby-comment cmt"># Generate a float of t.</span>
+53:           <span class="ruby-identifier">t_f</span> = <span class="ruby-identifier">t</span> <span class="ruby-operator">/</span> <span class="ruby-value">100.00</span>
+54:           
+55:           <span class="ruby-identifier">cur_p</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> ((<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">t_f</span>) <span class="ruby-operator">**</span> <span class="ruby-identifier">n</span>) * <span class="ruby-identifier">points</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">x</span>
+56:           <span class="ruby-identifier">cur_p</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> ((<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">t_f</span>) <span class="ruby-operator">**</span> <span class="ruby-identifier">n</span>) * <span class="ruby-identifier">points</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">y</span>
+57:           
+58:           <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">points</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+59:             <span class="ruby-identifier">bicof</span> = <span class="ruby-identifier">binomial_coefficient</span>(<span class="ruby-identifier">n</span> , <span class="ruby-identifier">i</span>)
+60:             
+61:             <span class="ruby-identifier">cur_p</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">bicof</span> * (<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">t_f</span>) <span class="ruby-operator">**</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>)) *  (<span class="ruby-identifier">t_f</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">i</span>) * <span class="ruby-identifier">points</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">x</span> 
+62:             <span class="ruby-identifier">cur_p</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">bicof</span> * (<span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">t_f</span>) <span class="ruby-operator">**</span> (<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">i</span>)) *  (<span class="ruby-identifier">t_f</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">i</span>) * <span class="ruby-identifier">points</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">y</span> 
+63:             <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+64:           <span class="ruby-keyword kw">end</span>
+65:           
+66:           <span class="ruby-identifier">cur_p</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">t_f</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">n</span>) * <span class="ruby-identifier">points</span>[<span class="ruby-identifier">n</span>].<span class="ruby-identifier">x</span>
+67:           <span class="ruby-identifier">cur_p</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+=</span> (<span class="ruby-identifier">t_f</span> <span class="ruby-operator">**</span> <span class="ruby-identifier">n</span>) * <span class="ruby-identifier">points</span>[<span class="ruby-identifier">n</span>].<span class="ruby-identifier">y</span>
+68: 
+69:           <span class="ruby-identifier">curve_points</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cur_p</span>
+70: 
+71:           <span class="ruby-identifier">bicof</span> = <span class="ruby-value">0</span>
+72:           <span class="ruby-identifier">t</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+73:         <span class="ruby-keyword kw">end</span>
+74: 
+75:         <span class="ruby-identifier">curve_points</span>.<span class="ruby-identifier">each_cons</span>(<span class="ruby-value">2</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span><span class="ruby-operator">|</span>
+76:           <span class="ruby-identifier">line_xiaolin_wu</span>(<span class="ruby-identifier">p1</span>.<span class="ruby-identifier">x</span>.<span class="ruby-identifier">round</span>, <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">y</span>.<span class="ruby-identifier">round</span>, <span class="ruby-identifier">p2</span>.<span class="ruby-identifier">x</span>.<span class="ruby-identifier">round</span>, <span class="ruby-identifier">p2</span>.<span class="ruby-identifier">y</span>.<span class="ruby-identifier">round</span>, <span class="ruby-identifier">stroke_color</span>)
+77:         <span class="ruby-keyword kw">end</span>
+78: 
+79:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+80:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="circle-method" class="method-detail ">
+				<a name="method-i-circle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">circle</span><span
+						class="method-args">(x0, y0, radius, stroke_color = ChunkyPNG::Color::BLACK, fill_color = ChunkyPNG::Color::TRANSPARENT)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws a circle on the canvas.
+</p>
+<p>
+@param [Integer] x0 The x-coordinate of the center of the circle. @param
+[Integer] y0 The y-coordinate of the center of the circle. @param [Integer]
+radius The radius of the circle from the center point. @param [Integer]
+stroke_color The color to use for the line. @param [Integer] fill_color The
+color to use that fills the circle. @return [ChunkyPNG::Canvas] Itself,
+with the circle drawn.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="circle-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 236</span>
+236:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">circle</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">BLACK</span>, <span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>)
+237: 
+238:         <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stroke_color</span>)
+239:         <span class="ruby-identifier">fill_color</span>   = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">fill_color</span>)
+240: 
+241:         <span class="ruby-identifier">f</span> = <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">radius</span>
+242:         <span class="ruby-identifier">ddF_x</span> = <span class="ruby-value">1</span>
+243:         <span class="ruby-identifier">ddF_y</span> = <span class="ruby-value">2</span> * <span class="ruby-identifier">radius</span>
+244:         <span class="ruby-identifier">x</span> = <span class="ruby-value">0</span>
+245:         <span class="ruby-identifier">y</span> = <span class="ruby-identifier">radius</span>
+246: 
+247:         <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">stroke_color</span>)
+248:         <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">stroke_color</span>)
+249:         <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>)
+250:         <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">radius</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>)
+251: 
+252:         <span class="ruby-identifier">lines</span> = [<span class="ruby-identifier">radius</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fill_color</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>
+253: 
+254:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">y</span>
+255: 
+256:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>
+257:             <span class="ruby-identifier">y</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+258:             <span class="ruby-identifier">ddF_y</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+259:             <span class="ruby-identifier">f</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">ddF_y</span>
+260:           <span class="ruby-keyword kw">end</span>
+261: 
+262:           <span class="ruby-identifier">x</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+263:           <span class="ruby-identifier">ddF_x</span> <span class="ruby-operator">+=</span> <span class="ruby-value">2</span>
+264:           <span class="ruby-identifier">f</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">ddF_x</span>
+265: 
+266:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fill_color</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>
+267:             <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">y</span>] = <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">y</span>] <span class="ruby-operator">?</span> [<span class="ruby-identifier">lines</span>[<span class="ruby-identifier">y</span>], <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+268:             <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">x</span>] = <span class="ruby-identifier">lines</span>[<span class="ruby-identifier">x</span>] <span class="ruby-operator">?</span> [<span class="ruby-identifier">lines</span>[<span class="ruby-identifier">x</span>], <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">min</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+269:           <span class="ruby-keyword kw">end</span>
+270: 
+271:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">stroke_color</span>)
+272:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">stroke_color</span>)
+273:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">stroke_color</span>)
+274:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">stroke_color</span>)
+275: 
+276:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">y</span>
+277:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">stroke_color</span>)
+278:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">stroke_color</span>)
+279:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">stroke_color</span>)
+280:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x</span>, <span class="ruby-identifier">stroke_color</span>)
+281:           <span class="ruby-keyword kw">end</span>
+282:         <span class="ruby-keyword kw">end</span>
+283: 
+284:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fill_color</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>
+285:           <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">length</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+286:             <span class="ruby-identifier">line</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">length</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">length</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">fill_color</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+287:             <span class="ruby-identifier">line</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">length</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">length</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">y</span>, <span class="ruby-identifier">fill_color</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+288:           <span class="ruby-keyword kw">end</span>
+289:         <span class="ruby-keyword kw">end</span>
+290: 
+291:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+292:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compose-pixel-method" class="method-detail ">
+				<a name="method-i-compose_pixel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compose_pixel</span><span
+						class="method-args">(x, y, color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Composes a pixel on the canvas by alpha blending a color with its
+background color. @param [Integer] x The x-coordinate of the pixel to
+blend. @param [Integer] y The y-coordinate of the pixel to blend. @param
+[Integer] color The foreground color to blend with @return [Integer] The
+composed color.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compose-pixel-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 19</span>
+19:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">color</span>)
+20:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">include_xy?</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+21:         <span class="ruby-identifier">compose_pixel_unsafe</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">color</span>))
+22:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="compose-pixel-unsafe-method" class="method-detail ">
+				<a name="method-i-compose_pixel_unsafe"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compose_pixel_unsafe</span><span
+						class="method-args">(x, y, color)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Composes a pixel on the canvas by alpha blending a color with its
+background color, without bounds checking. @param (see <a
+href="Drawing.html#method-i-compose_pixel">#</a>) @return [Integer] The
+composed color.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compose-pixel-unsafe-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 28</span>
+28:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compose_pixel_unsafe</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">color</span>)
+29:         <span class="ruby-identifier">set_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">compose</span>(<span class="ruby-identifier">color</span>, <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)))
+30:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="line-method" class="method-detail method-alias">
+				<a name="method-i-line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">line</span><span
+						class="method-args">(x0, y0, x1, y1, stroke_color, inclusive = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Drawing.html#method-i-line_xiaolin_wu">line_xiaolin_wu</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="line-xiaolin-wu-method" class="method-detail ">
+				<a name="method-i-line_xiaolin_wu"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">line_xiaolin_wu</span><span
+						class="method-args">(x0, y0, x1, y1, stroke_color, inclusive = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws an anti-aliased line using Xiaolin Wu&#8217;s algorithm.
+</p>
+<p>
+@param [Integer] x0 The x-coordinate of the first control point. @param
+[Integer] y0 The y-coordinate of the first control point. @param [Integer]
+x1 The x-coordinate of the second control point. @param [Integer] y1 The
+y-coordinate of the second control point. @param [Integer] stroke_color The
+color to use for this line. @param [true, false] inclusive Whether to draw
+the last pixel. 
+</p>
+<pre>
+   Set to false when drawing multiple lines in a path.
+</pre>
+<p>
+@return [ChunkyPNG::Canvas] Itself, with the line drawn.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="line-xiaolin-wu-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 93</span>
+ 93:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">line_xiaolin_wu</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">stroke_color</span>, <span class="ruby-identifier">inclusive</span> = <span class="ruby-keyword kw">true</span>)
+ 94:         
+ 95:         <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stroke_color</span>)
+ 96:         
+ 97:         <span class="ruby-identifier">dx</span> = <span class="ruby-identifier">x1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">x0</span>
+ 98:         <span class="ruby-identifier">sx</span> = <span class="ruby-identifier">dx</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+ 99:         <span class="ruby-identifier">dx</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">sx</span>
+100:         <span class="ruby-identifier">dy</span> = <span class="ruby-identifier">y1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y0</span>
+101:         <span class="ruby-identifier">sy</span> = <span class="ruby-identifier">dy</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+102:         <span class="ruby-identifier">dy</span> <span class="ruby-operator">*=</span> <span class="ruby-identifier">sy</span>
+103:         
+104:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dy</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-comment cmt"># vertical line</span>
+105:           <span class="ruby-identifier">x0</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">inclusive</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">x1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">x1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">sx</span>, <span class="ruby-identifier">sx</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+106:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>)
+107:           <span class="ruby-keyword kw">end</span>
+108:           
+109:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">dx</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-comment cmt"># horizontal line</span>
+110:           <span class="ruby-identifier">y0</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">inclusive</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">y1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">y1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">sy</span>, <span class="ruby-identifier">sy</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+111:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">stroke_color</span>)
+112:           <span class="ruby-keyword kw">end</span>
+113:           
+114:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">dx</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">dy</span> <span class="ruby-comment cmt"># diagonal</span>
+115:           <span class="ruby-identifier">x0</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">inclusive</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">x1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">x1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">sx</span>, <span class="ruby-identifier">sx</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+116:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>)
+117:             <span class="ruby-identifier">y0</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">sy</span>
+118:           <span class="ruby-keyword kw">end</span>
+119:           
+120:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">dy</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">dx</span>  <span class="ruby-comment cmt"># vertical displacement</span>
+121:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>)
+122:           <span class="ruby-identifier">e_acc</span> = <span class="ruby-value">0</span>
+123:           <span class="ruby-identifier">e</span> = ((<span class="ruby-identifier">dx</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">dy</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">round</span>
+124:           (<span class="ruby-identifier">dy</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+125:             <span class="ruby-identifier">e_acc_temp</span>, <span class="ruby-identifier">e_acc</span> = <span class="ruby-identifier">e_acc</span>, (<span class="ruby-identifier">e_acc</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>) &amp; <span class="ruby-value">0xffff</span>
+126:             <span class="ruby-identifier">x0</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">sx</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">e_acc</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">e_acc_temp</span>)
+127:             <span class="ruby-identifier">w</span> = <span class="ruby-value">0xff</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">e_acc</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>)
+128:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">stroke_color</span>, <span class="ruby-identifier">w</span>))
+129:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sx</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sy</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">stroke_color</span>, <span class="ruby-value">0xff</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">w</span>)) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">inclusive</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+130:             <span class="ruby-identifier">y0</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">sy</span>
+131:           <span class="ruby-keyword kw">end</span>
+132:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">stroke_color</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">inclusive</span>
+133:           
+134:         <span class="ruby-keyword kw">else</span> <span class="ruby-comment cmt"># horizontal displacement</span>
+135:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>)
+136:           <span class="ruby-identifier">e_acc</span> = <span class="ruby-value">0</span>
+137:           <span class="ruby-identifier">e</span> = ((<span class="ruby-identifier">dy</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">dx</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">round</span>
+138:           (<span class="ruby-identifier">dx</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">downto</span>(<span class="ruby-value">0</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+139:             <span class="ruby-identifier">e_acc_temp</span>, <span class="ruby-identifier">e_acc</span> = <span class="ruby-identifier">e_acc</span>, (<span class="ruby-identifier">e_acc</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">e</span>) &amp; <span class="ruby-value">0xffff</span>
+140:             <span class="ruby-identifier">y0</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">sy</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">e_acc</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">e_acc_temp</span>)
+141:             <span class="ruby-identifier">w</span> = <span class="ruby-value">0xff</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">e_acc</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>)
+142:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">stroke_color</span>, <span class="ruby-identifier">w</span>))
+143:             <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sx</span>, <span class="ruby-identifier">y0</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">sy</span>, <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">fade</span>(<span class="ruby-identifier">stroke_color</span>, <span class="ruby-value">0xff</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">w</span>)) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">inclusive</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+144:             <span class="ruby-identifier">x0</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">sx</span>
+145:           <span class="ruby-keyword kw">end</span>
+146:           <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">stroke_color</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">inclusive</span>
+147:         <span class="ruby-keyword kw">end</span>
+148:         
+149:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+150:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Drawing.html#method-i-line">line</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="polygon-method" class="method-detail ">
+				<a name="method-i-polygon"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">polygon</span><span
+						class="method-args">(path, stroke_color = ChunkyPNG::Color::BLACK, fill_color = ChunkyPNG::Color::TRANSPARENT)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws a polygon on the canvas using the stroke_color, filled using the
+fill_color if any.
+</p>
+<p>
+@param [Array, String] The control point vector. Accepts everything {<a
+href="../../ChunkyPNG.html">ChunkyPNG</a>.Vector} accepts. @param [Integer]
+stroke_color The stroke color to use for this polygon. @param [Integer]
+fill_color The fill color to use for this polygon. @return
+[ChunkyPNG::Canvas] Itself, with the polygon drawn.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="polygon-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 161</span>
+161:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">polygon</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">BLACK</span>, <span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>)
+162:         
+163:         <span class="ruby-identifier">vector</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Vector</span>(*<span class="ruby-identifier">path</span>)
+164:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;A polygon requires at least 3 points&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">path</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span>
+165: 
+166:         <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stroke_color</span>)
+167:         <span class="ruby-identifier">fill_color</span>   = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">fill_color</span>)
+168: 
+169:         <span class="ruby-comment cmt"># Fill</span>
+170:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fill_color</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>
+171:           <span class="ruby-identifier">vector</span>.<span class="ruby-identifier">y_range</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+172:             <span class="ruby-identifier">intersections</span> = []
+173:             <span class="ruby-identifier">vector</span>.<span class="ruby-identifier">edges</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">p1</span>, <span class="ruby-identifier">p2</span><span class="ruby-operator">|</span>
+174:               <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">p1</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">p2</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">y</span>) <span class="ruby-operator">||</span> (<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">y</span>)
+175:                 <span class="ruby-identifier">intersections</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">p1</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">y</span>).<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">y</span>) * (<span class="ruby-identifier">p2</span>.<span class="ruby-identifier">x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">p1</span>.<span class="ruby-identifier">x</span>)).<span class="ruby-identifier">round</span>
+176:               <span class="ruby-keyword kw">end</span>
+177:             <span class="ruby-keyword kw">end</span>
+178: 
+179:             <span class="ruby-identifier">intersections</span>.<span class="ruby-identifier">sort!</span>
+180:             <span class="ruby-value">0</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">intersections</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">2</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+181:               <span class="ruby-identifier">intersections</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">intersections</span>[<span class="ruby-identifier">i</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+182:                 <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">fill_color</span>)
+183:               <span class="ruby-keyword kw">end</span>
+184:             <span class="ruby-keyword kw">end</span>
+185:           <span class="ruby-keyword kw">end</span>
+186:         <span class="ruby-keyword kw">end</span>
+187:         
+188:         <span class="ruby-comment cmt"># Stroke</span>
+189:         <span class="ruby-identifier">vector</span>.<span class="ruby-identifier">each_edge</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span>(<span class="ruby-identifier">from_x</span>, <span class="ruby-identifier">from_y</span>), (<span class="ruby-identifier">to_x</span>, <span class="ruby-identifier">to_y</span>)<span class="ruby-operator">|</span>
+190:           <span class="ruby-identifier">line</span>(<span class="ruby-identifier">from_x</span>, <span class="ruby-identifier">from_y</span>, <span class="ruby-identifier">to_x</span>, <span class="ruby-identifier">to_y</span>, <span class="ruby-identifier">stroke_color</span>, <span class="ruby-keyword kw">false</span>)
+191:         <span class="ruby-keyword kw">end</span>
+192: 
+193:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+194:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rect-method" class="method-detail ">
+				<a name="method-i-rect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rect</span><span
+						class="method-args">(x0, y0, x1, y1, stroke_color = ChunkyPNG::Color::BLACK, fill_color = ChunkyPNG::Color::TRANSPARENT)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draws a rectangle on the canvas, using two control points.
+</p>
+<p>
+@param [Integer] x0 The x-coordinate of the first control point. @param
+[Integer] y0 The y-coordinate of the first control point. @param [Integer]
+x1 The x-coordinate of the second control point. @param [Integer] y1 The
+y-coordinate of the second control point. @param [Integer] stroke_color The
+line color to use for this rectangle. @param [Integer] fill_color The fill
+color to use for this rectangle. @return [ChunkyPNG::Canvas] Itself, with
+the rectangle drawn.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 205</span>
+205:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rect</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">BLACK</span>, <span class="ruby-identifier">fill_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>)
+206:       
+207:         <span class="ruby-identifier">stroke_color</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">stroke_color</span>)
+208:         <span class="ruby-identifier">fill_color</span>   = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">fill_color</span>)
+209:       
+210:         <span class="ruby-comment cmt"># Fill</span>
+211:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">fill_color</span> <span class="ruby-operator">==</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span><span class="ruby-operator">::</span><span class="ruby-constant">TRANSPARENT</span>
+212:           [<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">x1</span>].<span class="ruby-identifier">min</span>.<span class="ruby-identifier">upto</span>([<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">x1</span>].<span class="ruby-identifier">max</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+213:             [<span class="ruby-identifier">y0</span>, <span class="ruby-identifier">y1</span>].<span class="ruby-identifier">min</span>.<span class="ruby-identifier">upto</span>([<span class="ruby-identifier">y0</span>, <span class="ruby-identifier">y1</span>].<span class="ruby-identifier">max</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+214:               <span class="ruby-identifier">compose_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">fill_color</span>)
+215:             <span class="ruby-keyword kw">end</span>
+216:           <span class="ruby-keyword kw">end</span>
+217:         <span class="ruby-keyword kw">end</span>
+218:         
+219:         <span class="ruby-comment cmt"># Stroke</span>
+220:         <span class="ruby-identifier">line</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">stroke_color</span>, <span class="ruby-keyword kw">false</span>)
+221:         <span class="ruby-identifier">line</span>(<span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">stroke_color</span>, <span class="ruby-keyword kw">false</span>)
+222:         <span class="ruby-identifier">line</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>, <span class="ruby-keyword kw">false</span>)
+223:         <span class="ruby-identifier">line</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">x0</span>, <span class="ruby-identifier">y0</span>, <span class="ruby-identifier">stroke_color</span>, <span class="ruby-keyword kw">false</span>)
+224:         
+225:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+226:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="binomial-coefficient-method" class="method-detail ">
+				<a name="method-i-binomial_coefficient"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">binomial_coefficient</span><span
+						class="method-args">(n, k)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the binomial coefficient for n over k.
+</p>
+<p>
+@param [Integer] n first parameter in coeffient (the number on top when
+looking at the mathematic formula) @param [Integer] k k-element, second
+parameter in coeffient (the number on the bottom when looking at the
+mathematic formula) @return [Integer] The binomial coeffcient of (n,k)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="binomial-coefficient-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/drawing.rb, line 301</span>
+301:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">binomial_coefficient</span>(<span class="ruby-identifier">n</span>, <span class="ruby-identifier">k</span>)
+302:         <span class="ruby-keyword kw">return</span>  <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+303:         <span class="ruby-keyword kw">return</span>  <span class="ruby-identifier">n</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">k</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+304:         <span class="ruby-keyword kw">return</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">k</span>
+305: 
+306:         <span class="ruby-comment cmt"># calculate factorials</span>
+307:         <span class="ruby-identifier">fact_n</span> = (<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-identifier">n</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-value">1</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">carry</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">carry</span> * <span class="ruby-identifier">i</span> }
+308:         <span class="ruby-identifier">fact_k</span> = (<span class="ruby-value">2</span><span class="ruby-operator">..</span><span class="ruby-identifier">k</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-value">1</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">carry</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">carry</span> * <span class="ruby-identifier">i</span> }
+309:         <span class="ruby-identifier">fact_n_sub_k</span> = (<span class="ruby-value">2</span><span class="ruby-operator">..</span>(<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">k</span>)).<span class="ruby-identifier">inject</span>(<span class="ruby-value">1</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">carry</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">carry</span> * <span class="ruby-identifier">i</span> }
+310: 
+311:         <span class="ruby-identifier">fact_n</span> <span class="ruby-operator">/</span> (<span class="ruby-identifier">fact_k</span> * <span class="ruby-identifier">fact_n_sub_k</span>)
+312:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

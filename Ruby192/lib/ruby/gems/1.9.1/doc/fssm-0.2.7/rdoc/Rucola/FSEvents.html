@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rucola::FSEvents</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/fssm/backends/rubycocoa/fsevents_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/fssm/backends/rubycocoa/fsevents.rb">lib/fssm/backends/rubycocoa/fsevents.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="FSEvents/FSEvent.html">Rucola::FSEvents::FSEvent</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-start_watching">::start_watching</a></li>
+					
+					<li><a href="#method-i-create_stream">#create_stream</a></li>
+					
+					<li><a href="#method-i-start">#start</a></li>
+					
+					<li><a href="#method-i-stop">#stop</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../FSSM.html">FSSM</a></li>
+				
+					<li><a href="../FSSM/Backends.html">FSSM::Backends</a></li>
+				
+					<li><a href="../FSSM/Backends/FSEvents.html">FSSM::Backends::FSEvents</a></li>
+				
+					<li><a href="../FSSM/Backends/Inotify.html">FSSM::Backends::Inotify</a></li>
+				
+					<li><a href="../FSSM/Backends/Polling.html">FSSM::Backends::Polling</a></li>
+				
+					<li><a href="../FSSM/Backends/RBFSEvent.html">FSSM::Backends::RBFSEvent</a></li>
+				
+					<li><a href="../FSSM/Monitor.html">FSSM::Monitor</a></li>
+				
+					<li><a href="../FSSM/Path.html">FSSM::Path</a></li>
+				
+					<li><a href="../FSSM/Pathname.html">FSSM::Pathname</a></li>
+				
+					<li><a href="../FSSM/State.html">FSSM::State</a></li>
+				
+					<li><a href="../FSSM/State/Directory.html">FSSM::State::Directory</a></li>
+				
+					<li><a href="../FSSM/State/File.html">FSSM::State::File</a></li>
+				
+					<li><a href="../FSSM/Support.html">FSSM::Support</a></li>
+				
+					<li><a href="../FSSM/Tree.html">FSSM::Tree</a></li>
+				
+					<li><a href="../FSSM/Tree/Cache.html">FSSM::Tree::Cache</a></li>
+				
+					<li><a href="../FSSM/Tree/CacheDebug.html">FSSM::Tree::CacheDebug</a></li>
+				
+					<li><a href="../FSSM/Tree/Node.html">FSSM::Tree::Node</a></li>
+				
+					<li><a href="../FSSM/Tree/NodeBase.html">FSSM::Tree::NodeBase</a></li>
+				
+					<li><a href="../FSSM/Tree/NodeEnumerable.html">FSSM::Tree::NodeEnumerable</a></li>
+				
+					<li><a href="../FSSM/Tree/NodeInsertion.html">FSSM::Tree::NodeInsertion</a></li>
+				
+					<li><a href="../Rucola.html">Rucola</a></li>
+				
+					<li><a href="../Rucola/FSEvents.html">Rucola::FSEvents</a></li>
+				
+					<li><a href="../Rucola/FSEvents/FSEvent.html">Rucola::FSEvents::FSEvent</a></li>
+				
+					<li><a href="../Rucola/FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rucola::FSEvents</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="paths-attribute-method" class="method-detail">
+				<a name="paths"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">paths</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="stream-attribute-method" class="method-detail">
+				<a name="stream"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">stream</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="allocator-attribute-method" class="method-detail">
+				<a name="allocator"></a>
+				
+				<a name="allocator="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">allocator</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="context-attribute-method" class="method-detail">
+				<a name="context"></a>
+				
+				<a name="context="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">context</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="since-attribute-method" class="method-detail">
+				<a name="since"></a>
+				
+				<a name="since="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">since</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="latency-attribute-method" class="method-detail">
+				<a name="latency"></a>
+				
+				<a name="latency="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">latency</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="flags-attribute-method" class="method-detail">
+				<a name="flags"></a>
+				
+				<a name="flags="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">flags</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(*params, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new <a href="FSEvents.html">FSEvents</a> `watchdog` object. You
+can specify a list of paths to watch and options to control the behaviour
+of the watchdog. The block you pass serves as a callback when an event is
+generated on one of the specified paths.
+</p>
+<pre>
+  fsevents = FSEvents.new('/etc/passwd') { Mailer.send_mail(&quot;Someone touched the password file!&quot;) }
+  fsevents.create_stream
+  fsevents.start
+
+  fsevents = FSEvents.new('/home/upload', :since =&gt; UploadWatcher.last_event_id) do |events|
+    events.each do |event|
+      UploadWatcher.last_event_id = event.id
+      event.files.each do |file|
+        UploadWatcher.logfile.append(&quot;#{file} was changed&quot;)
+      end
+    end
+  end
+</pre>
+<p>
+*:since: The service will report events that have happened after the
+supplied event ID. Never use 0 because that 
+</p>
+<pre>
+  will cause every fsevent since the &quot;beginning of time&quot; to be reported. Use OSX::KFSEventStreamEventIdSinceNow
+  if you want to receive events that have happened after this call. (Default: OSX::KFSEventStreamEventIdSinceNow).
+  You can find the ID's passed with :since in the events passed to your block.
+</pre>
+<p>
+*:latency: Number of seconds to wait until an <a
+href="FSEvents/FSEvent.html">FSEvent</a> is reported, this allows the
+service to bundle events. (Default: 0.0)
+</p>
+<p>
+Please refer to the Cocoa documentation for the rest of the options.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/fssm/backends/rubycocoa/fsevents.rb, line 87</span>
+ 87:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(*<span class="ruby-identifier">params</span>, &amp;<span class="ruby-identifier">block</span>)
+ 88:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">'No callback block was specified.'</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">block_given?</span>
+ 89: 
+ 90:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">params</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+ 91:       <span class="ruby-ivar">@paths</span>  = <span class="ruby-identifier">params</span>.<span class="ruby-identifier">flatten</span>
+ 92: 
+ 93:       <span class="ruby-identifier">paths</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;The specified path (#{path}) does not exist.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">path</span>) }
+ 94: 
+ 95:       <span class="ruby-ivar">@allocator</span>     = <span class="ruby-identifier">options</span>[<span class="ruby-value">:allocator</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">OSX</span><span class="ruby-operator">::</span><span class="ruby-constant">KCFAllocatorDefault</span>
+ 96:       <span class="ruby-ivar">@context</span>       = <span class="ruby-identifier">options</span>[<span class="ruby-value">:context</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword kw">nil</span>
+ 97:       <span class="ruby-ivar">@since</span>         = <span class="ruby-identifier">options</span>[<span class="ruby-value">:since</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">OSX</span><span class="ruby-operator">::</span><span class="ruby-constant">KFSEventStreamEventIdSinceNow</span>
+ 98:       <span class="ruby-ivar">@latency</span>       = <span class="ruby-identifier">options</span>[<span class="ruby-value">:latency</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0.0</span>
+ 99:       <span class="ruby-ivar">@flags</span>         = <span class="ruby-identifier">options</span>[<span class="ruby-value">:flags</span>] <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
+100:       <span class="ruby-ivar">@stream</span>        = <span class="ruby-identifier">options</span>[<span class="ruby-value">:stream</span>] <span class="ruby-operator">||</span> <span class="ruby-keyword kw">nil</span>
+101: 
+102:       <span class="ruby-ivar">@user_callback</span> = <span class="ruby-identifier">block</span>
+103:       <span class="ruby-ivar">@callback</span>      = <span class="ruby-constant">Proc</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stream</span>, <span class="ruby-identifier">client_callback_info</span>, <span class="ruby-identifier">number_of_events</span>, <span class="ruby-identifier">paths_pointer</span>, <span class="ruby-identifier">event_flags</span>, <span class="ruby-identifier">event_ids</span><span class="ruby-operator">|</span>
+104:         <span class="ruby-identifier">paths_pointer</span>.<span class="ruby-identifier">regard_as</span>(<span class="ruby-value str">'*'</span>)
+105:         <span class="ruby-identifier">events</span> = []
+106:         <span class="ruby-identifier">number_of_events</span>.<span class="ruby-identifier">times</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">events</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">Rucola</span><span class="ruby-operator">::</span><span class="ruby-constant">FSEvents</span><span class="ruby-operator">::</span><span class="ruby-constant">FSEvent</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">event_ids</span>[<span class="ruby-identifier">i</span>], <span class="ruby-identifier">paths_pointer</span>[<span class="ruby-identifier">i</span>]) }
+107:         <span class="ruby-ivar">@user_callback</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">events</span>)
+108:       <span class="ruby-keyword kw">end</span>
+109:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="start-watching-method" class="method-detail ">
+				<a name="method-c-start_watching"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">start_watching</span><span
+						class="method-args">(*params, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a new <a href="FSEvents.html">FSEvents</a> `watchdog` object
+and starts watching the directories you specify for events. The block is
+used as a handler for events, which are passed as the block&#8217;s
+argument. This method is the easiest way to start watching some directories
+if you don&#8217;t care about the details of setting up the event stream.
+</p>
+<pre>
+  Rucola::FSEvents.start_watching('/tmp') do |events|
+    events.each { |event| log.debug(&quot;#{event.files.inspect} were changed.&quot;) }
+  end
+  
+  Rucola::FSEvents.start_watching('/var/log/system.log', '/var/log/secure.log', :since =&gt; last_id, :latency =&gt; 5) do
+    Growl.notify(&quot;Something was added to your log files!&quot;)
+  end
+</pre>
+<p>
+Note that the method also returns the <a href="FSEvents.html">FSEvents</a>
+object. This enables you to control the event stream if you want to.
+</p>
+<pre>
+  fsevents = Rucola::FSEvents.start_watching('/Volumes') do |events|
+    events.each { |event| Growl.notify(&quot;Volume changes: #{event.files.to_sentence}&quot;) }
+  end
+  fsevents.stop</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="start-watching-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/backends/rubycocoa/fsevents.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">start_watching</span>(*<span class="ruby-identifier">params</span>, &amp;<span class="ruby-identifier">block</span>)
+57:       <span class="ruby-identifier">fsevents</span> = <span class="ruby-identifier">new</span>(*<span class="ruby-identifier">params</span>, &amp;<span class="ruby-identifier">block</span>)
+58:       <span class="ruby-identifier">fsevents</span>.<span class="ruby-identifier">create_stream</span>
+59:       <span class="ruby-identifier">fsevents</span>.<span class="ruby-identifier">start</span>
+60:       <span class="ruby-identifier">fsevents</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="create-stream-method" class="method-detail ">
+				<a name="method-i-create_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">create_stream</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create the stream. Raises a <a
+href="FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a> if the
+stream could not be created.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="create-stream-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/fssm/backends/rubycocoa/fsevents.rb, line 113</span>
+113:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_stream</span>
+114:       <span class="ruby-ivar">@stream</span> = <span class="ruby-constant">OSX</span>.<span class="ruby-constant">FSEventStreamCreate</span>(<span class="ruby-ivar">@allocator</span>, <span class="ruby-ivar">@callback</span>, <span class="ruby-ivar">@context</span>, <span class="ruby-ivar">@paths</span>, <span class="ruby-ivar">@since</span>, <span class="ruby-ivar">@latency</span>, <span class="ruby-ivar">@flags</span>)
+115:       <span class="ruby-identifier">raise</span>(<span class="ruby-constant">StreamError</span>, <span class="ruby-value str">'Unable to create FSEvents stream.'</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@stream</span>
+116:       <span class="ruby-constant">OSX</span>.<span class="ruby-constant">FSEventStreamScheduleWithRunLoop</span>(<span class="ruby-ivar">@stream</span>, <span class="ruby-constant">OSX</span>.<span class="ruby-constant">CFRunLoopGetCurrent</span>, <span class="ruby-constant">OSX</span><span class="ruby-operator">::</span><span class="ruby-constant">KCFRunLoopDefaultMode</span>)
+117:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="start-method" class="method-detail ">
+				<a name="method-i-start"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">start</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Start the stream. Raises a <a
+href="FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a> if the
+stream could not be started.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="start-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/fssm/backends/rubycocoa/fsevents.rb, line 121</span>
+121:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start</span>
+122:       <span class="ruby-identifier">raise</span>(<span class="ruby-constant">StreamError</span>, <span class="ruby-value str">'Unable to start FSEvents stream.'</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">OSX</span>.<span class="ruby-constant">FSEventStreamStart</span>(<span class="ruby-ivar">@stream</span>)
+123:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stop-method" class="method-detail ">
+				<a name="method-i-stop"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stop</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Stop the stream. You can resume it by calling `start` again.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stop-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/fssm/backends/rubycocoa/fsevents.rb, line 127</span>
+127:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop</span>
+128:       <span class="ruby-constant">OSX</span>.<span class="ruby-constant">FSEventStreamStop</span>(<span class="ruby-ivar">@stream</span>)
+129:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

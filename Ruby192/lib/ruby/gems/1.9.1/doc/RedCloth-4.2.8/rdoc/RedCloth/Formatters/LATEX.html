@@ -1,0 +1,1611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Module: RedCloth::Formatters::LATEX</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/redcloth/formatters/latex_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/redcloth/formatters/latex.rb">lib/redcloth/formatters/latex.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="LATEX/Settings.html">RedCloth::Formatters::LATEX::Settings</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-acronym">#acronym</a></li>
+					
+					<li><a href="#method-i-arrow">#arrow</a></li>
+					
+					<li><a href="#method-i-bc_close">#bc_close</a></li>
+					
+					<li><a href="#method-i-bc_open">#bc_open</a></li>
+					
+					<li><a href="#method-i-begin_chunk">#begin_chunk</a></li>
+					
+					<li><a href="#method-i-bq_close">#bq_close</a></li>
+					
+					<li><a href="#method-i-bq_open">#bq_open</a></li>
+					
+					<li><a href="#method-i-chunk_counter">#chunk_counter</a></li>
+					
+					<li><a href="#method-i-code">#code</a></li>
+					
+					<li><a href="#method-i-copyright">#copyright</a></li>
+					
+					<li><a href="#method-i-dim">#dim</a></li>
+					
+					<li><a href="#method-i-ellipsis">#ellipsis</a></li>
+					
+					<li><a href="#method-i-emdash">#emdash</a></li>
+					
+					<li><a href="#method-i-end_chunk">#end_chunk</a></li>
+					
+					<li><a href="#method-i-endash">#endash</a></li>
+					
+					<li><a href="#method-i-entity">#entity</a></li>
+					
+					<li><a href="#method-i-escape">#escape</a></li>
+					
+					<li><a href="#method-i-escape_pre">#escape_pre</a></li>
+					
+					<li><a href="#method-i-fn">#fn</a></li>
+					
+					<li><a href="#method-i-footno">#footno</a></li>
+					
+					<li><a href="#method-i-image">#image</a></li>
+					
+					<li><a href="#method-i-inline_html">#inline_html</a></li>
+					
+					<li><a href="#method-i-li_close">#li_close</a></li>
+					
+					<li><a href="#method-i-li_open">#li_open</a></li>
+					
+					<li><a href="#method-i-link">#link</a></li>
+					
+					<li><a href="#method-i-p">#p</a></li>
+					
+					<li><a href="#method-i-quote1">#quote1</a></li>
+					
+					<li><a href="#method-i-quote2">#quote2</a></li>
+					
+					<li><a href="#method-i-registered">#registered</a></li>
+					
+					<li><a href="#method-i-snip">#snip</a></li>
+					
+					<li><a href="#method-i-table_close">#table_close</a></li>
+					
+					<li><a href="#method-i-table_open">#table_open</a></li>
+					
+					<li><a href="#method-i-td">#td</a></li>
+					
+					<li><a href="#method-i-tr_close">#tr_close</a></li>
+					
+					<li><a href="#method-i-tr_open">#tr_open</a></li>
+					
+					<li><a href="#method-i-trademark">#trademark</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="Base.html">RedCloth::Formatters::Base</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="../../COPYING.html">COPYING</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../../ext/redcloth_scan/Makefile.html">Makefile</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RedCloth.html">RedCloth</a></li>
+				
+					<li><a href="../../RedCloth/Formatters.html">RedCloth::Formatters</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/Base.html">RedCloth::Formatters::Base</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/HTML.html">RedCloth::Formatters::HTML</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/LATEX.html">RedCloth::Formatters::LATEX</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/LATEX/Settings.html">RedCloth::Formatters::LATEX::Settings</a></li>
+				
+					<li><a href="../../RedCloth/TextileDoc.html">RedCloth::TextileDoc</a></li>
+				
+					<li><a href="../../RedCloth/TextileDoc/ParseError.html">RedCloth::TextileDoc::ParseError</a></li>
+				
+					<li><a href="../../RedCloth/VERSION.html">RedCloth::VERSION</a></li>
+				
+					<li><a href="../../ERB.html">ERB</a></li>
+				
+					<li><a href="../../ERB/Util.html">ERB::Util</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">RedCloth::Formatters::LATEX</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="ENTITIES">ENTITIES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="acronym-method" class="method-detail ">
+				<a name="method-i-acronym"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">acronym</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+acronyms
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="acronym-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">acronym</span>(<span class="ruby-identifier">opts</span>)
+59:     <span class="ruby-node">&quot;#{opts[:title]} (#{opts[:text]})&quot;</span>
+60:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="arrow-method" class="method-detail ">
+				<a name="method-i-arrow"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">arrow</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="arrow-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 259</span>
+259:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arrow</span>(<span class="ruby-identifier">opts</span>)
+260:     <span class="ruby-value str">&quot;\\rightarrow{}&quot;</span>
+261:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="bc-close-method" class="method-detail ">
+				<a name="method-i-bc_close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bc_close</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="bc-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 183</span>
+183:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bc_close</span>(<span class="ruby-identifier">opts</span>)
+184:     <span class="ruby-identifier">end_chunk</span>(<span class="ruby-value str">&quot;verbatim&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+185:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="bc-open-method" class="method-detail ">
+				<a name="method-i-bc_open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bc_open</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+code blocks
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bc-open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 178</span>
+178:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bc_open</span>(<span class="ruby-identifier">opts</span>)
+179:     <span class="ruby-identifier">opts</span>[<span class="ruby-value">:block</span>] = <span class="ruby-keyword kw">true</span>
+180:     <span class="ruby-identifier">begin_chunk</span>(<span class="ruby-value str">&quot;verbatim&quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+181:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="bq-close-method" class="method-detail ">
+				<a name="method-i-bq_close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bq_close</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="bq-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 193</span>
+193:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bq_close</span>(<span class="ruby-identifier">opts</span>)
+194:     <span class="ruby-value str">&quot;\\end{quotation}\n\n&quot;</span>
+195:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="bq-open-method" class="method-detail ">
+				<a name="method-i-bq_open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bq_open</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+block quotations
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bq-open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 188</span>
+188:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bq_open</span>(<span class="ruby-identifier">opts</span>)
+189:     <span class="ruby-identifier">opts</span>[<span class="ruby-value">:block</span>] = <span class="ruby-keyword kw">true</span>
+190:     <span class="ruby-value str">&quot;\\begin{quotation}\n&quot;</span>
+191:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="code-method" class="method-detail ">
+				<a name="method-i-code"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">code</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+inline code
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="code-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 53</span>
+53:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">code</span>(<span class="ruby-identifier">opts</span>)
+54:     <span class="ruby-identifier">opts</span>[<span class="ruby-value">:block</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>] <span class="ruby-operator">:</span> <span class="ruby-node">&quot;\\verb@#{opts[:text]}@&quot;</span>
+55:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="copyright-method" class="method-detail ">
+				<a name="method-i-copyright"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">copyright</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="copyright-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 271</span>
+271:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copyright</span>(<span class="ruby-identifier">opts</span>)
+272:     <span class="ruby-value str">&quot;\\copyright{}&quot;</span>
+273:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dim-method" class="method-detail ">
+				<a name="method-i-dim"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dim</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dim-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 282</span>
+282:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dim</span>(<span class="ruby-identifier">opts</span>)
+283:     <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>].<span class="ruby-identifier">gsub!</span>(<span class="ruby-value str">'x'</span>, <span class="ruby-value str">'\times'</span>)
+284:     <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>].<span class="ruby-identifier">gsub!</span>(<span class="ruby-value str">'&quot;'</span>, <span class="ruby-value str">&quot;''&quot;</span>)
+285:     <span class="ruby-identifier">period</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>].<span class="ruby-identifier">slice!</span>(<span class="ruby-regexp re">/\.$/</span>)
+286:     <span class="ruby-node">&quot;$#{opts[:text]}$#{period}&quot;</span>
+287:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ellipsis-method" class="method-detail ">
+				<a name="method-i-ellipsis"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ellipsis</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ellipsis-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 247</span>
+247:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ellipsis</span>(<span class="ruby-identifier">opts</span>)
+248:     <span class="ruby-node">&quot;#{opts[:text]}\\ldots{}&quot;</span>
+249:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="emdash-method" class="method-detail ">
+				<a name="method-i-emdash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">emdash</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="emdash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 251</span>
+251:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">emdash</span>(<span class="ruby-identifier">opts</span>)
+252:     <span class="ruby-value str">&quot;---&quot;</span>
+253:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="endash-method" class="method-detail ">
+				<a name="method-i-endash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">endash</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="endash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 255</span>
+255:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">endash</span>(<span class="ruby-identifier">opts</span>)
+256:     <span class="ruby-value str">&quot; -- &quot;</span>
+257:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="entity-method" class="method-detail ">
+				<a name="method-i-entity"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">entity</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+TODO: what do we do with (unknown) unicode entities ? 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="entity-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 277</span>
+277:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">entity</span>(<span class="ruby-identifier">opts</span>)
+278:     <span class="ruby-identifier">text</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>][<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'#'</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>][<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>] 
+279:     <span class="ruby-constant">ENTITIES</span>[<span class="ruby-identifier">text</span>]
+280:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fn-method" class="method-detail ">
+				<a name="method-i-fn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fn</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="fn-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 230</span>
+230:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fn</span>(<span class="ruby-identifier">opts</span>)
+231:     <span class="ruby-node">&quot;\\footnotetext[#{opts[:id]}]{#{opts[:text]}}&quot;</span>
+232:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="footno-method" class="method-detail ">
+				<a name="method-i-footno"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">footno</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+footnotes
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="footno-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 224</span>
+224:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">footno</span>(<span class="ruby-identifier">opts</span>)
+225:     <span class="ruby-comment cmt"># TODO: insert a placeholder until we know the footnote content.</span>
+226:     <span class="ruby-comment cmt"># For this to work, we need some kind of post-processing...</span>
+227:     <span class="ruby-node">&quot;\\footnotemark[#{opts[:text]}]&quot;</span>
+228:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="image-method" class="method-detail ">
+				<a name="method-i-image"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">image</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+FIXME: use includegraphics with security verification
+</p>
+<p>
+Remember to use &#8216;RequirePackage{graphicx}&#8217; in your LaTeX header
+</p>
+<p>
+FIXME: Look at dealing with width / height gracefully as this should be 
+specified in a unit like cm rather than px.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="image-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 208</span>
+208:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">image</span>(<span class="ruby-identifier">opts</span>)
+209:     <span class="ruby-comment cmt"># Don't know how to use remote links, plus can we trust them?</span>
+210:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:src</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^\w+\:\/\//</span>
+211:     <span class="ruby-comment cmt"># Resolve CSS styles if any have been set</span>
+212:     <span class="ruby-identifier">styling</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:class</span>].<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s+/</span>).<span class="ruby-identifier">collect</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">style</span><span class="ruby-operator">|</span> <span class="ruby-identifier">latex_image_styles</span>[<span class="ruby-identifier">style</span>] }.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span> <span class="ruby-value str">','</span>
+213:     <span class="ruby-comment cmt"># Build latex code</span>
+214:     [ <span class="ruby-value str">&quot;\\begin{figure}&quot;</span>,
+215:       <span class="ruby-value str">&quot;  \\centering&quot;</span>,
+216:       <span class="ruby-node">&quot;  \\includegraphics[#{styling}]{#{opts[:src]}}&quot;</span>,
+217:      (<span class="ruby-node">&quot;  \\caption{#{escape opts[:title]}}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:title</span>]),
+218:      (<span class="ruby-node">&quot;  \\label{#{escape opts[:alt]}}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:alt</span>]),
+219:       <span class="ruby-value str">&quot;\\end{figure}&quot;</span>,
+220:     ].<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">join</span> <span class="ruby-value str">&quot;\n&quot;</span>
+221:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inline-html-method" class="method-detail ">
+				<a name="method-i-inline_html"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inline_html</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+TODO: what do we do with <a href="HTML.html">HTML</a>?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inline-html-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 290</span>
+290:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inline_html</span>(<span class="ruby-identifier">opts</span>)
+291:     <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>
+292:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="li-close-method" class="method-detail ">
+				<a name="method-i-li_close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">li_close</span><span
+						class="method-args">(opts=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="li-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 107</span>
+107:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">li_close</span>(<span class="ruby-identifier">opts</span>=<span class="ruby-keyword kw">nil</span>)
+108:     <span class="ruby-value str">&quot;\n&quot;</span>
+109:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="li-open-method" class="method-detail ">
+				<a name="method-i-li_open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">li_open</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="li-open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 103</span>
+103:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">li_open</span>(<span class="ruby-identifier">opts</span>)
+104:     <span class="ruby-node">&quot;  \\item #{opts[:text]}&quot;</span>
+105:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="link-method" class="method-detail ">
+				<a name="method-i-link"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">link</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+links
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="link-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 198</span>
+198:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link</span>(<span class="ruby-identifier">opts</span>)
+199:     <span class="ruby-node">&quot;\\href{#{opts[:href]}}{#{opts[:name]}}&quot;</span>
+200:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="p-method" class="method-detail ">
+				<a name="method-i-p"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">p</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+paragraphs
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="p-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 112</span>
+112:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">p</span>(<span class="ruby-identifier">opts</span>)
+113:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:align</span>]
+114:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'left'</span> <span class="ruby-keyword kw">then</span>
+115:       <span class="ruby-node">&quot;\\begin{flushleft}#{opts[:text]}\\end{flushleft}\n\n&quot;</span> 
+116:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'right'</span> <span class="ruby-keyword kw">then</span>
+117:       <span class="ruby-node">&quot;\\begin{flushright}#{opts[:text]}\\end{flushright}\n\n&quot;</span> 
+118:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'center'</span> <span class="ruby-keyword kw">then</span>
+119:       <span class="ruby-node">&quot;\\begin{center}#{opts[:text]}\\end{center}\n\n&quot;</span> 
+120:     <span class="ruby-keyword kw">else</span>
+121:       <span class="ruby-node">&quot;#{opts[:text]}\n\n&quot;</span>
+122:     <span class="ruby-keyword kw">end</span>
+123:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="quote--method" class="method-detail ">
+				<a name="method-i-quote1"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">quote1</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="quote--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 239</span>
+239:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">quote1</span>(<span class="ruby-identifier">opts</span>)
+240:     <span class="ruby-node">&quot;`#{opts[:text]}'&quot;</span>
+241:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="quote--method" class="method-detail ">
+				<a name="method-i-quote2"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">quote2</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="quote--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 243</span>
+243:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">quote2</span>(<span class="ruby-identifier">opts</span>)
+244:     <span class="ruby-node">&quot;``#{opts[:text]}''&quot;</span>
+245:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="registered-method" class="method-detail ">
+				<a name="method-i-registered"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">registered</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="registered-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 267</span>
+267:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">registered</span>(<span class="ruby-identifier">opts</span>)
+268:     <span class="ruby-value str">&quot;\\textregistered{}&quot;</span>
+269:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="snip-method" class="method-detail ">
+				<a name="method-i-snip"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">snip</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+inline verbatim
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="snip-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 235</span>
+235:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">snip</span>(<span class="ruby-identifier">opts</span>)
+236:     <span class="ruby-node">&quot;\\verb`#{opts[:text]}`&quot;</span>
+237:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="table-close-method" class="method-detail ">
+				<a name="method-i-table_close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">table_close</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+FIXME: need caption and label elements similar to image -> figure
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="table-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 165</span>
+165:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">table_close</span>(<span class="ruby-identifier">opts</span>)
+166:     <span class="ruby-identifier">output</span>  = <span class="ruby-value str">&quot;\\begin{table}\n&quot;</span>
+167:     <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;  \\centering\n&quot;</span>
+168:     <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;  \\begin{tabular}{ #{&quot;l &quot; * @table[0].size }}\n&quot;</span>
+169:     <span class="ruby-ivar">@table</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+170:       <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;    #{row.join(&quot; &amp; &quot;)} \\\\\n&quot;</span>
+171:     <span class="ruby-keyword kw">end</span>
+172:     <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;  \\end{tabular}\n&quot;</span>
+173:     <span class="ruby-identifier">output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\\end{table}\n&quot;</span>
+174:     <span class="ruby-identifier">output</span>
+175:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="table-open-method" class="method-detail ">
+				<a name="method-i-table_open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">table_open</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+We need to know the column count before opening tabular context.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="table-open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 157</span>
+157:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">table_open</span>(<span class="ruby-identifier">opts</span>)
+158:     <span class="ruby-ivar">@table</span> = []
+159:     <span class="ruby-ivar">@table_multirow</span> = {}
+160:     <span class="ruby-ivar">@table_multirow_next</span> = {}
+161:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span>
+162:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="td-method" class="method-detail ">
+				<a name="method-i-td"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">td</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+tables
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="td-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 126</span>
+126:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">td</span>(<span class="ruby-identifier">opts</span>)
+127:     <span class="ruby-identifier">column</span> = <span class="ruby-ivar">@table_row</span>.<span class="ruby-identifier">size</span>
+128:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:colspan</span>]
+129:       <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>] = <span class="ruby-node">&quot;\\multicolumn{#{opts[:colspan]}}{ #{&quot;l &quot; * opts[:colspan].to_i}}{#{opts[:text]}}&quot;</span>
+130:     <span class="ruby-keyword kw">end</span>
+131:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-value">:rowspan</span>]
+132:       <span class="ruby-ivar">@table_multirow_next</span>[<span class="ruby-identifier">column</span>] = <span class="ruby-identifier">opts</span>[<span class="ruby-value">:rowspan</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+133:       <span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>] = <span class="ruby-node">&quot;\\multirow{#{opts[:rowspan]}}{*}{#{opts[:text]}}&quot;</span>
+134:     <span class="ruby-keyword kw">end</span>
+135:     <span class="ruby-ivar">@table_row</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">opts</span>[<span class="ruby-value">:text</span>])
+136:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span>
+137:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tr-close-method" class="method-detail ">
+				<a name="method-i-tr_close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tr_close</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tr-close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 144</span>
+144:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tr_close</span>(<span class="ruby-identifier">opts</span>)
+145:     <span class="ruby-identifier">multirow_columns</span> = <span class="ruby-ivar">@table_multirow</span>.<span class="ruby-identifier">find_all</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>}
+146:     <span class="ruby-identifier">multirow_columns</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+147:       <span class="ruby-ivar">@table_row</span>.<span class="ruby-identifier">insert</span>(<span class="ruby-identifier">c</span>,<span class="ruby-value str">&quot;&quot;</span>)
+148:       <span class="ruby-ivar">@table_multirow</span>[<span class="ruby-identifier">c</span>] <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+149:     <span class="ruby-keyword kw">end</span>
+150:     <span class="ruby-ivar">@table_multirow</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-ivar">@table_multirow_next</span>)
+151:     <span class="ruby-ivar">@table_multirow_next</span> = {}
+152:     <span class="ruby-ivar">@table</span>.<span class="ruby-identifier">push</span>(<span class="ruby-ivar">@table_row</span>)
+153:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span>
+154:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tr-open-method" class="method-detail ">
+				<a name="method-i-tr_open"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tr_open</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tr-open-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 139</span>
+139:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tr_open</span>(<span class="ruby-identifier">opts</span>)
+140:     <span class="ruby-ivar">@table_row</span> = []
+141:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span>
+142:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="trademark-method" class="method-detail ">
+				<a name="method-i-trademark"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">trademark</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="trademark-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 263</span>
+263:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">trademark</span>(<span class="ruby-identifier">opts</span>)
+264:     <span class="ruby-value str">&quot;\\texttrademark{}&quot;</span>
+265:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="begin-chunk-method" class="method-detail ">
+				<a name="method-i-begin_chunk"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">begin_chunk</span><span
+						class="method-args">(type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Use this for block level commands that use begin
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="begin-chunk-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 305</span>
+305:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">begin_chunk</span>(<span class="ruby-identifier">type</span>)
+306:     <span class="ruby-identifier">chunk_counter</span>[<span class="ruby-identifier">type</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+307:     <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;\\begin{#{type}}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">chunk_counter</span>[<span class="ruby-identifier">type</span>]
+308:     <span class="ruby-value str">''</span>
+309:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="chunk-counter-method" class="method-detail ">
+				<a name="method-i-chunk_counter"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">chunk_counter</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="chunk-counter-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 319</span>
+319:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">chunk_counter</span>
+320:     <span class="ruby-ivar">@chunk_counter</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">0</span>
+321:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="end-chunk-method" class="method-detail ">
+				<a name="method-i-end_chunk"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">end_chunk</span><span
+						class="method-args">(type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Use this for block level commands that use end
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="end-chunk-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 312</span>
+312:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">end_chunk</span>(<span class="ruby-identifier">type</span>)
+313:     <span class="ruby-identifier">chunk_counter</span>[<span class="ruby-identifier">type</span>] <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+314:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">RuntimeError</span>, <span class="ruby-node">&quot;Bad latex #{type} nesting detected&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">chunk_counter</span>[<span class="ruby-identifier">type</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> <span class="ruby-comment cmt"># This should never need to happen</span>
+315:     <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;\\end{#{type}}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">chunk_counter</span>[<span class="ruby-identifier">type</span>]
+316:     <span class="ruby-value str">''</span>
+317:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="escape-method" class="method-detail ">
+				<a name="method-i-escape"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="escape-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 296</span>
+296:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">escape</span>(<span class="ruby-identifier">text</span>)
+297:     <span class="ruby-identifier">latex_esc</span>(<span class="ruby-identifier">text</span>)
+298:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="escape-pre-method" class="method-detail ">
+				<a name="method-i-escape_pre"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape_pre</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="escape-pre-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/formatters/latex.rb, line 300</span>
+300:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">escape_pre</span>(<span class="ruby-identifier">text</span>)
+301:     <span class="ruby-identifier">text</span>
+302:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

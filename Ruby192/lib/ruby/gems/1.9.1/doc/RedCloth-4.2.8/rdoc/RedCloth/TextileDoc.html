@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: RedCloth::TextileDoc</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/redcloth/textile_doc_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/redcloth/textile_doc.rb">lib/redcloth/textile_doc.rb</a></li>
+					
+						<li><a href="../ext/redcloth_scan/redcloth_scan_c.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="ext/redcloth_scan/redcloth_scan.c">ext/redcloth_scan/redcloth_scan.c</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">String</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="TextileDoc/ParseError.html">RedCloth::TextileDoc::ParseError</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-apply_rules">#apply_rules</a></li>
+					
+					<li><a href="#method-i-html_esc">#html_esc</a></li>
+					
+					<li><a href="#method-i-latex_esc">#latex_esc</a></li>
+					
+					<li><a href="#method-i-to">#to</a></li>
+					
+					<li><a href="#method-i-to_html">#to_html</a></li>
+					
+					<li><a href="#method-i-to_latex">#to_latex</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="../COPYING.html">COPYING</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../ext/redcloth_scan/Makefile.html">Makefile</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../RedCloth.html">RedCloth</a></li>
+				
+					<li><a href="../RedCloth/Formatters.html">RedCloth::Formatters</a></li>
+				
+					<li><a href="../RedCloth/Formatters/Base.html">RedCloth::Formatters::Base</a></li>
+				
+					<li><a href="../RedCloth/Formatters/HTML.html">RedCloth::Formatters::HTML</a></li>
+				
+					<li><a href="../RedCloth/Formatters/LATEX.html">RedCloth::Formatters::LATEX</a></li>
+				
+					<li><a href="../RedCloth/Formatters/LATEX/Settings.html">RedCloth::Formatters::LATEX::Settings</a></li>
+				
+					<li><a href="../RedCloth/TextileDoc.html">RedCloth::TextileDoc</a></li>
+				
+					<li><a href="../RedCloth/TextileDoc/ParseError.html">RedCloth::TextileDoc::ParseError</a></li>
+				
+					<li><a href="../RedCloth/VERSION.html">RedCloth::VERSION</a></li>
+				
+					<li><a href="../ERB.html">ERB</a></li>
+				
+					<li><a href="../ERB/Util.html">ERB::Util</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RedCloth::TextileDoc</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="filter-html-attribute-method" class="method-detail">
+				<a name="filter_html"></a>
+				
+				<a name="filter_html="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">filter_html</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessors for setting security restrictions.
+</p>
+<p>
+This is a nice thing if you&#8217;re using <a
+href="../RedCloth.html">RedCloth</a> for formatting in public places (e.g.
+Wikis) where you don&#8217;t want users to abuse HTML for bad things.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_html">filter_html</a></tt> is set,
+HTML which wasn&#8217;t created by the Textile processor will be escaped.
+Alternatively, if <tt>:<a
+href="TextileDoc.html#sanitize_html">sanitize_html</a></tt> is set,  HTML
+can pass through the Textile processor but unauthorized tags and attributes
+will be removed.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_styles">filter_styles</a></tt> is
+set, it will also disable the style markup specifier. (&#8217;{color:
+red}&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_classes">filter_classes</a></tt> is
+set, it will also disable class attributes.
+(&#8217;!(classname)image!&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_ids">filter_ids</a></tt> is set, it
+will also disable id attributes. (&#8217;!(classname#)image!&#8217;)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="sanitize-html-attribute-method" class="method-detail">
+				<a name="sanitize_html"></a>
+				
+				<a name="sanitize_html="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">sanitize_html</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessors for setting security restrictions.
+</p>
+<p>
+This is a nice thing if you&#8217;re using <a
+href="../RedCloth.html">RedCloth</a> for formatting in public places (e.g.
+Wikis) where you don&#8217;t want users to abuse HTML for bad things.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_html">filter_html</a></tt> is set,
+HTML which wasn&#8217;t created by the Textile processor will be escaped.
+Alternatively, if <tt>:<a
+href="TextileDoc.html#sanitize_html">sanitize_html</a></tt> is set,  HTML
+can pass through the Textile processor but unauthorized tags and attributes
+will be removed.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_styles">filter_styles</a></tt> is
+set, it will also disable the style markup specifier. (&#8217;{color:
+red}&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_classes">filter_classes</a></tt> is
+set, it will also disable class attributes.
+(&#8217;!(classname)image!&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_ids">filter_ids</a></tt> is set, it
+will also disable id attributes. (&#8217;!(classname#)image!&#8217;)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="filter-styles-attribute-method" class="method-detail">
+				<a name="filter_styles"></a>
+				
+				<a name="filter_styles="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">filter_styles</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessors for setting security restrictions.
+</p>
+<p>
+This is a nice thing if you&#8217;re using <a
+href="../RedCloth.html">RedCloth</a> for formatting in public places (e.g.
+Wikis) where you don&#8217;t want users to abuse HTML for bad things.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_html">filter_html</a></tt> is set,
+HTML which wasn&#8217;t created by the Textile processor will be escaped.
+Alternatively, if <tt>:<a
+href="TextileDoc.html#sanitize_html">sanitize_html</a></tt> is set,  HTML
+can pass through the Textile processor but unauthorized tags and attributes
+will be removed.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_styles">filter_styles</a></tt> is
+set, it will also disable the style markup specifier. (&#8217;{color:
+red}&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_classes">filter_classes</a></tt> is
+set, it will also disable class attributes.
+(&#8217;!(classname)image!&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_ids">filter_ids</a></tt> is set, it
+will also disable id attributes. (&#8217;!(classname#)image!&#8217;)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="filter-classes-attribute-method" class="method-detail">
+				<a name="filter_classes"></a>
+				
+				<a name="filter_classes="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">filter_classes</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessors for setting security restrictions.
+</p>
+<p>
+This is a nice thing if you&#8217;re using <a
+href="../RedCloth.html">RedCloth</a> for formatting in public places (e.g.
+Wikis) where you don&#8217;t want users to abuse HTML for bad things.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_html">filter_html</a></tt> is set,
+HTML which wasn&#8217;t created by the Textile processor will be escaped.
+Alternatively, if <tt>:<a
+href="TextileDoc.html#sanitize_html">sanitize_html</a></tt> is set,  HTML
+can pass through the Textile processor but unauthorized tags and attributes
+will be removed.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_styles">filter_styles</a></tt> is
+set, it will also disable the style markup specifier. (&#8217;{color:
+red}&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_classes">filter_classes</a></tt> is
+set, it will also disable class attributes.
+(&#8217;!(classname)image!&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_ids">filter_ids</a></tt> is set, it
+will also disable id attributes. (&#8217;!(classname#)image!&#8217;)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="filter-ids-attribute-method" class="method-detail">
+				<a name="filter_ids"></a>
+				
+				<a name="filter_ids="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">filter_ids</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessors for setting security restrictions.
+</p>
+<p>
+This is a nice thing if you&#8217;re using <a
+href="../RedCloth.html">RedCloth</a> for formatting in public places (e.g.
+Wikis) where you don&#8217;t want users to abuse HTML for bad things.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_html">filter_html</a></tt> is set,
+HTML which wasn&#8217;t created by the Textile processor will be escaped.
+Alternatively, if <tt>:<a
+href="TextileDoc.html#sanitize_html">sanitize_html</a></tt> is set,  HTML
+can pass through the Textile processor but unauthorized tags and attributes
+will be removed.
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_styles">filter_styles</a></tt> is
+set, it will also disable the style markup specifier. (&#8217;{color:
+red}&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_classes">filter_classes</a></tt> is
+set, it will also disable class attributes.
+(&#8217;!(classname)image!&#8217;)
+</p>
+<p>
+If <tt>:<a href="TextileDoc.html#filter_ids">filter_ids</a></tt> is set, it
+will also disable id attributes. (&#8217;!(classname#)image!&#8217;)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="hard-breaks-attribute-method" class="method-detail">
+				<a name="hard_breaks"></a>
+				
+				<a name="hard_breaks="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">hard_breaks</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Deprecated accessor for toggling hard breaks.
+</p>
+<p>
+Traditional <a href="../RedCloth.html">RedCloth</a> converted single
+newlines to HTML break tags, but later versions required <tt>:<a
+href="TextileDoc.html#hard_breaks">hard_breaks</a></tt> be set to enable
+this behavior. <tt>:<a
+href="TextileDoc.html#hard_breaks">hard_breaks</a></tt> is once again the
+default.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="lite-mode-attribute-method" class="method-detail">
+				<a name="lite_mode"></a>
+				
+				<a name="lite_mode="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">lite_mode</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessor for toggling lite mode.
+</p>
+<p>
+In lite mode, block-level rules are ignored.  This means that tables,
+paragraphs, lists, and such aren&#8217;t available. Only the inline markup
+for bold, italics, entities and so on.
+</p>
+<pre>
+  r = RedCloth.new( &quot;And then? She *fell*!&quot;, [:lite_mode] )
+  r.to_html
+  #=&gt; &quot;And then? She &lt;strong&gt;fell&lt;/strong&gt;!&quot;</pre>
+				
+				</div>
+			</div>
+			
+			<div id="no-span-caps-attribute-method" class="method-detail">
+				<a name="no_span_caps"></a>
+				
+				<a name="no_span_caps="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">no_span_caps</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Accessor for toggling span caps.
+</p>
+<p>
+Textile places `span&#8217; tags around capitalized words by default, but
+this wreaks havoc on Wikis. If <tt>:<a
+href="TextileDoc.html#no_span_caps">no_span_caps</a></tt> is set, this will
+be suppressed.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">( string, restrictions = [] )</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a new <a href="../RedCloth.html">RedCloth</a> object, based on
+<em>string</em>, observing  any <em>restrictions</em> specified.
+</p>
+<pre>
+  r = RedCloth.new( &quot;h1. A *bold* man&quot; )
+    #=&gt; &quot;h1. A *bold* man&quot;
+  r.to_html
+    #=&gt;&quot;&lt;h1&gt;A &lt;b&gt;bold&lt;/b&gt; man&lt;/h1&gt;&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/redcloth/textile_doc.rb, line 67</span>
+67:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>( <span class="ruby-identifier">string</span>, <span class="ruby-identifier">restrictions</span> = [] )
+68:       <span class="ruby-identifier">restrictions</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">method</span>(<span class="ruby-node">&quot;#{r}=&quot;</span>).<span class="ruby-identifier">call</span>( <span class="ruby-keyword kw">true</span> ) }
+69:       <span class="ruby-keyword kw">super</span>( <span class="ruby-identifier">string</span> )
+70:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="html-esc-method" class="method-detail ">
+				<a name="method-i-html_esc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">html_esc</span><span
+						class="method-args">(...)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts special characters into HTML entities.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="html-esc-source">
+<pre>
+static VALUE
+redcloth_html_esc(int argc, VALUE* argv, VALUE self) </pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="latex-esc-method" class="method-detail ">
+				<a name="method-i-latex_esc"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">latex_esc</span><span
+						class="method-args">(p1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts special characters into LaTeX entities.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="latex-esc-source">
+<pre>
+static VALUE
+redcloth_latex_esc(VALUE self, VALUE str)
+{  
+  VALUE new_str = STR_NEW2(&quot;&quot;);
+  
+  if (str == Qnil)
+    return new_str;
+    
+  StringValue(str);
+  
+  if (RSTRING_LEN(str) == 0)
+    return new_str;
+  
+  char *ts = RSTRING_PTR(str), *te = RSTRING_PTR(str) + RSTRING_LEN(str);
+  char *t = ts, *t2 = ts;
+  const char *ch = NULL;
+  if (te &lt;= ts) return Qnil;
+
+  while (t2 &lt; te) {
+    ch = NULL;
+    
+    switch (*t2) 
+    { 
+      case '{':  ch = &quot;#123&quot;;   break;
+      case '}':  ch = &quot;#125&quot;;   break;
+      case '\\': ch = &quot;#92&quot;;    break;
+      case '#':  ch = &quot;#35&quot;;    break;
+      case '$':  ch = &quot;#36&quot;;    break;
+      case '%':  ch = &quot;#37&quot;;    break;
+      case '&amp;':  ch = &quot;amp&quot;;    break;
+      case '_':  ch = &quot;#95&quot;;    break;
+      case '^':  ch = &quot;circ&quot;;   break;
+      case '~':  ch = &quot;tilde&quot;;  break;
+      case '&lt;':  ch = &quot;lt&quot;;     break;
+      case '&gt;':  ch = &quot;gt&quot;;     break;
+      case '\n': ch = &quot;#10&quot;;    break;
+    }
+
+    if (ch != NULL)
+    {
+      if (t2 &gt; t)
+        rb_str_cat(new_str, t, t2-t);
+      VALUE opts = rb_hash_new();
+      rb_hash_aset(opts, ID2SYM(rb_intern(&quot;text&quot;)), STR_NEW2(ch));
+      rb_str_concat(new_str, rb_funcall(self, rb_intern(&quot;entity&quot;), 1, opts));
+      t = t2 + 1;
+    }
+
+    t2++;
+  }
+  if (t2 &gt; t)
+    rb_str_cat(new_str, t, t2-t);
+  
+  return new_str;
+}</pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-method" class="method-detail ">
+				<a name="method-i-to"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to</span><span
+						class="method-args">(p1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Transforms a Textile document with <tt>formatter</tt>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-source">
+<pre>
+static VALUE
+redcloth_to(self, formatter)
+  VALUE self, formatter;
+{
+  rb_funcall(self, rb_intern(&quot;delete!&quot;), 1, STR_NEW2(&quot;\r&quot;));
+  VALUE working_copy = rb_obj_clone(self);
+  rb_extend_object(working_copy, formatter);
+  
+  if (rb_funcall(working_copy, rb_intern(&quot;lite_mode&quot;), 0) == Qtrue) {
+    return redcloth_inline2(working_copy, self, rb_hash_new());
+  } else {
+    return redcloth_transform2(working_copy, self);
+  }
+}</pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-html-method" class="method-detail ">
+				<a name="method-i-to_html"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_html</span><span
+						class="method-args">( *rules )</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generates HTML from the Textile contents.
+</p>
+<pre>
+  RedCloth.new( &quot;And then? She *fell*!&quot; ).to_html
+    #=&gt;&quot;&lt;p&gt;And then? She &lt;strong&gt;fell&lt;/strong&gt;!&lt;/p&gt;&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-html-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/redcloth/textile_doc.rb, line 78</span>
+78:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_html</span>( *<span class="ruby-identifier">rules</span> )
+79:       <span class="ruby-identifier">apply_rules</span>(<span class="ruby-identifier">rules</span>)
+80:   
+81:       <span class="ruby-identifier">to</span>(<span class="ruby-constant">RedCloth</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span>)
+82:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-latex-method" class="method-detail ">
+				<a name="method-i-to_latex"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_latex</span><span
+						class="method-args">( *rules )</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generates LaTeX from the Textile contents.
+</p>
+<pre>
+  RedCloth.new( &quot;And then? She *fell*!&quot; ).to_latex
+    #=&gt; &quot;And then? She \\textbf{fell}!\n\n&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-latex-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/redcloth/textile_doc.rb, line 90</span>
+90:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_latex</span>( *<span class="ruby-identifier">rules</span> )
+91:       <span class="ruby-identifier">apply_rules</span>(<span class="ruby-identifier">rules</span>)
+92:   
+93:       <span class="ruby-identifier">to</span>(<span class="ruby-constant">RedCloth</span><span class="ruby-operator">::</span><span class="ruby-constant">Formatters</span><span class="ruby-operator">::</span><span class="ruby-constant">LATEX</span>)
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="apply-rules-method" class="method-detail ">
+				<a name="method-i-apply_rules"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">apply_rules</span><span
+						class="method-args">(rules)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="apply-rules-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/redcloth/textile_doc.rb, line 97</span>
+ 97:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">apply_rules</span>(<span class="ruby-identifier">rules</span>)
+ 98:       <span class="ruby-identifier">rules</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+ 99:         <span class="ruby-identifier">method</span>(<span class="ruby-identifier">r</span>).<span class="ruby-identifier">call</span>(<span class="ruby-keyword kw">self</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">r</span>)
+100:       <span class="ruby-keyword kw">end</span>
+101:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

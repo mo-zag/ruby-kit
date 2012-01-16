@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Hanna::TemplateHelpers</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/hanna/template_helpers_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/hanna/template_helpers.rb">lib/hanna/template_helpers.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-silence_warnings">::silence_warnings</a></li>
+					
+					<li><a href="#method-i-build_javascript_search_index">#build_javascript_search_index</a></li>
+					
+					<li><a href="#method-i-debug">#debug</a></li>
+					
+					<li><a href="#method-i-h">#h</a></li>
+					
+					<li><a href="#method-i-link_to">#link_to</a></li>
+					
+					<li><a href="#method-i-link_to_method">#link_to_method</a></li>
+					
+					<li><a href="#method-i-make_class_tree">#make_class_tree</a></li>
+					
+					<li><a href="#method-i-methods_from_sections">#methods_from_sections</a></li>
+					
+					<li><a href="#method-i-read">#read</a></li>
+					
+					<li><a href="#method-i-render_class_tree">#render_class_tree</a></li>
+					
+					<li><a href="#method-i-sanitize_code_blocks">#sanitize_code_blocks</a></li>
+					
+					<li><a href="#method-i-silence_warnings">#silence_warnings</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../RDoc.html">RDoc</a></li>
+				
+					<li><a href="../RDoc/Generator.html">RDoc::Generator</a></li>
+				
+					<li><a href="../RDoc/Generator/HTML.html">RDoc::Generator::HTML</a></li>
+				
+					<li><a href="../RDoc/Generator/HTML/HANNA.html">RDoc::Generator::HTML::HANNA</a></li>
+				
+					<li><a href="../Hanna.html">Hanna</a></li>
+				
+					<li><a href="../Hanna/TemplateHelpers.html">Hanna::TemplateHelpers</a></li>
+				
+					<li><a href="../Gem/DocManager.html">Gem::DocManager</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Hanna::TemplateHelpers</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="protected-class-method-details" class="method-section section">
+			<h3 class="section-header">Protected Class Methods</h3>
+
+		
+			<div id="silence-warnings-method" class="method-detail ">
+				<a name="method-c-silence_warnings"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">silence_warnings</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+We need to suppress warnings before calling into HAML because HAML has lots
+of uninitialized instance variable accesses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="silence-warnings-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 33</span>
+33:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">silence_warnings</span>
+34:       <span class="ruby-identifier">save</span> = <span class="ruby-identifier">$-w</span>
+35:       <span class="ruby-identifier">$-w</span> = <span class="ruby-keyword kw">false</span>
+36:       
+37:       <span class="ruby-keyword kw">begin</span>
+38:         <span class="ruby-keyword kw">yield</span>
+39:       <span class="ruby-keyword kw">ensure</span>
+40:         <span class="ruby-identifier">$-w</span> = <span class="ruby-identifier">save</span>
+41:       <span class="ruby-keyword kw">end</span>
+42:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="build-javascript-search-index-method" class="method-detail ">
+				<a name="method-i-build_javascript_search_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_javascript_search_index</span><span
+						class="method-args">(entries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<tt>entries</tt> is an array of hashes, each which has a &#8220;name&#8221;
+and &#8220;href&#8221; element. An entry name is in the form of &#8220;ago
+(ActiveSupport::TimeWithZone)&#8221;. <tt>entries</tt> must be already
+sorted by name.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="build-javascript-search-index-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_javascript_search_index</span>(<span class="ruby-identifier">entries</span>)
+57:       <span class="ruby-identifier">result</span> = <span class="ruby-value str">&quot;var search_index = [\n&quot;</span>
+58:       <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+59:         <span class="ruby-identifier">entry</span>[<span class="ruby-value">:name</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\A(.+) \((.+)\)\Z/</span>
+60:         <span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">module_name</span> = <span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>
+61:         <span class="ruby-identifier">html</span> = <span class="ruby-identifier">link_to_method</span>(<span class="ruby-identifier">entry</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">entry</span>[<span class="ruby-value">:href</span>])
+62:         <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;  { method: '#{method_name.downcase}', &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+63:                       <span class="ruby-node">&quot;module: '#{module_name.downcase}', &quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+64:                       <span class="ruby-node">&quot;html: '#{html}' },\n&quot;</span>
+65:       <span class="ruby-keyword kw">end</span>
+66:       <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;]&quot;</span>
+67:       <span class="ruby-identifier">result</span>
+68:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="debug-method" class="method-detail ">
+				<a name="method-i-debug"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">debug</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="debug-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 45</span>
+45:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">debug</span>(<span class="ruby-identifier">text</span>)
+46:       <span class="ruby-node">&quot;&lt;pre&gt;#{h YAML::dump(text)}&lt;/pre&gt;&quot;</span>
+47:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="h-method" class="method-detail ">
+				<a name="method-i-h"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">h</span><span
+						class="method-args">(html)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="h-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">h</span>(<span class="ruby-identifier">html</span>)
+50:       <span class="ruby-constant">CGI</span><span class="ruby-operator">::</span><span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">html</span>)
+51:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="link-to-method" class="method-detail ">
+				<a name="method-i-link_to"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">link_to</span><span
+						class="method-args">(text, url = nil, classname = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="link-to-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 8</span>
+ 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">classname</span> = <span class="ruby-keyword kw">nil</span>)
+ 9:       <span class="ruby-identifier">class_attr</span> = <span class="ruby-identifier">classname</span> <span class="ruby-operator">?</span> <span class="ruby-value str">' class=&quot;%s&quot;'</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">classname</span> <span class="ruby-operator">:</span> <span class="ruby-value str">''</span>
+10:       
+11:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">url</span>
+12:         <span class="ruby-node">%[&lt;a href=&quot;#{url}&quot;#{class_attr}&gt;#{text}&lt;/a&gt;]</span>
+13:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">classname</span>
+14:         <span class="ruby-node">%[&lt;span#{class_attr}&gt;#{text}&lt;/span&gt;]</span>
+15:       <span class="ruby-keyword kw">else</span>
+16:         <span class="ruby-identifier">text</span>
+17:       <span class="ruby-keyword kw">end</span>
+18:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="link-to-method-method" class="method-detail ">
+				<a name="method-i-link_to_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">link_to_method</span><span
+						class="method-args">(method_text, url = nil, classname = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<tt>method_text</tt> is in the form of &#8220;ago
+(ActiveSupport::TimeWithZone)&#8221;.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="link-to-method-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 21</span>
+21:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">link_to_method</span>(<span class="ruby-identifier">method_text</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">classname</span> = <span class="ruby-keyword kw">nil</span>)
+22:       <span class="ruby-identifier">method_text</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\A(.+) \((.+)\)\Z/</span>
+23:       <span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">module_name</span> = <span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>
+24:       <span class="ruby-identifier">link_to</span> <span class="ruby-node">%(&lt;span class=&quot;method_name&quot;&gt;#{h method_name}&lt;/span&gt; &lt;span class=&quot;module_name&quot;&gt;(#{h module_name})&lt;/span&gt;)</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">classname</span>
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="make-class-tree-method" class="method-detail ">
+				<a name="method-i-make_class_tree"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">make_class_tree</span><span
+						class="method-args">(entries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="make-class-tree-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 79</span>
+79:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">make_class_tree</span>(<span class="ruby-identifier">entries</span>)
+80:       <span class="ruby-identifier">entries</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tree</span>, <span class="ruby-identifier">entry</span><span class="ruby-operator">|</span>
+81:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">entry</span>[<span class="ruby-value">:href</span>]
+82:           <span class="ruby-identifier">leaf</span> = <span class="ruby-identifier">entry</span>[<span class="ruby-value">:name</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-identifier">tree</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">branch</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">|</span>
+83:             <span class="ruby-identifier">branch</span>[<span class="ruby-identifier">klass</span>] <span class="ruby-operator">||=</span> {}
+84:           <span class="ruby-keyword kw">end</span>
+85:           <span class="ruby-identifier">leaf</span>[<span class="ruby-value str">'_href'</span>] = <span class="ruby-identifier">entry</span>[<span class="ruby-value">:href</span>]
+86:         <span class="ruby-keyword kw">end</span>
+87:         <span class="ruby-identifier">tree</span>
+88:       <span class="ruby-keyword kw">end</span>
+89:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="methods-from-sections-method" class="method-detail ">
+				<a name="method-i-methods_from_sections"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">methods_from_sections</span><span
+						class="method-args">(sections)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="methods-from-sections-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 70</span>
+70:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">methods_from_sections</span>(<span class="ruby-identifier">sections</span>)
+71:       <span class="ruby-identifier">sections</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">h</span>, <span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>] = []}) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">methods</span>, <span class="ruby-identifier">section</span><span class="ruby-operator">|</span>
+72:         <span class="ruby-identifier">section</span>[<span class="ruby-value">:method_list</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ml</span><span class="ruby-operator">|</span>
+73:           <span class="ruby-identifier">methods</span>[<span class="ruby-node">&quot;#{ml[:type]} #{ml[:category]}&quot;</span>.<span class="ruby-identifier">downcase</span>].<span class="ruby-identifier">concat</span> <span class="ruby-identifier">ml</span>[<span class="ruby-value">:methods</span>]
+74:         <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">section</span>[<span class="ruby-value">:method_list</span>]
+75:         <span class="ruby-identifier">methods</span>
+76:       <span class="ruby-keyword kw">end</span>
+77:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-method" class="method-detail ">
+				<a name="method-i-read"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read</span><span
+						class="method-args">(*names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="read-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 27</span>
+27:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read</span>(*<span class="ruby-identifier">names</span>)
+28:       <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">HTML</span><span class="ruby-operator">::</span><span class="ruby-constant">HANNA</span>.<span class="ruby-identifier">read</span>(*<span class="ruby-identifier">names</span>)
+29:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="render-class-tree-method" class="method-detail ">
+				<a name="method-i-render_class_tree"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render_class_tree</span><span
+						class="method-args">(tree, parent = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="render-class-tree-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 91</span>
+ 91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_class_tree</span>(<span class="ruby-identifier">tree</span>, <span class="ruby-identifier">parent</span> = <span class="ruby-keyword kw">nil</span>)
+ 92:       <span class="ruby-identifier">parent</span> = <span class="ruby-identifier">parent</span> <span class="ruby-operator">+</span> <span class="ruby-value str">'::'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">parent</span>
+ 93:       <span class="ruby-identifier">tree</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value str">''</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span>, <span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+ 94:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'_href'</span>
+ 95:           <span class="ruby-identifier">subtree</span> = <span class="ruby-identifier">tree</span>[<span class="ruby-identifier">name</span>]
+ 96:           <span class="ruby-identifier">text</span> = <span class="ruby-identifier">parent</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'&lt;span class=&quot;parent&quot;&gt;%s&lt;/span&gt;%s'</span> <span class="ruby-operator">%</span> [<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">name</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">name</span>
+ 97:           <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;li&gt;'</span>
+ 98:           <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">subtree</span>[<span class="ruby-value str">'_href'</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">link_to</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">subtree</span>[<span class="ruby-value str">'_href'</span>]) <span class="ruby-operator">:</span> <span class="ruby-node">%[&lt;span class=&quot;nodoc&quot;&gt;#{text}&lt;/span&gt;]</span>)
+ 99:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">subtree</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">||</span> (<span class="ruby-identifier">subtree</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">subtree</span>[<span class="ruby-value str">'_href'</span>])
+100:             <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&lt;ol&gt;&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">render_class_tree</span>(<span class="ruby-identifier">subtree</span>, <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">name</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\n&lt;/ol&gt;&quot;</span>
+101:           <span class="ruby-keyword kw">end</span>
+102:           <span class="ruby-identifier">out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;/li&gt;'</span>
+103:         <span class="ruby-keyword kw">end</span>
+104:         <span class="ruby-identifier">out</span>
+105:       <span class="ruby-keyword kw">end</span>
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sanitize-code-blocks-method" class="method-detail ">
+				<a name="method-i-sanitize_code_blocks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sanitize_code_blocks</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+primarily for removing leading whitespace in <pre> tags
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sanitize-code-blocks-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 109</span>
+109:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sanitize_code_blocks</span>(<span class="ruby-identifier">text</span>)
+110:       <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/&lt;pre&gt;(.+?)&lt;\/pre&gt;/</span>) <span class="ruby-keyword kw">do</span>
+111:         <span class="ruby-identifier">code</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/^\s*\n/</span>, <span class="ruby-value str">''</span>)
+112:         <span class="ruby-identifier">indent</span> = <span class="ruby-identifier">code</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\n[ \t]*\n/</span>, <span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^ */</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">size</span> }.<span class="ruby-identifier">min</span>
+113:         <span class="ruby-identifier">code</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-node">/^#{' ' * indent}/</span>, <span class="ruby-value str">''</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">indent</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+114:         
+115:         <span class="ruby-node">&quot;&lt;pre&gt;#{code}&lt;/pre&gt;&quot;</span>
+116:       <span class="ruby-keyword kw">end</span>
+117:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="silence-warnings-method" class="method-detail ">
+				<a name="method-i-silence_warnings"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">silence_warnings</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+We need to suppress warnings before calling into HAML because HAML has lots
+of uninitialized instance variable accesses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="silence-warnings-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_helpers.rb, line 33</span>
+33:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">silence_warnings</span>
+34:       <span class="ruby-identifier">save</span> = <span class="ruby-identifier">$-w</span>
+35:       <span class="ruby-identifier">$-w</span> = <span class="ruby-keyword kw">false</span>
+36:       
+37:       <span class="ruby-keyword kw">begin</span>
+38:         <span class="ruby-keyword kw">yield</span>
+39:       <span class="ruby-keyword kw">ensure</span>
+40:         <span class="ruby-identifier">$-w</span> = <span class="ruby-identifier">save</span>
+41:       <span class="ruby-keyword kw">end</span>
+42:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

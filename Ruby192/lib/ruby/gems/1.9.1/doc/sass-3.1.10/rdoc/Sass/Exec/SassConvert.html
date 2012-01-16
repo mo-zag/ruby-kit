@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::Exec::SassConvert</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sass/exec_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/exec.rb">lib/sass/exec.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Generic.html">Sass::Exec::Generic</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-process_directory">#process_directory</a></li>
+					
+					<li><a href="#method-i-process_file">#process_file</a></li>
+					
+					<li><a href="#method-i-process_result">#process_result</a></li>
+					
+					<li><a href="#method-i-set_opts">#set_opts</a></li>
+					
+					<li><a href="#method-i-try_less_note">#try_less_note</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../../Less.html">Less</a></li>
+				
+					<li><a href="../../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+					<li><a href="../../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::Exec::SassConvert</h1>
+
+		<div id="description">
+			<p>
+The `sass-convert` executable.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@param args [Array<String>] The command-line arguments
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/exec.rb, line 460</span>
+460:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">args</span>)
+461:         <span class="ruby-keyword kw">super</span>
+462:         <span class="ruby-identifier">require</span> <span class="ruby-value str">'sass'</span>
+463:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_tree</span>] = {}
+464:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_engine</span>] = {<span class="ruby-value">:cache</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>, <span class="ruby-value">:read_cache</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>}
+465:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="process-result-method" class="method-detail ">
+				<a name="method-i-process_result"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process_result</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Processes the options set by the command-line arguments, and runs the <a
+href="../CSS.html">CSS</a> compiler appropriately.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="process-result-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/exec.rb, line 538</span>
+538:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_result</span>
+539:         <span class="ruby-identifier">require</span> <span class="ruby-value str">'sass'</span>
+540: 
+541:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:recursive</span>]
+542:           <span class="ruby-identifier">process_directory</span>
+543:           <span class="ruby-keyword kw">return</span>
+544:         <span class="ruby-keyword kw">end</span>
+545: 
+546:         <span class="ruby-keyword kw">super</span>
+547:         <span class="ruby-identifier">input</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>]
+548:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error: '#{input.path}' is a directory (did you mean to use --recursive?)&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">input</span>)
+549:         <span class="ruby-identifier">output</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>]
+550:         <span class="ruby-identifier">output</span> = <span class="ruby-identifier">input</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>]
+551:         <span class="ruby-identifier">process_file</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">output</span>)
+552:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-opts-method" class="method-detail ">
+				<a name="method-i-set_opts"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_opts</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tells optparse how to parse the arguments.
+</p>
+<p>
+@param opts [OptionParser]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-opts-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/exec.rb, line 470</span>
+470:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_opts</span>(<span class="ruby-identifier">opts</span>)
+471:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">banner</span> = <span class="ruby-value str">Usage: sass-convert [options] [INPUT] [OUTPUT]Description:  Converts between CSS, Sass, and SCSS files.  E.g. converts from SCSS to Sass,  or converts from CSS to SCSS (adding appropriate nesting).Options:</span>
+472: 
+473:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-F'</span>, <span class="ruby-value str">'--from FORMAT'</span>,
+474:           <span class="ruby-value str">'The format to convert from. Can be css, scss, sass, less.'</span>,
+475:           <span class="ruby-value str">'By default, this is inferred from the input filename.'</span>,
+476:           <span class="ruby-value str">'If there is none, defaults to css.'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+477:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+478:           <span class="ruby-keyword kw">unless</span> [<span class="ruby-value">:css</span>, <span class="ruby-value">:scss</span>, <span class="ruby-value">:sass</span>, <span class="ruby-value">:less</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>])
+479:             <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown format for sass-convert --from: #{name}&quot;</span>
+480:           <span class="ruby-keyword kw">end</span>
+481:           <span class="ruby-identifier">try_less_note</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:less</span>
+482:         <span class="ruby-keyword kw">end</span>
+483: 
+484:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-T'</span>, <span class="ruby-value str">'--to FORMAT'</span>,
+485:           <span class="ruby-value str">'The format to convert to. Can be scss or sass.'</span>,
+486:           <span class="ruby-value str">'By default, this is inferred from the output filename.'</span>,
+487:           <span class="ruby-value str">'If there is none, defaults to sass.'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+488:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>] = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+489:           <span class="ruby-keyword kw">unless</span> [<span class="ruby-value">:scss</span>, <span class="ruby-value">:sass</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>])
+490:             <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown format for sass-convert --to: #{name}&quot;</span>
+491:           <span class="ruby-keyword kw">end</span>
+492:         <span class="ruby-keyword kw">end</span>
+493: 
+494:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-R'</span>, <span class="ruby-value str">'--recursive'</span>,
+495:           <span class="ruby-value str">'Convert all the files in a directory. Requires --from and --to.'</span>) <span class="ruby-keyword kw">do</span>
+496:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:recursive</span>] = <span class="ruby-keyword kw">true</span>
+497:         <span class="ruby-keyword kw">end</span>
+498: 
+499:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-i'</span>, <span class="ruby-value str">'--in-place'</span>,
+500:           <span class="ruby-value str">'Convert a file to its own syntax.'</span>,
+501:           <span class="ruby-value str">'This can be used to update some deprecated syntax.'</span>) <span class="ruby-keyword kw">do</span>
+502:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>] = <span class="ruby-keyword kw">true</span>
+503:         <span class="ruby-keyword kw">end</span>
+504: 
+505:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--dasherize'</span>, <span class="ruby-value str">'Convert underscores to dashes'</span>) <span class="ruby-keyword kw">do</span>
+506:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_tree</span>][<span class="ruby-value">:dasherize</span>] = <span class="ruby-keyword kw">true</span>
+507:         <span class="ruby-keyword kw">end</span>
+508: 
+509:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--old'</span>, <span class="ruby-value str">'Output the old-style &quot;:prop val&quot; property syntax.'</span>,
+510:                          <span class="ruby-value str">'Only meaningful when generating Sass.'</span>) <span class="ruby-keyword kw">do</span>
+511:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_tree</span>][<span class="ruby-value">:old</span>] = <span class="ruby-keyword kw">true</span>
+512:         <span class="ruby-keyword kw">end</span>
+513: 
+514:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-C'</span>, <span class="ruby-value str">'--no-cache'</span>, <span class="ruby-value str">&quot;Don't cache to sassc files.&quot;</span>) <span class="ruby-keyword kw">do</span>
+515:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_engine</span>][<span class="ruby-value">:read_cache</span>] = <span class="ruby-keyword kw">false</span>
+516:         <span class="ruby-keyword kw">end</span>
+517: 
+518:         <span class="ruby-keyword kw">unless</span> <span class="ruby-operator">::</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">ruby1_8?</span>
+519:           <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-E encoding'</span>, <span class="ruby-value str">'Specify the default encoding for Sass and CSS files.'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">encoding</span><span class="ruby-operator">|</span>
+520:             <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">default_external</span> = <span class="ruby-identifier">encoding</span>
+521:           <span class="ruby-keyword kw">end</span>
+522:         <span class="ruby-keyword kw">end</span>
+523: 
+524:         <span class="ruby-keyword kw">super</span>
+525:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="process-directory-method" class="method-detail ">
+				<a name="method-i-process_directory"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process_directory</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="process-directory-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/exec.rb, line 556</span>
+556:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_directory</span>
+557:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">input</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>] = <span class="ruby-ivar">@args</span>.<span class="ruby-identifier">shift</span>
+558:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error: directory required when using --recursive.&quot;</span>
+559:         <span class="ruby-keyword kw">end</span>
+560: 
+561:         <span class="ruby-identifier">output</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>] = <span class="ruby-ivar">@args</span>.<span class="ruby-identifier">shift</span>
+562:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error: --from required when using --recursive.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>]
+563:         <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error: --to required when using --recursive.&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>]
+564:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error: '#{@options[:input]}' is not a directory&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>])
+565:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>])
+566:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error: '#{@options[:output]}' is not a directory&quot;</span>
+567:         <span class="ruby-keyword kw">end</span>
+568:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">||=</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>]
+569: 
+570:         <span class="ruby-identifier">from</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>]
+571:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>] <span class="ruby-operator">==</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>]
+572:           <span class="ruby-identifier">fmt</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>]
+573:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error: converting from #{fmt} to #{fmt} without --in-place&quot;</span>
+574:         <span class="ruby-keyword kw">end</span>
+575: 
+576:         <span class="ruby-identifier">ext</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>]
+577:         <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-node">&quot;#{@options[:input]}/**/*.#{ext}&quot;</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+578:           <span class="ruby-identifier">output</span> =
+579:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>]
+580:               <span class="ruby-identifier">f</span>
+581:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>]
+582:               <span class="ruby-identifier">output_name</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\.(c|sa|sc|le)ss$/</span>, <span class="ruby-node">&quot;.#{@options[:to]}&quot;</span>)
+583:               <span class="ruby-identifier">output_name</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>].<span class="ruby-identifier">size</span>] = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>]
+584:               <span class="ruby-identifier">output_name</span>
+585:             <span class="ruby-keyword kw">else</span>
+586:               <span class="ruby-identifier">f</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\.(c|sa|sc|le)ss$/</span>, <span class="ruby-node">&quot;.#{@options[:to]}&quot;</span>)
+587:             <span class="ruby-keyword kw">end</span>
+588: 
+589:           <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">output</span>))
+590:             <span class="ruby-identifier">puts_action</span> <span class="ruby-value">:directory</span>, <span class="ruby-value">:green</span>, <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">output</span>)
+591:             <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">output</span>))
+592:           <span class="ruby-keyword kw">end</span>
+593:           <span class="ruby-identifier">puts_action</span> <span class="ruby-value">:convert</span>, <span class="ruby-value">:green</span>, <span class="ruby-identifier">f</span>
+594:           <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">output</span>)
+595:             <span class="ruby-identifier">puts_action</span> <span class="ruby-value">:overwrite</span>, <span class="ruby-value">:yellow</span>, <span class="ruby-identifier">output</span>
+596:           <span class="ruby-keyword kw">else</span>
+597:             <span class="ruby-identifier">puts_action</span> <span class="ruby-value">:create</span>, <span class="ruby-value">:green</span>, <span class="ruby-identifier">output</span>
+598:           <span class="ruby-keyword kw">end</span>
+599: 
+600:           <span class="ruby-identifier">input</span> = <span class="ruby-identifier">open_file</span>(<span class="ruby-identifier">f</span>)
+601:           <span class="ruby-identifier">output</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">input</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">open_file</span>(<span class="ruby-identifier">output</span>, <span class="ruby-value str">&quot;w&quot;</span>)
+602:           <span class="ruby-identifier">process_file</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">output</span>)
+603:         <span class="ruby-keyword kw">end</span>
+604:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="process-file-method" class="method-detail ">
+				<a name="method-i-process_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process_file</span><span
+						class="method-args">(input, output)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="process-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/exec.rb, line 606</span>
+606:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_file</span>(<span class="ruby-identifier">input</span>, <span class="ruby-identifier">output</span>)
+607:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">File</span>)
+608:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] <span class="ruby-operator">||=</span>
+609:             <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">path</span>
+610:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\.scss$/</span>; <span class="ruby-value">:scss</span>
+611:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\.sass$/</span>; <span class="ruby-value">:sass</span>
+612:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\.less$/</span>; <span class="ruby-value">:less</span>
+613:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\.css$/</span>; <span class="ruby-value">:css</span>
+614:             <span class="ruby-keyword kw">end</span>
+615:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>]
+616:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;Error: the --in-place option requires a filename.&quot;</span>
+617:         <span class="ruby-keyword kw">end</span>
+618: 
+619:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">output</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">File</span>)
+620:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>] <span class="ruby-operator">||=</span>
+621:             <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">output</span>.<span class="ruby-identifier">path</span>
+622:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\.scss$/</span>; <span class="ruby-value">:scss</span>
+623:             <span class="ruby-keyword kw">when</span> <span class="ruby-regexp re">/\.sass$/</span>; <span class="ruby-value">:sass</span>
+624:             <span class="ruby-keyword kw">end</span>
+625:         <span class="ruby-keyword kw">end</span>
+626: 
+627:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">:css</span>
+628:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">:sass</span>
+629:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_engine</span>][<span class="ruby-value">:syntax</span>] = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>]
+630: 
+631:         <span class="ruby-identifier">out</span> =
+632:           <span class="ruby-operator">::</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">silence_sass_warnings</span> <span class="ruby-keyword kw">do</span>
+633:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:css</span>
+634:               <span class="ruby-identifier">require</span> <span class="ruby-value str">'sass/css'</span>
+635:               <span class="ruby-operator">::</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">CSS</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input</span>.<span class="ruby-identifier">read</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_tree</span>]).<span class="ruby-identifier">render</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value">:to</span>])
+636:             <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:from</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:less</span>
+637:               <span class="ruby-identifier">require</span> <span class="ruby-value str">'sass/less'</span>
+638:               <span class="ruby-identifier">try_less_note</span>
+639:               <span class="ruby-identifier">input</span> = <span class="ruby-identifier">input</span>.<span class="ruby-identifier">read</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">IO</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">input</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">File</span>) <span class="ruby-comment cmt"># Less is dumb</span>
+640:               <span class="ruby-constant">Less</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input</span>).<span class="ruby-identifier">to_tree</span>.<span class="ruby-identifier">to_sass_tree</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;to_#{@options[:to]}&quot;</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_tree</span>])
+641:             <span class="ruby-keyword kw">else</span>
+642:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">input</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">File</span>)
+643:                 <span class="ruby-operator">::</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span>.<span class="ruby-identifier">for_file</span>(<span class="ruby-identifier">input</span>.<span class="ruby-identifier">path</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_engine</span>])
+644:               <span class="ruby-keyword kw">else</span>
+645:                 <span class="ruby-operator">::</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">input</span>.<span class="ruby-identifier">read</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_engine</span>])
+646:               <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">to_tree</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;to_#{@options[:to]}&quot;</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value">:for_tree</span>])
+647:             <span class="ruby-keyword kw">end</span>
+648:           <span class="ruby-keyword kw">end</span>
+649: 
+650:         <span class="ruby-identifier">output</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">input</span>.<span class="ruby-identifier">path</span>, <span class="ruby-value str">'w'</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:in_place</span>]
+651:         <span class="ruby-identifier">output</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">out</span>)
+652:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-operator">::</span><span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+653:         <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:trace</span>]
+654:         <span class="ruby-identifier">file</span> = <span class="ruby-node">&quot; of #{e.sass_filename}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_filename</span>
+655:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error on line #{e.sass_line}#{file}: #{e.message}\n  Use --trace for backtrace&quot;</span>
+656:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+657:         <span class="ruby-identifier">handle_load_error</span>(<span class="ruby-identifier">err</span>)
+658:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="try-less-note-method" class="method-detail ">
+				<a name="method-i-try_less_note"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_less_note</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="try-less-note-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/exec.rb, line 661</span>
+661:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_less_note</span>
+662:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">@@less_note_printed</span>
+663:         <span class="ruby-identifier">@@less_note_printed</span> = <span class="ruby-keyword kw">true</span>
+664:         <span class="ruby-identifier">warn</span> <span class="ruby-value str">* NOTE: Sass and Less are different languages, and they work differently.* I'll do my best to translate, but some features -- especially mixins --* should be checked by hand.</span>
+665:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

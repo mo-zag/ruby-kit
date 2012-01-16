@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rack::Protection::AuthenticityToken</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rack/protection/authenticity_token_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rack/protection/authenticity_token.rb">lib/rack/protection/authenticity_token.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Base.html">Rack::Protection::Base</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-accepts%3F">#accepts?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Rack.html">Rack</a></li>
+				
+					<li><a href="../../Rack/Protection.html">Rack::Protection</a></li>
+				
+					<li><a href="../../Rack/Protection/AuthenticityToken.html">Rack::Protection::AuthenticityToken</a></li>
+				
+					<li><a href="../../Rack/Protection/Base.html">Rack::Protection::Base</a></li>
+				
+					<li><a href="../../Rack/Protection/EscapedParams.html">Rack::Protection::EscapedParams</a></li>
+				
+					<li><a href="../../Rack/Protection/FormToken.html">Rack::Protection::FormToken</a></li>
+				
+					<li><a href="../../Rack/Protection/FrameOptions.html">Rack::Protection::FrameOptions</a></li>
+				
+					<li><a href="../../Rack/Protection/IPSpoofing.html">Rack::Protection::IPSpoofing</a></li>
+				
+					<li><a href="../../Rack/Protection/JsonCsrf.html">Rack::Protection::JsonCsrf</a></li>
+				
+					<li><a href="../../Rack/Protection/PathTraversal.html">Rack::Protection::PathTraversal</a></li>
+				
+					<li><a href="../../Rack/Protection/RemoteReferrer.html">Rack::Protection::RemoteReferrer</a></li>
+				
+					<li><a href="../../Rack/Protection/RemoteToken.html">Rack::Protection::RemoteToken</a></li>
+				
+					<li><a href="../../Rack/Protection/SessionHijacking.html">Rack::Protection::SessionHijacking</a></li>
+				
+					<li><a href="../../Rack/Protection/VERSION.html">Rack::Protection::VERSION</a></li>
+				
+					<li><a href="../../Rack/Protection/XSSHeader.html">Rack::Protection::XSSHeader</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rack::Protection::AuthenticityToken</h1>
+
+		<div id="description">
+			<table>
+<tr><td valign="top">Prevented attack</td><td><p>
+CSRF
+</p>
+</td></tr>
+<tr><td valign="top">Supported browsers</td><td><p>
+all
+</p>
+</td></tr>
+<tr><td valign="top">More infos</td><td><p>
+<a
+href="http://en.wikipedia.org/wiki/Cross-site_request_forgery">en.wikipedia.org/wiki/Cross-site_request_forgery</a>
+</p>
+</td></tr>
+</table>
+<p>
+Only accepts unsafe HTTP requests if a given access token matches the token
+included in the session.
+</p>
+<p>
+Compatible with Rails and rack-csrf.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="accepts--method" class="method-detail ">
+				<a name="method-i-accepts%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">accepts?</span><span
+						class="method-args">(env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="accepts--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/authenticity_token.rb, line 15</span>
+15:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">accepts?</span>(<span class="ruby-identifier">env</span>)
+16:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">safe?</span> <span class="ruby-identifier">env</span>
+17:         <span class="ruby-identifier">session</span> = <span class="ruby-identifier">session</span> <span class="ruby-identifier">env</span>
+18:         <span class="ruby-identifier">token</span>   = <span class="ruby-identifier">session</span>[<span class="ruby-value">:csrf</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">session</span>[<span class="ruby-value str">'_csrf_token'</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">random_string</span>
+19:         <span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_X_CSRF_TOKEN'</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">token</span> <span class="ruby-keyword kw">or</span>
+20:           <span class="ruby-constant">Request</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">env</span>).<span class="ruby-identifier">params</span>[<span class="ruby-value str">'authenticity_token'</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">token</span>
+21:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

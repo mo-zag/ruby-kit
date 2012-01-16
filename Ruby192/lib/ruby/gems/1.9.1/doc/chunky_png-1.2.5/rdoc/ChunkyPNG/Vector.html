@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: ChunkyPNG::Vector</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/chunky_png/vector_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/vector.rb">lib/chunky_png/vector.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-multiple_from_array">::multiple_from_array</a></li>
+					
+					<li><a href="#method-c-multiple_from_string">::multiple_from_string</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3D%3D">#==</a></li>
+					
+					<li><a href="#method-i-%5B%5D">#[]</a></li>
+					
+					<li><a href="#method-i-dimension">#dimension</a></li>
+					
+					<li><a href="#method-i-each">#each</a></li>
+					
+					<li><a href="#method-i-each_edge">#each_edge</a></li>
+					
+					<li><a href="#method-i-edges">#edges</a></li>
+					
+					<li><a href="#method-i-eql%3F">#eql?</a></li>
+					
+					<li><a href="#method-i-height">#height</a></li>
+					
+					<li><a href="#method-i-length">#length</a></li>
+					
+					<li><a href="#method-i-max_x">#max_x</a></li>
+					
+					<li><a href="#method-i-max_y">#max_y</a></li>
+					
+					<li><a href="#method-i-min_x">#min_x</a></li>
+					
+					<li><a href="#method-i-min_y">#min_y</a></li>
+					
+					<li><a href="#method-i-offset">#offset</a></li>
+					
+					<li><a href="#method-i-width">#width</a></li>
+					
+					<li><a href="#method-i-x_range">#x_range</a></li>
+					
+					<li><a href="#method-i-y_range">#y_range</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="../Enumerable.html">Enumerable</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">ChunkyPNG::Vector</h1>
+
+		<div id="description">
+			<p>
+Class that represents a vector of points, i.e. a list of {ChunkyPNG::Point}
+instances.
+</p>
+<p>
+Vectors can be created quite flexibly. See the {<a
+href="../ChunkyPNG.html">ChunkyPNG</a>.Vector} factory methods for  more
+information on how to construct vectors.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="points-attribute-method" class="method-detail">
+				<a name="points"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">points</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@return [Array<ChunkyPNG::Point>] The array that holds all the points in
+this vector.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="multiple-from-array-method" class="method-detail ">
+				<a name="method-c-multiple_from_array"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">multiple_from_array</span><span
+						class="method-args">(source)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [Array<ChunkyPNG::Point>] The list of points interpreted from the
+input array.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="multiple-from-array-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 168</span>
+168:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">multiple_from_array</span>(<span class="ruby-identifier">source</span>)
+169:       <span class="ruby-keyword kw">return</span> [] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">empty?</span>
+170:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Numeric</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^\d+$/</span>
+171:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;The points array is expected to have an even number of items!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+172: 
+173:         <span class="ruby-identifier">points</span> = []
+174:         <span class="ruby-identifier">source</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-value">2</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span><span class="ruby-operator">|</span> <span class="ruby-identifier">points</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Point</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>) }
+175:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">points</span>
+176:       <span class="ruby-keyword kw">else</span>
+177:         <span class="ruby-identifier">source</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Point</span>(<span class="ruby-identifier">p</span>) }
+178:       <span class="ruby-keyword kw">end</span>
+179:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="multiple-from-string-method" class="method-detail ">
+				<a name="method-c-multiple_from_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">multiple_from_string</span><span
+						class="method-args">(source_str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [Array<ChunkyPNG::Point>] The list of points parsed from the
+string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="multiple-from-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 182</span>
+182:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">multiple_from_string</span>(<span class="ruby-identifier">source_str</span>)
+183:       <span class="ruby-identifier">multiple_from_array</span>(<span class="ruby-identifier">source_str</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/[\(\[\{]?(\d+)\s*[,x]?\s*(\d+)[\)\]\}]?/</span>))
+184:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(points = [])</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes a vector based on a list of <a href="Point.html">Point</a>
+instances.
+</p>
+<p>
+You usually do not want to use this method directly, but call {<a
+href="../ChunkyPNG.html">ChunkyPNG</a>.Vector} instead.
+</p>
+<p>
+@param [Array<ChunkyPNG::Point>] points @see <a
+href="../ChunkyPNG.html">ChunkyPNG</a>.<a href="Vector.html">Vector</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 47</span>
+47:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">points</span> = [])
+48:       <span class="ruby-ivar">@points</span> = <span class="ruby-identifier">points</span>
+49:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail method-alias">
+				<a name="method-i-%3D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">==</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Vector.html#method-i-eql%3F">eql?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%5B%5D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">[]</span><span
+						class="method-args">(index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the point with the given indexof this vector. @param [Integer]
+index The 0-based index of the point in this vector. @param
+[ChunkyPNG::Point] The point instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 70</span>
+70:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">[]</span>(<span class="ruby-identifier">index</span>)
+71:       <span class="ruby-identifier">points</span>[<span class="ruby-identifier">index</span>]
+72:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dimension-method" class="method-detail ">
+				<a name="method-i-dimension"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dimension</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the dimension of the minimal bounding rectangle of the points in
+this vector. @return [ChunkyPNG::Dimension] The dimension instance with the
+width and height 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dimension-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 163</span>
+163:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dimension</span>
+164:       <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Dimension</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+165:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-method" class="method-detail ">
+				<a name="method-i-each"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each</span><span
+						class="method-args">(&block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Iterates over all the points in this vector @yield [ChunkyPNG::Point] The
+points in the correct order. @return [void]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="each-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 92</span>
+92:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+93:       <span class="ruby-identifier">points</span>.<span class="ruby-identifier">each</span>(&amp;<span class="ruby-identifier">block</span>)
+94:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="each-edge-method" class="method-detail ">
+				<a name="method-i-each_edge"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">each_edge</span><span
+						class="method-args">(close = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Iterates over all the edges in this vector.
+</p>
+<p>
+An edge is a combination of two subsequent points in the vector. Together,
+they will form a path from the first point to the last point
+</p>
+<p>
+@param [true, false] close Whether to close the path, i.e. return an edge
+that connects the last
+</p>
+<pre>
+  point in the vector back to the first point.
+</pre>
+<p>
+@return [void] @raise [ChunkyPNG::ExpectationFailed] if the vector contains
+less than two points. @see <a href="Vector.html#method-i-edges">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="each-edge-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_edge</span>(<span class="ruby-identifier">close</span> = <span class="ruby-keyword kw">true</span>)
+62:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">ExpectationFailed</span>, <span class="ruby-value str">&quot;Not enough points in this path to draw an edge!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+63:       <span class="ruby-identifier">points</span>.<span class="ruby-identifier">each_cons</span>(<span class="ruby-value">2</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>) }
+64:       <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">points</span>.<span class="ruby-identifier">last</span>, <span class="ruby-identifier">points</span>.<span class="ruby-identifier">first</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">close</span>
+65:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="edges-method" class="method-detail ">
+				<a name="method-i-edges"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">edges</span><span
+						class="method-args">(close = true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an enumerator that will iterate over all the edges in this vector.
+@param (see <a href="Vector.html#method-i-each_edge">#</a>) @return
+[Enumerator] The enumerator that iterates over the edges. @raise
+[ChunkyPNG::ExpectationFailed] if the vector contains less than two points.
+@see <a href="Vector.html#method-i-each_edge">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="edges-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 79</span>
+79:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">edges</span>(<span class="ruby-identifier">close</span> = <span class="ruby-keyword kw">true</span>)
+80:       <span class="ruby-constant">Enumerator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value">:each_edge</span>, <span class="ruby-identifier">close</span>)
+81:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eql--method" class="method-detail ">
+				<a name="method-i-eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eql?</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Comparison between two vectors for quality. @param [ChunkyPNG::Vector]
+other The vector to compare with. @return [true, false] true if the list of
+points are identical
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="eql--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 99</span>
+ 99:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">other</span>)
+100:       <span class="ruby-identifier">other</span>.<span class="ruby-identifier">points</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">points</span>
+101:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Vector.html#method-i-%3D%3D">==</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="height-method" class="method-detail ">
+				<a name="method-i-height"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">height</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the height of the minimal bounding box of all the points in this
+vector. @return [Integer] The y-distance between the points that are
+farthest from each other.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="height-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 157</span>
+157:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">height</span>
+158:       <span class="ruby-value">1</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">max_y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">min_y</span>)
+159:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="length-method" class="method-detail ">
+				<a name="method-i-length"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">length</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the number of points in this vector. @return [Integer] The length
+of the points array.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="length-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 85</span>
+85:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">length</span>
+86:       <span class="ruby-identifier">points</span>.<span class="ruby-identifier">length</span>
+87:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="max-x-method" class="method-detail ">
+				<a name="method-i-max_x"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">max_x</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Finds the highest x-coordinate in this vector. @return [Integer] The
+highest x-coordinate of all the points in the vector.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="max-x-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 125</span>
+125:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">max_x</span>
+126:       <span class="ruby-identifier">x_range</span>.<span class="ruby-identifier">last</span>
+127:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="max-y-method" class="method-detail ">
+				<a name="method-i-max_y"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">max_y</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Finds the highest y-coordinate in this vector. @return [Integer] The
+highest y-coordinate of all the points in the vector.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="max-y-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 137</span>
+137:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">max_y</span>
+138:       <span class="ruby-identifier">y_range</span>.<span class="ruby-identifier">last</span>
+139:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="min-x-method" class="method-detail ">
+				<a name="method-i-min_x"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">min_x</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Finds the lowest x-coordinate in this vector. @return [Integer] The lowest
+x-coordinate of all the points in the vector.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="min-x-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 119</span>
+119:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">min_x</span>
+120:       <span class="ruby-identifier">x_range</span>.<span class="ruby-identifier">first</span>
+121:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="min-y-method" class="method-detail ">
+				<a name="method-i-min_y"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">min_y</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Finds the lowest y-coordinate in this vector. @return [Integer] The lowest
+y-coordinate of all the points in the vector.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="min-y-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 131</span>
+131:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">min_y</span>
+132:       <span class="ruby-identifier">y_range</span>.<span class="ruby-identifier">first</span>
+133:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="offset-method" class="method-detail ">
+				<a name="method-i-offset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">offset</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the offset from (0,0) of the minimal bounding box of all the points
+in this vector @return [ChunkyPNG::Point] A point that describes the top
+left corner if a
+</p>
+<pre>
+   minimal bounding box would be drawn around all the points in the vector.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="offset-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 145</span>
+145:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">offset</span>
+146:       <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Point</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">min_x</span>, <span class="ruby-identifier">min_y</span>)
+147:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="width-method" class="method-detail ">
+				<a name="method-i-width"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">width</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the width of the minimal bounding box of all the points in this
+vector. @return [Integer] The x-distance between the points that are
+farthest from each other.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="width-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 151</span>
+151:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">width</span>
+152:       <span class="ruby-value">1</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">max_x</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">min_x</span>)
+153:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="x-range-method" class="method-detail ">
+				<a name="method-i-x_range"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">x_range</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the range in x-coordinates for all the points in this vector.
+@return [Range] The (inclusive) range of x-coordinates.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="x-range-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 107</span>
+107:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">x_range</span>
+108:       <span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">points</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">x</span> }.<span class="ruby-identifier">minmax</span>)
+109:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="y-range-method" class="method-detail ">
+				<a name="method-i-y_range"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">y_range</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the range in y-coordinates for all the points in this vector.
+@return [Range] The (inclusive) range of y-coordinates.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="y-range-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/vector.rb, line 113</span>
+113:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">y_range</span>
+114:       <span class="ruby-constant">Range</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">points</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> <span class="ruby-identifier">p</span>.<span class="ruby-identifier">y</span> }.<span class="ruby-identifier">minmax</span>)
+115:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Sass::Version</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sass/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/version.rb">lib/sass/version.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-revision_number">#revision_number</a></li>
+					
+					<li><a href="#method-i-version">#version</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="Util.html">Sass::Util</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sass.html">Sass</a></li>
+				
+					<li><a href="../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../Less.html">Less</a></li>
+				
+					<li><a href="../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Sass::Version</h1>
+
+		<div id="description">
+			<p>
+Handles <a href="../Sass.html">Sass</a> version-reporting. <a
+href="../Sass.html">Sass</a> not only reports the standard three version
+numbers, but its Git revision hash as well, if it was installed from Git.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="version-method" class="method-detail ">
+				<a name="method-i-version"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">version</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a hash representing the version of <a href="../Sass.html">Sass</a>.
+The `:major`, `:minor`, and `:teeny` keys have their respective numbers as
+Fixnums. The `:name` key has the name of the version. The `:string` key
+contains a human-readable string representation of the version. The
+`:number` key is the major, minor, and teeny keys separated by periods. If
+<a href="../Sass.html">Sass</a> is checked out from Git, the `:rev` key
+will have the revision hash. For example:
+</p>
+<pre>
+    {
+      :string =&gt; &quot;2.1.0.9616393&quot;,
+      :rev    =&gt; &quot;9616393b8924ef36639c7e82aa88a51a24d16949&quot;,
+      :number =&gt; &quot;2.1.0&quot;,
+      :major  =&gt; 2, :minor =&gt; 1, :teeny =&gt; 0
+    }
+</pre>
+<p>
+If a prerelease version of <a href="../Sass.html">Sass</a> is being used,
+the `:string` and `:number` fields will reflect the full version (e.g.
+`&#8220;2.2.beta.1&#8220;`), and the `:teeny` field will be `-1`. A
+`:prerelease` key will contain the name of the prerelease (e.g.
+`&#8220;beta&#8221;`), and a `:prerelease_number` key will contain the
+rerelease number. For example:
+</p>
+<pre>
+    {
+      :string =&gt; &quot;3.0.beta.1&quot;,
+      :number =&gt; &quot;3.0.beta.1&quot;,
+      :major =&gt; 3, :minor =&gt; 0, :teeny =&gt; -1,
+      :prerelease =&gt; &quot;beta&quot;,
+      :prerelease_number =&gt; 1
+    }
+</pre>
+<p>
+@return [{Symbol => String/Fixnum}] The version hash
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="version-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/version.rb, line 45</span>
+45:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">version</span>
+46:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">@@version</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-identifier">@@version</span>)
+47: 
+48:       <span class="ruby-identifier">numbers</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">scope</span>(<span class="ruby-value str">'VERSION'</span>)).<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'.'</span>).
+49:         <span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[0-9]+$/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_i</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">n</span>}
+50:       <span class="ruby-identifier">name</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">scope</span>(<span class="ruby-value str">'VERSION_NAME'</span>)).<span class="ruby-identifier">strip</span>
+51:       <span class="ruby-identifier">@@version</span> = {
+52:         <span class="ruby-value">:major</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">numbers</span>[<span class="ruby-value">0</span>],
+53:         <span class="ruby-value">:minor</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">numbers</span>[<span class="ruby-value">1</span>],
+54:         <span class="ruby-value">:teeny</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">numbers</span>[<span class="ruby-value">2</span>],
+55:         <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">name</span>
+56:       }
+57: 
+58:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">numbers</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+59:         <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:teeny</span>] = <span class="ruby-value">1</span>
+60:         <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:prerelease</span>] = <span class="ruby-identifier">numbers</span>[<span class="ruby-value">3</span>]
+61:         <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:prerelease_number</span>] = <span class="ruby-identifier">numbers</span>[<span class="ruby-value">4</span>]
+62:       <span class="ruby-keyword kw">end</span>
+63: 
+64:       <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:number</span>] = <span class="ruby-identifier">numbers</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'.'</span>)
+65:       <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:string</span>] = <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:number</span>].<span class="ruby-identifier">dup</span>
+66: 
+67:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rev</span> = <span class="ruby-identifier">revision_number</span>
+68:         <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:rev</span>] = <span class="ruby-identifier">rev</span>
+69:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rev</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">((</span>
+70:           <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:string</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;.&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">rev</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">7</span>]
+71:         <span class="ruby-keyword kw">end</span>
+72:       <span class="ruby-keyword kw">end</span>
+73: 
+74:       <span class="ruby-identifier">@@version</span>[<span class="ruby-value">:string</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot; (#{name})&quot;</span>
+75:       <span class="ruby-identifier">@@version</span>
+76:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="revision-number-method" class="method-detail ">
+				<a name="method-i-revision_number"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">revision_number</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="revision-number-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/version.rb, line 80</span>
+ 80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">revision_number</span>
+ 81:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">scope</span>(<span class="ruby-value str">'REVISION'</span>))
+ 82:         <span class="ruby-identifier">rev</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">scope</span>(<span class="ruby-value str">'REVISION'</span>)).<span class="ruby-identifier">strip</span>
+ 83:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rev</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rev</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^([a-f0-9]+|\(.*\))$/</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">rev</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'(unknown)'</span>
+ 84:       <span class="ruby-keyword kw">end</span>
+ 85: 
+ 86:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">scope</span>(<span class="ruby-value str">'.git/HEAD'</span>))
+ 87:       <span class="ruby-identifier">rev</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">scope</span>(<span class="ruby-value str">'.git/HEAD'</span>)).<span class="ruby-identifier">strip</span>
+ 88:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rev</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rev</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^ref: (.*)$/</span>
+ 89: 
+ 90:       <span class="ruby-identifier">ref_name</span> = <span class="ruby-node">$1</span>
+ 91:       <span class="ruby-identifier">ref_file</span> = <span class="ruby-identifier">scope</span>(<span class="ruby-node">&quot;.git/#{ref_name}&quot;</span>)
+ 92:       <span class="ruby-identifier">info_file</span> = <span class="ruby-identifier">scope</span>(<span class="ruby-value str">&quot;.git/info/refs&quot;</span>)
+ 93:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">ref_file</span>).<span class="ruby-identifier">strip</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">ref_file</span>)
+ 94:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-identifier">info_file</span>)
+ 95:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">info_file</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+ 96:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span>
+ 97:           <span class="ruby-identifier">sha</span>, <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">l</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\t&quot;</span>, <span class="ruby-value">2</span>)
+ 98:           <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ref</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">ref_name</span>
+ 99:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">sha</span>
+100:         <span class="ruby-keyword kw">end</span>
+101:       <span class="ruby-keyword kw">end</span>
+102:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+103:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

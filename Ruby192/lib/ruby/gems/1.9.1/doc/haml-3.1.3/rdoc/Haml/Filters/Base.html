@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Haml::Filters::Base</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/haml/filters_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/haml/filters.rb">lib/haml/filters.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-included">::included</a></li>
+					
+					<li><a href="#method-i-compile">#compile</a></li>
+					
+					<li><a href="#method-i-internal_compile">#internal_compile</a></li>
+					
+					<li><a href="#method-i-lazy_require">#lazy_require</a></li>
+					
+					<li><a href="#method-i-render">#render</a></li>
+					
+					<li><a href="#method-i-render_with_options">#render_with_options</a></li>
+					
+					<li><a href="#method-i-resolve_lazy_requires">#resolve_lazy_requires</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Haml.html">Haml</a></li>
+				
+					<li><a href="../../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../../Haml/Compiler.html">Haml::Compiler</a></li>
+				
+					<li><a href="../../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../../Haml/Filters/Css.html">Haml::Filters::Css</a></li>
+				
+					<li><a href="../../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../../Haml/HTML/ERB.html">Haml::HTML::ERB</a></li>
+				
+					<li><a href="../../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../../Haml/Parser.html">Haml::Parser</a></li>
+				
+					<li><a href="../../Haml/Parser/Line.html">Haml::Parser::Line</a></li>
+				
+					<li><a href="../../Haml/Parser/ParseNode.html">Haml::Parser::ParseNode</a></li>
+				
+					<li><a href="../../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../../ActionView/Helpers/CacheHelper.html">ActionView::Helpers::CacheHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+					<li><a href="../../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Haml::Filters::Base</h1>
+
+		<div id="description">
+			<p>
+The base module for <a href="../../Haml.html">Haml</a> filters.
+User-defined filters should be modules including this module. The name of
+the filter is taken by downcasing the module name. For instance, if the
+module is named `FooBar`, the filter will be `:foobar`.
+</p>
+<p>
+A user-defined filter should override either {#render} or {#compile}.
+{#render} is the most common. It takes a string, the filter source, and
+returns another string, the result of the filter. For example, the
+following will define a filter named `:sass`:
+</p>
+<pre>
+    module Haml::Filters::Sass
+      include Haml::Filters::Base
+
+      def render(text)
+        ::Sass::Engine.new(text).render
+      end
+    end
+</pre>
+<p>
+For details on overriding {#compile}, see its documentation.
+</p>
+<p>
+Note that filters overriding {#render} automatically support `#{}` for
+interpolating <a href="Ruby.html">Ruby</a> code. Those overriding
+{#compile} will need to add such support manually if it&#8217;s desired.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="included-method" class="method-detail ">
+				<a name="method-c-included"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">included</span><span
+						class="method-args">(base)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method is automatically called when {Base} is included in a module. It
+automatically defines a filter with the downcased name of that module. For
+example, if the module is named `FooBar`, the filter will be `:foobar`.
+</p>
+<p>
+@param base [Module, Class] The module that this is included in
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="included-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 44</span>
+44:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+45:         <span class="ruby-constant">Filters</span>.<span class="ruby-identifier">defined</span>[<span class="ruby-identifier">base</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;::&quot;</span>).<span class="ruby-identifier">last</span>.<span class="ruby-identifier">downcase</span>] = <span class="ruby-identifier">base</span>
+46:         <span class="ruby-identifier">base</span>.<span class="ruby-identifier">extend</span>(<span class="ruby-identifier">base</span>)
+47:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="compile-method" class="method-detail ">
+				<a name="method-i-compile"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">compile</span><span
+						class="method-args">(compiler, text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This should be overridden when a filter needs to have access to the <a
+href="../../Haml.html">Haml</a> evaluation context. Rather than applying a
+filter to a string at compile-time, {#compile} uses the {Haml::Compiler}
+instance to compile the string to <a href="Ruby.html">Ruby</a> code that
+will be executed in the context of the active <a
+href="../../Haml.html">Haml</a> template.
+</p>
+<p>
+Warning: the {Haml::Compiler} interface is neither well-documented nor
+guaranteed to be stable. If you want to make use of it, you&#8217;ll
+probably need to look at the source code and should test your filter when
+upgrading to new <a href="../../Haml.html">Haml</a> versions.
+</p>
+<p>
+@param compiler [Haml::Compiler] The compiler instance @param text [String]
+The text of the filter @raise [Haml::Error] if none of {#compile},
+{#render}, and {#render_with_options} are overridden
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="compile-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 96</span>
+ 96:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">compile</span>(<span class="ruby-identifier">compiler</span>, <span class="ruby-identifier">text</span>)
+ 97:         <span class="ruby-identifier">resolve_lazy_requires</span>
+ 98:         <span class="ruby-identifier">filter</span> = <span class="ruby-keyword kw">self</span>
+ 99:         <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">instance_eval</span> <span class="ruby-keyword kw">do</span>
+100:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">contains_interpolation?</span>(<span class="ruby-identifier">text</span>)
+101:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:suppress_eval</span>]
+102: 
+103:             <span class="ruby-identifier">text</span> = <span class="ruby-identifier">unescape_interpolation</span>(<span class="ruby-identifier">text</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/(\\+)n/</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+104:               <span class="ruby-identifier">escapes</span> = <span class="ruby-node">$1</span>.<span class="ruby-identifier">size</span>
+105:               <span class="ruby-keyword kw">next</span> <span class="ruby-identifier">s</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">escapes</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+106:               (<span class="ruby-value str">&quot;\\&quot;</span> * (<span class="ruby-identifier">escapes</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span>
+107:             <span class="ruby-keyword kw">end</span>
+108:             <span class="ruby-comment cmt"># We need to add a newline at the beginning to get the</span>
+109:             <span class="ruby-comment cmt"># filter lines to line up (since the Haml filter contains</span>
+110:             <span class="ruby-comment cmt"># a line that doesn't show up in the source, namely the</span>
+111:             <span class="ruby-comment cmt"># filter name). Then we need to escape the trailing</span>
+112:             <span class="ruby-comment cmt"># newline so that the whole filter block doesn't take up</span>
+113:             <span class="ruby-comment cmt"># too many.</span>
+114:             <span class="ruby-identifier">text</span> = <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">text</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/\n&quot;\Z/</span>, <span class="ruby-value str">&quot;\\n\&quot;&quot;</span>)
+115:             <span class="ruby-identifier">push_script</span> <span class="ruby-value str">find_and_preserve(#{filter.inspect}.render_with_options(#{text}, _hamlout.options))</span>.<span class="ruby-identifier">rstrip</span>, <span class="ruby-value">:escape_html</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">false</span>
+116:             <span class="ruby-keyword kw">return</span>
+117:           <span class="ruby-keyword kw">end</span>
+118: 
+119:           <span class="ruby-identifier">rendered</span> = <span class="ruby-constant">Haml</span><span class="ruby-operator">::</span><span class="ruby-constant">Helpers</span><span class="ruby-operator">::</span><span class="ruby-identifier">find_and_preserve</span>(<span class="ruby-identifier">filter</span>.<span class="ruby-identifier">render_with_options</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">options</span>), <span class="ruby-identifier">compiler</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:preserve</span>])
+120: 
+121:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>[<span class="ruby-value">:ugly</span>]
+122:             <span class="ruby-identifier">push_text</span>(<span class="ruby-identifier">rendered</span>.<span class="ruby-identifier">rstrip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;\n&quot;</span>, <span class="ruby-node">&quot;\n#{'  ' * @output_tabs}&quot;</span>))
+123:           <span class="ruby-keyword kw">else</span>
+124:             <span class="ruby-identifier">push_text</span>(<span class="ruby-identifier">rendered</span>.<span class="ruby-identifier">rstrip</span>)
+125:           <span class="ruby-keyword kw">end</span>
+126:         <span class="ruby-keyword kw">end</span>
+127:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="internal-compile-method" class="method-detail ">
+				<a name="method-i-internal_compile"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">internal_compile</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as {#compile}, but requires the necessary files first. *This is used
+by {Haml::Engine} and is not intended to be overridden or used elsewhere.*
+</p>
+<p>
+@see <a href="Base.html#method-i-compile">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="internal-compile-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 78</span>
+78:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">internal_compile</span>(*<span class="ruby-identifier">args</span>)
+79:         <span class="ruby-identifier">resolve_lazy_requires</span>
+80:         <span class="ruby-identifier">compile</span>(*<span class="ruby-identifier">args</span>)
+81:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lazy-require-method" class="method-detail ">
+				<a name="method-i-lazy_require"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lazy_require</span><span
+						class="method-args">(*reqs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This becomes a class method of modules that include {Base}. It allows the
+module to specify one or more <a href="Ruby.html">Ruby</a> files that <a
+href="../../Haml.html">Haml</a> should try to require when compiling the
+filter.
+</p>
+<p>
+The first file specified is tried first, then the second, etc. If none are
+found, the compilation throws an exception.
+</p>
+<p>
+For example:
+</p>
+<pre>
+    module Haml::Filters::Markdown
+      lazy_require 'rdiscount', 'peg_markdown', 'maruku', 'bluecloth'
+
+      ...
+    end
+</pre>
+<p>
+@param reqs [Array<String>] The requires to run
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lazy-require-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 147</span>
+147:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lazy_require</span>(*<span class="ruby-identifier">reqs</span>)
+148:         <span class="ruby-ivar">@lazy_requires</span> = <span class="ruby-identifier">reqs</span>
+149:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="render-method" class="method-detail ">
+				<a name="method-i-render"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Takes the source text that should be passed to the filter and returns the
+result of running the filter on that string.
+</p>
+<p>
+This should be overridden in most individual filter modules to render text
+with the given filter. If {#compile} is overridden, however, {#render}
+doesn&#8217;t need to be.
+</p>
+<p>
+@param text [String] The source text for the filter to process @return
+[String] The filtered result @raise [Haml::Error] if it&#8217;s not
+overridden
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="render-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 59</span>
+59:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render</span>(<span class="ruby-identifier">text</span>)
+60:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{self.inspect}#render not defined!&quot;</span>)
+61:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="render-with-options-method" class="method-detail ">
+				<a name="method-i-render_with_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render_with_options</span><span
+						class="method-args">(text, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as {#render}, but takes a {Haml::Engine} options hash as well.
+It&#8217;s only safe to rely on options made available in
+{Haml::Engine#options_for_buffer}.
+</p>
+<p>
+@see <a href="Base.html#method-i-render">#</a> @param text [String] The
+source text for the filter to process @return [String] The filtered result
+@raise [Haml::Error] if it or {#render} isn&#8217;t overridden
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="render-with-options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 70</span>
+70:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_with_options</span>(<span class="ruby-identifier">text</span>, <span class="ruby-identifier">options</span>)
+71:         <span class="ruby-identifier">render</span>(<span class="ruby-identifier">text</span>)
+72:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="resolve-lazy-requires-method" class="method-detail ">
+				<a name="method-i-resolve_lazy_requires"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resolve_lazy_requires</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="resolve-lazy-requires-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/filters.rb, line 153</span>
+153:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resolve_lazy_requires</span>
+154:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@lazy_requires</span>
+155: 
+156:         <span class="ruby-ivar">@lazy_requires</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">req</span><span class="ruby-operator">|</span>
+157:           <span class="ruby-keyword kw">begin</span>
+158:             <span class="ruby-ivar">@required</span> = <span class="ruby-identifier">req</span>
+159:             <span class="ruby-identifier">require</span> <span class="ruby-ivar">@required</span>
+160:             <span class="ruby-keyword kw">return</span>
+161:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>; <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt"># RCov doesn't see this, but it is run</span>
+162:         <span class="ruby-keyword kw">end</span>
+163: 
+164:         <span class="ruby-keyword kw">begin</span>
+165:           <span class="ruby-ivar">@required</span> = <span class="ruby-ivar">@lazy_requires</span>[<span class="ruby-value">1</span>]
+166:           <span class="ruby-identifier">require</span> <span class="ruby-ivar">@required</span>
+167:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+168:           <span class="ruby-identifier">classname</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/\w+$/</span>)[<span class="ruby-value">0</span>]
+169: 
+170:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lazy_requires</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+171:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Can't run #{classname} filter; required file '#{@lazy_requires.first}' not found&quot;</span>)
+172:           <span class="ruby-keyword kw">else</span>
+173:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Can't run #{classname} filter; required #{@lazy_requires.map { |r| &quot;'#{r}'&quot; }.join(' or ')}, but none were found&quot;</span>)
+174:           <span class="ruby-keyword kw">end</span>
+175:         <span class="ruby-keyword kw">end</span>
+176:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Canvas::Resampling</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/chunky_png/canvas/resampling_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/resampling.rb">lib/chunky_png/canvas/resampling.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-resample">#resample</a></li>
+					
+					<li><a href="#method-i-resample_bilinear">#resample_bilinear</a></li>
+					
+					<li><a href="#method-i-resample_bilinear%21">#resample_bilinear!</a></li>
+					
+					<li><a href="#method-i-resample_nearest_neighbor">#resample_nearest_neighbor</a></li>
+					
+					<li><a href="#method-i-resample_nearest_neighbor%21">#resample_nearest_neighbor!</a></li>
+					
+					<li><a href="#method-i-resize">#resize</a></li>
+					
+					<li><a href="#method-i-steps">#steps</a></li>
+					
+					<li><a href="#method-i-steps_residues">#steps_residues</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Canvas::Resampling</h1>
+
+		<div id="description">
+			<p>
+The <a href="Resampling.html">ChunkyPNG::Canvas::Resampling</a> module
+defines methods to perform image resampling to  a {ChunkyPNG::Canvas}.
+</p>
+<p>
+Currently, only the nearest neighbor algorithm is implemented. Bilinear and
+cubic algorithms may be added later on.
+</p>
+<p>
+@see <a href="../Canvas.html">ChunkyPNG::Canvas</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="resample-method" class="method-detail method-alias">
+				<a name="method-i-resample"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resample</span><span
+						class="method-args">(new_width, new_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Resampling.html#method-i-resize">resize</a>
+				</div>
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Resampling.html#method-i-resample_nearest_neighbor">resample_nearest_neighbor</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="resample-bilinear-method" class="method-detail ">
+				<a name="method-i-resample_bilinear"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resample_bilinear</span><span
+						class="method-args">(new_width, new_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="resample-bilinear-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/resampling.rb, line 139</span>
+139:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resample_bilinear</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>)
+140:         <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">resample_bilinear!</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>)
+141:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="resample-bilinear--method" class="method-detail ">
+				<a name="method-i-resample_bilinear%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resample_bilinear!</span><span
+						class="method-args">(new_width, new_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Resamples the canvas with bilinear interpolation. @param [Integer]
+new_width The width of the resampled canvas. @param [Integer] new_height
+The height of the resampled canvas. @return [ChunkyPNG::Canvas] A new
+canvas instance with the resampled pixels.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="resample-bilinear--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/chunky_png/canvas/resampling.rb, line 103</span>
+103:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resample_bilinear!</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>)
+104:         <span class="ruby-identifier">index_x</span>, <span class="ruby-identifier">interp_x</span> = <span class="ruby-identifier">steps_residues</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">new_width</span>)
+105:         <span class="ruby-identifier">index_y</span>, <span class="ruby-identifier">interp_y</span> = <span class="ruby-identifier">steps_residues</span>(<span class="ruby-identifier">height</span>, <span class="ruby-identifier">new_height</span>)
+106: 
+107:         <span class="ruby-identifier">pixels</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">size</span>=<span class="ruby-identifier">new_width</span>*<span class="ruby-identifier">new_height</span>)
+108:         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+109:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">new_height</span>
+110:           <span class="ruby-comment cmt"># Clamp the indicies to the edges of the image</span>
+111:           <span class="ruby-identifier">y1</span> = [<span class="ruby-identifier">index_y</span>[<span class="ruby-identifier">y</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>], <span class="ruby-value">0</span>].<span class="ruby-identifier">max</span>
+112:           <span class="ruby-identifier">y2</span> = [<span class="ruby-identifier">index_y</span>[<span class="ruby-identifier">y</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">min</span>
+113:           <span class="ruby-identifier">y_residue</span> = <span class="ruby-identifier">interp_y</span>[<span class="ruby-identifier">y</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>]
+114: 
+115:           <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">new_width</span>
+116:             <span class="ruby-comment cmt"># Clamp the indicies to the edges of the image</span>
+117:             <span class="ruby-identifier">x1</span> = [<span class="ruby-identifier">index_x</span>[<span class="ruby-identifier">x</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>], <span class="ruby-value">0</span>].<span class="ruby-identifier">max</span>
+118:             <span class="ruby-identifier">x2</span> = [<span class="ruby-identifier">index_x</span>[<span class="ruby-identifier">x</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">min</span>
+119:             <span class="ruby-identifier">x_residue</span> = <span class="ruby-identifier">interp_x</span>[<span class="ruby-identifier">x</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>]
+120: 
+121:             <span class="ruby-identifier">pixel_11</span> = <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>)
+122:             <span class="ruby-identifier">pixel_21</span> = <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y1</span>)
+123:             <span class="ruby-identifier">pixel_12</span> = <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y2</span>)
+124:             <span class="ruby-identifier">pixel_22</span> = <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+125: 
+126:             <span class="ruby-comment cmt"># Interpolate by Row</span>
+127:             <span class="ruby-identifier">pixel_top</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">interpolate_quick</span>(<span class="ruby-identifier">pixel_21</span>, <span class="ruby-identifier">pixel_11</span>, <span class="ruby-identifier">x_residue</span>)
+128:             <span class="ruby-identifier">pixel_bot</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">interpolate_quick</span>(<span class="ruby-identifier">pixel_22</span>, <span class="ruby-identifier">pixel_12</span>, <span class="ruby-identifier">x_residue</span>)
+129: 
+130:             <span class="ruby-comment cmt"># Interpolate by Column</span>
+131: 
+132:             <span class="ruby-identifier">pixels</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>.<span class="ruby-identifier">interpolate_quick</span>(<span class="ruby-identifier">pixel_bot</span>, <span class="ruby-identifier">pixel_top</span>, <span class="ruby-identifier">y_residue</span>)
+133:             <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+134:           <span class="ruby-keyword kw">end</span>
+135:         <span class="ruby-keyword kw">end</span>
+136:         <span class="ruby-identifier">replace_canvas!</span>(<span class="ruby-identifier">new_width</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">new_height</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">pixels</span>)
+137:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="resample-nearest-neighbor-method" class="method-detail ">
+				<a name="method-i-resample_nearest_neighbor"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resample_nearest_neighbor</span><span
+						class="method-args">(new_width, new_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="resample-nearest-neighbor-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/resampling.rb, line 95</span>
+95:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resample_nearest_neighbor</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>)
+96:         <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">resample_nearest_neighbor!</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>)
+97:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Resampling.html#method-i-resample">resample</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="resample-nearest-neighbor--method" class="method-detail ">
+				<a name="method-i-resample_nearest_neighbor%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resample_nearest_neighbor!</span><span
+						class="method-args">(new_width, new_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Resamples the canvas using nearest neighbor interpolation. @param [Integer]
+new_width The width of the resampled canvas. @param [Integer] new_height
+The height of the resampled canvas. @return [ChunkyPNG::Canvas] A new
+canvas instance with the resampled pixels.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="resample-nearest-neighbor--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/resampling.rb, line 78</span>
+78:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">resample_nearest_neighbor!</span>(<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">new_height</span>)
+79:         <span class="ruby-identifier">steps_x</span> = <span class="ruby-identifier">steps</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">new_width</span>)
+80:         <span class="ruby-identifier">steps_y</span> = <span class="ruby-identifier">steps</span>(<span class="ruby-identifier">height</span>, <span class="ruby-identifier">new_height</span>)
+81: 
+82: 
+83:         <span class="ruby-identifier">pixels</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">size</span>=<span class="ruby-identifier">new_width</span>*<span class="ruby-identifier">new_height</span>)
+84:         <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+85:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">steps_y</span>
+86:           <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">steps_x</span>
+87:             <span class="ruby-identifier">pixels</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">get_pixel</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+88:             <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+89:           <span class="ruby-keyword kw">end</span>
+90:         <span class="ruby-keyword kw">end</span>
+91:         
+92:         <span class="ruby-identifier">replace_canvas!</span>(<span class="ruby-identifier">new_width</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">new_height</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">pixels</span>)
+93:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="resize-method" class="method-detail method-alias">
+				<a name="method-i-resize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">resize</span><span
+						class="method-args">(new_width, new_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Resampling.html#method-i-resample">resample</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="steps-method" class="method-detail ">
+				<a name="method-i-steps"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">steps</span><span
+						class="method-args">(width, new_width)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Integer Interpolation between two values
+</p>
+<p>
+Used for generating indicies for interpolation (eg, nearest neighbour).
+</p>
+<p>
+@param [Integer] width The width of the source  @param [Integer] new_width
+The width of the destination @return [Array<Integer>] An Array of Integer
+indicies
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="steps-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/resampling.rb, line 24</span>
+24:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">steps</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">new_width</span>)
+25:         <span class="ruby-identifier">indicies</span>, <span class="ruby-identifier">residues</span> = <span class="ruby-identifier">steps_residues</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">new_width</span>)
+26:         
+27:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">new_width</span>
+28:           <span class="ruby-identifier">indicies</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] = (<span class="ruby-identifier">indicies</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">+</span> (<span class="ruby-identifier">residues</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">+</span> <span class="ruby-value">127</span>)<span class="ruby-operator">/</span><span class="ruby-value">255</span>)
+29:         <span class="ruby-keyword kw">end</span>
+30:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">indicies</span>
+31:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="steps-residues-method" class="method-detail ">
+				<a name="method-i-steps_residues"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">steps_residues</span><span
+						class="method-args">(width, new_width)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Fractional Interpolation between two values
+</p>
+<p>
+Used for generating values for interpolation (eg, bilinear). Produces both
+the indices and the interpolation factors (residues).
+</p>
+<p>
+@param [Integer] width The width of the source @param [Integer] new_width
+The width of the destination @return [Array<Integer>, Array<Integer>] Two
+arrays of indicies and residues
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="steps-residues-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/resampling.rb, line 41</span>
+41:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">steps_residues</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">new_width</span>)
+42:         <span class="ruby-identifier">indicies</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span>=<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">obj</span>=<span class="ruby-keyword kw">nil</span>)
+43:         <span class="ruby-identifier">residues</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">size</span>=<span class="ruby-identifier">new_width</span>, <span class="ruby-identifier">obj</span>=<span class="ruby-keyword kw">nil</span>)
+44:         
+45:         <span class="ruby-comment cmt"># This works by accumulating the fractional error and</span>
+46:         <span class="ruby-comment cmt"># overflowing when necessary.</span>
+47: 
+48:         <span class="ruby-comment cmt"># We use mixed number arithmetic with a denominator of</span>
+49:         <span class="ruby-comment cmt"># 2 * new_width</span>
+50:         <span class="ruby-identifier">base_step</span> = <span class="ruby-identifier">width</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">new_width</span>
+51:         <span class="ruby-identifier">err_step</span> = (<span class="ruby-identifier">width</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">new_width</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">1</span>
+52:         <span class="ruby-identifier">denominator</span> = (<span class="ruby-identifier">new_width</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">1</span>
+53:                 
+54:         <span class="ruby-comment cmt"># Initial pixel</span>
+55:         <span class="ruby-identifier">index</span> = (<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">new_width</span>) <span class="ruby-operator">/</span> <span class="ruby-identifier">denominator</span>
+56:         <span class="ruby-identifier">err</span> = (<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">new_width</span>) <span class="ruby-operator">%</span> <span class="ruby-identifier">denominator</span>
+57: 
+58:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">new_width</span>
+59:           <span class="ruby-identifier">indicies</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] = <span class="ruby-identifier">index</span>
+60:           <span class="ruby-identifier">residues</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] = (<span class="ruby-value">255.0</span> * <span class="ruby-identifier">err</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">denominator</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">round</span>
+61: 
+62:           <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">base_step</span>
+63:           <span class="ruby-identifier">err</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">err_step</span>
+64:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">err</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">denominator</span>
+65:             <span class="ruby-identifier">index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+66:             <span class="ruby-identifier">err</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">denominator</span>
+67:           <span class="ruby-keyword kw">end</span>
+68:         <span class="ruby-keyword kw">end</span>
+69: 
+70:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">indicies</span>, <span class="ruby-identifier">residues</span>
+71:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

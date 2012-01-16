@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Haml::Exec::Generic</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/haml/exec_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/haml/exec.rb">lib/haml/exec.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-get_line">#get_line</a></li>
+					
+					<li><a href="#method-i-open_file">#open_file</a></li>
+					
+					<li><a href="#method-i-parse%21">#parse!</a></li>
+					
+					<li><a href="#method-i-process_result">#process_result</a></li>
+					
+					<li><a href="#method-i-set_opts">#set_opts</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CONTRIBUTING.html">CONTRIBUTING</a></li>
+				
+					<li class="file"><a href="../../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../../REMEMBER.html">REMEMBER</a></li>
+				
+					<li class="file"><a href="../../REVISION.html">REVISION</a></li>
+				
+					<li class="file"><a href="../../VERSION.html">VERSION</a></li>
+				
+					<li class="file"><a href="../../VERSION_NAME.html">VERSION_NAME</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Haml.html">Haml</a></li>
+				
+					<li><a href="../../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../../Haml/Exec/CSS2Sass.html">Haml::Exec::CSS2Sass</a></li>
+				
+					<li><a href="../../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/HamlSass.html">Haml::Exec::HamlSass</a></li>
+				
+					<li><a href="../../Haml/Exec/Sass.html">Haml::Exec::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../../Haml/HTML/Node.html">Haml::HTML::Node</a></li>
+				
+					<li><a href="../../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../../Haml/Precompiler.html">Haml::Precompiler</a></li>
+				
+					<li><a href="../../Haml/Precompiler/Line.html">Haml::Precompiler::Line</a></li>
+				
+					<li><a href="../../Haml/Railtie.html">Haml::Railtie</a></li>
+				
+					<li><a href="../../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../../Haml/Util/StaticConditionalContext.html">Haml::Util::StaticConditionalContext</a></li>
+				
+					<li><a href="../../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Files.html">Sass::Files</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../../Hpricot/BaseEle.html">Hpricot::BaseEle</a></li>
+				
+					<li><a href="../../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../../Merb.html">Merb</a></li>
+				
+					<li><a href="../../Merb/Rack.html">Merb::Rack</a></li>
+				
+					<li><a href="../../Merb/Rack/Application.html">Merb::Rack::Application</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../MerbHandler.html">MerbHandler</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Haml::Exec::Generic</h1>
+
+		<div id="description">
+			<p>
+An abstract class that encapsulates the executable code for all three
+executables.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@param args [Array<String>] The command-line arguments
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 11</span>
+11:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">args</span>)
+12:         <span class="ruby-ivar">@args</span> = <span class="ruby-identifier">args</span>
+13:         <span class="ruby-ivar">@options</span> = {}
+14:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="parse--method" class="method-detail ">
+				<a name="method-i-parse%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses the command-line arguments and runs the executable. Calls
+`Kernel#exit` at the end, so it never returns.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 18</span>
+18:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse!</span>
+19:         <span class="ruby-keyword kw">begin</span>
+20:           <span class="ruby-ivar">@opts</span> = <span class="ruby-constant">OptionParser</span>.<span class="ruby-identifier">new</span>(&amp;<span class="ruby-identifier">method</span>(<span class="ruby-value">:set_opts</span>))
+21:           <span class="ruby-ivar">@opts</span>.<span class="ruby-identifier">parse!</span>(<span class="ruby-ivar">@args</span>)
+22: 
+23:           <span class="ruby-identifier">process_result</span>
+24: 
+25:           <span class="ruby-ivar">@options</span>
+26:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+27:           <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:trace</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">SystemExit</span>)
+28: 
+29:           <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>
+30:           <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+31:         <span class="ruby-keyword kw">end</span>
+32:         <span class="ruby-identifier">exit</span> <span class="ruby-value">0</span>
+33:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [String] A description of the executable
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 36</span>
+36:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+37:         <span class="ruby-ivar">@opts</span>.<span class="ruby-identifier">to_s</span>
+38:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="get-line-method" class="method-detail ">
+				<a name="method-i-get_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_line</span><span
+						class="method-args">(exception)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Finds the line of the source template on which an exception was raised.
+</p>
+<p>
+@param exception [Exception] The exception @return [String] The line number
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-line-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 47</span>
+47:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_line</span>(<span class="ruby-identifier">exception</span>)
+48:         <span class="ruby-comment cmt"># SyntaxErrors have weird line reporting</span>
+49:         <span class="ruby-comment cmt"># when there's trailing whitespace,</span>
+50:         <span class="ruby-comment cmt"># which there is for Haml documents.</span>
+51:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">message</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/:(\d+)/</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>)
+52:         <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">backtrace</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/:(\d+)/</span>).<span class="ruby-identifier">first</span>.<span class="ruby-identifier">first</span>
+53:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="process-result-method" class="method-detail ">
+				<a name="method-i-process_result"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">process_result</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Processes the options set by the command-line arguments. In particular,
+sets `@options[:input]` and `@options[:output]` to appropriate IO streams.
+</p>
+<p>
+This is meant to be overridden by subclasses so they can run their
+respective programs.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="process-result-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 94</span>
+ 94:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">process_result</span>
+ 95:         <span class="ruby-identifier">input</span>, <span class="ruby-identifier">output</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>]
+ 96:         <span class="ruby-identifier">input_file</span>, <span class="ruby-identifier">output_file</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">input</span>
+ 97:                                     [<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">open_file</span>(<span class="ruby-ivar">@args</span>[<span class="ruby-value">0</span>], <span class="ruby-value str">'w'</span>)]
+ 98:                                   <span class="ruby-keyword kw">else</span>
+ 99:                                     <span class="ruby-ivar">@options</span>[<span class="ruby-value">:filename</span>] = <span class="ruby-ivar">@args</span>[<span class="ruby-value">0</span>]
+100:                                     [<span class="ruby-identifier">open_file</span>(<span class="ruby-ivar">@args</span>[<span class="ruby-value">0</span>]), <span class="ruby-identifier">open_file</span>(<span class="ruby-ivar">@args</span>[<span class="ruby-value">1</span>], <span class="ruby-value str">'w'</span>)]
+101:                                   <span class="ruby-keyword kw">end</span>
+102: 
+103:         <span class="ruby-identifier">input</span>  <span class="ruby-operator">||=</span> <span class="ruby-identifier">input_file</span>
+104:         <span class="ruby-identifier">output</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">output_file</span>
+105:         <span class="ruby-identifier">input</span>  <span class="ruby-operator">||=</span> <span class="ruby-identifier">$stdin</span>
+106:         <span class="ruby-identifier">output</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">$stdout</span>
+107: 
+108:         <span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>], <span class="ruby-ivar">@options</span>[<span class="ruby-value">:output</span>] = <span class="ruby-identifier">input</span>, <span class="ruby-identifier">output</span>
+109:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-opts-method" class="method-detail ">
+				<a name="method-i-set_opts"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_opts</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tells optparse how to parse the arguments available for all executables.
+</p>
+<p>
+This is meant to be overridden by subclasses so they can add their own
+options.
+</p>
+<p>
+@param opts [OptionParser]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-opts-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 62</span>
+62:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_opts</span>(<span class="ruby-identifier">opts</span>)
+63:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'-s'</span>, <span class="ruby-value str">'--stdin'</span>, <span class="ruby-value">:NONE</span>, <span class="ruby-value str">'Read input from standard input instead of an input file'</span>) <span class="ruby-keyword kw">do</span>
+64:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:input</span>] = <span class="ruby-identifier">$stdin</span>
+65:         <span class="ruby-keyword kw">end</span>
+66: 
+67:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--trace'</span>, <span class="ruby-value">:NONE</span>, <span class="ruby-value str">'Show a full traceback on error'</span>) <span class="ruby-keyword kw">do</span>
+68:           <span class="ruby-ivar">@options</span>[<span class="ruby-value">:trace</span>] = <span class="ruby-keyword kw">true</span>
+69:         <span class="ruby-keyword kw">end</span>
+70: 
+71:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RbConfig</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'host_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/mswin|windows/</span>
+72:           <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on</span>(<span class="ruby-value str">'--unix-newlines'</span>, <span class="ruby-value str">'Use Unix-style newlines in written files.'</span>) <span class="ruby-keyword kw">do</span>
+73:             <span class="ruby-ivar">@options</span>[<span class="ruby-value">:unix_newlines</span>] = <span class="ruby-keyword kw">true</span>
+74:           <span class="ruby-keyword kw">end</span>
+75:         <span class="ruby-keyword kw">end</span>
+76: 
+77:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on_tail</span>(<span class="ruby-value str">&quot;-?&quot;</span>, <span class="ruby-value str">&quot;-h&quot;</span>, <span class="ruby-value str">&quot;--help&quot;</span>, <span class="ruby-value str">&quot;Show this message&quot;</span>) <span class="ruby-keyword kw">do</span>
+78:           <span class="ruby-identifier">puts</span> <span class="ruby-identifier">opts</span>
+79:           <span class="ruby-identifier">exit</span>
+80:         <span class="ruby-keyword kw">end</span>
+81: 
+82:         <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">on_tail</span>(<span class="ruby-value str">&quot;-v&quot;</span>, <span class="ruby-value str">&quot;--version&quot;</span>, <span class="ruby-value str">&quot;Print version&quot;</span>) <span class="ruby-keyword kw">do</span>
+83:           <span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Haml/Sass #{::Haml.version[:string]}&quot;</span>)
+84:           <span class="ruby-identifier">exit</span>
+85:         <span class="ruby-keyword kw">end</span>
+86:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="open-file-method" class="method-detail ">
+				<a name="method-i-open_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">open_file</span><span
+						class="method-args">(filename, flag = 'r')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="open-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/exec.rb, line 113</span>
+113:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">open_file</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">flag</span> = <span class="ruby-value str">'r'</span>)
+114:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filename</span>.<span class="ruby-identifier">nil?</span>
+115:         <span class="ruby-identifier">flag</span> = <span class="ruby-value str">'wb'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value">:unix_newlines</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'w'</span>
+116:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">flag</span>)
+117:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

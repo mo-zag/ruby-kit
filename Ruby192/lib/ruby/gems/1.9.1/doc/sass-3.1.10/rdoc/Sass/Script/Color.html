@@ -1,0 +1,1883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::Script::Color</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sass/script/color_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/script/color.rb">lib/sass/script/color.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Literal.html">Sass::Script::Literal</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-alpha">#alpha</a></li>
+					
+					<li><a href="#method-i-alpha%3F">#alpha?</a></li>
+					
+					<li><a href="#method-i-blue">#blue</a></li>
+					
+					<li><a href="#method-i-div">#div</a></li>
+					
+					<li><a href="#method-i-eq">#eq</a></li>
+					
+					<li><a href="#method-i-green">#green</a></li>
+					
+					<li><a href="#method-i-hex_str">#hex_str</a></li>
+					
+					<li><a href="#method-i-hsl">#hsl</a></li>
+					
+					<li><a href="#method-i-hsl_to_rgb%21">#hsl_to_rgb!</a></li>
+					
+					<li><a href="#method-i-hue">#hue</a></li>
+					
+					<li><a href="#method-i-hue_to_rgb">#hue_to_rgb</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-lightness">#lightness</a></li>
+					
+					<li><a href="#method-i-minus">#minus</a></li>
+					
+					<li><a href="#method-i-mod">#mod</a></li>
+					
+					<li><a href="#method-i-piecewise">#piecewise</a></li>
+					
+					<li><a href="#method-i-plus">#plus</a></li>
+					
+					<li><a href="#method-i-red">#red</a></li>
+					
+					<li><a href="#method-i-rgb">#rgb</a></li>
+					
+					<li><a href="#method-i-rgb_to_hsl%21">#rgb_to_hsl!</a></li>
+					
+					<li><a href="#method-i-rgba_str">#rgba_str</a></li>
+					
+					<li><a href="#method-i-saturation">#saturation</a></li>
+					
+					<li><a href="#method-i-smallest">#smallest</a></li>
+					
+					<li><a href="#method-i-times">#times</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+					<li><a href="#method-i-to_sass">#to_sass</a></li>
+					
+					<li><a href="#method-i-with">#with</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="../Util.html">Sass::Util</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../../Less.html">Less</a></li>
+				
+					<li><a href="../../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+					<li><a href="../../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::Script::Color</h1>
+
+		<div id="description">
+			<p>
+A SassScript object representing a <a href="../CSS.html">CSS</a> color.
+</p>
+<p>
+A color may be represented internally as RGBA, HSLA, or both. It&#8217;s
+originally represented as whatever its input is; if it&#8217;s created with
+RGB values, it&#8217;s represented as RGBA, and if it&#8217;s created with
+HSL values, it&#8217;s represented as HSLA. Once a property is accessed
+that requires the other representation &#8212; for example, {#red} for an
+HSL color &#8212; that component is calculated and cached.
+</p>
+<p>
+The alpha channel of a color is independent of its RGB or HSL
+representation. It&#8217;s always stored, as 1 if nothing else is
+specified. If only the alpha channel is modified using {#with}, the cached
+RGB and HSL values are retained.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="HTML4_COLORS">HTML4_COLORS</a></dt>
+				
+				<dd class="description"><p>
+A hash from color names to `[red, green, blue]` value arrays.
+</p></dd>
+				
+			
+				<dt><a name="HTML4_COLORS_REVERSE">HTML4_COLORS_REVERSE</a></dt>
+				
+				<dd class="description"><p>
+A hash from `[red, green, blue]` value arrays to color names.
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(attrs, allow_both_rgb_and_hsl = false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Constructs an RGB or HSL color object, optionally with an alpha channel.
+</p>
+<p>
+The RGB values must be between 0 and 255. The saturation and lightness
+values must be between 0 and 100. The alpha value must be between 0 and 1.
+</p>
+<p>
+@raise [Sass::SyntaxError] if any color value isn&#8217;t in the specified
+range
+</p>
+<p>
+@overload initialize(attrs)
+</p>
+<pre>
+  The attributes are specified as a hash.
+  This hash must contain either `:hue`, `:saturation`, and `:value` keys,
+  or `:red`, `:green`, and `:blue` keys.
+  It cannot contain both HSL and RGB keys.
+  It may also optionally contain an `:alpha` key.
+
+  @param attrs [{Symbol =&gt; Numeric}] A hash of color attributes to values
+  @raise [ArgumentError] if not enough attributes are specified,
+    or both RGB and HSL attributes are specified
+</pre>
+<p>
+@overload initialize(rgba)
+</p>
+<pre>
+  The attributes are specified as an array.
+  This overload only supports RGB or RGBA colors.
+
+  @param rgba [Array&lt;Numeric&gt;] A three- or four-element array
+    of the red, green, blue, and optionally alpha values (respectively)
+    of the color
+  @raise [ArgumentError] if not enough attributes are specified</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 71</span>
+ 71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">attrs</span>, <span class="ruby-identifier">allow_both_rgb_and_hsl</span> = <span class="ruby-keyword kw">false</span>)
+ 72:       <span class="ruby-keyword kw">super</span>(<span class="ruby-keyword kw">nil</span>)
+ 73: 
+ 74:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+ 75:         <span class="ruby-keyword kw">unless</span> (<span class="ruby-value">3</span><span class="ruby-operator">..</span><span class="ruby-value">4</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">size</span>)
+ 76:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color.new(array) expects a three- or four-element array&quot;</span>)
+ 77:         <span class="ruby-keyword kw">end</span>
+ 78: 
+ 79:         <span class="ruby-identifier">red</span>, <span class="ruby-identifier">green</span>, <span class="ruby-identifier">blue</span> = <span class="ruby-identifier">attrs</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">3</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">to_i</span>}
+ 80:         <span class="ruby-ivar">@attrs</span> = {<span class="ruby-value">:red</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">red</span>, <span class="ruby-value">:green</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">green</span>, <span class="ruby-value">:blue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">blue</span>}
+ 81:         <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:alpha</span>] = <span class="ruby-identifier">attrs</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">attrs</span>[<span class="ruby-value">3</span>].<span class="ruby-identifier">to_f</span> <span class="ruby-operator">:</span> <span class="ruby-value">1</span>
+ 82:       <span class="ruby-keyword kw">else</span>
+ 83:         <span class="ruby-identifier">attrs</span> = <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>}
+ 84:         <span class="ruby-identifier">hsl</span> = [<span class="ruby-value">:hue</span>, <span class="ruby-value">:saturation</span>, <span class="ruby-value">:lightness</span>] &amp; <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">keys</span>
+ 85:         <span class="ruby-identifier">rgb</span> = [<span class="ruby-value">:red</span>, <span class="ruby-value">:green</span>, <span class="ruby-value">:blue</span>] &amp; <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">keys</span>
+ 86:         <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">allow_both_rgb_and_hsl</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">hsl</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">empty?</span>
+ 87:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color.new(hash) may not have both HSL and RGB keys specified&quot;</span>)
+ 88:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">hsl</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">empty?</span>
+ 89:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color.new(hash) must have either HSL or RGB keys specified&quot;</span>)
+ 90:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">hsl</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">hsl</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">3</span>
+ 91:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color.new(hash) must have all three HSL values specified&quot;</span>)
+ 92:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span><span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">3</span>
+ 93:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Color.new(hash) must have all three RGB values specified&quot;</span>)
+ 94:         <span class="ruby-keyword kw">end</span>
+ 95: 
+ 96:         <span class="ruby-ivar">@attrs</span> = <span class="ruby-identifier">attrs</span>
+ 97:         <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:hue</span>] <span class="ruby-operator">=</span> <span class="ruby-value">360</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:hue</span>]
+ 98:         <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:alpha</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">1</span>
+ 99:       <span class="ruby-keyword kw">end</span>
+100: 
+101:       [<span class="ruby-value">:red</span>, <span class="ruby-value">:green</span>, <span class="ruby-value">:blue</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+102:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">nil?</span>
+103:         <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">to_i</span>
+104:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">255</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>])
+105:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{k.to_s.capitalize} value must be between 0 and 255&quot;</span>)
+106:       <span class="ruby-keyword kw">end</span>
+107: 
+108:       [<span class="ruby-value">:saturation</span>, <span class="ruby-value">:lightness</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span>
+109:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>].<span class="ruby-identifier">nil?</span>
+110:         <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-value">0.00001</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.00001</span>
+111:         <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-value">100</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">-</span> <span class="ruby-value">100</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0.00001</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">-</span> <span class="ruby-value">100</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0.00001</span>
+112:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">100</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>])
+113:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{k.to_s.capitalize} must be between 0 and 100&quot;</span>)
+114:       <span class="ruby-keyword kw">end</span>
+115: 
+116:       <span class="ruby-keyword kw">unless</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:alpha</span>])
+117:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Alpha channel must be between 0 and 1&quot;</span>)
+118:       <span class="ruby-keyword kw">end</span>
+119:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="alpha-method" class="method-detail ">
+				<a name="method-i-alpha"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alpha</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The alpha channel (opacity) of the color. This is 1 unless otherwise
+defined.
+</p>
+<p>
+@return [Fixnum]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="alpha-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 173</span>
+173:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alpha</span>
+174:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:alpha</span>]
+175:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="alpha--method" class="method-detail ">
+				<a name="method-i-alpha%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">alpha?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns whether this color object is translucent; that is, whether the
+alpha channel is non-1.
+</p>
+<p>
+@return [Boolean]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="alpha--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 181</span>
+181:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">alpha?</span>
+182:       <span class="ruby-identifier">alpha</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
+183:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="blue-method" class="method-detail ">
+				<a name="method-i-blue"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">blue</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The blue component of the color.
+</p>
+<p>
+@return [Fixnum]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="blue-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blue</span>
+141:       <span class="ruby-identifier">hsl_to_rgb!</span>
+142:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:blue</span>]
+143:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="div-method" class="method-detail ">
+				<a name="method-i-div"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">div</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `/` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Divides each of the RGB color channels by the number.
+</p>
+<p>
+{Color} : Divides each of this color&#8217;s RGB color channels by the
+other color&#8217;s.
+</p>
+<p>
+{Literal} : See {<a href="Literal.html#method-i-div">Literal#div</a>}.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Color]
+The resulting color @raise [Sass::SyntaxError] if `other` is a number with
+units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="div-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 335</span>
+335:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">div</span>(<span class="ruby-identifier">other</span>)
+336:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+337:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:/</span>)
+338:       <span class="ruby-keyword kw">else</span>
+339:         <span class="ruby-keyword kw">super</span>
+340:       <span class="ruby-keyword kw">end</span>
+341:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eq-method" class="method-detail ">
+				<a name="method-i-eq"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eq</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `==` operation. **Note that this returns a
+{Sass::Script::Bool} object, not a Ruby boolean**.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Bool]
+True if this literal is the same as the other,
+</p>
+<pre>
+  false otherwise</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="eq-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 208</span>
+208:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">eq</span>(<span class="ruby-identifier">other</span>)
+209:       <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Bool</span>.<span class="ruby-identifier">new</span>(
+210:         <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Color</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rgb</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">rgb</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">alpha</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">alpha</span>)
+211:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="green-method" class="method-detail ">
+				<a name="method-i-green"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">green</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The green component of the color.
+</p>
+<p>
+@return [Fixnum]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="green-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 132</span>
+132:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">green</span>
+133:       <span class="ruby-identifier">hsl_to_rgb!</span>
+134:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:green</span>]
+135:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hsl-method" class="method-detail ">
+				<a name="method-i-hsl"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hsl</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the hue, saturation, and lightness components of the color.
+</p>
+<p>
+@return [Array<Fixnum>] A frozen three-element array of the
+</p>
+<pre>
+  hue, saturation, and lightness values (respectively) of the color</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="hsl-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 197</span>
+197:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hsl</span>
+198:       [<span class="ruby-identifier">hue</span>, <span class="ruby-identifier">saturation</span>, <span class="ruby-identifier">lightness</span>].<span class="ruby-identifier">freeze</span>
+199:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hue-method" class="method-detail ">
+				<a name="method-i-hue"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hue</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The hue component of the color.
+</p>
+<p>
+@return [Numeric]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="hue-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 148</span>
+148:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hue</span>
+149:       <span class="ruby-identifier">rgb_to_hsl!</span>
+150:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:hue</span>]
+151:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a string representation of the color.
+</p>
+<p>
+@return [String] The hex value
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 379</span>
+379:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+380:       <span class="ruby-identifier">alpha?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">rgba_str</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">hex_str</span>
+381:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lightness-method" class="method-detail ">
+				<a name="method-i-lightness"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lightness</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The lightness component of the color.
+</p>
+<p>
+@return [Numeric]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lightness-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 164</span>
+164:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lightness</span>
+165:       <span class="ruby-identifier">rgb_to_hsl!</span>
+166:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:lightness</span>]
+167:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="minus-method" class="method-detail ">
+				<a name="method-i-minus"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minus</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `-` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Subtracts the number from each of the RGB color channels.
+</p>
+<p>
+{Color} : Subtracts each of the other color&#8217;s RGB color channels from
+this color&#8217;s.
+</p>
+<p>
+{Literal} : See {<a href="Literal.html#method-i-minus">Literal#minus</a>}.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Color]
+The resulting color @raise [Sass::SyntaxError] if `other` is a number with
+units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="minus-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 292</span>
+292:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minus</span>(<span class="ruby-identifier">other</span>)
+293:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+294:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:-</span>)
+295:       <span class="ruby-keyword kw">else</span>
+296:         <span class="ruby-keyword kw">super</span>
+297:       <span class="ruby-keyword kw">end</span>
+298:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mod-method" class="method-detail ">
+				<a name="method-i-mod"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mod</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `%` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Takes each of the RGB color channels module the number.
+</p>
+<p>
+{Color} : Takes each of this color&#8217;s RGB color channels modulo the
+other color&#8217;s.
+</p>
+<p>
+@param other [<a href="Number.html">Number</a>, Color] The right-hand side
+of the operator @return [Color] The resulting color @raise
+[Sass::SyntaxError] if `other` is a number with units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="mod-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 355</span>
+355:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mod</span>(<span class="ruby-identifier">other</span>)
+356:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+357:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:%</span>)
+358:       <span class="ruby-keyword kw">else</span>
+359:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-value">:mod</span>)
+360:       <span class="ruby-keyword kw">end</span>
+361:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="plus-method" class="method-detail ">
+				<a name="method-i-plus"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">plus</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `+` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Adds the number to each of the RGB color channels.
+</p>
+<p>
+{Color} : Adds each of the RGB color channels together.
+</p>
+<p>
+{Literal} : See {<a href="Literal.html#method-i-plus">Literal#plus</a>}.
+</p>
+<p>
+@param other [Literal] The right-hand side of the operator @return [Color]
+The resulting color @raise [Sass::SyntaxError] if `other` is a number with
+units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="plus-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 269</span>
+269:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">plus</span>(<span class="ruby-identifier">other</span>)
+270:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+271:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:+</span>)
+272:       <span class="ruby-keyword kw">else</span>
+273:         <span class="ruby-keyword kw">super</span>
+274:       <span class="ruby-keyword kw">end</span>
+275:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="red-method" class="method-detail ">
+				<a name="method-i-red"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">red</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The red component of the color.
+</p>
+<p>
+@return [Fixnum]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="red-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 124</span>
+124:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">red</span>
+125:       <span class="ruby-identifier">hsl_to_rgb!</span>
+126:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:red</span>]
+127:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgb-method" class="method-detail ">
+				<a name="method-i-rgb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgb</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the red, green, and blue components of the color.
+</p>
+<p>
+@return [Array<Fixnum>] A frozen three-element array of the red, green, and
+blue
+</p>
+<pre>
+  values (respectively) of the color</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="rgb-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 189</span>
+189:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgb</span>
+190:       [<span class="ruby-identifier">red</span>, <span class="ruby-identifier">green</span>, <span class="ruby-identifier">blue</span>].<span class="ruby-identifier">freeze</span>
+191:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="saturation-method" class="method-detail ">
+				<a name="method-i-saturation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">saturation</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The saturation component of the color.
+</p>
+<p>
+@return [Numeric]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="saturation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 156</span>
+156:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">saturation</span>
+157:       <span class="ruby-identifier">rgb_to_hsl!</span>
+158:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:saturation</span>]
+159:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="times-method" class="method-detail ">
+				<a name="method-i-times"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">times</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The SassScript `*` operation. Its functionality depends on the type of its
+argument:
+</p>
+<p>
+{Number} : Multiplies the number by each of the RGB color channels.
+</p>
+<p>
+{Color} : Multiplies each of the RGB color channels together.
+</p>
+<p>
+@param other [<a href="Number.html">Number</a>, Color] The right-hand side
+of the operator @return [Color] The resulting color @raise
+[Sass::SyntaxError] if `other` is a number with units
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="times-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 312</span>
+312:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">times</span>(<span class="ruby-identifier">other</span>)
+313:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Number</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Color</span>)
+314:         <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-value">:*</span>)
+315:       <span class="ruby-keyword kw">else</span>
+316:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">NoMethodError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-value">:times</span>)
+317:       <span class="ruby-keyword kw">end</span>
+318:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">(opts = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a string representation of the color. This is usually the
+color&#8217;s hex value, but if the color has a name that&#8217;s used
+instead.
+</p>
+<p>
+@return [String] The string representation
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 368</span>
+368:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>(<span class="ruby-identifier">opts</span> = {})
+369:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rgba_str</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">alpha?</span>
+370:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">smallest</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:style</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:compressed</span>
+371:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">HTML4_COLORS_REVERSE</span>[<span class="ruby-identifier">rgb</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-constant">HTML4_COLORS_REVERSE</span>[<span class="ruby-identifier">rgb</span>]
+372:       <span class="ruby-identifier">hex_str</span>
+373:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Color.html#method-i-to_sass">to_sass</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="to-sass-method" class="method-detail method-alias">
+				<a name="method-i-to_sass"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_sass</span><span
+						class="method-args">(opts = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Color.html#method-i-to_s">to_s</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="with-method" class="method-detail ">
+				<a name="method-i-with"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">with</span><span
+						class="method-args">(attrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a copy of this color with one or more channels changed. RGB or HSL
+colors may be changed, but not both at once.
+</p>
+<p>
+For example:
+</p>
+<pre>
+    Color.new([10, 20, 30]).with(:blue =&gt; 40)
+      #=&gt; rgb(10, 40, 30)
+    Color.new([126, 126, 126]).with(:red =&gt; 0, :green =&gt; 255)
+      #=&gt; rgb(0, 255, 126)
+    Color.new([255, 0, 127]).with(:saturation =&gt; 60)
+      #=&gt; rgb(204, 51, 127)
+    Color.new([1, 2, 3]).with(:alpha =&gt; 0.4)
+      #=&gt; rgba(1, 2, 3, 0.4)
+</pre>
+<p>
+@param attrs [{Symbol => Numeric}]
+</p>
+<pre>
+  A map of channel names (`:red`, `:green`, `:blue`,
+  `:hue`, `:saturation`, `:lightness`, or `:alpha`) to values
+</pre>
+<p>
+@return [Color] The new <a href="Color.html">Color</a> object @raise
+[ArgumentError] if both RGB and HSL keys are specified
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="with-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 232</span>
+232:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">with</span>(<span class="ruby-identifier">attrs</span>)
+233:       <span class="ruby-identifier">attrs</span> = <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>}
+234:       <span class="ruby-identifier">hsl</span> = <span class="ruby-operator">!</span>([<span class="ruby-value">:hue</span>, <span class="ruby-value">:saturation</span>, <span class="ruby-value">:lightness</span>] &amp; <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">keys</span>).<span class="ruby-identifier">empty?</span>
+235:       <span class="ruby-identifier">rgb</span> = <span class="ruby-operator">!</span>([<span class="ruby-value">:red</span>, <span class="ruby-value">:green</span>, <span class="ruby-value">:blue</span>] &amp; <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">keys</span>).<span class="ruby-identifier">empty?</span>
+236:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hsl</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rgb</span>
+237:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;Cannot specify HSL and RGB values for a color at the same time&quot;</span>)
+238:       <span class="ruby-keyword kw">end</span>
+239: 
+240:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hsl</span>
+241:         [<span class="ruby-value">:hue</span>, <span class="ruby-value">:saturation</span>, <span class="ruby-value">:lightness</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">k</span>)}
+242:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">rgb</span>
+243:         [<span class="ruby-value">:red</span>, <span class="ruby-value">:green</span>, <span class="ruby-value">:blue</span>].<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">send</span>(<span class="ruby-identifier">k</span>)}
+244:       <span class="ruby-keyword kw">else</span>
+245:         <span class="ruby-comment cmt"># If we're just changing the alpha channel,</span>
+246:         <span class="ruby-comment cmt"># keep all the HSL/RGB stuff we've calculated</span>
+247:         <span class="ruby-identifier">attrs</span> = <span class="ruby-ivar">@attrs</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">attrs</span>)
+248:       <span class="ruby-keyword kw">end</span>
+249:       <span class="ruby-identifier">attrs</span>[<span class="ruby-value">:alpha</span>] <span class="ruby-operator">||=</span> <span class="ruby-identifier">alpha</span>
+250: 
+251:       <span class="ruby-constant">Color</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">attrs</span>, <span class="ruby-value">:allow_both_rgb_and_hsl</span>)
+252:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="hex-str-method" class="method-detail ">
+				<a name="method-i-hex_str"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hex_str</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hex-str-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 397</span>
+397:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hex_str</span>
+398:       <span class="ruby-identifier">red</span>, <span class="ruby-identifier">green</span>, <span class="ruby-identifier">blue</span> = <span class="ruby-identifier">rgb</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">num</span><span class="ruby-operator">|</span> <span class="ruby-identifier">num</span>.<span class="ruby-identifier">to_s</span>(<span class="ruby-value">16</span>).<span class="ruby-identifier">rjust</span>(<span class="ruby-value">2</span>, <span class="ruby-value str">'0'</span>) }
+399:       <span class="ruby-node">&quot;##{red}#{green}#{blue}&quot;</span>
+400:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hsl-to-rgb--method" class="method-detail ">
+				<a name="method-i-hsl_to_rgb%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hsl_to_rgb!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hsl-to-rgb--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 421</span>
+421:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hsl_to_rgb!</span>
+422:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:red</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:blue</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:green</span>]
+423: 
+424:       <span class="ruby-identifier">h</span> = <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:hue</span>] <span class="ruby-operator">/</span> <span class="ruby-value">360.0</span>
+425:       <span class="ruby-identifier">s</span> = <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:saturation</span>] <span class="ruby-operator">/</span> <span class="ruby-value">100.0</span>
+426:       <span class="ruby-identifier">l</span> = <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:lightness</span>] <span class="ruby-operator">/</span> <span class="ruby-value">100.0</span>
+427: 
+428:       <span class="ruby-comment cmt"># Algorithm from the CSS3 spec: http://www.w3.org/TR/css3-color/#hsl-color.</span>
+429:       <span class="ruby-identifier">m2</span> = <span class="ruby-identifier">l</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0.5</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">l</span> * (<span class="ruby-identifier">s</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">l</span> * <span class="ruby-identifier">s</span>
+430:       <span class="ruby-identifier">m1</span> = <span class="ruby-identifier">l</span> * <span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">m2</span>
+431:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:red</span>], <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:green</span>], <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:blue</span>] = [
+432:         <span class="ruby-identifier">hue_to_rgb</span>(<span class="ruby-identifier">m1</span>, <span class="ruby-identifier">m2</span>, <span class="ruby-identifier">h</span> <span class="ruby-operator">+</span> <span class="ruby-value">1.0</span><span class="ruby-operator">/</span><span class="ruby-value">3</span>),
+433:         <span class="ruby-identifier">hue_to_rgb</span>(<span class="ruby-identifier">m1</span>, <span class="ruby-identifier">m2</span>, <span class="ruby-identifier">h</span>),
+434:         <span class="ruby-identifier">hue_to_rgb</span>(<span class="ruby-identifier">m1</span>, <span class="ruby-identifier">m2</span>, <span class="ruby-identifier">h</span> <span class="ruby-operator">-</span> <span class="ruby-value">1.0</span><span class="ruby-operator">/</span><span class="ruby-value">3</span>)
+435:       ].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span> (<span class="ruby-identifier">c</span> * <span class="ruby-value">0xff</span>).<span class="ruby-identifier">round</span>}
+436:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hue-to-rgb-method" class="method-detail ">
+				<a name="method-i-hue_to_rgb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hue_to_rgb</span><span
+						class="method-args">(m1, m2, h)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hue-to-rgb-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 438</span>
+438:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hue_to_rgb</span>(<span class="ruby-identifier">m1</span>, <span class="ruby-identifier">m2</span>, <span class="ruby-identifier">h</span>)
+439:       <span class="ruby-identifier">h</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">h</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+440:       <span class="ruby-identifier">h</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">h</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+441:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m1</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">m2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">m1</span>) * <span class="ruby-identifier">h</span> * <span class="ruby-value">6</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">h</span> * <span class="ruby-value">6</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
+442:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m2</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">h</span> * <span class="ruby-value">2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span>
+443:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m1</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">m2</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">m1</span>) * (<span class="ruby-value">2.0</span><span class="ruby-operator">/</span><span class="ruby-value">3</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">h</span>) * <span class="ruby-value">6</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">h</span> * <span class="ruby-value">3</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span>
+444:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">m1</span>
+445:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="piecewise-method" class="method-detail ">
+				<a name="method-i-piecewise"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">piecewise</span><span
+						class="method-args">(other, operation)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="piecewise-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 402</span>
+402:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">piecewise</span>(<span class="ruby-identifier">other</span>, <span class="ruby-identifier">operation</span>)
+403:       <span class="ruby-identifier">other_num</span> = <span class="ruby-identifier">other</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Number</span>
+404:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">other_num</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">other</span>.<span class="ruby-identifier">unitless?</span>
+405:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Cannot add a number with units (#{other}) to a color (#{self}).&quot;</span>) 
+406:       <span class="ruby-keyword kw">end</span>
+407: 
+408:       <span class="ruby-identifier">result</span> = []
+409:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">3</span>)
+410:         <span class="ruby-identifier">res</span> = <span class="ruby-identifier">rgb</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">send</span>(<span class="ruby-identifier">operation</span>, <span class="ruby-identifier">other_num</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">value</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">rgb</span>[<span class="ruby-identifier">i</span>])
+411:         <span class="ruby-identifier">result</span>[<span class="ruby-identifier">i</span>] = [ [<span class="ruby-identifier">res</span>, <span class="ruby-value">255</span>].<span class="ruby-identifier">min</span>, <span class="ruby-value">0</span> ].<span class="ruby-identifier">max</span>
+412:       <span class="ruby-keyword kw">end</span>
+413: 
+414:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">other_num</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">alpha</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">alpha</span>
+415:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Alpha channels must be equal: #{self} #{operation} #{other}&quot;</span>)
+416:       <span class="ruby-keyword kw">end</span>
+417: 
+418:       <span class="ruby-identifier">with</span>(<span class="ruby-value">:red</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">0</span>], <span class="ruby-value">:green</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">1</span>], <span class="ruby-value">:blue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">result</span>[<span class="ruby-value">2</span>])
+419:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgb-to-hsl--method" class="method-detail ">
+				<a name="method-i-rgb_to_hsl%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgb_to_hsl!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rgb-to-hsl--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 447</span>
+447:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgb_to_hsl!</span>
+448:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:hue</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:saturation</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:lightness</span>]
+449:       <span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span> = [<span class="ruby-value">:red</span>, <span class="ruby-value">:green</span>, <span class="ruby-value">:blue</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@attrs</span>[<span class="ruby-identifier">k</span>] <span class="ruby-operator">/</span> <span class="ruby-value">255.0</span>}
+450: 
+451:       <span class="ruby-comment cmt"># Algorithm from http://en.wikipedia.org/wiki/HSL_and_HSV#Conversion_from_RGB_to_HSL_or_HSV</span>
+452:       <span class="ruby-identifier">max</span> = [<span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>].<span class="ruby-identifier">max</span>
+453:       <span class="ruby-identifier">min</span> = [<span class="ruby-identifier">r</span>, <span class="ruby-identifier">g</span>, <span class="ruby-identifier">b</span>].<span class="ruby-identifier">min</span>
+454:       <span class="ruby-identifier">d</span> = <span class="ruby-identifier">max</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">min</span>
+455: 
+456:       <span class="ruby-identifier">h</span> =
+457:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">max</span>
+458:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">min</span>; <span class="ruby-value">0</span>
+459:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">r</span>; <span class="ruby-value">60</span> * (<span class="ruby-identifier">g</span><span class="ruby-operator">-</span><span class="ruby-identifier">b</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">d</span>
+460:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">g</span>; <span class="ruby-value">60</span> * (<span class="ruby-identifier">b</span><span class="ruby-operator">-</span><span class="ruby-identifier">r</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">d</span> <span class="ruby-operator">+</span> <span class="ruby-value">120</span>
+461:         <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">b</span>; <span class="ruby-value">60</span> * (<span class="ruby-identifier">r</span><span class="ruby-operator">-</span><span class="ruby-identifier">g</span>)<span class="ruby-operator">/</span><span class="ruby-identifier">d</span> <span class="ruby-operator">+</span> <span class="ruby-value">240</span>
+462:         <span class="ruby-keyword kw">end</span>
+463: 
+464:       <span class="ruby-identifier">l</span> = (<span class="ruby-identifier">max</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">min</span>)<span class="ruby-operator">/</span><span class="ruby-value">2.0</span>
+465: 
+466:       <span class="ruby-identifier">s</span> =
+467:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">max</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">min</span>
+468:           <span class="ruby-value">0</span>
+469:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">l</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0.5</span>
+470:           <span class="ruby-identifier">d</span><span class="ruby-operator">/</span>(<span class="ruby-value">2</span>*<span class="ruby-identifier">l</span>)
+471:         <span class="ruby-keyword kw">else</span>
+472:           <span class="ruby-identifier">d</span><span class="ruby-operator">/</span>(<span class="ruby-value">2</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>*<span class="ruby-identifier">l</span>)
+473:         <span class="ruby-keyword kw">end</span>
+474: 
+475:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:hue</span>] = <span class="ruby-identifier">h</span> <span class="ruby-operator">%</span> <span class="ruby-value">360</span>
+476:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:saturation</span>] = <span class="ruby-identifier">s</span> * <span class="ruby-value">100</span>
+477:       <span class="ruby-ivar">@attrs</span>[<span class="ruby-value">:lightness</span>] = <span class="ruby-identifier">l</span> * <span class="ruby-value">100</span>
+478:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rgba-str-method" class="method-detail ">
+				<a name="method-i-rgba_str"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rgba_str</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rgba-str-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 392</span>
+392:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rgba_str</span>
+393:       <span class="ruby-identifier">split</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:style</span>] <span class="ruby-operator">==</span> <span class="ruby-value">:compressed</span> <span class="ruby-operator">?</span> <span class="ruby-value str">','</span> <span class="ruby-operator">:</span> <span class="ruby-value str">', '</span>
+394:       <span class="ruby-node">&quot;rgba(#{rgb.join(split)}#{split}#{Number.round(alpha)})&quot;</span>
+395:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="smallest-method" class="method-detail ">
+				<a name="method-i-smallest"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">smallest</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="smallest-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/color.rb, line 385</span>
+385:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">smallest</span>
+386:       <span class="ruby-identifier">small_hex_str</span> = <span class="ruby-identifier">hex_str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-node">/^#(.)\11((.)\22((.)\33$$/</span>, <span class="ruby-value str">'#\1\2\3'</span>)
+387:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">small_hex_str</span> <span class="ruby-keyword kw">unless</span> (<span class="ruby-identifier">color</span> = <span class="ruby-constant">HTML4_COLORS_REVERSE</span>[<span class="ruby-identifier">rgb</span>]) <span class="ruby-operator">&amp;&amp;</span>
+388:         <span class="ruby-identifier">color</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">small_hex_str</span>.<span class="ruby-identifier">size</span>
+389:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">color</span>
+390:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1038 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Object</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/haml/helpers_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/haml/helpers.rb">lib/haml/helpers.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-def_static_method">#def_static_method</a></li>
+					
+					<li><a href="#method-i-enum_cons">#enum_cons</a></li>
+					
+					<li><a href="#method-i-enum_slice">#enum_slice</a></li>
+					
+					<li><a href="#method-i-enum_with_index">#enum_with_index</a></li>
+					
+					<li><a href="#method-i-flatten">#flatten</a></li>
+					
+					<li><a href="#method-i-has%3F">#has?</a></li>
+					
+					<li><a href="#method-i-inspect_obj">#inspect_obj</a></li>
+					
+					<li><a href="#method-i-is_haml%3F">#is_haml?</a></li>
+					
+					<li><a href="#method-i-lcs_backtrace">#lcs_backtrace</a></li>
+					
+					<li><a href="#method-i-lcs_table">#lcs_table</a></li>
+					
+					<li><a href="#method-i-ord">#ord</a></li>
+					
+					<li><a href="#method-i-parse_haml_magic_comment">#parse_haml_magic_comment</a></li>
+					
+					<li><a href="#method-i-set_eql%3F">#set_eql?</a></li>
+					
+					<li><a href="#method-i-set_hash">#set_hash</a></li>
+					
+					<li><a href="#method-i-static_method_name">#static_method_name</a></li>
+					
+					<li><a href="#method-i-try_parse_haml_emacs_magic_comment">#try_parse_haml_emacs_magic_comment</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Haml.html">Haml</a></li>
+				
+					<li><a href="./Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="./Haml/Compiler.html">Haml::Compiler</a></li>
+				
+					<li><a href="./Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="./Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="./Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="./Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="./Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="./Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="./Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="./Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="./Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="./Haml/Filters/Css.html">Haml::Filters::Css</a></li>
+				
+					<li><a href="./Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="./Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="./Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="./Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="./Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="./Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="./Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="./Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="./Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="./Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="./Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="./Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="./Haml/HTML/ERB.html">Haml::HTML::ERB</a></li>
+				
+					<li><a href="./Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="./Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="./Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="./Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="./Haml/Parser.html">Haml::Parser</a></li>
+				
+					<li><a href="./Haml/Parser/Line.html">Haml::Parser::Line</a></li>
+				
+					<li><a href="./Haml/Parser/ParseNode.html">Haml::Parser::ParseNode</a></li>
+				
+					<li><a href="./Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="./Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="./Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="./Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="./Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="./Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="./ActionView.html">ActionView</a></li>
+				
+					<li><a href="./ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="./ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="./ActionView/Helpers/CacheHelper.html">ActionView::Helpers::CacheHelper</a></li>
+				
+					<li><a href="./ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="./ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="./ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="./ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="./ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="./ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="./Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="./Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="./Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="./Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="./Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="./Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="./Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="./Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+					<li><a href="./StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Object</h1>
+
+		<div id="description">
+			<p>
+@private
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="def-static-method-method" class="method-detail ">
+				<a name="method-i-def_static_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">def_static_method</span><span
+						class="method-args">(klass, name, args, *vars)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is used for methods in {Haml::Buffer} that need to be very fast, and
+take a lot of boolean parameters that are known at compile-time. Instead of
+passing the parameters in normally, a separate method is defined for every
+possible combination of those parameters; these are then called using
+{#static_method_name}.
+</p>
+<p>
+To define a static method, an ERB template for the method is provided. All
+conditionals based on the static parameters are done as embedded Ruby
+within this template. For example:
+</p>
+<pre>
+    def_static_method(Foo, :my_static_method, [:foo, :bar], :baz, :bang, &lt;&lt;RUBY)
+      &lt;% if baz &amp;&amp; bang %&gt;
+        return foo + bar
+      &lt;% elsif baz || bang %&gt;
+        return foo - bar
+      &lt;% else %&gt;
+        return 17
+      &lt;% end %&gt;
+    RUBY
+</pre>
+<p>
+{#static_method_name} can be used to call static methods.
+</p>
+<p>
+@overload <a
+href="Object.html#method-i-def_static_method">def_static_method</a>(klass,
+name, args, *vars, erb) @param klass [Module] The class on which to define
+the static method @param name [#] The (base) name of the static method
+@param args [Array<Symbol>] The names of the arguments to the defined
+methods
+</p>
+<pre>
+  (**not** to the ERB template)
+</pre>
+<p>
+@param vars [Array<Symbol>] The names of the static boolean variables
+</p>
+<pre>
+  to be made available to the ERB template
+</pre>
+<p>
+@param erb [String] The template for the method code
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="def-static-method-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 756</span>
+756:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">def_static_method</span>(<span class="ruby-identifier">klass</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">args</span>, *<span class="ruby-identifier">vars</span>)
+757:       <span class="ruby-identifier">erb</span> = <span class="ruby-identifier">vars</span>.<span class="ruby-identifier">pop</span>
+758:       <span class="ruby-identifier">info</span> = <span class="ruby-identifier">caller_info</span>
+759:       <span class="ruby-identifier">powerset</span>(<span class="ruby-identifier">vars</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">set</span><span class="ruby-operator">|</span>
+760:         <span class="ruby-identifier">context</span> = <span class="ruby-constant">StaticConditionalContext</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">set</span>).<span class="ruby-identifier">instance_eval</span> {<span class="ruby-identifier">binding</span>}
+761:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-value str">def #{static_method_name(name, *vars.map {|v| set.include?(v)})}(#{args.join(', ')})  #{ERB.new(erb).result(context)}end</span>, <span class="ruby-identifier">info</span>[<span class="ruby-value">0</span>], <span class="ruby-identifier">info</span>[<span class="ruby-value">1</span>])
+762:       <span class="ruby-keyword kw">end</span>
+763:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enum-cons-method" class="method-detail ">
+				<a name="method-i-enum_cons"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enum_cons</span><span
+						class="method-args">(enum, n)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+A version of `Enumerable#enum_cons` that works in Ruby 1.8 and 1.9.
+</p>
+<p>
+@param enum [Enumerable] The enumerable to get the enumerator for @param n
+[Fixnum] The size of each cons @return [Enumerator] The consed enumerator
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="enum-cons-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 639</span>
+639:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enum_cons</span>(<span class="ruby-identifier">enum</span>, <span class="ruby-identifier">n</span>)
+640:       <span class="ruby-identifier">ruby1_8?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">enum_cons</span>(<span class="ruby-identifier">n</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">each_cons</span>(<span class="ruby-identifier">n</span>)
+641:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enum-slice-method" class="method-detail ">
+				<a name="method-i-enum_slice"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enum_slice</span><span
+						class="method-args">(enum, n)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+A version of `Enumerable#enum_slice` that works in Ruby 1.8 and 1.9.
+</p>
+<p>
+@param enum [Enumerable] The enumerable to get the enumerator for @param n
+[Fixnum] The size of each slice @return [Enumerator] The consed enumerator
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="enum-slice-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 648</span>
+648:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enum_slice</span>(<span class="ruby-identifier">enum</span>, <span class="ruby-identifier">n</span>)
+649:       <span class="ruby-identifier">ruby1_8?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">enum_slice</span>(<span class="ruby-identifier">n</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">each_slice</span>(<span class="ruby-identifier">n</span>)
+650:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enum-with-index-method" class="method-detail ">
+				<a name="method-i-enum_with_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enum_with_index</span><span
+						class="method-args">(enum)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+A version of `Enumerable#enum_with_index` that works in Ruby 1.8 and 1.9.
+</p>
+<p>
+@param enum [Enumerable] The enumerable to get the enumerator for @return
+[Enumerator] The with-index enumerator
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="enum-with-index-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 630</span>
+630:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enum_with_index</span>(<span class="ruby-identifier">enum</span>)
+631:       <span class="ruby-identifier">ruby1_8?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">enum_with_index</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">each_with_index</span>
+632:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flatten-method" class="method-detail ">
+				<a name="method-i-flatten"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flatten</span><span
+						class="method-args">(arr, n)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Flattens the first `n` nested arrays in a cross-version manner.
+</p>
+<p>
+@param arr [Array] The array to flatten @param n [Fixnum] The number of
+levels to flatten @return [Array] The flattened array
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="flatten-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 665</span>
+665:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flatten</span>(<span class="ruby-identifier">arr</span>, <span class="ruby-identifier">n</span>)
+666:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">flatten</span>(<span class="ruby-identifier">n</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ruby1_8_6?</span>
+667:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+668:       <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">inject</span>([]) {<span class="ruby-operator">|</span><span class="ruby-identifier">res</span>, <span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">flatten</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)) <span class="ruby-operator">:</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">e</span>}
+669:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has--method" class="method-detail ">
+				<a name="method-i-has%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has?</span><span
+						class="method-args">(attr, klass, method)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks to see if a class has a given method. For example:
+</p>
+<pre>
+    Haml::Util.has?(:public_instance_method, String, :gsub) #=&gt; true
+</pre>
+<p>
+Method collections like `Class#instance_methods` return strings in Ruby 1.8
+and symbols in Ruby 1.9 and on, so this handles checking for them in a
+compatible way.
+</p>
+<p>
+@param attr [#] The (singular) name of the method-collection method
+</p>
+<pre>
+  (e.g. `:instance_methods`, `:private_methods`)
+</pre>
+<p>
+@param klass [Module] The class to check the methods of which to check
+@param method [String, Symbol] The name of the method do check for @return
+[Boolean] Whether or not the given collection has the given method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="has--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 622</span>
+622:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has?</span>(<span class="ruby-identifier">attr</span>, <span class="ruby-identifier">klass</span>, <span class="ruby-identifier">method</span>)
+623:       <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{attr}s&quot;</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">ruby1_8?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">method</span>.<span class="ruby-identifier">to_sym</span>)
+624:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-obj-method" class="method-detail ">
+				<a name="method-i-inspect_obj"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect_obj</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Like `Object#inspect`, but preserves non-ASCII characters rather than
+escaping them under Ruby 1.9.2. This is necessary so that the precompiled
+<a href="Haml.html">Haml</a> template can be `#`d into
+`@options[:encoding]` before being evaluated.
+</p>
+<p>
+@param obj {Object} @return {String}
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-obj-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 698</span>
+698:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect_obj</span>(<span class="ruby-identifier">obj</span>)
+699:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">version_geq</span>(<span class="ruby-operator">::</span><span class="ruby-constant">RUBY_VERSION</span>, <span class="ruby-value str">&quot;1.9.2&quot;</span>)
+700:       <span class="ruby-keyword kw">return</span> <span class="ruby-value str">':'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">inspect_obj</span>(<span class="ruby-identifier">obj</span>.<span class="ruby-identifier">to_s</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>)
+701:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+702:       <span class="ruby-value str">'&quot;'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[\x00-\x7F]+/</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">inspect</span>[<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>]} <span class="ruby-operator">+</span> <span class="ruby-value str">'&quot;'</span>
+703:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="is-haml--method" class="method-detail ">
+				<a name="method-i-is_haml%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">is_haml?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="Haml.html">Haml</a> overrides various `ActionView` helpers, which
+call an {#is_haml?} method to determine whether or not the current context
+object is a proper <a href="Haml.html">Haml</a> context. Because
+`ActionView` helpers may be included in non-`ActionView::Base` classes,
+it&#8217;s a good idea to define {#is_haml?} for all objects.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="is-haml--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/helpers.rb, line 604</span>
+604:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">is_haml?</span>
+605:     <span class="ruby-keyword kw">false</span>
+606:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lcs-backtrace-method" class="method-detail ">
+				<a name="method-i-lcs_backtrace"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lcs_backtrace</span><span
+						class="method-args">(c, x, y, i, j, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Computes a single longest common subsequence for arrays x and y. Algorithm
+from [Wikipedia](<a
+href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem#Reading_out_an_LCS">en.wikipedia.org/wiki/Longest_common_subsequence_problem#Reading_out_an_LCS</a>)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lcs-backtrace-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 801</span>
+801:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lcs_backtrace</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span>, &amp;<span class="ruby-identifier">block</span>)
+802:       <span class="ruby-keyword kw">return</span> [] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">j</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+803:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span> = <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>[<span class="ruby-identifier">i</span>], <span class="ruby-identifier">y</span>[<span class="ruby-identifier">j</span>])
+804:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">lcs_backtrace</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, <span class="ruby-identifier">j</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, &amp;<span class="ruby-identifier">block</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">v</span>
+805:       <span class="ruby-keyword kw">end</span>
+806: 
+807:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">lcs_backtrace</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">i</span>, <span class="ruby-identifier">j</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, &amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-identifier">j</span>]
+808:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">lcs_backtrace</span>(<span class="ruby-identifier">c</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>, <span class="ruby-identifier">j</span>, &amp;<span class="ruby-identifier">block</span>)
+809:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lcs-table-method" class="method-detail ">
+				<a name="method-i-lcs_table"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lcs_table</span><span
+						class="method-args">(x, y)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculates the memoization table for the Least Common Subsequence
+algorithm. Algorithm from [Wikipedia](<a
+href="http://en.wikipedia.org/wiki/Longest_common_subsequence_problem#Computing_the_length_of_the_LCS">en.wikipedia.org/wiki/Longest_common_subsequence_problem#Computing_the_length_of_the_LCS</a>)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lcs-table-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 782</span>
+782:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lcs_table</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+783:       <span class="ruby-identifier">c</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">size</span>) {[]}
+784:       <span class="ruby-identifier">x</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span>][<span class="ruby-value">0</span>] = <span class="ruby-value">0</span>}
+785:       <span class="ruby-identifier">y</span>.<span class="ruby-identifier">size</span>.<span class="ruby-identifier">times</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>][<span class="ruby-identifier">j</span>] = <span class="ruby-value">0</span>}
+786:       (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">x</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+787:         (<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-identifier">y</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">j</span><span class="ruby-operator">|</span>
+788:           <span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span>] =
+789:             <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">x</span>[<span class="ruby-identifier">i</span>], <span class="ruby-identifier">y</span>[<span class="ruby-identifier">j</span>]
+790:               <span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-identifier">j</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+791:             <span class="ruby-keyword kw">else</span>
+792:               [<span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">j</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>], <span class="ruby-identifier">c</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-identifier">j</span>]].<span class="ruby-identifier">max</span>
+793:             <span class="ruby-keyword kw">end</span>
+794:         <span class="ruby-keyword kw">end</span>
+795:       <span class="ruby-keyword kw">end</span>
+796:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">c</span>
+797:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ord-method" class="method-detail ">
+				<a name="method-i-ord"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ord</span><span
+						class="method-args">(c)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the ASCII code of the given character.
+</p>
+<p>
+@param c [String] All characters but the first are ignored. @return
+[Fixnum] The ASCII code of `c`.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ord-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 656</span>
+656:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ord</span>(<span class="ruby-identifier">c</span>)
+657:       <span class="ruby-identifier">ruby1_8?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span>
+658:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-haml-magic-comment-method" class="method-detail ">
+				<a name="method-i-parse_haml_magic_comment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_haml_magic_comment</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a magic comment at the beginning of a <a href="Haml.html">Haml</a>
+file. The parsing rules are basically the same as Ruby&#8217;s.
+</p>
+<p>
+@return [(Boolean, String or nil)]
+</p>
+<pre>
+  Whether the document begins with a UTF-8 BOM,
+  and the declared encoding of the document (or nil if none is declared)</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-haml-magic-comment-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 817</span>
+817:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_haml_magic_comment</span>(<span class="ruby-identifier">str</span>)
+818:       <span class="ruby-identifier">scanner</span> = <span class="ruby-constant">StringScanner</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">str</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">force_encoding</span>(<span class="ruby-value str">&quot;BINARY&quot;</span>))
+819:       <span class="ruby-identifier">bom</span> = <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/\xEF\xBB\xBF/</span>)
+820:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bom</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-node">/-\s*#\s*/</span>)
+821:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">coding</span> = <span class="ruby-identifier">try_parse_haml_emacs_magic_comment</span>(<span class="ruby-identifier">scanner</span>)
+822:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bom</span>, <span class="ruby-identifier">coding</span>
+823:       <span class="ruby-keyword kw">end</span>
+824: 
+825:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bom</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/.*?coding[=:]\s*([\w-]+)/</span><span class="ruby-identifier">n</span>)
+826:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">bom</span>, <span class="ruby-identifier">scanner</span>[<span class="ruby-value">1</span>]
+827:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-eql--method" class="method-detail ">
+				<a name="method-i-set_eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_eql?</span><span
+						class="method-args">(set1, set2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tests the hash-equality of two sets in a cross-version manner.
+Aggravatingly, this is order-dependent in Ruby 1.8.6.
+</p>
+<p>
+@param set1 [Set] @param set2 [Set] @return [Boolean] Whether or not the
+sets are hashcode equal
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-eql--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 687</span>
+687:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_eql?</span>(<span class="ruby-identifier">set1</span>, <span class="ruby-identifier">set2</span>)
+688:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">set1</span>.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">set2</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ruby1_8_6?</span>
+689:       <span class="ruby-identifier">set1</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">sort_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">hash</span>}.<span class="ruby-identifier">eql?</span>(<span class="ruby-identifier">set2</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">sort_by</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">hash</span>})
+690:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-hash-method" class="method-detail ">
+				<a name="method-i-set_hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_hash</span><span
+						class="method-args">(set)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the hash code for a set in a cross-version manner. Aggravatingly,
+this is order-dependent in Ruby 1.8.6.
+</p>
+<p>
+@param set [Set] @return [Fixnum] The order-independent hashcode of `set`
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-hash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 676</span>
+676:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_hash</span>(<span class="ruby-identifier">set</span>)
+677:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">set</span>.<span class="ruby-identifier">hash</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">ruby1_8_6?</span>
+678:       <span class="ruby-identifier">set</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">hash</span>}.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">hash</span>
+679:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="static-method-name-method" class="method-detail ">
+				<a name="method-i-static_method_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">static_method_name</span><span
+						class="method-args">(name, *vars)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Computes the name for a method defined via {#def_static_method}.
+</p>
+<p>
+@param name [String] The base name of the static method @param vars
+[Array<Boolean>] The static variable assignment @return [String] The real
+name of the static method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="static-method-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 774</span>
+774:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">static_method_name</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">vars</span>)
+775:       <span class="ruby-node">&quot;#{name}_#{vars.map {|v| !!v}.join('_')}&quot;</span>
+776:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="try-parse-haml-emacs-magic-comment-method" class="method-detail ">
+				<a name="method-i-try_parse_haml_emacs_magic_comment"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_parse_haml_emacs_magic_comment</span><span
+						class="method-args">(scanner)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="try-parse-haml-emacs-magic-comment-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/haml/util.rb, line 829</span>
+829:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_parse_haml_emacs_magic_comment</span>(<span class="ruby-identifier">scanner</span>)
+830:       <span class="ruby-identifier">pos</span> = <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">pos</span>
+831:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/.*?-\*-\s*/</span>)
+832:       <span class="ruby-comment cmt"># From Ruby's parse.y</span>
+833:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/([^\s'&quot;:;]+)\s*:\s*(&quot;(?:\\.|[^&quot;])*&quot;|[^&quot;\s;]+?)[\s;]*-\*-/</span>)
+834:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">val</span> = <span class="ruby-identifier">scanner</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">scanner</span>[<span class="ruby-value">2</span>]
+835:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/(en)?coding/</span><span class="ruby-identifier">n</span>
+836:       <span class="ruby-identifier">val</span> = <span class="ruby-node">$1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^&quot;(.*)&quot;$/</span>
+837:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">val</span>
+838:     <span class="ruby-keyword kw">ensure</span>
+839:       <span class="ruby-identifier">scanner</span>.<span class="ruby-identifier">pos</span> = <span class="ruby-identifier">pos</span>
+840:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

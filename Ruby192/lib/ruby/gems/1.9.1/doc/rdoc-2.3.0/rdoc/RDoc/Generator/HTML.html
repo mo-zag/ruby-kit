@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RDoc::Generator::HTML</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rdoc/generator/html_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rdoc/generator/html.rb">lib/rdoc/generator/html.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="HTML/Common.html">RDoc::Generator::HTML::Common</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="HTML/HTML.html">RDoc::Generator::HTML::HTML</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-for">::for</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-build_indices">#build_indices</a></li>
+					
+					<li><a href="#method-i-gen_an_index">#gen_an_index</a></li>
+					
+					<li><a href="#method-i-gen_class_index">#gen_class_index</a></li>
+					
+					<li><a href="#method-i-gen_file_index">#gen_file_index</a></li>
+					
+					<li><a href="#method-i-gen_into">#gen_into</a></li>
+					
+					<li><a href="#method-i-gen_main_index">#gen_main_index</a></li>
+					
+					<li><a href="#method-i-gen_method_index">#gen_method_index</a></li>
+					
+					<li><a href="#method-i-gen_sub_directories">#gen_sub_directories</a></li>
+					
+					<li><a href="#method-i-generate">#generate</a></li>
+					
+					<li><a href="#method-i-generate_html">#generate_html</a></li>
+					
+					<li><a href="#method-i-index_to_links">#index_to_links</a></li>
+					
+					<li><a href="#method-i-load_html_template">#load_html_template</a></li>
+					
+					<li><a href="#method-i-main_url">#main_url</a></li>
+					
+					<li><a href="#method-i-write_style_sheet">#write_style_sheet</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="MarkUp.html">RDoc::Generator::MarkUp</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../../RI_txt.html">RI.txt</a></li>
+				
+					<li class="file"><a href="../../test/test_ja_txt.html">test.ja.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RDoc.html">RDoc</a></li>
+				
+					<li><a href="../../RDoc/Alias.html">RDoc::Alias</a></li>
+				
+					<li><a href="../../RDoc/AnonClass.html">RDoc::AnonClass</a></li>
+				
+					<li><a href="../../RDoc/AnyMethod.html">RDoc::AnyMethod</a></li>
+				
+					<li><a href="../../RDoc/Attr.html">RDoc::Attr</a></li>
+				
+					<li><a href="../../RDoc/Cache.html">RDoc::Cache</a></li>
+				
+					<li><a href="../../RDoc/ClassModule.html">RDoc::ClassModule</a></li>
+				
+					<li><a href="../../RDoc/CodeObject.html">RDoc::CodeObject</a></li>
+				
+					<li><a href="../../RDoc/Constant.html">RDoc::Constant</a></li>
+				
+					<li><a href="../../RDoc/Context.html">RDoc::Context</a></li>
+				
+					<li><a href="../../RDoc/Context/Section.html">RDoc::Context::Section</a></li>
+				
+					<li><a href="../../RDoc/DOT.html">RDoc::DOT</a></li>
+				
+					<li><a href="../../RDoc/DOT/Digraph.html">RDoc::DOT::Digraph</a></li>
+				
+					<li><a href="../../RDoc/DOT/Edge.html">RDoc::DOT::Edge</a></li>
+				
+					<li><a href="../../RDoc/DOT/Element.html">RDoc::DOT::Element</a></li>
+				
+					<li><a href="../../RDoc/DOT/Node.html">RDoc::DOT::Node</a></li>
+				
+					<li><a href="../../RDoc/DOT/Port.html">RDoc::DOT::Port</a></li>
+				
+					<li><a href="../../RDoc/DOT/SimpleElement.html">RDoc::DOT::SimpleElement</a></li>
+				
+					<li><a href="../../RDoc/DOT/Subgraph.html">RDoc::DOT::Subgraph</a></li>
+				
+					<li><a href="../../RDoc/Diagram.html">RDoc::Diagram</a></li>
+				
+					<li><a href="../../RDoc/Error.html">RDoc::Error</a></li>
+				
+					<li><a href="../../RDoc/Generator.html">RDoc::Generator</a></li>
+				
+					<li><a href="../../RDoc/Generator/AllReferences.html">RDoc::Generator::AllReferences</a></li>
+				
+					<li><a href="../../RDoc/Generator/Class.html">RDoc::Generator::Class</a></li>
+				
+					<li><a href="../../RDoc/Generator/Context.html">RDoc::Generator::Context</a></li>
+				
+					<li><a href="../../RDoc/Generator/Darkfish.html">RDoc::Generator::Darkfish</a></li>
+				
+					<li><a href="../../RDoc/Generator/File.html">RDoc::Generator::File</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML.html">RDoc::Generator::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/Common.html">RDoc::Generator::HTML::Common</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTML/HTML.html">RDoc::Generator::HTML::HTML</a></li>
+				
+					<li><a href="../../RDoc/Generator/HTMLInOne.html">RDoc::Generator::HTMLInOne</a></li>
+				
+					<li><a href="../../RDoc/Generator/MarkUp.html">RDoc::Generator::MarkUp</a></li>
+				
+					<li><a href="../../RDoc/Generator/Method.html">RDoc::Generator::Method</a></li>
+				
+					<li><a href="../../RDoc/Generator/RI.html">RDoc::Generator::RI</a></li>
+				
+					<li><a href="../../RDoc/Generator/XML.html">RDoc::Generator::XML</a></li>
+				
+					<li><a href="../../RDoc/GhostMethod.html">RDoc::GhostMethod</a></li>
+				
+					<li><a href="../../RDoc/Include.html">RDoc::Include</a></li>
+				
+					<li><a href="../../RDoc/Markup.html">RDoc::Markup</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrChanger.html">RDoc::Markup::AttrChanger</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttrSpan.html">RDoc::Markup::AttrSpan</a></li>
+				
+					<li><a href="../../RDoc/Markup/Attribute.html">RDoc::Markup::Attribute</a></li>
+				
+					<li><a href="../../RDoc/Markup/AttributeManager.html">RDoc::Markup::AttributeManager</a></li>
+				
+					<li><a href="../../RDoc/Markup/BlankLine.html">RDoc::Markup::BlankLine</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow.html">RDoc::Markup::Flow</a></li>
+				
+					<li><a href="../../RDoc/Markup/Flow/LIST.html">RDoc::Markup::Flow::LIST</a></li>
+				
+					<li><a href="../../RDoc/Markup/Formatter.html">RDoc::Markup::Formatter</a></li>
+				
+					<li><a href="../../RDoc/Markup/Fragment.html">RDoc::Markup::Fragment</a></li>
+				
+					<li><a href="../../RDoc/Markup/Heading.html">RDoc::Markup::Heading</a></li>
+				
+					<li><a href="../../RDoc/Markup/Line.html">RDoc::Markup::Line</a></li>
+				
+					<li><a href="../../RDoc/Markup/LineCollection.html">RDoc::Markup::LineCollection</a></li>
+				
+					<li><a href="../../RDoc/Markup/Lines.html">RDoc::Markup::Lines</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListBase.html">RDoc::Markup::ListBase</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListEnd.html">RDoc::Markup::ListEnd</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListItem.html">RDoc::Markup::ListItem</a></li>
+				
+					<li><a href="../../RDoc/Markup/ListStart.html">RDoc::Markup::ListStart</a></li>
+				
+					<li><a href="../../RDoc/Markup/Paragraph.html">RDoc::Markup::Paragraph</a></li>
+				
+					<li><a href="../../RDoc/Markup/PreProcess.html">RDoc::Markup::PreProcess</a></li>
+				
+					<li><a href="../../RDoc/Markup/Rule.html">RDoc::Markup::Rule</a></li>
+				
+					<li><a href="../../RDoc/Markup/Special.html">RDoc::Markup::Special</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToFlow.html">RDoc::Markup::ToFlow</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtml.html">RDoc::Markup::ToHtml</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToHtmlCrossref.html">RDoc::Markup::ToHtmlCrossref</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToLaTeX.html">RDoc::Markup::ToLaTeX</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTest.html">RDoc::Markup::ToTest</a></li>
+				
+					<li><a href="../../RDoc/Markup/ToTexInfo.html">RDoc::Markup::ToTexInfo</a></li>
+				
+					<li><a href="../../RDoc/Markup/Verbatim.html">RDoc::Markup::Verbatim</a></li>
+				
+					<li><a href="../../RDoc/MetaMethod.html">RDoc::MetaMethod</a></li>
+				
+					<li><a href="../../RDoc/NormalClass.html">RDoc::NormalClass</a></li>
+				
+					<li><a href="../../RDoc/NormalModule.html">RDoc::NormalModule</a></li>
+				
+					<li><a href="../../RDoc/Options.html">RDoc::Options</a></li>
+				
+					<li><a href="../../RDoc/Parser.html">RDoc::Parser</a></li>
+				
+					<li><a href="../../RDoc/Parser/C.html">RDoc::Parser::C</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95.html">RDoc::Parser::F95</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Fortran95Definition.html">RDoc::Parser::F95::Fortran95Definition</a></li>
+				
+					<li><a href="../../RDoc/Parser/F95/Token.html">RDoc::Parser::F95::Token</a></li>
+				
+					<li><a href="../../RDoc/Parser/PerlPOD.html">RDoc::Parser::PerlPOD</a></li>
+				
+					<li><a href="../../RDoc/Parser/Ruby.html">RDoc::Parser::Ruby</a></li>
+				
+					<li><a href="../../RDoc/Parser/Simple.html">RDoc::Parser::Simple</a></li>
+				
+					<li><a href="../../RDoc/RDoc.html">RDoc::RDoc</a></li>
+				
+					<li><a href="../../RDoc/RI.html">RDoc::RI</a></li>
+				
+					<li><a href="../../RDoc/RI/AliasName.html">RDoc::RI::AliasName</a></li>
+				
+					<li><a href="../../RDoc/RI/AnsiFormatter.html">RDoc::RI::AnsiFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Attribute.html">RDoc::RI::Attribute</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter.html">RDoc::RI::AttributeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/AttributeFormatter/AttributeString.html">RDoc::RI::AttributeFormatter::AttributeString</a></li>
+				
+					<li><a href="../../RDoc/RI/Cache.html">RDoc::RI::Cache</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassDescription.html">RDoc::RI::ClassDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/ClassEntry.html">RDoc::RI::ClassEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Constant.html">RDoc::RI::Constant</a></li>
+				
+					<li><a href="../../RDoc/RI/DefaultDisplay.html">RDoc::RI::DefaultDisplay</a></li>
+				
+					<li><a href="../../RDoc/RI/Description.html">RDoc::RI::Description</a></li>
+				
+					<li><a href="../../RDoc/RI/Display.html">RDoc::RI::Display</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver.html">RDoc::RI::Driver</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/Error.html">RDoc::RI::Driver::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/NotFoundError.html">RDoc::RI::Driver::NotFoundError</a></li>
+				
+					<li><a href="../../RDoc/RI/Driver/OpenStructHash.html">RDoc::RI::Driver::OpenStructHash</a></li>
+				
+					<li><a href="../../RDoc/RI/Error.html">RDoc::RI::Error</a></li>
+				
+					<li><a href="../../RDoc/RI/Formatter.html">RDoc::RI::Formatter</a></li>
+				
+					<li><a href="../../RDoc/RI/HtmlFormatter.html">RDoc::RI::HtmlFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/IncludedModule.html">RDoc::RI::IncludedModule</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodDescription.html">RDoc::RI::MethodDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodEntry.html">RDoc::RI::MethodEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/MethodSummary.html">RDoc::RI::MethodSummary</a></li>
+				
+					<li><a href="../../RDoc/RI/ModuleDescription.html">RDoc::RI::ModuleDescription</a></li>
+				
+					<li><a href="../../RDoc/RI/NameDescriptor.html">RDoc::RI::NameDescriptor</a></li>
+				
+					<li><a href="../../RDoc/RI/NamedThing.html">RDoc::RI::NamedThing</a></li>
+				
+					<li><a href="../../RDoc/RI/OverstrikeFormatter.html">RDoc::RI::OverstrikeFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/Reader.html">RDoc::RI::Reader</a></li>
+				
+					<li><a href="../../RDoc/RI/SimpleFormatter.html">RDoc::RI::SimpleFormatter</a></li>
+				
+					<li><a href="../../RDoc/RI/TopLevelEntry.html">RDoc::RI::TopLevelEntry</a></li>
+				
+					<li><a href="../../RDoc/RI/Writer.html">RDoc::RI::Writer</a></li>
+				
+					<li><a href="../../RDoc/Require.html">RDoc::Require</a></li>
+				
+					<li><a href="../../RDoc/RubyLex.html">RDoc::RubyLex</a></li>
+				
+					<li><a href="../../RDoc/RubyLex/BufferedReader.html">RDoc::RubyLex::BufferedReader</a></li>
+				
+					<li><a href="../../RDoc/RubyToken.html">RDoc::RubyToken</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkError.html">RDoc::RubyToken::TkError</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkId.html">RDoc::RubyToken::TkId</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkKW.html">RDoc::RubyToken::TkKW</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkNode.html">RDoc::RubyToken::TkNode</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOPASGN.html">RDoc::RubyToken::TkOPASGN</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkOp.html">RDoc::RubyToken::TkOp</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkUnknownChar.html">RDoc::RubyToken::TkUnknownChar</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/TkVal.html">RDoc::RubyToken::TkVal</a></li>
+				
+					<li><a href="../../RDoc/RubyToken/Token.html">RDoc::RubyToken::Token</a></li>
+				
+					<li><a href="../../RDoc/SingleClass.html">RDoc::SingleClass</a></li>
+				
+					<li><a href="../../RDoc/Stats.html">RDoc::Stats</a></li>
+				
+					<li><a href="../../RDoc/Stats/Normal.html">RDoc::Stats::Normal</a></li>
+				
+					<li><a href="../../RDoc/Stats/Quiet.html">RDoc::Stats::Quiet</a></li>
+				
+					<li><a href="../../RDoc/Stats/Verbose.html">RDoc::Stats::Verbose</a></li>
+				
+					<li><a href="../../RDoc/TokenStream.html">RDoc::TokenStream</a></li>
+				
+					<li><a href="../../RDoc/TopLevel.html">RDoc::TopLevel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RDoc::Generator::HTML</h1>
+
+		<div id="description">
+			<p>
+We&#8217;re responsible for generating all the <a
+href="HTML/HTML.html">HTML</a> files from the object tree defined in
+code_objects.rb. We generate:
+</p>
+<dl>
+<dt>files</dt><dd><p>
+an html file for each input file given. These input files appear as objects
+of class <a href="../TopLevel.html">TopLevel</a>
+</p>
+</dd>
+<dt>classes</dt><dd><p>
+an html file for each class or module encountered. These classes are not
+grouped by file: if a file contains four classes, we&#8217;ll generate an
+html file for the file itself, and four html files for the individual
+classes.
+</p>
+</dd>
+<dt>indices</dt><dd><p>
+we generate three indices for files, classes, and methods. These are
+displayed in a browser like window with three index panes across the top
+and the selected description below
+</p>
+</dd>
+</dl>
+<p>
+<a href="Method.html">Method</a> descriptions appear in whatever entity
+(file, class, or module) that contains them.
+</p>
+<p>
+We generate files in a structure below a specified subdirectory, normally
+<tt>doc</tt>.
+</p>
+<pre>
+ opdir
+    |
+    |___ files
+    |       |__  per file summaries
+    |
+    |___ classes
+            |__ per class/module descriptions
+</pre>
+<p>
+<a href="HTML/HTML.html">HTML</a> is generated using the Template class.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="for-method" class="method-detail ">
+				<a name="method-c-for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">for</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="../Generator.html">Generator</a> may need to return specific
+subclasses depending on the options they are passed. Because of this we
+create them using a factory
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="for-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 52</span>
+52:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-keyword kw">for</span>(<span class="ruby-identifier">options</span>)
+53:     <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">AllReferences</span>.<span class="ruby-identifier">reset</span>
+54:     <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">Method</span>.<span class="ruby-identifier">reset</span>
+55: 
+56:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">all_one_file</span>
+57:       <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">HTMLInOne</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">options</span>
+58:     <span class="ruby-keyword kw">else</span>
+59:       <span class="ruby-identifier">new</span> <span class="ruby-identifier">options</span>
+60:     <span class="ruby-keyword kw">end</span>
+61:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set up a new <a href="HTML/HTML.html">HTML</a> generator. Basically all we
+do here is load up the correct output temlate
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 71</span>
+71:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>) <span class="ruby-comment cmt">#:not-new:</span>
+72:     <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+73:     <span class="ruby-identifier">load_html_template</span>
+74:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="generate-method" class="method-detail ">
+				<a name="method-i-generate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">generate</span><span
+						class="method-args">(toplevels)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Build the initial indices and output objects based on an array of <a
+href="../TopLevel.html">TopLevel</a> objects containing the extracted
+information.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="generate-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 81</span>
+81:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">toplevels</span>)
+82:     <span class="ruby-ivar">@toplevels</span>  = <span class="ruby-identifier">toplevels</span>
+83:     <span class="ruby-ivar">@files</span>      = []
+84:     <span class="ruby-ivar">@classes</span>    = []
+85:     <span class="ruby-ivar">@template_cache</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Cache</span>.<span class="ruby-identifier">instance</span>
+86: 
+87:     <span class="ruby-identifier">write_style_sheet</span>
+88:     <span class="ruby-identifier">gen_sub_directories</span>
+89:     <span class="ruby-identifier">build_indices</span>
+90:     <span class="ruby-identifier">generate_html</span>
+91:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="build-indices-method" class="method-detail ">
+				<a name="method-i-build_indices"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_indices</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-indices-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 168</span>
+168:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_indices</span>
+169:     <span class="ruby-ivar">@files</span>, <span class="ruby-ivar">@classes</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">Context</span>.<span class="ruby-identifier">build_indices</span>(<span class="ruby-ivar">@toplevels</span>,
+170:                                                               <span class="ruby-ivar">@options</span>,
+171:                                                               <span class="ruby-ivar">@template_cache</span>)
+172:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-an-index-method" class="method-detail ">
+				<a name="method-i-gen_an_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_an_index</span><span
+						class="method-args">(collection, title, template, filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gen-an-index-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 264</span>
+264:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_an_index</span>(<span class="ruby-identifier">collection</span>, <span class="ruby-identifier">title</span>, <span class="ruby-identifier">template</span>, <span class="ruby-identifier">filename</span>)
+265:     <span class="ruby-identifier">template</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TemplatePage</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">FR_INDEX_BODY</span>, <span class="ruby-identifier">template</span>
+266:     <span class="ruby-identifier">res</span> = []
+267:     <span class="ruby-identifier">collection</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+268:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">document_self</span>
+269:         <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-value">:href</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">path</span>, <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">index_name</span> }
+270:       <span class="ruby-keyword kw">end</span>
+271:     <span class="ruby-keyword kw">end</span>
+272: 
+273:     <span class="ruby-identifier">values</span> = {
+274:       <span class="ruby-value">:entries</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">res</span>,
+275:       <span class="ruby-value">:title</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-node">&quot;#{title} [#{@options.title}]&quot;</span>),
+276:       <span class="ruby-value">:list_title</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-identifier">title</span>),
+277:       <span class="ruby-value">:index_url</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@main_url</span>,
+278:       <span class="ruby-value">:charset</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">charset</span>,
+279:       <span class="ruby-value">:style_url</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">style_url</span>(<span class="ruby-value str">''</span>, <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">css</span>),
+280:     }
+281: 
+282:     <span class="ruby-identifier">open</span> <span class="ruby-identifier">filename</span>, <span class="ruby-value str">'w'</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+283:       <span class="ruby-identifier">template</span>.<span class="ruby-identifier">write_html_on</span>(<span class="ruby-identifier">f</span>, <span class="ruby-identifier">values</span>)
+284:     <span class="ruby-keyword kw">end</span>
+285:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-class-index-method" class="method-detail ">
+				<a name="method-i-gen_class_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_class_index</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gen-class-index-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 254</span>
+254:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_class_index</span>
+255:     <span class="ruby-identifier">gen_an_index</span>(<span class="ruby-ivar">@classes</span>, <span class="ruby-value str">'Classes'</span>, <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">CLASS_INDEX</span>,
+256:                  <span class="ruby-value str">&quot;fr_class_index.html&quot;</span>)
+257:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-file-index-method" class="method-detail ">
+				<a name="method-i-gen_file_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_file_index</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gen-file-index-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 250</span>
+250:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_file_index</span>
+251:     <span class="ruby-identifier">gen_an_index</span> <span class="ruby-ivar">@files</span>, <span class="ruby-value str">'Files'</span>, <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">FILE_INDEX</span>, <span class="ruby-value str">&quot;fr_file_index.html&quot;</span>
+252:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-into-method" class="method-detail ">
+				<a name="method-i-gen_into"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_into</span><span
+						class="method-args">(list)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gen-into-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 204</span>
+204:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_into</span>(<span class="ruby-identifier">list</span>)
+205:     <span class="ruby-comment cmt">#</span>
+206:     <span class="ruby-comment cmt"># The file, class, and method lists technically should be regenerated</span>
+207:     <span class="ruby-comment cmt"># for every output file, in order that the relative links be correct</span>
+208:     <span class="ruby-comment cmt"># (we are worried here about frameless templates, which need this</span>
+209:     <span class="ruby-comment cmt"># information for every generated page).  Doing this is a bit slow,</span>
+210:     <span class="ruby-comment cmt"># however.  For a medium-sized gem, this increased rdoc's runtime by</span>
+211:     <span class="ruby-comment cmt"># about 5% (using the 'time' command-line utility).  While this is not</span>
+212:     <span class="ruby-comment cmt"># necessarily a problem, I do not want to pessimize rdoc for large</span>
+213:     <span class="ruby-comment cmt"># projects, however, and so we only regenerate the lists when the</span>
+214:     <span class="ruby-comment cmt"># directory of the output file changes, which seems like a reasonable</span>
+215:     <span class="ruby-comment cmt"># optimization.</span>
+216:     <span class="ruby-comment cmt">#</span>
+217:     <span class="ruby-identifier">file_list</span> = {}
+218:     <span class="ruby-identifier">class_list</span> = {}
+219:     <span class="ruby-identifier">method_list</span> = {}
+220:     <span class="ruby-identifier">prev_op_dir</span> = <span class="ruby-keyword kw">nil</span>
+221: 
+222:     <span class="ruby-comment cmt"># Extra optimization: sort the list based on item directories, to minimize</span>
+223:     <span class="ruby-comment cmt"># the number of times the directory changes. This reduces runtime by about</span>
+224:     <span class="ruby-comment cmt"># 8% on RDoc's own sources.</span>
+225:     <span class="ruby-identifier">sorted_list</span> = <span class="ruby-identifier">list</span>.<span class="ruby-identifier">sort</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span><span class="ruby-operator">|</span>
+226:       <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">a</span>.<span class="ruby-identifier">path</span>) <span class="ruby-operator">&lt;=&gt;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">b</span>.<span class="ruby-identifier">path</span>)
+227:     <span class="ruby-keyword kw">end</span>
+228: 
+229:     <span class="ruby-identifier">sorted_list</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
+230:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">document_self</span>
+231: 
+232:       <span class="ruby-identifier">op_file</span> = <span class="ruby-identifier">item</span>.<span class="ruby-identifier">path</span>
+233:       <span class="ruby-identifier">op_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">op_file</span>)
+234: 
+235:       <span class="ruby-keyword kw">if</span>(<span class="ruby-identifier">op_dir</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">prev_op_dir</span>)
+236:         <span class="ruby-identifier">file_list</span> = <span class="ruby-identifier">index_to_links</span> <span class="ruby-identifier">op_file</span>, <span class="ruby-ivar">@sorted_files</span>
+237:         <span class="ruby-identifier">class_list</span> = <span class="ruby-identifier">index_to_links</span> <span class="ruby-identifier">op_file</span>, <span class="ruby-ivar">@sorted_classes</span>
+238:         <span class="ruby-identifier">method_list</span> = <span class="ruby-identifier">index_to_links</span> <span class="ruby-identifier">op_file</span>, <span class="ruby-ivar">@sorted_methods</span>
+239:       <span class="ruby-keyword kw">end</span>
+240:       <span class="ruby-identifier">prev_op_dir</span> = <span class="ruby-identifier">op_dir</span>
+241: 
+242:       <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-identifier">op_dir</span>
+243: 
+244:       <span class="ruby-identifier">open</span> <span class="ruby-identifier">op_file</span>, <span class="ruby-value str">'w'</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">io</span><span class="ruby-operator">|</span>
+245:         <span class="ruby-identifier">item</span>.<span class="ruby-identifier">write_on</span> <span class="ruby-identifier">io</span>, <span class="ruby-identifier">file_list</span>, <span class="ruby-identifier">class_list</span>, <span class="ruby-identifier">method_list</span>
+246:       <span class="ruby-keyword kw">end</span>
+247:     <span class="ruby-keyword kw">end</span>
+248:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-main-index-method" class="method-detail ">
+				<a name="method-i-gen_main_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_main_index</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The main index page is mostly a template frameset, but includes the initial
+page. If the <tt>--main</tt> option was given, we use this as our main
+page, otherwise we use the first file specified on the command line.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gen-main-index-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 293</span>
+293:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_main_index</span>
+294:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">const_defined?</span> <span class="ruby-value">:FRAMELESS</span> <span class="ruby-keyword kw">then</span>
+295:       <span class="ruby-comment cmt">#</span>
+296:       <span class="ruby-comment cmt"># If we're using a template without frames, then just redirect</span>
+297:       <span class="ruby-comment cmt"># to it from index.html.</span>
+298:       <span class="ruby-comment cmt">#</span>
+299:       <span class="ruby-comment cmt"># One alternative to this, expanding the main page's template into</span>
+300:       <span class="ruby-comment cmt"># index.html, is tricky because the relative URLs will be different</span>
+301:       <span class="ruby-comment cmt"># (since index.html is located in at the site's root,</span>
+302:       <span class="ruby-comment cmt"># rather than within a files or a classes subdirectory).</span>
+303:       <span class="ruby-comment cmt">#</span>
+304:       <span class="ruby-identifier">open</span> <span class="ruby-value str">'index.html'</span>, <span class="ruby-value str">'w'</span>  <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+305:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-value str">%{&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;
+306:                &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;}</span>)
+307:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-value str">%{&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;en&quot;
+308:                 lang=&quot;en&quot;&gt;}</span>)
+309:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-value str">%{&lt;head&gt;}</span>)
+310:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">%{&lt;title&gt;#{CGI.escapeHTML(@options.title)}&lt;/title&gt;}</span>)
+311:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">%{&lt;meta http-equiv=&quot;refresh&quot; content=&quot;0; url=#{@main_url}&quot; /&gt;}</span>)
+312:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-value str">%{&lt;/head&gt;}</span>)
+313:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-value str">%{&lt;body&gt;&lt;/body&gt;}</span>)
+314:         <span class="ruby-identifier">f</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-value str">%{&lt;/html&gt;}</span>)
+315:       <span class="ruby-keyword kw">end</span>
+316:     <span class="ruby-keyword kw">else</span>
+317:       <span class="ruby-identifier">main</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TemplatePage</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">INDEX</span>
+318: 
+319:       <span class="ruby-identifier">open</span> <span class="ruby-value str">'index.html'</span>, <span class="ruby-value str">'w'</span>  <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+320:         <span class="ruby-identifier">style_url</span> = <span class="ruby-identifier">style_url</span> <span class="ruby-value str">''</span>, <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">css</span>
+321: 
+322:         <span class="ruby-identifier">classes</span> = <span class="ruby-ivar">@classes</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">klass</span><span class="ruby-operator">|</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">value_hash</span> }
+323: 
+324:         <span class="ruby-identifier">values</span> = {
+325:           <span class="ruby-value">:initial_page</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@main_url</span>,
+326:           <span class="ruby-value">:style_url</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">style_url</span>(<span class="ruby-value str">''</span>, <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">css</span>),
+327:           <span class="ruby-value">:title</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-ivar">@options</span>.<span class="ruby-identifier">title</span>),
+328:           <span class="ruby-value">:charset</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">charset</span>,
+329:           <span class="ruby-value">:classes</span>       =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">classes</span>,
+330:         }
+331: 
+332:         <span class="ruby-identifier">values</span>[<span class="ruby-value">:inline_source</span>] = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">inline_source</span>
+333: 
+334:         <span class="ruby-identifier">main</span>.<span class="ruby-identifier">write_html_on</span> <span class="ruby-identifier">f</span>, <span class="ruby-identifier">values</span>
+335:       <span class="ruby-keyword kw">end</span>
+336:     <span class="ruby-keyword kw">end</span>
+337:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-method-index-method" class="method-detail ">
+				<a name="method-i-gen_method_index"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_method_index</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gen-method-index-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 259</span>
+259:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_method_index</span>
+260:     <span class="ruby-identifier">gen_an_index</span>(<span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">Method</span>.<span class="ruby-identifier">all_methods</span>, <span class="ruby-value str">'Methods'</span>,
+261:                  <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">METHOD_INDEX</span>, <span class="ruby-value str">&quot;fr_method_index.html&quot;</span>)
+262:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gen-sub-directories-method" class="method-detail ">
+				<a name="method-i-gen_sub_directories"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gen_sub_directories</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+See the comments at the top for a description of the directory structure
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="gen-sub-directories-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 160</span>
+160:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gen_sub_directories</span>
+161:     <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">FILE_DIR</span>
+162:     <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">CLASS_DIR</span>
+163:   <span class="ruby-keyword kw">rescue</span>
+164:     <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">$!</span>.<span class="ruby-identifier">message</span>
+165:     <span class="ruby-identifier">exit</span> <span class="ruby-value">1</span>
+166:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="generate-html-method" class="method-detail ">
+				<a name="method-i-generate_html"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">generate_html</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generate all the <a href="HTML/HTML.html">HTML</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="generate-html-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 177</span>
+177:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate_html</span>
+178:     <span class="ruby-ivar">@main_url</span> = <span class="ruby-identifier">main_url</span>
+179:     <span class="ruby-ivar">@sorted_files</span> = <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">sort</span>
+180:     <span class="ruby-ivar">@sorted_classes</span> = <span class="ruby-ivar">@classes</span>.<span class="ruby-identifier">sort</span>
+181:     <span class="ruby-ivar">@sorted_methods</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">Method</span>.<span class="ruby-identifier">all_methods</span>.<span class="ruby-identifier">sort</span>
+182: 
+183:     <span class="ruby-comment cmt"># the individual descriptions for files and classes</span>
+184:     <span class="ruby-identifier">gen_into</span>(<span class="ruby-ivar">@files</span>)
+185:     <span class="ruby-identifier">gen_into</span>(<span class="ruby-ivar">@classes</span>)
+186: 
+187:     <span class="ruby-comment cmt"># and the index files</span>
+188:     <span class="ruby-identifier">gen_file_index</span>
+189:     <span class="ruby-identifier">gen_class_index</span>
+190:     <span class="ruby-identifier">gen_method_index</span>
+191:     <span class="ruby-identifier">gen_main_index</span>
+192: 
+193:     <span class="ruby-comment cmt"># this method is defined in the template file</span>
+194:     <span class="ruby-identifier">values</span> = {
+195:       <span class="ruby-value">:title_suffix</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">CGI</span>.<span class="ruby-identifier">escapeHTML</span>(<span class="ruby-node">&quot;[#{@options.title}]&quot;</span>),
+196:       <span class="ruby-value">:charset</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">charset</span>,
+197:       <span class="ruby-value">:style_url</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">style_url</span>(<span class="ruby-value str">''</span>, <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">css</span>),
+198:     }
+199: 
+200:     <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">write_extra_pages</span>(<span class="ruby-identifier">values</span>) <span class="ruby-keyword kw">if</span>
+201:       <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:write_extra_pages</span>)
+202:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="index-to-links-method" class="method-detail ">
+				<a name="method-i-index_to_links"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">index_to_links</span><span
+						class="method-args">(output_path, sorted_collection)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="index-to-links-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 339</span>
+339:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_to_links</span>(<span class="ruby-identifier">output_path</span>, <span class="ruby-identifier">sorted_collection</span>)
+340:     <span class="ruby-identifier">result</span> = <span class="ruby-identifier">sorted_collection</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+341:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">document_self</span>
+342:       { <span class="ruby-value">:href</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Markup</span><span class="ruby-operator">::</span><span class="ruby-constant">ToHtml</span>.<span class="ruby-identifier">gen_relative_url</span>(<span class="ruby-identifier">output_path</span>, <span class="ruby-identifier">f</span>.<span class="ruby-identifier">path</span>),
+343:         <span class="ruby-value">:name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">f</span>.<span class="ruby-identifier">index_name</span> }
+344:     <span class="ruby-keyword kw">end</span>
+345:     <span class="ruby-identifier">result</span>.<span class="ruby-identifier">compact!</span>
+346:     <span class="ruby-identifier">result</span>
+347:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-html-template-method" class="method-detail ">
+				<a name="method-i-load_html_template"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_html_template</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Load up the <a href="HTML/HTML.html">HTML</a> template specified in the
+options.  If the template name contains a slash, use it literally.
+</p>
+<p>
+If the template is not a path, first look for it in rdoc&#8217;s <a
+href="HTML/HTML.html">HTML</a> template directory.  Perhaps this behavior
+should be reversed (first try to include the template and, only if that
+fails, try to include it in the default template directory).  One danger
+with reversing the behavior, however, is that if something like require
+&#8216;html&#8217; could load up an unrelated file in the standard library
+or in a gem.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-html-template-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 106</span>
+106:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_html_template</span>
+107:     <span class="ruby-identifier">template</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">template</span>
+108: 
+109:     <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">template</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">%{/|\\}</span> <span class="ruby-keyword kw">then</span>
+110:       <span class="ruby-identifier">generator_name</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">generator</span>.<span class="ruby-identifier">name</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/^RDoc::Generator::/</span>, <span class="ruby-value str">''</span>)
+111:       <span class="ruby-identifier">template</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'rdoc'</span>, <span class="ruby-value str">'generator'</span>, <span class="ruby-identifier">generator_name</span>.<span class="ruby-identifier">downcase</span>,
+112:                            <span class="ruby-identifier">template</span>)
+113:     <span class="ruby-keyword kw">end</span>
+114: 
+115:     <span class="ruby-keyword kw">begin</span>
+116:       <span class="ruby-identifier">require</span> <span class="ruby-identifier">template</span>
+117: 
+118:       <span class="ruby-ivar">@template</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">const_get</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">template</span>.<span class="ruby-identifier">upcase</span>
+119:       <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">template_class</span> = <span class="ruby-ivar">@template</span>
+120:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+121:       <span class="ruby-comment cmt"># The template did not exist in the default template directory, so</span>
+122:       <span class="ruby-comment cmt"># see if require can find the template elsewhere (in a gem, for</span>
+123:       <span class="ruby-comment cmt"># instance).</span>
+124:       <span class="ruby-keyword kw">if</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">message</span>[<span class="ruby-identifier">template</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">template</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">template</span>)
+125:         <span class="ruby-identifier">template</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">template</span>
+126:         <span class="ruby-keyword kw">retry</span>
+127:       <span class="ruby-keyword kw">end</span>
+128: 
+129:       <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Could not find HTML template '#{template}': #{e.message}&quot;</span>
+130:       <span class="ruby-identifier">exit</span> <span class="ruby-value">99</span>
+131:     <span class="ruby-keyword kw">end</span>
+132:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="main-url-method" class="method-detail ">
+				<a name="method-i-main_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">main_url</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the url of the main page
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="main-url-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 352</span>
+352:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">main_url</span>
+353:     <span class="ruby-identifier">main_page</span> = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">main_page</span>
+354: 
+355:     <span class="ruby-comment cmt">#</span>
+356:     <span class="ruby-comment cmt"># If a main page has been specified (--main), then search for it</span>
+357:     <span class="ruby-comment cmt"># in the AllReferences array.  This allows either files or classes</span>
+358:     <span class="ruby-comment cmt"># to be used for the main page.</span>
+359:     <span class="ruby-comment cmt">#</span>
+360:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">main_page</span> <span class="ruby-keyword kw">then</span>
+361:       <span class="ruby-identifier">main_page_ref</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">AllReferences</span>[<span class="ruby-identifier">main_page</span>]
+362: 
+363:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">main_page_ref</span> <span class="ruby-keyword kw">then</span>
+364:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">main_page_ref</span>.<span class="ruby-identifier">path</span>
+365:       <span class="ruby-keyword kw">else</span>
+366:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Could not find main page #{main_page}&quot;</span>
+367:       <span class="ruby-keyword kw">end</span>
+368:     <span class="ruby-keyword kw">end</span>
+369: 
+370:     <span class="ruby-comment cmt">#</span>
+371:     <span class="ruby-comment cmt"># No main page has been specified, so just use the README.</span>
+372:     <span class="ruby-comment cmt">#</span>
+373:     <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+374:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^README/</span>
+375:     <span class="ruby-keyword kw">end</span>
+376: 
+377:     <span class="ruby-comment cmt">#</span>
+378:     <span class="ruby-comment cmt"># There's no README (shame! shame!).  Just use the first file</span>
+379:     <span class="ruby-comment cmt"># that will be documented.</span>
+380:     <span class="ruby-comment cmt">#</span>
+381:     <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+382:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">document_self</span>
+383:     <span class="ruby-keyword kw">end</span>
+384: 
+385:     <span class="ruby-comment cmt">#</span>
+386:     <span class="ruby-comment cmt"># There are no files to be documented...  Something seems very wrong.</span>
+387:     <span class="ruby-comment cmt">#</span>
+388:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>, <span class="ruby-value str">&quot;Couldn't find anything to document (perhaps :stopdoc: has been used in all classes)!&quot;</span>
+389:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-style-sheet-method" class="method-detail ">
+				<a name="method-i-write_style_sheet"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_style_sheet</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Write out the style sheet used by the main frames
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="write-style-sheet-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rdoc/generator/html.rb, line 137</span>
+137:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_style_sheet</span>
+138:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:STYLE</span> <span class="ruby-keyword kw">or</span>
+139:                   <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value str">'STYLE'</span>
+140: 
+141:     <span class="ruby-identifier">template</span> = <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">TemplatePage</span>.<span class="ruby-identifier">new</span> <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">STYLE</span>
+142: 
+143:     <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">css</span> <span class="ruby-keyword kw">then</span>
+144:       <span class="ruby-identifier">open</span> <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span><span class="ruby-operator">::</span><span class="ruby-constant">CSS_NAME</span>, <span class="ruby-value str">'w'</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span>
+145:         <span class="ruby-identifier">values</span> = {}
+146: 
+147:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:FONTS</span> <span class="ruby-keyword kw">or</span>
+148:            <span class="ruby-ivar">@template</span>.<span class="ruby-identifier">constants</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value str">'FONTS'</span> <span class="ruby-keyword kw">then</span>
+149:           <span class="ruby-identifier">values</span>[<span class="ruby-value">:fonts</span>] = <span class="ruby-ivar">@template</span><span class="ruby-operator">::</span><span class="ruby-constant">FONTS</span>
+150:         <span class="ruby-keyword kw">end</span>
+151: 
+152:         <span class="ruby-identifier">template</span>.<span class="ruby-identifier">write_html_on</span>(<span class="ruby-identifier">f</span>, <span class="ruby-identifier">values</span>)
+153:       <span class="ruby-keyword kw">end</span>
+154:     <span class="ruby-keyword kw">end</span>
+155:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

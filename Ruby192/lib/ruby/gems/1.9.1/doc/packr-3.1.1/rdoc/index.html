@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>packr-3.1.1 Documentation</title>
+
+	<link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+	
+	<h1>packr-3.1.1 Documentation</h1>
+
+	
+	<div id="main">
+		
+<ul>
+<li><p>
+<a href="http://github.com/jcoglan/packr">github.com/jcoglan/packr</a>
+</p>
+</li>
+<li><p>
+<a href="http://dean.edwards.name/packer/">dean.edwards.name/packer/</a>
+</p>
+</li>
+<li><p>
+<a href="http://base2.googlecode.com">base2.googlecode.com</a>
+</p>
+</li>
+</ul>
+<h2>Description</h2>
+<p>
+PackR is a Ruby version of Dean Edwards&#8217; JavaScript compressor.
+</p>
+<h2>Features</h2>
+<ul>
+<li><p>
+Whitespace and comment removal
+</p>
+</li>
+<li><p>
+Compression of local variable names
+</p>
+</li>
+<li><p>
+Compression and obfuscation of &#8216;private&#8217; (_underscored)
+identifiers
+</p>
+</li>
+<li><p>
+Base-62 encoding
+</p>
+</li>
+</ul>
+<h2>Synopsis</h2>
+<p>
+To call from within a Ruby program:
+</p>
+<pre>
+  require 'packr'
+  
+  code = File.read('my_script.js')
+  compressed = Packr.pack(code)
+  File.open('my_script.min.js', 'wb') { |f| f.write(compressed) }
+</pre>
+<p>
+This method takes a number of options to control compression, for example:
+</p>
+<pre>
+  compressed = Packr.pack(code, :shrink_vars =&gt; true, :base62 =&gt; true)
+</pre>
+<p>
+The full list of available options is:
+</p>
+<ul>
+<li><p>
+<tt>:shrink_vars</tt> &#8212; set to <tt>true</tt> to compress local
+variable names
+</p>
+</li>
+<li><p>
+<tt>:private</tt> &#8212; set to <tt>true</tt> to obfuscate
+&#8216;private&#8217; identifiers, i.e. names beginning with a single
+underscore
+</p>
+</li>
+<li><p>
+<tt>:base62</tt> &#8212; encode the program using base 62
+</p>
+</li>
+<li><p>
+<tt>:protect</tt> &#8212; an array of variable names to protect from
+compression, e.g.
+</p>
+<p>
+compressed = <a href="Packr.html#method-i-pack">Packr.pack</a>(code,
+:shrink_vars => true,
+</p>
+<pre>
+                              :protect =&gt; %w[$super self])
+</pre>
+</li>
+</ul>
+<p>
+To call from the command line (use <tt>packr --help</tt> to see available
+options):
+</p>
+<pre>
+  packr my_script.js &gt; my_script.min.js
+</pre>
+<h2>Notes</h2>
+<p>
+This program is not a JavaScript parser, and rewrites your files using
+regular expressions. Be sure to include semicolons and braces everywhere
+they are required so that your program will work correctly when packed down
+to a single line.
+</p>
+<p>
+By far the most efficient way to serve JavaScript over the web is to use
+PackR with the &#8212;shrink-vars flag, combined with gzip compression. If
+you don&#8217;t have access to your server config to set up mod_deflate,
+you can generate gzip files using (on Unix-like systems):
+</p>
+<pre>
+  packr -s my-file.js | gzip &gt; my-file.js.gz
+  
+</pre>
+<p>
+You can then get Apache to serve the files by putting this in your
+.htaccess file:
+</p>
+<pre>
+  AddEncoding gzip .gz
+  RewriteCond %{HTTP:Accept-encoding} gzip
+  RewriteCond %{HTTP_USER_AGENT} !Safari
+  RewriteCond %{REQUEST_FILENAME}.gz -f
+  RewriteRule ^(.*)$ $1.gz [QSA,L]
+</pre>
+<p>
+If you really cannot serve gzip files, use the &#8212;base62 option to
+further compress your code. This mode is at its best when compressing large
+files with many repeated tokens.
+</p>
+<p>
+The &#8212;private option can be used to stop other programs calling
+private methods in your code by renaming anything beginning with a single
+underscore. Beware that you should not use this if the generated file
+contains &#8216;private&#8217; methods that need to be accessible by other
+files. Also know that all the files that access any particular private
+method must be compressed together so they all get the same rewritten name
+for the private method.
+</p>
+<h2>License</h2>
+<p>
+(The MIT License)
+</p>
+<p>
+Copyright &#169; 2004-2011 Dean Edwards, James Coglan
+</p>
+<p>
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+&#8216;Software&#8217;), to deal in the Software without restriction,
+including without limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to the
+following conditions:
+</p>
+<p>
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+</p>
+<p>
+THE SOFTWARE IS PROVIDED &#8216;AS IS&#8217;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p>
+
+	</div>
+	
+
+	
+	
+	<h2>Files</h2>
+	<ul>
+		
+			<li class="file"><a href="README_rdoc.html">README.rdoc</a></li>
+		
+	</ul>
+	
+
+	<h2 id="classes">Classes/Modules</h2>
+	<ul>
+		
+		<li class="class"><a href="Packr.html">Packr</a></li>
+		
+		<li class="class"><a href="Packr/Base62.html">Packr::Base62</a></li>
+		
+		<li class="class"><a href="Packr/Collection.html">Packr::Collection</a></li>
+		
+		<li class="class"><a href="Packr/Encoder.html">Packr::Encoder</a></li>
+		
+		<li class="class"><a href="Packr/Map.html">Packr::Map</a></li>
+		
+		<li class="class"><a href="Packr/Minifier.html">Packr::Minifier</a></li>
+		
+		<li class="class"><a href="Packr/Parser.html">Packr::Parser</a></li>
+		
+		<li class="class"><a href="Packr/Privates.html">Packr::Privates</a></li>
+		
+		<li class="class"><a href="Packr/RegexpGroup.html">Packr::RegexpGroup</a></li>
+		
+		<li class="class"><a href="Packr/RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+		
+		<li class="class"><a href="Packr/Shrinker.html">Packr::Shrinker</a></li>
+		
+		<li class="class"><a href="Packr/Words.html">Packr::Words</a></li>
+		
+		<li class="class"><a href="Packr/Words/Item.html">Packr::Words::Item</a></li>
+		
+		<li class="class"><a href="String.html">String</a></li>
+		
+	</ul>
+
+	<h2 id="methods">Methods</h2>
+	<ul>
+		
+			<li><a href="Packr/Minifier.html#method-c-conditional_comments">::conditional_comments &mdash; Packr::Minifier</a></li>
+		
+			<li><a href="Packr/RegexpGroup.html#method-c-count">::count &mdash; Packr::RegexpGroup</a></li>
+		
+			<li><a href="Packr/Collection.html#method-c-create">::create &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr.html#method-c-encode52">::encode52 &mdash; Packr</a></li>
+		
+			<li><a href="Packr.html#method-c-encode62">::encode62 &mdash; Packr</a></li>
+		
+			<li><a href="Packr/Words/Item.html#method-c-new">::new &mdash; Packr::Words::Item</a></li>
+		
+			<li><a href="Packr/Privates.html#method-c-new">::new &mdash; Packr::Privates</a></li>
+		
+			<li><a href="Packr/Encoder.html#method-c-new">::new &mdash; Packr::Encoder</a></li>
+		
+			<li><a href="Packr/Map.html#method-c-new">::new &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/RegexpGroup.html#method-c-new">::new &mdash; Packr::RegexpGroup</a></li>
+		
+			<li><a href="Packr.html#method-c-new">::new &mdash; Packr</a></li>
+		
+			<li><a href="Packr/RegexpGroup/Item.html#method-c-new">::new &mdash; Packr::RegexpGroup::Item</a></li>
+		
+			<li><a href="Packr/Collection.html#method-c-new">::new &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Minifier.html#method-c-new">::new &mdash; Packr::Minifier</a></li>
+		
+			<li><a href="Packr.html#method-c-pack">::pack &mdash; Packr</a></li>
+		
+			<li><a href="Packr/Words.html#method-i-add">#add &mdash; Packr::Words</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-add">#add &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-clear">#clear &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-clear">#clear &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-copy">#copy &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-copy">#copy &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Shrinker.html#method-i-decode_data">#decode_data &mdash; Packr::Shrinker</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-each">#each &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-each">#each &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Encoder.html#method-i-encode">#encode &mdash; Packr::Encoder</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-encode">#encode &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Shrinker.html#method-i-encode_data">#encode_data &mdash; Packr::Shrinker</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-escape">#escape &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/RegexpGroup.html#method-i-exec">#exec &mdash; Packr::RegexpGroup</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-get">#get &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-get_at">#get_at &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-get_count">#get_count &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-get_decoder">#get_decoder &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-get_encoder">#get_encoder &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-get_key_words">#get_key_words &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-get_keys">#get_keys &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-get_keys">#get_keys &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-get_pattern">#get_pattern &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-get_values">#get_values &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-has%3F">#has? &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-index_of">#index_of &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-insert_at">#insert_at &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/RegexpGroup.html#method-i-insert_at">#insert_at &mdash; Packr::RegexpGroup</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-item">#item &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-map">#map &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-merge">#merge &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-merge">#merge &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Minifier.html#method-i-minify">#minify &mdash; Packr::Minifier</a></li>
+		
+			<li><a href="Packr.html#method-i-pack">#pack &mdash; Packr</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-put">#put &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-put">#put &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Parser.html#method-i-put">#put &mdash; Packr::Parser</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-put_at">#put_at &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-remove">#remove &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-remove">#remove &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-remove_at">#remove_at &mdash; Packr::Collection</a></li>
+		
+			<li><a href="String.html#method-i-rescape">#rescape &mdash; String</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-reverse%21">#reverse! &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Encoder.html#method-i-search">#search &mdash; Packr::Encoder</a></li>
+		
+			<li><a href="Packr/Base62.html#method-i-search">#search &mdash; Packr::Base62</a></li>
+		
+			<li><a href="Packr/Shrinker.html#method-i-shrink">#shrink &mdash; Packr::Shrinker</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-size">#size &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-size">#size &mdash; Packr::Map</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-slice">#slice &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/Words.html#method-i-sort%21">#sort! &mdash; Packr::Words</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-sort%21">#sort! &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/RegexpGroup.html#method-i-test">#test &mdash; Packr::RegexpGroup</a></li>
+		
+			<li><a href="Packr/Collection.html#method-i-to_s">#to_s &mdash; Packr::Collection</a></li>
+		
+			<li><a href="Packr/RegexpGroup.html#method-i-to_s">#to_s &mdash; Packr::RegexpGroup</a></li>
+		
+			<li><a href="Packr/RegexpGroup/Item.html#method-i-to_s">#to_s &mdash; Packr::RegexpGroup::Item</a></li>
+		
+			<li><a href="Packr/Words/Item.html#method-i-to_s">#to_s &mdash; Packr::Words::Item</a></li>
+		
+			<li><a href="Packr/Map.html#method-i-union">#union &mdash; Packr::Map</a></li>
+		
+	</ul>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>

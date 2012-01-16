@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>File: Makefile [RedCloth-4.2.8 Documentation]</title>
+
+	<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="../../COPYING.html">COPYING</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="../../ext/redcloth_scan/Makefile.html">Makefile</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RedCloth.html">RedCloth</a></li>
+				
+					<li><a href="../../RedCloth/Formatters.html">RedCloth::Formatters</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/Base.html">RedCloth::Formatters::Base</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/HTML.html">RedCloth::Formatters::HTML</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/LATEX.html">RedCloth::Formatters::LATEX</a></li>
+				
+					<li><a href="../../RedCloth/Formatters/LATEX/Settings.html">RedCloth::Formatters::LATEX::Settings</a></li>
+				
+					<li><a href="../../RedCloth/TextileDoc.html">RedCloth::TextileDoc</a></li>
+				
+					<li><a href="../../RedCloth/TextileDoc/ParseError.html">RedCloth::TextileDoc::ParseError</a></li>
+				
+					<li><a href="../../RedCloth/VERSION.html">RedCloth::VERSION</a></li>
+				
+					<li><a href="../../ERB.html">ERB</a></li>
+				
+					<li><a href="../../ERB/Util.html">ERB::Util</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<p>
+SHELL = /bin/sh
+</p>
+<p>
+#### Start of system configuration section. ####
+</p>
+<p>
+srcdir = . topdir = /C/Ruby192/include/ruby-1.9.1 hdrdir =
+/C/Ruby192/include/ruby-1.9.1 arch_hdrdir =
+C:/Ruby192/include/ruby-1.9.1/$(arch) VPATH =
+$(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
+</p>
+<p>
+DESTDIR = C: prefix = $(DESTDIR)/Ruby192 rubylibprefix =
+$(libdir)/$(RUBY_BASE_NAME) exec_prefix = $(prefix) vendorhdrdir =
+$(rubyhdrdir)/vendor_ruby sitehdrdir = $(rubyhdrdir)/site_ruby rubyhdrdir =
+$(includedir)/$(RUBY_BASE_NAME)-$(ruby_version) vendordir =
+$(rubylibprefix)/vendor_ruby sitedir = $(rubylibprefix)/site_ruby ridir =
+$(datarootdir)/$(RI_BASE_NAME) mandir = $(datarootdir)/man localedir =
+$(datarootdir)/locale libdir = $(exec_prefix)/lib psdir = $(docdir) pdfdir
+= $(docdir) dvidir = $(docdir) htmldir = $(docdir) infodir =
+$(datarootdir)/info docdir = $(datarootdir)/doc/$(PACKAGE) oldincludedir =
+$(DESTDIR)/usr/include includedir = $(prefix)/include localstatedir =
+$(prefix)/var sharedstatedir = $(prefix)/com sysconfdir = $(prefix)/etc
+datadir = $(datarootdir) datarootdir = $(prefix)/share libexecdir =
+$(exec_prefix)/libexec sbindir = $(exec_prefix)/sbin bindir =
+$(exec_prefix)/bin rubylibdir = $(rubylibprefix)/$(ruby_version) archdir =
+$(rubylibdir)/$(arch) sitelibdir = $(sitedir)/$(ruby_version) sitearchdir =
+$(sitelibdir)/$(sitearch) vendorlibdir = $(vendordir)/$(ruby_version)
+vendorarchdir = $(vendorlibdir)/$(sitearch)
+</p>
+<p>
+CC = gcc CXX = g++ LIBRUBY = lib$(RUBY_SO_NAME).dll.a LIBRUBY_A =
+lib$(RUBY_SO_NAME)-static.a LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
+LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static OUTFLAG = -o  COUTFLAG = -o 
+</p>
+<p>
+RUBY_EXTCONF_H =  cflags   =  $(optflags) $(debugflags) $(warnflags)
+optflags = -O3 debugflags = -g warnflags = -Wextra -Wno-unused-parameter
+-Wno-parentheses -Wpointer-arith -Wwrite-strings
+-Wno-missing-field-initializers -Wno-long-long CFLAGS   =  $(cflags) -O0
+-Wall   INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward
+-I$(hdrdir) -I$(srcdir) DEFS     =  CPPFLAGS =   $(DEFS) $(cppflags)
+CXXFLAGS = $(CFLAGS) $(cxxflags) ldflags  = -L.
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\tk\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\tcl\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\libyaml\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\pdcurses\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\openssl\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\zlib\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\iconv\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\gdbm\lib
+-LC:\Users\Luis\Projects\oss\oneclick\rubyinstaller\sandbox\libffi\lib 
+dldflags =  -Wl,&#8212;enable-auto-image-base,&#8212;enable-auto-import
+$(DEFFILE) ARCH_FLAG =  DLDFLAGS = $(ldflags) $(dldflags) LDSHARED = $(CC)
+-shared $(if $(filter-out -g -g0,$(debugflags)),,-s) LDSHAREDXX = $(CXX)
+-shared $(if $(filter-out -g -g0,$(debugflags)),,-s) AR = ar EXEEXT = .exe
+</p>
+<p>
+RUBY_BASE_NAME = ruby RUBY_INSTALL_NAME = ruby RUBY_SO_NAME =
+msvcrt-ruby191 arch = i386-mingw32 sitearch = i386-msvcrt ruby_version =
+1.9.1 ruby = C:/Ruby192/bin/ruby RUBY = $(ruby) RM = rm -f RM_RF = $(RUBY)
+-run -e rm &#8212; -rf RMDIRS = $(RUBY) -run -e rmdir &#8212; -p MAKEDIRS =
+/usr/bin/mkdir -p INSTALL = /usr/bin/install -c INSTALL_PROG = $(INSTALL)
+-m 0755 INSTALL_DATA = $(INSTALL) -m 644 COPY = cp
+</p>
+<p>
+#### End of system configuration section. ####
+</p>
+<p>
+preload = 
+</p>
+<p>
+libpath = . $(libdir) LIBPATH =  -L. -L$(libdir) DEFFILE =
+$(TARGET)-$(arch).def
+</p>
+<p>
+CLEANFILES = mkmf.log $(DEFFILE) DISTCLEANFILES =  DISTCLEANDIRS = 
+</p>
+<p>
+extout =  extout_prefix =  target_prefix =  LOCAL_LIBS =  LIBS =
+$(LIBRUBYARG_SHARED)  -lshell32 -lws2_32   SRCS = redcloth_attributes.c
+redcloth_inline.c redcloth_scan.c OBJS = redcloth_attributes.o
+redcloth_inline.o redcloth_scan.o TARGET = redcloth_scan DLLIB =
+$(TARGET).so EXTSTATIC =  STATIC_LIB = 
+</p>
+<p>
+BINDIR        = $(bindir) RUBYCOMMONDIR = $(sitedir)$(target_prefix)
+RUBYLIBDIR =
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/RedCloth-4.2.8/lib$(target_prefix)
+RUBYARCHDIR =
+C:/Ruby192/lib/ruby/gems/1.9.1/gems/RedCloth-4.2.8/lib$(target_prefix)
+HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix) ARCHHDRDIR    =
+$(rubyhdrdir)/$(arch)/ruby$(target_prefix)
+</p>
+<p>
+TARGET_SO     = $(DLLIB) CLEANLIBS     = $(TARGET).so  CLEANOBJS     = *.o 
+*.bak
+</p>
+<p>
+all:    $(DLLIB) static: $(STATIC_LIB) .PHONY: all install static
+install-so install-rb .PHONY: clean clean-so clean-rb
+</p>
+<table>
+<tr><td valign="top">clean-rb-default</td><td></td></tr>
+<tr><td valign="top">clean-rb</td><td></td></tr>
+<tr><td valign="top">clean-so</td><td></td></tr>
+</table>
+<p>
+clean: clean-so clean-rb-default clean-rb
+</p>
+<pre>
+                @-$(RM) $(CLEANLIBS) $(CLEANOBJS) $(CLEANFILES)
+</pre>
+<table>
+<tr><td valign="top">distclean-rb-default</td><td></td></tr>
+<tr><td valign="top">distclean-rb</td><td></td></tr>
+<tr><td valign="top">distclean-so</td><td></td></tr>
+</table>
+<p>
+distclean: clean distclean-so distclean-rb-default distclean-rb
+</p>
+<pre>
+                @-$(RM) Makefile $(RUBY_EXTCONF_H) conftest.* mkmf.log
+                @-$(RM) core ruby$(EXEEXT) *~ $(DISTCLEANFILES)
+                @-$(RMDIRS) $(DISTCLEANDIRS)
+</pre>
+<p>
+realclean: distclean install: install-so install-rb
+</p>
+<p>
+install-so: $(RUBYARCHDIR) install-so: $(RUBYARCHDIR)/$(DLLIB)
+$(RUBYARCHDIR)/$(DLLIB): $(DLLIB)
+</p>
+<pre>
+        @-$(MAKEDIRS) $(@D)
+        $(INSTALL_PROG) $(DLLIB) $(@D)
+</pre>
+<p>
+install-rb: pre-install-rb install-rb-default install-rb-default:
+pre-install-rb-default pre-install-rb: Makefile pre-install-rb-default:
+Makefile $(RUBYARCHDIR):
+</p>
+<pre>
+        $(MAKEDIRS) $@
+</pre>
+<p>
+site-install: site-install-so site-install-rb site-install-so: install-so
+site-install-rb: install-rb
+</p>
+<p>
+.SUFFIXES: .c .m .cc .cxx .cpp .o
+</p>
+<p>
+.cc.o:
+</p>
+<pre>
+        $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $&lt;
+</pre>
+<p>
+.cxx.o:
+</p>
+<pre>
+        $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $&lt;
+</pre>
+<p>
+.cpp.o:
+</p>
+<pre>
+        $(CXX) $(INCFLAGS) $(CPPFLAGS) $(CXXFLAGS) $(COUTFLAG)$@ -c $&lt;
+</pre>
+<p>
+.c.o:
+</p>
+<pre>
+        $(CC) $(INCFLAGS) $(CPPFLAGS) $(CFLAGS) $(COUTFLAG)$@ -c $&lt;
+</pre>
+<p>
+$(DLLIB): $(DEFFILE) $(OBJS) Makefile
+</p>
+<pre>
+        @-$(RM) $(@)
+        $(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
+</pre>
+<p>
+$(DEFFILE): 
+</p>
+<pre>
+        $(RUBY) -e &quot;puts 'EXPORTS', 'Init_$(TARGET)'&quot;  &gt; $@
+</pre>
+<p>
+$(OBJS): $(hdrdir)/ruby.h $(hdrdir)/ruby/defines.h
+$(arch_hdrdir)/ruby/config.h
+</p>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

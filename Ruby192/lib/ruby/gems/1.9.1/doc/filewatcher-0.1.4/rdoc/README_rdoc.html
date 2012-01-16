@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: README.rdoc [filewatcher-0.1.4 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./FileWatcher.html">FileWatcher</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>Filewatcher</h1>
+<p>
+Simple file watcher. Monitors changes in files by polling files.
+</p>
+<h1>Command line utility</h1>
+<p>
+Filewatcher scans filesystem and execute shell commands when files changes.
+</p>
+<p>
+Usage:
+</p>
+<pre>
+   filewatcher [-i interval] &quot;&lt;filename&gt;&quot; &quot;&lt;shell command&gt;&quot;
+</pre>
+<p>
+Where
+</p>
+<pre>
+   filename: filename(s) to scan.
+   shell command: shell command to execute when file changes on disk.
+</pre>
+<p>
+Examples:
+</p>
+<pre>
+   filewatcher &quot;myfile&quot; &quot;echo 'myfile has changed'&quot;
+   filewathcer -i 2 &quot;*.rb ../src/*.rb&quot; &quot;ruby run_tests.rb&quot;
+</pre>
+<p>
+Options:
+</p>
+<pre>
+  --interval, -i &lt;f&gt;:   Interval to scan filesystem. Defaults to 0.5 seconds.
+       --version, -v:   Print version and exit
+          --help, -h:   Show this message
+</pre>
+<h1>Install</h1>
+<pre>
+  sudo gem install filewatcher
+</pre>
+<p>
+You need ruby and rubygems installed.
+</p>
+<h1>Ruby API</h1>
+<p>
+Examples:
+</p>
+<p>
+Watch a list of files and directories:
+</p>
+<pre>
+  require 'filewatcher'
+
+  FileWatcher.new([&quot;lib/&quot;, &quot;Rakefile&quot;]).watch do |filename|
+    puts &quot;Updated &quot; + filename
+  end
+</pre>
+<p>
+Print the names of files beeing watched before we begin:
+</p>
+<pre>
+  FileWatcher.new([&quot;lib/&quot;],&quot;Watching files:&quot;).watch do |filename|
+    puts &quot;Updated &quot; + filename
+  end
+  =&gt; Watching files:
+  lib/filewatcher.rb
+</pre>
+<p>
+To check for changes more often than once every second:
+</p>
+<pre>
+  FileWatcher.new([&quot;README.rdoc&quot;]).watch(0.5) do |filename|
+    puts &quot;Updated &quot; + filename
+  end
+</pre>
+<h1>Credits</h1>
+<p>
+Code inspired by Tom Lieber&#8217;s blogg posting: <a
+href="http://alltom.com/pages/detecting-file-changes-with-ruby">alltom.com/pages/detecting-file-changes-with-ruby</a>
+</p>
+<p>
+Find method by c00lrguy: <a
+href="http://snippets.dzone.com/posts/show/5457">snippets.dzone.com/posts/show/5457</a>
+</p>
+<h2>Note on Patches/Pull Requests</h2>
+<ul>
+<li><p>
+Fork the project.
+</p>
+</li>
+<li><p>
+Make your feature addition or bug fix.
+</p>
+</li>
+<li><p>
+Add tests for it. This is important so I don&#8217;t break it in a future
+version unintentionally.
+</p>
+</li>
+<li><p>
+Commit, do not mess with rakefile, version, or history. (if you want to
+have your own version, that is fine but
+</p>
+<pre>
+ bump version in a commit by itself I can ignore when I pull)
+</pre>
+</li>
+<li><p>
+Send me a pull request. Bonus points for topic branches.
+</p>
+</li>
+</ul>
+<h2>Copyright</h2>
+<p>
+Copyright &#169; 2011 Thomas Flemming. See <a
+href="LICENSE.html">LICENSE</a> for details.
+</p>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

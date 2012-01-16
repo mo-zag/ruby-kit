@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>RedCloth-4.2.8 Documentation</title>
+
+	<link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+	
+	<h1>RedCloth-4.2.8 Documentation</h1>
+
+	
+	<div id="main">
+		
+<table>
+<tr><td valign="top">Homepage</td><td><p>
+<a href="http://redcloth.org">redcloth.org</a>
+</p>
+</td></tr>
+<tr><td valign="top">Author</td><td><p>
+Jason Garber
+</p>
+</td></tr>
+<tr><td valign="top">Copyright</td><td><p>
+&#169; 2011 Jason Garber
+</p>
+</td></tr>
+<tr><td valign="top">License</td><td><p>
+MIT
+</p>
+</td></tr>
+</table>
+<p>
+(See <a href="http://redcloth.org/textile/">redcloth.org/textile/</a> for a
+Textile reference.)
+</p>
+<h1><a href="RedCloth.html">RedCloth</a></h1>
+<p>
+<a href="RedCloth.html">RedCloth</a> is a Ruby library for converting
+Textile into HTML.
+</p>
+<h2>Installing</h2>
+<p>
+<a href="RedCloth.html">RedCloth</a> can be installed via RubyGems:
+</p>
+<pre>
+  gem install RedCloth
+</pre>
+<p>
+It will install the appropriate Ruby, JRuby, or Win32 gem. If using JRuby,
+version 1.1.5 or greater is required.
+</p>
+<h2>Compiling</h2>
+<p>
+If you just want to use <a href="RedCloth.html">RedCloth</a>, you do NOT
+need to build/compile it. It is compiled from C sources automatically when
+you install the gem on the ruby platform. Precompiled binary gems are
+provided for JRuby and Win32 platforms.
+</p>
+<p>
+<a href="RedCloth.html">RedCloth</a> can be compiled with <tt>rake
+compile</tt>. Ragel 6.3 or greater is required. Again, Ragel is NOT needed
+to simply use <a href="RedCloth.html">RedCloth</a>.
+</p>
+<h3>Supported platforms</h3>
+<p>
+By default, the rake compile task builds a native C extension (MRI 1.8 or
+1.9) or Java extension (JRuby 1.3). A pure Ruby version can also be
+generated, but it&#8217;s super slow and Ruby 1.8-only. The JRuby and
+pure-Ruby extensions don&#8217;t support multi-byte characters.
+Cross-compiling for win32 uses rake-compiler.
+</p>
+<p>
+The RedCloth::EXTENSION_LANGUAGE constant indicates in which language your
+copy of <a href="RedCloth.html">RedCloth</a> is compiled.
+</p>
+<h3>Compiling gems</h3>
+<p>
+To compile MRI, JRuby, and win32 gems, you need rvm and rake-compiler.
+These and other dependencies can be installed with bundler. Then rake
+build:all takes care of compiling and packaging all gems.
+</p>
+<pre>
+  1. gem install bundler
+  2. bundle install
+  3. rake-compiler cross-ruby VERSION=1.8.6-p398
+  4. rake-compiler cross-ruby VERSION=1.9.1-p243
+  5. rake build:all
+</pre>
+<h2>Bugs</h2>
+<p>
+Please submit bugs to <a
+href="http://jgarber.lighthouseapp.com/projects/13054-redcloth/overview">jgarber.lighthouseapp.com/projects/13054-redcloth/overview</a>
+</p>
+<h2>Using <a href="RedCloth.html">RedCloth</a></h2>
+<p>
+<a href="RedCloth.html">RedCloth</a> is simply an extension of the String
+class that can handle Textile formatting.  Use it like a String and output
+HTML with its RedCloth#to_html method.
+</p>
+<p>
+Simple use:
+</p>
+<pre>
+ text = &quot;This is *my* text.&quot;
+ RedCloth.new(text).to_html
+</pre>
+<p>
+Multi-line example:
+</p>
+<pre>
+ doc = RedCloth.new &lt;&lt;EOD
+ h2. Test document
+ 
+ Just a simple test.
+ EOD
+ puts doc.to_html
+</pre>
+<h2>What is Textile?</h2>
+<p>
+Textile is a simple formatting style for text documents, loosely based on
+some HTML conventions.
+</p>
+<h2>Sample Textile Text</h2>
+<pre>
+ h2. This is a title
+
+ h3. This is a subhead
+
+ This is a bit of paragraph.
+
+ bq. This is a blockquote.
+</pre>
+<h1>Writing Textile</h1>
+<p>
+A Textile document consists of paragraphs.  Paragraphs can be specially
+formatted by adding a small instruction to the beginning of the paragraph.
+</p>
+<pre>
+ h3.     Header 3.
+ bq.     Blockquote.
+ #       Numeric list.
+ *       Bulleted list.
+</pre>
+<h2>Quick Phrase Modifiers</h2>
+<p>
+Quick phrase modifiers are also included, to allow formatting of small
+portions of text within a paragraph.
+</p>
+<pre>
+ _emphasis_
+ __italicized__
+ *strong*
+ **bold**
+ ??citation??
+ -deleted text-
+ +inserted text+
+ ^superscript^
+ ~subscript~
+ @code@
+ %(classname)span%
+
+ ==notextile== (leave text alone)
+</pre>
+<h2>Links</h2>
+<p>
+To make a hypertext link, put the link text in &#8220;quotation 
+marks&#8221; followed immediately by a colon and the URL of the link.
+</p>
+<p>
+Optional: text in (parentheses) following the link text,  but before the
+closing quotation mark, will become a title  attribute for the link,
+visible as a tool tip when a cursor is above it.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ &quot;This is a link (This is a title)&quot;:http://www.textism.com
+</pre>
+<p>
+Will become:
+</p>
+<pre>
+ &lt;a href=&quot;http://www.textism.com&quot; title=&quot;This is a title&quot;&gt;This is a link&lt;/a&gt;
+</pre>
+<h2>Images</h2>
+<p>
+To insert an image, put the URL for the image inside exclamation marks.
+</p>
+<p>
+Optional: text that immediately follows the URL in (parentheses) will  be
+used as the Alt text for the image. Images on the web should always  have
+descriptive Alt text for the benefit of readers using non-graphical 
+browsers.
+</p>
+<p>
+Optional: place a colon followed by a URL immediately after the  closing !
+to make the image into a link.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ !http://www.textism.com/common/textist.gif(Textist)!
+</pre>
+<p>
+Will become:
+</p>
+<pre>
+ &lt;img src=&quot;http://www.textism.com/common/textist.gif&quot; alt=&quot;Textist&quot; /&gt;
+</pre>
+<p>
+With a link:
+</p>
+<pre>
+ !/common/textist.gif(Textist)!:http://textism.com
+</pre>
+<p>
+Will become:
+</p>
+<pre>
+ &lt;a href=&quot;http://textism.com&quot;&gt;&lt;img src=&quot;/common/textist.gif&quot; alt=&quot;Textist&quot; /&gt;&lt;/a&gt;
+</pre>
+<h2>Defining Acronyms</h2>
+<p>
+HTML allows authors to define acronyms via the tag. The definition appears
+as a  tool tip when a cursor hovers over the acronym. A crucial aid to
+clear writing,  this should be used at least once for each acronym in
+documents where they appear.
+</p>
+<p>
+To quickly define an acronym in Textile, place the full text in
+(parentheses)  immediately following the acronym.
+</p>
+<p>
+Example:
+</p>
+<pre>
+ ACLU(American Civil Liberties Union)
+</pre>
+<p>
+Will become:
+</p>
+<pre>
+ &lt;acronym title=&quot;American Civil Liberties Union&quot;&gt;ACLU&lt;/acronym&gt;
+</pre>
+<h2>Adding Tables</h2>
+<p>
+In Textile, simple tables can be added by separating each column by a pipe.
+</p>
+<pre>
+    |a|simple|table|row|
+    |And|Another|table|row|
+</pre>
+<p>
+Styles are applied with curly braces.
+</p>
+<pre>
+    table{border:1px solid black}.
+    {background:#ddd;color:red}. |a|red|row|</pre>
+
+	</div>
+	
+
+	
+	
+	<h2>Files</h2>
+	<ul>
+		
+			<li class="file"><a href="CHANGELOG.html">CHANGELOG</a></li>
+		
+			<li class="file"><a href="COPYING.html">COPYING</a></li>
+		
+			<li class="file"><a href="README_rdoc.html">README.rdoc</a></li>
+		
+			<li class="file"><a href="ext/redcloth_scan/Makefile.html">Makefile</a></li>
+		
+	</ul>
+	
+
+	<h2 id="classes">Classes/Modules</h2>
+	<ul>
+		
+		<li class="module"><a href="RedCloth.html">RedCloth</a></li>
+		
+		<li class="module"><a href="RedCloth/Formatters.html">RedCloth::Formatters</a></li>
+		
+		<li class="module"><a href="RedCloth/Formatters/Base.html">RedCloth::Formatters::Base</a></li>
+		
+		<li class="module"><a href="RedCloth/Formatters/HTML.html">RedCloth::Formatters::HTML</a></li>
+		
+		<li class="module"><a href="RedCloth/Formatters/LATEX.html">RedCloth::Formatters::LATEX</a></li>
+		
+		<li class="module"><a href="RedCloth/Formatters/LATEX/Settings.html">RedCloth::Formatters::LATEX::Settings</a></li>
+		
+		<li class="class"><a href="RedCloth/TextileDoc.html">RedCloth::TextileDoc</a></li>
+		
+		<li class="class"><a href="RedCloth/TextileDoc/ParseError.html">RedCloth::TextileDoc::ParseError</a></li>
+		
+		<li class="module"><a href="RedCloth/VERSION.html">RedCloth::VERSION</a></li>
+		
+		<li class="class"><a href="ERB.html">ERB</a></li>
+		
+		<li class="module"><a href="ERB/Util.html">ERB::Util</a></li>
+		
+	</ul>
+
+	<h2 id="methods">Methods</h2>
+	<ul>
+		
+			<li><a href="RedCloth/VERSION.html#method-c-%3D%3D">::== &mdash; RedCloth::VERSION</a></li>
+		
+			<li><a href="RedCloth.html#method-c-include">::include &mdash; RedCloth</a></li>
+		
+			<li><a href="RedCloth.html#method-c-new">::new &mdash; RedCloth</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-c-new">::new &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="ERB/Util.html#method-c-t">::t &mdash; ERB::Util</a></li>
+		
+			<li><a href="ERB/Util.html#method-c-textilize">::textilize &mdash; ERB::Util</a></li>
+		
+			<li><a href="RedCloth/VERSION.html#method-c-to_s">::to_s &mdash; RedCloth::VERSION</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-acronym">#acronym &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-acronym">#acronym &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-after_transform">#after_transform &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-after_transform">#after_transform &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-amp">#amp &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-apos">#apos &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-i-apply_rules">#apply_rules &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-arrow">#arrow &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-arrow">#arrow &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-bc_close">#bc_close &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-bc_close">#bc_close &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-bc_open">#bc_open &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-bc_open">#bc_open &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-before_transform">#before_transform &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-before_transform">#before_transform &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-begin_chunk">#begin_chunk &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-bq_close">#bq_close &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-bq_close">#bq_close &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-bq_open">#bq_open &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-bq_open">#bq_open &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-br">#br &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-caps">#caps &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-chunk_counter">#chunk_counter &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-clean_html">#clean_html &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-code">#code &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-copyright">#copyright &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-copyright">#copyright &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-del">#del &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-dim">#dim &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-dim">#dim &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-dl_close">#dl_close &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-dl_open">#dl_open &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-ellipsis">#ellipsis &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-ellipsis">#ellipsis &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-emdash">#emdash &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-emdash">#emdash &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-end_chunk">#end_chunk &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-endash">#endash &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-endash">#endash &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-entity">#entity &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-entity">#entity &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-escape">#escape &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-escape">#escape &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-escape_attribute">#escape_attribute &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-escape_pre">#escape_pre &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-escape_pre">#escape_pre &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-fn">#fn &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-fn">#fn &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-footno">#footno &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-footno">#footno &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-formatter_methods">#formatter_methods &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-gt">#gt &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-hr">#hr &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-html">#html &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-html_block">#html_block &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-i-html_esc">#html_esc &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-ignore">#ignore &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-ignored_line">#ignored_line &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-image">#image &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-image">#image &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-inline_html">#inline_html &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-inline_html">#inline_html &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-inline_redcloth_version">#inline_redcloth_version &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-i-latex_esc">#latex_esc &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX/Settings.html#method-i-latex_image_styles">#latex_image_styles &mdash; RedCloth::Formatters::LATEX::Settings</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-li_close">#li_close &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-li_close">#li_close &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-li_open">#li_open &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-li_open">#li_open &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-link">#link &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-link">#link &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-lt">#lt &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-method_missing">#method_missing &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-multi_paragraph_quote">#multi_paragraph_quote &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-notextile">#notextile &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-notextile">#notextile &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-p">#p &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-pba">#pba &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-quot">#quot &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-quote1">#quote1 &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-quote1">#quote1 &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-quote2">#quote2 &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-quote2">#quote2 &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/Base.html#method-i-redcloth_version">#redcloth_version &mdash; RedCloth::Formatters::Base</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-registered">#registered &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-registered">#registered &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-snip">#snip &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-snip">#snip &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-squot">#squot &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="ERB/Util.html#method-i-t">#t &mdash; ERB::Util</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-table_close">#table_close &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-table_close">#table_close &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-table_open">#table_open &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-table_open">#table_open &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-td">#td &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-td">#td &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="ERB/Util.html#method-i-textilize">#textilize &mdash; ERB::Util</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-i-to">#to &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-i-to_html">#to_html &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="RedCloth/TextileDoc.html#method-i-to_latex">#to_latex &mdash; RedCloth::TextileDoc</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-tr_close">#tr_close &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-tr_close">#tr_close &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-tr_open">#tr_open &mdash; RedCloth::Formatters::HTML</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-tr_open">#tr_open &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/LATEX.html#method-i-trademark">#trademark &mdash; RedCloth::Formatters::LATEX</a></li>
+		
+			<li><a href="RedCloth/Formatters/HTML.html#method-i-trademark">#trademark &mdash; RedCloth::Formatters::HTML</a></li>
+		
+	</ul>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>

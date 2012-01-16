@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: runtime.rb [compass-0.11.5 Documentation]</title>
+
+	<link type="text/css" media="screen" href="../../../../rdoc.css" rel="stylesheet" />
+
+	<script src="../../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">2011-11-09 21:31:44 +0000</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+					<li>sass/plugin</li>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			<p>
+To configure Merb to use compass do the following:
+</p>
+<p>
+Add dependencies to config/dependencies.rb
+</p>
+<p>
+dependency &#8220;haml&#8221;, &#8220;>=2.2.0&#8220;  dependency
+&#8220;merb-haml&#8221;, merb_gems_version dependency
+&#8220;chriseppstein-compass&#8221;, :require_as => &#8216;compass&#8217;
+</p>
+<p>
+To use a different sass stylesheets locations as is recommended by compass
+add this configuration to your configuration block:
+</p>
+<p>
+Merb::BootLoader.before_app_loads do
+</p>
+<pre>
+  Merb::Plugins.config[:compass] = {
+    :stylesheets =&gt; &quot;app/stylesheets&quot;,
+    :compiled_stylesheets =&gt; &quot;public/stylesheets/compiled&quot;
+  }
+</pre>
+<p>
+end
+</p>
+
+		</div>
+		
+	</div>
+</body>
+</html>
+

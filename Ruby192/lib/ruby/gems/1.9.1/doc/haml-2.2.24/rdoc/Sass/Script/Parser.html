@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::Script::Parser</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/sass/script/parser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/script/parser.rb">lib/sass/script/parser.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../../Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-parse">::parse</a></li>
+					
+					<li><a href="#method-c-production">::production</a></li>
+					
+					<li><a href="#method-c-unary">::unary</a></li>
+					
+					<li><a href="#method-i-arglist">#arglist</a></li>
+					
+					<li><a href="#method-i-assert_done">#assert_done</a></li>
+					
+					<li><a href="#method-i-assert_expr">#assert_expr</a></li>
+					
+					<li><a href="#method-i-assert_tok">#assert_tok</a></li>
+					
+					<li><a href="#method-i-concat">#concat</a></li>
+					
+					<li><a href="#method-i-defn_arglist">#defn_arglist</a></li>
+					
+					<li><a href="#method-i-funcall">#funcall</a></li>
+					
+					<li><a href="#method-i-literal">#literal</a></li>
+					
+					<li><a href="#method-i-paren">#paren</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-parse_interpolated">#parse_interpolated</a></li>
+					
+					<li><a href="#method-i-parse_mixin_definition_arglist">#parse_mixin_definition_arglist</a></li>
+					
+					<li><a href="#method-i-parse_mixin_include_arglist">#parse_mixin_include_arglist</a></li>
+					
+					<li><a href="#method-i-string">#string</a></li>
+					
+					<li><a href="#method-i-try_tok">#try_tok</a></li>
+					
+					<li><a href="#method-i-variable">#variable</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CONTRIBUTING.html">CONTRIBUTING</a></li>
+				
+					<li class="file"><a href="../../MIT-LICENSE.html">MIT-LICENSE</a></li>
+				
+					<li class="file"><a href="../../REMEMBER.html">REMEMBER</a></li>
+				
+					<li class="file"><a href="../../REVISION.html">REVISION</a></li>
+				
+					<li class="file"><a href="../../VERSION.html">VERSION</a></li>
+				
+					<li class="file"><a href="../../VERSION_NAME.html">VERSION_NAME</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Haml.html">Haml</a></li>
+				
+					<li><a href="../../Haml/Buffer.html">Haml::Buffer</a></li>
+				
+					<li><a href="../../Haml/Engine.html">Haml::Engine</a></li>
+				
+					<li><a href="../../Haml/Error.html">Haml::Error</a></li>
+				
+					<li><a href="../../Haml/Exec.html">Haml::Exec</a></li>
+				
+					<li><a href="../../Haml/Exec/CSS2Sass.html">Haml::Exec::CSS2Sass</a></li>
+				
+					<li><a href="../../Haml/Exec/Generic.html">Haml::Exec::Generic</a></li>
+				
+					<li><a href="../../Haml/Exec/HTML2Haml.html">Haml::Exec::HTML2Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/Haml.html">Haml::Exec::Haml</a></li>
+				
+					<li><a href="../../Haml/Exec/HamlSass.html">Haml::Exec::HamlSass</a></li>
+				
+					<li><a href="../../Haml/Exec/Sass.html">Haml::Exec::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters.html">Haml::Filters</a></li>
+				
+					<li><a href="../../Haml/Filters/Base.html">Haml::Filters::Base</a></li>
+				
+					<li><a href="../../Haml/Filters/Cdata.html">Haml::Filters::Cdata</a></li>
+				
+					<li><a href="../../Haml/Filters/ERB.html">Haml::Filters::ERB</a></li>
+				
+					<li><a href="../../Haml/Filters/Escaped.html">Haml::Filters::Escaped</a></li>
+				
+					<li><a href="../../Haml/Filters/Javascript.html">Haml::Filters::Javascript</a></li>
+				
+					<li><a href="../../Haml/Filters/Markdown.html">Haml::Filters::Markdown</a></li>
+				
+					<li><a href="../../Haml/Filters/Maruku.html">Haml::Filters::Maruku</a></li>
+				
+					<li><a href="../../Haml/Filters/Plain.html">Haml::Filters::Plain</a></li>
+				
+					<li><a href="../../Haml/Filters/Preserve.html">Haml::Filters::Preserve</a></li>
+				
+					<li><a href="../../Haml/Filters/Ruby.html">Haml::Filters::Ruby</a></li>
+				
+					<li><a href="../../Haml/Filters/Sass.html">Haml::Filters::Sass</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/Filters/Textile.html">Haml::Filters::Textile</a></li>
+				
+					<li><a href="../../Haml/HTML.html">Haml::HTML</a></li>
+				
+					<li><a href="../../Haml/HTML/Node.html">Haml::HTML::Node</a></li>
+				
+					<li><a href="../../Haml/Helpers.html">Haml::Helpers</a></li>
+				
+					<li><a href="../../Haml/Helpers/ActionViewExtensions.html">Haml::Helpers::ActionViewExtensions</a></li>
+				
+					<li><a href="../../Haml/Helpers/ErrorReturn.html">Haml::Helpers::ErrorReturn</a></li>
+				
+					<li><a href="../../Haml/Helpers/XssMods.html">Haml::Helpers::XssMods</a></li>
+				
+					<li><a href="../../Haml/Plugin.html">Haml::Plugin</a></li>
+				
+					<li><a href="../../Haml/Precompiler.html">Haml::Precompiler</a></li>
+				
+					<li><a href="../../Haml/Precompiler/Line.html">Haml::Precompiler::Line</a></li>
+				
+					<li><a href="../../Haml/Railtie.html">Haml::Railtie</a></li>
+				
+					<li><a href="../../Haml/Shared.html">Haml::Shared</a></li>
+				
+					<li><a href="../../Haml/SyntaxError.html">Haml::SyntaxError</a></li>
+				
+					<li><a href="../../Haml/Template.html">Haml::Template</a></li>
+				
+					<li><a href="../../Haml/Util.html">Haml::Util</a></li>
+				
+					<li><a href="../../Haml/Util/StaticConditionalContext.html">Haml::Util::StaticConditionalContext</a></li>
+				
+					<li><a href="../../Haml/Version.html">Haml::Version</a></li>
+				
+					<li><a href="../../Sass.html">Sass</a></li>
+				
+					<li><a href="../../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../../Sass/Files.html">Sass::Files</a></li>
+				
+					<li><a href="../../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../../ActionView.html">ActionView</a></li>
+				
+					<li><a href="../../ActionView/Base.html">ActionView::Base</a></li>
+				
+					<li><a href="../../ActionView/Helpers.html">ActionView::Helpers</a></li>
+				
+					<li><a href="../../ActionView/Helpers/CaptureHelper.html">ActionView::Helpers::CaptureHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormHelper.html">ActionView::Helpers::FormHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/FormTagHelper.html">ActionView::Helpers::FormTagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/InstanceTag.html">ActionView::Helpers::InstanceTag</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TagHelper.html">ActionView::Helpers::TagHelper</a></li>
+				
+					<li><a href="../../ActionView/Helpers/TextHelper.html">ActionView::Helpers::TextHelper</a></li>
+				
+					<li><a href="../../Hpricot.html">Hpricot</a></li>
+				
+					<li><a href="../../Hpricot/BaseEle.html">Hpricot::BaseEle</a></li>
+				
+					<li><a href="../../Hpricot/CData.html">Hpricot::CData</a></li>
+				
+					<li><a href="../../Hpricot/Comment.html">Hpricot::Comment</a></li>
+				
+					<li><a href="../../Hpricot/Doc.html">Hpricot::Doc</a></li>
+				
+					<li><a href="../../Hpricot/DocType.html">Hpricot::DocType</a></li>
+				
+					<li><a href="../../Hpricot/Elem.html">Hpricot::Elem</a></li>
+				
+					<li><a href="../../Hpricot/Node.html">Hpricot::Node</a></li>
+				
+					<li><a href="../../Hpricot/XMLDecl.html">Hpricot::XMLDecl</a></li>
+				
+					<li><a href="../../Merb.html">Merb</a></li>
+				
+					<li><a href="../../Merb/Rack.html">Merb::Rack</a></li>
+				
+					<li><a href="../../Merb/Rack/Application.html">Merb::Rack::Application</a></li>
+				
+					<li><a href="../../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../../MerbHandler.html">MerbHandler</a></li>
+				
+					<li><a href="../../Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::Script::Parser</h1>
+
+		<div id="description">
+			<p>
+The parser for SassScript. It parses a string of code into a tree of
+{Script::Node}s.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(str, line, offset, filename = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@param str [<a href="String.html">String</a>, StringScanner] The source
+text to parse @param line [Fixnum] The line on which the SassScript
+appears.
+</p>
+<pre>
+  Used for error reporting
+</pre>
+<p>
+@param offset [Fixnum] The number of characters in on which the SassScript
+appears.
+</p>
+<pre>
+  Used for error reporting
+</pre>
+<p>
+@param filename [String] The name of the file in which the SassScript
+appears.
+</p>
+<pre>
+  Used for error reporting</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 15</span>
+15:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filename</span> = <span class="ruby-keyword kw">nil</span>)
+16:         <span class="ruby-ivar">@filename</span> = <span class="ruby-identifier">filename</span>
+17:         <span class="ruby-ivar">@lexer</span> = <span class="ruby-constant">Lexer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">str</span>, <span class="ruby-identifier">line</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filename</span>)
+18:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-c-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a SassScript expression.
+</p>
+<p>
+@overload parse(str, line, offset, filename = nil) @return [Script::Node]
+The root node of the parse tree @see Parser#initialize @see <a
+href="Parser.html#method-i-parse">Parser#parse</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 81</span>
+81:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parse</span>(*<span class="ruby-identifier">args</span>)
+82:         <span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>).<span class="ruby-identifier">parse</span>
+83:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="production-method" class="method-detail ">
+				<a name="method-c-production"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">production</span><span
+						class="method-args">(name, sub, *ops)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Defines a simple left-associative production. name is the name of the
+production, sub is the name of the production beneath it, and ops is a list
+of operators for this precedence level
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="production-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 92</span>
+92:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">production</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sub</span>, *<span class="ruby-identifier">ops</span>)
+93:           <span class="ruby-identifier">class_eval</span> <span class="ruby-value str">            def #{name}              return unless e = #{sub}              while tok = try_tok(#{ops.map {|o| o.inspect}.join(', ')})                e = Operation.new(e, assert_expr(#{sub.inspect}), tok.type)              end              e            end</span>
+94:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unary-method" class="method-detail ">
+				<a name="method-c-unary"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unary</span><span
+						class="method-args">(op, sub)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="unary-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 104</span>
+104:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unary</span>(<span class="ruby-identifier">op</span>, <span class="ruby-identifier">sub</span>)
+105:           <span class="ruby-identifier">class_eval</span> <span class="ruby-value str">            def unary_#{op}              return #{sub} unless try_tok(:#{op})              UnaryOperation.new(assert_expr(:unary_#{op}), :#{op})            end</span>
+106:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a SassScript expression.
+</p>
+<p>
+@return [Script::Node] The root node of the parse tree @raise
+[Sass::SyntaxError] if the expression isn&#8217;t valid SassScript
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 37</span>
+37:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>
+38:         <span class="ruby-identifier">expr</span> = <span class="ruby-identifier">assert_expr</span> <span class="ruby-value">:expr</span>
+39:         <span class="ruby-identifier">assert_done</span>
+40:         <span class="ruby-identifier">expr</span>
+41:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-interpolated-method" class="method-detail ">
+				<a name="method-i-parse_interpolated"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_interpolated</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a SassScript expression within an interpolated segment (`#{}`). This
+means that it stops when it comes across an unmatched `}`, which signals
+the end of an interpolated segment, it returns rather than throwing an
+error.
+</p>
+<p>
+@return [Script::Node] The root node of the parse tree @raise
+[Sass::SyntaxError] if the expression isn&#8217;t valid SassScript
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-interpolated-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 27</span>
+27:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_interpolated</span>
+28:         <span class="ruby-identifier">expr</span> = <span class="ruby-identifier">assert_expr</span> <span class="ruby-value">:expr</span>
+29:         <span class="ruby-identifier">assert_tok</span> <span class="ruby-value">:end_interpolation</span>
+30:         <span class="ruby-identifier">expr</span>
+31:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-mixin-definition-arglist-method" class="method-detail ">
+				<a name="method-i-parse_mixin_definition_arglist"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_mixin_definition_arglist</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses the argument list for a mixin definition.
+</p>
+<p>
+@return [Array<Script::Node>] The root nodes of the arguments. @raise
+[Sass::SyntaxError] if the argument list isn&#8217;t valid SassScript
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-mixin-definition-arglist-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 63</span>
+63:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_mixin_definition_arglist</span>
+64:         <span class="ruby-identifier">args</span> = []
+65: 
+66:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:lparen</span>)
+67:           <span class="ruby-identifier">args</span> = <span class="ruby-identifier">defn_arglist</span>(<span class="ruby-keyword kw">false</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">args</span>
+68:           <span class="ruby-identifier">assert_tok</span>(<span class="ruby-value">:rparen</span>)
+69:         <span class="ruby-keyword kw">end</span>
+70:         <span class="ruby-identifier">assert_done</span>
+71: 
+72:         <span class="ruby-identifier">args</span>
+73:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-mixin-include-arglist-method" class="method-detail ">
+				<a name="method-i-parse_mixin_include_arglist"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_mixin_include_arglist</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses the argument list for a mixin include.
+</p>
+<p>
+@return [Array<Script::Node>] The root nodes of the arguments. @raise
+[Sass::SyntaxError] if the argument list isn&#8217;t valid SassScript
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-mixin-include-arglist-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 47</span>
+47:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_mixin_include_arglist</span>
+48:         <span class="ruby-identifier">args</span> = []
+49: 
+50:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:lparen</span>)
+51:           <span class="ruby-identifier">args</span> = <span class="ruby-identifier">arglist</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">args</span>
+52:           <span class="ruby-identifier">assert_tok</span>(<span class="ruby-value">:rparen</span>)
+53:         <span class="ruby-keyword kw">end</span>
+54:         <span class="ruby-identifier">assert_done</span>
+55: 
+56:         <span class="ruby-identifier">args</span>
+57:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="arglist-method" class="method-detail ">
+				<a name="method-i-arglist"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">arglist</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="arglist-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 168</span>
+168:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">arglist</span>
+169:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">e</span> = <span class="ruby-identifier">concat</span>
+170:         <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">e</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:comma</span>)
+171:         [<span class="ruby-identifier">e</span>, *<span class="ruby-identifier">arglist</span>]
+172:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-done-method" class="method-detail ">
+				<a name="method-i-assert_done"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_done</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-done-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 216</span>
+216:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_done</span>
+217:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@lexer</span>.<span class="ruby-identifier">done?</span>
+218:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Unexpected #{@lexer.peek.type} token.&quot;</span>)
+219:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-expr-method" class="method-detail ">
+				<a name="method-i-assert_expr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_expr</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+It would be possible to have unified # and # methods, but detecting the
+method/token difference turns out to be quite expensive.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-expr-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 201</span>
+201:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_expr</span>(<span class="ruby-identifier">name</span>)
+202:         (<span class="ruby-identifier">e</span> = <span class="ruby-identifier">send</span>(<span class="ruby-identifier">name</span>)) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword kw">return</span> <span class="ruby-identifier">e</span>)
+203:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Expected expression, was #{@lexer.done? ? 'end of text' : &quot;#{@lexer.peek.type} token&quot;}.&quot;</span>)
+204:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-tok-method" class="method-detail ">
+				<a name="method-i-assert_tok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_tok</span><span
+						class="method-args">(*names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-tok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 206</span>
+206:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_tok</span>(*<span class="ruby-identifier">names</span>)
+207:         (<span class="ruby-identifier">t</span> = <span class="ruby-identifier">try_tok</span>(*<span class="ruby-identifier">names</span>)) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword kw">return</span> <span class="ruby-identifier">t</span>)
+208:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Expected #{names.join(' or ')} token, was #{@lexer.done? ? 'end of text' : &quot;#{@lexer.peek.type} token&quot;}.&quot;</span>)
+209:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="concat-method" class="method-detail ">
+				<a name="method-i-concat"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">concat</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="concat-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 118</span>
+118:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">concat</span>
+119:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">e</span> = <span class="ruby-identifier">or_expr</span>
+120:         <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">sub</span> = <span class="ruby-identifier">or_expr</span>
+121:           <span class="ruby-identifier">e</span> = <span class="ruby-constant">Operation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">sub</span>, <span class="ruby-value">:concat</span>)
+122:         <span class="ruby-keyword kw">end</span>
+123:         <span class="ruby-identifier">e</span>
+124:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="defn-arglist-method" class="method-detail ">
+				<a name="method-i-defn_arglist"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">defn_arglist</span><span
+						class="method-args">(must_have_default)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="defn-arglist-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 155</span>
+155:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">defn_arglist</span>(<span class="ruby-identifier">must_have_default</span>)
+156:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">c</span> = <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:const</span>)
+157:         <span class="ruby-identifier">var</span> = <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Variable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">value</span>)
+158:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:single_eq</span>)
+159:           <span class="ruby-identifier">val</span> = <span class="ruby-identifier">assert_expr</span>(<span class="ruby-value">:concat</span>)
+160:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">must_have_default</span>
+161:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">SyntaxError</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;Required argument #{var.inspect} must come before any optional arguments.&quot;</span>, <span class="ruby-ivar">@line</span>)
+162:         <span class="ruby-keyword kw">end</span>
+163: 
+164:         <span class="ruby-keyword kw">return</span> [[<span class="ruby-identifier">var</span>, <span class="ruby-identifier">val</span>]] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:comma</span>)
+165:         [[<span class="ruby-identifier">var</span>, <span class="ruby-identifier">val</span>], *<span class="ruby-identifier">defn_arglist</span>(<span class="ruby-identifier">val</span>)]
+166:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="funcall-method" class="method-detail ">
+				<a name="method-i-funcall"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">funcall</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="funcall-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 137</span>
+137:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">funcall</span>
+138:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">paren</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span> = <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:ident</span>)
+139:         <span class="ruby-comment cmt"># An identifier without arguments is just a string</span>
+140:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:lparen</span>)
+141:           <span class="ruby-identifier">warn</span>(<span class="ruby-value str">DEPRECATION WARNING:On line #{name.line}, character #{name.offset}#{&quot; of '#{@filename}'&quot; if @filename}Implicit strings have been deprecated and will be removed in version 3.0.'#{name.value}' was not quoted. Please add double quotes (e.g. &quot;#{name.value}&quot;).</span>)
+142:           <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">value</span>)
+143:         <span class="ruby-keyword kw">else</span>
+144:           <span class="ruby-identifier">args</span> = <span class="ruby-identifier">arglist</span> <span class="ruby-operator">||</span> []
+145:           <span class="ruby-identifier">assert_tok</span>(<span class="ruby-value">:rparen</span>)
+146:           <span class="ruby-constant">Script</span><span class="ruby-operator">::</span><span class="ruby-constant">Funcall</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>.<span class="ruby-identifier">value</span>, <span class="ruby-identifier">args</span>)
+147:         <span class="ruby-keyword kw">end</span>
+148:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="literal-method" class="method-detail ">
+				<a name="method-i-literal"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">literal</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="literal-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 194</span>
+194:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">literal</span>
+195:         (<span class="ruby-identifier">t</span> = <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:number</span>, <span class="ruby-value">:color</span>, <span class="ruby-value">:bool</span>)) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-keyword kw">return</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">value</span>)
+196:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="paren-method" class="method-detail ">
+				<a name="method-i-paren"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">paren</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="paren-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 174</span>
+174:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paren</span>
+175:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">variable</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:lparen</span>)
+176:         <span class="ruby-identifier">e</span> = <span class="ruby-identifier">assert_expr</span>(<span class="ruby-value">:expr</span>)
+177:         <span class="ruby-identifier">assert_tok</span>(<span class="ruby-value">:rparen</span>)
+178:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">e</span>
+179:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="string-method" class="method-detail ">
+				<a name="method-i-string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">string</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 186</span>
+186:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">string</span>
+187:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">literal</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">first</span> = <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:string</span>)
+188:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:begin_interpolation</span>)
+189:         <span class="ruby-identifier">mid</span> = <span class="ruby-identifier">parse_interpolated</span>
+190:         <span class="ruby-identifier">last</span> = <span class="ruby-identifier">assert_expr</span>(<span class="ruby-value">:string</span>)
+191:         <span class="ruby-constant">Operation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">first</span>.<span class="ruby-identifier">value</span>, <span class="ruby-constant">Operation</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">mid</span>, <span class="ruby-identifier">last</span>, <span class="ruby-value">:plus</span>), <span class="ruby-value">:plus</span>)
+192:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="try-tok-method" class="method-detail ">
+				<a name="method-i-try_tok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_tok</span><span
+						class="method-args">(*names)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="try-tok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 211</span>
+211:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_tok</span>(*<span class="ruby-identifier">names</span>)
+212:         <span class="ruby-identifier">peeked</span> =  <span class="ruby-ivar">@lexer</span>.<span class="ruby-identifier">peek</span>
+213:         <span class="ruby-identifier">peeked</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">peeked</span>.<span class="ruby-identifier">type</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@lexer</span>.<span class="ruby-identifier">next</span>
+214:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="variable-method" class="method-detail ">
+				<a name="method-i-variable"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">variable</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="variable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/script/parser.rb, line 181</span>
+181:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">variable</span>
+182:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">string</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">c</span> = <span class="ruby-identifier">try_tok</span>(<span class="ruby-value">:const</span>)
+183:         <span class="ruby-constant">Variable</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">value</span>)
+184:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: FSSM::Support</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/fssm/support_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/fssm/support.rb">lib/fssm/support.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-backend">::backend</a></li>
+					
+					<li><a href="#method-c-carbon_core%3F">::carbon_core?</a></li>
+					
+					<li><a href="#method-c-jruby%3F">::jruby?</a></li>
+					
+					<li><a href="#method-c-linux%3F">::linux?</a></li>
+					
+					<li><a href="#method-c-lion%3F">::lion?</a></li>
+					
+					<li><a href="#method-c-mac%3F">::mac?</a></li>
+					
+					<li><a href="#method-c-rb_fsevent%3F">::rb_fsevent?</a></li>
+					
+					<li><a href="#method-c-rb_inotify%3F">::rb_inotify?</a></li>
+					
+					<li><a href="#method-c-usable_backend">::usable_backend</a></li>
+					
+					<li><a href="#method-c-use_block">::use_block</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../FSSM.html">FSSM</a></li>
+				
+					<li><a href="../FSSM/Backends.html">FSSM::Backends</a></li>
+				
+					<li><a href="../FSSM/Backends/FSEvents.html">FSSM::Backends::FSEvents</a></li>
+				
+					<li><a href="../FSSM/Backends/Inotify.html">FSSM::Backends::Inotify</a></li>
+				
+					<li><a href="../FSSM/Backends/Polling.html">FSSM::Backends::Polling</a></li>
+				
+					<li><a href="../FSSM/Backends/RBFSEvent.html">FSSM::Backends::RBFSEvent</a></li>
+				
+					<li><a href="../FSSM/Monitor.html">FSSM::Monitor</a></li>
+				
+					<li><a href="../FSSM/Path.html">FSSM::Path</a></li>
+				
+					<li><a href="../FSSM/Pathname.html">FSSM::Pathname</a></li>
+				
+					<li><a href="../FSSM/State.html">FSSM::State</a></li>
+				
+					<li><a href="../FSSM/State/Directory.html">FSSM::State::Directory</a></li>
+				
+					<li><a href="../FSSM/State/File.html">FSSM::State::File</a></li>
+				
+					<li><a href="../FSSM/Support.html">FSSM::Support</a></li>
+				
+					<li><a href="../FSSM/Tree.html">FSSM::Tree</a></li>
+				
+					<li><a href="../FSSM/Tree/Cache.html">FSSM::Tree::Cache</a></li>
+				
+					<li><a href="../FSSM/Tree/CacheDebug.html">FSSM::Tree::CacheDebug</a></li>
+				
+					<li><a href="../FSSM/Tree/Node.html">FSSM::Tree::Node</a></li>
+				
+					<li><a href="../FSSM/Tree/NodeBase.html">FSSM::Tree::NodeBase</a></li>
+				
+					<li><a href="../FSSM/Tree/NodeEnumerable.html">FSSM::Tree::NodeEnumerable</a></li>
+				
+					<li><a href="../FSSM/Tree/NodeInsertion.html">FSSM::Tree::NodeInsertion</a></li>
+				
+					<li><a href="../Rucola.html">Rucola</a></li>
+				
+					<li><a href="../Rucola/FSEvents.html">Rucola::FSEvents</a></li>
+				
+					<li><a href="../Rucola/FSEvents/FSEvent.html">Rucola::FSEvents::FSEvent</a></li>
+				
+					<li><a href="../Rucola/FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">FSSM::Support</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="backend-method" class="method-detail ">
+				<a name="method-c-backend"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">backend</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="backend-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 31</span>
+31:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">backend</span>
+32:       <span class="ruby-identifier">@@backend</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">usable_backend</span>
+33:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="carbon-core--method" class="method-detail ">
+				<a name="method-c-carbon_core%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">carbon_core?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="carbon-core--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 51</span>
+51:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">carbon_core?</span>
+52:       <span class="ruby-keyword kw">begin</span>
+53:         <span class="ruby-identifier">require</span> <span class="ruby-value str">'osx/foundation'</span>
+54:         <span class="ruby-constant">OSX</span>.<span class="ruby-identifier">require_framework</span> <span class="ruby-value str">'/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework'</span>
+55:         <span class="ruby-keyword kw">true</span>
+56:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+57:         <span class="ruby-keyword kw">false</span>
+58:       <span class="ruby-keyword kw">end</span>
+59:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="jruby--method" class="method-detail ">
+				<a name="method-c-jruby%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">jruby?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="jruby--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">jruby?</span>
+36:       <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">JRUBY_VERSION</span>)
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="linux--method" class="method-detail ">
+				<a name="method-c-linux%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">linux?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="linux--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 47</span>
+47:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">linux?</span>
+48:       <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'target_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/linux/</span>
+49:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lion--method" class="method-detail ">
+				<a name="method-c-lion%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lion?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="lion--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 43</span>
+43:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lion?</span>
+44:       <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'target_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/darwin11/</span>
+45:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mac--method" class="method-detail ">
+				<a name="method-c-mac%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mac?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mac--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 39</span>
+39:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mac?</span>
+40:       <span class="ruby-constant">Config</span><span class="ruby-operator">::</span><span class="ruby-constant">CONFIG</span>[<span class="ruby-value str">'target_os'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/darwin/</span>
+41:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rb-fsevent--method" class="method-detail ">
+				<a name="method-c-rb_fsevent%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rb_fsevent?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rb-fsevent--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 61</span>
+61:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rb_fsevent?</span>
+62:       <span class="ruby-keyword kw">begin</span>
+63:         <span class="ruby-identifier">require</span> <span class="ruby-value str">'rb-fsevent'</span>
+64:         <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">FSEvent</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">FSEvent</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0.4</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">false</span>
+65:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+66:         <span class="ruby-keyword kw">false</span>
+67:       <span class="ruby-keyword kw">end</span>
+68:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rb-inotify--method" class="method-detail ">
+				<a name="method-c-rb_inotify%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rb_inotify?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="rb-inotify--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 70</span>
+70:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rb_inotify?</span>
+71:       <span class="ruby-keyword kw">begin</span>
+72:         <span class="ruby-identifier">require</span> <span class="ruby-value str">'rb-inotify'</span>
+73:         <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span>(<span class="ruby-constant">INotify</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>)
+74:           <span class="ruby-identifier">version</span> = <span class="ruby-constant">INotify</span><span class="ruby-operator">::</span><span class="ruby-constant">VERSION</span>
+75:           <span class="ruby-identifier">version</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">version</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">&gt;=</span> <span class="ruby-value">6</span>
+76:         <span class="ruby-keyword kw">end</span>
+77:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span>
+78:         <span class="ruby-keyword kw">false</span>
+79:       <span class="ruby-keyword kw">end</span>
+80:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="usable-backend-method" class="method-detail ">
+				<a name="method-c-usable_backend"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">usable_backend</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="usable-backend-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 5</span>
+ 5:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">usable_backend</span>
+ 6:       <span class="ruby-identifier">choice</span> = <span class="ruby-keyword kw">case</span>
+ 7:                  <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">mac?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">lion?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">jruby?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">carbon_core?</span>
+ 8:                    <span class="ruby-value str">'FSEvents'</span>
+ 9:                  <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">mac?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rb_fsevent?</span>
+10:                    <span class="ruby-value str">'RBFSEvent'</span>
+11:                  <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">linux?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">rb_inotify?</span>
+12:                    <span class="ruby-value str">'Inotify'</span>
+13:                  <span class="ruby-keyword kw">else</span>
+14:                    <span class="ruby-value str">'Polling'</span>
+15:                <span class="ruby-keyword kw">end</span>
+16: 
+17:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">mac?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">linux?</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">choice</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'Polling'</span>
+18:         <span class="ruby-identifier">optimal</span> = <span class="ruby-keyword kw">case</span>
+19:                     <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">mac?</span>
+20:                       <span class="ruby-value str">'rb-fsevent'</span>
+21:                     <span class="ruby-keyword kw">when</span> <span class="ruby-identifier">linux?</span>
+22:                       <span class="ruby-value str">'rb-inotify'</span>
+23:                   <span class="ruby-keyword kw">end</span>
+24:         <span class="ruby-constant">FSSM</span>.<span class="ruby-identifier">dbg</span>(<span class="ruby-value str">&quot;An optimized backend is available for this platform!&quot;</span>)
+25:         <span class="ruby-constant">FSSM</span>.<span class="ruby-identifier">dbg</span>(<span class="ruby-node">&quot;    gem install #{optimal}&quot;</span>)
+26:       <span class="ruby-keyword kw">end</span>
+27: 
+28:       <span class="ruby-identifier">choice</span>
+29:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="use-block-method" class="method-detail ">
+				<a name="method-c-use_block"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">use_block</span><span
+						class="method-args">(context, block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="use-block-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm/support.rb, line 82</span>
+82:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use_block</span>(<span class="ruby-identifier">context</span>, <span class="ruby-identifier">block</span>)
+83:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">nil?</span>
+84:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>.<span class="ruby-identifier">arity</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+85:         <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">context</span>)
+86:       <span class="ruby-keyword kw">else</span>
+87:         <span class="ruby-identifier">context</span>.<span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+88:       <span class="ruby-keyword kw">end</span>
+89:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

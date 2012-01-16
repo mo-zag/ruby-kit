@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Object</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-define">#define</a></li>
+					
+					<li><a href="#method-i-get_binding">#get_binding</a></li>
+					
+					<li><a href="#method-i-write_html_on">#write_html_on</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./RDoc.html">RDoc</a></li>
+				
+					<li><a href="./RDoc/Generator.html">RDoc::Generator</a></li>
+				
+					<li><a href="./RDoc/Generator/HTML.html">RDoc::Generator::HTML</a></li>
+				
+					<li><a href="./RDoc/Generator/HTML/HANNA.html">RDoc::Generator::HTML::HANNA</a></li>
+				
+					<li><a href="./Hanna.html">Hanna</a></li>
+				
+					<li><a href="./Hanna/TemplateHelpers.html">Hanna::TemplateHelpers</a></li>
+				
+					<li><a href="./Gem/DocManager.html">Gem::DocManager</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Object</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="define-method" class="method-detail ">
+				<a name="method-i-define"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">define</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create the tasks defined by this task lib.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="define-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/rdoctask.rb, line 10</span>
+10:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">define</span>
+11:     <span class="ruby-ivar">@template</span> = <span class="ruby-value str">'hanna'</span>
+12:     <span class="ruby-identifier">options</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'--format=html'</span>
+13:     
+14:     <span class="ruby-comment cmt"># inline source and UTF-8 are defaults:</span>
+15:     <span class="ruby-identifier">options</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'--inline-source'</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value str">'--inline-source'</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value str">'-S'</span>
+16:     <span class="ruby-identifier">options</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'--charset=UTF-8'</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/^(--charset\b|-c\b)/</span>).<span class="ruby-identifier">empty?</span>
+17:     
+18:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Build the HTML documentation&quot;</span>
+19:     <span class="ruby-identifier">task</span> <span class="ruby-identifier">name</span>
+20:     
+21:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Force a rebuild of the RDOC files&quot;</span>
+22:     <span class="ruby-identifier">task</span> <span class="ruby-identifier">paste</span>(<span class="ruby-value str">&quot;re&quot;</span>, <span class="ruby-identifier">name</span>) =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">paste</span>(<span class="ruby-value str">&quot;clobber_&quot;</span>, <span class="ruby-identifier">name</span>), <span class="ruby-identifier">name</span>]
+23: 
+24:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Remove rdoc products&quot;</span> 
+25:     <span class="ruby-identifier">task</span> <span class="ruby-identifier">paste</span>(<span class="ruby-value str">&quot;clobber_&quot;</span>, <span class="ruby-identifier">name</span>) <span class="ruby-keyword kw">do</span>
+26:       <span class="ruby-identifier">rm_r</span> <span class="ruby-identifier">rdoc_dir</span> <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+27:     <span class="ruby-keyword kw">end</span>
+28: 
+29:     <span class="ruby-identifier">task</span> <span class="ruby-value">:clobber</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">paste</span>(<span class="ruby-value str">&quot;clobber_&quot;</span>, <span class="ruby-identifier">name</span>)]
+30:       
+31:     <span class="ruby-identifier">directory</span> <span class="ruby-ivar">@rdoc_dir</span>
+32:     <span class="ruby-identifier">task</span> <span class="ruby-identifier">name</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">rdoc_target</span>]
+33:     <span class="ruby-identifier">file</span> <span class="ruby-identifier">rdoc_target</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@rdoc_files</span> <span class="ruby-operator">+</span> [<span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">rakefile</span>] <span class="ruby-keyword kw">do</span>
+34:       <span class="ruby-identifier">rm_r</span> <span class="ruby-ivar">@rdoc_dir</span> <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+35:       <span class="ruby-constant">Hanna</span><span class="ruby-operator">::</span><span class="ruby-identifier">require_rdoc</span>
+36:       <span class="ruby-identifier">require</span> <span class="ruby-value str">'rdoc/rdoc'</span>
+37:       
+38:       <span class="ruby-constant">RDoc</span><span class="ruby-operator">::</span><span class="ruby-constant">RDoc</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">document</span>(<span class="ruby-identifier">option_list</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@rdoc_files</span>)
+39:     <span class="ruby-keyword kw">end</span>
+40:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+41:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-binding-method" class="method-detail ">
+				<a name="method-i-get_binding"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_binding</span><span
+						class="method-args">(values = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-binding-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_page_patch.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_binding</span>(<span class="ruby-identifier">values</span> = <span class="ruby-keyword kw">nil</span>)
+36:       <span class="ruby-identifier">binding</span>
+37:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-html-on-method" class="method-detail ">
+				<a name="method-i-write_html_on"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_html_on</span><span
+						class="method-args">(io, values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-html-on-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hanna/template_page_patch.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_html_on</span>(<span class="ruby-identifier">io</span>, <span class="ruby-identifier">values</span>)
+10:     <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@templates</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-keyword kw">nil</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">previous</span>, <span class="ruby-identifier">template</span><span class="ruby-operator">|</span>
+11:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">template</span>
+12:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Haml</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span>
+13:         <span class="ruby-identifier">silence_warnings</span> <span class="ruby-keyword kw">do</span>
+14:           <span class="ruby-identifier">template</span>.<span class="ruby-identifier">to_html</span>(<span class="ruby-identifier">binding</span>, <span class="ruby-value">:values</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">values</span>) { <span class="ruby-identifier">previous</span> }
+15:         <span class="ruby-keyword kw">end</span>
+16:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Engine</span>
+17:         <span class="ruby-identifier">silence_warnings</span> { <span class="ruby-identifier">template</span>.<span class="ruby-identifier">to_css</span> }
+18:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>
+19:         <span class="ruby-constant">ERB</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">template</span>).<span class="ruby-identifier">result</span>(<span class="ruby-identifier">get_binding</span>(<span class="ruby-identifier">values</span>){ <span class="ruby-identifier">previous</span> })
+20:       <span class="ruby-keyword kw">when</span> <span class="ruby-keyword kw">nil</span>
+21:         <span class="ruby-identifier">previous</span>
+22:       <span class="ruby-keyword kw">else</span>
+23:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;don't know how to handle a template of class '#{template.class.name}'&quot;</span>
+24:       <span class="ruby-keyword kw">end</span>
+25:     <span class="ruby-keyword kw">end</span>
+26: 
+27:     <span class="ruby-identifier">io</span>.<span class="ruby-identifier">write</span> <span class="ruby-identifier">result</span>
+28:   <span class="ruby-keyword kw">rescue</span>
+29:     <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;error while writing to #{io.inspect}&quot;</span>
+30:     <span class="ruby-identifier">raise</span>
+31:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

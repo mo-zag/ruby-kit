@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Rack::Protection::EscapedParams</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rack/protection/escaped_params_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rack/protection/escaped_params.rb">lib/rack/protection/escaped_params.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Base.html">Rack::Protection::Base</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-call">#call</a></li>
+					
+					<li><a href="#method-i-escape">#escape</a></li>
+					
+					<li><a href="#method-i-escape_hash">#escape_hash</a></li>
+					
+					<li><a href="#method-i-escape_string">#escape_string</a></li>
+					
+					<li><a href="#method-i-escape_url">#escape_url</a></li>
+					
+					<li><a href="#method-i-handle">#handle</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Rack.html">Rack</a></li>
+				
+					<li><a href="../../Rack/Protection.html">Rack::Protection</a></li>
+				
+					<li><a href="../../Rack/Protection/AuthenticityToken.html">Rack::Protection::AuthenticityToken</a></li>
+				
+					<li><a href="../../Rack/Protection/Base.html">Rack::Protection::Base</a></li>
+				
+					<li><a href="../../Rack/Protection/EscapedParams.html">Rack::Protection::EscapedParams</a></li>
+				
+					<li><a href="../../Rack/Protection/FormToken.html">Rack::Protection::FormToken</a></li>
+				
+					<li><a href="../../Rack/Protection/FrameOptions.html">Rack::Protection::FrameOptions</a></li>
+				
+					<li><a href="../../Rack/Protection/IPSpoofing.html">Rack::Protection::IPSpoofing</a></li>
+				
+					<li><a href="../../Rack/Protection/JsonCsrf.html">Rack::Protection::JsonCsrf</a></li>
+				
+					<li><a href="../../Rack/Protection/PathTraversal.html">Rack::Protection::PathTraversal</a></li>
+				
+					<li><a href="../../Rack/Protection/RemoteReferrer.html">Rack::Protection::RemoteReferrer</a></li>
+				
+					<li><a href="../../Rack/Protection/RemoteToken.html">Rack::Protection::RemoteToken</a></li>
+				
+					<li><a href="../../Rack/Protection/SessionHijacking.html">Rack::Protection::SessionHijacking</a></li>
+				
+					<li><a href="../../Rack/Protection/VERSION.html">Rack::Protection::VERSION</a></li>
+				
+					<li><a href="../../Rack/Protection/XSSHeader.html">Rack::Protection::XSSHeader</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Rack::Protection::EscapedParams</h1>
+
+		<div id="description">
+			<table>
+<tr><td valign="top">Prevented attack</td><td><p>
+XSS
+</p>
+</td></tr>
+<tr><td valign="top">Supported browsers</td><td><p>
+all
+</p>
+</td></tr>
+<tr><td valign="top">More infos</td><td><p>
+<a
+href="http://en.wikipedia.org/wiki/Cross-site_scripting">en.wikipedia.org/wiki/Cross-site_scripting</a>
+</p>
+</td></tr>
+</table>
+<p>
+Automatically escapes Rack::Request#params so they can be embedded in HTML
+or JavaScript without any further issues. Calls <tt>html_safe</tt> on the
+escaped strings if defined, to avoid double-escaping in Rails.
+</p>
+<p>
+Options:
+</p>
+<table>
+<tr><td valign="top">escape</td><td><p>
+What escaping modes to use, should be Symbol or Array of Symbols.
+Available: :html (default), :javascript, :url
+</p>
+</td></tr>
+</table>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(*)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/escaped_params.rb, line 34</span>
+34:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(*)
+35:         <span class="ruby-keyword kw">super</span>
+36: 
+37:         <span class="ruby-identifier">modes</span>       = <span class="ruby-constant">Array</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:escape</span>]
+38:         <span class="ruby-ivar">@escaper</span>    = <span class="ruby-identifier">options</span>[<span class="ruby-value">:escaper</span>]
+39:         <span class="ruby-ivar">@html</span>       = <span class="ruby-identifier">modes</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:html</span>
+40:         <span class="ruby-ivar">@javascript</span> = <span class="ruby-identifier">modes</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:javascript</span>
+41:         <span class="ruby-ivar">@url</span>        = <span class="ruby-identifier">modes</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value">:url</span>
+42: 
+43:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@javascript</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-ivar">@escaper</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:escape_javascript</span>
+44:           <span class="ruby-identifier">fail</span>(<span class="ruby-value str">&quot;Use EscapeUtils for JavaScript escaping.&quot;</span>)
+45:         <span class="ruby-keyword kw">end</span>
+46:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="method-i-call"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(env)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/escaped_params.rb, line 48</span>
+48:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(<span class="ruby-identifier">env</span>)
+49:         <span class="ruby-identifier">request</span>  = <span class="ruby-constant">Request</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">env</span>)
+50:         <span class="ruby-identifier">get_was</span>  = <span class="ruby-identifier">handle</span>(<span class="ruby-identifier">request</span>.<span class="ruby-constant">GET</span>)
+51:         <span class="ruby-identifier">post_was</span> = <span class="ruby-identifier">handle</span>(<span class="ruby-identifier">request</span>.<span class="ruby-constant">POST</span>) <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+52:         <span class="ruby-identifier">app</span>.<span class="ruby-identifier">call</span> <span class="ruby-identifier">env</span>
+53:       <span class="ruby-keyword kw">ensure</span>
+54:         <span class="ruby-identifier">request</span>.<span class="ruby-constant">GET</span>.<span class="ruby-identifier">replace</span>  <span class="ruby-identifier">get_was</span>  <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">get_was</span>
+55:         <span class="ruby-identifier">request</span>.<span class="ruby-constant">POST</span>.<span class="ruby-identifier">replace</span> <span class="ruby-identifier">post_was</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">post_was</span>
+56:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="escape-method" class="method-detail ">
+				<a name="method-i-escape"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape</span><span
+						class="method-args">(object)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="escape-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/escaped_params.rb, line 64</span>
+64:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">escape</span>(<span class="ruby-identifier">object</span>)
+65:         <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">object</span>
+66:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Hash</span>   <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">escape_hash</span>(<span class="ruby-identifier">object</span>)
+67:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span>  <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span> <span class="ruby-identifier">escape</span>(<span class="ruby-identifier">o</span>) }
+68:         <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">escape_string</span>(<span class="ruby-identifier">object</span>)
+69:         <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;cannot escape #{object.inspect}&quot;</span>
+70:         <span class="ruby-keyword kw">end</span>
+71:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="EscapedParams.html#method-i-escape_url">escape_url</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="escape-hash-method" class="method-detail ">
+				<a name="method-i-escape_hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape_hash</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="escape-hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/escaped_params.rb, line 73</span>
+73:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">escape_hash</span>(<span class="ruby-identifier">hash</span>)
+74:         <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">dup</span>
+75:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">escape</span>(<span class="ruby-identifier">v</span>) }
+76:         <span class="ruby-identifier">hash</span>
+77:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="escape-string-method" class="method-detail ">
+				<a name="method-i-escape_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape_string</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="escape-string-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/escaped_params.rb, line 79</span>
+79:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">escape_string</span>(<span class="ruby-identifier">str</span>)
+80:         <span class="ruby-identifier">str</span> = <span class="ruby-ivar">@escaper</span>.<span class="ruby-identifier">escape_url</span>(<span class="ruby-identifier">str</span>)        <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@url</span>
+81:         <span class="ruby-identifier">str</span> = <span class="ruby-ivar">@escaper</span>.<span class="ruby-identifier">escape_html</span>(<span class="ruby-identifier">str</span>)       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@html</span>
+82:         <span class="ruby-identifier">str</span> = <span class="ruby-ivar">@escaper</span>.<span class="ruby-identifier">escape_javascript</span>(<span class="ruby-identifier">str</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@javascript</span>
+83:         <span class="ruby-identifier">str</span>
+84:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="escape-url-method" class="method-detail method-alias">
+				<a name="method-i-escape_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape_url</span><span
+						class="method-args">(object)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="EscapedParams.html#method-i-escape">escape</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="handle-method" class="method-detail ">
+				<a name="method-i-handle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="handle-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rack/protection/escaped_params.rb, line 58</span>
+58:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle</span>(<span class="ruby-identifier">hash</span>)
+59:         <span class="ruby-identifier">was</span> = <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">dup</span>
+60:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">replace</span> <span class="ruby-identifier">escape</span>(<span class="ruby-identifier">hash</span>)
+61:         <span class="ruby-identifier">was</span>
+62:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

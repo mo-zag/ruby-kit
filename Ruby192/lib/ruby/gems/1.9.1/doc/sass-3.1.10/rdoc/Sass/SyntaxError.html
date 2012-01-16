@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Sass::SyntaxError</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/sass/error_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/sass/error.rb">lib/sass/error.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">StandardError</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-exception_to_css">::exception_to_css</a></li>
+					
+					<li><a href="#method-c-header_string">::header_string</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_backtrace">#add_backtrace</a></li>
+					
+					<li><a href="#method-i-backtrace">#backtrace</a></li>
+					
+					<li><a href="#method-i-modify_backtrace">#modify_backtrace</a></li>
+					
+					<li><a href="#method-i-sass_backtrace_str">#sass_backtrace_str</a></li>
+					
+					<li><a href="#method-i-sass_filename">#sass_filename</a></li>
+					
+					<li><a href="#method-i-sass_line">#sass_line</a></li>
+					
+					<li><a href="#method-i-sass_mixin">#sass_mixin</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Sass.html">Sass</a></li>
+				
+					<li><a href="../Sass/CSS.html">Sass::CSS</a></li>
+				
+					<li><a href="../Sass/CacheStores.html">Sass::CacheStores</a></li>
+				
+					<li><a href="../Sass/CacheStores/Base.html">Sass::CacheStores::Base</a></li>
+				
+					<li><a href="../Sass/CacheStores/Chain.html">Sass::CacheStores::Chain</a></li>
+				
+					<li><a href="../Sass/CacheStores/Filesystem.html">Sass::CacheStores::Filesystem</a></li>
+				
+					<li><a href="../Sass/CacheStores/Memory.html">Sass::CacheStores::Memory</a></li>
+				
+					<li><a href="../Sass/CacheStores/Null.html">Sass::CacheStores::Null</a></li>
+				
+					<li><a href="../Sass/Callbacks.html">Sass::Callbacks</a></li>
+				
+					<li><a href="../Sass/Callbacks/InstanceMethods.html">Sass::Callbacks::InstanceMethods</a></li>
+				
+					<li><a href="../Sass/Engine.html">Sass::Engine</a></li>
+				
+					<li><a href="../Sass/Engine/Line.html">Sass::Engine::Line</a></li>
+				
+					<li><a href="../Sass/Environment.html">Sass::Environment</a></li>
+				
+					<li><a href="../Sass/Exec.html">Sass::Exec</a></li>
+				
+					<li><a href="../Sass/Exec/Generic.html">Sass::Exec::Generic</a></li>
+				
+					<li><a href="../Sass/Exec/Sass.html">Sass::Exec::Sass</a></li>
+				
+					<li><a href="../Sass/Exec/SassConvert.html">Sass::Exec::SassConvert</a></li>
+				
+					<li><a href="../Sass/Exec/Scss.html">Sass::Exec::Scss</a></li>
+				
+					<li><a href="../Sass/Importers.html">Sass::Importers</a></li>
+				
+					<li><a href="../Sass/Importers/Base.html">Sass::Importers::Base</a></li>
+				
+					<li><a href="../Sass/Importers/Filesystem.html">Sass::Importers::Filesystem</a></li>
+				
+					<li><a href="../Sass/Logger.html">Sass::Logger</a></li>
+				
+					<li><a href="../Sass/Logger/Base.html">Sass::Logger::Base</a></li>
+				
+					<li><a href="../Sass/Logger/LogLevel.html">Sass::Logger::LogLevel</a></li>
+				
+					<li><a href="../Sass/Logger/LogLevel/ClassMethods.html">Sass::Logger::LogLevel::ClassMethods</a></li>
+				
+					<li><a href="../Sass/Plugin.html">Sass::Plugin</a></li>
+				
+					<li><a href="../Sass/Plugin/Compiler.html">Sass::Plugin::Compiler</a></li>
+				
+					<li><a href="../Sass/Plugin/Configuration.html">Sass::Plugin::Configuration</a></li>
+				
+					<li><a href="../Sass/Plugin/MerbBootLoader.html">Sass::Plugin::MerbBootLoader</a></li>
+				
+					<li><a href="../Sass/Plugin/Rack.html">Sass::Plugin::Rack</a></li>
+				
+					<li><a href="../Sass/Plugin/StalenessChecker.html">Sass::Plugin::StalenessChecker</a></li>
+				
+					<li><a href="../Sass/Repl.html">Sass::Repl</a></li>
+				
+					<li><a href="../Sass/SCSS.html">Sass::SCSS</a></li>
+				
+					<li><a href="../Sass/SCSS/CssParser.html">Sass::SCSS::CssParser</a></li>
+				
+					<li><a href="../Sass/SCSS/Parser.html">Sass::SCSS::Parser</a></li>
+				
+					<li><a href="../Sass/SCSS/RX.html">Sass::SCSS::RX</a></li>
+				
+					<li><a href="../Sass/SCSS/SassParser.html">Sass::SCSS::SassParser</a></li>
+				
+					<li><a href="../Sass/SCSS/ScriptLexer.html">Sass::SCSS::ScriptLexer</a></li>
+				
+					<li><a href="../Sass/SCSS/ScriptParser.html">Sass::SCSS::ScriptParser</a></li>
+				
+					<li><a href="../Sass/SCSS/StaticParser.html">Sass::SCSS::StaticParser</a></li>
+				
+					<li><a href="../Sass/Script.html">Sass::Script</a></li>
+				
+					<li><a href="../Sass/Script/Bool.html">Sass::Script::Bool</a></li>
+				
+					<li><a href="../Sass/Script/Color.html">Sass::Script::Color</a></li>
+				
+					<li><a href="../Sass/Script/CssLexer.html">Sass::Script::CssLexer</a></li>
+				
+					<li><a href="../Sass/Script/CssParser.html">Sass::Script::CssParser</a></li>
+				
+					<li><a href="../Sass/Script/Funcall.html">Sass::Script::Funcall</a></li>
+				
+					<li><a href="../Sass/Script/Functions.html">Sass::Script::Functions</a></li>
+				
+					<li><a href="../Sass/Script/Functions/EvaluationContext.html">Sass::Script::Functions::EvaluationContext</a></li>
+				
+					<li><a href="../Sass/Script/Interpolation.html">Sass::Script::Interpolation</a></li>
+				
+					<li><a href="../Sass/Script/Lexer.html">Sass::Script::Lexer</a></li>
+				
+					<li><a href="../Sass/Script/List.html">Sass::Script::List</a></li>
+				
+					<li><a href="../Sass/Script/Literal.html">Sass::Script::Literal</a></li>
+				
+					<li><a href="../Sass/Script/Node.html">Sass::Script::Node</a></li>
+				
+					<li><a href="../Sass/Script/Number.html">Sass::Script::Number</a></li>
+				
+					<li><a href="../Sass/Script/Operation.html">Sass::Script::Operation</a></li>
+				
+					<li><a href="../Sass/Script/Parser.html">Sass::Script::Parser</a></li>
+				
+					<li><a href="../Sass/Script/String.html">Sass::Script::String</a></li>
+				
+					<li><a href="../Sass/Script/StringInterpolation.html">Sass::Script::StringInterpolation</a></li>
+				
+					<li><a href="../Sass/Script/UnaryOperation.html">Sass::Script::UnaryOperation</a></li>
+				
+					<li><a href="../Sass/Script/Variable.html">Sass::Script::Variable</a></li>
+				
+					<li><a href="../Sass/Selector.html">Sass::Selector</a></li>
+				
+					<li><a href="../Sass/Selector/AbstractSequence.html">Sass::Selector::AbstractSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Attribute.html">Sass::Selector::Attribute</a></li>
+				
+					<li><a href="../Sass/Selector/Class.html">Sass::Selector::Class</a></li>
+				
+					<li><a href="../Sass/Selector/CommaSequence.html">Sass::Selector::CommaSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Element.html">Sass::Selector::Element</a></li>
+				
+					<li><a href="../Sass/Selector/Id.html">Sass::Selector::Id</a></li>
+				
+					<li><a href="../Sass/Selector/Interpolation.html">Sass::Selector::Interpolation</a></li>
+				
+					<li><a href="../Sass/Selector/Parent.html">Sass::Selector::Parent</a></li>
+				
+					<li><a href="../Sass/Selector/Pseudo.html">Sass::Selector::Pseudo</a></li>
+				
+					<li><a href="../Sass/Selector/SelectorPseudoClass.html">Sass::Selector::SelectorPseudoClass</a></li>
+				
+					<li><a href="../Sass/Selector/Sequence.html">Sass::Selector::Sequence</a></li>
+				
+					<li><a href="../Sass/Selector/Simple.html">Sass::Selector::Simple</a></li>
+				
+					<li><a href="../Sass/Selector/SimpleSequence.html">Sass::Selector::SimpleSequence</a></li>
+				
+					<li><a href="../Sass/Selector/Universal.html">Sass::Selector::Universal</a></li>
+				
+					<li><a href="../Sass/Shared.html">Sass::Shared</a></li>
+				
+					<li><a href="../Sass/SyntaxError.html">Sass::SyntaxError</a></li>
+				
+					<li><a href="../Sass/Tree.html">Sass::Tree</a></li>
+				
+					<li><a href="../Sass/Tree/CharsetNode.html">Sass::Tree::CharsetNode</a></li>
+				
+					<li><a href="../Sass/Tree/CommentNode.html">Sass::Tree::CommentNode</a></li>
+				
+					<li><a href="../Sass/Tree/DebugNode.html">Sass::Tree::DebugNode</a></li>
+				
+					<li><a href="../Sass/Tree/DirectiveNode.html">Sass::Tree::DirectiveNode</a></li>
+				
+					<li><a href="../Sass/Tree/EachNode.html">Sass::Tree::EachNode</a></li>
+				
+					<li><a href="../Sass/Tree/ExtendNode.html">Sass::Tree::ExtendNode</a></li>
+				
+					<li><a href="../Sass/Tree/ForNode.html">Sass::Tree::ForNode</a></li>
+				
+					<li><a href="../Sass/Tree/FunctionNode.html">Sass::Tree::FunctionNode</a></li>
+				
+					<li><a href="../Sass/Tree/IfNode.html">Sass::Tree::IfNode</a></li>
+				
+					<li><a href="../Sass/Tree/ImportNode.html">Sass::Tree::ImportNode</a></li>
+				
+					<li><a href="../Sass/Tree/MediaNode.html">Sass::Tree::MediaNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinDefNode.html">Sass::Tree::MixinDefNode</a></li>
+				
+					<li><a href="../Sass/Tree/MixinNode.html">Sass::Tree::MixinNode</a></li>
+				
+					<li><a href="../Sass/Tree/Node.html">Sass::Tree::Node</a></li>
+				
+					<li><a href="../Sass/Tree/PropNode.html">Sass::Tree::PropNode</a></li>
+				
+					<li><a href="../Sass/Tree/ReturnNode.html">Sass::Tree::ReturnNode</a></li>
+				
+					<li><a href="../Sass/Tree/RootNode.html">Sass::Tree::RootNode</a></li>
+				
+					<li><a href="../Sass/Tree/RuleNode.html">Sass::Tree::RuleNode</a></li>
+				
+					<li><a href="../Sass/Tree/VariableNode.html">Sass::Tree::VariableNode</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors.html">Sass::Tree::Visitors</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Base.html">Sass::Tree::Visitors::Base</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/CheckNesting.html">Sass::Tree::Visitors::CheckNesting</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Convert.html">Sass::Tree::Visitors::Convert</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Cssize.html">Sass::Tree::Visitors::Cssize</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/DeepCopy.html">Sass::Tree::Visitors::DeepCopy</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/Perform.html">Sass::Tree::Visitors::Perform</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/SetOptions.html">Sass::Tree::Visitors::SetOptions</a></li>
+				
+					<li><a href="../Sass/Tree/Visitors/ToCss.html">Sass::Tree::Visitors::ToCss</a></li>
+				
+					<li><a href="../Sass/Tree/WarnNode.html">Sass::Tree::WarnNode</a></li>
+				
+					<li><a href="../Sass/Tree/WhileNode.html">Sass::Tree::WhileNode</a></li>
+				
+					<li><a href="../Sass/UnitConversionError.html">Sass::UnitConversionError</a></li>
+				
+					<li><a href="../Sass/Util.html">Sass::Util</a></li>
+				
+					<li><a href="../Sass/Util/SubsetMap.html">Sass::Util::SubsetMap</a></li>
+				
+					<li><a href="../Sass/Version.html">Sass::Version</a></li>
+				
+					<li><a href="../Less.html">Less</a></li>
+				
+					<li><a href="../Less/Engine.html">Less::Engine</a></li>
+				
+					<li><a href="../Less/Node.html">Less::Node</a></li>
+				
+					<li><a href="../Less/Node/Anonymous.html">Less::Node::Anonymous</a></li>
+				
+					<li><a href="../Less/Node/Color.html">Less::Node::Color</a></li>
+				
+					<li><a href="../Less/Node/Element.html">Less::Node::Element</a></li>
+				
+					<li><a href="../Less/Node/Entity.html">Less::Node::Entity</a></li>
+				
+					<li><a href="../Less/Node/Expression.html">Less::Node::Expression</a></li>
+				
+					<li><a href="../Less/Node/FontFamily.html">Less::Node::FontFamily</a></li>
+				
+					<li><a href="../Less/Node/Function.html">Less::Node::Function</a></li>
+				
+					<li><a href="../Less/Node/Keyword.html">Less::Node::Keyword</a></li>
+				
+					<li><a href="../Less/Node/Mixin.html">Less::Node::Mixin</a></li>
+				
+					<li><a href="../Less/Node/Mixin/Call.html">Less::Node::Mixin::Call</a></li>
+				
+					<li><a href="../Less/Node/Mixin/Def.html">Less::Node::Mixin::Def</a></li>
+				
+					<li><a href="../Less/Node/Number.html">Less::Node::Number</a></li>
+				
+					<li><a href="../Less/Node/Property.html">Less::Node::Property</a></li>
+				
+					<li><a href="../Less/Node/Quoted.html">Less::Node::Quoted</a></li>
+				
+					<li><a href="../Less/Node/SassNode.html">Less::Node::SassNode</a></li>
+				
+					<li><a href="../Less/Node/Variable.html">Less::Node::Variable</a></li>
+				
+					<li><a href="../Less/StyleSheet.html">Less::StyleSheet</a></li>
+				
+					<li><a href="../Less/StyleSheet/Accessor1.html">Less::StyleSheet::Accessor1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Declaration3.html">Less::StyleSheet::Declaration3</a></li>
+				
+					<li><a href="../Less/StyleSheet/Entity.html">Less::StyleSheet::Entity</a></li>
+				
+					<li><a href="../Less/StyleSheet/Entity/Alpha1.html">Less::StyleSheet::Entity::Alpha1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Import1.html">Less::StyleSheet::Import1</a></li>
+				
+					<li><a href="../Less/StyleSheet/Mixin4.html">Less::StyleSheet::Mixin4</a></li>
+				
+					<li><a href="../Less/StyleSheet/Selectors2.html">Less::StyleSheet::Selectors2</a></li>
+				
+					<li><a href="../ActionController.html">ActionController</a></li>
+				
+					<li><a href="../ActionController/Base.html">ActionController::Base</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../StaticConditionalContext.html">StaticConditionalContext</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Sass::SyntaxError</h1>
+
+		<div id="description">
+			<p>
+An exception class that keeps track of the line of the <a
+href="../Sass.html">Sass</a> template it was raised on and the <a
+href="../Sass.html">Sass</a> file that was being parsed (if applicable).
+</p>
+<p>
+All <a href="../Sass.html">Sass</a> errors are raised as
+{Sass::SyntaxError}s.
+</p>
+<p>
+When dealing with SyntaxErrors, it&#8217;s important to provide filename
+and line number information. This will be used in various error reports to
+users, including backtraces; see {#sass_backtrace} for details.
+</p>
+<p>
+Some of this information is usually provided as part of the constructor.
+New backtrace entries can be added with {#add_backtrace}, which is called
+when an exception is raised between files (e.g. with `@import`).
+</p>
+<p>
+Often, a chunk of code will all have similar backtrace information - the
+same filename or even line. It may also be useful to have a default line
+number set. In those situations, the default values can be used by omitting
+the information on the original exception, and then calling
+{#modify_backtrace} in a wrapper `rescue`. When doing this, be sure that
+all exceptions ultimately end up with the information filled in.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="sass-backtrace-attribute-method" class="method-detail">
+				<a name="sass_backtrace"></a>
+				
+				<a name="sass_backtrace="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">sass_backtrace</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The backtrace of the error within <a href="../Sass.html">Sass</a> files.
+This is an array of hashes containing information for a single entry. The
+hashes have the following keys:
+</p>
+<p>
+`:filename` : The name of the file in which the exception was raised,
+</p>
+<pre>
+  or `nil` if no filename is available.
+</pre>
+<p>
+`:mixin` : The name of the mixin in which the exception was raised,
+</p>
+<pre>
+  or `nil` if it wasn't raised in a mixin.
+</pre>
+<p>
+`:line` : The line of the file on which the error occurred. Never nil.
+</p>
+<p>
+This information is also included in standard backtrace format in the
+output of {#backtrace}.
+</p>
+<p>
+@return [Aray<{Symbol => Object>}]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="sass-template-attribute-method" class="method-detail">
+				<a name="sass_template"></a>
+				
+				<a name="sass_template="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">sass_template</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The text of the template where this error was raised.
+</p>
+<p>
+@return [String]
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="exception-to-css-method" class="method-detail ">
+				<a name="method-c-exception_to_css"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exception_to_css</span><span
+						class="method-args">(e, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an error report for an exception in <a href="CSS.html">CSS</a>
+format.
+</p>
+<p>
+@param e [Exception] @param options [{Symbol => Object}] The options passed
+to {Sass::Engine#initialize} @return [String] The error report @raise
+[Exception] `e`, if the
+</p>
+<pre>
+  {file:SASS_REFERENCE.md#full_exception-option `:full_exception`} option
+  is set to false.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="exception-to-css-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/error.rb, line 161</span>
+161:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exception_to_css</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">options</span>)
+162:         <span class="ruby-identifier">raise</span> <span class="ruby-identifier">e</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:full_exception</span>]
+163: 
+164:         <span class="ruby-identifier">header</span> = <span class="ruby-identifier">header_string</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">options</span>)
+165: 
+166:         <span class="ruby-value str">/*#{header}Backtrace:\n#{e.backtrace.join(&quot;\n&quot;)}*/body:before {  white-space: pre;  font-family: monospace;  content: &quot;#{header.gsub('&quot;', '\&quot;').gsub(&quot;\n&quot;, '\\A ')}&quot;; }</span>
+167:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(msg, attrs = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@param msg [String] The error message @param attrs [{Symbol => Object}] The
+information in the backtrace entry.
+</p>
+<pre>
+  See \{#sass\_backtrace}</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/error.rb, line 55</span>
+55:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">msg</span>, <span class="ruby-identifier">attrs</span> = {})
+56:       <span class="ruby-ivar">@message</span> = <span class="ruby-identifier">msg</span>
+57:       <span class="ruby-ivar">@sass_backtrace</span> = []
+58:       <span class="ruby-identifier">add_backtrace</span>(<span class="ruby-identifier">attrs</span>)
+59:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="header-string-method" class="method-detail ">
+				<a name="method-c-header_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">header_string</span><span
+						class="method-args">(e, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="header-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/error.rb, line 181</span>
+181:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">header_string</span>(<span class="ruby-identifier">e</span>, <span class="ruby-identifier">options</span>)
+182:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">SyntaxError</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_line</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_template</span>
+183:           <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;#{e.class}: #{e.message}&quot;</span>
+184:         <span class="ruby-keyword kw">end</span>
+185: 
+186:         <span class="ruby-identifier">line_offset</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:line</span>] <span class="ruby-operator">||</span> <span class="ruby-value">1</span>
+187:         <span class="ruby-identifier">line_num</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_line</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">line_offset</span>
+188:         <span class="ruby-identifier">min</span> = [<span class="ruby-identifier">line_num</span> <span class="ruby-operator">-</span> <span class="ruby-value">6</span>, <span class="ruby-value">0</span>].<span class="ruby-identifier">max</span>
+189:         <span class="ruby-identifier">section</span> = <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_template</span>.<span class="ruby-identifier">rstrip</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>)[<span class="ruby-identifier">min</span> <span class="ruby-operator">...</span> <span class="ruby-identifier">line_num</span> <span class="ruby-operator">+</span> <span class="ruby-value">5</span>]
+190:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_backtrace_str</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">section</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">section</span>.<span class="ruby-identifier">empty?</span>
+191: 
+192:         <span class="ruby-identifier">e</span>.<span class="ruby-identifier">sass_backtrace_str</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">enum_with_index</span>(<span class="ruby-identifier">section</span>).
+193:           <span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">line</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;#{line_offset + min + i}: #{line}&quot;</span>}.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+194:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-backtrace-method" class="method-detail ">
+				<a name="method-i-add_backtrace"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_backtrace</span><span
+						class="method-args">(attrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds an entry to the exception&#8217;s <a href="../Sass.html">Sass</a>
+backtrace.
+</p>
+<p>
+@param attrs [{Symbol => Object}] The information in the backtrace entry.
+</p>
+<pre>
+  See \{#sass\_backtrace}</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="add-backtrace-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/error.rb, line 88</span>
+88:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_backtrace</span>(<span class="ruby-identifier">attrs</span>)
+89:       <span class="ruby-identifier">sass_backtrace</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>}
+90:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="backtrace-method" class="method-detail ">
+				<a name="method-i-backtrace"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">backtrace</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the standard exception backtrace, including the <a
+href="../Sass.html">Sass</a> backtrace.
+</p>
+<p>
+@return [Array<String>]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="backtrace-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/error.rb, line 126</span>
+126:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">backtrace</span>
+127:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">super</span>.<span class="ruby-identifier">nil?</span>
+128:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">super</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">sass_backtrace</span>.<span class="ruby-identifier">all?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>.<span class="ruby-identifier">empty?</span>}
+129:       <span class="ruby-identifier">sass_backtrace</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">h</span><span class="ruby-operator">|</span>
+130:         <span class="ruby-node">&quot;#{h[:filename] || &quot;(sass)&quot;}:#{h[:line]}&quot;</span> <span class="ruby-operator">+</span>
+131:           (<span class="ruby-identifier">h</span>[<span class="ruby-value">:mixin</span>] <span class="ruby-operator">?</span> <span class="ruby-node">&quot;:in `#{h[:mixin]}'&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;&quot;</span>)
+132:       <span class="ruby-keyword kw">end</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">super</span>
+133:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="modify-backtrace-method" class="method-detail ">
+				<a name="method-i-modify_backtrace"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">modify_backtrace</span><span
+						class="method-args">(attrs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Modify the top <a href="../Sass.html">Sass</a> backtrace entries (that is,
+the most deeply nested ones) to have the given attributes.
+</p>
+<p>
+Specifically, this goes through the backtrace entries from most deeply
+nested to least, setting the given attributes for each entry. If an entry
+already has one of the given attributes set, the pre-existing attribute
+takes precedence and is not used for less deeply-nested entries (even if
+they don&#8217;t have that attribute set).
+</p>
+<p>
+@param attrs [{Symbol => Object}] The information to add to the backtrace
+entry.
+</p>
+<pre>
+  See \{#sass\_backtrace}</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="modify-backtrace-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/error.rb, line 106</span>
+106:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modify_backtrace</span>(<span class="ruby-identifier">attrs</span>)
+107:       <span class="ruby-identifier">attrs</span> = <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span>}
+108:       <span class="ruby-comment cmt"># Move backwards through the backtrace</span>
+109:       (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">sass_backtrace</span>.<span class="ruby-identifier">size</span>).<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+110:         <span class="ruby-identifier">entry</span> = <span class="ruby-identifier">sass_backtrace</span>[<span class="ruby-identifier">i</span>]
+111:         <span class="ruby-identifier">sass_backtrace</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">entry</span>)
+112:         <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">reject!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">k</span>)}
+113:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">attrs</span>.<span class="ruby-identifier">empty?</span>
+114:       <span class="ruby-keyword kw">end</span>
+115:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sass-backtrace-str-method" class="method-detail ">
+				<a name="method-i-sass_backtrace_str"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sass_backtrace_str</span><span
+						class="method-args">(default_filename = "an unknown file")</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a string representation of the <a href="../Sass.html">Sass</a>
+backtrace.
+</p>
+<p>
+@param default_filename [String] The filename to use for unknown files @see
+# @return [String]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sass-backtrace-str-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/error.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sass_backtrace_str</span>(<span class="ruby-identifier">default_filename</span> = <span class="ruby-value str">&quot;an unknown file&quot;</span>)
+141:       <span class="ruby-identifier">lines</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">message</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+142:       <span class="ruby-identifier">msg</span> = <span class="ruby-identifier">lines</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">lines</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>].
+143:         <span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">l</span><span class="ruby-operator">|</span> <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-value str">&quot; &quot;</span> * <span class="ruby-value str">&quot;Syntax error: &quot;</span>.<span class="ruby-identifier">size</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">l</span>}.<span class="ruby-identifier">join</span>
+144:       <span class="ruby-node">&quot;Syntax error: #{msg}&quot;</span> <span class="ruby-operator">+</span>
+145:         <span class="ruby-constant">Sass</span><span class="ruby-operator">::</span><span class="ruby-constant">Util</span>.<span class="ruby-identifier">enum_with_index</span>(<span class="ruby-identifier">sass_backtrace</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">entry</span>, <span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+146:         <span class="ruby-node">&quot;\n        #{i == 0 ? &quot;on&quot; : &quot;from&quot;} line #{entry[:line]}&quot;</span> <span class="ruby-operator">+</span>
+147:           <span class="ruby-node">&quot; of #{entry[:filename] || default_filename}&quot;</span> <span class="ruby-operator">+</span>
+148:           (<span class="ruby-identifier">entry</span>[<span class="ruby-value">:mixin</span>] <span class="ruby-operator">?</span> <span class="ruby-node">&quot;, in `#{entry[:mixin]}'&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;&quot;</span>)
+149:       <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">join</span>
+150:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sass-filename-method" class="method-detail ">
+				<a name="method-i-sass_filename"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sass_filename</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The name of the file in which the exception was raised. This could be `nil`
+if no filename is available.
+</p>
+<p>
+@return [String, nil]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sass-filename-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/error.rb, line 65</span>
+65:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sass_filename</span>
+66:       <span class="ruby-identifier">sass_backtrace</span>.<span class="ruby-identifier">first</span>[<span class="ruby-value">:filename</span>]
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sass-line-method" class="method-detail ">
+				<a name="method-i-sass_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sass_line</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The line of the <a href="../Sass.html">Sass</a> template on which the error
+occurred.
+</p>
+<p>
+@return [Fixnum]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sass-line-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/error.rb, line 80</span>
+80:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sass_line</span>
+81:       <span class="ruby-identifier">sass_backtrace</span>.<span class="ruby-identifier">first</span>[<span class="ruby-value">:line</span>]
+82:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="sass-mixin-method" class="method-detail ">
+				<a name="method-i-sass_mixin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">sass_mixin</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The name of the mixin in which the error occurred. This could be `nil` if
+the error occurred outside a mixin.
+</p>
+<p>
+@return [Fixnum]
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="sass-mixin-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/sass/error.rb, line 73</span>
+73:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sass_mixin</span>
+74:       <span class="ruby-identifier">sass_backtrace</span>.<span class="ruby-identifier">first</span>[<span class="ruby-value">:mixin</span>]
+75:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [String] The error message
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/sass/error.rb, line 118</span>
+118:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+119:       <span class="ruby-ivar">@message</span>
+120:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

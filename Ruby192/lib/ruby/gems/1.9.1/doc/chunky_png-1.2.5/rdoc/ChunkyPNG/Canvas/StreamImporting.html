@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Canvas::StreamImporting</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/chunky_png/canvas/stream_importing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/stream_importing.rb">lib/chunky_png/canvas/stream_importing.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-from_abgr_stream">#from_abgr_stream</a></li>
+					
+					<li><a href="#method-i-from_bgr_stream">#from_bgr_stream</a></li>
+					
+					<li><a href="#method-i-from_rgb_stream">#from_rgb_stream</a></li>
+					
+					<li><a href="#method-i-from_rgba_stream">#from_rgba_stream</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Canvas::StreamImporting</h1>
+
+		<div id="description">
+			<p>
+Methods to quickly load a canvas from a stream, encoded in RGB, RGBA, BGR
+or ABGR format.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="from-abgr-stream-method" class="method-detail ">
+				<a name="method-i-from_abgr_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_abgr_stream</span><span
+						class="method-args">(width, height, stream)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a canvas by reading pixels from an ARGB formatted stream with a
+provided with and height.
+</p>
+<p>
+Every pixel should be represented by 4 bytes in the stream, in the correct
+ARGB order. This format is almost like the internal representation of a
+canvas object, so this kind of stream can be read extremely quickly.
+</p>
+<p>
+@param [Integer] width The width of the new canvas. @param [Integer] height
+The height of the new canvas. @param [#, String] stream The stream to read
+the pixel data from. @return [ChunkyPNG::Canvas] The newly constructed
+canvas instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-abgr-stream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/stream_importing.rb, line 71</span>
+71:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_abgr_stream</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">stream</span>)
+72:         <span class="ruby-identifier">string</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:read</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>]
+73:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">string</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;V*&quot;</span>))
+74:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-bgr-stream-method" class="method-detail ">
+				<a name="method-i-from_bgr_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_bgr_stream</span><span
+						class="method-args">(width, height, stream)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a canvas by reading pixels from an BGR formatted stream with a
+provided with and height.
+</p>
+<p>
+Every pixel should be represented by 3 bytes in the stream, in the correct
+BGR order. This format closely resembles the internal representation of a
+canvas object, so this kind of stream can be read extremely quickly.
+</p>
+<p>
+@param [Integer] width The width of the new canvas. @param [Integer] height
+The height of the new canvas. @param [#, String] stream The stream to read
+the pixel data from. @return [ChunkyPNG::Canvas] The newly constructed
+canvas instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-bgr-stream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/stream_importing.rb, line 53</span>
+53:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_bgr_stream</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">stream</span>)
+54:         <span class="ruby-identifier">string</span> = <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">EXTRA_BYTE</span> <span class="ruby-comment cmt"># Add a first byte to the first BGR triple.</span>
+55:         <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:read</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">3</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span>, <span class="ruby-value">3</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>]
+56:         <span class="ruby-identifier">pixels</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;@1&quot;</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-value str">'XV'</span> * (<span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>))).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span> <span class="ruby-identifier">color</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x000000ff</span> }
+57:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">pixels</span>)
+58:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-rgb-stream-method" class="method-detail ">
+				<a name="method-i-from_rgb_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_rgb_stream</span><span
+						class="method-args">(width, height, stream)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a canvas by reading pixels from an RGB formatted stream with a
+provided with and height.
+</p>
+<p>
+Every pixel should be represented by 3 bytes in the stream, in the correct
+RGB order. This format closely resembles the internal representation of a
+canvas object, so this kind of stream can be read extremely quickly.
+</p>
+<p>
+@param [Integer] width The width of the new canvas. @param [Integer] height
+The height of the new canvas. @param [#, String] stream The stream to read
+the pixel data from. @return [ChunkyPNG::Canvas] The newly constructed
+canvas instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-rgb-stream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/stream_importing.rb, line 18</span>
+18:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_rgb_stream</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">stream</span>)
+19:         <span class="ruby-identifier">string</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:read</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">3</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span>, <span class="ruby-value">3</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>]
+20:         <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">EXTRA_BYTE</span> <span class="ruby-comment cmt"># Add a fourth byte to the last RGB triple.</span>
+21:         <span class="ruby-identifier">unpacker</span> = <span class="ruby-value str">'NX'</span> * (<span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>)
+22:         <span class="ruby-identifier">pixels</span> = <span class="ruby-identifier">string</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-identifier">unpacker</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">color</span><span class="ruby-operator">|</span> <span class="ruby-identifier">color</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x000000ff</span> }
+23:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">pixels</span>)
+24:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="from-rgba-stream-method" class="method-detail ">
+				<a name="method-i-from_rgba_stream"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">from_rgba_stream</span><span
+						class="method-args">(width, height, stream)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a canvas by reading pixels from an RGBA formatted stream with a
+provided with and height.
+</p>
+<p>
+Every pixel should be represented by 4 bytes in the stream, in the correct
+RGBA order. This format is exactly like the internal representation of a
+canvas object, so this kind of stream can be read extremely quickly.
+</p>
+<p>
+@param [Integer] width The width of the new canvas. @param [Integer] height
+The height of the new canvas. @param [#, String] stream The stream to read
+the pixel data from. @return [ChunkyPNG::Canvas] The newly constructed
+canvas instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="from-rgba-stream-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/stream_importing.rb, line 37</span>
+37:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">from_rgba_stream</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">stream</span>)
+38:         <span class="ruby-identifier">string</span> = <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:read</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">4</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">stream</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span> * <span class="ruby-identifier">width</span> * <span class="ruby-identifier">height</span>]
+39:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>, <span class="ruby-identifier">string</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;N*&quot;</span>))
+40:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

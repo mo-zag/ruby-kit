@@ -1,0 +1,16 @@
+Sat, 07 Jan 2012 05:03:21 +0000
+lib/rack/protection/authenticity_token.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/base.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/escaped_params.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/form_token.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/frame_options.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/ip_spoofing.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/json_csrf.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/path_traversal.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/remote_referrer.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/remote_token.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/session_hijacking.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/version.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection/xss_header.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack/protection.rb	Sat, 07 Jan 2012 05:03:08 +0000
+lib/rack-protection.rb	Sat, 07 Jan 2012 05:03:08 +0000

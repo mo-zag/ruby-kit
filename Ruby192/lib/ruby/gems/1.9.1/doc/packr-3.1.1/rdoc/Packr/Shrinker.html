@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Packr::Shrinker</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/packr/shrinker_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/packr/shrinker.rb">lib/packr/shrinker.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-decode_data">#decode_data</a></li>
+					
+					<li><a href="#method-i-encode_data">#encode_data</a></li>
+					
+					<li><a href="#method-i-shrink">#shrink</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Packr.html">Packr</a></li>
+				
+					<li><a href="../Packr/Base62.html">Packr::Base62</a></li>
+				
+					<li><a href="../Packr/Collection.html">Packr::Collection</a></li>
+				
+					<li><a href="../Packr/Encoder.html">Packr::Encoder</a></li>
+				
+					<li><a href="../Packr/Map.html">Packr::Map</a></li>
+				
+					<li><a href="../Packr/Minifier.html">Packr::Minifier</a></li>
+				
+					<li><a href="../Packr/Parser.html">Packr::Parser</a></li>
+				
+					<li><a href="../Packr/Privates.html">Packr::Privates</a></li>
+				
+					<li><a href="../Packr/RegexpGroup.html">Packr::RegexpGroup</a></li>
+				
+					<li><a href="../Packr/RegexpGroup/Item.html">Packr::RegexpGroup::Item</a></li>
+				
+					<li><a href="../Packr/Shrinker.html">Packr::Shrinker</a></li>
+				
+					<li><a href="../Packr/Words.html">Packr::Words</a></li>
+				
+					<li><a href="../Packr/Words/Item.html">Packr::Words::Item</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Packr::Shrinker</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="ENCODED_DATA">ENCODED_DATA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PREFIX">PREFIX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SHRUNK">SHRUNK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="decode-data-method" class="method-detail ">
+				<a name="method-i-decode_data"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">decode_data</span><span
+						class="method-args">(script)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="decode-data-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/shrinker.rb, line 8</span>
+ 8:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decode_data</span>(<span class="ruby-identifier">script</span>)
+ 9:       <span class="ruby-comment cmt"># put strings and regular expressions back</span>
+10:       <span class="ruby-identifier">script</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-constant">ENCODED_DATA</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span> <span class="ruby-ivar">@strings</span>[<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>] }
+11:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="encode-data-method" class="method-detail ">
+				<a name="method-i-encode_data"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">encode_data</span><span
+						class="method-args">(script)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="encode-data-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/packr/shrinker.rb, line 13</span>
+13:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">encode_data</span>(<span class="ruby-identifier">script</span>)
+14:       <span class="ruby-comment cmt"># encode strings and regular expressions</span>
+15:       <span class="ruby-ivar">@strings</span> = [] <span class="ruby-comment cmt"># encoded strings and regular expressions</span>
+16:       <span class="ruby-constant">DATA</span>.<span class="ruby-identifier">exec</span>(<span class="ruby-identifier">script</span>, <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">match</span>, *<span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+17:         <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">regexp</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_s</span>
+18:         <span class="ruby-identifier">replacement</span> = <span class="ruby-node">&quot;~^#{@strings.length}^~&quot;</span>
+19:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">regexp</span>.<span class="ruby-identifier">empty?</span>
+20:           <span class="ruby-identifier">replacement</span> = <span class="ruby-identifier">operator</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">replacement</span>
+21:           <span class="ruby-identifier">match</span> = <span class="ruby-identifier">regexp</span>
+22:         <span class="ruby-keyword kw">end</span>
+23:         <span class="ruby-ivar">@strings</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">match</span>
+24:         <span class="ruby-identifier">replacement</span>
+25:       })
+26:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="shrink-method" class="method-detail ">
+				<a name="method-i-shrink"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">shrink</span><span
+						class="method-args">(script, protected_names = [])</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="shrink-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/packr/shrinker.rb, line 28</span>
+ 28:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shrink</span>(<span class="ruby-identifier">script</span>, <span class="ruby-identifier">protected_names</span> = [])
+ 29:       <span class="ruby-identifier">script</span> = <span class="ruby-identifier">encode_data</span>(<span class="ruby-identifier">script</span>)
+ 30:       <span class="ruby-identifier">protected_names</span> <span class="ruby-operator">||=</span> []
+ 31:       <span class="ruby-identifier">protected_names</span> = <span class="ruby-identifier">protected_names</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> }
+ 32:       
+ 33:       <span class="ruby-comment cmt"># identify blocks, particularly identify function blocks (which define scope)</span>
+ 34:       <span class="ruby-identifier">__block</span>         = <span class="ruby-regexp re">/((catch|do|if|while|with|function)\b[^~{};]*(\(\s*[^{};]*\s*\))\s*)?(\{[^{}]*\})/</span>
+ 35:       <span class="ruby-identifier">__brackets</span>      = <span class="ruby-regexp re">/\{[^{}]*\}|\[[^\[\]]*\]|\([^\(\)]*\)|~[^~]+~/</span>
+ 36:       <span class="ruby-identifier">__encoded_block</span> = <span class="ruby-node">/~#?(\d+)~/</span>
+ 37:       <span class="ruby-identifier">__identifier</span>    = <span class="ruby-regexp re">/[a-zA-Z_$][\w\$]*/</span>
+ 38:       <span class="ruby-identifier">__scoped</span>        = <span class="ruby-node">/~#(\d+)~/</span>
+ 39:       <span class="ruby-identifier">__var</span>           = <span class="ruby-regexp re">/\bvar\b/</span>
+ 40:       <span class="ruby-identifier">__vars</span>          = <span class="ruby-node">/\bvar\s+[\w$]+[^;#]*|\bfunction\s+[\w$]+/</span>
+ 41:       <span class="ruby-identifier">__var_tidy</span>      = <span class="ruby-regexp re">/\b(var|function)\b|\sin\s+[^;]+/</span>
+ 42:       <span class="ruby-identifier">__var_equal</span>     = <span class="ruby-regexp re">/\s*=[^,;]*/</span>
+ 43:       
+ 44:       <span class="ruby-identifier">blocks</span> = [] <span class="ruby-comment cmt"># store program blocks (anything between braces {})</span>
+ 45:       <span class="ruby-identifier">total</span> = <span class="ruby-value">0</span>
+ 46:       <span class="ruby-comment cmt"># decoder for program blocks</span>
+ 47:       <span class="ruby-identifier">decode_blocks</span> = <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">script</span>, <span class="ruby-identifier">encoded</span><span class="ruby-operator">|</span>
+ 48:         <span class="ruby-identifier">script</span> = <span class="ruby-identifier">script</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">encoded</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span> <span class="ruby-identifier">blocks</span>[<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_i</span>] } <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">script</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">encoded</span>
+ 49:         <span class="ruby-identifier">script</span>
+ 50:       <span class="ruby-keyword kw">end</span>
+ 51:       
+ 52:       <span class="ruby-comment cmt"># encoder for program blocks</span>
+ 53:       <span class="ruby-identifier">encode_blocks</span> = <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">match</span><span class="ruby-operator">|</span>
+ 54:         <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">block_type</span>, <span class="ruby-identifier">args</span>, <span class="ruby-identifier">block</span> = <span class="ruby-node">$1</span> <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-node">$2</span>, <span class="ruby-node">$3</span>, <span class="ruby-node">$4</span>
+ 55:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_type</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'function'</span>
+ 56:           <span class="ruby-comment cmt"># decode the function block (THIS IS THE IMPORTANT BIT)</span>
+ 57:           <span class="ruby-comment cmt"># We are retrieving all sub-blocks and will re-parse them in light</span>
+ 58:           <span class="ruby-comment cmt"># of newly shrunk variables</span>
+ 59:           <span class="ruby-identifier">block</span> = <span class="ruby-identifier">args</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">decode_blocks</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">block</span>, <span class="ruby-identifier">__scoped</span>)
+ 60:           <span class="ruby-identifier">prefix</span> = <span class="ruby-identifier">prefix</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">__brackets</span>, <span class="ruby-value str">&quot;&quot;</span>)
+ 61:           
+ 62:           <span class="ruby-comment cmt"># create the list of variable and argument names</span>
+ 63:           <span class="ruby-identifier">args</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>]
+ 64:           
+ 65:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'_no_shrink_'</span>
+ 66:             <span class="ruby-identifier">vars</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">__vars</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;;&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">__var</span>, <span class="ruby-value str">&quot;;var&quot;</span>)
+ 67:             <span class="ruby-identifier">vars</span> = <span class="ruby-identifier">vars</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">__brackets</span>, <span class="ruby-value str">&quot;&quot;</span>) <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">vars</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">__brackets</span>
+ 68:             <span class="ruby-identifier">vars</span> = <span class="ruby-identifier">vars</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">__var_tidy</span>, <span class="ruby-value str">&quot;&quot;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">__var_equal</span>, <span class="ruby-value str">&quot;&quot;</span>)
+ 69:           <span class="ruby-keyword kw">end</span>
+ 70:           <span class="ruby-identifier">block</span> = <span class="ruby-identifier">decode_blocks</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">block</span>, <span class="ruby-identifier">__encoded_block</span>)
+ 71:           
+ 72:           <span class="ruby-comment cmt"># process each identifier</span>
+ 73:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'_no_shrink_'</span>
+ 74:             <span class="ruby-identifier">count</span>, <span class="ruby-identifier">short_id</span> = <span class="ruby-value">0</span>, <span class="ruby-keyword kw">nil</span>
+ 75:             <span class="ruby-identifier">ids</span> = [<span class="ruby-identifier">args</span>, <span class="ruby-identifier">vars</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;,&quot;</span>).<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">__identifier</span>)
+ 76:             <span class="ruby-identifier">processed</span> = {}
+ 77:             <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span><span class="ruby-operator">|</span>
+ 78:               <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">processed</span>[<span class="ruby-value str">'#'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">protected_names</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">id</span>)
+ 79:                 <span class="ruby-identifier">processed</span>[<span class="ruby-value str">'#'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">id</span>] = <span class="ruby-keyword kw">true</span>
+ 80:                 <span class="ruby-identifier">id</span> = <span class="ruby-identifier">id</span>.<span class="ruby-identifier">rescape</span>
+ 81:                 <span class="ruby-comment cmt"># encode variable names</span>
+ 82:                 <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{PREFIX}#{count}\\b&quot;</span>)
+ 83:                 <span class="ruby-identifier">reg</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;([^\\w$.])#{id}([^\\w$:])&quot;</span>)
+ 84:                 <span class="ruby-identifier">block</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">reg</span>, <span class="ruby-node">&quot;\\1#{PREFIX}#{count}\\2&quot;</span>) <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">block</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">reg</span>
+ 85:                 <span class="ruby-identifier">reg</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;([^{,\\w$.])#{id}:&quot;</span>)
+ 86:                 <span class="ruby-identifier">block</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">reg</span>, <span class="ruby-node">&quot;\\1#{PREFIX}#{count}:&quot;</span>)
+ 87:                 <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+ 88:               <span class="ruby-keyword kw">end</span>
+ 89:             <span class="ruby-keyword kw">end</span>
+ 90:             <span class="ruby-identifier">total</span> = [<span class="ruby-identifier">total</span>, <span class="ruby-identifier">count</span>].<span class="ruby-identifier">max</span>
+ 91:           <span class="ruby-keyword kw">end</span>
+ 92:           <span class="ruby-identifier">replacement</span> = <span class="ruby-node">&quot;#{prefix}~#{blocks.length}~&quot;</span>
+ 93:           <span class="ruby-identifier">blocks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">block</span>
+ 94:         <span class="ruby-keyword kw">else</span>
+ 95:           <span class="ruby-identifier">replacement</span> = <span class="ruby-node">&quot;~##{blocks.length}~&quot;</span>
+ 96:           <span class="ruby-identifier">blocks</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">block</span>)
+ 97:         <span class="ruby-keyword kw">end</span>
+ 98:         <span class="ruby-identifier">replacement</span>
+ 99:       <span class="ruby-keyword kw">end</span>
+100:       
+101:       <span class="ruby-comment cmt"># encode blocks, as we encode we replace variable and argument names</span>
+102:       <span class="ruby-identifier">script</span> = <span class="ruby-identifier">script</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-identifier">__block</span>, &amp;<span class="ruby-identifier">encode_blocks</span>) <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">script</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">__block</span>
+103:       
+104:       <span class="ruby-comment cmt"># put the blocks back</span>
+105:       <span class="ruby-identifier">script</span> = <span class="ruby-identifier">decode_blocks</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">script</span>, <span class="ruby-identifier">__encoded_block</span>)
+106:       
+107:       <span class="ruby-identifier">short_id</span>, <span class="ruby-identifier">count</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">0</span>
+108:       <span class="ruby-identifier">shrunk</span> = <span class="ruby-constant">Encoder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">SHRUNK</span>, <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">object</span><span class="ruby-operator">|</span>
+109:         <span class="ruby-comment cmt"># find the next free short name</span>
+110:         <span class="ruby-keyword kw">begin</span>
+111:           <span class="ruby-identifier">short_id</span> = <span class="ruby-constant">Packr</span>.<span class="ruby-identifier">encode52</span>(<span class="ruby-identifier">count</span>)
+112:           <span class="ruby-identifier">count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+113:         <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">script</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;[^\\w$.]#{short_id}[^\\w$:]&quot;</span>)
+114:         <span class="ruby-identifier">short_id</span>
+115:       })
+116:       <span class="ruby-identifier">script</span> = <span class="ruby-identifier">shrunk</span>.<span class="ruby-identifier">encode</span>(<span class="ruby-identifier">script</span>)
+117:       
+118:       <span class="ruby-identifier">decode_data</span>(<span class="ruby-identifier">script</span>)
+119:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

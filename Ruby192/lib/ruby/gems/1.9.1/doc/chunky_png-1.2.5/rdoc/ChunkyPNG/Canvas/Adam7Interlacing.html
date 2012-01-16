@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: ChunkyPNG::Canvas::Adam7Interlacing</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/chunky_png/canvas/adam7_interlacing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/chunky_png/canvas/adam7_interlacing.rb">lib/chunky_png/canvas/adam7_interlacing.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-adam7_extract_pass">#adam7_extract_pass</a></li>
+					
+					<li><a href="#method-i-adam7_merge_pass">#adam7_merge_pass</a></li>
+					
+					<li><a href="#method-i-adam7_multiplier_offset">#adam7_multiplier_offset</a></li>
+					
+					<li><a href="#method-i-adam7_pass_size">#adam7_pass_size</a></li>
+					
+					<li><a href="#method-i-adam7_pass_sizes">#adam7_pass_sizes</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../BENCHMARKS_rdoc.html">BENCHMARKS.rdoc</a></li>
+				
+					<li class="file"><a href="../../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../ChunkyPNG.html">ChunkyPNG</a></li>
+				
+					<li><a href="../../ChunkyPNG/CRCMismatch.html">ChunkyPNG::CRCMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas.html">ChunkyPNG::Canvas</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Adam7Interlacing.html">ChunkyPNG::Canvas::Adam7Interlacing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlExporting.html">ChunkyPNG::Canvas::DataUrlExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/DataUrlImporting.html">ChunkyPNG::Canvas::DataUrlImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Drawing.html">ChunkyPNG::Canvas::Drawing</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Masking.html">ChunkyPNG::Canvas::Masking</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Operations.html">ChunkyPNG::Canvas::Operations</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGDecoding.html">ChunkyPNG::Canvas::PNGDecoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/PNGEncoding.html">ChunkyPNG::Canvas::PNGEncoding</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/Resampling.html">ChunkyPNG::Canvas::Resampling</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamExporting.html">ChunkyPNG::Canvas::StreamExporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Canvas/StreamImporting.html">ChunkyPNG::Canvas::StreamImporting</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk.html">ChunkyPNG::Chunk</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Base.html">ChunkyPNG::Chunk::Base</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/CompressedText.html">ChunkyPNG::Chunk::CompressedText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/End.html">ChunkyPNG::Chunk::End</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Generic.html">ChunkyPNG::Chunk::Generic</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Header.html">ChunkyPNG::Chunk::Header</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/ImageData.html">ChunkyPNG::Chunk::ImageData</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/InternationalText.html">ChunkyPNG::Chunk::InternationalText</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Palette.html">ChunkyPNG::Chunk::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Text.html">ChunkyPNG::Chunk::Text</a></li>
+				
+					<li><a href="../../ChunkyPNG/Chunk/Transparency.html">ChunkyPNG::Chunk::Transparency</a></li>
+				
+					<li><a href="../../ChunkyPNG/Color.html">ChunkyPNG::Color</a></li>
+				
+					<li><a href="../../ChunkyPNG/Datastream.html">ChunkyPNG::Datastream</a></li>
+				
+					<li><a href="../../ChunkyPNG/Dimension.html">ChunkyPNG::Dimension</a></li>
+				
+					<li><a href="../../ChunkyPNG/Exception.html">ChunkyPNG::Exception</a></li>
+				
+					<li><a href="../../ChunkyPNG/ExpectationFailed.html">ChunkyPNG::ExpectationFailed</a></li>
+				
+					<li><a href="../../ChunkyPNG/Image.html">ChunkyPNG::Image</a></li>
+				
+					<li><a href="../../ChunkyPNG/NotSupported.html">ChunkyPNG::NotSupported</a></li>
+				
+					<li><a href="../../ChunkyPNG/OutOfBounds.html">ChunkyPNG::OutOfBounds</a></li>
+				
+					<li><a href="../../ChunkyPNG/Palette.html">ChunkyPNG::Palette</a></li>
+				
+					<li><a href="../../ChunkyPNG/Point.html">ChunkyPNG::Point</a></li>
+				
+					<li><a href="../../ChunkyPNG/RMagick.html">ChunkyPNG::RMagick</a></li>
+				
+					<li><a href="../../ChunkyPNG/SignatureMismatch.html">ChunkyPNG::SignatureMismatch</a></li>
+				
+					<li><a href="../../ChunkyPNG/Vector.html">ChunkyPNG::Vector</a></li>
+				
+					<li><a href="../../Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="../../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">ChunkyPNG::Canvas::Adam7Interlacing</h1>
+
+		<div id="description">
+			<p>
+Methods for decoding and encoding Adam7 interlacing.
+</p>
+<p>
+Adam7 interlacing extracts 7 pass images out of a single image, that can be
+encoded to a stream separately so the image can be built up progressively.
+The module is included into <a href="../../ChunkyPNG.html">ChunkyPNG</a>
+canvas and is used to extract the pass images from the original image, or
+to reconstruct an original image from separate pass images.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="adam-extract-pass-method" class="method-detail ">
+				<a name="method-i-adam7_extract_pass"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">adam7_extract_pass</span><span
+						class="method-args">(pass, canvas)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a pass from a complete image @param [Integer] pass The pass
+number, should be in 0..6. @param [ChunkyPNG::Canvas] canvas The image that
+is being deconstructed. @return [ChunkyPNG::Canvas] The extracted pass
+image.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="adam-extract-pass-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/adam7_interlacing.rb, line 57</span>
+57:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">adam7_extract_pass</span>(<span class="ruby-identifier">pass</span>, <span class="ruby-identifier">canvas</span>)
+58:         <span class="ruby-identifier">x_shift</span>, <span class="ruby-identifier">x_offset</span>, <span class="ruby-identifier">y_shift</span>, <span class="ruby-identifier">y_offset</span> = <span class="ruby-identifier">adam7_multiplier_offset</span>(<span class="ruby-identifier">pass</span>)
+59:         <span class="ruby-identifier">sm_pixels</span> = []
+60:         
+61:         <span class="ruby-identifier">y_offset</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">height</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">y_shift</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">y</span><span class="ruby-operator">|</span>
+62:           <span class="ruby-identifier">x_offset</span>.<span class="ruby-identifier">step</span>(<span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">width</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>, <span class="ruby-value">1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x_shift</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+63:             <span class="ruby-identifier">sm_pixels</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">canvas</span>[<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>]
+64:           <span class="ruby-keyword kw">end</span>
+65:         <span class="ruby-keyword kw">end</span>
+66:         
+67:         <span class="ruby-identifier">new_canvas_args</span> = <span class="ruby-identifier">adam7_pass_size</span>(<span class="ruby-identifier">pass</span>, <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">width</span>, <span class="ruby-identifier">canvas</span>.<span class="ruby-identifier">height</span>) <span class="ruby-operator">+</span> [<span class="ruby-identifier">sm_pixels</span>]
+68:         <span class="ruby-constant">ChunkyPNG</span><span class="ruby-operator">::</span><span class="ruby-constant">Canvas</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">new_canvas_args</span>)
+69:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="adam-merge-pass-method" class="method-detail ">
+				<a name="method-i-adam7_merge_pass"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">adam7_merge_pass</span><span
+						class="method-args">(pass, canvas, subcanvas)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Merges a pass image into a total image that is being constructed. @param
+[Integer] pass The pass number, should be in 0..6. @param
+[ChunkyPNG::Canvas] canvas The image that is being constructed. @param
+[ChunkyPNG::Canvas] subcanvas The pass image that should be merged
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="adam-merge-pass-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/adam7_interlacing.rb, line 42</span>
+42:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">adam7_merge_pass</span>(<span class="ruby-identifier">pass</span>, <span class="ruby-identifier">canvas</span>, <span class="ruby-identifier">subcanvas</span>)
+43:         <span class="ruby-identifier">x_shift</span>, <span class="ruby-identifier">x_offset</span>, <span class="ruby-identifier">y_shift</span>, <span class="ruby-identifier">y_offset</span> = <span class="ruby-identifier">adam7_multiplier_offset</span>(<span class="ruby-identifier">pass</span>)
+44:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">y</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">subcanvas</span>.<span class="ruby-identifier">height</span> <span class="ruby-keyword kw">do</span>
+45:           <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">x</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">subcanvas</span>.<span class="ruby-identifier">width</span> <span class="ruby-keyword kw">do</span>
+46:             <span class="ruby-identifier">new_x</span> = (<span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x_shift</span>) <span class="ruby-operator">|</span> <span class="ruby-identifier">x_offset</span>
+47:             <span class="ruby-identifier">new_y</span> = (<span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">y_shift</span>) <span class="ruby-operator">|</span> <span class="ruby-identifier">y_offset</span>
+48:             <span class="ruby-identifier">canvas</span>[<span class="ruby-identifier">new_x</span>, <span class="ruby-identifier">new_y</span>] = <span class="ruby-identifier">subcanvas</span>[<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>]
+49:           <span class="ruby-keyword kw">end</span>
+50:         <span class="ruby-keyword kw">end</span>
+51:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="adam-multiplier-offset-method" class="method-detail ">
+				<a name="method-i-adam7_multiplier_offset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">adam7_multiplier_offset</span><span
+						class="method-args">(pass)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array with the x-shift, x-offset, y-shift and y-offset for the
+requested pass. @param [Integer] pass The pass number, should be in 0..6.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="adam-multiplier-offset-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/adam7_interlacing.rb, line 14</span>
+14:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">adam7_multiplier_offset</span>(<span class="ruby-identifier">pass</span>)
+15:         [<span class="ruby-value">3</span> <span class="ruby-operator">-</span> (<span class="ruby-identifier">pass</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">1</span>), (<span class="ruby-identifier">pass</span> &amp; <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">8</span> <span class="ruby-operator">&gt;&gt;</span> ((<span class="ruby-identifier">pass</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">1</span>),
+16:          <span class="ruby-identifier">pass</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-value">3</span> <span class="ruby-operator">:</span> <span class="ruby-value">3</span> <span class="ruby-operator">-</span> ((<span class="ruby-identifier">pass</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">1</span>), (<span class="ruby-identifier">pass</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">pass</span> &amp; <span class="ruby-value">1</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>) <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-value">8</span> <span class="ruby-operator">&gt;&gt;</span> (<span class="ruby-identifier">pass</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">1</span>)]
+17:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="adam-pass-size-method" class="method-detail ">
+				<a name="method-i-adam7_pass_size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">adam7_pass_size</span><span
+						class="method-args">(pass, original_width, original_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the pixel dimensions of the requested pass. @param [Integer] pass
+The pass number, should be in 0..6. @param [Integer] original_width The
+width of the original image. @param [Integer] original_height The height of
+the original image.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="adam-pass-size-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/adam7_interlacing.rb, line 23</span>
+23:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">adam7_pass_size</span>(<span class="ruby-identifier">pass</span>, <span class="ruby-identifier">original_width</span>, <span class="ruby-identifier">original_height</span>)
+24:         <span class="ruby-identifier">x_shift</span>, <span class="ruby-identifier">x_offset</span>, <span class="ruby-identifier">y_shift</span>, <span class="ruby-identifier">y_offset</span> = <span class="ruby-identifier">adam7_multiplier_offset</span>(<span class="ruby-identifier">pass</span>)
+25:         [ (<span class="ruby-identifier">original_width</span>  <span class="ruby-operator">-</span> <span class="ruby-identifier">x_offset</span> <span class="ruby-operator">+</span> (<span class="ruby-value">1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x_shift</span>) <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">x_shift</span>,
+26:           (<span class="ruby-identifier">original_height</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">y_offset</span> <span class="ruby-operator">+</span> (<span class="ruby-value">1</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">y_shift</span>) <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-identifier">y_shift</span>]
+27:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="adam-pass-sizes-method" class="method-detail ">
+				<a name="method-i-adam7_pass_sizes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">adam7_pass_sizes</span><span
+						class="method-args">(original_width, original_height)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array of the dimension of all the pass images. @param [Integer]
+original_width The width of the original image. @param [Integer]
+original_height The height of the original image. @return
+[Array<Array<Integer>>] Returns an array with 7 pairs of dimensions. @see
+<a href="Adam7Interlacing.html#method-i-adam7_pass_size">#</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="adam-pass-sizes-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/chunky_png/canvas/adam7_interlacing.rb, line 34</span>
+34:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">adam7_pass_sizes</span>(<span class="ruby-identifier">original_width</span>, <span class="ruby-identifier">original_height</span>)
+35:         (<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-value">7</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">pass</span><span class="ruby-operator">|</span> <span class="ruby-identifier">adam7_pass_size</span>(<span class="ruby-identifier">pass</span>, <span class="ruby-identifier">original_width</span>, <span class="ruby-identifier">original_height</span>) }
+36:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

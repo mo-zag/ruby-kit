@@ -1,0 +1,67 @@
+= Libnotify
+
+Ruby bindings for libnotify using FFI.
+
+Source[http://github.com/splattael/libnotify] |
+RDoc[http://rdoc.info/github/splattael/libnotify/master/file/README.rdoc]
+
+http://github.com/splattael/libnotify/raw/master/libnotify.png
+
+== Usage
+
+  require 'libnotify'
+
+  # Block syntax
+  n = Libnotify.new do |notify|
+    notify.summary    = "hello"
+    notify.body       = "world"
+    notify.timeout    = 1.5         # 1.5 (s), 1000 (ms), "2", nil, false
+    notify.urgency    = :critical   # :low, :normal, :critical
+    notify.append     = false       # default true - append onto existing notification
+    notify.transient  = true        # default false - keep the notifications around after display
+    notify.icon_path  = "/usr/share/icons/gnome/scalable/emblems/emblem-default.svg"
+  end
+  n.show!
+
+  # Hash syntax
+  Libnotify.show(:body => "hello", :summary => "world", :timeout => 2.5)
+
+  # Mixed syntax
+  Libnotify.show(options) do |n|
+    n.timeout = 1.5     # overrides :timeout in options
+  end
+
+  # Icon path auto-detection
+  Libnotify.icon_dirs << "/usr/share/icons/gnome/*/"
+  Libnotify.show(:icon_path => "emblem-default.png")
+  Libnotify.show(:icon_path => :"emblem-default")
+
+== Installation
+
+  gem install libnotify
+
+You'll need libnotify. On Debian just type:
+
+  apt-get install libnotify1
+
+== Testing
+
+  git clone git://github.com/splattael/libnotify.git
+  cd libnotify
+  (gem install bundler)
+  bundle install
+  rake
+
+== Authors
+
+* Peter Suschlik (http://github.com/splattael)
+* Dennis Collective (http://github.com/denniscollective)
+* Daniel Mack (http://github.com/zonque)
+
+== License
+
+MIT License[http://www.opensource.org/licenses/mit-license.php]
+
+== TODO
+
+* Mock FFI calls with rrriot. (test/test_libnotify.rb:61)

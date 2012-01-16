@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: FSSM</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/fssm/pathname_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/fssm/pathname.rb">lib/fssm/pathname.rb</a></li>
+					
+						<li><a href="./lib/fssm/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/fssm/version.rb">lib/fssm/version.rb</a></li>
+					
+						<li><a href="./lib/fssm_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/fssm.rb">lib/fssm.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="FSSM/Backends.html">FSSM::Backends</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="FSSM/State.html">FSSM::State</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="FSSM/Support.html">FSSM::Support</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="FSSM/Tree.html">FSSM::Tree</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FSSM/Monitor.html">FSSM::Monitor</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FSSM/Path.html">FSSM::Path</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="FSSM/Pathname.html">FSSM::Pathname</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-dbg">::dbg</a></li>
+					
+					<li><a href="#method-c-monitor">::monitor</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./FSSM.html">FSSM</a></li>
+				
+					<li><a href="./FSSM/Backends.html">FSSM::Backends</a></li>
+				
+					<li><a href="./FSSM/Backends/FSEvents.html">FSSM::Backends::FSEvents</a></li>
+				
+					<li><a href="./FSSM/Backends/Inotify.html">FSSM::Backends::Inotify</a></li>
+				
+					<li><a href="./FSSM/Backends/Polling.html">FSSM::Backends::Polling</a></li>
+				
+					<li><a href="./FSSM/Backends/RBFSEvent.html">FSSM::Backends::RBFSEvent</a></li>
+				
+					<li><a href="./FSSM/Monitor.html">FSSM::Monitor</a></li>
+				
+					<li><a href="./FSSM/Path.html">FSSM::Path</a></li>
+				
+					<li><a href="./FSSM/Pathname.html">FSSM::Pathname</a></li>
+				
+					<li><a href="./FSSM/State.html">FSSM::State</a></li>
+				
+					<li><a href="./FSSM/State/Directory.html">FSSM::State::Directory</a></li>
+				
+					<li><a href="./FSSM/State/File.html">FSSM::State::File</a></li>
+				
+					<li><a href="./FSSM/Support.html">FSSM::Support</a></li>
+				
+					<li><a href="./FSSM/Tree.html">FSSM::Tree</a></li>
+				
+					<li><a href="./FSSM/Tree/Cache.html">FSSM::Tree::Cache</a></li>
+				
+					<li><a href="./FSSM/Tree/CacheDebug.html">FSSM::Tree::CacheDebug</a></li>
+				
+					<li><a href="./FSSM/Tree/Node.html">FSSM::Tree::Node</a></li>
+				
+					<li><a href="./FSSM/Tree/NodeBase.html">FSSM::Tree::NodeBase</a></li>
+				
+					<li><a href="./FSSM/Tree/NodeEnumerable.html">FSSM::Tree::NodeEnumerable</a></li>
+				
+					<li><a href="./FSSM/Tree/NodeInsertion.html">FSSM::Tree::NodeInsertion</a></li>
+				
+					<li><a href="./Rucola.html">Rucola</a></li>
+				
+					<li><a href="./Rucola/FSEvents.html">Rucola::FSEvents</a></li>
+				
+					<li><a href="./Rucola/FSEvents/FSEvent.html">Rucola::FSEvents::FSEvent</a></li>
+				
+					<li><a href="./Rucola/FSEvents/StreamError.html">Rucola::FSEvents::StreamError</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">FSSM</h1>
+
+		<div id="description">
+			<p>
+noinspection ALL
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileNotFoundError">FileNotFoundError</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileNotRealError">FileNotRealError</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CallbackError">CallbackError</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="dbg-method" class="method-detail ">
+				<a name="method-c-dbg"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dbg</span><span
+						class="method-args">(msg=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dbg-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm.rb, line 11</span>
+11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dbg</span>(<span class="ruby-identifier">msg</span>=<span class="ruby-keyword kw">nil</span>)
+12:       <span class="ruby-constant">STDERR</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;FSSM -&gt; #{msg}&quot;</span>)
+13:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="monitor-method" class="method-detail ">
+				<a name="method-c-monitor"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">monitor</span><span
+						class="method-args">(*args, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="monitor-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/fssm.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">monitor</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>)
+16:       <span class="ruby-identifier">options</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">pop</span> <span class="ruby-operator">:</span> {}
+17:       <span class="ruby-identifier">monitor</span> = <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Monitor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>)
+18:       <span class="ruby-constant">FSSM</span><span class="ruby-operator">::</span><span class="ruby-constant">Support</span>.<span class="ruby-identifier">use_block</span>(<span class="ruby-identifier">args</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">monitor</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">monitor</span>.<span class="ruby-identifier">path</span>(*<span class="ruby-identifier">args</span>), <span class="ruby-identifier">block</span>)
+19: 
+20:       <span class="ruby-identifier">monitor</span>.<span class="ruby-identifier">run</span>
+21:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
