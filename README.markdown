@@ -1,0 +1,1 @@
+<h1>Ruby instalations for easy distributions</h1>
